@@ -7,3 +7,8 @@ __pycache__/
 *.log
 .env
 ref_compact_backup_*.json
+
+# Raw font files at root (use fonts/*.otf — the ones served by the dashboard)
+/WildMango.otf
+/WildMango.ttf
+/WildMangoAlt.otf
