@@ -1,0 +1,306 @@
+[
+ {
+  "id": 1,
+  "product_name": "Daily Moisture",
+  "product_url": "https://us.jergens.com/products/jergens-daily-moisturizer",
+  "slug": "jergens-daily-moisturizer",
+  "brand_category": "Everyday Lotions",
+  "product_type": "leave-on skincare"
+ },
+ {
+  "id": 2,
+  "product_name": "Natural Glow Face Moisturizer +SPF 20",
+  "product_url": "https://us.jergens.com/products/jergens-natural-glow-face-moisturizer-sunscreen",
+  "slug": "jergens-natural-glow-face-moisturizer-sunscreen",
+  "brand_category": "Buildable Glow",
+  "product_type": "sunscreen"
+ },
+ {
+  "id": 3,
+  "product_name": "Natural Glow + Firming Daily Moisturizer",
+  "product_url": "https://us.jergens.com/products/jergens-natural-glow-firming-daily-moisturizer-fair-to-medium",
+  "slug": "jergens-natural-glow-firming-daily-moisturizer-fair-to-medium",
+  "brand_category": "Buildable Glow",
+  "product_type": "leave-on skincare"
+ },
+ {
+  "id": 4,
+  "product_name": "Sparkling Berry Shea Fusion",
+  "product_url": "https://us.jergens.com/products/jergens-sparkling-berry-shea-fusion-body-lotion",
+  "slug": "jergens-sparkling-berry-shea-fusion-body-lotion",
+  "brand_category": "Shea Fusions",
+  "product_type": "leave-on skincare"
+ },
+ {
+  "id": 5,
+  "product_name": "Nourishing Honey Moisturizer",
+  "product_url": "https://us.jergens.com/products/jergens-nourishing-honey-moisturizer",
+  "slug": "jergens-nourishing-honey-moisturizer",
+  "brand_category": "Everyday Lotions",
+  "product_type": "leave-on skincare"
+ },
+ {
+  "id": 6,
+  "product_name": "Natural Glow Instant Sun Moisturizer + Bronzer",
+  "product_url": "https://us.jergens.com/products/jergens-natural-glow-instant-sun-moisturizer",
+  "slug": "jergens-natural-glow-instant-sun-moisturizer",
+  "brand_category": "Vacation Skin",
+  "product_type": "leave-on skincare"
+ },
+ {
+  "id": 7,
+  "product_name": "Deep Restoring Argan Oil Moisturizer",
+  "product_url": "https://us.jergens.com/products/jergens-deep-restoring-argan-oil-moisturizer",
+  "slug": "jergens-deep-restoring-argan-oil-moisturizer",
+  "brand_category": "Everyday Lotions",
+  "product_type": "leave-on skincare"
+ },
+ {
+  "id": 8,
+  "product_name": "Cherry Swirl Shea Fusion",
+  "product_url": "https://us.jergens.com/products/cherry-shea-fusion",
+  "slug": "cherry-shea-fusion",
+  "brand_category": "Shea Fusions",
+  "product_type": "leave-on skincare"
+ },
+ {
+  "id": 9,
+  "product_name": "Vanilla Crush Shea Fusion",
+  "product_url": "https://us.jergens.com/products/jergens-vanilla-crush-shea-fusion-body-lotion",
+  "slug": "jergens-vanilla-crush-shea-fusion-body-lotion",
+  "brand_category": "Shea Fusions",
+  "product_type": "leave-on skincare"
+ },
+ {
+  "id": 10,
+  "product_name": "Confetti Cake Shea Fusion",
+  "product_url": "https://us.jergens.com/products/confetti-cake-shea-fusion",
+  "slug": "confetti-cake-shea-fusion",
+  "brand_category": "Shea Fusions",
+  "product_type": "leave-on skincare"
+ },
+ {
+  "id": 11,
+  "product_name": "Warm Amber Shea Fusion",
+  "product_url": "https://us.jergens.com/products/jergens-warm-amber-shea-fusion-body-lotion",
+  "slug": "jergens-warm-amber-shea-fusion-body-lotion",
+  "brand_category": "Shea Fusions",
+  "product_type": "leave-on skincare"
+ },
+ {
+  "id": 12,
+  "product_name": "Hydrating Coconut Lotion",
+  "product_url": "https://us.jergens.com/products/jergens-hydrating-coconut-lotion",
+  "slug": "jergens-hydrating-coconut-lotion",
+  "brand_category": "Everyday Lotions",
+  "product_type": "leave-on skincare"
+ },
+ {
+  "id": 13,
+  "product_name": "Soothing Aloe Moisturizer",
+  "product_url": "https://us.jergens.com/products/jergens-soothing-aloe-moisturizer",
+  "slug": "jergens-soothing-aloe-moisturizer",
+  "brand_category": "Everyday Lotions",
+  "product_type": "leave-on skincare"
+ },
+ {
+  "id": 14,
+  "product_name": "Original Scent Moisturizer",
+  "product_url": "https://us.jergens.com/products/jergens-original-scent-moisturizer",
+  "slug": "jergens-original-scent-moisturizer",
+  "brand_category": "Everyday Lotions",
+  "product_type": "leave-on skincare"
+ },
+ {
+  "id": 15,
+  "product_name": "Skin Firming",
+  "product_url": "https://us.jergens.com/products/jergens-skin-firming",
+  "slug": "jergens-skin-firming",
+  "brand_category": "Specialized Lotions",
+  "product_type": "leave-on skincare"
+ },
+ {
+  "id": 16,
+  "product_name": "Lavender Dreams Shea Fusion",
+  "product_url": "https://us.jergens.com/products/jergens-lavender-dreams-shea-fusion-body-lotion",
+  "slug": "jergens-lavender-dreams-shea-fusion-body-lotion",
+  "brand_category": "Shea Fusions",
+  "product_type": "leave-on skincare"
+ },
+ {
+  "id": 17,
+  "product_name": "Cherry Almond Lotion Bursts",
+  "product_url": "https://us.jergens.com/products/jergens-cherry-almond-lotion-bursts",
+  "slug": "jergens-cherry-almond-lotion-bursts",
+  "brand_category": "Bursts",
+  "product_type": "leave-on skincare"
+ },
+ {
+  "id": 18,
+  "product_name": "Enriching Shea Butter Lotion",
+  "product_url": "https://us.jergens.com/products/jergens-enriching-shea-butter-lotion",
+  "slug": "jergens-enriching-shea-butter-lotion",
+  "brand_category": "Everyday Lotions",
+  "product_type": "leave-on skincare"
+ },
+ {
+  "id": 19,
+  "product_name": "Sparkling Berry Lotion Bursts",
+  "product_url": "https://us.jergens.com/products/sparkling-berry-lotion-bursts",
+  "slug": "sparkling-berry-lotion-bursts",
+  "brand_category": "Bursts",
+  "product_type": "leave-on skincare"
+ },
+ {
+  "id": 20,
+  "product_name": "Ultra Healing Moisturizer",
+  "product_url": "https://us.jergens.com/products/jergens-ultra-healing-moisturizer",
+  "slug": "jergens-ultra-healing-moisturizer",
+  "brand_category": "Everyday Lotions",
+  "product_type": "leave-on skincare"
+ },
+ {
+  "id": 21,
+  "product_name": "Vanilla Crush Lotion Bursts",
+  "product_url": "https://us.jergens.com/products/vanilla-crush-lotion-bursts",
+  "slug": "vanilla-crush-lotion-bursts",
+  "brand_category": "Bursts",
+  "product_type": "leave-on skincare"
+ },
+ {
+  "id": 22,
+  "product_name": "Lavender Lotion Bursts",
+  "product_url": "https://us.jergens.com/products/jergens-lavender-lotion-bursts",
+  "slug": "jergens-lavender-lotion-bursts",
+  "brand_category": "Bursts",
+  "product_type": "leave-on skincare"
+ },
+ {
+  "id": 23,
+  "product_name": "Natural Glow Wet Skin Moisturizer",
+  "product_url": "https://us.jergens.com/products/jergens-natural-glow-wet-skin-moisturizer",
+  "slug": "jergens-natural-glow-wet-skin-moisturizer",
+  "brand_category": "In Shower",
+  "product_type": "leave-on skincare"
+ },
+ {
+  "id": 24,
+  "product_name": "Instant Flawless Kit Bundle",
+  "product_url": "https://us.jergens.com/products/jergens-instant-flawless-kit-bundle",
+  "slug": "jergens-instant-flawless-kit-bundle",
+  "brand_category": "Bundles",
+  "product_type": "other"
+ },
+ {
+  "id": 25,
+  "product_name": "Glow Body Applicator Mitt",
+  "product_url": "https://us.jergens.com/products/jergens-glow-body-applicator-mitt",
+  "slug": "jergens-glow-body-applicator-mitt",
+  "brand_category": "Shop All",
+  "product_type": "other"
+ },
+ {
+  "id": 26,
+  "product_name": "Natural Glow Instant Sun Drops",
+  "product_url": "https://us.jergens.com/products/jergens-natural-glow-instant-sun-drops",
+  "slug": "jergens-natural-glow-instant-sun-drops",
+  "brand_category": "Vacation Skin",
+  "product_type": "leave-on skincare"
+ },
+ {
+  "id": 27,
+  "product_name": "Natural Glow Hydra Gel",
+  "product_url": "https://us.jergens.com/products/jergens-natural-glow-hydra-gel",
+  "slug": "jergens-natural-glow-hydra-gel",
+  "brand_category": "Buildable Glow",
+  "product_type": "leave-on skincare"
+ },
+ {
+  "id": 28,
+  "product_name": "Gotta Glow Bundle",
+  "product_url": "https://us.jergens.com/products/jergens-gotta-glow-bundle",
+  "slug": "jergens-gotta-glow-bundle",
+  "brand_category": "Bundles",
+  "product_type": "other"
+ },
+ {
+  "id": 29,
+  "product_name": "Natural Glow Instant Sun Mousse",
+  "product_url": "https://us.jergens.com/products/jergens-natural-glow-instant-sun-mousse",
+  "slug": "jergens-natural-glow-instant-sun-mousse",
+  "brand_category": "Vacation Skin",
+  "product_type": "leave-on skincare"
+ },
+ {
+  "id": 30,
+  "product_name": "Deep Conditioning Shea Cocoa Butter Blend",
+  "product_url": "https://us.jergens.com/products/jergens-deep-conditioning-shea-cocoa-butter-blend",
+  "slug": "jergens-deep-conditioning-shea-cocoa-butter-blend",
+  "brand_category": "Specialized Lotions",
+  "product_type": "leave-on skincare"
+ },
+ {
+  "id": 31,
+  "product_name": "Best Sellers Bundle",
+  "product_url": "https://us.jergens.com/products/jergens-best-sellers-bundle",
+  "slug": "jergens-best-sellers-bundle",
+  "brand_category": "Bundles",
+  "product_type": "other"
+ },
+ {
+  "id": 32,
+  "product_name": "Natural Glow Daily Moisturizer",
+  "product_url": "https://us.jergens.com/products/jergens-natural-glow-daily-moisturizer",
+  "slug": "jergens-natural-glow-daily-moisturizer",
+  "brand_category": "Buildable Glow",
+  "product_type": "leave-on skincare"
+ },
+ {
+  "id": 33,
+  "product_name": "Tropical Escape Shea Fusion",
+  "product_url": "https://us.jergens.com/products/tropical-escape-shea-fusion",
+  "slug": "tropical-escape-shea-fusion",
+  "brand_category": "Shea Fusions",
+  "product_type": "leave-on skincare"
+ },
+ {
+  "id": 34,
+  "product_name": "Wet Skin Moisturizer Shea Oil",
+  "product_url": "https://us.jergens.com/products/jergens-wet-skin-moisturizer-shea-oil",
+  "slug": "jergens-wet-skin-moisturizer-shea-oil",
+  "brand_category": "In Shower",
+  "product_type": "leave-on skincare"
+ },
+ {
+  "id": 35,
+  "product_name": "Wet Skin Moisturizer Coconut Oil",
+  "product_url": "https://us.jergens.com/products/jergens-wet-skin-moisturizer-coconut-oil",
+  "slug": "jergens-wet-skin-moisturizer-coconut-oil",
+  "brand_category": "In Shower",
+  "product_type": "leave-on skincare"
+ },
+ {
+  "id": 36,
+  "product_name": "Ultra Healing Fragrance Free Moisturizer",
+  "product_url": "https://us.jergens.com/products/ultra-healing-fragrance-free-moisturizer",
+  "slug": "ultra-healing-fragrance-free-moisturizer",
+  "brand_category": "Everyday Lotions",
+  "product_type": "leave-on skincare"
+ },
+ {
+  "id": 37,
+  "product_name": "Daily Glow Bundle",
+  "product_url": "https://us.jergens.com/products/jergens-daily-glow-bundle",
+  "slug": "jergens-daily-glow-bundle",
+  "brand_category": "Bundles",
+  "product_type": "other"
+ },
+ {
+  "id": 38,
+  "product_name": "Jergens Gift Card",
+  "product_url": "https://us.jergens.com/products/jergens-gift-card",
+  "slug": "jergens-gift-card",
+  "brand_category": "Shop All",
+  "product_type": "other"
+ }
+]

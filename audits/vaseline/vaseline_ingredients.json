@@ -1,0 +1,539 @@
+{
+  "brand": "Vaseline",
+  "brand_url": "https://www.vaseline.com/us/en/products.html",
+  "scope": "US site, full catalog as enumerated (see audit log)",
+  "capture_date": "2026-10-16",
+  "method": "Product detail pages loaded in the built-in browser; Ingredients block text read from the page DOM (same text as get_page_text, trimmed to the Ingredients section). Text copied as printed, including casing and typos.",
+  "progress": {
+    "products_enumerated": 52,
+    "captured": 36,
+    "ingredients_not_found": 16,
+    "graded": 36,
+    "status": "complete: captured 36, not found 16, graded 36; sensitivity tiers in audit_notes",
+    "tiers": {
+      "Avoid (High Priority Swap)": 36
+    }
+  },
+  "products": [
+    {
+      "sku": "00305210049840",
+      "product_name": "Vaseline® Vanilla Comfort Trial & Travel Lotion",
+      "product_url": "https://www.vaseline.com/us/en/p/vaseline-vanilla-comfort-trial-and-travel-lotion.html/00305210049840",
+      "brand_category": "Vanilla Comfort",
+      "product_type": "leave-on skincare",
+      "ingredients_verbatim": null,
+      "scrape_status": "ingredients not found",
+      "audit_notes": ""
+    },
+    {
+      "sku": "00305210049864",
+      "product_name": "Vaseline Vanilla Comfort Lotion",
+      "product_url": "https://www.vaseline.com/us/en/p/vaseline-vanilla-comfort-lotion.html/00305210049864",
+      "brand_category": "Vanilla Comfort",
+      "product_type": "leave-on skincare",
+      "ingredients_verbatim": null,
+      "scrape_status": "ingredients not found",
+      "audit_notes": ""
+    },
+    {
+      "sku": "00305210049963",
+      "product_name": "Vaseline® Vanilla Comfort Gel Oil",
+      "product_url": "https://www.vaseline.com/us/en/p/vaseline-vanilla-comfort-gel-oil.html/00305210049963",
+      "brand_category": "Vanilla Comfort",
+      "product_type": "leave-on skincare",
+      "ingredients_verbatim": null,
+      "scrape_status": "ingredients not found",
+      "audit_notes": ""
+    },
+    {
+      "sku": "00305210047778",
+      "product_name": "Vaseline® Radiant X Firm & Restore Body Lotion",
+      "product_url": "https://www.vaseline.com/us/en/p/vaseline-radiant-x-firm-&-restore-body-lotion.html/00305210047778",
+      "brand_category": "Radiant X",
+      "product_type": "leave-on skincare",
+      "ingredients_verbatim": null,
+      "scrape_status": "ingredients not found",
+      "audit_notes": ""
+    },
+    {
+      "sku": "00305210046788",
+      "product_name": "Vaseline® Radiant X Even Tone Nourishing Body Lotion",
+      "product_url": "https://www.vaseline.com/us/en/p/vaseline-radiant-x-even-tone-body-lotion.html/00305210046788",
+      "brand_category": "Radiant X",
+      "product_type": "leave-on skincare",
+      "ingredients_verbatim": "Water (Aqua), Glycerin, Stearic Acid, Caprylic/Capric Triglyceride, Dimethicone, Glycol Stearate, Peg-100 Stearate, Niacinamide, Petrolatum, Glyceryl Stearate, Caprylyl Glycol, Cetyl Alcohol, Phenoxyethanol, Copernicia Cerifera (Carnauba) Wax, Tapioca Starch, Fragrance (Parfum), Carbomer, Acrylates/C10-30 Alkyl Acrylate Crosspolymer, Disodium Edta, Stearamide Amp, Hydroxystearic Acid, Cocos Nucifera (Coconut) Oil, Sodium Ascorbyl Phosphate, Rutin, Palmitoyl Tripeptide-1, Palmitoyl Tetrapeptide-7, Phaseolus Lunatus (Green Bean) Seed Extract, Alpha-Isomethyl Ionone, Farnesol, Hydroxycitronellal, Linalool, Caramel, Titanium Dioxide (Ci 77891)",
+      "scrape_status": "captured",
+      "audit_notes": ""
+    },
+    {
+      "sku": "00305210046702",
+      "product_name": "Vaseline® Radiant X Replenishing Hydrating Body Oil",
+      "product_url": "https://www.vaseline.com/us/en/p/vaseline-radiant-x-replenishing-body-oil.html/00305210046702",
+      "brand_category": "Radiant X",
+      "product_type": "leave-on skincare",
+      "ingredients_verbatim": "Mineral Oil, Dicaprylyl Ether, Vitis Vinifera (Grape) Seed Oil, Fragrance (Parfum), Stearic Acid, Simmondsia Chinensis (Jojoba) Seed Oil, Cocos Nucifera (Coconut) Oil, Tocopheryl Acetate, Alpha-Isomethyl Ionone, Farnesol, Hydroxycitronellal, Linalool.",
+      "scrape_status": "captured",
+      "audit_notes": ""
+    },
+    {
+      "sku": "00305210046740",
+      "product_name": "Vaseline® Radiant X Deep Nourishment Body Cream",
+      "product_url": "https://www.vaseline.com/us/en/p/vaseline-radiant-x-deep-nourishment-body-cream.html/00305210046740",
+      "brand_category": "Radiant X",
+      "product_type": "leave-on skincare",
+      "ingredients_verbatim": "Water (Aqua), Glycerin, Stearic Acid, Caprylic/Capric Triglyceride, Dimethicone, Glycol Stearate, Peg-100 Stearate, Niacinamide, Petrolatum, Glyceryl Stearate, Caprylyl Glycol, Cetyl Alcohol, Phenoxyethanol, Copernicia Cerifera (Carnauba) Wax, Tapioca Starch, Fragrance (Parfum), Carbomer, Acrylates/C10-30 Alkyl Acrylate Crosspolymer, Disodium Edta, Stearamide Amp, Hydroxystearic Acid, Cocos Nucifera (Coconut) Oil, Sodium Ascorbyl Phosphate, Rutin, Palmitoyl Tripeptide-1, Palmitoyl Tetrapeptide-7, Phaseolus Lunatus (Green Bean) Seed Extract, Alpha-Isomethyl Ionone, Farnesol, Hydroxycitronellal, Linalool, Caramel, Titanium Dioxide (Ci 77891).",
+      "scrape_status": "captured",
+      "audit_notes": ""
+    },
+    {
+      "sku": "00305210046764",
+      "product_name": "Vaseline® Radiant X Deep Nourishment Hand Butter",
+      "product_url": "https://www.vaseline.com/us/en/p/vaseline-radiant-x-deep-nourishment-hand-butter.html/00305210046764",
+      "brand_category": "Radiant X",
+      "product_type": "leave-on skincare",
+      "ingredients_verbatim": "Water (Aqua), Glycerin, Dimethicone, Butyrospermum Parkii (Shea) Butter, Petrolatum, Copernicia Cerifera (Carnauba) Wax, Isopropyl Myristate, Cetearyl Alcohol, Glyceryl Hydroxystearate, Dimethicone Crosspolymer, Hydroxystearic Acid, Caprylyl Glycol, Cetearyl Glucoside, Cetyl Palmitate, Sodium Cetearyl Sulfate, Phenoxyethanol, Ammonium Acryloyldimethyltaurate/Vp Copolymer, Fragrance (Parfum), Stearic Acid, Tetrasodium Edta, Cocos Nucifera (Coconut) Oil, Sodium Ascorbyl Phosphate, Rutin, Palmitoyl Tripeptide-1, Palmitoyl Tetrapeptide-7, Phaseolus Lunatus (Green Bean) Seed Extract, Alpha-Isomethyl Ionone, Farnesol, Hydroxycitronellal, Linalool, Caramel.",
+      "scrape_status": "captured",
+      "audit_notes": ""
+    },
+    {
+      "sku": "00305210045699",
+      "product_name": "Vaseline® Intensive Care™ Hydra Replenish Hand Crème",
+      "product_url": "https://www.vaseline.com/us/en/p/vaseline-intensive-care-hydra-replenish-hand-creme.html/00305210045699",
+      "brand_category": "Intensive Care",
+      "product_type": "leave-on skincare",
+      "ingredients_verbatim": "Water (Eau), Glycerin, Dimethicone, Cetyl Alcohol, Caprylic/Capric Triglyceride, Dipropylene Glycol, Cetyl Palmitate, Butyrospermum Parkii (Shea) Butter, Sodium Acrylate/Sodium Acryloyldimethyl Taurate Copolymer, Isohexadecane, Glyceryl Stearate, Ceteth-20, Phenoxyethanol, Petrolatum, Fragrance (Parfum), Methylparaben, Polysorbate 80, Carbomer, Propylparaben, Disodium Edta, Caramel, Theobroma Cacao (Cocoa) Seed Butter, Niacinamide, Hydroxystearic Acid, Stearic Acid, Sodium Hyaluronate, Coumarin, Hexyl Cinnamal, Linalool, Titanium Dioxide (Ci 77891).",
+      "scrape_status": "captured",
+      "audit_notes": ""
+    },
+    {
+      "sku": "00305212352009",
+      "product_name": "Vaseline® Healing Jelly Original",
+      "product_url": "https://www.vaseline.com/us/en/p/vaseline-healing-jelly-original.html/00305212352009",
+      "brand_category": "Healing Jelly",
+      "product_type": "leave-on skincare",
+      "ingredients_verbatim": "White Petrolatum Usp (100%)",
+      "scrape_status": "captured",
+      "audit_notes": ""
+    },
+    {
+      "sku": "00305210069275",
+      "product_name": "Vaseline® Healing Jelly Cocoa Butter",
+      "product_url": "https://www.vaseline.com/us/en/p/vaseline-healing-jelly-cocoa-butter.html/00305210069275",
+      "brand_category": "Healing Jelly",
+      "product_type": "leave-on skincare",
+      "ingredients_verbatim": "Petrolatum, Theobroma Cacao (Cocoa) Seed Butter, Fragrance.",
+      "scrape_status": "captured",
+      "audit_notes": ""
+    },
+    {
+      "sku": "00305212750003",
+      "product_name": "Vaseline® Lip Therapy® Advanced Healing Tube",
+      "product_url": "https://www.vaseline.com/us/en/p/vaseline-lip-therapy-advanced-healing-tube.html/00305212750003",
+      "brand_category": "Lip Therapy",
+      "product_type": "lip product",
+      "ingredients_verbatim": "White Petrolatum USP",
+      "scrape_status": "captured",
+      "audit_notes": ""
+    },
+    {
+      "sku": "00305210044876",
+      "product_name": "Vaseline® Cocoa Shimmer Jelly Stick",
+      "product_url": "https://www.vaseline.com/us/en/p/vaseline-cocoa-shimmer-jelly-stick.html/00305210044876",
+      "brand_category": "Healing Jelly",
+      "product_type": "leave-on skincare",
+      "ingredients_verbatim": "Petrolatum, Ethylhexyl Palmitate, Paraffin, Cetearyl Alcohol, Polyethylene, Silica Dimethyl Silylate, Calcium Sodium Borosilicate, Fragrance (Parfum), Theobroma Cacao (Cocoa) Seed Butter, Tocopheryl Acetate, Coumarin, Linalool, Titanium Dioxide (Ci 77891), Iron Oxides (Ci 77499), Tin Oxide (Ci 77861), Mica (Ci 77019), Yellow 5 Lake (Ci 19140).",
+      "scrape_status": "captured",
+      "audit_notes": ""
+    },
+    {
+      "sku": "00305210043558",
+      "product_name": "Vaseline® All-Over Body Balm Jelly Stick",
+      "product_url": "https://www.vaseline.com/us/en/p/vaseline-all-over-body-balm-jelly-stick.html/00305210043558",
+      "brand_category": "Healing Jelly",
+      "product_type": "leave-on skincare",
+      "ingredients_verbatim": "Petrolatum, Ethylhexyl Palmitate, Paraffin, Ozokerite, Cetearyl Alcohol, Tocopheryl Acetate, Yellow 5 Lake (Ci 19140).",
+      "scrape_status": "captured",
+      "audit_notes": ""
+    },
+    {
+      "sku": "00305213093000",
+      "product_name": "Vaseline® Soothing Hydration Lotion",
+      "product_url": "https://www.vaseline.com/us/en/p/vaseline-soothing-hydration-lotion.html/00305213093000",
+      "brand_category": "Intensive Care",
+      "product_type": "leave-on skincare",
+      "ingredients_verbatim": "WATER (AQUA), STEARIC ACID, GLYCERIN, GLYCOL STEARATE, ISOPROPYL PALMITATE, PETROLATUM, NIACINAMIDE, ALOE BARBADENSIS LEAF JUICE POWDER, TRIETHANOLAMINE, GLYCERYL STEARATE, PHENOXYETHANOL, DIMETHICONE, CETYL ALCOHOL, TAPIOCA STARCH, METHYLPARABEN, CARBOMER, FRAGRANCE (PARFUM), PROPYLPARABEN, DISODIUM EDTA, STEARAMIDE AMP, HELIANTHUS ANNUUS (SUNFLOWER) SEED OIL, BENZYL ALCOHOL, HEXYL CINNAMAL, LINALOOL, TITANIUM DIOXIDE (CI 77891).",
+      "scrape_status": "captured",
+      "audit_notes": ""
+    },
+    {
+      "sku": "00305210134423",
+      "product_name": "Vaseline® Cocoa Radiant® Lotion",
+      "product_url": "https://www.vaseline.com/us/en/p/vaseline-cocoa-radiant-lotion.html/00305210134423",
+      "brand_category": "Intensive Care",
+      "product_type": "leave-on skincare",
+      "ingredients_verbatim": "WATER (AQUA), GLYCERIN, PETROLATUM, STEARIC ACID, DIMETHICONE, BUTYLENE GLYCOL, GLYCOL STEARATE, PEG-100 STEARATE, NIACINAMIDE, ISOPROPYL MYRISTATE, SODIUM HYDROXYPROPYL STARCH PHOSPHATE, HELIANTHUS ANNUUS (SUNFLOWER) SEED OIL, COCOS NUCIFERA (COCONUT) OIL, THEOBROMA CACAO (COCOA) SEED BUTTER, PHENOXYETHANOL, GLYCERYL STEARATE, CETYL ALCOHOL, MAGNESIUM ALUMINUM SILICATE, FRAGRANCE (PARFUM), METHYLPARABEN, XANTHAN GUM, PROPYLPARABEN, STEARAMIDE AMP, DISODIUM EDTA, COUMARIN, GERANIOL, HEXYL CINNAMAL, HYDROXYCITRONELLAL, LIMONENE, LINALOOL, CARAMEL",
+      "scrape_status": "captured",
+      "audit_notes": ""
+    },
+    {
+      "sku": "00305213079004",
+      "product_name": "Vaseline® Nourishing Moisture Lotion",
+      "product_url": "https://www.vaseline.com/us/en/p/vaseline-nourishing-moisture-lotion.html/00305213079004",
+      "brand_category": "Intensive Care",
+      "product_type": "leave-on skincare",
+      "ingredients_verbatim": "WATER (AQUA), GLYCERIN, STEARIC ACID, ISOPROPYL MYRISTATE, SQUALANE, AVENA SATIVA (OAT) STRAW EXTRACT, GLYCOL STEARATE, GLYCERYL STEARATE, DIMETHICONE, PEG-100 STEARATE, PETROLATUM, CETYL ALCOHOL, TAPIOCA STARCH, PHENOXYETHANOL, MAGNESIUM ALUMINUM SILICATE, HELIANTHUS ANNUUS (SUNFLOWER) SEED OIL, METHYLPARABEN, ACRYLATES/C10-30 ALKYL ACRYLATE CROSSPOLYMER, FRAGRANCE (PARFUM), PROPYLPARABEN, DISODIUM EDTA, XANTHAN GUM, STEARAMIDE AMP, ALPHA-ISOMETHYL IONONE, AMYL CINNAMAL, BENZYL ALCOHOL, CINNAMYL ALCOHOL, CITRONELLOL, COUMARIN, GERANIOL, HEXYL CINNAMAL, LIMONENE, LINALOOL.",
+      "scrape_status": "captured",
+      "audit_notes": ""
+    },
+    {
+      "sku": "00305210043596",
+      "product_name": "Vaseline® Calm Healing Lotion",
+      "product_url": "https://www.vaseline.com/us/en/p/vaseline-calm-healing-lotion.html/00305210043596",
+      "brand_category": "Intensive Care",
+      "product_type": "leave-on skincare",
+      "ingredients_verbatim": "WATER (AQUA), GLYCERIN, STEARIC ACID, ISOPROPYL MYRISTATE, MINERAL OIL, GLYCERYL STEARATE, GLYCOL STEARATE, DIMETHICONE, PEG-100 STEARATE, PANTHENOL, PETROLATUM, CETYL ALCOHOL, TAPIOCA STARCH, PHENOXYETHANOL, MAGNESIUM ALUMINUM SILICATE, METHYLPARABEN, FRAGRANCE (PARFUM), ACRYLATES/C10-30 ALKYL ACRYLATE CROSSPOLYMER, PROPYLPARABEN, DISODIUM EDTA, XANTHAN GUM, STEARAMIDE AMP, HELIANTHUS ANNUUS (SUNFLOWER) SEED OIL, LAVANDULA ANGUSTIFOLIA (LAVENDER) FLOWER EXTRACT, CITRONELLOL, COUMARIN, GERANIOL, LIMONENE, LINALOOL.",
+      "scrape_status": "captured",
+      "audit_notes": ""
+    },
+    {
+      "sku": "00305213087009",
+      "product_name": "Vaseline® Advanced Repair Unscented Lotion",
+      "product_url": "https://www.vaseline.com/us/en/p/vaseline-advanced-repair-unscented-lotion.html/00305213087009",
+      "brand_category": "Intensive Care",
+      "product_type": "leave-on skincare",
+      "ingredients_verbatim": "WATER (AQUA), GLYCERIN, STEARIC ACID, ISOPROPYL PALMITATE, GLYCOL STEARATE, PEG-100 STEARATE, PANTHENOL, DIMETHICONE, MINERAL OIL, HELIANTHUS ANNUUS (SUNFLOWER) SEED OIL, GLYCERYL STEARATE, PETROLATUM, CETYL ALCOHOL, PHENOXYETHANOL, METHYLPARABEN, ACRYLATES/C10-30 ALKYL ACRYLATE CROSSPOLYMER, TRIETHANOLAMINE, PROPYLP",
+      "scrape_status": "captured",
+      "audit_notes": "Ingredient list as printed on the product page ends mid-word at 'PROPYLP'. The page's own data layer carries the same truncated string, so the remainder of the list is not captured. Manual re-check needed against the physical package or the brand's SmartLabel before grading is final."
+    },
+    {
+      "sku": "00305210044647",
+      "product_name": "Vaseline® Almond Smooth Lotion",
+      "product_url": "https://www.vaseline.com/us/en/p/vaseline-almond-smooth-lotion.html/00305210044647",
+      "brand_category": "Intensive Care",
+      "product_type": "leave-on skincare",
+      "ingredients_verbatim": "Water (Aqua), Petrolatum, Glycerin, Stearic Acid, Isopropyl Palmitate, Glycol Stearate, Dimethicone, Triethanolamine, Glyceryl Stearate, Panthenol, Butyrospermum Parkii (Shea) Butter, Theobroma Cacao (Cocoa) Seed Butter, Cetyl Alcohol, Phenoxyethanol, Fragrance (Parfum), Magnesium Aluminum Silicate, Methylparaben, Acrylates/C10-30 Alkyl Acrylate Crosspolymer, Propylparaben, Prunus Amygdalus Dulcis (Sweet Almond) Oil, Disodium EDTA, Stearamide AMP, Helianthus Annuus (Sunflower) Seed Oil, Alpha-Isomethyl Ionone, Benzyl Alcohol, Coumarin, Hexyl Cinnamal, Limonene, Linalool, Caramel, Titanium Dioxide (CI 77891)",
+      "scrape_status": "captured",
+      "audit_notes": ""
+    },
+    {
+      "sku": "00305210071148",
+      "product_name": "Vaseline® Men Cooling Hydration Lotion",
+      "product_url": "https://www.vaseline.com/us/en/p/vaseline-men-cooling-lotion.html/00305210071148",
+      "brand_category": "Men",
+      "product_type": "leave-on skincare",
+      "ingredients_verbatim": "Water (Eau), Glycerin, Stearic Acid, Glycol Stearate, Isopropyl Palmitate, Petrolatum, Triethanolamine, Glyceryl Stearate, Dimethicone, Cetyl Alcohol, Phenoxyethanol, Tapioca Starch, Methylparaben, Carbomer, Fragrance (Parfum), Propylparaben, Disodium EDTA, Menthol, Stearamide AMP, Helianthus Annuus (Sunflower) Seed Oil, Benzyl Salicylate, Eugenol, Hexyl Cinnamal, Limonene, Linalool, Titanium Dioxide (CI 77891), Blue 1 (CI 42090), Yellow 5 (CI 19140).",
+      "scrape_status": "captured",
+      "audit_notes": ""
+    },
+    {
+      "sku": "00305210312142",
+      "product_name": "Vaseline® Intensive Care™ Cocoa Body Butter",
+      "product_url": "https://www.vaseline.com/us/en/p/vaseline-intensive-care-cocoa-body-butter.html/00305210312142",
+      "brand_category": "Intensive Care",
+      "product_type": "leave-on skincare",
+      "ingredients_verbatim": "Aqua, Petrolatum, Glycerin, Dimethicone, Cyclopentasiloxane, Stearic Acid, Hydrogenated Polyisobutene, Ethylhexyl Cocoate, Glycol Stearate, Hydrogenated Didecene, BHT, Butyrospermum Parkii Butter, Caramel, Cetyl Alcohol, Cyclomethicone, Dimethiconol, Disodium EDTA, Disteareth-75 IPDI, Glyceryl Stearate, Hydrogenated Polydecene, Isohexadecane, Isostearic Acid, Maltodextrin, Methylparaben, Microcrystalline Wax, Paraffin, Parfum, PEG/PPG-20/15 Dimethicone, PEG-80, PEG-90, Diisostearate, Phenoxyethanol, Polysorbate 80, Potato Starch Modified, Propylparaben, Sodium Acrylate/Sodium Acryloyldimethyl Taurate Copolymer, Sorbitan Monooleate, Stearamide AMP, Steareth-75, Theobroma Cacao Seed Butter, Triethanolamine, Xanthan Gum, CI 19140",
+      "scrape_status": "captured",
+      "audit_notes": ""
+    },
+    {
+      "sku": "00305210416383",
+      "product_name": "Vaseline® Men Fast Absorbing Lotion",
+      "product_url": "https://www.vaseline.com/us/en/p/vaseline-men-fast-absorbing-lotion.html/00305210416383",
+      "brand_category": "Men",
+      "product_type": "leave-on skincare",
+      "ingredients_verbatim": "Water (Eau), Glycerin, Stearic Acid, Isopropyl Myristate, Mineral Oil (Huile Minérale), Glyceryl Stearate, Glycol Stearate, Dimethicone, PEG-100 Stearate, Petrolatum, Cetyl Alcohol, Tapioca Starch, Phenoxyethanol, Magnesium Aluminum Silicate, Fragrance (Parfum), Methylparaben, Acrylates/C10-30 Alkyl Acrylate Crosspolymer, Propylparaben, Disodium EDTA, Xanthan Gum, Stearamide AMP, Helianthus Annuus (Sunflower) Seed Oil, Limonene, Linalool.",
+      "scrape_status": "captured",
+      "audit_notes": ""
+    },
+    {
+      "sku": "00305210416390",
+      "product_name": "Vaseline® Men Extra Strength Lotion",
+      "product_url": "https://www.vaseline.com/us/en/p/vaseline-men-extra-strength-lotion.html/00305210416390",
+      "brand_category": "Men",
+      "product_type": "leave-on skincare",
+      "ingredients_verbatim": "Water (Eau), Glycerin, Stearic Acid, Isopropyl Palmitate, Glycol Stearate, PEG-100 Stearate, Dimethicone, Mineral Oil (Huile Minérale), Glyceryl Stearate, Petrolatum, Cetyl Alcohol, Phenoxyethanol, Methylparaben, Fragrance (Parfum), Acrylates/C10-30 Alkyl Acrylate Crosspolymer, Triethanolamine, Propylparaben, Stearamide AMP, Disodium EDTA, Helianthus Annuus (Sunflower) Seed Oil, Limonene, Linalool.",
+      "scrape_status": "captured",
+      "audit_notes": ""
+    },
+    {
+      "sku": "00305210206779",
+      "product_name": "Vaseline® Lip Therapy® Original Mini",
+      "product_url": "https://www.vaseline.com/us/en/p/vaseline-lip-therapy-original-mini.html/00305210206779",
+      "brand_category": "Lip Therapy",
+      "product_type": "lip product",
+      "ingredients_verbatim": "Petrolatum, Yellow 5 Lake.",
+      "scrape_status": "captured",
+      "audit_notes": ""
+    },
+    {
+      "sku": "00305210231597",
+      "product_name": "Vaseline® Lip Therapy® Rosy Mini",
+      "product_url": "https://www.vaseline.com/us/en/p/vaseline-lip-therapy-rosy-mini.html/00305210231597",
+      "brand_category": "Lip Therapy",
+      "product_type": "lip product",
+      "ingredients_verbatim": "Petrolatum, Flavor, Red 30 Lake, Yellow 5 Lake.",
+      "scrape_status": "captured",
+      "audit_notes": ""
+    },
+    {
+      "sku": "00305210232518",
+      "product_name": "Vaseline® Lip Therapy® Cocoa Butter Mini",
+      "product_url": "https://www.vaseline.com/us/en/p/vaseline-lip-therapy-cocoa-butter-mini.html/00305210232518",
+      "brand_category": "Lip Therapy",
+      "product_type": "lip product",
+      "ingredients_verbatim": "Petrolatum, Flavor, Theobroma Cacao (Cocoa) Seed Butter, Yellow 5 Lake.",
+      "scrape_status": "captured",
+      "audit_notes": ""
+    },
+    {
+      "sku": "00305210464728",
+      "product_name": "Vaseline® Lip Therapy® Crème Brûlée Mini",
+      "product_url": "https://www.vaseline.com/us/en/p/vaseline-lip-therapy-creme-brulee-mini.html/00305210464728",
+      "brand_category": "Lip Therapy",
+      "product_type": "lip product",
+      "ingredients_verbatim": "Petrolatum, Flavor, Theobroma Cacao (Cocoa) Seed Butter, Yellow 5 Lake.",
+      "scrape_status": "captured",
+      "audit_notes": ""
+    },
+    {
+      "sku": "00305210268494",
+      "product_name": "Vaseline® Intensive Care™ Aloe Soothe Spray",
+      "product_url": "https://www.vaseline.com/us/en/p/vaseline-intensive-care-aloe-soothe-spray.html/00305210268494",
+      "brand_category": "Intensive Care",
+      "product_type": "leave-on skincare",
+      "ingredients_verbatim": "Water (Aqua), Isopropyl Myristate, Glycerin, Sorbitan Isostearate, Dimethicone, Polyglyceryl-3 Diisostearate, Phenoxyethanol, Tapioca Starch, Methylparaben, Fragrance (Parfum), Carbomer, Stearic Acid, Propylparaben, Xanthan Gum, Ammonium Acryloyldimethyltaurate/VP Copolymer, Disodium EDTA, Petrolatum, Aloe Barbadensis Leaf Juice Powder",
+      "scrape_status": "captured",
+      "audit_notes": ""
+    },
+    {
+      "sku": "00305210269637",
+      "product_name": "Vaseline® Intensive Care™ Cocoa Radiant Spray",
+      "product_url": "https://www.vaseline.com/us/en/p/vaseline-intensive-care-cocoa-radiant-spray.html/00305210269637",
+      "brand_category": "Intensive Care",
+      "product_type": "leave-on skincare",
+      "ingredients_verbatim": "Water (Aqua), Isopropyl Myristate, Glycerin, Sorbitan Isostearate, Dimethicone, Polyglyceryl-3 Diisostearate, Phenoxyethanol, Fragrance (Parfum), Tapioca Starch, Methylparaben, Carbomer, Stearic Acid, Propylparaben, Xanthan Gum, Ammonium Acryloyldimethyltaurate/Vp Copolymer, Disodium Edta, Theobroma Cacao (Cocoa) Seed Butter, Petrolatum.",
+      "scrape_status": "captured",
+      "audit_notes": ""
+    },
+    {
+      "sku": "00859581006846",
+      "product_name": "Vaseline® Lip Therapy® Original Stick",
+      "product_url": "https://www.vaseline.com/us/en/p/vaseline-lip-therapy-original-stick.html/00859581006846",
+      "brand_category": "Lip Therapy",
+      "product_type": "lip product",
+      "ingredients_verbatim": "Octyldodecanol, Microcrystalline Wax, Caprylic/Capric Triglyceride, Ricinus Communis (Castor) Seed Oil, Cetyl Palmitate, Petrolatum, Myristyl Myristate, Polyglyceryl-3 Distearate, Water, Butyrospermum Parkii (Shea) Butter, Copernicia Cerifera (Carnauba) Wax, Cetearyl Alcohol, C20-40 Alkyl Stearate, Beeswax, Glycerin, Tocopheryl Acetate, Panthenol",
+      "scrape_status": "captured",
+      "audit_notes": ""
+    },
+    {
+      "sku": "00859581006853",
+      "product_name": "Vaseline® Lip Therapy® Rosy Lips Stick",
+      "product_url": "https://www.vaseline.com/us/en/p/vaseline-lip-therapy-rosy-lips-stick.html/00859581006853",
+      "brand_category": "Lip Therapy",
+      "product_type": "lip product",
+      "ingredients_verbatim": "Octyldodecanol, Microcrystalline Wax, Caprylic/Capric Triglyceride, Ricinus Communis (Castor) Seed Oil, Cetyl Palmitate, Petrolatum, Myristyl Myristate, Polyglyceryl-3 Distearate, Water, Butyrospermum Parkii (Shea) Butter, Copernicia Cerifera (Camauba) Wax, Cetearyl Alcohol, C20-40 Alkyl Stearate, Beeswax, Glycerin, Tocopheryl Acetate, Rose Flower Oil, Olea Europaea (Olive) Fruit Oil, Prunus Amygdalus Dulcis (Sweet Almond) Oil, Vaccinium Macrocarpon (Cranberry) Fruit Extract, Rubus Idaeus (Raspberry) Fruit Extract, Butylene Glycol, Fragrance, Red 7 Lake (Ci 15850), Iron Oxides (Ci 77491)",
+      "scrape_status": "captured",
+      "audit_notes": "Printed carnauba INCI reads 'Camauba' on the page; kept as printed."
+    },
+    {
+      "sku": "00859581006860",
+      "product_name": "Vaseline® Lip Therapy® Aloe Vera Stick",
+      "product_url": "https://www.vaseline.com/us/en/p/vaseline-lip-therapy-aloe-vera-stick.html/00859581006860",
+      "brand_category": "Lip Therapy",
+      "product_type": "lip product",
+      "ingredients_verbatim": "Octyldodecanol, Microcrystalline Wax, Caprylic/Capric Triglyceride, Ricinus Communis (Castor) Seed Oil, Cetyl Palmitate, Petrolatum, Myristyl Myristate, Polyglyceryl-3 Distearate, Water, Butyrospermum Parkii (Shea) Butter, Copernicia Cerifera (Carnauba) Wax, C20-40 Alkyl Stearate, Cetearyl Alcohol, Beeswax, Glycerin, Tocopheryl Acetate, Persea Gratissima (Avocado) Oil, Camellia Sinensis Leaf Extract, Aloe Barbadensis Leaf Extract, Butylene Glycol, Fragrance, Iron Oxides (Ci 77492)",
+      "scrape_status": "captured",
+      "audit_notes": ""
+    },
+    {
+      "sku": "00859581006877",
+      "product_name": "Vaseline® Lip Therapy® Cocoa Butter Stick",
+      "product_url": "https://www.vaseline.com/us/en/p/vaseline-lip-therapy-cocoa-butter-stick.html/00859581006877",
+      "brand_category": "Lip Therapy",
+      "product_type": "lip product",
+      "ingredients_verbatim": "Octyldodecanol, Microcrystalline Wax, Caprylic Triglyceride, Ricinus Communis (Castor) Seed Oil, Cetyl Palmitate, Petrolatum, Myristyl Myristate, Polyglyceryl-3 Distearate, Water, Shea Butter, Cocoa Seed Butter, Carnauba Wax, Cetearyl Alcohol, C20-40 Alkyl Stearate, Beeswax, Glycerin, Tocopheryl Acetate, Jojoba Seed Oil, Camellia Sinensis Leaf Extract, Avocado Fruit Extract, Macadamia Integrifolia Seed Oil, Butylene Glycol, Fragrance, Iron Oxides",
+      "scrape_status": "captured",
+      "audit_notes": ""
+    },
+    {
+      "sku": "00305210536494",
+      "product_name": "Vaseline® Lip Therapy® Rosy Lips Tin",
+      "product_url": "https://www.vaseline.com/us/en/p/vaseline-lip-therapy-rosy-lips-tin.html/00305210536494",
+      "brand_category": "Lip Therapy",
+      "product_type": "lip product",
+      "ingredients_verbatim": "Petrolatum, Flavor (Aroma), Titanium Dioxide (Ci 77891), Red 30 (Ci 73360).",
+      "scrape_status": "captured",
+      "audit_notes": ""
+    },
+    {
+      "sku": "00305210048034",
+      "product_name": "Vaseline® Baby Healing Jelly",
+      "product_url": "https://www.vaseline.com/us/en/p/vaseline-baby-healing-jelly.html/00305210048034",
+      "brand_category": "Baby",
+      "product_type": "leave-on skincare",
+      "ingredients_verbatim": null,
+      "scrape_status": "ingredients not found",
+      "audit_notes": ""
+    },
+    {
+      "sku": "00305210049123",
+      "product_name": "Sunlit Glow Body Shimmer Gel Oil",
+      "product_url": "https://www.vaseline.com/us/en/p/vaseline-sunlit-glow-shimmer-gel-oil.html/00305210049123",
+      "brand_category": "Body Oils",
+      "product_type": "leave-on skincare",
+      "ingredients_verbatim": "Mineral Oil, Hydrogenated Styrene/Butadiene Copolymer, Helianthus Annuus (Sunflower) Seed Oil, Stearic Acid, Fragrance (Parfum), Theobroma Cacao (Cocoa) Seed Butter, Calcium Sodium Borosilicate, Benzyl Benzoate, Coumarin, Hexyl Cinnamal, Linalool, Silica, Titanium Dioxide (CI 77891), Tin Oxide (CI 77861), Mica (CI 77019), Iron Oxides (CI 77491).",
+      "scrape_status": "captured",
+      "audit_notes": "Product name printed on the page h1 omits the Vaseline brand prefix; listing name used."
+    },
+    {
+      "sku": "00305210049130",
+      "product_name": "Golden Hour Glow Bronze Body Shimmer Gel Oil",
+      "product_url": "https://www.vaseline.com/us/en/p/vaseline-golden-hour-glow-shimmer-gel-oil.html/00305210049130",
+      "brand_category": "Body Oils",
+      "product_type": "leave-on skincare",
+      "ingredients_verbatim": "Mineral Oil, Hydrogenated Styrene/Butadiene Copolymer, Helianthus Annuus (Sunflower) Seed Oil, Stearic Acid, Theobroma Cacao (Cocoa) Seed Butter, Calcium Sodium Borosilicate, Fragrance (Parfum), Calcium Aluminum Borosilicate, Silica, Benzyl Benzoate, Coumarin, Hexyl Cinnamal, Linalool, Mica (CI 77019), Titanium Dioxide (CI 77891), Tin Oxide (CI 77861), Iron Oxides (CI 77491), Iron Oxides (CI 77499).",
+      "scrape_status": "captured",
+      "audit_notes": "Product name printed on the page h1 omits the Vaseline brand prefix; listing name used."
+    },
+    {
+      "sku": "00305210049239",
+      "product_name": "Vaseline® Baby Healing Jelly Tube",
+      "product_url": "https://www.vaseline.com/us/en/p/vaseline-baby-healing-jelly-tube.html/00305210049239",
+      "brand_category": "Baby",
+      "product_type": "leave-on skincare",
+      "ingredients_verbatim": null,
+      "scrape_status": "ingredients not found",
+      "audit_notes": ""
+    },
+    {
+      "sku": "00305210049246",
+      "product_name": "Vaseline® Original Healing Jelly™ Tube",
+      "product_url": "https://www.vaseline.com/us/en/p/vaseline-original-healing-jelly-tube.html/00305210049246",
+      "brand_category": "Healing Jelly",
+      "product_type": "leave-on skincare",
+      "ingredients_verbatim": null,
+      "scrape_status": "ingredients not found",
+      "audit_notes": ""
+    },
+    {
+      "sku": "00305210049260",
+      "product_name": "Vaseline® Baby Healing Jelly Stick",
+      "product_url": "https://www.vaseline.com/us/en/p/vaseline-baby-healing-jelly-stick.html/00305210049260",
+      "brand_category": "Baby",
+      "product_type": "leave-on skincare",
+      "ingredients_verbatim": null,
+      "scrape_status": "ingredients not found",
+      "audit_notes": ""
+    },
+    {
+      "sku": "00305210049307",
+      "product_name": "Vaseline® Lip Therapy Arctic Mint Mini",
+      "product_url": "https://www.vaseline.com/us/en/p/vaseline-lip-therapy-arctic-mint-mini.html/00305210049307",
+      "brand_category": "Lip Therapy",
+      "product_type": "lip product",
+      "ingredients_verbatim": null,
+      "scrape_status": "ingredients not found",
+      "audit_notes": ""
+    },
+    {
+      "sku": "00305210049314",
+      "product_name": "Vaseline® Lip Therapy Vanilla Swirl Mini",
+      "product_url": "https://www.vaseline.com/us/en/p/vaseline-lip-therapy-vanilla-swirl-mini.html/00305210049314",
+      "brand_category": "Lip Therapy",
+      "product_type": "lip product",
+      "ingredients_verbatim": null,
+      "scrape_status": "ingredients not found",
+      "audit_notes": ""
+    },
+    {
+      "sku": "00305210049390",
+      "product_name": "Vaseline® Lip Therapy Berry Crush Mini",
+      "product_url": "https://www.vaseline.com/us/en/p/vaseline-lip-therapy-berry-crush-mini.html/00305210049390",
+      "brand_category": "Lip Therapy",
+      "product_type": "lip product",
+      "ingredients_verbatim": null,
+      "scrape_status": "ingredients not found",
+      "audit_notes": ""
+    },
+    {
+      "sku": "00305210049857",
+      "product_name": "Vaseline® Cherry Aura Hand Butter",
+      "product_url": "https://www.vaseline.com/us/en/p/vaseline-cherry-aura-hand-butter.html/00305210049857",
+      "brand_category": "Cherry Aura",
+      "product_type": "leave-on skincare",
+      "ingredients_verbatim": null,
+      "scrape_status": "ingredients not found",
+      "audit_notes": ""
+    },
+    {
+      "sku": "00305210049871",
+      "product_name": "Vaseline® Cherry Aura Body Lotion",
+      "product_url": "https://www.vaseline.com/us/en/p/vaseline-cherry-aura-body-lotion.html/00305210049871",
+      "brand_category": "Cherry Aura",
+      "product_type": "leave-on skincare",
+      "ingredients_verbatim": null,
+      "scrape_status": "ingredients not found",
+      "audit_notes": ""
+    },
+    {
+      "sku": "00305210050013",
+      "product_name": "Vaseline® Cherry Aura Whipped Body Cream",
+      "product_url": "https://www.vaseline.com/us/en/p/vaseline-cherry-aura-whipped-body-cream.html/00305210050013",
+      "brand_category": "Cherry Aura",
+      "product_type": "leave-on skincare",
+      "ingredients_verbatim": null,
+      "scrape_status": "ingredients not found",
+      "audit_notes": ""
+    },
+    {
+      "sku": "00305210287303",
+      "product_name": "Vaseline® Intensive Care™ Cocoa Radiant Gel Oil",
+      "product_url": "https://www.vaseline.com/us/en/p/vaseline-intensive-care-cocoa-radiant-gel-oil.html/00305210287303",
+      "brand_category": "Intensive Care",
+      "product_type": "leave-on skincare",
+      "ingredients_verbatim": "Mineral Oil, Hydrogenated Styrene/Butadiene Copolymer, Theobroma Cacao (Cocoa) Seed Butter, Fragrance.",
+      "scrape_status": "captured",
+      "audit_notes": ""
+    },
+    {
+      "sku": "00850068951918",
+      "product_name": "Vaseline Lip Therapy Pink Grapefruit Mini",
+      "product_url": "https://www.vaseline.com/us/en/p/vaseline-lip-therapy-pink-grapefruit-mini.html/00850068951918",
+      "brand_category": "Lip Therapy",
+      "product_type": "lip product",
+      "ingredients_verbatim": null,
+      "scrape_status": "ingredients not found",
+      "audit_notes": ""
+    },
+    {
+      "sku": "00850081897248",
+      "product_name": "Vaseline Lip Therapy Pistachio Donut Mini",
+      "product_url": "https://www.vaseline.com/us/en/p/vaseline-lip-therapy-pistachio-donut-mini.html/00850081897248",
+      "brand_category": "Lip Therapy",
+      "product_type": "lip product",
+      "ingredients_verbatim": null,
+      "scrape_status": "ingredients not found",
+      "audit_notes": ""
+    },
+    {
+      "sku": "00305210047600",
+      "product_name": "Vaseline® Pro VitaB3 Supple & Soft Serum Burst Lotion",
+      "product_url": "https://www.vaseline.com/us/en/p/vaseline-pro-vitab3-supple-and-soft-serum-burst-lotion.html/00305210047600",
+      "brand_category": "Pro-VitaB3",
+      "product_type": "leave-on skincare",
+      "ingredients_verbatim": "Water (Aqua), Dimethicone, Niacinamide, Glycerin, Isohexadecane, Caprylyl Glycol, Carbomer, Phenoxyethanol, Fragrance (Parfum), Stearic Acid, Acrylates/C10-30 Alkyl Acrylate Crosspolymer, Sodium Hyaluronate, Disodium Edta, Helianthus Annuus (Sunflower) Seed Oil, Glycine, Sodium Pca, Cystine, Rutin, Palmitoyl Tripeptide-1, Palmitoyl Tetrapeptide-7, Phaseolus Lunatus (Green Bean) Seed Extract, Petrolatum, Glutathione, Amyl Cinnamal, Benzyl Salicylate, Benzyl Alcohol, Citronellol, Hexyl Cinnamal, Limonene, Linalool, Titanium Dioxide (Ci 77891).",
+      "scrape_status": "captured",
+      "audit_notes": ""
+    },
+    {
+      "sku": "00305210047617",
+      "product_name": "Vaseline® Pro VitaB3 Luminous Glow Serum Burst Lotion",
+      "product_url": "https://www.vaseline.com/us/en/p/vaseline-pro-vitab3-luminous-glow-serum-burst-lotion.html/00305210047617",
+      "brand_category": "Pro-VitaB3",
+      "product_type": "leave-on skincare",
+      "ingredients_verbatim": "Water (Aqua), Dimethicone, Niacinamide, Isohexadecane, Glycerin, Caprylyl Glycol, Carbomer, Phenoxyethanol, Stearic Acid, Fragrance (Parfum), Sodium Hyaluronate, Acrylates/C10-30 Alkyl Acrylate Crosspolymer, Disodium Edta, Helianthus Annuus (Sunflower) Seed Oil, Glycine, Sodium Pca, Cystine, Tocopheryl Acetate, Sodium Ascorbyl Phosphate, Petrolatum, Glutathione, Benzyl Alcohol, Benzyl Salicylate, Citronellol, Hexyl Cinnamal, Limonene, Linalool, Titanium Dioxide (Ci 77891).",
+      "scrape_status": "captured",
+      "audit_notes": ""
+    }
+  ]
+}

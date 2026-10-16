@@ -1,0 +1,70 @@
+{
+  "products": {
+    "Daily Moisture Lotion Fragrance-Free": {
+      "url": "https://lubriderm.com/products/daily-moisture-lotion-fragrance-free",
+      "brand_category": "Body Moisturizer, Dry Skin, Fragrance Free",
+      "product_type": "leave-on skincare",
+      "ingredients_verbatim": "Water, Mineral Oil, Glycerin, Carbomer, Potassium Cetyl Phosphate, Phenoxyethanol, Cetyl Alcohol, Sodium Polyacrylate, Caprylyl Glycol, Hydrogenated Palm Glycerides, Sodium Hydroxide, Butyrospermum Parkii (Shea) Butter, Fragrance, Disodium EDTA, Avena Sativa (Oat) Kernel Oil, Magnesium Aspartate, Zinc Gluconate, Copper Gluconate",
+      "scrape_status": "ok",
+      "audit_notes": "Product copy says 'Free of parabens, phthalates, dyes, and fragrance' but the printed ingredient list includes 'Fragrance'. Conflict noted."
+    },
+    "Daily Moisture Lotion": {
+      "url": "https://lubriderm.com/products/daily-moisture-lotion",
+      "brand_category": "Body Moisturizer, Dry Skin",
+      "product_type": "leave-on skincare",
+      "ingredients_verbatim": "Water, Mineral Oil, Glycerin, Carbomer, Potassium Cetyl Phosphate, Phenoxyethanol, Cetyl Alcohol, Sodium Polyacrylate, Caprylyl Glycol, Hydrogenated Palm Glycerides, Sodium Hydroxide, Butyrospermum Parkii (Shea) Butter, Fragrance, Disodium EDTA, Avena Sativa (Oat) Kernel Oil, Magnesium Aspartate, Zinc Gluconate, Copper Gluconate",
+      "scrape_status": "ok",
+      "audit_notes": "Printed ingredient list is character-identical to Daily Moisture Lotion Fragrance-Free (which says it is fragrance-free). This product's copy claims only 'Free of parabens, phthalates, and dyes', so the identical list (including 'Fragrance') may be a page data error. Needs manual verification against the product package."
+    },
+    "Advanced Therapy Lotion Fragrance-Free": {
+      "url": "https://lubriderm.com/products/advanced-therapy-lotion-fragrance-free",
+      "brand_category": "Body Moisturizer, Advanced Therapy, Fragrance Free",
+      "product_type": "leave-on skincare",
+      "ingredients_verbatim": "Water, Glycerin, Mineral Oil, Cetyl Alcohol, Cetearyl Alcohol, Sorbitol, Caprylic/Capric Triglyceride, Tocopheryl Acetate, Avena Sativa (Oat) Kernel Oil, Panthenol, Dimethicone, Palmitic Acid, Stearic Acid, Carbomer, Polysorbate 60, Lecithin, Ceteareth-20, Caprylyl Glycol, Sodium Citrate, Phenoxyethanol, Sodium Hydroxide, Citric Acid, Titanium Dioxide",
+      "scrape_status": "ok",
+      "audit_notes": ""
+    },
+    "Advanced Therapy Body Wash Fragrance-Free": {
+      "url": "https://lubriderm.com/products/advanced-therapy-body-wash-fragrancy-free",
+      "brand_category": "Body Wash, Advanced Therapy, Fragrance Free",
+      "product_type": "rinse-off skincare",
+      "ingredients_verbatim": "Water, Glycerin, Cocamidopropyl Betaine, PEG-80 Sorbitan Laurate, Sodium Cocoyl Isethionate, Avena Sativa (Oat) Kernel Flour, Acrylates/C10-30 Alkyl Acrylate Crosspolymer, Sodium Benzoate, Caprylyl Glycol, Potassium Sorbate, Sodium Hydroxide, Caprylic/Capric Triglyceride, Avena Sativa (Oat) Kernel Oil, Panthenol, Tocopheryl Acetate, Ceramide NP",
+      "scrape_status": "ok",
+      "audit_notes": "Product copy says 'Free of Parabens, Phthalates, Dyes, Sulfates'. No sulfate-named ingredient in the printed list; 'Sodium Cocoyl Isethionate' is an isethionate (not a sulfate)."
+    },
+    "Intense Skin Repair Lotion": {
+      "url": "https://lubriderm.com/products/intense-skin-repair-lotion",
+      "brand_category": "Body Moisturizer, Intense Skin Repair",
+      "product_type": "leave-on skincare",
+      "ingredients_verbatim": "Water, Glycerin, Mineral Oil, Cetyl Alcohol, Cetearyl Alcohol, Sorbitol, Caprylic/Capric Triglyceride, Tocopheryl Acetate, Avena Sativa (Oat) Kernel Oil, Butyrospermum Parkii (Shea) Butter, Zinc Gluconate, Copper Gluconate, Magnesium Aspartate, Panthenol, Dimethicone, Palmitic Acid, Stearic Acid, Carbomer, Polysorbate 60, Lecithin, Ceteareth-20, Caprylyl Glycol, Sodium Citrate, Disodium EDTA, Phenoxyethanol, Sodium Hydroxide, Citric Acid, Fragrance, Titanium Dioxide",
+      "scrape_status": "ok",
+      "audit_notes": "Product copy says 'Hypoallergenic and lightly scented'; printed list includes 'Fragrance'. Consistent with copy."
+    },
+    "Daily Moisture Body Wash Lightly Scented": {
+      "url": "https://lubriderm.com/products/daily-moisture-body-wash-lightly-scented",
+      "brand_category": "Body Wash, Daily Moisture, Dry Skin",
+      "product_type": "rinse-off skincare",
+      "ingredients_verbatim": "Water, Glycerin, Cocamidopropyl Betaine, PEG-80 Sorbitan Laurate, Sodium Cocoyl Isethionate, Avena Sativa (Oat) Kernel Flour, Acrylates/C10-30 Alkyl Acrylate Crosspolymer, Sodium Benzoate, Caprylyl Glycol, Glycol Distearate, Potassium Sorbate, Sodium Hydroxide, Caprylic/Capric Triglyceride, Fragrance, Avena Sativa (Oat) Kernel Oil, Butyrospermum Parkii (Shea) Butter, Ceramide NP",
+      "scrape_status": "ok",
+      "audit_notes": "Product copy says 'Free of Parabens, Phthalates, Dyes, Sulfates' and 'Lightly scented'; printed list includes 'Fragrance'. Consistent with 'lightly scented' copy. No sulfate-named ingredient in the list."
+    },
+    "Daily Moisture Lotion Fragrance-Free 24 fl oz, 2-count + 6 fl oz Travel Size": {
+      "url": "https://lubriderm.com/products/daily-moisture-lotion-fragrance-free-24-fl-oz-2-count-6-fl-oz-travel-size",
+      "brand_category": "Bundle Pack, Special Offer",
+      "product_type": "leave-on skincare",
+      "ingredients_verbatim": "",
+      "scrape_status": "ingredients not found on page",
+      "audit_notes": "Bundle page has no printed INCI list in its visible text. The page's CMS holds a function-grouped ingredient explanation (e.g. 'Carbomer, Palmitic Acid; Stearic Acid ...', 'Titanium Dioxide', 'Citric Acid, Sodium Citrate, Sodium Hydroxide', 'Caprylyl Glycol', 'Phenoxyethanol') that is not a verbatim ingredient list and is not used for grading. Not graded. Manual check of the package is needed."
+    }
+  },
+  "progress": [
+    "1 Daily Moisture Lotion Fragrance-Free scraped",
+    "2 Daily Moisture Lotion scraped (identical list to #1, flagged)",
+    "3 Advanced Therapy Lotion Fragrance-Free scraped",
+    "4 Advanced Therapy Body Wash Fragrance-Free scraped",
+    "5 Intense Skin Repair Lotion scraped",
+    "6 Daily Moisture Body Wash Lightly Scented scraped",
+    "7 Daily Moisture Lotion FF Travel bundle: ingredients not found on page",
+    "ALL 7 scrapes done"
+  ]
+}
