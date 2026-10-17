@@ -1,13 +1,19 @@
 {
- "results": {
-  "jergens-daily-moisturizer": {
-   "status": "complete",
-   "tier": "Avoid (High Priority Swap)",
-   "fc": 8,
-   "esc": [
-    "PFAS",
-    "carcinogen in leave-on"
-   ],
+ "brand": "jergens",
+ "tier_counts": {
+  "Puberty Safe": 0,
+  "Use Caution": 0,
+  "Avoid (Mild)": 0,
+  "Avoid (Moderate)": 0,
+  "Avoid (High Priority Swap)": 0,
+  "ungradable": 38
+ },
+ "rows": [
+  {
+   "product_name": "Daily Moisture",
+   "tier": "ungradable",
+   "flag_count": 8,
+   "product_type": "leave-on skincare",
    "flagged": [
     "Dimethicone",
     "Mineral Oil",
@@ -18,69 +24,33 @@
     "Phenoxyethanol",
     "Ethylparaben"
    ],
+   "natural": [],
    "unknown": [
+    "Stearic Acid",
     "Glyceryl Dilaurate",
-    "Hydrolyzed Silk"
+    "C12-15 Alkyl Benzoate",
+    "Arginine",
+    "Isopropyl Myristate",
+    "Sodium Hydroxide",
+    "Hydrolyzed Silk",
+    "Ananas Sativus (Pineapple) Fruit Juice",
+    "Citrus Grandis (Grapefruit) Juice",
+    "Citrus Limon (Lemon) Juice"
    ],
-   "fallback": [
-    [
-     "Water",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Glycerin",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Stearic Acid",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "C12-15 Alkyl Benzoate",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Arginine",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Isopropyl Myristate",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Sodium Hydroxide",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Ananas Sativus (Pineapple) Fruit Juice",
-     "fallback: botanical name heuristic (not in reference)"
-    ],
-    [
-     "Citrus Grandis (Grapefruit) Juice",
-     "fallback: botanical name heuristic (not in reference)"
-    ],
-    [
-     "Citrus Limon (Lemon) Juice",
-     "fallback: botanical name heuristic (not in reference)"
-    ]
-   ],
-   "eo_source": false,
-   "natural": []
-  },
-  "jergens-natural-glow-face-moisturizer-sunscreen": {
-   "status": "complete",
-   "tier": "Avoid (High Priority Swap)",
-   "fc": 13,
    "esc": [
     "PFAS",
-    "carcinogen in leave-on",
-    "formaldehyde-releaser",
-    "heavy metals"
+    "carcinogen in leave-on"
    ],
+   "status": "needs review"
+  },
+  {
+   "product_name": "Natural Glow Face Moisturizer +SPF 20",
+   "tier": "ungradable",
+   "flag_count": 12,
+   "product_type": "sunscreen",
    "flagged": [
     "Avobenzone",
     "Octisalate",
-    "Octocrylene",
     "Aluminum Starch Octenylsuccinate",
     "Polyacrylamide",
     "Dimethicone",
@@ -92,54 +62,32 @@
     "Propylparaben",
     "Laureth-7"
    ],
+   "natural": [],
    "unknown": [
+    "And Octocrylene",
     "Dihydroxyacetone",
+    "Glyceryl Stearate",
     "Phenyl Trimethicone",
+    "C12-15 Alkyl Benzoate",
     "C13-14 Isoparaffin",
+    "Zea Mays (Corn) Starch",
+    "Tocopheryl Acetate",
+    "Caramel",
     "Erythrulose"
    ],
-   "fallback": [
-    [
-     "Water",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Glycerin",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Glyceryl Stearate",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "C12-15 Alkyl Benzoate",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Zea Mays (Corn) Starch",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Tocopheryl Acetate",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Caramel",
-     "fallback: template LOW list (not in reference)"
-    ]
-   ],
-   "eo_source": false,
-   "natural": []
-  },
-  "jergens-natural-glow-firming-daily-moisturizer-fair-to-medium": {
-   "status": "complete",
-   "tier": "Avoid (High Priority Swap)",
-   "fc": 12,
    "esc": [
+    "heavy metals",
     "PFAS",
-    "carcinogen in leave-on",
-    "formaldehyde-releaser"
+    "formaldehyde-releaser",
+    "carcinogen in leave-on"
    ],
+   "status": "needs review"
+  },
+  {
+   "product_name": "Natural Glow + Firming Daily Moisturizer",
+   "tier": "ungradable",
+   "flag_count": 12,
+   "product_type": "leave-on skincare",
    "flagged": [
     "Petrolatum",
     "Mineral Oil",
@@ -154,149 +102,69 @@
     "Ethylparaben",
     "Butylene Glycol"
    ],
+   "natural": [],
    "unknown": [
+    "Zea Mays (Corn) Starch",
     "Dihydroxyacetone",
     "Ethylhexyl Isononanoate",
     "Octyldodecyl Myristate",
+    "Stearic Acid",
     "Hydroxyethyl Acrylate/Sodium Acryloyldimethyl Taurate Copolymer",
+    "Isohexadecane",
+    "Polysorbate 60",
+    "Cocos Nucifera (Coconut) Water",
     "Hydrolyzed Collagen",
     "Polyimide-1",
-    "Hydrolyzed Elastin"
+    "Withania Somnifera Root Extract",
+    "Centella Asiatica Extract",
+    "Fucus Vesiculosus Extract",
+    "Hydrolyzed Elastin",
+    "Camellia Sinensis Leaf Extract",
+    "Benzoic Acid",
+    "Caramel"
    ],
-   "fallback": [
-    [
-     "Water",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Glycerin",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Zea Mays (Corn) Starch",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Stearic Acid",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Isohexadecane",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Polysorbate 60",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Cocos Nucifera (Coconut) Water",
-     "fallback: botanical name heuristic (not in reference)"
-    ],
-    [
-     "Withania Somnifera Root Extract",
-     "fallback: botanical name heuristic (not in reference)"
-    ],
-    [
-     "Centella Asiatica Extract",
-     "fallback: botanical name heuristic (not in reference)"
-    ],
-    [
-     "Fucus Vesiculosus Extract",
-     "fallback: botanical name heuristic (not in reference)"
-    ],
-    [
-     "Camellia Sinensis Leaf Extract",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Benzoic Acid",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Caramel",
-     "fallback: template LOW list (not in reference)"
-    ]
-   ],
-   "eo_source": false,
-   "natural": []
-  },
-  "jergens-sparkling-berry-shea-fusion-body-lotion": {
-   "status": "complete",
-   "tier": "Avoid (High Priority Swap)",
-   "fc": 4,
    "esc": [
     "PFAS",
+    "formaldehyde-releaser",
     "carcinogen in leave-on"
    ],
+   "status": "needs review"
+  },
+  {
+   "product_name": "Sparkling Berry Shea Fusion",
+   "tier": "ungradable",
+   "flag_count": 4,
+   "product_type": "leave-on skincare",
    "flagged": [
     "Fragrance",
     "Dimethicone",
     "Ceteareth-20",
     "Phenoxyethanol"
    ],
-   "unknown": [],
-   "fallback": [
-    [
-     "Water",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Glycerin",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Butyrospermum Parkii (Shea) Butter",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Isopropyl Myristate",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Simmondsia Chinensis (Jojoba) Seed Oil",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Glyceryl Stearate",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Hydroxyacetophenone",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Caprylic/Capric Triglyceride",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Acrylates/C10-30 Alkyl Acrylate Crosspolymer",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Tetrasodium Glutamate Diacetate",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Sodium Hydroxide",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Tocopheryl Acetate",
-     "fallback: template LOW list (not in reference)"
-    ]
+   "natural": [],
+   "unknown": [
+    "Butyrospermum Parkii (Shea) Butter",
+    "Isopropyl Myristate",
+    "Simmondsia Chinensis (Jojoba) Seed Oil",
+    "Glyceryl Stearate",
+    "Hydroxyacetophenone",
+    "Caprylic/Capric Triglyceride",
+    "Acrylates/C10-30 Alkyl Acrylate Crosspolymer",
+    "Tetrasodium Glutamate Diacetate",
+    "Sodium Hydroxide",
+    "Tocopheryl Acetate"
    ],
-   "eo_source": false,
-   "natural": []
-  },
-  "jergens-nourishing-honey-moisturizer": {
-   "status": "complete",
-   "tier": "Avoid (High Priority Swap)",
-   "fc": 11,
    "esc": [
     "PFAS",
-    "carcinogen in leave-on",
-    "heavy metals"
+    "carcinogen in leave-on"
    ],
+   "status": "needs review"
+  },
+  {
+   "product_name": "Nourishing Honey Moisturizer",
+   "tier": "ungradable",
+   "flag_count": 11,
+   "product_type": "leave-on skincare",
    "flagged": [
     "Dimethicone",
     "Aluminum Starch Octenylsuccinate",
@@ -310,67 +178,32 @@
     "Carbomer",
     "Propylene Glycol"
    ],
+   "natural": [],
    "unknown": [
+    "Stearic Acid",
+    "Tapioca Starch",
     "Glyceryl Dilaurate",
-    "Tridecyl Salicylate"
+    "Sodium Hydroxide",
+    "Arginine",
+    "Tridecyl Salicylate",
+    "Tocopheryl Acetate",
+    "Butyrospermum Parkii (Shea) Butter",
+    "Theobroma Cacao (Cocoa) Seed Butter",
+    "Citrus Aurantium Amara (Bitter Orange) Flower Extract",
+    "Honey Extract"
    ],
-   "fallback": [
-    [
-     "Water",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Glycerin",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Stearic Acid",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Tapioca Starch",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Sodium Hydroxide",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Arginine",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Tocopheryl Acetate",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Butyrospermum Parkii (Shea) Butter",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Theobroma Cacao (Cocoa) Seed Butter",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Citrus Aurantium Amara (Bitter Orange) Flower Extract",
-     "fallback: botanical name heuristic (not in reference)"
-    ],
-    [
-     "Honey Extract",
-     "fallback: botanical name heuristic (not in reference)"
-    ]
-   ],
-   "eo_source": false,
-   "natural": []
-  },
-  "jergens-natural-glow-instant-sun-moisturizer": {
-   "status": "complete",
-   "tier": "Avoid (High Priority Swap)",
-   "fc": 14,
    "esc": [
+    "heavy metals",
     "PFAS",
     "carcinogen in leave-on"
    ],
+   "status": "needs review"
+  },
+  {
+   "product_name": "Natural Glow Instant Sun Moisturizer + Bronzer",
+   "tier": "ungradable",
+   "flag_count": 14,
+   "product_type": "leave-on skincare",
    "flagged": [
     "Alcohol Denat",
     "Propanediol",
@@ -387,74 +220,45 @@
     "PEG-7 Trimethylolpropane Coconut Ether",
     "Coumarin"
    ],
+   "natural": [],
    "unknown": [
+    "[Light Bronze shade] Water",
     "Dihydroxyacetone",
     "Erythrulose",
     "Hydroxyethyl Acrylate/Sodium",
     "Acryloyldimethyl Taurate Copolymer",
+    "Benzoic Acid",
     "Alpha-Isomethyl Ionone",
     "Benzyl Salicylate",
     "Citronellol",
     "Hexyl Cinnamal",
-    "Ext. Violet 2",
+    "Ext",
+    "Violet 2",
     "Orange 4",
     "Red 4",
-    "Yellow 10",
+    "Yellow 10 || [Deep Bronze shade] Water",
+    "Zea Mays (Corn) Starch",
     "Ethylhexyl Isononanoate",
     "Octyldodecyl Myristate",
+    "Stearic Acid",
     "Hydroxyethyl Acrylate/Sodium Acryloyldimethyl Taurate Copolymer",
-    "Polyisobutene"
+    "Polyisobutene",
+    "Tocopheryl Acetate",
+    "Sorbitan Isostearate",
+    "Caramel",
+    "Yellow 10"
    ],
-   "fallback": [
-    [
-     "Water",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Glycerin",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Benzoic Acid",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Zea Mays (Corn) Starch",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Stearic Acid",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Tocopheryl Acetate",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Sorbitan Isostearate",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Cocos Nucifera (Coconut) Oil",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Caramel",
-     "fallback: template LOW list (not in reference)"
-    ]
-   ],
-   "eo_source": false,
-   "natural": []
-  },
-  "jergens-deep-restoring-argan-oil-moisturizer": {
-   "status": "complete",
-   "tier": "Avoid (High Priority Swap)",
-   "fc": 12,
    "esc": [
     "PFAS",
-    "carcinogen in leave-on",
-    "heavy metals"
+    "carcinogen in leave-on"
    ],
+   "status": "needs review"
+  },
+  {
+   "product_name": "Deep Restoring Argan Oil Moisturizer",
+   "tier": "ungradable",
+   "flag_count": 12,
+   "product_type": "leave-on skincare",
    "flagged": [
     "Petrolatum",
     "Aluminum Starch Octenylsuccinate",
@@ -469,60 +273,33 @@
     "Pentylene Glycol",
     "Alcohol"
    ],
-   "unknown": [],
-   "fallback": [
-    [
-     "Water",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Glycerin",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Stearic Acid",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "C12-15 Alkyl Benzoate",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Arginine",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Sodium Hydroxide",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Argania Spinosa Kernel Oil",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Lecithin",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Ascorbyl Palmitate",
-     "fallback: template LOW list (not in reference)"
-    ]
+   "natural": [],
+   "unknown": [
+    "Stearic Acid",
+    "C12-15 Alkyl Benzoate",
+    "Arginine",
+    "Sodium Hydroxide",
+    "Argania Spinosa Kernel Oil",
+    "Lecithin",
+    "Ascorbyl Palmitate"
    ],
-   "eo_source": false,
-   "natural": []
-  },
-  "cherry-shea-fusion": {
-   "status": "ingredients not found",
-   "tier": null
-  },
-  "jergens-vanilla-crush-shea-fusion-body-lotion": {
-   "status": "complete",
-   "tier": "Avoid (High Priority Swap)",
-   "fc": 6,
    "esc": [
+    "heavy metals",
     "PFAS",
     "carcinogen in leave-on"
    ],
+   "status": "needs review"
+  },
+  {
+   "product_name": "Cherry Swirl Shea Fusion",
+   "tier": "ungradable",
+   "status": "ingredients not found"
+  },
+  {
+   "product_name": "Vanilla Crush Shea Fusion",
+   "tier": "ungradable",
+   "flag_count": 6,
+   "product_type": "leave-on skincare",
    "flagged": [
     "Fragrance",
     "Dimethicone",
@@ -531,74 +308,36 @@
     "Coumarin",
     "Limonene"
    ],
+   "natural": [],
    "unknown": [
+    "Butyrospermum Parkii (Shea) Butter",
+    "Isopropyl Myristate",
+    "Simmondsia Chinensis (Jojoba) Seed Oil",
+    "Glyceryl Stearate",
+    "Hydroxyacetophenone",
+    "Caprylic/Capric Triglyceride",
+    "Acrylates/C10-30 Alkyl Acrylate Crosspolymer",
+    "Tetrasodium Glutamate Diacetate",
+    "Sodium Hydroxide",
+    "Tocopheryl Acetate",
     "Benzyl Salicylate"
    ],
-   "fallback": [
-    [
-     "Water",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Glycerin",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Butyrospermum Parkii (Shea) Butter",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Isopropyl Myristate",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Simmondsia Chinensis (Jojoba) Seed Oil",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Glyceryl Stearate",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Hydroxyacetophenone",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Caprylic/Capric Triglyceride",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Acrylates/C10-30 Alkyl Acrylate Crosspolymer",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Tetrasodium Glutamate Diacetate",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Sodium Hydroxide",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Tocopheryl Acetate",
-     "fallback: template LOW list (not in reference)"
-    ]
-   ],
-   "eo_source": false,
-   "natural": []
-  },
-  "confetti-cake-shea-fusion": {
-   "status": "ingredients not found",
-   "tier": null
-  },
-  "jergens-warm-amber-shea-fusion-body-lotion": {
-   "status": "complete",
-   "tier": "Avoid (High Priority Swap)",
-   "fc": 7,
    "esc": [
     "PFAS",
     "carcinogen in leave-on"
    ],
+   "status": "needs review"
+  },
+  {
+   "product_name": "Confetti Cake Shea Fusion",
+   "tier": "ungradable",
+   "status": "ingredients not found"
+  },
+  {
+   "product_name": "Warm Amber Shea Fusion",
+   "tier": "ungradable",
+   "flag_count": 7,
+   "product_type": "leave-on skincare",
    "flagged": [
     "Fragrance",
     "Dimethicone",
@@ -608,70 +347,31 @@
     "Hydroxycitronellal",
     "Limonene"
    ],
+   "natural": [],
    "unknown": [
+    "Butyrospermum Parkii (Shea) Butter",
+    "Isopropyl Myristate",
+    "Simmondsia Chinensis (Jojoba) Seed Oil",
+    "Glyceryl Stearate",
+    "Hydroxyacetophenone",
+    "Caprylic/Capric Triglyceride",
+    "Acrylates/C10-30 Alkyl Acrylate Crosspolymer",
+    "Tetrasodium Glutamate Diacetate",
+    "Sodium Hydroxide",
+    "Tocopheryl Acetate",
     "Citronellol"
    ],
-   "fallback": [
-    [
-     "Water",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Glycerin",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Butyrospermum Parkii (Shea) Butter",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Isopropyl Myristate",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Simmondsia Chinensis (Jojoba) Seed Oil",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Glyceryl Stearate",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Hydroxyacetophenone",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Caprylic/Capric Triglyceride",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Acrylates/C10-30 Alkyl Acrylate Crosspolymer",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Tetrasodium Glutamate Diacetate",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Sodium Hydroxide",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Tocopheryl Acetate",
-     "fallback: template LOW list (not in reference)"
-    ]
-   ],
-   "eo_source": false,
-   "natural": []
-  },
-  "jergens-hydrating-coconut-lotion": {
-   "status": "complete",
-   "tier": "Avoid (High Priority Swap)",
-   "fc": 10,
    "esc": [
     "PFAS",
     "carcinogen in leave-on"
    ],
+   "status": "needs review"
+  },
+  {
+   "product_name": "Hydrating Coconut Lotion",
+   "tier": "ungradable",
+   "flag_count": 10,
+   "product_type": "leave-on skincare",
    "flagged": [
     "Ceteareth-20",
     "Mineral Oil",
@@ -684,70 +384,30 @@
     "Phenoxyethanol",
     "Ethylparaben"
    ],
+   "natural": [],
    "unknown": [
-    "Glyceryl Dilaurate"
+    "Glyceryl Dilaurate",
+    "C12-15 Alkyl Benzoate",
+    "Stearic Acid",
+    "Isopropyl Myristate",
+    "Sodium Hydroxide",
+    "Arginine",
+    "Cocos Nucifera (Coconut) Water",
+    "Withania Somnifera Root Extract",
+    "Cocos Nucifera (Coconut) Fruit Extract",
+    "Sorbitol"
    ],
-   "fallback": [
-    [
-     "Water",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Glycerin",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "C12-15 Alkyl Benzoate",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Stearic Acid",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Isopropyl Myristate",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Sodium Hydroxide",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Arginine",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Cocos Nucifera (Coconut) Oil",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Cocos Nucifera (Coconut) Water",
-     "fallback: botanical name heuristic (not in reference)"
-    ],
-    [
-     "Withania Somnifera Root Extract",
-     "fallback: botanical name heuristic (not in reference)"
-    ],
-    [
-     "Cocos Nucifera (Coconut) Fruit Extract",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Sorbitol",
-     "fallback: template LOW list (not in reference)"
-    ]
-   ],
-   "eo_source": false,
-   "natural": []
-  },
-  "jergens-soothing-aloe-moisturizer": {
-   "status": "complete",
-   "tier": "Avoid (High Priority Swap)",
-   "fc": 7,
    "esc": [
     "PFAS",
     "carcinogen in leave-on"
    ],
+   "status": "needs review"
+  },
+  {
+   "product_name": "Soothing Aloe Moisturizer",
+   "tier": "ungradable",
+   "flag_count": 7,
+   "product_type": "leave-on skincare",
    "flagged": [
     "Ceteareth-20",
     "Dimethicone",
@@ -757,76 +417,32 @@
     "Phenoxyethanol",
     "Ethylparaben"
    ],
-   "unknown": [],
-   "fallback": [
-    [
-     "Water",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Glycerin",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Stearic Acid",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Hydrogenated Vegetable Oil",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Isopropyl Myristate",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Canola Oil",
-     "fallback: botanical name heuristic (not in reference)"
-    ],
-    [
-     "Glyceryl Stearate",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Acrylates/C10-30 Alkyl Acrylate Crosspolymer",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Arginine",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Sodium Hydroxide",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Sodium Pca",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Aloe Barbadensis Leaf Extract",
-     "fallback: botanical name heuristic (not in reference)"
-    ],
-    [
-     "Eucalyptus Globulus Leaf Extract",
-     "fallback: botanical name heuristic (not in reference)"
-    ],
-    [
-     "Cucumis Sativus (Cucumber) Fruit Extract",
-     "fallback: template LOW list (not in reference)"
-    ]
+   "natural": [],
+   "unknown": [
+    "Stearic Acid",
+    "Hydrogenated Vegetable Oil",
+    "Isopropyl Myristate",
+    "Canola Oil",
+    "Glyceryl Stearate",
+    "Acrylates/C10-30 Alkyl Acrylate Crosspolymer",
+    "Arginine",
+    "Sodium Hydroxide",
+    "Sodium Pca",
+    "Aloe Barbadensis Leaf Extract",
+    "Eucalyptus Globulus Leaf Extract",
+    "Cucumis Sativus (Cucumber) Fruit Extract"
    ],
-   "eo_source": false,
-   "natural": []
-  },
-  "jergens-original-scent-moisturizer": {
-   "status": "complete",
-   "tier": "Avoid (High Priority Swap)",
-   "fc": 6,
    "esc": [
     "PFAS",
     "carcinogen in leave-on"
    ],
+   "status": "needs review"
+  },
+  {
+   "product_name": "Original Scent Moisturizer",
+   "tier": "ungradable",
+   "flag_count": 6,
+   "product_type": "leave-on skincare",
    "flagged": [
     "Alcohol Denat",
     "Dimethicone",
@@ -835,56 +451,27 @@
     "Phenoxyethanol",
     "Ethylparaben"
    ],
+   "natural": [],
    "unknown": [
-    "Glyceryl Dilaurate"
+    "Stearic Acid",
+    "Glyceryl Dilaurate",
+    "Lanolin Oil",
+    "Arginine",
+    "Sodium Hydroxide",
+    "Acrylates/C10-30 Alkyl Acrylate Crosspolymer",
+    "Tocopheryl Acetate"
    ],
-   "fallback": [
-    [
-     "Water",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Glycerin",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Stearic Acid",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Lanolin Oil",
-     "fallback: botanical name heuristic (not in reference)"
-    ],
-    [
-     "Arginine",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Sodium Hydroxide",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Acrylates/C10-30 Alkyl Acrylate Crosspolymer",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Tocopheryl Acetate",
-     "fallback: template LOW list (not in reference)"
-    ]
-   ],
-   "eo_source": false,
-   "natural": []
-  },
-  "jergens-skin-firming": {
-   "status": "complete",
-   "tier": "Avoid (High Priority Swap)",
-   "fc": 12,
    "esc": [
     "PFAS",
-    "carcinogen in leave-on",
-    "formaldehyde-releaser",
-    "heavy metals"
+    "carcinogen in leave-on"
    ],
+   "status": "needs review"
+  },
+  {
+   "product_name": "Skin Firming",
+   "tier": "ungradable",
+   "flag_count": 12,
+   "product_type": "leave-on skincare",
    "flagged": [
     "Petrolatum",
     "Mineral Oil",
@@ -899,70 +486,36 @@
     "Butylene Glycol",
     "Propylparaben"
    ],
+   "natural": [],
    "unknown": [
+    "Stearic Acid",
     "Glyceryl Dilaurate",
+    "Acrylates/C10-30 Alkyl Acrylate Crosspolymer",
     "Hydrolyzed Wheat Protein/Pvp Crosspolymer",
+    "Sodium Hydroxide",
+    "Arginine",
+    "Tocopheryl Acetate",
+    "Centella Asiatica Extract",
+    "Cocos Nucifera (Coconut) Water",
     "Hydrolyzed Collagen",
     "Polyimide-1",
+    "Withania Somnifera Root Extract",
+    "Fucus Vesiculosus Extract",
     "Hydrolyzed Elastin"
    ],
-   "fallback": [
-    [
-     "Water",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Glycerin",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Stearic Acid",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Acrylates/C10-30 Alkyl Acrylate Crosspolymer",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Sodium Hydroxide",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Arginine",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Tocopheryl Acetate",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Centella Asiatica Extract",
-     "fallback: botanical name heuristic (not in reference)"
-    ],
-    [
-     "Cocos Nucifera (Coconut) Water",
-     "fallback: botanical name heuristic (not in reference)"
-    ],
-    [
-     "Withania Somnifera Root Extract",
-     "fallback: botanical name heuristic (not in reference)"
-    ],
-    [
-     "Fucus Vesiculosus Extract",
-     "fallback: botanical name heuristic (not in reference)"
-    ]
-   ],
-   "eo_source": false,
-   "natural": []
-  },
-  "jergens-lavender-dreams-shea-fusion-body-lotion": {
-   "status": "complete",
-   "tier": "Avoid (High Priority Swap)",
-   "fc": 8,
    "esc": [
+    "heavy metals",
     "PFAS",
+    "formaldehyde-releaser",
     "carcinogen in leave-on"
    ],
+   "status": "needs review"
+  },
+  {
+   "product_name": "Lavender Dreams Shea Fusion",
+   "tier": "ungradable",
+   "flag_count": 8,
+   "product_type": "leave-on skincare",
    "flagged": [
     "Fragrance",
     "Dimethicone",
@@ -973,72 +526,33 @@
     "Limonene",
     "Linalool"
    ],
+   "natural": [],
    "unknown": [
+    "Butyrospermum Parkii (Shea) Butter",
+    "Isopropyl Myristate",
+    "Simmondsia Chinensis (Jojoba) Seed Oil",
+    "Glyceryl Stearate",
+    "Hydroxyacetophenone",
+    "Caprylic/Capric Triglyceride",
+    "Acrylates/C10-30 Alkyl Acrylate Crosspolymer",
+    "Tetrasodium Glutamate Diacetate",
+    "Sodium Hydroxide",
+    "Tocopheryl Acetate",
     "Citronellol"
    ],
-   "fallback": [
-    [
-     "Water",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Glycerin",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Butyrospermum Parkii (Shea) Butter",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Isopropyl Myristate",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Simmondsia Chinensis (Jojoba) Seed Oil",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Glyceryl Stearate",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Hydroxyacetophenone",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Caprylic/Capric Triglyceride",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Acrylates/C10-30 Alkyl Acrylate Crosspolymer",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Tetrasodium Glutamate Diacetate",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Sodium Hydroxide",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Tocopheryl Acetate",
-     "fallback: template LOW list (not in reference)"
-    ]
-   ],
-   "eo_source": false,
-   "natural": []
-  },
-  "jergens-cherry-almond-lotion-bursts": {
-   "status": "complete",
-   "tier": "Avoid (High Priority Swap)",
-   "fc": 10,
    "esc": [
     "PFAS",
-    "carcinogen in leave-on",
-    "heavy metals"
+    "carcinogen in leave-on"
    ],
+   "status": "needs review"
+  },
+  {
+   "product_name": "Cherry Almond Lotion Bursts",
+   "tier": "ungradable",
+   "flag_count": 11,
+   "product_type": "leave-on skincare",
    "flagged": [
+    "Alcohol",
     "Dimethicone",
     "Aluminum Starch Octenylsuccinate",
     "Mineral Oil",
@@ -1050,62 +564,31 @@
     "Phenoxyethanol",
     "Ethylparaben"
    ],
+   "natural": [],
    "unknown": [
-    "Glyceryl Dilaurate"
+    "Cetearyl",
+    "Stearic Acid",
+    "Tapioca Starch",
+    "Glyceryl Dilaurate",
+    "Sodium Hydroxide",
+    "Arginine",
+    "Persea Gratissima (Avocado) Oil",
+    "Theobroma Cacao (Cocoa) Seed Butter",
+    "Tocopheryl Acetate",
+    "Butyrospermum Parkii (Shea) Butter"
    ],
-   "fallback": [
-    [
-     "Water",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Glycerin",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Stearic Acid",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Tapioca Starch",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Sodium Hydroxide",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Arginine",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Persea Gratissima (Avocado) Oil",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Theobroma Cacao (Cocoa) Seed Butter",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Tocopheryl Acetate",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Butyrospermum Parkii (Shea) Butter",
-     "fallback: template LOW list (not in reference)"
-    ]
-   ],
-   "eo_source": false,
-   "natural": []
-  },
-  "jergens-enriching-shea-butter-lotion": {
-   "status": "complete",
-   "tier": "Avoid (High Priority Swap)",
-   "fc": 10,
    "esc": [
+    "heavy metals",
     "PFAS",
     "carcinogen in leave-on"
    ],
+   "status": "needs review"
+  },
+  {
+   "product_name": "Enriching Shea Butter Lotion",
+   "tier": "ungradable",
+   "flag_count": 10,
+   "product_type": "leave-on skincare",
    "flagged": [
     "Petrolatum",
     "Dimethicone",
@@ -1118,81 +601,36 @@
     "Coumarin",
     "Limonene"
    ],
+   "natural": [],
    "unknown": [
+    "Butyrospermum Parkii (Shea) Butter",
+    "Stearic Acid",
     "Octyldodecyl Myristate",
     "Ethylhexyl Isononanoate",
     "Hydrogenated Polydecene",
-    "Anise Alcohol"
+    "Hydroxyacetophenone",
+    "Mangifera Indica (Mango) Seed Butter",
+    "Theobroma Cacao (Cocoa) Seed Butter",
+    "Arginine",
+    "Sodium Hydroxide",
+    "Tetrasodium Glutamate Diacetate",
+    "Acrylates/C10-30 Alkyl Acrylate Crosspolymer",
+    "Butyrospermum Parkii (Shea) Oil",
+    "Tocopheryl Acetate",
+    "Anise Alcohol",
+    "Caramel"
    ],
-   "fallback": [
-    [
-     "Water",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Butyrospermum Parkii (Shea) Butter",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Glycerin",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Stearic Acid",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Hydroxyacetophenone",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Mangifera Indica (Mango) Seed Butter",
-     "fallback: botanical name heuristic (not in reference)"
-    ],
-    [
-     "Theobroma Cacao (Cocoa) Seed Butter",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Arginine",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Sodium Hydroxide",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Tetrasodium Glutamate Diacetate",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Acrylates/C10-30 Alkyl Acrylate Crosspolymer",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Butyrospermum Parkii (Shea) Oil",
-     "fallback: botanical name heuristic (not in reference)"
-    ],
-    [
-     "Tocopheryl Acetate",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Caramel",
-     "fallback: template LOW list (not in reference)"
-    ]
-   ],
-   "eo_source": false,
-   "natural": []
-  },
-  "sparkling-berry-lotion-bursts": {
-   "status": "complete",
-   "tier": "Avoid (High Priority Swap)",
-   "fc": 8,
    "esc": [
     "PFAS",
     "carcinogen in leave-on"
    ],
+   "status": "needs review"
+  },
+  {
+   "product_name": "Sparkling Berry Lotion Bursts",
+   "tier": "ungradable",
+   "flag_count": 8,
+   "product_type": "leave-on skincare",
    "flagged": [
     "Fragrance",
     "Dimethicone",
@@ -1203,67 +641,34 @@
     "Limonene",
     "Linalool"
    ],
+   "natural": [],
    "unknown": [
     "Agar",
+    "Stearic Acid",
     "Glyceryl Dilaurate",
+    "Hydroxyacetophenone",
     "Sodium Polyacrylate Starch",
+    "Caprylic/Capric Triglyceride",
+    "Tetrasodium Glutamate Diacetate",
+    "Arginine",
+    "Sodium Hydroxide",
+    "Acrylates/C10-30 Alkyl Acrylate Crosspolymer",
+    "Tocopheryl Acetate",
     "Citronellol",
-    "Ext. Violet 2"
+    "Ext",
+    "Violet 2"
    ],
-   "fallback": [
-    [
-     "Water",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Glycerin",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Stearic Acid",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Hydroxyacetophenone",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Caprylic/Capric Triglyceride",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Tetrasodium Glutamate Diacetate",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Arginine",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Sodium Hydroxide",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Acrylates/C10-30 Alkyl Acrylate Crosspolymer",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Tocopheryl Acetate",
-     "fallback: template LOW list (not in reference)"
-    ]
-   ],
-   "eo_source": false,
-   "natural": []
-  },
-  "jergens-ultra-healing-moisturizer": {
-   "status": "complete",
-   "tier": "Avoid (High Priority Swap)",
-   "fc": 9,
    "esc": [
     "PFAS",
-    "carcinogen in leave-on",
-    "heavy metals"
+    "carcinogen in leave-on"
    ],
+   "status": "needs review"
+  },
+  {
+   "product_name": "Ultra Healing Moisturizer",
+   "tier": "ungradable",
+   "flag_count": 9,
+   "product_type": "leave-on skincare",
    "flagged": [
     "Petrolatum",
     "Aluminum Starch Octenylsuccinate",
@@ -1275,72 +680,36 @@
     "Alcohol",
     "Phenoxyethanol"
    ],
-   "unknown": [],
-   "fallback": [
-    [
-     "Water",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Glycerin",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Stearic Acid",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "C12-15 Alkyl Benzoate",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Caprylic/Capric Triglyceride",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Hydroxyacetophenone",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Arginine",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Sodium Hydroxide",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Tetrasodium Glutamate Diacetate",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Argania Spinosa Kernel Oil",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Lecithin",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Ascorbyl Palmitate",
-     "fallback: template LOW list (not in reference)"
-    ]
+   "natural": [],
+   "unknown": [
+    "Stearic Acid",
+    "C12-15 Alkyl Benzoate",
+    "Caprylic/Capric Triglyceride",
+    "Hydroxyacetophenone",
+    "Arginine",
+    "Sodium Hydroxide",
+    "Tetrasodium Glutamate Diacetate",
+    "Argania Spinosa Kernel Oil",
+    "Lecithin",
+    "Ascorbyl Palmitate"
    ],
-   "eo_source": false,
-   "natural": []
-  },
-  "vanilla-crush-lotion-bursts": {
-   "status": "ingredients not found",
-   "tier": null
-  },
-  "jergens-lavender-lotion-bursts": {
-   "status": "complete",
-   "tier": "Avoid (High Priority Swap)",
-   "fc": 8,
    "esc": [
+    "heavy metals",
     "PFAS",
     "carcinogen in leave-on"
    ],
+   "status": "needs review"
+  },
+  {
+   "product_name": "Vanilla Crush Lotion Bursts",
+   "tier": "ungradable",
+   "status": "ingredients not found"
+  },
+  {
+   "product_name": "Lavender Lotion Bursts",
+   "tier": "ungradable",
+   "flag_count": 8,
+   "product_type": "leave-on skincare",
    "flagged": [
     "Fragrance",
     "Dimethicone",
@@ -1351,75 +720,43 @@
     "Limonene",
     "Linalool"
    ],
+   "natural": [],
    "unknown": [
     "Agar",
+    "Stearic Acid",
     "Glyceryl Dilaurate",
+    "Hydroxyacetophenone",
     "Sodium Polyacrylate Starch",
+    "Caprylic/Capric Triglyceride",
+    "Tetrasodium Glutamate Diacetate",
+    "Arginine",
+    "Sodium Hydroxide",
+    "Acrylates/C10-30 Alkyl Acrylate Crosspolymer",
+    "Tocopheryl Acetate",
     "Citronellol",
-    "Ext. Violet 2"
+    "Ext",
+    "Violet 2"
    ],
-   "fallback": [
-    [
-     "Water",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Glycerin",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Stearic Acid",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Hydroxyacetophenone",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Caprylic/Capric Triglyceride",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Tetrasodium Glutamate Diacetate",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Arginine",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Sodium Hydroxide",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Acrylates/C10-30 Alkyl Acrylate Crosspolymer",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Tocopheryl Acetate",
-     "fallback: template LOW list (not in reference)"
-    ]
-   ],
-   "eo_source": false,
-   "natural": []
-  },
-  "jergens-natural-glow-wet-skin-moisturizer": {
-   "status": "complete",
-   "tier": "Avoid (High Priority Swap)",
-   "fc": 15,
    "esc": [
     "PFAS",
     "carcinogen in leave-on"
    ],
+   "status": "needs review"
+  },
+  {
+   "product_name": "Natural Glow Wet Skin Moisturizer",
+   "tier": "ungradable",
+   "flag_count": 15,
+   "product_type": "leave-on skincare",
    "flagged": [
     "Mineral Oil",
     "Dipropylene Glycol",
+    "Ethoxydiglycol",
     "Dimethicone",
     "Polyquaternium-37",
     "Fragrance",
     "PEG-2 Dimeadowfoamamidoethylmonium Methosulfate",
     "Ceteareth-20",
-    "Dimethiconol",
     "Hexylene Glycol",
     "PEG-45M",
     "Phenoxyethanol",
@@ -1428,146 +765,93 @@
     "Limonene",
     "Linalool"
    ],
+   "natural": [],
    "unknown": [
     "Ethylhexyl Isononanoate",
+    "Butyrospermum Parkii (Shea) Butter",
     "Dihydroxyacetone",
+    "Isopropyl Palmitate",
     "Ethylene/Propylene/Styrene Copolymer",
+    "Dimethiconol",
+    "Hydroxyacetophenone",
     "Butylene/Ethylene/Styrene Copolymer",
+    "Tocopheryl Acetate",
     "Erythrulose",
     "Alpha-Isomethyl Ionone",
     "Benzyl Salicylate",
     "Citronellol",
     "Hexyl Cinnamal"
    ],
-   "fallback": [
-    [
-     "Water",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Glycerin",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Butyrospermum Parkii (Shea) Butter",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Isopropyl Palmitate",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Ethoxydiglycol",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Hydroxyacetophenone",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Cocos Nucifera (Coconut) Oil",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Tocopheryl Acetate",
-     "fallback: template LOW list (not in reference)"
-    ]
-   ],
-   "eo_source": false,
-   "natural": []
-  },
-  "jergens-instant-flawless-kit-bundle": {
-   "status": "complete",
-   "tier": "Avoid (High Priority Swap)",
-   "fc": 10,
    "esc": [
+    "PFAS",
     "carcinogen in leave-on"
    ],
+   "status": "needs review"
+  },
+  {
+   "product_name": "Instant Flawless Kit Bundle",
+   "tier": "ungradable",
+   "flag_count": 11,
+   "product_type": "other",
    "flagged": [
     "ALCOHOL DENAT",
     "CETEARETH-25",
     "METHYLPARABEN",
     "FRAGRANCE",
     "Dipropylene Glycol",
-    "Linalool",
+    "Ethoxydiglycol",
     "Propanediol",
     "Coumarin",
     "Geraniol",
-    "Limonene"
+    "Limonene",
+    "Linalool"
    ],
+   "natural": [],
    "unknown": [
+    "[Light Bronze Sunless Tanning Mousse] WATER",
     "DIHYDROXYACETONE",
     "HYDROXYETHYL ACRYLATE/SODIUM ACRYLOYLDIMETHYL TAURATE COPOLYMER",
     "ERYTHRULOSE",
     "ORANGE 4",
-    "EXT. VIOLET 2",
+    "EXT",
+    "VIOLET 2",
     "YELLOW 10",
-    "RED 4",
+    "RED 4 FRAGRANCE",
     "4-tert-Butylcyclohexyl Acetate",
     "Hexyl Cinnamal",
     "Isocyclemone E",
-    "Dihydroxyacetone",
+    "Linalool || [Deep Bronze Sunless Tanning Mousse] WATER",
+    "Linalool || [Ultra Deep Bronze Sunless Tanning Mousse] Water",
     "Dimethyl Isosorbide",
-    "Hydroxyethyl Acrylate/Sodium Acryloyldimethyl Taurate Copolymer",
-    "Erythrulose",
+    "Benzoic Acid",
     "AlphaIsomethyl Ionone",
     "Benzyl Salicylate",
     "Citronellol",
-    "Ext. Violet 2",
-    "Orange 4",
+    "Caramel",
     "Red 4",
-    "Yellow 10",
+    "Yellow 10 FRAGRANCE",
     "Cyclohexanol",
-    "3-(5,5,6-trimethylbicyclo[2.2.1]hept-2-yl)-",
-    "(cis & trans)-Tetrahydro-2-isobutyl-4-methylpyran-4-ol",
+    "3-(5,5,6-trimethylbicyclo[2.2.1]hept-2-yl)",
+    "Tetrahydro-2-isobutyl-4-methylpyran-4-ol",
     "gamma-Undecalactone",
     "Hexamethylindanopyran",
     "Benzyl Acetate"
    ],
-   "fallback": [
-    [
-     "WATER",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "GLYCERIN",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Water",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Glycerin",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Ethoxydiglycol",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Benzoic Acid",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Caramel",
-     "fallback: template LOW list (not in reference)"
-    ]
-   ],
-   "eo_source": false,
-   "natural": []
-  },
-  "jergens-glow-body-applicator-mitt": {
-   "status": "ingredients not found",
-   "tier": null
-  },
-  "jergens-natural-glow-instant-sun-drops": {
-   "status": "complete",
-   "tier": "Avoid (High Priority Swap)",
-   "fc": 6,
    "esc": [
     "carcinogen in leave-on"
    ],
+   "status": "needs review"
+  },
+  {
+   "product_name": "Glow Body Applicator Mitt",
+   "tier": "ungradable",
+   "status": "ingredients not found"
+  },
+  {
+   "product_name": "Natural Glow Instant Sun Drops",
+   "tier": "ungradable",
+   "flag_count": 6,
+   "product_type": "leave-on skincare",
    "flagged": [
     "Alcohol Denat",
     "Propylene Glycol",
@@ -1576,54 +860,29 @@
     "Phenoxyethanol",
     "Linalool"
    ],
+   "natural": [],
    "unknown": [
     "Dihydroxyacetone",
+    "Polysorbate 20",
     "Erythrulose",
+    "Sodium Metabisulfite",
+    "Tocopheryl Acetate",
+    "Benzoic Acid",
     "Alpha-Isomethyl Ionone",
     "Benzyl Salicylate",
-    "Hexyl Cinnamal"
+    "Hexyl Cinnamal",
+    "Caramel"
    ],
-   "fallback": [
-    [
-     "Water",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Glycerin",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Polysorbate 20",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Sodium Metabisulfite",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Tocopheryl Acetate",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Benzoic Acid",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Caramel",
-     "fallback: template LOW list (not in reference)"
-    ]
-   ],
-   "eo_source": false,
-   "natural": []
-  },
-  "jergens-natural-glow-hydra-gel": {
-   "status": "complete",
-   "tier": "Avoid (High Priority Swap)",
-   "fc": 6,
    "esc": [
-    "PFAS",
     "carcinogen in leave-on"
    ],
+   "status": "needs review"
+  },
+  {
+   "product_name": "Natural Glow Hydra Gel",
+   "tier": "ungradable",
+   "flag_count": 6,
+   "product_type": "leave-on skincare",
    "flagged": [
     "DIMETHICONE",
     "LAURETH-3",
@@ -1632,72 +891,36 @@
     "1,2-HEXANEDIOL",
     "LAURETH-7"
    ],
+   "natural": [],
    "unknown": [
+    "ISOPROPYL PALMITATE",
     "DIHYDROXYACETONE",
-    "C13- 14 ISOPARAFFIN"
+    "ZEA MAYS (CORN) STARCH",
+    "SIMMONDSIA CHINENSIS (JOJOBA) SEED OIL",
+    "GLYCERYL STEARATE",
+    "HYDROXYPROPYL STARCH PHOSPHATE",
+    "BUTYROSPERMUM PARKII (SHEA) BUTTER",
+    "C13- 14 ISOPARAFFIN",
+    "TOCOPHERYL ACETATE",
+    "BENZOIC ACID"
    ],
-   "fallback": [
-    [
-     "WATER",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "GLYCERIN",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "ISOPROPYL PALMITATE",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "ZEA MAYS (CORN) STARCH",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "SIMMONDSIA CHINENSIS (JOJOBA) SEED OIL",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "GLYCERYL STEARATE",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "HYDROXYPROPYL STARCH PHOSPHATE",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "BUTYROSPERMUM PARKII (SHEA) BUTTER",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "TOCOPHERYL ACETATE",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "BENZOIC ACID",
-     "fallback: template LOW list (not in reference)"
-    ]
-   ],
-   "eo_source": false,
-   "natural": []
-  },
-  "jergens-gotta-glow-bundle": {
-   "status": "complete",
-   "tier": "Avoid (High Priority Swap)",
-   "fc": 23,
    "esc": [
     "PFAS",
-    "carcinogen in leave-on",
-    "heavy metals"
+    "carcinogen in leave-on"
    ],
+   "status": "needs review"
+  },
+  {
+   "product_name": "Gotta Glow Bundle",
+   "tier": "ungradable",
+   "flag_count": 22,
+   "product_type": "other",
    "flagged": [
     "ALCOHOL DENAT",
     "CETEARETH-25",
     "METHYLPARABEN",
     "FRAGRANCE",
     "Dipropylene Glycol",
-    "Linalool",
-    "Avobenzone",
     "Octisalate",
     "Octocrylene",
     "Aluminum Starch Octenylsuccinate",
@@ -1713,136 +936,68 @@
     "Propanediol",
     "Ceteareth-20",
     "Petrolatum",
-    "BHT"
+    "BHT",
+    "Linalool"
    ],
+   "natural": [],
    "unknown": [
+    "[Glow Instant Sun Moisturizing Mousse] WATER",
     "DIHYDROXYACETONE",
     "HYDROXYETHYL ACRYLATE/SODIUM ACRYLOYLDIMETHYL TAURATE COPOLYMER",
     "ERYTHRULOSE",
     "ORANGE 4",
-    "EXT. VIOLET 2",
+    "EXT",
+    "VIOLET 2",
     "YELLOW 10",
-    "RED 4",
+    "RED 4 FRAGRANCE",
     "4-tert-Butylcyclohexyl Acetate",
     "Hexyl Cinnamal",
     "Isocyclemone E",
-    "Dihydroxyacetone",
+    "Linalool || [Glow Face Moisturizer Sunscreen] Avobenzone",
+    "Dicaprylyl Ether",
+    "Glyceryl Stearate",
+    "C12-15 Alkyl Benzoate",
     "Phenyl Trimethicone",
     "C13-14 Isoparaffin",
-    "Erythrulose",
-    "(cis & trans)-Tetrahydro-2-isobutyl-4-methylpyran-4-ol",
+    "Tocopheryl Acetate",
+    "Zea Mays (Corn) Starch",
+    "Caramel FRAGRANCE",
+    "Tetrahydro-2-isobutyl-4-methylpyran-4-ol",
     "Methyldihydrojasmonate",
     "Hexamethylindanopyran",
     "Acetyl Hexamethyl Tetralin",
+    "Isopropyl Myristate || [Glow Daily Moisturizer] Water",
     "Ethylhexyl Isononanoate",
     "Octyldodecyl Myristate",
-    "Hydroxyethyl Acrylate/Sodium Acryloyldimethyl Taurate Copolymer",
+    "Stearic Acid",
+    "Isohexadecane",
+    "Polysorbate 60",
+    "Olea Europaea (Olive) Fruit Oil",
+    "Avena Sativa (Oat) Meal Extract",
+    "Calendula Officinalis Flower Extract",
+    "Persea Gratissima (Avocado) Oil",
+    "Simmondsia Chinensis (Jojoba) Seed Oil",
+    "Camellia Sinensis Leaf Extract",
+    "Benzoic Acid",
+    "Isopropyl Myristate",
     "Alpha-Isomethyl Ionone",
     "Ethyl Linalool",
     "Methyl Decenol",
     "cis-3-Hexenyl Salicylate",
     "1-Trimethyl-2-Cyclohexenyl-1-Penten-3-One"
    ],
-   "fallback": [
-    [
-     "WATER",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "GLYCERIN",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Water",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Glycerin",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Dicaprylyl Ether",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Glyceryl Stearate",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "C12-15 Alkyl Benzoate",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Tocopheryl Acetate",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Zea Mays (Corn) Starch",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Caramel",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Isopropyl Myristate",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Stearic Acid",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Isohexadecane",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Polysorbate 60",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Olea Europaea (Olive) Fruit Oil",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Cocos Nucifera (Coconut) Oil",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Avena Sativa (Oat) Meal Extract",
-     "fallback: botanical name heuristic (not in reference)"
-    ],
-    [
-     "Calendula Officinalis Flower Extract",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Persea Gratissima (Avocado) Oil",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Simmondsia Chinensis (Jojoba) Seed Oil",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Camellia Sinensis Leaf Extract",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Benzoic Acid",
-     "fallback: template LOW list (not in reference)"
-    ]
-   ],
-   "eo_source": false,
-   "natural": []
-  },
-  "jergens-natural-glow-instant-sun-mousse": {
-   "status": "complete",
-   "tier": "Avoid (High Priority Swap)",
-   "fc": 7,
    "esc": [
+    "heavy metals",
+    "PFAS",
     "carcinogen in leave-on"
    ],
+   "status": "needs review"
+  },
+  {
+   "product_name": "Natural Glow Instant Sun Mousse",
+   "tier": "ungradable",
+   "flag_count": 7,
+   "product_type": "leave-on skincare",
    "flagged": [
     "Alcohol Denat",
     "Propanediol",
@@ -1852,45 +1007,35 @@
     "Limonene",
     "Linalool"
    ],
+   "natural": [],
    "unknown": [
+    "[Light Bronze Sunless Tanning Mousse] Water",
     "Dihydroxyacetone",
     "Erythrulose",
     "Hydroxyethyl Acrylate/Sodium",
     "Acryloyldimethyl Taurate Copolymer",
+    "Benzoic Acid",
     "Alpha-Isomethyl Ionone",
     "Benzyl Salicylate",
     "Citronellol",
     "Hexyl Cinnamal",
-    "Ext. Violet 2",
+    "Ext",
+    "Violet 2",
     "Orange 4",
     "Red 4",
+    "Yellow 10 || [Ultra Deep Bronze Sunless Tanning Mousse] Water",
     "Yellow 10"
    ],
-   "fallback": [
-    [
-     "Water",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Glycerin",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Benzoic Acid",
-     "fallback: template LOW list (not in reference)"
-    ]
-   ],
-   "eo_source": false,
-   "natural": []
-  },
-  "jergens-deep-conditioning-shea-cocoa-butter-blend": {
-   "status": "complete",
-   "tier": "Avoid (High Priority Swap)",
-   "fc": 9,
    "esc": [
-    "PFAS",
     "carcinogen in leave-on"
    ],
+   "status": "needs review"
+  },
+  {
+   "product_name": "Deep Conditioning Shea Cocoa Butter Blend",
+   "tier": "ungradable",
+   "flag_count": 9,
+   "product_type": "leave-on skincare",
    "flagged": [
     "Petrolatum",
     "Mineral Oil",
@@ -1902,176 +1047,90 @@
     "Coumarin",
     "Linalool"
    ],
-   "unknown": [],
-   "fallback": [
-    [
-     "Water",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Glycerin",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Theobroma Cacao (Cocoa) Seed Butter",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Stearic Acid",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Hydrogenated Vegetable Oil",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Acrylates/C10-30 Alkyl Acrylate Crosspolymer",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Hydroxyacetophenone",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Butyrospermum Parkii (Shea) Butter",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Jojoba Esters",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Sodium Hydroxide",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Arginine",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Tocopheryl Acetate",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Caramel",
-     "fallback: template LOW list (not in reference)"
-    ]
+   "natural": [],
+   "unknown": [
+    "Theobroma Cacao (Cocoa) Seed Butter",
+    "Stearic Acid",
+    "Hydrogenated Vegetable Oil",
+    "Acrylates/C10-30 Alkyl Acrylate Crosspolymer",
+    "Hydroxyacetophenone",
+    "Butyrospermum Parkii (Shea) Butter",
+    "Jojoba Esters",
+    "Sodium Hydroxide",
+    "Arginine",
+    "Tocopheryl Acetate",
+    "Caramel"
    ],
-   "eo_source": false,
-   "natural": []
-  },
-  "jergens-best-sellers-bundle": {
-   "status": "complete",
-   "tier": "Avoid (High Priority Swap)",
-   "fc": 20,
    "esc": [
     "PFAS",
-    "carcinogen in leave-on",
-    "heavy metals"
+    "carcinogen in leave-on"
    ],
+   "status": "needs review"
+  },
+  {
+   "product_name": "Best Sellers Bundle",
+   "tier": "ungradable",
+   "flag_count": 19,
+   "product_type": "other",
    "flagged": [
     "Alcohol Denat",
     "Dimethicone",
     "Fragrance",
     "Methylparaben",
     "Phenoxyethanol",
-    "Ethylparaben",
     "Dipropylene Glycol",
     "Hydroxycitronellal",
     "Coumarin",
-    "Phenethyl Alcohol",
     "Petrolatum",
     "Hydroxyethyl Urea",
     "Ceteareth-20",
     "Mineral Oil",
     "Carbomer",
+    "Ethylparaben",
     "Aluminum Starch Octenylsuccinate",
     "Laureth-3",
     "Propylparaben",
     "Pentylene Glycol",
     "Alcohol"
    ],
+   "natural": [],
    "unknown": [
+    "[Original Scent] Water",
+    "Stearic Acid",
     "Glyceryl Dilaurate",
+    "Lanolin Oil",
+    "Arginine",
+    "Sodium Hydroxide",
+    "Acrylates/C10-30 Alkyl Acrylate Crosspolymer",
+    "Tocopheryl Acetate",
+    "Ethylparaben With an illuminating HYDRALUCENCE™ blend and Cherry Almond Essence",
     "Benzaldehyde",
+    "Phenethyl Alcohol || [Enriching Shea Butter] Water",
+    "Butyrospermum Parkii (Shea) Butter",
     "Octyldodecyl Myristate",
     "Ethylhexyl Isononanoate",
     "Hydrogenated Polydecene",
-    "Anisaldehyde"
+    "Mangifera Indica (Mango) Seed Butter",
+    "Theobroma Cacao (Cocoa) Seed Butter",
+    "Caramel FRAGRANCE",
+    "Anisaldehyde || [Ultra Healing] Water",
+    "C12-15 Alkyl Benzoate",
+    "Lecithin",
+    "Ascorbyl Palmitate",
+    "Tocopherol FRAGRANCE"
    ],
-   "fallback": [
-    [
-     "Water",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Glycerin",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Stearic Acid",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Lanolin Oil",
-     "fallback: botanical name heuristic (not in reference)"
-    ],
-    [
-     "Arginine",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Sodium Hydroxide",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Acrylates/C10-30 Alkyl Acrylate Crosspolymer",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Tocopheryl Acetate",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Butyrospermum Parkii (Shea) Butter",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Mangifera Indica (Mango) Seed Butter",
-     "fallback: botanical name heuristic (not in reference)"
-    ],
-    [
-     "Theobroma Cacao (Cocoa) Seed Butter",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Caramel",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "C12-15 Alkyl Benzoate",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Lecithin",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Ascorbyl Palmitate",
-     "fallback: template LOW list (not in reference)"
-    ]
-   ],
-   "eo_source": false,
-   "natural": []
-  },
-  "jergens-natural-glow-daily-moisturizer": {
-   "status": "complete",
-   "tier": "Avoid (High Priority Swap)",
-   "fc": 8,
    "esc": [
+    "heavy metals",
     "PFAS",
     "carcinogen in leave-on"
    ],
+   "status": "needs review"
+  },
+  {
+   "product_name": "Natural Glow Daily Moisturizer",
+   "tier": "ungradable",
+   "flag_count": 8,
+   "product_type": "leave-on skincare",
    "flagged": [
     "Mineral Oil",
     "Propanediol",
@@ -2082,89 +1141,42 @@
     "Petrolatum",
     "BHT"
    ],
+   "natural": [],
    "unknown": [
+    "Zea Mays (Corn) Starch",
     "Dihydroxyacetone",
     "Ethylhexyl Isononanoate",
     "Octyldodecyl Myristate",
+    "Stearic Acid",
     "Hydroxyethyl Acrylate/Sodium Acryloyldimethyl Taurate Copolymer",
-    "Erythrulose"
+    "Isohexadecane",
+    "Erythrulose",
+    "Polysorbate 60",
+    "Olea Europaea (Olive) Fruit Oil",
+    "Avena Sativa (Oat) Meal Extract",
+    "Calendula Officinalis Flower Extract",
+    "Persea Gratissima (Avocado) Oil",
+    "Simmondsia Chinensis (Jojoba) Seed Oil",
+    "Camellia Sinensis Leaf Extract",
+    "Benzoic Acid",
+    "Caramel"
    ],
-   "fallback": [
-    [
-     "Water",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Glycerin",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Zea Mays (Corn) Starch",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Stearic Acid",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Isohexadecane",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Polysorbate 60",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Olea Europaea (Olive) Fruit Oil",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Cocos Nucifera (Coconut) Oil",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Avena Sativa (Oat) Meal Extract",
-     "fallback: botanical name heuristic (not in reference)"
-    ],
-    [
-     "Calendula Officinalis Flower Extract",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Persea Gratissima (Avocado) Oil",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Simmondsia Chinensis (Jojoba) Seed Oil",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Camellia Sinensis Leaf Extract",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Benzoic Acid",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Caramel",
-     "fallback: template LOW list (not in reference)"
-    ]
-   ],
-   "eo_source": false,
-   "natural": []
-  },
-  "tropical-escape-shea-fusion": {
-   "status": "ingredients not found",
-   "tier": null
-  },
-  "jergens-wet-skin-moisturizer-shea-oil": {
-   "status": "complete",
-   "tier": "Avoid (High Priority Swap)",
-   "fc": 7,
    "esc": [
+    "PFAS",
     "carcinogen in leave-on"
    ],
+   "status": "needs review"
+  },
+  {
+   "product_name": "Tropical Escape Shea Fusion",
+   "tier": "ungradable",
+   "status": "ingredients not found"
+  },
+  {
+   "product_name": "Wet Skin Moisturizer Shea Oil",
+   "tier": "ungradable",
+   "flag_count": 7,
+   "product_type": "leave-on skincare",
    "flagged": [
     "Mineral Oil",
     "Petrolatum",
@@ -2174,60 +1186,30 @@
     "Phenoxyethanol",
     "Ethylparaben"
    ],
+   "natural": [],
    "unknown": [
     "Ethylhexyl Isononanoate",
+    "Butyrospermum Parkii (Shea) Butter",
+    "Theobroma Cacao (Cocoa) Seed Butter",
     "Ethylene/Propylene/Styrene Copolymer",
+    "Acrylates/C10-30 Alkyl Acrylate Crosspolymer",
     "Butylene/Ethylene/Styrene Copolymer",
-    "Magnesium Aluminum Silicate"
+    "Magnesium Aluminum Silicate",
+    "Butyrospermum Parkii (Shea) Oil",
+    "Sodium Hydroxide",
+    "Tocopheryl Acetate",
+    "Caramel"
    ],
-   "fallback": [
-    [
-     "Water",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Glycerin",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Butyrospermum Parkii (Shea) Butter",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Theobroma Cacao (Cocoa) Seed Butter",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Acrylates/C10-30 Alkyl Acrylate Crosspolymer",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Butyrospermum Parkii (Shea) Oil",
-     "fallback: botanical name heuristic (not in reference)"
-    ],
-    [
-     "Sodium Hydroxide",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Tocopheryl Acetate",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Caramel",
-     "fallback: template LOW list (not in reference)"
-    ]
-   ],
-   "eo_source": false,
-   "natural": []
-  },
-  "jergens-wet-skin-moisturizer-coconut-oil": {
-   "status": "complete",
-   "tier": "Avoid (High Priority Swap)",
-   "fc": 6,
    "esc": [
     "carcinogen in leave-on"
    ],
+   "status": "needs review"
+  },
+  {
+   "product_name": "Wet Skin Moisturizer Coconut Oil",
+   "tier": "ungradable",
+   "flag_count": 6,
+   "product_type": "leave-on skincare",
    "flagged": [
     "Mineral Oil",
     "Ceteareth-20",
@@ -2236,52 +1218,31 @@
     "Phenoxyethanol",
     "Ethylparaben"
    ],
+   "natural": [],
    "unknown": [
     "Ethylhexyl Isononanoate",
     "Ethylene/Propylene/Styrene Copolymer",
+    "Acrylates/C10-30 Alkyl Acrylate Crosspolymer",
     "Butylene/Ethylene/ Styrene Copolymer",
-    "Magnesium Aluminum Silicate"
+    "Magnesium Aluminum Silicate",
+    "Sodium Hydroxide"
    ],
-   "fallback": [
-    [
-     "Water",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Glycerin",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Acrylates/C10-30 Alkyl Acrylate Crosspolymer",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Sodium Hydroxide",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Cocos Nucifera (Coconut) Oil",
-     "fallback: template LOW list (not in reference)"
-    ]
-   ],
-   "eo_source": false,
-   "natural": []
-  },
-  "ultra-healing-fragrance-free-moisturizer": {
-   "status": "ingredients not found",
-   "tier": null
-  },
-  "jergens-daily-glow-bundle": {
-   "status": "complete",
-   "tier": "Avoid (High Priority Swap)",
-   "fc": 21,
    "esc": [
-    "PFAS",
-    "carcinogen in leave-on",
-    "heavy metals"
+    "carcinogen in leave-on"
    ],
+   "status": "needs review"
+  },
+  {
+   "product_name": "Ultra Healing Fragrance Free Moisturizer",
+   "tier": "ungradable",
+   "status": "ingredients not found"
+  },
+  {
+   "product_name": "Daily Glow Bundle",
+   "tier": "ungradable",
+   "flag_count": 20,
+   "product_type": "other",
    "flagged": [
-    "Avobenzone",
     "Octisalate",
     "Octocrylene",
     "Aluminum Starch Octenylsuccinate",
@@ -2303,1225 +1264,55 @@
     "Dipropylene Glycol",
     "Linalool"
    ],
+   "natural": [],
    "unknown": [
+    "[Glow Face Moisturizer Sunscreen SPF 20] Avobenzone",
     "Dihydroxyacetone",
+    "Dicaprylyl Ether",
+    "Glyceryl Stearate",
+    "C12-15 Alkyl Benzoate",
     "Phenyl Trimethicone",
     "C13-14 Isoparaffin",
     "Erythrulose",
-    "(cis & trans)-Tetrahydro-2-isobutyl-4-methylpyran-4-ol",
+    "Tocopheryl Acetate",
+    "Zea Mays (Corn) Starch",
+    "Caramel FRAGRANCE",
+    "Tetrahydro-2-isobutyl-4-methylpyran-4-ol",
     "Methyldihydrojasmonate",
     "Hexamethylindanopyran",
     "Acetyl Hexamethyl Tetralin",
+    "Isopropyl Myristate || [Glow Daily Moisturizer] Water",
     "Ethylhexyl Isononanoate",
     "Octyldodecyl Myristate",
+    "Stearic Acid",
     "Hydroxyethyl Acrylate/Sodium Acryloyldimethyl Taurate Copolymer",
+    "Isohexadecane",
+    "Polysorbate 60",
+    "Olea Europaea (Olive) Fruit Oil",
+    "Avena Sativa (Oat) Meal Extract",
+    "Calendula Officinalis Flower Extract",
+    "Persea Gratissima (Avocado) Oil",
+    "Simmondsia Chinensis (Jojoba) Seed Oil",
+    "Camellia Sinensis Leaf Extract",
+    "Benzoic Acid",
+    "Isopropyl Myristate",
     "Alpha-Isomethyl Ionone",
     "Ethyl Linalool",
     "Methyl Decenol",
     "cis-3-Hexenyl Salicylate",
     "1-Trimethyl-2-Cyclohexenyl-1-Penten-3-One"
    ],
-   "fallback": [
-    [
-     "Water",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Glycerin",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Dicaprylyl Ether",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Glyceryl Stearate",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "C12-15 Alkyl Benzoate",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Tocopheryl Acetate",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Zea Mays (Corn) Starch",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Caramel",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Isopropyl Myristate",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Stearic Acid",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Isohexadecane",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Polysorbate 60",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Olea Europaea (Olive) Fruit Oil",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Cocos Nucifera (Coconut) Oil",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Avena Sativa (Oat) Meal Extract",
-     "fallback: botanical name heuristic (not in reference)"
-    ],
-    [
-     "Calendula Officinalis Flower Extract",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Persea Gratissima (Avocado) Oil",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Simmondsia Chinensis (Jojoba) Seed Oil",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Camellia Sinensis Leaf Extract",
-     "fallback: template LOW list (not in reference)"
-    ],
-    [
-     "Benzoic Acid",
-     "fallback: template LOW list (not in reference)"
-    ]
+   "esc": [
+    "heavy metals",
+    "PFAS",
+    "carcinogen in leave-on"
    ],
-   "eo_source": false,
-   "natural": []
+   "status": "needs review"
   },
-  "jergens-gift-card": {
-   "status": "ingredients not found",
-   "tier": null
-  }
- },
- "unknown_dedup": [
   {
-   "ingredient": "Glyceryl Dilaurate",
-   "products": [
-    "Best Sellers Bundle",
-    "Cherry Almond Lotion Bursts",
-    "Daily Moisture",
-    "Hydrating Coconut Lotion",
-    "Lavender Lotion Bursts",
-    "Nourishing Honey Moisturizer",
-    "Original Scent Moisturizer",
-    "Skin Firming",
-    "Sparkling Berry Lotion Bursts"
-   ]
-  },
-  {
-   "ingredient": "Hydrolyzed Silk",
-   "products": [
-    "Daily Moisture"
-   ]
-  },
-  {
-   "ingredient": "Dihydroxyacetone",
-   "products": [
-    "Daily Glow Bundle",
-    "Gotta Glow Bundle",
-    "Instant Flawless Kit Bundle",
-    "Natural Glow + Firming Daily Moisturizer",
-    "Natural Glow Daily Moisturizer",
-    "Natural Glow Face Moisturizer +SPF 20",
-    "Natural Glow Hydra Gel",
-    "Natural Glow Instant Sun Drops",
-    "Natural Glow Instant Sun Moisturizer + Bronzer",
-    "Natural Glow Instant Sun Mousse",
-    "Natural Glow Wet Skin Moisturizer"
-   ]
-  },
-  {
-   "ingredient": "Phenyl Trimethicone",
-   "products": [
-    "Daily Glow Bundle",
-    "Gotta Glow Bundle",
-    "Natural Glow Face Moisturizer +SPF 20"
-   ]
-  },
-  {
-   "ingredient": "C13-14 Isoparaffin",
-   "products": [
-    "Daily Glow Bundle",
-    "Gotta Glow Bundle",
-    "Natural Glow Face Moisturizer +SPF 20",
-    "Natural Glow Hydra Gel"
-   ]
-  },
-  {
-   "ingredient": "Erythrulose",
-   "products": [
-    "Daily Glow Bundle",
-    "Gotta Glow Bundle",
-    "Instant Flawless Kit Bundle",
-    "Natural Glow Daily Moisturizer",
-    "Natural Glow Face Moisturizer +SPF 20",
-    "Natural Glow Instant Sun Drops",
-    "Natural Glow Instant Sun Moisturizer + Bronzer",
-    "Natural Glow Instant Sun Mousse",
-    "Natural Glow Wet Skin Moisturizer"
-   ]
-  },
-  {
-   "ingredient": "Ethylhexyl Isononanoate",
-   "products": [
-    "Best Sellers Bundle",
-    "Daily Glow Bundle",
-    "Enriching Shea Butter Lotion",
-    "Gotta Glow Bundle",
-    "Natural Glow + Firming Daily Moisturizer",
-    "Natural Glow Daily Moisturizer",
-    "Natural Glow Instant Sun Moisturizer + Bronzer",
-    "Natural Glow Wet Skin Moisturizer",
-    "Wet Skin Moisturizer Coconut Oil",
-    "Wet Skin Moisturizer Shea Oil"
-   ]
-  },
-  {
-   "ingredient": "Octyldodecyl Myristate",
-   "products": [
-    "Best Sellers Bundle",
-    "Daily Glow Bundle",
-    "Enriching Shea Butter Lotion",
-    "Gotta Glow Bundle",
-    "Natural Glow + Firming Daily Moisturizer",
-    "Natural Glow Daily Moisturizer",
-    "Natural Glow Instant Sun Moisturizer + Bronzer"
-   ]
-  },
-  {
-   "ingredient": "Hydroxyethyl Acrylate/Sodium Acryloyldimethyl Taurate Copolymer",
-   "products": [
-    "Daily Glow Bundle",
-    "Gotta Glow Bundle",
-    "Instant Flawless Kit Bundle",
-    "Natural Glow + Firming Daily Moisturizer",
-    "Natural Glow Daily Moisturizer",
-    "Natural Glow Instant Sun Moisturizer + Bronzer"
-   ]
-  },
-  {
-   "ingredient": "Hydrolyzed Collagen",
-   "products": [
-    "Natural Glow + Firming Daily Moisturizer",
-    "Skin Firming"
-   ]
-  },
-  {
-   "ingredient": "Polyimide-1",
-   "products": [
-    "Natural Glow + Firming Daily Moisturizer",
-    "Skin Firming"
-   ]
-  },
-  {
-   "ingredient": "Hydrolyzed Elastin",
-   "products": [
-    "Natural Glow + Firming Daily Moisturizer",
-    "Skin Firming"
-   ]
-  },
-  {
-   "ingredient": "Tridecyl Salicylate",
-   "products": [
-    "Nourishing Honey Moisturizer"
-   ]
-  },
-  {
-   "ingredient": "Hydroxyethyl Acrylate/Sodium",
-   "products": [
-    "Natural Glow Instant Sun Moisturizer + Bronzer",
-    "Natural Glow Instant Sun Mousse"
-   ]
-  },
-  {
-   "ingredient": "Acryloyldimethyl Taurate Copolymer",
-   "products": [
-    "Natural Glow Instant Sun Moisturizer + Bronzer",
-    "Natural Glow Instant Sun Mousse"
-   ]
-  },
-  {
-   "ingredient": "Alpha-Isomethyl Ionone",
-   "products": [
-    "Daily Glow Bundle",
-    "Gotta Glow Bundle",
-    "Natural Glow Instant Sun Drops",
-    "Natural Glow Instant Sun Moisturizer + Bronzer",
-    "Natural Glow Instant Sun Mousse",
-    "Natural Glow Wet Skin Moisturizer"
-   ]
-  },
-  {
-   "ingredient": "Benzyl Salicylate",
-   "products": [
-    "Instant Flawless Kit Bundle",
-    "Natural Glow Instant Sun Drops",
-    "Natural Glow Instant Sun Moisturizer + Bronzer",
-    "Natural Glow Instant Sun Mousse",
-    "Natural Glow Wet Skin Moisturizer",
-    "Vanilla Crush Shea Fusion"
-   ]
-  },
-  {
-   "ingredient": "Citronellol",
-   "products": [
-    "Instant Flawless Kit Bundle",
-    "Lavender Dreams Shea Fusion",
-    "Lavender Lotion Bursts",
-    "Natural Glow Instant Sun Moisturizer + Bronzer",
-    "Natural Glow Instant Sun Mousse",
-    "Natural Glow Wet Skin Moisturizer",
-    "Sparkling Berry Lotion Bursts",
-    "Warm Amber Shea Fusion"
-   ]
-  },
-  {
-   "ingredient": "Hexyl Cinnamal",
-   "products": [
-    "Gotta Glow Bundle",
-    "Instant Flawless Kit Bundle",
-    "Natural Glow Instant Sun Drops",
-    "Natural Glow Instant Sun Moisturizer + Bronzer",
-    "Natural Glow Instant Sun Mousse",
-    "Natural Glow Wet Skin Moisturizer"
-   ]
-  },
-  {
-   "ingredient": "Ext. Violet 2",
-   "products": [
-    "Gotta Glow Bundle",
-    "Instant Flawless Kit Bundle",
-    "Lavender Lotion Bursts",
-    "Natural Glow Instant Sun Moisturizer + Bronzer",
-    "Natural Glow Instant Sun Mousse",
-    "Sparkling Berry Lotion Bursts"
-   ]
-  },
-  {
-   "ingredient": "Orange 4",
-   "products": [
-    "Gotta Glow Bundle",
-    "Instant Flawless Kit Bundle",
-    "Natural Glow Instant Sun Moisturizer + Bronzer",
-    "Natural Glow Instant Sun Mousse"
-   ]
-  },
-  {
-   "ingredient": "Red 4",
-   "products": [
-    "Gotta Glow Bundle",
-    "Instant Flawless Kit Bundle",
-    "Natural Glow Instant Sun Moisturizer + Bronzer",
-    "Natural Glow Instant Sun Mousse"
-   ]
-  },
-  {
-   "ingredient": "Yellow 10",
-   "products": [
-    "Gotta Glow Bundle",
-    "Instant Flawless Kit Bundle",
-    "Natural Glow Instant Sun Moisturizer + Bronzer",
-    "Natural Glow Instant Sun Mousse"
-   ]
-  },
-  {
-   "ingredient": "Polyisobutene",
-   "products": [
-    "Natural Glow Instant Sun Moisturizer + Bronzer"
-   ]
-  },
-  {
-   "ingredient": "Hydrolyzed Wheat Protein/Pvp Crosspolymer",
-   "products": [
-    "Skin Firming"
-   ]
-  },
-  {
-   "ingredient": "Hydrogenated Polydecene",
-   "products": [
-    "Best Sellers Bundle",
-    "Enriching Shea Butter Lotion"
-   ]
-  },
-  {
-   "ingredient": "Anise Alcohol",
-   "products": [
-    "Enriching Shea Butter Lotion"
-   ]
-  },
-  {
-   "ingredient": "Agar",
-   "products": [
-    "Lavender Lotion Bursts",
-    "Sparkling Berry Lotion Bursts"
-   ]
-  },
-  {
-   "ingredient": "Sodium Polyacrylate Starch",
-   "products": [
-    "Lavender Lotion Bursts",
-    "Sparkling Berry Lotion Bursts"
-   ]
-  },
-  {
-   "ingredient": "Ethylene/Propylene/Styrene Copolymer",
-   "products": [
-    "Natural Glow Wet Skin Moisturizer",
-    "Wet Skin Moisturizer Coconut Oil",
-    "Wet Skin Moisturizer Shea Oil"
-   ]
-  },
-  {
-   "ingredient": "Butylene/Ethylene/Styrene Copolymer",
-   "products": [
-    "Natural Glow Wet Skin Moisturizer",
-    "Wet Skin Moisturizer Shea Oil"
-   ]
-  },
-  {
-   "ingredient": "4-tert-Butylcyclohexyl Acetate",
-   "products": [
-    "Gotta Glow Bundle",
-    "Instant Flawless Kit Bundle"
-   ]
-  },
-  {
-   "ingredient": "Isocyclemone E",
-   "products": [
-    "Gotta Glow Bundle",
-    "Instant Flawless Kit Bundle"
-   ]
-  },
-  {
-   "ingredient": "Dimethyl Isosorbide",
-   "products": [
-    "Instant Flawless Kit Bundle"
-   ]
-  },
-  {
-   "ingredient": "AlphaIsomethyl Ionone",
-   "products": [
-    "Instant Flawless Kit Bundle"
-   ]
-  },
-  {
-   "ingredient": "Cyclohexanol",
-   "products": [
-    "Instant Flawless Kit Bundle"
-   ]
-  },
-  {
-   "ingredient": "3-(5,5,6-trimethylbicyclo[2.2.1]hept-2-yl)-",
-   "products": [
-    "Instant Flawless Kit Bundle"
-   ]
-  },
-  {
-   "ingredient": "(cis & trans)-Tetrahydro-2-isobutyl-4-methylpyran-4-ol",
-   "products": [
-    "Daily Glow Bundle",
-    "Gotta Glow Bundle",
-    "Instant Flawless Kit Bundle"
-   ]
-  },
-  {
-   "ingredient": "gamma-Undecalactone",
-   "products": [
-    "Instant Flawless Kit Bundle"
-   ]
-  },
-  {
-   "ingredient": "Hexamethylindanopyran",
-   "products": [
-    "Daily Glow Bundle",
-    "Gotta Glow Bundle",
-    "Instant Flawless Kit Bundle"
-   ]
-  },
-  {
-   "ingredient": "Benzyl Acetate",
-   "products": [
-    "Instant Flawless Kit Bundle"
-   ]
-  },
-  {
-   "ingredient": "Methyldihydrojasmonate",
-   "products": [
-    "Daily Glow Bundle",
-    "Gotta Glow Bundle"
-   ]
-  },
-  {
-   "ingredient": "Acetyl Hexamethyl Tetralin",
-   "products": [
-    "Daily Glow Bundle",
-    "Gotta Glow Bundle"
-   ]
-  },
-  {
-   "ingredient": "Ethyl Linalool",
-   "products": [
-    "Daily Glow Bundle",
-    "Gotta Glow Bundle"
-   ]
-  },
-  {
-   "ingredient": "Methyl Decenol",
-   "products": [
-    "Daily Glow Bundle",
-    "Gotta Glow Bundle"
-   ]
-  },
-  {
-   "ingredient": "cis-3-Hexenyl Salicylate",
-   "products": [
-    "Daily Glow Bundle",
-    "Gotta Glow Bundle"
-   ]
-  },
-  {
-   "ingredient": "1-Trimethyl-2-Cyclohexenyl-1-Penten-3-One",
-   "products": [
-    "Daily Glow Bundle",
-    "Gotta Glow Bundle"
-   ]
-  },
-  {
-   "ingredient": "Benzaldehyde",
-   "products": [
-    "Best Sellers Bundle"
-   ]
-  },
-  {
-   "ingredient": "Anisaldehyde",
-   "products": [
-    "Best Sellers Bundle"
-   ]
-  },
-  {
-   "ingredient": "Magnesium Aluminum Silicate",
-   "products": [
-    "Wet Skin Moisturizer Coconut Oil",
-    "Wet Skin Moisturizer Shea Oil"
-   ]
-  },
-  {
-   "ingredient": "Butylene/Ethylene/ Styrene Copolymer",
-   "products": [
-    "Wet Skin Moisturizer Coconut Oil"
-   ]
-  }
- ],
- "fallback_dedup": [
-  {
-   "ingredient": "Water",
-   "why": "fallback: template LOW list (not in reference)",
-   "products": [
-    "Best Sellers Bundle",
-    "Cherry Almond Lotion Bursts",
-    "Daily Glow Bundle",
-    "Daily Moisture",
-    "Deep Conditioning Shea Cocoa Butter Blend",
-    "Deep Restoring Argan Oil Moisturizer",
-    "Enriching Shea Butter Lotion",
-    "Gotta Glow Bundle",
-    "Hydrating Coconut Lotion",
-    "Instant Flawless Kit Bundle",
-    "Lavender Dreams Shea Fusion",
-    "Lavender Lotion Bursts",
-    "Natural Glow + Firming Daily Moisturizer",
-    "Natural Glow Daily Moisturizer",
-    "Natural Glow Face Moisturizer +SPF 20",
-    "Natural Glow Hydra Gel",
-    "Natural Glow Instant Sun Drops",
-    "Natural Glow Instant Sun Moisturizer + Bronzer",
-    "Natural Glow Instant Sun Mousse",
-    "Natural Glow Wet Skin Moisturizer",
-    "Nourishing Honey Moisturizer",
-    "Original Scent Moisturizer",
-    "Skin Firming",
-    "Soothing Aloe Moisturizer",
-    "Sparkling Berry Lotion Bursts",
-    "Sparkling Berry Shea Fusion",
-    "Ultra Healing Moisturizer",
-    "Vanilla Crush Shea Fusion",
-    "Warm Amber Shea Fusion",
-    "Wet Skin Moisturizer Coconut Oil",
-    "Wet Skin Moisturizer Shea Oil"
-   ]
-  },
-  {
-   "ingredient": "Glycerin",
-   "why": "fallback: template LOW list (not in reference)",
-   "products": [
-    "Best Sellers Bundle",
-    "Cherry Almond Lotion Bursts",
-    "Daily Glow Bundle",
-    "Daily Moisture",
-    "Deep Conditioning Shea Cocoa Butter Blend",
-    "Deep Restoring Argan Oil Moisturizer",
-    "Enriching Shea Butter Lotion",
-    "Gotta Glow Bundle",
-    "Hydrating Coconut Lotion",
-    "Instant Flawless Kit Bundle",
-    "Lavender Dreams Shea Fusion",
-    "Lavender Lotion Bursts",
-    "Natural Glow + Firming Daily Moisturizer",
-    "Natural Glow Daily Moisturizer",
-    "Natural Glow Face Moisturizer +SPF 20",
-    "Natural Glow Hydra Gel",
-    "Natural Glow Instant Sun Drops",
-    "Natural Glow Instant Sun Moisturizer + Bronzer",
-    "Natural Glow Instant Sun Mousse",
-    "Natural Glow Wet Skin Moisturizer",
-    "Nourishing Honey Moisturizer",
-    "Original Scent Moisturizer",
-    "Skin Firming",
-    "Soothing Aloe Moisturizer",
-    "Sparkling Berry Lotion Bursts",
-    "Sparkling Berry Shea Fusion",
-    "Ultra Healing Moisturizer",
-    "Vanilla Crush Shea Fusion",
-    "Warm Amber Shea Fusion",
-    "Wet Skin Moisturizer Coconut Oil",
-    "Wet Skin Moisturizer Shea Oil"
-   ]
-  },
-  {
-   "ingredient": "Stearic Acid",
-   "why": "fallback: template LOW list (not in reference)",
-   "products": [
-    "Best Sellers Bundle",
-    "Cherry Almond Lotion Bursts",
-    "Daily Glow Bundle",
-    "Daily Moisture",
-    "Deep Conditioning Shea Cocoa Butter Blend",
-    "Deep Restoring Argan Oil Moisturizer",
-    "Enriching Shea Butter Lotion",
-    "Gotta Glow Bundle",
-    "Hydrating Coconut Lotion",
-    "Lavender Lotion Bursts",
-    "Natural Glow + Firming Daily Moisturizer",
-    "Natural Glow Daily Moisturizer",
-    "Natural Glow Instant Sun Moisturizer + Bronzer",
-    "Nourishing Honey Moisturizer",
-    "Original Scent Moisturizer",
-    "Skin Firming",
-    "Soothing Aloe Moisturizer",
-    "Sparkling Berry Lotion Bursts",
-    "Ultra Healing Moisturizer"
-   ]
-  },
-  {
-   "ingredient": "C12-15 Alkyl Benzoate",
-   "why": "fallback: template LOW list (not in reference)",
-   "products": [
-    "Best Sellers Bundle",
-    "Daily Glow Bundle",
-    "Daily Moisture",
-    "Deep Restoring Argan Oil Moisturizer",
-    "Gotta Glow Bundle",
-    "Hydrating Coconut Lotion",
-    "Natural Glow Face Moisturizer +SPF 20",
-    "Ultra Healing Moisturizer"
-   ]
-  },
-  {
-   "ingredient": "Arginine",
-   "why": "fallback: template LOW list (not in reference)",
-   "products": [
-    "Best Sellers Bundle",
-    "Cherry Almond Lotion Bursts",
-    "Daily Moisture",
-    "Deep Conditioning Shea Cocoa Butter Blend",
-    "Deep Restoring Argan Oil Moisturizer",
-    "Enriching Shea Butter Lotion",
-    "Hydrating Coconut Lotion",
-    "Lavender Lotion Bursts",
-    "Nourishing Honey Moisturizer",
-    "Original Scent Moisturizer",
-    "Skin Firming",
-    "Soothing Aloe Moisturizer",
-    "Sparkling Berry Lotion Bursts",
-    "Ultra Healing Moisturizer"
-   ]
-  },
-  {
-   "ingredient": "Isopropyl Myristate",
-   "why": "fallback: template LOW list (not in reference)",
-   "products": [
-    "Daily Glow Bundle",
-    "Daily Moisture",
-    "Gotta Glow Bundle",
-    "Hydrating Coconut Lotion",
-    "Lavender Dreams Shea Fusion",
-    "Soothing Aloe Moisturizer",
-    "Sparkling Berry Shea Fusion",
-    "Vanilla Crush Shea Fusion",
-    "Warm Amber Shea Fusion"
-   ]
-  },
-  {
-   "ingredient": "Sodium Hydroxide",
-   "why": "fallback: template LOW list (not in reference)",
-   "products": [
-    "Best Sellers Bundle",
-    "Cherry Almond Lotion Bursts",
-    "Daily Moisture",
-    "Deep Conditioning Shea Cocoa Butter Blend",
-    "Deep Restoring Argan Oil Moisturizer",
-    "Enriching Shea Butter Lotion",
-    "Hydrating Coconut Lotion",
-    "Lavender Dreams Shea Fusion",
-    "Lavender Lotion Bursts",
-    "Nourishing Honey Moisturizer",
-    "Original Scent Moisturizer",
-    "Skin Firming",
-    "Soothing Aloe Moisturizer",
-    "Sparkling Berry Lotion Bursts",
-    "Sparkling Berry Shea Fusion",
-    "Ultra Healing Moisturizer",
-    "Vanilla Crush Shea Fusion",
-    "Warm Amber Shea Fusion",
-    "Wet Skin Moisturizer Coconut Oil",
-    "Wet Skin Moisturizer Shea Oil"
-   ]
-  },
-  {
-   "ingredient": "Ananas Sativus (Pineapple) Fruit Juice",
-   "why": "fallback: botanical name heuristic (not in reference)",
-   "products": [
-    "Daily Moisture"
-   ]
-  },
-  {
-   "ingredient": "Citrus Grandis (Grapefruit) Juice",
-   "why": "fallback: botanical name heuristic (not in reference)",
-   "products": [
-    "Daily Moisture"
-   ]
-  },
-  {
-   "ingredient": "Citrus Limon (Lemon) Juice",
-   "why": "fallback: botanical name heuristic (not in reference)",
-   "products": [
-    "Daily Moisture"
-   ]
-  },
-  {
-   "ingredient": "Glyceryl Stearate",
-   "why": "fallback: template LOW list (not in reference)",
-   "products": [
-    "Daily Glow Bundle",
-    "Gotta Glow Bundle",
-    "Lavender Dreams Shea Fusion",
-    "Natural Glow Face Moisturizer +SPF 20",
-    "Natural Glow Hydra Gel",
-    "Soothing Aloe Moisturizer",
-    "Sparkling Berry Shea Fusion",
-    "Vanilla Crush Shea Fusion",
-    "Warm Amber Shea Fusion"
-   ]
-  },
-  {
-   "ingredient": "Zea Mays (Corn) Starch",
-   "why": "fallback: template LOW list (not in reference)",
-   "products": [
-    "Daily Glow Bundle",
-    "Gotta Glow Bundle",
-    "Natural Glow + Firming Daily Moisturizer",
-    "Natural Glow Daily Moisturizer",
-    "Natural Glow Face Moisturizer +SPF 20",
-    "Natural Glow Hydra Gel",
-    "Natural Glow Instant Sun Moisturizer + Bronzer"
-   ]
-  },
-  {
-   "ingredient": "Tocopheryl Acetate",
-   "why": "fallback: template LOW list (not in reference)",
-   "products": [
-    "Best Sellers Bundle",
-    "Cherry Almond Lotion Bursts",
-    "Daily Glow Bundle",
-    "Deep Conditioning Shea Cocoa Butter Blend",
-    "Enriching Shea Butter Lotion",
-    "Gotta Glow Bundle",
-    "Lavender Dreams Shea Fusion",
-    "Lavender Lotion Bursts",
-    "Natural Glow Face Moisturizer +SPF 20",
-    "Natural Glow Hydra Gel",
-    "Natural Glow Instant Sun Drops",
-    "Natural Glow Instant Sun Moisturizer + Bronzer",
-    "Natural Glow Wet Skin Moisturizer",
-    "Nourishing Honey Moisturizer",
-    "Original Scent Moisturizer",
-    "Skin Firming",
-    "Sparkling Berry Lotion Bursts",
-    "Sparkling Berry Shea Fusion",
-    "Vanilla Crush Shea Fusion",
-    "Warm Amber Shea Fusion",
-    "Wet Skin Moisturizer Shea Oil"
-   ]
-  },
-  {
-   "ingredient": "Caramel",
-   "why": "fallback: template LOW list (not in reference)",
-   "products": [
-    "Best Sellers Bundle",
-    "Daily Glow Bundle",
-    "Deep Conditioning Shea Cocoa Butter Blend",
-    "Enriching Shea Butter Lotion",
-    "Gotta Glow Bundle",
-    "Instant Flawless Kit Bundle",
-    "Natural Glow + Firming Daily Moisturizer",
-    "Natural Glow Daily Moisturizer",
-    "Natural Glow Face Moisturizer +SPF 20",
-    "Natural Glow Instant Sun Drops",
-    "Natural Glow Instant Sun Moisturizer + Bronzer",
-    "Wet Skin Moisturizer Shea Oil"
-   ]
-  },
-  {
-   "ingredient": "Isohexadecane",
-   "why": "fallback: template LOW list (not in reference)",
-   "products": [
-    "Daily Glow Bundle",
-    "Gotta Glow Bundle",
-    "Natural Glow + Firming Daily Moisturizer",
-    "Natural Glow Daily Moisturizer"
-   ]
-  },
-  {
-   "ingredient": "Polysorbate 60",
-   "why": "fallback: template LOW list (not in reference)",
-   "products": [
-    "Daily Glow Bundle",
-    "Gotta Glow Bundle",
-    "Natural Glow + Firming Daily Moisturizer",
-    "Natural Glow Daily Moisturizer"
-   ]
-  },
-  {
-   "ingredient": "Cocos Nucifera (Coconut) Water",
-   "why": "fallback: botanical name heuristic (not in reference)",
-   "products": [
-    "Hydrating Coconut Lotion",
-    "Natural Glow + Firming Daily Moisturizer",
-    "Skin Firming"
-   ]
-  },
-  {
-   "ingredient": "Withania Somnifera Root Extract",
-   "why": "fallback: botanical name heuristic (not in reference)",
-   "products": [
-    "Hydrating Coconut Lotion",
-    "Natural Glow + Firming Daily Moisturizer",
-    "Skin Firming"
-   ]
-  },
-  {
-   "ingredient": "Centella Asiatica Extract",
-   "why": "fallback: botanical name heuristic (not in reference)",
-   "products": [
-    "Natural Glow + Firming Daily Moisturizer",
-    "Skin Firming"
-   ]
-  },
-  {
-   "ingredient": "Fucus Vesiculosus Extract",
-   "why": "fallback: botanical name heuristic (not in reference)",
-   "products": [
-    "Natural Glow + Firming Daily Moisturizer",
-    "Skin Firming"
-   ]
-  },
-  {
-   "ingredient": "Camellia Sinensis Leaf Extract",
-   "why": "fallback: template LOW list (not in reference)",
-   "products": [
-    "Daily Glow Bundle",
-    "Gotta Glow Bundle",
-    "Natural Glow + Firming Daily Moisturizer",
-    "Natural Glow Daily Moisturizer"
-   ]
-  },
-  {
-   "ingredient": "Benzoic Acid",
-   "why": "fallback: template LOW list (not in reference)",
-   "products": [
-    "Daily Glow Bundle",
-    "Gotta Glow Bundle",
-    "Instant Flawless Kit Bundle",
-    "Natural Glow + Firming Daily Moisturizer",
-    "Natural Glow Daily Moisturizer",
-    "Natural Glow Hydra Gel",
-    "Natural Glow Instant Sun Drops",
-    "Natural Glow Instant Sun Moisturizer + Bronzer",
-    "Natural Glow Instant Sun Mousse"
-   ]
-  },
-  {
-   "ingredient": "Butyrospermum Parkii (Shea) Butter",
-   "why": "fallback: template LOW list (not in reference)",
-   "products": [
-    "Best Sellers Bundle",
-    "Cherry Almond Lotion Bursts",
-    "Deep Conditioning Shea Cocoa Butter Blend",
-    "Enriching Shea Butter Lotion",
-    "Lavender Dreams Shea Fusion",
-    "Natural Glow Hydra Gel",
-    "Natural Glow Wet Skin Moisturizer",
-    "Nourishing Honey Moisturizer",
-    "Sparkling Berry Shea Fusion",
-    "Vanilla Crush Shea Fusion",
-    "Warm Amber Shea Fusion",
-    "Wet Skin Moisturizer Shea Oil"
-   ]
-  },
-  {
-   "ingredient": "Simmondsia Chinensis (Jojoba) Seed Oil",
-   "why": "fallback: template LOW list (not in reference)",
-   "products": [
-    "Daily Glow Bundle",
-    "Gotta Glow Bundle",
-    "Lavender Dreams Shea Fusion",
-    "Natural Glow Daily Moisturizer",
-    "Natural Glow Hydra Gel",
-    "Sparkling Berry Shea Fusion",
-    "Vanilla Crush Shea Fusion",
-    "Warm Amber Shea Fusion"
-   ]
-  },
-  {
-   "ingredient": "Hydroxyacetophenone",
-   "why": "fallback: template LOW list (not in reference)",
-   "products": [
-    "Deep Conditioning Shea Cocoa Butter Blend",
-    "Enriching Shea Butter Lotion",
-    "Lavender Dreams Shea Fusion",
-    "Lavender Lotion Bursts",
-    "Natural Glow Wet Skin Moisturizer",
-    "Sparkling Berry Lotion Bursts",
-    "Sparkling Berry Shea Fusion",
-    "Ultra Healing Moisturizer",
-    "Vanilla Crush Shea Fusion",
-    "Warm Amber Shea Fusion"
-   ]
-  },
-  {
-   "ingredient": "Caprylic/Capric Triglyceride",
-   "why": "fallback: template LOW list (not in reference)",
-   "products": [
-    "Lavender Dreams Shea Fusion",
-    "Lavender Lotion Bursts",
-    "Sparkling Berry Lotion Bursts",
-    "Sparkling Berry Shea Fusion",
-    "Ultra Healing Moisturizer",
-    "Vanilla Crush Shea Fusion",
-    "Warm Amber Shea Fusion"
-   ]
-  },
-  {
-   "ingredient": "Acrylates/C10-30 Alkyl Acrylate Crosspolymer",
-   "why": "fallback: template LOW list (not in reference)",
-   "products": [
-    "Best Sellers Bundle",
-    "Deep Conditioning Shea Cocoa Butter Blend",
-    "Enriching Shea Butter Lotion",
-    "Lavender Dreams Shea Fusion",
-    "Lavender Lotion Bursts",
-    "Original Scent Moisturizer",
-    "Skin Firming",
-    "Soothing Aloe Moisturizer",
-    "Sparkling Berry Lotion Bursts",
-    "Sparkling Berry Shea Fusion",
-    "Vanilla Crush Shea Fusion",
-    "Warm Amber Shea Fusion",
-    "Wet Skin Moisturizer Coconut Oil",
-    "Wet Skin Moisturizer Shea Oil"
-   ]
-  },
-  {
-   "ingredient": "Tetrasodium Glutamate Diacetate",
-   "why": "fallback: template LOW list (not in reference)",
-   "products": [
-    "Enriching Shea Butter Lotion",
-    "Lavender Dreams Shea Fusion",
-    "Lavender Lotion Bursts",
-    "Sparkling Berry Lotion Bursts",
-    "Sparkling Berry Shea Fusion",
-    "Ultra Healing Moisturizer",
-    "Vanilla Crush Shea Fusion",
-    "Warm Amber Shea Fusion"
-   ]
-  },
-  {
-   "ingredient": "Tapioca Starch",
-   "why": "fallback: template LOW list (not in reference)",
-   "products": [
-    "Cherry Almond Lotion Bursts",
-    "Nourishing Honey Moisturizer"
-   ]
-  },
-  {
-   "ingredient": "Theobroma Cacao (Cocoa) Seed Butter",
-   "why": "fallback: template LOW list (not in reference)",
-   "products": [
-    "Best Sellers Bundle",
-    "Cherry Almond Lotion Bursts",
-    "Deep Conditioning Shea Cocoa Butter Blend",
-    "Enriching Shea Butter Lotion",
-    "Nourishing Honey Moisturizer",
-    "Wet Skin Moisturizer Shea Oil"
-   ]
-  },
-  {
-   "ingredient": "Citrus Aurantium Amara (Bitter Orange) Flower Extract",
-   "why": "fallback: botanical name heuristic (not in reference)",
-   "products": [
-    "Nourishing Honey Moisturizer"
-   ]
-  },
-  {
-   "ingredient": "Honey Extract",
-   "why": "fallback: botanical name heuristic (not in reference)",
-   "products": [
-    "Nourishing Honey Moisturizer"
-   ]
-  },
-  {
-   "ingredient": "Sorbitan Isostearate",
-   "why": "fallback: template LOW list (not in reference)",
-   "products": [
-    "Natural Glow Instant Sun Moisturizer + Bronzer"
-   ]
-  },
-  {
-   "ingredient": "Cocos Nucifera (Coconut) Oil",
-   "why": "fallback: template LOW list (not in reference)",
-   "products": [
-    "Daily Glow Bundle",
-    "Gotta Glow Bundle",
-    "Hydrating Coconut Lotion",
-    "Natural Glow Daily Moisturizer",
-    "Natural Glow Instant Sun Moisturizer + Bronzer",
-    "Natural Glow Wet Skin Moisturizer",
-    "Wet Skin Moisturizer Coconut Oil"
-   ]
-  },
-  {
-   "ingredient": "Argania Spinosa Kernel Oil",
-   "why": "fallback: template LOW list (not in reference)",
-   "products": [
-    "Deep Restoring Argan Oil Moisturizer",
-    "Ultra Healing Moisturizer"
-   ]
-  },
-  {
-   "ingredient": "Lecithin",
-   "why": "fallback: template LOW list (not in reference)",
-   "products": [
-    "Best Sellers Bundle",
-    "Deep Restoring Argan Oil Moisturizer",
-    "Ultra Healing Moisturizer"
-   ]
-  },
-  {
-   "ingredient": "Ascorbyl Palmitate",
-   "why": "fallback: template LOW list (not in reference)",
-   "products": [
-    "Best Sellers Bundle",
-    "Deep Restoring Argan Oil Moisturizer",
-    "Ultra Healing Moisturizer"
-   ]
-  },
-  {
-   "ingredient": "Cocos Nucifera (Coconut) Fruit Extract",
-   "why": "fallback: template LOW list (not in reference)",
-   "products": [
-    "Hydrating Coconut Lotion"
-   ]
-  },
-  {
-   "ingredient": "Sorbitol",
-   "why": "fallback: template LOW list (not in reference)",
-   "products": [
-    "Hydrating Coconut Lotion"
-   ]
-  },
-  {
-   "ingredient": "Hydrogenated Vegetable Oil",
-   "why": "fallback: template LOW list (not in reference)",
-   "products": [
-    "Deep Conditioning Shea Cocoa Butter Blend",
-    "Soothing Aloe Moisturizer"
-   ]
-  },
-  {
-   "ingredient": "Canola Oil",
-   "why": "fallback: botanical name heuristic (not in reference)",
-   "products": [
-    "Soothing Aloe Moisturizer"
-   ]
-  },
-  {
-   "ingredient": "Sodium Pca",
-   "why": "fallback: template LOW list (not in reference)",
-   "products": [
-    "Soothing Aloe Moisturizer"
-   ]
-  },
-  {
-   "ingredient": "Aloe Barbadensis Leaf Extract",
-   "why": "fallback: botanical name heuristic (not in reference)",
-   "products": [
-    "Soothing Aloe Moisturizer"
-   ]
-  },
-  {
-   "ingredient": "Eucalyptus Globulus Leaf Extract",
-   "why": "fallback: botanical name heuristic (not in reference)",
-   "products": [
-    "Soothing Aloe Moisturizer"
-   ]
-  },
-  {
-   "ingredient": "Cucumis Sativus (Cucumber) Fruit Extract",
-   "why": "fallback: template LOW list (not in reference)",
-   "products": [
-    "Soothing Aloe Moisturizer"
-   ]
-  },
-  {
-   "ingredient": "Lanolin Oil",
-   "why": "fallback: botanical name heuristic (not in reference)",
-   "products": [
-    "Best Sellers Bundle",
-    "Original Scent Moisturizer"
-   ]
-  },
-  {
-   "ingredient": "Persea Gratissima (Avocado) Oil",
-   "why": "fallback: template LOW list (not in reference)",
-   "products": [
-    "Cherry Almond Lotion Bursts",
-    "Daily Glow Bundle",
-    "Gotta Glow Bundle",
-    "Natural Glow Daily Moisturizer"
-   ]
-  },
-  {
-   "ingredient": "Mangifera Indica (Mango) Seed Butter",
-   "why": "fallback: botanical name heuristic (not in reference)",
-   "products": [
-    "Best Sellers Bundle",
-    "Enriching Shea Butter Lotion"
-   ]
-  },
-  {
-   "ingredient": "Butyrospermum Parkii (Shea) Oil",
-   "why": "fallback: botanical name heuristic (not in reference)",
-   "products": [
-    "Enriching Shea Butter Lotion",
-    "Wet Skin Moisturizer Shea Oil"
-   ]
-  },
-  {
-   "ingredient": "Isopropyl Palmitate",
-   "why": "fallback: template LOW list (not in reference)",
-   "products": [
-    "Natural Glow Hydra Gel",
-    "Natural Glow Wet Skin Moisturizer"
-   ]
-  },
-  {
-   "ingredient": "Ethoxydiglycol",
-   "why": "fallback: template LOW list (not in reference)",
-   "products": [
-    "Instant Flawless Kit Bundle",
-    "Natural Glow Wet Skin Moisturizer"
-   ]
-  },
-  {
-   "ingredient": "Polysorbate 20",
-   "why": "fallback: template LOW list (not in reference)",
-   "products": [
-    "Natural Glow Instant Sun Drops"
-   ]
-  },
-  {
-   "ingredient": "Sodium Metabisulfite",
-   "why": "fallback: template LOW list (not in reference)",
-   "products": [
-    "Natural Glow Instant Sun Drops"
-   ]
-  },
-  {
-   "ingredient": "HYDROXYPROPYL STARCH PHOSPHATE",
-   "why": "fallback: template LOW list (not in reference)",
-   "products": [
-    "Natural Glow Hydra Gel"
-   ]
-  },
-  {
-   "ingredient": "Dicaprylyl Ether",
-   "why": "fallback: template LOW list (not in reference)",
-   "products": [
-    "Daily Glow Bundle",
-    "Gotta Glow Bundle"
-   ]
-  },
-  {
-   "ingredient": "Olea Europaea (Olive) Fruit Oil",
-   "why": "fallback: template LOW list (not in reference)",
-   "products": [
-    "Daily Glow Bundle",
-    "Gotta Glow Bundle",
-    "Natural Glow Daily Moisturizer"
-   ]
-  },
-  {
-   "ingredient": "Avena Sativa (Oat) Meal Extract",
-   "why": "fallback: botanical name heuristic (not in reference)",
-   "products": [
-    "Daily Glow Bundle",
-    "Gotta Glow Bundle",
-    "Natural Glow Daily Moisturizer"
-   ]
-  },
-  {
-   "ingredient": "Calendula Officinalis Flower Extract",
-   "why": "fallback: template LOW list (not in reference)",
-   "products": [
-    "Daily Glow Bundle",
-    "Gotta Glow Bundle",
-    "Natural Glow Daily Moisturizer"
-   ]
-  },
-  {
-   "ingredient": "Jojoba Esters",
-   "why": "fallback: template LOW list (not in reference)",
-   "products": [
-    "Deep Conditioning Shea Cocoa Butter Blend"
-   ]
+   "product_name": "Jergens Gift Card",
+   "tier": "ungradable",
+   "status": "ingredients not found"
   }
  ]
 }

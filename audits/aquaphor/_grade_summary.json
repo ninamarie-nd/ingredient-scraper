@@ -1,16 +1,17 @@
 {
  "brand": "aquaphor",
  "tier_counts": {
-  "Puberty Safe": 3,
-  "Use Caution": 2,
+  "Puberty Safe": 0,
+  "Use Caution": 0,
   "Avoid (Mild)": 0,
-  "Avoid (Moderate)": 2,
-  "Avoid (High Priority Swap)": 31
+  "Avoid (Moderate)": 0,
+  "Avoid (High Priority Swap)": 0,
+  "ungradable": 41
  },
  "rows": [
   {
    "product_name": "Aquaphor® Moisturizing Cream (8oz.)",
-   "tier": "Avoid (High Priority Swap)",
+   "tier": "ungradable",
    "flag_count": 4,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -21,8 +22,6 @@
    ],
    "natural": [],
    "unknown": [
-    "Water",
-    "Glycerin",
     "Caprylic/Capric Triglyceride",
     "Ethylhexyl Stearate",
     "Butyrospermum Parkii (Shea) Butter",
@@ -39,11 +38,11 @@
    "esc": [
     "carcinogen in leave-on"
    ],
-   "status": "complete"
+   "status": "needs review"
   },
   {
    "product_name": "Aquaphor® Hydrating Daily Lotion (3oz.)",
-   "tier": "Avoid (High Priority Swap)",
+   "tier": "ungradable",
    "flag_count": 4,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -54,8 +53,6 @@
    ],
    "natural": [],
    "unknown": [
-    "Water",
-    "Glycerin",
     "Ethylhexyl Stearate",
     "Caprylic/Capric Triglyceride",
     "Dicaprylyl Ether",
@@ -68,11 +65,11 @@
    "esc": [
     "carcinogen in leave-on"
    ],
-   "status": "complete"
+   "status": "needs review"
   },
   {
    "product_name": "Aquaphor® Hydrating Daily Lotion (8oz.)",
-   "tier": "Avoid (High Priority Swap)",
+   "tier": "ungradable",
    "flag_count": 4,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -83,8 +80,6 @@
    ],
    "natural": [],
    "unknown": [
-    "Water",
-    "Glycerin",
     "Ethylhexyl Stearate",
     "Caprylic/Capric Triglyceride",
     "Dicaprylyl Ether",
@@ -97,11 +92,11 @@
    "esc": [
     "carcinogen in leave-on"
    ],
-   "status": "complete"
+   "status": "needs review"
   },
   {
    "product_name": "Aquaphor® Hydrating Daily Lotion (16oz.)",
-   "tier": "Avoid (High Priority Swap)",
+   "tier": "ungradable",
    "flag_count": 4,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -112,8 +107,6 @@
    ],
    "natural": [],
    "unknown": [
-    "Water",
-    "Glycerin",
     "Ethylhexyl Stearate",
     "Caprylic/Capric Triglyceride",
     "Dicaprylyl Ether",
@@ -126,11 +119,11 @@
    "esc": [
     "carcinogen in leave-on"
    ],
-   "status": "complete"
+   "status": "needs review"
   },
   {
    "product_name": "Aquaphor® Moisturizing Cream (1.89oz.)",
-   "tier": "Avoid (High Priority Swap)",
+   "tier": "ungradable",
    "flag_count": 4,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -141,8 +134,6 @@
    ],
    "natural": [],
    "unknown": [
-    "Water",
-    "Glycerin",
     "Ethylhexyl Stearate",
     "Caprylic/Capric Triglyceride",
     "Dicaprylyl Ether",
@@ -155,11 +146,11 @@
    "esc": [
     "carcinogen in leave-on"
    ],
-   "status": "complete"
+   "status": "needs review"
   },
   {
    "product_name": "Aquaphor® Moisturizing Cream (16oz.)",
-   "tier": "Avoid (High Priority Swap)",
+   "tier": "ungradable",
    "flag_count": 4,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -170,8 +161,6 @@
    ],
    "natural": [],
    "unknown": [
-    "Water",
-    "Glycerin",
     "Caprylic/Capric Triglyceride",
     "Ethylhexyl Stearate",
     "Butyrospermum Parkii (Shea) Butter",
@@ -188,11 +177,11 @@
    "esc": [
     "carcinogen in leave-on"
    ],
-   "status": "complete"
+   "status": "needs review"
   },
   {
    "product_name": "Aquaphor® Lip Repair Stick Naturally Inspired Aloe Vera Single Pack",
-   "tier": "Puberty Safe",
+   "tier": "ungradable",
    "flag_count": 0,
    "product_type": "lip product",
    "flagged": [],
@@ -202,22 +191,20 @@
     "Ricinus Communis (Castor) Seed Oil",
     "Butyrospermum Parkii (Shea) Butter",
     "Helianthus Annuus (Sunflower) Seed Wax",
-    "Glycerin",
     "Hydrogenated Castor Oil",
     "Polyglyceryl-4 Diisostearate/Polyhydroxystearate/Sebacate",
     "Aloe Barbadensis Leaf Juice Powder",
     "Simmondsia Chinensis (Jojoba) Seed Oil",
     "Helianthus Annuus (Sunflower) Seed Oil",
     "Ascorbyl Palmitate",
-    "Water",
     "Pantolactone"
    ],
    "esc": [],
-   "status": "complete"
+   "status": "needs review"
   },
   {
    "product_name": "Aquaphor® Lip Repair Stick Naturally Inspired Coconut Single Pack",
-   "tier": "Puberty Safe",
+   "tier": "ungradable",
    "flag_count": 0,
    "product_type": "lip product",
    "flagged": [],
@@ -231,15 +218,14 @@
     "Simmondsia Chinensis (Jojoba) Seed Oil",
     "Helianthus Annuus (Sunflower) Seed Oil",
     "Ascorbyl Palmitate",
-    "Water",
     "Pantolactone"
    ],
    "esc": [],
-   "status": "complete"
+   "status": "needs review"
   },
   {
    "product_name": "Aquaphor® Baby Healing Ointment (7oz.)",
-   "tier": "Avoid (High Priority Swap)",
+   "tier": "ungradable",
    "flag_count": 3,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -250,36 +236,33 @@
    "natural": [],
    "unknown": [
     "Ceresin",
-    "Lanolin alcohol",
-    "Glycerin"
+    "Lanolin alcohol"
    ],
    "esc": [
     "carcinogen in leave-on"
    ],
-   "status": "complete"
+   "status": "needs review"
   },
   {
    "product_name": "Aquaphor® Diaper Rash Paste (3.5oz.)",
-   "tier": "Puberty Safe",
+   "tier": "ungradable",
    "flag_count": 0,
    "product_type": "leave-on skincare",
    "flagged": [],
    "natural": [],
    "unknown": [
-    "Glycerin",
     "Caprylic/Capric Triglyceride",
     "Octyldodecanol",
     "Polyglyceryl-4 Diisostearate/Polyhydroxystearate/Sebacate",
     "Magnesium Stearate",
-    "Butyrospermum Parkii (Shea) Butter",
-    "Water"
+    "Butyrospermum Parkii (Shea) Butter"
    ],
    "esc": [],
-   "status": "complete"
+   "status": "needs review"
   },
   {
    "product_name": "Aquaphor® Lip Repair Stick",
-   "tier": "Avoid (High Priority Swap)",
+   "tier": "ungradable",
    "flag_count": 1,
    "product_type": "lip product",
    "flagged": [
@@ -293,7 +276,6 @@
     "Butyrospermum Parkii (Shea) Butter",
     "Helianthus Annuus (Sunflower) Seed Wax",
     "Hydrogenated Castor Oil",
-    "Water",
     "Tocopheryl Acetate",
     "Simmondsia Chinensis (Jojoba) Seed Oil",
     "Ascorbyl Palmitate"
@@ -301,11 +283,11 @@
    "esc": [
     "PFAS"
    ],
-   "status": "complete"
+   "status": "needs review"
   },
   {
    "product_name": "Aquaphor® Lip Repair Stick + Sunscreen",
-   "tier": "Avoid (High Priority Swap)",
+   "tier": "ungradable",
    "flag_count": 5,
    "product_type": "sunscreen",
    "flagged": [
@@ -332,11 +314,11 @@
    "esc": [
     "PFAS"
    ],
-   "status": "complete"
+   "status": "needs review"
   },
   {
    "product_name": "Aquaphor® Lip Protectant + SPF (Dual Pack)",
-   "tier": "Avoid (High Priority Swap)",
+   "tier": "ungradable",
    "flag_count": 7,
    "product_type": "sunscreen",
    "flagged": [
@@ -352,10 +334,8 @@
    "unknown": [
     "C18-38 Alkyl Hydroxystearoyl Stearate",
     "Octyldodecanol",
-    "Glycerin",
     "Ricinus Communis (Castor) Seed Oil",
     "Caprylic/Capric Triglyceride",
-    "Water",
     "Butyrospermum Parkii (Shea) Butter",
     "Tocopheryl Acetate",
     "Hydrogenated Castor Oil",
@@ -365,11 +345,11 @@
    "esc": [
     "carcinogen in leave-on"
    ],
-   "status": "complete"
+   "status": "needs review"
   },
   {
    "product_name": "Aquaphor® Lip Repair Stick + Sunscreen (Dual Pack)",
-   "tier": "Avoid (High Priority Swap)",
+   "tier": "ungradable",
    "flag_count": 5,
    "product_type": "sunscreen",
    "flagged": [
@@ -396,11 +376,11 @@
    "esc": [
     "PFAS"
    ],
-   "status": "complete"
+   "status": "needs review"
   },
   {
    "product_name": "Aquaphor® Children's Healing Ointment (14oz.)",
-   "tier": "Avoid (High Priority Swap)",
+   "tier": "ungradable",
    "flag_count": 3,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -411,17 +391,16 @@
    "natural": [],
    "unknown": [
     "Ceresin",
-    "Lanolin Alcohol",
-    "Glycerin"
+    "Lanolin Alcohol"
    ],
    "esc": [
     "carcinogen in leave-on"
    ],
-   "status": "complete"
+   "status": "needs review"
   },
   {
    "product_name": "Aquaphor® Lip Repair",
-   "tier": "Use Caution",
+   "tier": "ungradable",
    "flag_count": 1,
    "product_type": "lip product",
    "flagged": [
@@ -433,9 +412,7 @@
     "C18-38 Alkyl Hydroxystearoyl Stearate",
     "Ricinus Communis (Castor) Seed Oil",
     "Caprylic/Capric Triglyceride",
-    "Glycerin",
     "Bis-Diglyceryl Polyacyladipate-2",
-    "Water",
     "Butyrospermum Parkii (Shea) Butter",
     "Hydrogenated Castor Oil",
     "Tocopheryl Acetate",
@@ -447,11 +424,11 @@
     "Glyceryl Stearate"
    ],
    "esc": [],
-   "status": "complete"
+   "status": "needs review"
   },
   {
    "product_name": "Aquaphor® Lip Repair Stick (Dual Pack)",
-   "tier": "Avoid (High Priority Swap)",
+   "tier": "ungradable",
    "flag_count": 1,
    "product_type": "lip product",
    "flagged": [
@@ -465,7 +442,6 @@
     "Butyrospermum Parkii (Shea) Butter",
     "Helianthus Annuus (Sunflower) Seed Wax",
     "Hydrogenated Castor Oil",
-    "Water",
     "Tocopheryl Acetate",
     "Simmondsia Chinensis (Jojoba) Seed Oil",
     "Ascorbyl Palmitate"
@@ -473,11 +449,11 @@
    "esc": [
     "PFAS"
    ],
-   "status": "complete"
+   "status": "needs review"
   },
   {
    "product_name": "Aquaphor® Baby Healing Balm Stick (0.65oz.)",
-   "tier": "Avoid (High Priority Swap)",
+   "tier": "ungradable",
    "flag_count": 2,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -489,17 +465,16 @@
     "Caprylic/Capric Triglyceride",
     "Persea Gratissima (Avocado) Oil",
     "Microcrystalline Wax",
-    "Butyrospermum Parkii (Shea) Butter",
-    "Glycerin"
+    "Butyrospermum Parkii (Shea) Butter"
    ],
    "esc": [
     "carcinogen in leave-on"
    ],
-   "status": "complete"
+   "status": "needs review"
   },
   {
    "product_name": "Aquaphor® Baby Wash & Shampoo (25.4oz.)",
-   "tier": "Avoid (Moderate)",
+   "tier": "ungradable",
    "flag_count": 5,
    "product_type": "body wash/shampoo/conditioner",
    "flagged": [
@@ -511,15 +486,14 @@
    ],
    "natural": [],
    "unknown": [
-    "Water",
     "Sea Salt"
    ],
    "esc": [],
-   "status": "complete"
+   "status": "needs review"
   },
   {
    "product_name": "Aquaphor Baby Sensitive Lotion, Baby Lotion, 3 Fl Oz",
-   "tier": "Avoid (High Priority Swap)",
+   "tier": "ungradable",
    "flag_count": 3,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -529,8 +503,6 @@
    ],
    "natural": [],
    "unknown": [
-    "Water",
-    "Glycerin",
     "Ethylhexyl Stearate",
     "Caprylic/Capric Triglyceride",
     "Dicaprylyl Ether",
@@ -543,11 +515,11 @@
    "esc": [
     "carcinogen in leave-on"
    ],
-   "status": "complete"
+   "status": "needs review"
   },
   {
    "product_name": "Aquaphor Baby Sensitive Lotion, Baby Lotion, 8 Fl Oz",
-   "tier": "Avoid (High Priority Swap)",
+   "tier": "ungradable",
    "flag_count": 3,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -557,8 +529,6 @@
    ],
    "natural": [],
    "unknown": [
-    "Water",
-    "Glycerin",
     "Ethylhexyl Stearate",
     "Caprylic/Capric Triglyceride",
     "Dicaprylyl Ether",
@@ -571,11 +541,11 @@
    "esc": [
     "carcinogen in leave-on"
    ],
-   "status": "complete"
+   "status": "needs review"
   },
   {
    "product_name": "Aquaphor® Baby Healing Ointment (3oz.)",
-   "tier": "Avoid (High Priority Swap)",
+   "tier": "ungradable",
    "flag_count": 3,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -586,17 +556,16 @@
    "natural": [],
    "unknown": [
     "Ceresin",
-    "Lanolin Alcohol",
-    "Glycerin"
+    "Lanolin Alcohol"
    ],
    "esc": [
     "carcinogen in leave-on"
    ],
-   "status": "complete"
+   "status": "needs review"
   },
   {
    "product_name": "Aquaphor® Baby Healing Ointment (14oz.)",
-   "tier": "Avoid (High Priority Swap)",
+   "tier": "ungradable",
    "flag_count": 3,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -607,22 +576,21 @@
    "natural": [],
    "unknown": [
     "Ceresin",
-    "Lanolin Alcohol",
-    "Glycerin"
+    "Lanolin Alcohol"
    ],
    "esc": [
     "carcinogen in leave-on"
    ],
-   "status": "complete"
+   "status": "needs review"
   },
   {
    "product_name": "Aquaphor® Diaper Rash Cream (3oz.)",
-   "tier": null,
+   "tier": "ungradable",
    "status": "ingredients not found"
   },
   {
    "product_name": "Aquaphor® Lip Protectant + SPF 30",
-   "tier": "Avoid (High Priority Swap)",
+   "tier": "ungradable",
    "flag_count": 7,
    "product_type": "sunscreen",
    "flagged": [
@@ -638,10 +606,8 @@
    "unknown": [
     "C18-38 Alkyl Hydroxystearoyl Stearate",
     "Octyldodecanol",
-    "Glycerin",
     "Ricinus Communis (Castor) Seed Oil",
     "Caprylic/Capric Triglyceride",
-    "Water",
     "Butyrospermum Parkii (Shea) Butter",
     "Tocopheryl Acetate",
     "Hydrogenated Castor Oil",
@@ -651,11 +617,11 @@
    "esc": [
     "carcinogen in leave-on"
    ],
-   "status": "complete"
+   "status": "needs review"
   },
   {
    "product_name": "Aquaphor® Lip Repair (Dual Pack)",
-   "tier": "Use Caution",
+   "tier": "ungradable",
    "flag_count": 1,
    "product_type": "lip product",
    "flagged": [
@@ -667,9 +633,7 @@
     "C18-38 Alkyl Hydroxystearoyl Stearate",
     "Ricinus Communis (Castor) Seed Oil",
     "Caprylic/Capric Triglyceride",
-    "Glycerin",
     "Bis-Diglyceryl Polyacyladipate-2",
-    "Water",
     "Butyrospermum Parkii (Shea) Butter",
     "Hydrogenated Castor Oil",
     "Tocopheryl Acetate",
@@ -678,11 +642,11 @@
     "Magnesium Stearate"
    ],
    "esc": [],
-   "status": "complete"
+   "status": "needs review"
   },
   {
    "product_name": "Aquaphor® Baby Healing Ointment (2x.35oz.)",
-   "tier": "Avoid (High Priority Swap)",
+   "tier": "ungradable",
    "flag_count": 3,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -693,17 +657,16 @@
    "natural": [],
    "unknown": [
     "Ceresin",
-    "Lanolin Alcohol",
-    "Glycerin"
+    "Lanolin Alcohol"
    ],
    "esc": [
     "carcinogen in leave-on"
    ],
-   "status": "complete"
+   "status": "needs review"
   },
   {
    "product_name": "Aquaphor® Baby Healing Ointment (1.75oz.)",
-   "tier": "Avoid (High Priority Swap)",
+   "tier": "ungradable",
    "flag_count": 3,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -714,17 +677,16 @@
    "natural": [],
    "unknown": [
     "Ceresin",
-    "Lanolin Alcohol",
-    "Glycerin"
+    "Lanolin Alcohol"
    ],
    "esc": [
     "carcinogen in leave-on"
    ],
-   "status": "complete"
+   "status": "needs review"
   },
   {
    "product_name": "Aquaphor® Baby Wash & Shampoo (16.9 fl.oz)",
-   "tier": "Avoid (Moderate)",
+   "tier": "ungradable",
    "flag_count": 5,
    "product_type": "body wash/shampoo/conditioner",
    "flagged": [
@@ -736,15 +698,14 @@
    ],
    "natural": [],
    "unknown": [
-    "Water",
     "Sea Salt"
    ],
    "esc": [],
-   "status": "complete"
+   "status": "needs review"
   },
   {
    "product_name": "Aquaphor® Ointment Body Spray (3.7oz.)",
-   "tier": "Avoid (High Priority Swap)",
+   "tier": "ungradable",
    "flag_count": 3,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -756,17 +717,16 @@
    "unknown": [
     "Butane",
     "Ceresin",
-    "Lanolin Alcohol",
-    "Glycerin"
+    "Lanolin Alcohol"
    ],
    "esc": [
     "carcinogen in leave-on"
    ],
-   "status": "complete"
+   "status": "needs review"
   },
   {
    "product_name": "Aquaphor Healing Ointment® (.25oz.)",
-   "tier": "Avoid (High Priority Swap)",
+   "tier": "ungradable",
    "flag_count": 3,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -777,17 +737,16 @@
    "natural": [],
    "unknown": [
     "Ceresin",
-    "Lanolin Alcohol",
-    "Glycerin"
+    "Lanolin Alcohol"
    ],
    "esc": [
     "carcinogen in leave-on"
    ],
-   "status": "complete"
+   "status": "needs review"
   },
   {
    "product_name": "Aquaphor Healing Ointment® With Touch-Free Applicator (3oz.)",
-   "tier": "Avoid (High Priority Swap)",
+   "tier": "ungradable",
    "flag_count": 3,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -798,17 +757,16 @@
    "natural": [],
    "unknown": [
     "Ceresin",
-    "Lanolin Alcohol",
-    "Glycerin"
+    "Lanolin Alcohol"
    ],
    "esc": [
     "carcinogen in leave-on"
    ],
-   "status": "complete"
+   "status": "needs review"
   },
   {
    "product_name": "Aquaphor® Children's Itch Relief Ointment (1 oz.)",
-   "tier": "Avoid (High Priority Swap)",
+   "tier": "ungradable",
    "flag_count": 3,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -821,17 +779,16 @@
     "Hydrocortisone",
     "Ceresin",
     "Lanolin Alcohol",
-    "Glycerin",
     "Menthoxypropanediol"
    ],
    "esc": [
     "carcinogen in leave-on"
    ],
-   "status": "complete"
+   "status": "needs review"
   },
   {
    "product_name": "Aquaphor® Healing Balm Stick (0.65oz.)",
-   "tier": "Avoid (High Priority Swap)",
+   "tier": "ungradable",
    "flag_count": 2,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -843,22 +800,21 @@
     "Caprylic/Capric Triglyceride",
     "Persea Gratissima (Avocado) Oil",
     "Microcrystalline Wax",
-    "Butyrospermum Parkii (Shea) Butter",
-    "Glycerin"
+    "Butyrospermum Parkii (Shea) Butter"
    ],
    "esc": [
     "carcinogen in leave-on"
    ],
-   "status": "complete"
+   "status": "needs review"
   },
   {
    "product_name": "Aquaphor® Hand Mask",
-   "tier": null,
+   "tier": "ungradable",
    "status": "ingredients not found"
   },
   {
    "product_name": "Aquaphor® Foot Mask",
-   "tier": "Avoid (High Priority Swap)",
+   "tier": "ungradable",
    "flag_count": 5,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -870,8 +826,6 @@
    ],
    "natural": [],
    "unknown": [
-    "Water",
-    "Glycerin",
     "Urea",
     "Hydrogenated Polyisobutene",
     "Glyceryl Stearate",
@@ -888,11 +842,11 @@
     "PFAS",
     "carcinogen in leave-on"
    ],
-   "status": "complete"
+   "status": "needs review"
   },
   {
    "product_name": "Aquaphor Healing Ointment® (1.75oz.)",
-   "tier": "Avoid (High Priority Swap)",
+   "tier": "ungradable",
    "flag_count": 3,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -903,17 +857,16 @@
    "natural": [],
    "unknown": [
     "Ceresin",
-    "Lanolin Alcohol",
-    "Glycerin"
+    "Lanolin Alcohol"
    ],
    "esc": [
     "carcinogen in leave-on"
    ],
-   "status": "complete"
+   "status": "needs review"
   },
   {
    "product_name": "Aquaphor® Ointment Body Spray (6.2 oz)",
-   "tier": "Avoid (High Priority Swap)",
+   "tier": "ungradable",
    "flag_count": 3,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -925,17 +878,16 @@
    "unknown": [
     "Butane",
     "Ceresin",
-    "Lanolin Alcohol",
-    "Glycerin"
+    "Lanolin Alcohol"
    ],
    "esc": [
     "carcinogen in leave-on"
    ],
-   "status": "complete"
+   "status": "needs review"
   },
   {
    "product_name": "Aquaphor Healing Ointment® (14oz.)",
-   "tier": "Avoid (High Priority Swap)",
+   "tier": "ungradable",
    "flag_count": 3,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -946,22 +898,21 @@
    "natural": [],
    "unknown": [
     "Ceresin",
-    "Lanolin Alcohol",
-    "Glycerin"
+    "Lanolin Alcohol"
    ],
    "esc": [
     "carcinogen in leave-on"
    ],
-   "status": "complete"
+   "status": "needs review"
   },
   {
    "product_name": "Aquaphor Healing Ointment® (2x.3.5oz)",
-   "tier": null,
+   "tier": "ungradable",
    "status": "ingredients not found"
   },
   {
    "product_name": "Aquaphor Healing Ointment® (7oz.)",
-   "tier": "Avoid (High Priority Swap)",
+   "tier": "ungradable",
    "flag_count": 3,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -972,13 +923,12 @@
    "natural": [],
    "unknown": [
     "Ceresin",
-    "Lanolin Alcohol",
-    "Glycerin"
+    "Lanolin Alcohol"
    ],
    "esc": [
     "carcinogen in leave-on"
    ],
-   "status": "complete"
+   "status": "needs review"
   }
  ]
 }

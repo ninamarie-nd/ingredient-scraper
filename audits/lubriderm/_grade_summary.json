@@ -1,0 +1,188 @@
+{
+ "brand": "lubriderm",
+ "tier_counts": {
+  "Puberty Safe": 0,
+  "Use Caution": 0,
+  "Avoid (Mild)": 0,
+  "Avoid (Moderate)": 0,
+  "Avoid (High Priority Swap)": 0,
+  "ungradable": 7
+ },
+ "rows": [
+  {
+   "product_name": "Daily Moisture Lotion Fragrance-Free",
+   "tier": "ungradable",
+   "flag_count": 4,
+   "product_type": "leave-on skincare",
+   "flagged": [
+    "Mineral Oil",
+    "Carbomer",
+    "Phenoxyethanol",
+    "Fragrance"
+   ],
+   "natural": [],
+   "unknown": [
+    "Potassium Cetyl Phosphate",
+    "Sodium Polyacrylate",
+    "Hydrogenated Palm Glycerides",
+    "Sodium Hydroxide",
+    "Butyrospermum Parkii (Shea) Butter",
+    "Disodium EDTA",
+    "Avena Sativa (Oat) Kernel Oil",
+    "Magnesium Aspartate",
+    "Zinc Gluconate",
+    "Copper Gluconate"
+   ],
+   "esc": [
+    "carcinogen in leave-on"
+   ],
+   "status": "needs review"
+  },
+  {
+   "product_name": "Daily Moisture Lotion",
+   "tier": "ungradable",
+   "flag_count": 4,
+   "product_type": "leave-on skincare",
+   "flagged": [
+    "Mineral Oil",
+    "Carbomer",
+    "Phenoxyethanol",
+    "Fragrance"
+   ],
+   "natural": [],
+   "unknown": [
+    "Potassium Cetyl Phosphate",
+    "Sodium Polyacrylate",
+    "Hydrogenated Palm Glycerides",
+    "Sodium Hydroxide",
+    "Butyrospermum Parkii (Shea) Butter",
+    "Disodium EDTA",
+    "Avena Sativa (Oat) Kernel Oil",
+    "Magnesium Aspartate",
+    "Zinc Gluconate",
+    "Copper Gluconate"
+   ],
+   "esc": [
+    "carcinogen in leave-on"
+   ],
+   "status": "needs review"
+  },
+  {
+   "product_name": "Advanced Therapy Lotion Fragrance-Free",
+   "tier": "ungradable",
+   "flag_count": 5,
+   "product_type": "leave-on skincare",
+   "flagged": [
+    "Mineral Oil",
+    "Dimethicone",
+    "Carbomer",
+    "Ceteareth-20",
+    "Phenoxyethanol"
+   ],
+   "natural": [],
+   "unknown": [
+    "Sorbitol",
+    "Caprylic/Capric Triglyceride",
+    "Tocopheryl Acetate",
+    "Avena Sativa (Oat) Kernel Oil",
+    "Palmitic Acid",
+    "Stearic Acid",
+    "Polysorbate 60",
+    "Lecithin",
+    "Sodium Hydroxide"
+   ],
+   "esc": [
+    "PFAS",
+    "carcinogen in leave-on"
+   ],
+   "status": "needs review"
+  },
+  {
+   "product_name": "Advanced Therapy Body Wash Fragrance-Free",
+   "tier": "ungradable",
+   "flag_count": 3,
+   "product_type": "rinse-off skincare",
+   "flagged": [
+    "Cocamidopropyl Betaine",
+    "PEG-80 Sorbitan Laurate",
+    "Sodium Cocoyl Isethionate"
+   ],
+   "natural": [],
+   "unknown": [
+    "Avena Sativa (Oat) Kernel Flour",
+    "Acrylates/C10-30 Alkyl Acrylate Crosspolymer",
+    "Sodium Hydroxide",
+    "Caprylic/Capric Triglyceride",
+    "Avena Sativa (Oat) Kernel Oil",
+    "Tocopheryl Acetate"
+   ],
+   "esc": [],
+   "status": "needs review"
+  },
+  {
+   "product_name": "Intense Skin Repair Lotion",
+   "tier": "ungradable",
+   "flag_count": 6,
+   "product_type": "leave-on skincare",
+   "flagged": [
+    "Mineral Oil",
+    "Dimethicone",
+    "Carbomer",
+    "Ceteareth-20",
+    "Phenoxyethanol",
+    "Fragrance"
+   ],
+   "natural": [],
+   "unknown": [
+    "Sorbitol",
+    "Caprylic/Capric Triglyceride",
+    "Tocopheryl Acetate",
+    "Avena Sativa (Oat) Kernel Oil",
+    "Butyrospermum Parkii (Shea) Butter",
+    "Zinc Gluconate",
+    "Copper Gluconate",
+    "Magnesium Aspartate",
+    "Palmitic Acid",
+    "Stearic Acid",
+    "Polysorbate 60",
+    "Lecithin",
+    "Disodium EDTA",
+    "Sodium Hydroxide"
+   ],
+   "esc": [
+    "PFAS",
+    "carcinogen in leave-on"
+   ],
+   "status": "needs review"
+  },
+  {
+   "product_name": "Daily Moisture Body Wash Lightly Scented",
+   "tier": "ungradable",
+   "flag_count": 5,
+   "product_type": "rinse-off skincare",
+   "flagged": [
+    "Cocamidopropyl Betaine",
+    "PEG-80 Sorbitan Laurate",
+    "Sodium Cocoyl Isethionate",
+    "Glycol Distearate",
+    "Fragrance"
+   ],
+   "natural": [],
+   "unknown": [
+    "Avena Sativa (Oat) Kernel Flour",
+    "Acrylates/C10-30 Alkyl Acrylate Crosspolymer",
+    "Sodium Hydroxide",
+    "Caprylic/Capric Triglyceride",
+    "Avena Sativa (Oat) Kernel Oil",
+    "Butyrospermum Parkii (Shea) Butter"
+   ],
+   "esc": [],
+   "status": "needs review"
+  },
+  {
+   "product_name": "Daily Moisture Lotion Fragrance-Free 24 fl oz, 2-count + 6 fl oz Travel Size",
+   "tier": "ungradable",
+   "status": "ingredients not found"
+  }
+ ]
+}

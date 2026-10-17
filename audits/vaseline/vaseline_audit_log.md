@@ -1,5 +1,7 @@
 # Vaseline Audit Log
 
+> **Regrade 2026-10-16:** the per-product status and tier sections written before this regrade are superseded. The current grades are in the spreadsheet and in the Regrade section at the end of this log.
+
 **Brand URL:** https://www.vaseline.com/us/en/products.html
 **Audit start:** 2026-10-16, approximately 23:12 UTC (estimated; no start time was logged at the outset)
 **Audit end:** 2026-10-16, approximately 23:34 UTC (estimated)
@@ -225,3 +227,235 @@ Every ingredient not resolved to the reference, the project LOW_TOX list, or a r
 - Lip products are graded with the leave-on escalation. The rubric does not name lip products explicitly; they were treated as leave-on because of ingestion exposure.
 - Shimmer gel oils contain mica, which is exempt because it is never the first ingredient. Colorant lakes (Yellow 5, Red 30, Red 7, Blue 1) are flagged only where the reference has a CI entry; the lakes without a CI entry are in the unknown queue.
 - The two Pro VitaB3 lotions appear only on the Pro VitaB3 range page, not in the main listing's first 50, which suggests the main listing's 'Show More' control does not reach every product.
+
+## Regrade 2026-10-16: unified grader, practitioner decisions D1 to D7
+
+**Provenance:** Every product was regraded from the verbatim text in `vaseline_ingredients.json` (unchanged). The grader is `_grader.py`, the same file in all five brand folders, and it writes `vaseline_audit.xlsx` and `_grade_summary.json`. The pre-regrade workbook is the git HEAD copy and was used only for the change table below.
+
+### Practitioner decisions as applied
+
+- **D1 Silica (plain "Silica" only).** Reference categories [1, 2] still count as a flag. The PFAS-treated escalation does not apply. A product that would otherwise grade Puberty Safe grades Use Caution. "Silica (hydrated)" is LOW TOX and is unchanged. "Silica Silylate" and "Trimethylsiloxysilicate" keep their PFAS tags. "Silica Dimethyl Silylate" is not in the reference and stays unknown under D4.
+- **D2 Iron oxides (CI 77491, CI 77492, CI 77499, plain "iron oxides").** Categories [1, 2, 3] per the reference. Category 3 triggers the heavy-metal escalation (minimum Avoid (Moderate)). The PFAS tag is kept. The plain "iron oxides" entry carries the PFAS tag because its reference note aliases it to the three CI entries.
+- **D3 Bisabolol.** Category 4 full flag. It is soft only when chamomile oil or extract is listed in the same product. No product in these five brands lists chamomile, so every bisabolol here is a full flag.
+- **D4 Not in reference = unknown.** Ceramide (including the NP, AP, NG and 3 variants) and coconut oil are LOW TOX and are not flagged. Lanolin alcohol and botanical oils not in the reference are unknown. No reference entries were edited or added.
+- **D5 Water** (Water, Aqua, Eau, and parenthetical forms such as "Water (Aqua)"). Clear: no flag, no unknown. Recorded in the explicit exception table in `_grader.py`.
+- **D6 Glycerin.** Caution ingredient: no flag, no unknown. A product that would otherwise grade Puberty Safe grades Use Caution; otherwise the other flags decide. Recorded in the same exception table. Glycerin is not in the reference.
+- **D7 Ungradable.** A product that still carries an unknown after D1 to D6 has tier `ungradable`, audit_status `needs review`, and its unknowns listed in audit_notes. A product with no ingredient text has tier `ungradable` and audit_status `ingredients not found`. flag_count and flagged_ingredients are still recorded. Ungradable is counted apart from the five tiers.
+
+### Grader changes (minimal)
+
+- One `_grader.py` in every brand folder. Its loader reads all three JSON layouts used by these brands: a `products` list, a `products` mapping, and a top-level mapping.
+- Product URL falls back to a `url` key (Lubriderm).
+- Added: the D5 and D6 exception table, the Use Caution floor for silica and glycerin, the `ungradable` tier with its status rules, and a separate ungradable count.
+- No other grading rule was changed. The reference was not edited.
+
+### Result
+
+- Products: 52. Puberty Safe 0, Use Caution 0, Avoid (Mild) 0, Avoid (Moderate) 0, Avoid (High Priority Swap) 0.
+- **Ungradable: 52 (counted separately from the five tiers).** 36 with unresolved ingredients under D4, 16 with no ingredient text.
+- Moved from a graded tier to ungradable: 36. Moved from no tier to ungradable (no ingredient text): 16.
+- Pre-regrade distribution (git HEAD): Avoid (High Priority Swap) 36, (none) 16.
+- Unique unknown ingredients remaining: 119.
+
+### Products that changed tier
+
+Pre-regrade tier from git HEAD, current tier from this regrade. "Unknowns left" is the number of distinct unknown ingredients still unresolved for that product.
+
+| Product | Before | Now | Unknowns left | Reason |
+|---|---|---|---|---|
+| Vaseline® Vanilla Comfort Trial & Travel Lotion | (no tier: no ingredient text) | ungradable | 0 | no ingredient text: no tier before or now |
+| Vaseline Vanilla Comfort Lotion | (no tier: no ingredient text) | ungradable | 0 | no ingredient text: no tier before or now |
+| Vaseline® Vanilla Comfort Gel Oil | (no tier: no ingredient text) | ungradable | 0 | no ingredient text: no tier before or now |
+| Vaseline® Radiant X Firm & Restore Body Lotion | (no tier: no ingredient text) | ungradable | 0 | no ingredient text: no tier before or now |
+| Vaseline® Radiant X Even Tone Nourishing Body Lotion | Avoid (High Priority Swap) | ungradable | 17 | D7: 17 unknown(s) remain |
+| Vaseline® Radiant X Replenishing Hydrating Body Oil | Avoid (High Priority Swap) | ungradable | 6 | D7: 6 unknown(s) remain |
+| Vaseline® Radiant X Deep Nourishment Body Cream | Avoid (High Priority Swap) | ungradable | 17 | D7: 17 unknown(s) remain |
+| Vaseline® Radiant X Deep Nourishment Hand Butter | Avoid (High Priority Swap) | ungradable | 14 | D7: 14 unknown(s) remain |
+| Vaseline® Intensive Care™ Hydra Replenish Hand Crème | Avoid (High Priority Swap) | ungradable | 12 | D7: 12 unknown(s) remain |
+| Vaseline® Healing Jelly Original | Avoid (High Priority Swap) | ungradable | 1 | D7: 1 unknown(s) remain |
+| Vaseline® Healing Jelly Cocoa Butter | Avoid (High Priority Swap) | ungradable | 1 | D7: 1 unknown(s) remain |
+| Vaseline® Lip Therapy® Advanced Healing Tube | Avoid (High Priority Swap) | ungradable | 1 | D7: 1 unknown(s) remain |
+| Vaseline® Cocoa Shimmer Jelly Stick | Avoid (High Priority Swap) | ungradable | 6 | D7: 6 unknown(s) remain |
+| Vaseline® All-Over Body Balm Jelly Stick | Avoid (High Priority Swap) | ungradable | 3 | D7: 3 unknown(s) remain |
+| Vaseline® Soothing Hydration Lotion | Avoid (High Priority Swap) | ungradable | 10 | D7: 10 unknown(s) remain |
+| Vaseline® Cocoa Radiant® Lotion | Avoid (High Priority Swap) | ungradable | 12 | D7: 12 unknown(s) remain |
+| Vaseline® Nourishing Moisture Lotion | Avoid (High Priority Swap) | ungradable | 15 | D7: 15 unknown(s) remain |
+| Vaseline® Calm Healing Lotion | Avoid (High Priority Swap) | ungradable | 12 | D7: 12 unknown(s) remain |
+| Vaseline® Advanced Repair Unscented Lotion | Avoid (High Priority Swap) | ungradable | 7 | D7: 7 unknown(s) remain |
+| Vaseline® Almond Smooth Lotion | Avoid (High Priority Swap) | ungradable | 15 | D7: 15 unknown(s) remain |
+| Vaseline® Men Cooling Hydration Lotion | Avoid (High Priority Swap) | ungradable | 13 | D7: 13 unknown(s) remain |
+| Vaseline® Intensive Care™ Cocoa Body Butter | Avoid (High Priority Swap) | ungradable | 24 | D7: 24 unknown(s) remain |
+| Vaseline® Men Fast Absorbing Lotion | Avoid (High Priority Swap) | ungradable | 10 | D7: 10 unknown(s) remain |
+| Vaseline® Men Extra Strength Lotion | Avoid (High Priority Swap) | ungradable | 8 | D7: 8 unknown(s) remain |
+| Vaseline® Lip Therapy® Original Mini | Avoid (High Priority Swap) | ungradable | 1 | D7: 1 unknown(s) remain |
+| Vaseline® Lip Therapy® Rosy Mini | Avoid (High Priority Swap) | ungradable | 3 | D7: 3 unknown(s) remain |
+| Vaseline® Lip Therapy® Cocoa Butter Mini | Avoid (High Priority Swap) | ungradable | 3 | D7: 3 unknown(s) remain |
+| Vaseline® Lip Therapy® Crème Brûlée Mini | Avoid (High Priority Swap) | ungradable | 3 | D7: 3 unknown(s) remain |
+| Vaseline® Intensive Care™ Aloe Soothe Spray | Avoid (High Priority Swap) | ungradable | 7 | D7: 7 unknown(s) remain |
+| Vaseline® Intensive Care™ Cocoa Radiant Spray | Avoid (High Priority Swap) | ungradable | 7 | D7: 7 unknown(s) remain |
+| Vaseline® Lip Therapy® Original Stick | Avoid (High Priority Swap) | ungradable | 9 | D7: 9 unknown(s) remain |
+| Vaseline® Lip Therapy® Rosy Lips Stick | Avoid (High Priority Swap) | ungradable | 14 | D7: 14 unknown(s) remain |
+| Vaseline® Lip Therapy® Aloe Vera Stick | Avoid (High Priority Swap) | ungradable | 12 | D7: 12 unknown(s) remain |
+| Vaseline® Lip Therapy® Cocoa Butter Stick | Avoid (High Priority Swap) | ungradable | 14 | D7: 14 unknown(s) remain |
+| Vaseline® Lip Therapy® Rosy Lips Tin | Avoid (High Priority Swap) | ungradable | 2 | D7: 2 unknown(s) remain |
+| Vaseline® Baby Healing Jelly | (no tier: no ingredient text) | ungradable | 0 | no ingredient text: no tier before or now |
+| Sunlit Glow Body Shimmer Gel Oil | Avoid (High Priority Swap) | ungradable | 8 | D7: 8 unknown(s) remain |
+| Golden Hour Glow Bronze Body Shimmer Gel Oil | Avoid (High Priority Swap) | ungradable | 9 | D7: 9 unknown(s) remain |
+| Vaseline® Baby Healing Jelly Tube | (no tier: no ingredient text) | ungradable | 0 | no ingredient text: no tier before or now |
+| Vaseline® Original Healing Jelly™ Tube | (no tier: no ingredient text) | ungradable | 0 | no ingredient text: no tier before or now |
+| Vaseline® Baby Healing Jelly Stick | (no tier: no ingredient text) | ungradable | 0 | no ingredient text: no tier before or now |
+| Vaseline® Lip Therapy Arctic Mint Mini | (no tier: no ingredient text) | ungradable | 0 | no ingredient text: no tier before or now |
+| Vaseline® Lip Therapy Vanilla Swirl Mini | (no tier: no ingredient text) | ungradable | 0 | no ingredient text: no tier before or now |
+| Vaseline® Lip Therapy Berry Crush Mini | (no tier: no ingredient text) | ungradable | 0 | no ingredient text: no tier before or now |
+| Vaseline® Cherry Aura Hand Butter | (no tier: no ingredient text) | ungradable | 0 | no ingredient text: no tier before or now |
+| Vaseline® Cherry Aura Body Lotion | (no tier: no ingredient text) | ungradable | 0 | no ingredient text: no tier before or now |
+| Vaseline® Cherry Aura Whipped Body Cream | (no tier: no ingredient text) | ungradable | 0 | no ingredient text: no tier before or now |
+| Vaseline® Intensive Care™ Cocoa Radiant Gel Oil | Avoid (High Priority Swap) | ungradable | 2 | D7: 2 unknown(s) remain |
+| Vaseline Lip Therapy Pink Grapefruit Mini | (no tier: no ingredient text) | ungradable | 0 | no ingredient text: no tier before or now |
+| Vaseline Lip Therapy Pistachio Donut Mini | (no tier: no ingredient text) | ungradable | 0 | no ingredient text: no tier before or now |
+| Vaseline® Pro VitaB3 Supple & Soft Serum Burst Lotion | Avoid (High Priority Swap) | ungradable | 15 | D7: 15 unknown(s) remain |
+| Vaseline® Pro VitaB3 Luminous Glow Serum Burst Lotion | Avoid (High Priority Swap) | ungradable | 13 | D7: 13 unknown(s) remain |
+
+Products whose tier did not change: 0.
+
+### Hand-check (two products)
+
+- **Golden Hour Glow Bronze Body Shimmer Gel Oil (silica D1, iron D2).** Silica [1, 2] is flagged with no PFAS escalation of its own. The PFAS and heavy-metal escalations come from Iron Oxides (CI 77491) and (CI 77499), which is correct. Mica (CI 77019) is also flagged here, which is the known mica gap above. Stays ungradable with 9 unknowns.
+- **Vaseline Lip Therapy Cocoa Butter Stick (iron D2).** Iron Oxides [1, 2, 3] is flagged, with heavy-metal and PFAS escalations. Petrolatum [1], Butylene Glycol [1, 2] and Fragrance (no disclosure, [1, 2, 4, 8]) match the reference. Stays ungradable with 14 unknowns, including Octyldodecanol and Caprylic Triglyceride.
+
+### Unique unknown ingredients remaining (manual review queue)
+
+Each unknown is listed once, with the number of products it appears in. Counts are over all products, including ungradable ones.
+
+- Stearic Acid (16)
+- Theobroma Cacao (Cocoa) Seed Butter (10)
+- Glyceryl Stearate (8)
+- Helianthus Annuus (Sunflower) Seed Oil (8)
+- Tocopheryl Acetate (8)
+- Acrylates/C10-30 Alkyl Acrylate Crosspolymer (7)
+- Glycol Stearate (7)
+- Hexyl Cinnamal (7)
+- Butyrospermum Parkii (Shea) Butter (6)
+- Caprylic/Capric Triglyceride (6)
+- Caramel (6)
+- Disodium Edta (6)
+- Disodium EDTA (6)
+- Tapioca Starch (6)
+- Alpha-Isomethyl Ionone (5)
+- Copernicia Cerifera (Carnauba) Wax (5)
+- GLYCERYL STEARATE (5)
+- GLYCOL STEARATE (5)
+- HELIANTHUS ANNUUS (SUNFLOWER) SEED OIL (5)
+- Microcrystalline Wax (5)
+- Stearamide AMP (5)
+- STEARIC ACID (5)
+- C20-40 Alkyl Stearate (4)
+- DISODIUM EDTA (4)
+- Hydroxystearic Acid (4)
+- Isohexadecane (4)
+- Isopropyl Myristate (4)
+- Octyldodecanol (4)
+- Palmitoyl Tetrapeptide-7 (4)
+- Palmitoyl Tripeptide-1 (4)
+- Phaseolus Lunatus (Green Bean) Seed Extract (4)
+- Polyglyceryl-3 Distearate (4)
+- Ricinus Communis (Castor) Seed Oil (4)
+- Rutin (4)
+- Sodium Ascorbyl Phosphate (4)
+- STEARAMIDE AMP (4)
+- Yellow 5 Lake (4)
+- ACRYLATES/C10-30 ALKYL ACRYLATE CROSSPOLYMER (3)
+- Benzyl Salicylate (3)
+- Calcium Sodium Borosilicate (3)
+- Flavor (3)
+- HEXYL CINNAMAL (3)
+- Hydrogenated Styrene/Butadiene Copolymer (3)
+- ISOPROPYL MYRISTATE (3)
+- Isopropyl Palmitate (3)
+- MAGNESIUM ALUMINUM SILICATE (3)
+- TAPIOCA STARCH (3)
+- Ammonium Acryloyldimethyltaurate/Vp Copolymer (2)
+- Benzyl Benzoate (2)
+- Camellia Sinensis Leaf Extract (2)
+- CITRONELLOL (2)
+- Citronellol (2)
+- Cystine (2)
+- Glycine (2)
+- ISOPROPYL PALMITATE (2)
+- Magnesium Aluminum Silicate (2)
+- Polysorbate 80 (2)
+- Prunus Amygdalus Dulcis (Sweet Almond) Oil (2)
+- Sodium Acrylate/Sodium Acryloyldimethyl Taurate Copolymer (2)
+- Sodium Pca (2)
+- Sorbitan Isostearate (2)
+- Stearamide Amp (2)
+- Tin Oxide (CI 77861) (2)
+- Yellow 5 Lake (Ci 19140) (2)
+- Aloe Barbadensis Leaf Extract (1)
+- ALOE BARBADENSIS LEAF JUICE POWDER (1)
+- Aloe Barbadensis Leaf Juice Powder (1)
+- ALPHA-ISOMETHYL IONONE (1)
+- Ammonium Acryloyldimethyltaurate/VP Copolymer (1)
+- AVENA SATIVA (OAT) STRAW EXTRACT (1)
+- Avocado Fruit Extract (1)
+- Blue 1 (CI 42090) (1)
+- Butyrospermum Parkii Butter (1)
+- Calcium Aluminum Borosilicate (1)
+- Caprylic Triglyceride (1)
+- CARAMEL (1)
+- Carnauba Wax (1)
+- CI 19140 (1)
+- CINNAMYL ALCOHOL (1)
+- Cocoa Seed Butter (1)
+- Copernicia Cerifera (Camauba) Wax (1)
+- Dicaprylyl Ether (1)
+- Diisostearate (1)
+- Dimethiconol (1)
+- Disteareth-75 IPDI (1)
+- Ethylhexyl Cocoate (1)
+- Flavor (Aroma) (1)
+- Glyceryl Hydroxystearate (1)
+- Hydrogenated Didecene (1)
+- Hydrogenated Polydecene (1)
+- Hydrogenated Polyisobutene (1)
+- Isostearic Acid (1)
+- Jojoba Seed Oil (1)
+- LAVANDULA ANGUSTIFOLIA (LAVENDER) FLOWER EXTRACT (1)
+- Macadamia Integrifolia Seed Oil (1)
+- Maltodextrin (1)
+- Menthol (1)
+- Olea Europaea (Olive) Fruit Oil (1)
+- Ozokerite (1)
+- Persea Gratissima (Avocado) Oil (1)
+- Potato Starch Modified (1)
+- PROPYLP (1)
+- Red 30 (Ci 73360) (1)
+- Red 30 Lake (1)
+- Red 7 Lake (Ci 15850) (1)
+- Rose Flower Oil (1)
+- Rubus Idaeus (Raspberry) Fruit Extract (1)
+- Shea Butter (1)
+- Silica Dimethyl Silylate (1)
+- Simmondsia Chinensis (Jojoba) Seed Oil (1)
+- SODIUM HYDROXYPROPYL STARCH PHOSPHATE (1)
+- Sorbitan Monooleate (1)
+- THEOBROMA CACAO (COCOA) SEED BUTTER (1)
+- Theobroma Cacao Seed Butter (1)
+- Tin Oxide (Ci 77861) (1)
+- Vitis Vinifera (Grape) Seed Oil (1)
+- White Petrolatum Usp (1)
+- White Petrolatum USP (1)
+- Yellow 5 (CI 19140) (1)
+
+### Known limits found during the regrade (not changed; outside D1 to D7)
+
+- **Mica conditional not implemented.** The rubric says mica is not a concern unless it is the first or main ingredient. The grader flags Mica [1, 4] wherever it appears. Mica appears in three shimmer products (Cocoa Shimmer Jelly Stick, Sunlit Glow, Golden Hour Glow Bronze).
+- **`-nium` pattern false positive.** "Vaccinium" (the cranberry genus) matches the quat pattern. Flagged as [2] in Vaseline Lip Therapy Rosy Lips Stick. Partial flags only.
+- **Reference gap.** REF.txt has Polysorbate 20, 60, 80 and Nylon-12, which ref_compact.json does not. Those ingredients stay unknown. Resolving them would change partial flags on 10 products across the five brands and would make no product gradable.
+
+### Anomalies
+
+- **16 products have no ingredient text**, including the three Vanilla Comfort products, Radiant X Firm and Restore, three Baby Healing Jelly products, Original Healing Jelly Tube, the Cherry Aura trio, and five Lip Therapy minis (Arctic Mint, Vanilla Swirl, Berry Crush, Pink Grapefruit, Pistachio Donut). These are ungradable with no tier.
+- **"White Petrolatum USP" is unknown** in Vaseline Healing Jelly Original and Lip Therapy Advanced Healing Tube. The reference's Petrolatum entry is category 1. Under D4 these stay unknown, so each shows 0 partial flags and 1 unknown. If you decide this is an alias of Petrolatum, each product gains a Petrolatum [1] flag and a "carcinogen in leave-on" escalation. This is a decision for you.
+- **Silica Dimethyl Silylate** (Cocoa Shimmer Jelly Stick) is unknown (see the Eucerin note).
+- **Mica (CI 77019)** is flagged in three shimmer products. This is the known mica gap above.

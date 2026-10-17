@@ -1,0 +1,1214 @@
+{
+ "brand": "vaseline",
+ "tier_counts": {
+  "Puberty Safe": 0,
+  "Use Caution": 0,
+  "Avoid (Mild)": 0,
+  "Avoid (Moderate)": 0,
+  "Avoid (High Priority Swap)": 0,
+  "ungradable": 52
+ },
+ "rows": [
+  {
+   "product_name": "Vaseline® Vanilla Comfort Trial & Travel Lotion",
+   "tier": "ungradable",
+   "status": "ingredients not found"
+  },
+  {
+   "product_name": "Vaseline Vanilla Comfort Lotion",
+   "tier": "ungradable",
+   "status": "ingredients not found"
+  },
+  {
+   "product_name": "Vaseline® Vanilla Comfort Gel Oil",
+   "tier": "ungradable",
+   "status": "ingredients not found"
+  },
+  {
+   "product_name": "Vaseline® Radiant X Firm & Restore Body Lotion",
+   "tier": "ungradable",
+   "status": "ingredients not found"
+  },
+  {
+   "product_name": "Vaseline® Radiant X Even Tone Nourishing Body Lotion",
+   "tier": "ungradable",
+   "flag_count": 9,
+   "product_type": "leave-on skincare",
+   "flagged": [
+    "Dimethicone",
+    "Peg-100 Stearate",
+    "Petrolatum",
+    "Phenoxyethanol",
+    "Fragrance (Parfum)",
+    "Carbomer",
+    "Farnesol",
+    "Hydroxycitronellal",
+    "Linalool"
+   ],
+   "natural": [],
+   "unknown": [
+    "Stearic Acid",
+    "Caprylic/Capric Triglyceride",
+    "Glycol Stearate",
+    "Glyceryl Stearate",
+    "Copernicia Cerifera (Carnauba) Wax",
+    "Tapioca Starch",
+    "Acrylates/C10-30 Alkyl Acrylate Crosspolymer",
+    "Disodium Edta",
+    "Stearamide Amp",
+    "Hydroxystearic Acid",
+    "Sodium Ascorbyl Phosphate",
+    "Rutin",
+    "Palmitoyl Tripeptide-1",
+    "Palmitoyl Tetrapeptide-7",
+    "Phaseolus Lunatus (Green Bean) Seed Extract",
+    "Alpha-Isomethyl Ionone",
+    "Caramel"
+   ],
+   "esc": [
+    "PFAS",
+    "carcinogen in leave-on"
+   ],
+   "status": "needs review"
+  },
+  {
+   "product_name": "Vaseline® Radiant X Replenishing Hydrating Body Oil",
+   "tier": "ungradable",
+   "flag_count": 5,
+   "product_type": "leave-on skincare",
+   "flagged": [
+    "Mineral Oil",
+    "Fragrance (Parfum)",
+    "Farnesol",
+    "Hydroxycitronellal",
+    "Linalool"
+   ],
+   "natural": [],
+   "unknown": [
+    "Dicaprylyl Ether",
+    "Vitis Vinifera (Grape) Seed Oil",
+    "Stearic Acid",
+    "Simmondsia Chinensis (Jojoba) Seed Oil",
+    "Tocopheryl Acetate",
+    "Alpha-Isomethyl Ionone"
+   ],
+   "esc": [
+    "carcinogen in leave-on"
+   ],
+   "status": "needs review"
+  },
+  {
+   "product_name": "Vaseline® Radiant X Deep Nourishment Body Cream",
+   "tier": "ungradable",
+   "flag_count": 9,
+   "product_type": "leave-on skincare",
+   "flagged": [
+    "Dimethicone",
+    "Peg-100 Stearate",
+    "Petrolatum",
+    "Phenoxyethanol",
+    "Fragrance (Parfum)",
+    "Carbomer",
+    "Farnesol",
+    "Hydroxycitronellal",
+    "Linalool"
+   ],
+   "natural": [],
+   "unknown": [
+    "Stearic Acid",
+    "Caprylic/Capric Triglyceride",
+    "Glycol Stearate",
+    "Glyceryl Stearate",
+    "Copernicia Cerifera (Carnauba) Wax",
+    "Tapioca Starch",
+    "Acrylates/C10-30 Alkyl Acrylate Crosspolymer",
+    "Disodium Edta",
+    "Stearamide Amp",
+    "Hydroxystearic Acid",
+    "Sodium Ascorbyl Phosphate",
+    "Rutin",
+    "Palmitoyl Tripeptide-1",
+    "Palmitoyl Tetrapeptide-7",
+    "Phaseolus Lunatus (Green Bean) Seed Extract",
+    "Alpha-Isomethyl Ionone",
+    "Caramel"
+   ],
+   "esc": [
+    "PFAS",
+    "carcinogen in leave-on"
+   ],
+   "status": "needs review"
+  },
+  {
+   "product_name": "Vaseline® Radiant X Deep Nourishment Hand Butter",
+   "tier": "ungradable",
+   "flag_count": 10,
+   "product_type": "leave-on skincare",
+   "flagged": [
+    "Dimethicone",
+    "Petrolatum",
+    "Dimethicone Crosspolymer",
+    "Sodium Cetearyl Sulfate",
+    "Phenoxyethanol",
+    "Fragrance (Parfum)",
+    "Tetrasodium Edta",
+    "Farnesol",
+    "Hydroxycitronellal",
+    "Linalool"
+   ],
+   "natural": [],
+   "unknown": [
+    "Butyrospermum Parkii (Shea) Butter",
+    "Copernicia Cerifera (Carnauba) Wax",
+    "Isopropyl Myristate",
+    "Glyceryl Hydroxystearate",
+    "Hydroxystearic Acid",
+    "Ammonium Acryloyldimethyltaurate/Vp Copolymer",
+    "Stearic Acid",
+    "Sodium Ascorbyl Phosphate",
+    "Rutin",
+    "Palmitoyl Tripeptide-1",
+    "Palmitoyl Tetrapeptide-7",
+    "Phaseolus Lunatus (Green Bean) Seed Extract",
+    "Alpha-Isomethyl Ionone",
+    "Caramel"
+   ],
+   "esc": [
+    "PFAS",
+    "carcinogen in leave-on"
+   ],
+   "status": "needs review"
+  },
+  {
+   "product_name": "Vaseline® Intensive Care™ Hydra Replenish Hand Crème",
+   "tier": "ungradable",
+   "flag_count": 11,
+   "product_type": "leave-on skincare",
+   "flagged": [
+    "Dimethicone",
+    "Dipropylene Glycol",
+    "Ceteth-20",
+    "Phenoxyethanol",
+    "Petrolatum",
+    "Fragrance (Parfum)",
+    "Methylparaben",
+    "Carbomer",
+    "Propylparaben",
+    "Coumarin",
+    "Linalool"
+   ],
+   "natural": [],
+   "unknown": [
+    "Caprylic/Capric Triglyceride",
+    "Butyrospermum Parkii (Shea) Butter",
+    "Sodium Acrylate/Sodium Acryloyldimethyl Taurate Copolymer",
+    "Isohexadecane",
+    "Glyceryl Stearate",
+    "Polysorbate 80",
+    "Disodium Edta",
+    "Caramel",
+    "Theobroma Cacao (Cocoa) Seed Butter",
+    "Hydroxystearic Acid",
+    "Stearic Acid",
+    "Hexyl Cinnamal"
+   ],
+   "esc": [
+    "PFAS",
+    "carcinogen in leave-on"
+   ],
+   "status": "needs review"
+  },
+  {
+   "product_name": "Vaseline® Healing Jelly Original",
+   "tier": "ungradable",
+   "flag_count": 0,
+   "product_type": "leave-on skincare",
+   "flagged": [],
+   "natural": [],
+   "unknown": [
+    "White Petrolatum Usp"
+   ],
+   "esc": [],
+   "status": "needs review"
+  },
+  {
+   "product_name": "Vaseline® Healing Jelly Cocoa Butter",
+   "tier": "ungradable",
+   "flag_count": 2,
+   "product_type": "leave-on skincare",
+   "flagged": [
+    "Petrolatum",
+    "Fragrance"
+   ],
+   "natural": [],
+   "unknown": [
+    "Theobroma Cacao (Cocoa) Seed Butter"
+   ],
+   "esc": [
+    "carcinogen in leave-on"
+   ],
+   "status": "needs review"
+  },
+  {
+   "product_name": "Vaseline® Lip Therapy® Advanced Healing Tube",
+   "tier": "ungradable",
+   "flag_count": 0,
+   "product_type": "lip product",
+   "flagged": [],
+   "natural": [],
+   "unknown": [
+    "White Petrolatum USP"
+   ],
+   "esc": [],
+   "status": "needs review"
+  },
+  {
+   "product_name": "Vaseline® Cocoa Shimmer Jelly Stick",
+   "tier": "ungradable",
+   "flag_count": 8,
+   "product_type": "leave-on skincare",
+   "flagged": [
+    "Petrolatum",
+    "Paraffin",
+    "Polyethylene",
+    "Fragrance (Parfum)",
+    "Coumarin",
+    "Linalool",
+    "Iron Oxides (Ci 77499)",
+    "Mica (Ci 77019)"
+   ],
+   "natural": [],
+   "unknown": [
+    "Silica Dimethyl Silylate",
+    "Calcium Sodium Borosilicate",
+    "Theobroma Cacao (Cocoa) Seed Butter",
+    "Tocopheryl Acetate",
+    "Tin Oxide (Ci 77861)",
+    "Yellow 5 Lake (Ci 19140)"
+   ],
+   "esc": [
+    "heavy metals",
+    "PFAS",
+    "carcinogen in leave-on"
+   ],
+   "status": "needs review"
+  },
+  {
+   "product_name": "Vaseline® All-Over Body Balm Jelly Stick",
+   "tier": "ungradable",
+   "flag_count": 2,
+   "product_type": "leave-on skincare",
+   "flagged": [
+    "Petrolatum",
+    "Paraffin"
+   ],
+   "natural": [],
+   "unknown": [
+    "Ozokerite",
+    "Tocopheryl Acetate",
+    "Yellow 5 Lake (Ci 19140)"
+   ],
+   "esc": [
+    "carcinogen in leave-on"
+   ],
+   "status": "needs review"
+  },
+  {
+   "product_name": "Vaseline® Soothing Hydration Lotion",
+   "tier": "ungradable",
+   "flag_count": 9,
+   "product_type": "leave-on skincare",
+   "flagged": [
+    "PETROLATUM",
+    "TRIETHANOLAMINE",
+    "PHENOXYETHANOL",
+    "DIMETHICONE",
+    "METHYLPARABEN",
+    "CARBOMER",
+    "FRAGRANCE (PARFUM)",
+    "PROPYLPARABEN",
+    "LINALOOL"
+   ],
+   "natural": [],
+   "unknown": [
+    "STEARIC ACID",
+    "GLYCOL STEARATE",
+    "ISOPROPYL PALMITATE",
+    "ALOE BARBADENSIS LEAF JUICE POWDER",
+    "GLYCERYL STEARATE",
+    "TAPIOCA STARCH",
+    "DISODIUM EDTA",
+    "STEARAMIDE AMP",
+    "HELIANTHUS ANNUUS (SUNFLOWER) SEED OIL",
+    "HEXYL CINNAMAL"
+   ],
+   "esc": [
+    "PFAS",
+    "carcinogen in leave-on"
+   ],
+   "status": "needs review"
+  },
+  {
+   "product_name": "Vaseline® Cocoa Radiant® Lotion",
+   "tier": "ungradable",
+   "flag_count": 13,
+   "product_type": "leave-on skincare",
+   "flagged": [
+    "PETROLATUM",
+    "DIMETHICONE",
+    "BUTYLENE GLYCOL",
+    "PEG-100 STEARATE",
+    "PHENOXYETHANOL",
+    "FRAGRANCE (PARFUM)",
+    "METHYLPARABEN",
+    "PROPYLPARABEN",
+    "COUMARIN",
+    "GERANIOL",
+    "HYDROXYCITRONELLAL",
+    "LIMONENE",
+    "LINALOOL"
+   ],
+   "natural": [],
+   "unknown": [
+    "STEARIC ACID",
+    "GLYCOL STEARATE",
+    "ISOPROPYL MYRISTATE",
+    "SODIUM HYDROXYPROPYL STARCH PHOSPHATE",
+    "HELIANTHUS ANNUUS (SUNFLOWER) SEED OIL",
+    "THEOBROMA CACAO (COCOA) SEED BUTTER",
+    "GLYCERYL STEARATE",
+    "MAGNESIUM ALUMINUM SILICATE",
+    "STEARAMIDE AMP",
+    "DISODIUM EDTA",
+    "HEXYL CINNAMAL",
+    "CARAMEL"
+   ],
+   "esc": [
+    "PFAS",
+    "carcinogen in leave-on"
+   ],
+   "status": "needs review"
+  },
+  {
+   "product_name": "Vaseline® Nourishing Moisture Lotion",
+   "tier": "ungradable",
+   "flag_count": 12,
+   "product_type": "leave-on skincare",
+   "flagged": [
+    "DIMETHICONE",
+    "PEG-100 STEARATE",
+    "PETROLATUM",
+    "PHENOXYETHANOL",
+    "METHYLPARABEN",
+    "FRAGRANCE (PARFUM)",
+    "PROPYLPARABEN",
+    "AMYL CINNAMAL",
+    "COUMARIN",
+    "GERANIOL",
+    "LIMONENE",
+    "LINALOOL"
+   ],
+   "natural": [],
+   "unknown": [
+    "STEARIC ACID",
+    "ISOPROPYL MYRISTATE",
+    "AVENA SATIVA (OAT) STRAW EXTRACT",
+    "GLYCOL STEARATE",
+    "GLYCERYL STEARATE",
+    "TAPIOCA STARCH",
+    "MAGNESIUM ALUMINUM SILICATE",
+    "HELIANTHUS ANNUUS (SUNFLOWER) SEED OIL",
+    "ACRYLATES/C10-30 ALKYL ACRYLATE CROSSPOLYMER",
+    "DISODIUM EDTA",
+    "STEARAMIDE AMP",
+    "ALPHA-ISOMETHYL IONONE",
+    "CINNAMYL ALCOHOL",
+    "CITRONELLOL",
+    "HEXYL CINNAMAL"
+   ],
+   "esc": [
+    "PFAS",
+    "carcinogen in leave-on"
+   ],
+   "status": "needs review"
+  },
+  {
+   "product_name": "Vaseline® Calm Healing Lotion",
+   "tier": "ungradable",
+   "flag_count": 12,
+   "product_type": "leave-on skincare",
+   "flagged": [
+    "MINERAL OIL",
+    "DIMETHICONE",
+    "PEG-100 STEARATE",
+    "PETROLATUM",
+    "PHENOXYETHANOL",
+    "METHYLPARABEN",
+    "FRAGRANCE (PARFUM)",
+    "PROPYLPARABEN",
+    "COUMARIN",
+    "GERANIOL",
+    "LIMONENE",
+    "LINALOOL"
+   ],
+   "natural": [],
+   "unknown": [
+    "STEARIC ACID",
+    "ISOPROPYL MYRISTATE",
+    "GLYCERYL STEARATE",
+    "GLYCOL STEARATE",
+    "TAPIOCA STARCH",
+    "MAGNESIUM ALUMINUM SILICATE",
+    "ACRYLATES/C10-30 ALKYL ACRYLATE CROSSPOLYMER",
+    "DISODIUM EDTA",
+    "STEARAMIDE AMP",
+    "HELIANTHUS ANNUUS (SUNFLOWER) SEED OIL",
+    "LAVANDULA ANGUSTIFOLIA (LAVENDER) FLOWER EXTRACT",
+    "CITRONELLOL"
+   ],
+   "esc": [
+    "PFAS",
+    "carcinogen in leave-on"
+   ],
+   "status": "needs review"
+  },
+  {
+   "product_name": "Vaseline® Advanced Repair Unscented Lotion",
+   "tier": "ungradable",
+   "flag_count": 7,
+   "product_type": "leave-on skincare",
+   "flagged": [
+    "PEG-100 STEARATE",
+    "DIMETHICONE",
+    "MINERAL OIL",
+    "PETROLATUM",
+    "PHENOXYETHANOL",
+    "METHYLPARABEN",
+    "TRIETHANOLAMINE"
+   ],
+   "natural": [],
+   "unknown": [
+    "STEARIC ACID",
+    "ISOPROPYL PALMITATE",
+    "GLYCOL STEARATE",
+    "HELIANTHUS ANNUUS (SUNFLOWER) SEED OIL",
+    "GLYCERYL STEARATE",
+    "ACRYLATES/C10-30 ALKYL ACRYLATE CROSSPOLYMER",
+    "PROPYLP"
+   ],
+   "esc": [
+    "PFAS",
+    "carcinogen in leave-on"
+   ],
+   "status": "needs review"
+  },
+  {
+   "product_name": "Vaseline® Almond Smooth Lotion",
+   "tier": "ungradable",
+   "flag_count": 10,
+   "product_type": "leave-on skincare",
+   "flagged": [
+    "Petrolatum",
+    "Dimethicone",
+    "Triethanolamine",
+    "Phenoxyethanol",
+    "Fragrance (Parfum)",
+    "Methylparaben",
+    "Propylparaben",
+    "Coumarin",
+    "Limonene",
+    "Linalool"
+   ],
+   "natural": [],
+   "unknown": [
+    "Stearic Acid",
+    "Isopropyl Palmitate",
+    "Glycol Stearate",
+    "Glyceryl Stearate",
+    "Butyrospermum Parkii (Shea) Butter",
+    "Theobroma Cacao (Cocoa) Seed Butter",
+    "Magnesium Aluminum Silicate",
+    "Acrylates/C10-30 Alkyl Acrylate Crosspolymer",
+    "Prunus Amygdalus Dulcis (Sweet Almond) Oil",
+    "Disodium EDTA",
+    "Stearamide AMP",
+    "Helianthus Annuus (Sunflower) Seed Oil",
+    "Alpha-Isomethyl Ionone",
+    "Hexyl Cinnamal",
+    "Caramel"
+   ],
+   "esc": [
+    "PFAS",
+    "carcinogen in leave-on"
+   ],
+   "status": "needs review"
+  },
+  {
+   "product_name": "Vaseline® Men Cooling Hydration Lotion",
+   "tier": "ungradable",
+   "flag_count": 11,
+   "product_type": "leave-on skincare",
+   "flagged": [
+    "Petrolatum",
+    "Triethanolamine",
+    "Dimethicone",
+    "Phenoxyethanol",
+    "Methylparaben",
+    "Carbomer",
+    "Fragrance (Parfum)",
+    "Propylparaben",
+    "Eugenol",
+    "Limonene",
+    "Linalool"
+   ],
+   "natural": [],
+   "unknown": [
+    "Stearic Acid",
+    "Glycol Stearate",
+    "Isopropyl Palmitate",
+    "Glyceryl Stearate",
+    "Tapioca Starch",
+    "Disodium EDTA",
+    "Menthol",
+    "Stearamide AMP",
+    "Helianthus Annuus (Sunflower) Seed Oil",
+    "Benzyl Salicylate",
+    "Hexyl Cinnamal",
+    "Blue 1 (CI 42090)",
+    "Yellow 5 (CI 19140)"
+   ],
+   "esc": [
+    "PFAS",
+    "carcinogen in leave-on"
+   ],
+   "status": "needs review"
+  },
+  {
+   "product_name": "Vaseline® Intensive Care™ Cocoa Body Butter",
+   "tier": "ungradable",
+   "flag_count": 15,
+   "product_type": "leave-on skincare",
+   "flagged": [
+    "Petrolatum",
+    "Dimethicone",
+    "Cyclopentasiloxane",
+    "BHT",
+    "Cyclomethicone",
+    "Methylparaben",
+    "Paraffin",
+    "Parfum",
+    "PEG/PPG-20/15 Dimethicone",
+    "PEG-80",
+    "PEG-90",
+    "Phenoxyethanol",
+    "Propylparaben",
+    "Steareth-75",
+    "Triethanolamine"
+   ],
+   "natural": [],
+   "unknown": [
+    "Stearic Acid",
+    "Hydrogenated Polyisobutene",
+    "Ethylhexyl Cocoate",
+    "Glycol Stearate",
+    "Hydrogenated Didecene",
+    "Butyrospermum Parkii Butter",
+    "Caramel",
+    "Dimethiconol",
+    "Disodium EDTA",
+    "Disteareth-75 IPDI",
+    "Glyceryl Stearate",
+    "Hydrogenated Polydecene",
+    "Isohexadecane",
+    "Isostearic Acid",
+    "Maltodextrin",
+    "Microcrystalline Wax",
+    "Diisostearate",
+    "Polysorbate 80",
+    "Potato Starch Modified",
+    "Sodium Acrylate/Sodium Acryloyldimethyl Taurate Copolymer",
+    "Sorbitan Monooleate",
+    "Stearamide AMP",
+    "Theobroma Cacao Seed Butter",
+    "CI 19140"
+   ],
+   "esc": [
+    "PFAS",
+    "carcinogen in leave-on"
+   ],
+   "status": "needs review"
+  },
+  {
+   "product_name": "Vaseline® Men Fast Absorbing Lotion",
+   "tier": "ungradable",
+   "flag_count": 10,
+   "product_type": "leave-on skincare",
+   "flagged": [
+    "Mineral Oil (Huile Minérale)",
+    "Dimethicone",
+    "PEG-100 Stearate",
+    "Petrolatum",
+    "Phenoxyethanol",
+    "Fragrance (Parfum)",
+    "Methylparaben",
+    "Propylparaben",
+    "Limonene",
+    "Linalool"
+   ],
+   "natural": [],
+   "unknown": [
+    "Stearic Acid",
+    "Isopropyl Myristate",
+    "Glyceryl Stearate",
+    "Glycol Stearate",
+    "Tapioca Starch",
+    "Magnesium Aluminum Silicate",
+    "Acrylates/C10-30 Alkyl Acrylate Crosspolymer",
+    "Disodium EDTA",
+    "Stearamide AMP",
+    "Helianthus Annuus (Sunflower) Seed Oil"
+   ],
+   "esc": [
+    "PFAS",
+    "carcinogen in leave-on"
+   ],
+   "status": "needs review"
+  },
+  {
+   "product_name": "Vaseline® Men Extra Strength Lotion",
+   "tier": "ungradable",
+   "flag_count": 11,
+   "product_type": "leave-on skincare",
+   "flagged": [
+    "PEG-100 Stearate",
+    "Dimethicone",
+    "Mineral Oil (Huile Minérale)",
+    "Petrolatum",
+    "Phenoxyethanol",
+    "Methylparaben",
+    "Fragrance (Parfum)",
+    "Triethanolamine",
+    "Propylparaben",
+    "Limonene",
+    "Linalool"
+   ],
+   "natural": [],
+   "unknown": [
+    "Stearic Acid",
+    "Isopropyl Palmitate",
+    "Glycol Stearate",
+    "Glyceryl Stearate",
+    "Acrylates/C10-30 Alkyl Acrylate Crosspolymer",
+    "Stearamide AMP",
+    "Disodium EDTA",
+    "Helianthus Annuus (Sunflower) Seed Oil"
+   ],
+   "esc": [
+    "PFAS",
+    "carcinogen in leave-on"
+   ],
+   "status": "needs review"
+  },
+  {
+   "product_name": "Vaseline® Lip Therapy® Original Mini",
+   "tier": "ungradable",
+   "flag_count": 1,
+   "product_type": "lip product",
+   "flagged": [
+    "Petrolatum"
+   ],
+   "natural": [],
+   "unknown": [
+    "Yellow 5 Lake"
+   ],
+   "esc": [
+    "carcinogen in leave-on"
+   ],
+   "status": "needs review"
+  },
+  {
+   "product_name": "Vaseline® Lip Therapy® Rosy Mini",
+   "tier": "ungradable",
+   "flag_count": 1,
+   "product_type": "lip product",
+   "flagged": [
+    "Petrolatum"
+   ],
+   "natural": [],
+   "unknown": [
+    "Flavor",
+    "Red 30 Lake",
+    "Yellow 5 Lake"
+   ],
+   "esc": [
+    "carcinogen in leave-on"
+   ],
+   "status": "needs review"
+  },
+  {
+   "product_name": "Vaseline® Lip Therapy® Cocoa Butter Mini",
+   "tier": "ungradable",
+   "flag_count": 1,
+   "product_type": "lip product",
+   "flagged": [
+    "Petrolatum"
+   ],
+   "natural": [],
+   "unknown": [
+    "Flavor",
+    "Theobroma Cacao (Cocoa) Seed Butter",
+    "Yellow 5 Lake"
+   ],
+   "esc": [
+    "carcinogen in leave-on"
+   ],
+   "status": "needs review"
+  },
+  {
+   "product_name": "Vaseline® Lip Therapy® Crème Brûlée Mini",
+   "tier": "ungradable",
+   "flag_count": 1,
+   "product_type": "lip product",
+   "flagged": [
+    "Petrolatum"
+   ],
+   "natural": [],
+   "unknown": [
+    "Flavor",
+    "Theobroma Cacao (Cocoa) Seed Butter",
+    "Yellow 5 Lake"
+   ],
+   "esc": [
+    "carcinogen in leave-on"
+   ],
+   "status": "needs review"
+  },
+  {
+   "product_name": "Vaseline® Intensive Care™ Aloe Soothe Spray",
+   "tier": "ungradable",
+   "flag_count": 7,
+   "product_type": "leave-on skincare",
+   "flagged": [
+    "Dimethicone",
+    "Phenoxyethanol",
+    "Methylparaben",
+    "Fragrance (Parfum)",
+    "Carbomer",
+    "Propylparaben",
+    "Petrolatum"
+   ],
+   "natural": [],
+   "unknown": [
+    "Isopropyl Myristate",
+    "Sorbitan Isostearate",
+    "Tapioca Starch",
+    "Stearic Acid",
+    "Ammonium Acryloyldimethyltaurate/VP Copolymer",
+    "Disodium EDTA",
+    "Aloe Barbadensis Leaf Juice Powder"
+   ],
+   "esc": [
+    "PFAS",
+    "carcinogen in leave-on"
+   ],
+   "status": "needs review"
+  },
+  {
+   "product_name": "Vaseline® Intensive Care™ Cocoa Radiant Spray",
+   "tier": "ungradable",
+   "flag_count": 7,
+   "product_type": "leave-on skincare",
+   "flagged": [
+    "Dimethicone",
+    "Phenoxyethanol",
+    "Fragrance (Parfum)",
+    "Methylparaben",
+    "Carbomer",
+    "Propylparaben",
+    "Petrolatum"
+   ],
+   "natural": [],
+   "unknown": [
+    "Isopropyl Myristate",
+    "Sorbitan Isostearate",
+    "Tapioca Starch",
+    "Stearic Acid",
+    "Ammonium Acryloyldimethyltaurate/Vp Copolymer",
+    "Disodium Edta",
+    "Theobroma Cacao (Cocoa) Seed Butter"
+   ],
+   "esc": [
+    "PFAS",
+    "carcinogen in leave-on"
+   ],
+   "status": "needs review"
+  },
+  {
+   "product_name": "Vaseline® Lip Therapy® Original Stick",
+   "tier": "ungradable",
+   "flag_count": 1,
+   "product_type": "lip product",
+   "flagged": [
+    "Petrolatum"
+   ],
+   "natural": [],
+   "unknown": [
+    "Octyldodecanol",
+    "Microcrystalline Wax",
+    "Caprylic/Capric Triglyceride",
+    "Ricinus Communis (Castor) Seed Oil",
+    "Polyglyceryl-3 Distearate",
+    "Butyrospermum Parkii (Shea) Butter",
+    "Copernicia Cerifera (Carnauba) Wax",
+    "C20-40 Alkyl Stearate",
+    "Tocopheryl Acetate"
+   ],
+   "esc": [
+    "carcinogen in leave-on"
+   ],
+   "status": "needs review"
+  },
+  {
+   "product_name": "Vaseline® Lip Therapy® Rosy Lips Stick",
+   "tier": "ungradable",
+   "flag_count": 5,
+   "product_type": "lip product",
+   "flagged": [
+    "Petrolatum",
+    "Vaccinium Macrocarpon (Cranberry) Fruit Extract",
+    "Butylene Glycol",
+    "Fragrance",
+    "Iron Oxides (Ci 77491)"
+   ],
+   "natural": [],
+   "unknown": [
+    "Octyldodecanol",
+    "Microcrystalline Wax",
+    "Caprylic/Capric Triglyceride",
+    "Ricinus Communis (Castor) Seed Oil",
+    "Polyglyceryl-3 Distearate",
+    "Butyrospermum Parkii (Shea) Butter",
+    "Copernicia Cerifera (Camauba) Wax",
+    "C20-40 Alkyl Stearate",
+    "Tocopheryl Acetate",
+    "Rose Flower Oil",
+    "Olea Europaea (Olive) Fruit Oil",
+    "Prunus Amygdalus Dulcis (Sweet Almond) Oil",
+    "Rubus Idaeus (Raspberry) Fruit Extract",
+    "Red 7 Lake (Ci 15850)"
+   ],
+   "esc": [
+    "heavy metals",
+    "PFAS",
+    "carcinogen in leave-on"
+   ],
+   "status": "needs review"
+  },
+  {
+   "product_name": "Vaseline® Lip Therapy® Aloe Vera Stick",
+   "tier": "ungradable",
+   "flag_count": 4,
+   "product_type": "lip product",
+   "flagged": [
+    "Petrolatum",
+    "Butylene Glycol",
+    "Fragrance",
+    "Iron Oxides (Ci 77492)"
+   ],
+   "natural": [],
+   "unknown": [
+    "Octyldodecanol",
+    "Microcrystalline Wax",
+    "Caprylic/Capric Triglyceride",
+    "Ricinus Communis (Castor) Seed Oil",
+    "Polyglyceryl-3 Distearate",
+    "Butyrospermum Parkii (Shea) Butter",
+    "Copernicia Cerifera (Carnauba) Wax",
+    "C20-40 Alkyl Stearate",
+    "Tocopheryl Acetate",
+    "Persea Gratissima (Avocado) Oil",
+    "Camellia Sinensis Leaf Extract",
+    "Aloe Barbadensis Leaf Extract"
+   ],
+   "esc": [
+    "heavy metals",
+    "PFAS",
+    "carcinogen in leave-on"
+   ],
+   "status": "needs review"
+  },
+  {
+   "product_name": "Vaseline® Lip Therapy® Cocoa Butter Stick",
+   "tier": "ungradable",
+   "flag_count": 4,
+   "product_type": "lip product",
+   "flagged": [
+    "Petrolatum",
+    "Butylene Glycol",
+    "Fragrance",
+    "Iron Oxides"
+   ],
+   "natural": [],
+   "unknown": [
+    "Octyldodecanol",
+    "Microcrystalline Wax",
+    "Caprylic Triglyceride",
+    "Ricinus Communis (Castor) Seed Oil",
+    "Polyglyceryl-3 Distearate",
+    "Shea Butter",
+    "Cocoa Seed Butter",
+    "Carnauba Wax",
+    "C20-40 Alkyl Stearate",
+    "Tocopheryl Acetate",
+    "Jojoba Seed Oil",
+    "Camellia Sinensis Leaf Extract",
+    "Avocado Fruit Extract",
+    "Macadamia Integrifolia Seed Oil"
+   ],
+   "esc": [
+    "heavy metals",
+    "PFAS",
+    "carcinogen in leave-on"
+   ],
+   "status": "needs review"
+  },
+  {
+   "product_name": "Vaseline® Lip Therapy® Rosy Lips Tin",
+   "tier": "ungradable",
+   "flag_count": 1,
+   "product_type": "lip product",
+   "flagged": [
+    "Petrolatum"
+   ],
+   "natural": [],
+   "unknown": [
+    "Flavor (Aroma)",
+    "Red 30 (Ci 73360)"
+   ],
+   "esc": [
+    "carcinogen in leave-on"
+   ],
+   "status": "needs review"
+  },
+  {
+   "product_name": "Vaseline® Baby Healing Jelly",
+   "tier": "ungradable",
+   "status": "ingredients not found"
+  },
+  {
+   "product_name": "Sunlit Glow Body Shimmer Gel Oil",
+   "tier": "ungradable",
+   "flag_count": 7,
+   "product_type": "leave-on skincare",
+   "flagged": [
+    "Mineral Oil",
+    "Fragrance (Parfum)",
+    "Coumarin",
+    "Linalool",
+    "Silica",
+    "Mica (CI 77019)",
+    "Iron Oxides (CI 77491)"
+   ],
+   "natural": [],
+   "unknown": [
+    "Hydrogenated Styrene/Butadiene Copolymer",
+    "Helianthus Annuus (Sunflower) Seed Oil",
+    "Stearic Acid",
+    "Theobroma Cacao (Cocoa) Seed Butter",
+    "Calcium Sodium Borosilicate",
+    "Benzyl Benzoate",
+    "Hexyl Cinnamal",
+    "Tin Oxide (CI 77861)"
+   ],
+   "esc": [
+    "heavy metals",
+    "PFAS",
+    "carcinogen in leave-on"
+   ],
+   "status": "needs review"
+  },
+  {
+   "product_name": "Golden Hour Glow Bronze Body Shimmer Gel Oil",
+   "tier": "ungradable",
+   "flag_count": 8,
+   "product_type": "leave-on skincare",
+   "flagged": [
+    "Mineral Oil",
+    "Fragrance (Parfum)",
+    "Silica",
+    "Coumarin",
+    "Linalool",
+    "Mica (CI 77019)",
+    "Iron Oxides (CI 77491)",
+    "Iron Oxides (CI 77499)"
+   ],
+   "natural": [],
+   "unknown": [
+    "Hydrogenated Styrene/Butadiene Copolymer",
+    "Helianthus Annuus (Sunflower) Seed Oil",
+    "Stearic Acid",
+    "Theobroma Cacao (Cocoa) Seed Butter",
+    "Calcium Sodium Borosilicate",
+    "Calcium Aluminum Borosilicate",
+    "Benzyl Benzoate",
+    "Hexyl Cinnamal",
+    "Tin Oxide (CI 77861)"
+   ],
+   "esc": [
+    "heavy metals",
+    "PFAS",
+    "carcinogen in leave-on"
+   ],
+   "status": "needs review"
+  },
+  {
+   "product_name": "Vaseline® Baby Healing Jelly Tube",
+   "tier": "ungradable",
+   "status": "ingredients not found"
+  },
+  {
+   "product_name": "Vaseline® Original Healing Jelly™ Tube",
+   "tier": "ungradable",
+   "status": "ingredients not found"
+  },
+  {
+   "product_name": "Vaseline® Baby Healing Jelly Stick",
+   "tier": "ungradable",
+   "status": "ingredients not found"
+  },
+  {
+   "product_name": "Vaseline® Lip Therapy Arctic Mint Mini",
+   "tier": "ungradable",
+   "status": "ingredients not found"
+  },
+  {
+   "product_name": "Vaseline® Lip Therapy Vanilla Swirl Mini",
+   "tier": "ungradable",
+   "status": "ingredients not found"
+  },
+  {
+   "product_name": "Vaseline® Lip Therapy Berry Crush Mini",
+   "tier": "ungradable",
+   "status": "ingredients not found"
+  },
+  {
+   "product_name": "Vaseline® Cherry Aura Hand Butter",
+   "tier": "ungradable",
+   "status": "ingredients not found"
+  },
+  {
+   "product_name": "Vaseline® Cherry Aura Body Lotion",
+   "tier": "ungradable",
+   "status": "ingredients not found"
+  },
+  {
+   "product_name": "Vaseline® Cherry Aura Whipped Body Cream",
+   "tier": "ungradable",
+   "status": "ingredients not found"
+  },
+  {
+   "product_name": "Vaseline® Intensive Care™ Cocoa Radiant Gel Oil",
+   "tier": "ungradable",
+   "flag_count": 2,
+   "product_type": "leave-on skincare",
+   "flagged": [
+    "Mineral Oil",
+    "Fragrance"
+   ],
+   "natural": [],
+   "unknown": [
+    "Hydrogenated Styrene/Butadiene Copolymer",
+    "Theobroma Cacao (Cocoa) Seed Butter"
+   ],
+   "esc": [
+    "carcinogen in leave-on"
+   ],
+   "status": "needs review"
+  },
+  {
+   "product_name": "Vaseline Lip Therapy Pink Grapefruit Mini",
+   "tier": "ungradable",
+   "status": "ingredients not found"
+  },
+  {
+   "product_name": "Vaseline Lip Therapy Pistachio Donut Mini",
+   "tier": "ungradable",
+   "status": "ingredients not found"
+  },
+  {
+   "product_name": "Vaseline® Pro VitaB3 Supple & Soft Serum Burst Lotion",
+   "tier": "ungradable",
+   "flag_count": 8,
+   "product_type": "leave-on skincare",
+   "flagged": [
+    "Dimethicone",
+    "Carbomer",
+    "Phenoxyethanol",
+    "Fragrance (Parfum)",
+    "Petrolatum",
+    "Amyl Cinnamal",
+    "Limonene",
+    "Linalool"
+   ],
+   "natural": [],
+   "unknown": [
+    "Isohexadecane",
+    "Stearic Acid",
+    "Acrylates/C10-30 Alkyl Acrylate Crosspolymer",
+    "Disodium Edta",
+    "Helianthus Annuus (Sunflower) Seed Oil",
+    "Glycine",
+    "Sodium Pca",
+    "Cystine",
+    "Rutin",
+    "Palmitoyl Tripeptide-1",
+    "Palmitoyl Tetrapeptide-7",
+    "Phaseolus Lunatus (Green Bean) Seed Extract",
+    "Benzyl Salicylate",
+    "Citronellol",
+    "Hexyl Cinnamal"
+   ],
+   "esc": [
+    "PFAS",
+    "carcinogen in leave-on"
+   ],
+   "status": "needs review"
+  },
+  {
+   "product_name": "Vaseline® Pro VitaB3 Luminous Glow Serum Burst Lotion",
+   "tier": "ungradable",
+   "flag_count": 7,
+   "product_type": "leave-on skincare",
+   "flagged": [
+    "Dimethicone",
+    "Carbomer",
+    "Phenoxyethanol",
+    "Fragrance (Parfum)",
+    "Petrolatum",
+    "Limonene",
+    "Linalool"
+   ],
+   "natural": [],
+   "unknown": [
+    "Isohexadecane",
+    "Stearic Acid",
+    "Acrylates/C10-30 Alkyl Acrylate Crosspolymer",
+    "Disodium Edta",
+    "Helianthus Annuus (Sunflower) Seed Oil",
+    "Glycine",
+    "Sodium Pca",
+    "Cystine",
+    "Tocopheryl Acetate",
+    "Sodium Ascorbyl Phosphate",
+    "Benzyl Salicylate",
+    "Citronellol",
+    "Hexyl Cinnamal"
+   ],
+   "esc": [
+    "PFAS",
+    "carcinogen in leave-on"
+   ],
+   "status": "needs review"
+  }
+ ]
+}

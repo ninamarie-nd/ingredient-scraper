@@ -1,5 +1,7 @@
 # Eucerin Audit Log
 
+> **Regrade 2026-10-16 (unified grader, D1 to D7):** the per-product status and tier sections written before this regrade are superseded. The current grades are in the spreadsheet and in the Regrade section at the end of this log.
+
 > **Superseded 2026-10-16 20:47 (UTC-05:00).** The grading results, tier counts, grader notes and manual review queue in this log were replaced by the unified-grader regrade at the end of this file. Sourcing notes still apply.
 
 **Brand URL:** https://www.eucerinus.com/ (US site)
@@ -459,3 +461,242 @@ All three stay High Priority Swap. Each already had a PFAS-treated ingredient (s
 - `eucerin/eucerin_content_mining.md` (escalation counts and D2 wording updated; tier headline unchanged)
 - `eucerin/eucerin_audit_log.md` (this section)
 - Not modified: `eucerin_ingredients.json`, `ref_compact.json`, the reference PDF. Nothing was committed or pushed. No `__pycache__` was created.
+
+## Regrade 2026-10-16: unified grader, practitioner decisions D1 to D7
+
+**Provenance:** Every product was regraded from the verbatim text in `eucerin_ingredients.json` (unchanged). The grader is `_grader.py`, the same file in all five brand folders, and it writes `eucerin_audit.xlsx` and `_grade_summary.json`. The pre-regrade workbook is the git HEAD copy and was used only for the change table below.
+
+### Practitioner decisions as applied
+
+- **D1 Silica (plain "Silica" only).** Reference categories [1, 2] still count as a flag. The PFAS-treated escalation does not apply. A product that would otherwise grade Puberty Safe grades Use Caution. "Silica (hydrated)" is LOW TOX and is unchanged. "Silica Silylate" and "Trimethylsiloxysilicate" keep their PFAS tags. "Silica Dimethyl Silylate" is not in the reference and stays unknown under D4.
+- **D2 Iron oxides (CI 77491, CI 77492, CI 77499, plain "iron oxides").** Categories [1, 2, 3] per the reference. Category 3 triggers the heavy-metal escalation (minimum Avoid (Moderate)). The PFAS tag is kept. The plain "iron oxides" entry carries the PFAS tag because its reference note aliases it to the three CI entries.
+- **D3 Bisabolol.** Category 4 full flag. It is soft only when chamomile oil or extract is listed in the same product. No product in these five brands lists chamomile, so every bisabolol here is a full flag.
+- **D4 Not in reference = unknown.** Ceramide (including the NP, AP, NG and 3 variants) and coconut oil are LOW TOX and are not flagged. Lanolin alcohol and botanical oils not in the reference are unknown. No reference entries were edited or added.
+- **D5 Water** (Water, Aqua, Eau, and parenthetical forms such as "Water (Aqua)"). Clear: no flag, no unknown. Recorded in the explicit exception table in `_grader.py`.
+- **D6 Glycerin.** Caution ingredient: no flag, no unknown. A product that would otherwise grade Puberty Safe grades Use Caution; otherwise the other flags decide. Recorded in the same exception table. Glycerin is not in the reference.
+- **D7 Ungradable.** A product that still carries an unknown after D1 to D6 has tier `ungradable`, audit_status `needs review`, and its unknowns listed in audit_notes. A product with no ingredient text has tier `ungradable` and audit_status `ingredients not found`. flag_count and flagged_ingredients are still recorded. Ungradable is counted apart from the five tiers.
+
+### Grader changes (minimal)
+
+- One `_grader.py` in every brand folder. Its loader reads all three JSON layouts used by these brands: a `products` list, a `products` mapping, and a top-level mapping.
+- Product URL falls back to a `url` key (Lubriderm).
+- Added: the D5 and D6 exception table, the Use Caution floor for silica and glycerin, the `ungradable` tier with its status rules, and a separate ungradable count.
+- No other grading rule was changed. The reference was not edited.
+
+### Result
+
+- Products: 48. Puberty Safe 0, Use Caution 1, Avoid (Mild) 2, Avoid (Moderate) 0, Avoid (High Priority Swap) 0.
+- **Ungradable: 45 (counted separately from the five tiers).** 45 with unresolved ingredients under D4, 0 with no ingredient text.
+- Moved from a graded tier to ungradable: 45. Moved from no tier to ungradable (no ingredient text): 0.
+- Pre-regrade distribution (git HEAD): Avoid (High Priority Swap) 32, Puberty Safe 8, Avoid (Moderate) 3, Use Caution 3, Avoid (Mild) 2.
+- Unique unknown ingredients remaining: 133.
+
+### Products that changed tier
+
+Pre-regrade tier from git HEAD, current tier from this regrade. "Unknowns left" is the number of distinct unknown ingredients still unresolved for that product.
+
+| Product | Before | Now | Unknowns left | Reason |
+|---|---|---|---|---|
+| Advanced Repair Cream, 16 OZ | Avoid (High Priority Swap) | ungradable | 17 | D7: 17 unknown(s) remain |
+| Advanced Repair Lotion | Avoid (High Priority Swap) | ungradable | 25 | D7: 25 unknown(s) remain |
+| Advanced Repair Hand Cream | Avoid (High Priority Swap) | ungradable | 17 | D7: 17 unknown(s) remain |
+| Eucerin Advanced Cleansing Body and Face Wash | Avoid (Moderate) | ungradable | 5 | D7: 5 unknown(s) remain |
+| Advanced Repair Cream, 8 OZ | Avoid (High Priority Swap) | ungradable | 17 | D7: 17 unknown(s) remain |
+| Dark Spot Corrector Body Cream | Avoid (High Priority Swap) | ungradable | 15 | D7: 15 unknown(s) remain |
+| Dual Serum | Avoid (High Priority Swap) | ungradable | 17 | D7: 17 unknown(s) remain |
+| Eye Cream | Avoid (High Priority Swap) | ungradable | 13 | D7: 13 unknown(s) remain |
+| Dark Spot Corrector Body Lotion | Avoid (High Priority Swap) | ungradable | 11 | D7: 11 unknown(s) remain |
+| Daily Lotion SPF 30 | Avoid (High Priority Swap) | ungradable | 11 | D7: 11 unknown(s) remain |
+| Night Cream | Avoid (High Priority Swap) | ungradable | 12 | D7: 12 unknown(s) remain |
+| Cleansing Gel | Use Caution | ungradable | 7 | D7: 7 unknown(s) remain |
+| Gel-Cream | Avoid (High Priority Swap) | ungradable | 10 | D7: 10 unknown(s) remain |
+| Moisture Boost Serum | Avoid (High Priority Swap) | ungradable | 1 | D7: 1 unknown(s) remain |
+| Hydrating Cleansing Gel, 13.5 FL OZ | Puberty Safe | ungradable | 5 | D7: 5 unknown(s) remain |
+| Hydrating Cleansing Gel, 6.8 FL OZ | Puberty Safe | ungradable | 5 | D7: 5 unknown(s) remain |
+| Intensive Repair Lotion | Avoid (High Priority Swap) | ungradable | 10 | D7: 10 unknown(s) remain |
+| Q10 Revitalize Night Cream | Puberty Safe | ungradable | 1 | D7: 1 unknown(s) remain |
+| Q10 Revitalize Daily Cream | Puberty Safe | ungradable | 2 | D7: 2 unknown(s) remain |
+| Advanced Hydration After Sun Lotion | Puberty Safe | ungradable | 2 | D7: 2 unknown(s) remain |
+| Sensitive Mineral SPF 50 Sunscreen | Avoid (High Priority Swap) | ungradable | 8 | D7: 8 unknown(s) remain |
+| Advanced Hydration Ultra-Light SPF 50 Face Sunscreen | Avoid (High Priority Swap) | ungradable | 12 | D7: 12 unknown(s) remain |
+| Advanced Hydration SPF 50 Sunscreen Spray | Avoid (High Priority Swap) | ungradable | 10 | D7: 10 unknown(s) remain |
+| Advanced Hydration SPF 50 Sunscreen | Avoid (High Priority Swap) | ungradable | 9 | D7: 9 unknown(s) remain |
+| Baby Sensitive Mineral SPF 50 Sunscreen Lotion | Avoid (High Priority Swap) | ungradable | 8 | D7: 8 unknown(s) remain |
+| Clear Skin SPF 50 Face Sunscreen | Avoid (High Priority Swap) | ungradable | 18 | D7: 18 unknown(s) remain |
+| Age Defense SPF 50 Face Sunscreen | Avoid (High Priority Swap) | ungradable | 18 | D7: 18 unknown(s) remain |
+| Tinted Sensitive Mineral SPF 35 Face Sunscreen | Avoid (High Priority Swap) | ungradable | 14 | D7: 14 unknown(s) remain |
+| Tinted Age Defense SPF 50 Face Sunscreen | Avoid (High Priority Swap) | ungradable | 19 | D7: 19 unknown(s) remain |
+| Roughness Relief Cream | Avoid (High Priority Swap) | ungradable | 16 | D7: 16 unknown(s) remain |
+| Roughness Relief Lotion | Avoid (High Priority Swap) | ungradable | 22 | D7: 22 unknown(s) remain |
+| Eczema Relief Cream & Body Wash | Avoid (Moderate) | ungradable | 14 | D7: 14 unknown(s) remain |
+| Eczema Relief Cream | Avoid (High Priority Swap) | ungradable | 7 | D7: 7 unknown(s) remain |
+| Eucerin Eczema Relief Hydrogel | Use Caution | ungradable | 7 | D7: 7 unknown(s) remain |
+| Eczema Relief Flare-Up Treatment | Avoid (High Priority Swap) | ungradable | 9 | D7: 9 unknown(s) remain |
+| Itch Relief Intensive Calming Lotion | Avoid (High Priority Swap) | ungradable | 15 | D7: 15 unknown(s) remain |
+| Skin Calming Lotion | Avoid (High Priority Swap) | ungradable | 7 | D7: 7 unknown(s) remain |
+| Skin Calming Cream | Avoid (High Priority Swap) | ungradable | 7 | D7: 7 unknown(s) remain |
+| Daily Hydration Lotion | Puberty Safe | ungradable | 1 | D7: 1 unknown(s) remain |
+| Original Healing Rich Cream 16 oz. Jar | Avoid (High Priority Swap) | ungradable | 3 | D7: 3 unknown(s) remain |
+| Original Healing Lotion | Avoid (High Priority Swap) | ungradable | 5 | D7: 5 unknown(s) remain |
+| Eucerin Baby Eczema Relief Hydrogel | Puberty Safe | ungradable | 1 | D7: 1 unknown(s) remain |
+| Baby Eczema Relief Cream & Body Wash | Avoid (Moderate) | ungradable | 14 | D7: 14 unknown(s) remain |
+| Baby Eczema Relief Cream | Avoid (High Priority Swap) | ungradable | 7 | D7: 7 unknown(s) remain |
+| Baby Lotion | Puberty Safe | ungradable | 1 | D7: 1 unknown(s) remain |
+
+Products whose tier did not change: 3.
+
+### Hand-check (two products)
+
+- **Daily Lotion SPF 30 (silica, D1).** Silica [1, 2] is flagged. The PFAS escalation is absent for silica. The escalation list shows "carcinogen in leave-on" only, which is correct. Phenoxyethanol and Ethylhexylglycerin match the reference rows, and Alcohol Denat is flagged by the alcohol-denat pattern. The product stays ungradable because of unknowns such as Glyceryl Stearate and Butylene Glycol Dicaprylate/Dicaprate.
+- **Eye Cream (iron oxides, D2).** Iron Oxides [1, 2, 3] is flagged. Heavy metals and PFAS escalate, which is correct. Synthetic Fluorphlogopite [1, 2] and Ethylhexylglycerin [4, 5] match the reference. The product stays ungradable because of unknowns such as Caprylic/Capric Triglyceride and Isopropyl Palmitate.
+- Confirmed separately: the PFAS escalation on the SPF 50 face sunscreens (Clear Skin, Age Defense) comes from Dimethicone, which the reference marks PFAS treated. It does not come from silica.
+
+### Unique unknown ingredients remaining (manual review queue)
+
+Each unknown is listed once, with the number of products it appears in. Counts are over all products, including ungradable ones.
+
+- Glycyrrhiza Inflata Root Extract (17)
+- Caprylic/Capric Triglyceride (15)
+- Glyceryl Stearate (13)
+- Octyldodecanol (13)
+- C12-15 Alkyl Benzoate (12)
+- Isopropyl Palmitate (12)
+- Hydroxyacetophenone (10)
+- Lactic Acid (10)
+- Sodium Ascorbyl Phosphate (9)
+- Alanine (8)
+- Carnitine (8)
+- Glycyrrhetinic Acid (8)
+- Sodium PCA (8)
+- Trisodium EDTA (8)
+- Colloidal Oatmeal (7)
+- Disodium EDTA (7)
+- Distarch Phosphate (7)
+- Sodium Stearoyl Glutamate (7)
+- Acrylates/C10-30 Alkyl Acrylate Crosspolymer (6)
+- Butyrospermum Parkii (Shea) Butter (6)
+- Glycine (6)
+- Isobutylamido Thiazolyl Resorcinol (6)
+- Piroctone Olamine (6)
+- Sodium Hydroxide (6)
+- Sodium Lactate (6)
+- Tapioca Starch (6)
+- Urea (6)
+- Arginine HCl (5)
+- Cetearyl Isononanoate (5)
+- Dibutyl Adipate (5)
+- Hydrogenated Coco-Glycerides (5)
+- Silica Dimethyl Silylate (5)
+- Butylene Glycol Dicaprylate/Dicaprate (4)
+- Cholesterol (4)
+- Copernicia Cerifera (Carnauba) Wax (4)
+- Diisopropyl Adipate (4)
+- Diisostearoyl Polyglyceryl-3 Dimer Dilinoleate (4)
+- Glyceryl Behenate (4)
+- Glyceryl Glucoside (4)
+- Helianthus Annuus (Sunflower) Seed Oil (4)
+- Methylpropanediol (4)
+- Polyglyceryl-6 Behenate (4)
+- Polyglyceryl-6 Octastearate (4)
+- Sodium Cocoamphoacetate (4)
+- Bis-Octyldodecyl Dimer Dilinoleate/Propanediol Copolymer (3)
+- Carrageenan (3)
+- Coco-Betaine (3)
+- Dehydroxanthan Gum (3)
+- Dicaprylyl Ether (3)
+- Ethylcellulose (3)
+- Ethylhexyl Methoxycrylene (3)
+- Ethylhexyl Pelargonate (3)
+- Gellan Gum (3)
+- L-Carnitine (3)
+- Lauryl Glucoside (3)
+- Pantolactone (3)
+- Polyester-27 (3)
+- Polyglyceryl-6 Stearate (3)
+- Ricinus Communis (Castor) Seed Oil (3)
+- Triethoxycaprylylsilane (3)
+- Aloe Barbadensis Leaf Juice (2)
+- Arginine HCI (2)
+- Arginine HCL (2)
+- Citrulline (2)
+- Coco Glucoside (2)
+- Cocoglycerides (2)
+- colloidal oatmeal (2)
+- Glucosylrutin (2)
+- Glutamic Acid (2)
+- Glyceryl Stearate Citrate (2)
+- Glycine Soja (Soybean) Oil (2)
+- Glycogen (2)
+- Histidine HCL (2)
+- Hydrogenated Cocoglycerides (2)
+- Hydroxypropyl Starch Phosphate (2)
+- Isoquercitrin (2)
+- Lanolin Alcohol (2)
+- Lysine HCL (2)
+- Mannitol (2)
+- Menthoxypropanediol (2)
+- Neopentyl Glycol Diheptanoate (2)
+- Polyglyceryl-2 Caprate (2)
+- Polyglyceryl-4 Diisostearate/Polyhydroxystearate/Sebacate (2)
+- Q10 (2)
+- Serine (2)
+- Sucrose (2)
+- Threonine (2)
+- Triisostearin (2)
+- 4-t-butylcyclohexanol (1)
+- Arachidic Acid (1)
+- Butyl Adipate (1)
+- Butylene Glycol Dicaprylate/ Dicaprate (1)
+- butyrospermum parkii (shea) butter (1)
+- caprylic/capric triglyceride (1)
+- Ceresin (1)
+- Chondrus Crispus (Carrageenan) (1)
+- Dexpanthenol (1)
+- Diammonium Citrate (1)
+- Dimethiconol (1)
+- Dimethyl Ether (1)
+- Ethylhexyl Cocoate (1)
+- glyceryl glucoside (1)
+- Glycolic Acid (1)
+- helianthus annuus (sunflower) seed oil (1)
+- Hydrogenated Castor Oil (1)
+- Hydroxypropyl Methylcellulose (1)
+- Isopropyl Stearate (1)
+- Jojoba Esters (1)
+- l-6 Stearate (1)
+- Licochalcone A (1)
+- Menthol (1)
+- Methoxy PEG-22/Dodecyl Glycol Copolymer (1)
+- Myristic Acid (1)
+- NATURAL MOISTURIZING FACTORS (1)
+- Nylon-12 (1)
+- Ozokerite (1)
+- Palmitic Acid (1)
+- Phytosphingosine (1)
+- Pimpinella Anisum (Anise) Fruit Extract (1)
+- Polyglyceryl-6 Polyricinoleate (1)
+- Propylheptyl Caprylate (1)
+- Shea Butter (1)
+- Simmondsia Chinensis (Jojoba) Seed Oil (1)
+- Sodium Acetate (1)
+- sodium lactate (1)
+- Sodium Polyacrylate (1)
+- Sodium Salicylate (1)
+- Sorbitan Isostearate (1)
+- Sorbitol (1)
+- Squalene (1)
+- Stearic Acid (1)
+- Tin Oxide (1)
+- Tocopheryl Acetate (1)
+
+### Known limits found during the regrade (not changed; outside D1 to D7)
+
+- **Mica conditional not implemented.** The rubric says mica is not a concern unless it is the first or main ingredient. The grader flags Mica [1, 4] wherever it appears. Mica appears in no product in this brand.
+- **`-nium` pattern false positive.** "Vaccinium" (the cranberry genus) matches the quat pattern. It is flagged as [2] in Vaseline Lip Therapy Rosy Lips Stick. Partial flags only.
+- **Reference gap.** REF.txt has Polysorbate 20, 60 and 80 and Nylon-12, which ref_compact.json does not. Those ingredients stay unknown. Resolving them would change partial flags on 10 products across the five brands and would make no product gradable.
+
+### Anomalies
+
+- **The three graded Eucerin products rest on partial ingredient text.** Advanced Hydration SPF 30 Sunscreen Spray has only four actives in its verbatim (Avobenzone, Homosalate, Octisalate, Octocrylene). Daily Hydration Lotion with Broad Spectrum SPF 15 has only "Octisalate (3.5)". Baby Wash and Shampoo has three ingredients. Their audit_status is `needs review` and their notes say "Unresolved". Their tiers are provisional and should not be published until the full INCI list is captured.
+- **Silica Dimethyl Silylate** (5 products) is not in the reference. It is a different INCI name from "Silica Silylate" (PFAS treated). It stays unknown under D4. A practitioner decision would change five ungradable products.
+- Eleven products carry `needs review` from the earlier scrape. This regrade keeps that status.

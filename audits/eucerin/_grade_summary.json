@@ -1,16 +1,17 @@
 {
  "brand": "eucerin",
  "tier_counts": {
-  "Puberty Safe": 8,
-  "Use Caution": 3,
+  "Puberty Safe": 0,
+  "Use Caution": 1,
   "Avoid (Mild)": 2,
-  "Avoid (Moderate)": 3,
-  "Avoid (High Priority Swap)": 32
+  "Avoid (Moderate)": 0,
+  "Avoid (High Priority Swap)": 0,
+  "ungradable": 45
  },
  "rows": [
   {
    "product_name": "Advanced Repair Cream, 16 OZ",
-   "tier": "Avoid (High Priority Swap)",
+   "tier": "ungradable",
    "flag_count": 5,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -22,8 +23,6 @@
    ],
    "natural": [],
    "unknown": [
-    "Water",
-    "Glycerin",
     "Urea",
     "Hydrogenated Cocoglycerides",
     "Octyldodecanol",
@@ -46,11 +45,11 @@
     "PFAS",
     "carcinogen in leave-on"
    ],
-   "status": "complete"
+   "status": "needs review"
   },
   {
    "product_name": "Advanced Repair Lotion",
-   "tier": "Avoid (High Priority Swap)",
+   "tier": "ungradable",
    "flag_count": 4,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -61,8 +60,6 @@
    ],
    "natural": [],
    "unknown": [
-    "Water",
-    "Glycerin",
     "glyceryl glucoside",
     "sodium lactate",
     "butyrospermum parkii (shea) butter",
@@ -97,7 +94,7 @@
   },
   {
    "product_name": "Advanced Repair Hand Cream",
-   "tier": "Avoid (High Priority Swap)",
+   "tier": "ungradable",
    "flag_count": 5,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -110,8 +107,6 @@
    "natural": [],
    "unknown": [
     "NATURAL MOISTURIZING FACTORS",
-    "Water",
-    "Glycerin",
     "Urea",
     "Glyceryl Stearate",
     "Hydrogenated Coco-Glycerides",
@@ -133,11 +128,11 @@
     "PFAS",
     "carcinogen in leave-on"
    ],
-   "status": "complete"
+   "status": "needs review"
   },
   {
    "product_name": "Eucerin Advanced Cleansing Body and Face Wash",
-   "tier": "Avoid (Moderate)",
+   "tier": "ungradable",
    "flag_count": 5,
    "product_type": "rinse-off skincare",
    "flagged": [
@@ -149,20 +144,18 @@
    ],
    "natural": [],
    "unknown": [
-    "Water",
     "Sodium Cocoamphoacetate",
     "Lauryl Glucoside",
-    "Glycerin",
     "Diammonium Citrate",
     "Sodium Acetate",
     "Sodium Salicylate"
    ],
    "esc": [],
-   "status": "complete"
+   "status": "needs review"
   },
   {
    "product_name": "Advanced Repair Cream, 8 OZ",
-   "tier": "Avoid (High Priority Swap)",
+   "tier": "ungradable",
    "flag_count": 5,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -174,8 +167,6 @@
    ],
    "natural": [],
    "unknown": [
-    "Water",
-    "Glycerin",
     "Urea",
     "Hydrogenated Coco-Glycerides",
     "Octyldodecanol",
@@ -198,11 +189,11 @@
     "PFAS",
     "carcinogen in leave-on"
    ],
-   "status": "complete"
+   "status": "needs review"
   },
   {
    "product_name": "Dark Spot Corrector Body Cream",
-   "tier": "Avoid (High Priority Swap)",
+   "tier": "ungradable",
    "flag_count": 4,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -213,8 +204,6 @@
    ],
    "natural": [],
    "unknown": [
-    "Water",
-    "Glycerin",
     "Diisopropyl Adipate",
     "Caprylic/Capric Triglyceride",
     "Glyceryl Stearate Citrate",
@@ -234,11 +223,11 @@
    "esc": [
     "carcinogen in leave-on"
    ],
-   "status": "complete"
+   "status": "needs review"
   },
   {
    "product_name": "Dual Serum",
-   "tier": "Avoid (High Priority Swap)",
+   "tier": "ungradable",
    "flag_count": 6,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -251,8 +240,6 @@
    ],
    "natural": [],
    "unknown": [
-    "Water",
-    "Glycerin",
     "Isopropyl Palmitate",
     "Cetearyl Isononanoate",
     "Diisopropyl Adipate",
@@ -275,11 +262,11 @@
     "PFAS",
     "carcinogen in leave-on"
    ],
-   "status": "complete"
+   "status": "needs review"
   },
   {
    "product_name": "Eye Cream",
-   "tier": "Avoid (High Priority Swap)",
+   "tier": "ungradable",
    "flag_count": 5,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -291,8 +278,6 @@
    ],
    "natural": [],
    "unknown": [
-    "Water",
-    "Glycerin",
     "Caprylic/Capric Triglyceride",
     "Cocoglycerides",
     "Isopropyl Palmitate",
@@ -312,11 +297,11 @@
     "PFAS",
     "carcinogen in leave-on"
    ],
-   "status": "complete"
+   "status": "needs review"
   },
   {
    "product_name": "Dark Spot Corrector Body Lotion",
-   "tier": "Avoid (High Priority Swap)",
+   "tier": "ungradable",
    "flag_count": 4,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -327,8 +312,6 @@
    ],
    "natural": [],
    "unknown": [
-    "Water",
-    "Glycerin",
     "Diisopropyl Adipate",
     "Butylene Glycol Dicaprylate/ Dicaprate",
     "C12-15 Alkyl Benzoate",
@@ -344,11 +327,11 @@
    "esc": [
     "carcinogen in leave-on"
    ],
-   "status": "complete"
+   "status": "needs review"
   },
   {
    "product_name": "Daily Lotion SPF 30",
-   "tier": "Avoid (High Priority Swap)",
+   "tier": "ungradable",
    "flag_count": 9,
    "product_type": "sunscreen",
    "flagged": [
@@ -364,8 +347,6 @@
    ],
    "natural": [],
    "unknown": [
-    "Water",
-    "Glycerin",
     "Glyceryl Stearate",
     "Butylene Glycol Dicaprylate/Dicaprate",
     "C12-15 Alkyl Benzoate",
@@ -381,11 +362,11 @@
    "esc": [
     "carcinogen in leave-on"
    ],
-   "status": "complete"
+   "status": "needs review"
   },
   {
    "product_name": "Night Cream",
-   "tier": "Avoid (High Priority Swap)",
+   "tier": "ungradable",
    "flag_count": 3,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -395,8 +376,6 @@
    ],
    "natural": [],
    "unknown": [
-    "Water",
-    "Glycerin",
     "Butyrospermum Parkii (Shea) Butter",
     "Cetearyl Isononanoate",
     "Isopropyl Palmitate",
@@ -413,11 +392,11 @@
    "esc": [
     "carcinogen in leave-on"
    ],
-   "status": "complete"
+   "status": "needs review"
   },
   {
    "product_name": "Cleansing Gel",
-   "tier": "Use Caution",
+   "tier": "ungradable",
    "flag_count": 1,
    "product_type": "rinse-off skincare",
    "flagged": [
@@ -425,9 +404,7 @@
    ],
    "natural": [],
    "unknown": [
-    "Water",
     "Sodium Cocoamphoacetate",
-    "Glycerin",
     "Coco-Betaine",
     "Lactic Acid",
     "Dehydroxanthan Gum",
@@ -436,11 +413,11 @@
     "Sodium Hydroxide"
    ],
    "esc": [],
-   "status": "complete"
+   "status": "needs review"
   },
   {
    "product_name": "Gel-Cream",
-   "tier": "Avoid (High Priority Swap)",
+   "tier": "ungradable",
    "flag_count": 3,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -450,8 +427,6 @@
    ],
    "natural": [],
    "unknown": [
-    "Water",
-    "Glycerin",
     "Distarch Phosphate",
     "Cetearyl Isononanoate",
     "Isopropyl Palmitate",
@@ -466,11 +441,11 @@
    "esc": [
     "carcinogen in leave-on"
    ],
-   "status": "complete"
+   "status": "needs review"
   },
   {
    "product_name": "Moisture Boost Serum",
-   "tier": "Avoid (High Priority Swap)",
+   "tier": "ungradable",
    "flag_count": 4,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -481,25 +456,21 @@
    ],
    "natural": [],
    "unknown": [
-    "Water",
-    "Glycerin",
     "Sodium Ascorbyl Phosphate"
    ],
    "esc": [
     "carcinogen in leave-on"
    ],
-   "status": "complete"
+   "status": "needs review"
   },
   {
    "product_name": "Hydrating Cleansing Gel, 13.5 FL OZ",
-   "tier": "Puberty Safe",
+   "tier": "ungradable",
    "flag_count": 0,
    "product_type": "rinse-off skincare",
    "flagged": [],
    "natural": [],
    "unknown": [
-    "Water",
-    "Glycerin",
     "Coco-Betaine",
     "Coco Glucoside",
     "Glyceryl Glucoside",
@@ -507,18 +478,16 @@
     "Trisodium EDTA"
    ],
    "esc": [],
-   "status": "complete"
+   "status": "needs review"
   },
   {
    "product_name": "Hydrating Cleansing Gel, 6.8 FL OZ",
-   "tier": "Puberty Safe",
+   "tier": "ungradable",
    "flag_count": 0,
    "product_type": "rinse-off skincare",
    "flagged": [],
    "natural": [],
    "unknown": [
-    "Water",
-    "Glycerin",
     "Coco-Betaine",
     "Coco Glucoside",
     "Glyceryl Glucoside",
@@ -526,11 +495,11 @@
     "Trisodium EDTA"
    ],
    "esc": [],
-   "status": "complete"
+   "status": "needs review"
   },
   {
    "product_name": "Intensive Repair Lotion",
-   "tier": "Avoid (High Priority Swap)",
+   "tier": "ungradable",
    "flag_count": 5,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -542,13 +511,11 @@
    ],
    "natural": [],
    "unknown": [
-    "Water",
     "Octyldodecanol",
     "Caprylic/Capric Triglyceride",
     "Isopropyl Palmitate",
     "Sodium Lactate",
     "Urea",
-    "Glycerin",
     "Methoxy PEG-22/Dodecyl Glycol Copolymer",
     "Lactic Acid",
     "Ozokerite",
@@ -563,7 +530,7 @@
   },
   {
    "product_name": "Q10 Revitalize Night Cream",
-   "tier": "Puberty Safe",
+   "tier": "ungradable",
    "flag_count": 0,
    "product_type": "leave-on skincare",
    "flagged": [],
@@ -576,7 +543,7 @@
   },
   {
    "product_name": "Q10 Revitalize Daily Cream",
-   "tier": "Puberty Safe",
+   "tier": "ungradable",
    "flag_count": 0,
    "product_type": "leave-on skincare",
    "flagged": [],
@@ -590,7 +557,7 @@
   },
   {
    "product_name": "Advanced Hydration After Sun Lotion",
-   "tier": "Puberty Safe",
+   "tier": "ungradable",
    "flag_count": 0,
    "product_type": "leave-on skincare",
    "flagged": [],
@@ -604,7 +571,7 @@
   },
   {
    "product_name": "Sensitive Mineral SPF 50 Sunscreen",
-   "tier": "Avoid (High Priority Swap)",
+   "tier": "ungradable",
    "flag_count": 7,
    "product_type": "sunscreen",
    "flagged": [
@@ -618,7 +585,6 @@
    ],
    "natural": [],
    "unknown": [
-    "Water",
     "C12-15 Alkyl Benzoate",
     "Isopropyl Palmitate",
     "Ethylhexyl Pelargonate",
@@ -632,11 +598,11 @@
     "PFAS",
     "carcinogen in leave-on"
    ],
-   "status": "complete"
+   "status": "needs review"
   },
   {
    "product_name": "Advanced Hydration Ultra-Light SPF 50 Face Sunscreen",
-   "tier": "Avoid (High Priority Swap)",
+   "tier": "ungradable",
    "flag_count": 8,
    "product_type": "sunscreen",
    "flagged": [
@@ -652,7 +618,6 @@
    "natural": [],
    "unknown": [
     "l-6 Stearate",
-    "Glycerin",
     "Silica Dimethyl Silylate",
     "Tapioca Starch",
     "Glycyrrhetinic Acid",
@@ -668,11 +633,11 @@
    "esc": [
     "carcinogen in leave-on"
    ],
-   "status": "complete"
+   "status": "needs review"
   },
   {
    "product_name": "Advanced Hydration SPF 50 Sunscreen Spray",
-   "tier": "Avoid (High Priority Swap)",
+   "tier": "ungradable",
    "flag_count": 10,
    "product_type": "sunscreen",
    "flagged": [
@@ -689,7 +654,6 @@
    ],
    "natural": [],
    "unknown": [
-    "Water",
     "Dimethyl Ether",
     "C12-15 Alkyl Benzoate",
     "Neopentyl Glycol Diheptanoate",
@@ -705,11 +669,11 @@
     "PFAS",
     "carcinogen in leave-on"
    ],
-   "status": "complete"
+   "status": "needs review"
   },
   {
    "product_name": "Advanced Hydration SPF 50 Sunscreen",
-   "tier": "Avoid (High Priority Swap)",
+   "tier": "ungradable",
    "flag_count": 10,
    "product_type": "sunscreen",
    "flagged": [
@@ -726,7 +690,6 @@
    ],
    "natural": [],
    "unknown": [
-    "Water",
     "C12-15 Alkyl Benzoate",
     "Neopentyl Glycol Diheptanoate",
     "Glycyrrhiza Inflata Root Extract",
@@ -741,11 +704,11 @@
     "PFAS",
     "carcinogen in leave-on"
    ],
-   "status": "complete"
+   "status": "needs review"
   },
   {
    "product_name": "Baby Sensitive Mineral SPF 50 Sunscreen Lotion",
-   "tier": "Avoid (High Priority Swap)",
+   "tier": "ungradable",
    "flag_count": 7,
    "product_type": "sunscreen",
    "flagged": [
@@ -759,7 +722,6 @@
    ],
    "natural": [],
    "unknown": [
-    "Water",
     "C12-15 Alkyl Benzoate",
     "Isopropyl Palmitate",
     "Ethylhexyl Pelargonate",
@@ -773,11 +735,11 @@
     "PFAS",
     "carcinogen in leave-on"
    ],
-   "status": "complete"
+   "status": "needs review"
   },
   {
    "product_name": "Clear Skin SPF 50 Face Sunscreen",
-   "tier": "Avoid (High Priority Swap)",
+   "tier": "ungradable",
    "flag_count": 11,
    "product_type": "sunscreen",
    "flagged": [
@@ -795,7 +757,6 @@
    ],
    "natural": [],
    "unknown": [
-    "Water",
     "C12-15 Alkyl Benzoate",
     "Polyglyceryl-6 Stearate",
     "Sodium Stearoyl Glutamate",
@@ -810,7 +771,6 @@
     "Ethylcellulose",
     "Glyceryl Behenate",
     "Polyglyceryl-6 Octastearate",
-    "Glycerin",
     "Disodium EDTA",
     "Hydroxyacetophenone",
     "Polyglyceryl-6 Behenate",
@@ -820,11 +780,11 @@
     "PFAS",
     "carcinogen in leave-on"
    ],
-   "status": "complete"
+   "status": "needs review"
   },
   {
    "product_name": "Age Defense SPF 50 Face Sunscreen",
-   "tier": "Avoid (High Priority Swap)",
+   "tier": "ungradable",
    "flag_count": 11,
    "product_type": "sunscreen",
    "flagged": [
@@ -842,7 +802,6 @@
    ],
    "natural": [],
    "unknown": [
-    "Water",
     "C12-15 Alkyl Benzoate",
     "Polyglyceryl-6 Stearate",
     "Sodium Stearoyl Glutamate",
@@ -857,7 +816,6 @@
     "Glyceryl Behenate",
     "L-Carnitine",
     "Polyglyceryl-6 Octastearate",
-    "Glycerin",
     "Disodium EDTA",
     "Hydroxyacetophenone",
     "Polyglyceryl-6 Behenate",
@@ -867,11 +825,11 @@
     "PFAS",
     "carcinogen in leave-on"
    ],
-   "status": "complete"
+   "status": "needs review"
   },
   {
    "product_name": "Tinted Sensitive Mineral SPF 35 Face Sunscreen",
-   "tier": "Avoid (High Priority Swap)",
+   "tier": "ungradable",
    "flag_count": 10,
    "product_type": "sunscreen",
    "flagged": [
@@ -888,7 +846,6 @@
    ],
    "natural": [],
    "unknown": [
-    "Water",
     "C12-15 Alkyl Benzoate",
     "Isopropyl Palmitate",
     "Ethylhexyl Pelargonate",
@@ -909,11 +866,11 @@
     "PFAS",
     "carcinogen in leave-on"
    ],
-   "status": "complete"
+   "status": "needs review"
   },
   {
    "product_name": "Tinted Age Defense SPF 50 Face Sunscreen",
-   "tier": "Avoid (High Priority Swap)",
+   "tier": "ungradable",
    "flag_count": 13,
    "product_type": "sunscreen",
    "flagged": [
@@ -933,7 +890,6 @@
    ],
    "natural": [],
    "unknown": [
-    "Water",
     "C12-15 Alkyl Benzoate",
     "Polyglyceryl-6 Stearate",
     "Sodium Stearoyl Glutamate",
@@ -950,7 +906,6 @@
     "Ethylcellulose",
     "Glyceryl Behenate",
     "Polyglyceryl-6 Octastearate",
-    "Glycerin",
     "Polyglyceryl-6 Behenate",
     "Sodium Polyacrylate",
     "Disodium EDTA"
@@ -960,7 +915,7 @@
     "PFAS",
     "carcinogen in leave-on"
    ],
-   "status": "complete"
+   "status": "needs review"
   },
   {
    "product_name": "Advanced Hydration SPF 30 Sunscreen Spray",
@@ -980,7 +935,7 @@
   },
   {
    "product_name": "Roughness Relief Cream",
-   "tier": "Avoid (High Priority Swap)",
+   "tier": "ungradable",
    "flag_count": 4,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -991,9 +946,7 @@
    ],
    "natural": [],
    "unknown": [
-    "Water",
     "Urea",
-    "Glycerin",
     "Caprylic/Capric Triglyceride",
     "Glyceryl Stearate",
     "Octyldodecanol",
@@ -1014,11 +967,11 @@
     "PFAS",
     "carcinogen in leave-on"
    ],
-   "status": "complete"
+   "status": "needs review"
   },
   {
    "product_name": "Roughness Relief Lotion",
-   "tier": "Avoid (High Priority Swap)",
+   "tier": "ungradable",
    "flag_count": 2,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -1027,9 +980,7 @@
    ],
    "natural": [],
    "unknown": [
-    "Water",
     "Urea",
-    "Glycerin",
     "Isopropyl Stearate",
     "Dicaprylyl Ether",
     "Glyceryl Glucoside",
@@ -1055,11 +1006,11 @@
    "esc": [
     "carcinogen in leave-on"
    ],
-   "status": "complete"
+   "status": "needs review"
   },
   {
    "product_name": "Eczema Relief Cream & Body Wash",
-   "tier": "Avoid (Moderate)",
+   "tier": "ungradable",
    "flag_count": 5,
    "product_type": "rinse-off skincare",
    "flagged": [
@@ -1072,9 +1023,7 @@
    "natural": [],
    "unknown": [
     "colloidal oatmeal",
-    "Water",
     "Isopropyl Palmitate",
-    "Glycerin",
     "Sodium Cocoamphoacetate",
     "Caprylic/Capric Triglyceride",
     "Octyldodecanol",
@@ -1089,11 +1038,11 @@
     "Sodium Hydroxide"
    ],
    "esc": [],
-   "status": "complete"
+   "status": "needs review"
   },
   {
    "product_name": "Eczema Relief Cream",
-   "tier": "Avoid (High Priority Swap)",
+   "tier": "ungradable",
    "flag_count": 5,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -1106,8 +1055,6 @@
    "natural": [],
    "unknown": [
     "Colloidal Oatmeal",
-    "Water",
-    "Glycerin",
     "Ricinus Communis (Castor) Seed Oil",
     "Glyceryl Stearate",
     "Caprylic/Capric Triglyceride",
@@ -1118,11 +1065,11 @@
    "esc": [
     "carcinogen in leave-on"
    ],
-   "status": "complete"
+   "status": "needs review"
   },
   {
    "product_name": "Eucerin Eczema Relief Hydrogel",
-   "tier": "Use Caution",
+   "tier": "ungradable",
    "flag_count": 1,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -1131,8 +1078,6 @@
    "natural": [],
    "unknown": [
     "Colloidal Oatmeal",
-    "Water",
-    "Glycerin",
     "Octyldodecanol",
     "Caprylic/Capric Triglyceride",
     "Glycyrrhiza Inflata Root Extract",
@@ -1141,11 +1086,11 @@
     "Hydroxyacetophenone"
    ],
    "esc": [],
-   "status": "complete"
+   "status": "needs review"
   },
   {
    "product_name": "Eczema Relief Flare-Up Treatment",
-   "tier": "Avoid (High Priority Swap)",
+   "tier": "ungradable",
    "flag_count": 7,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -1160,8 +1105,6 @@
    "natural": [],
    "unknown": [
     "Colloidal Oatmeal",
-    "Water",
-    "Glycerin",
     "Ricinus Communis (Castor) Seed Oil",
     "Caprylic/Capric Triglyceride",
     "Octyldodecanol",
@@ -1174,11 +1117,11 @@
    "esc": [
     "carcinogen in leave-on"
    ],
-   "status": "complete"
+   "status": "needs review"
   },
   {
    "product_name": "Itch Relief Intensive Calming Lotion",
-   "tier": "Avoid (High Priority Swap)",
+   "tier": "ungradable",
    "flag_count": 7,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -1193,8 +1136,6 @@
    "natural": [],
    "unknown": [
     "Menthol",
-    "Water",
-    "Glycerin",
     "Hydrogenated Coco-Glycerides",
     "Isopropyl Palmitate",
     "Triisostearin",
@@ -1214,11 +1155,11 @@
     "PFAS",
     "carcinogen in leave-on"
    ],
-   "status": "complete"
+   "status": "needs review"
   },
   {
    "product_name": "Skin Calming Lotion",
-   "tier": "Avoid (High Priority Swap)",
+   "tier": "ungradable",
    "flag_count": 7,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -1232,8 +1173,6 @@
    ],
    "natural": [],
    "unknown": [
-    "Water",
-    "Glycerin",
     "caprylic/capric triglyceride",
     "Octyldodecanol",
     "Glyceryl Stearate",
@@ -1246,11 +1185,11 @@
     "PFAS",
     "carcinogen in leave-on"
    ],
-   "status": "complete"
+   "status": "needs review"
   },
   {
    "product_name": "Skin Calming Cream",
-   "tier": "Avoid (High Priority Swap)",
+   "tier": "ungradable",
    "flag_count": 7,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -1264,8 +1203,6 @@
    ],
    "natural": [],
    "unknown": [
-    "Water",
-    "Glycerin",
     "Caprylic/Capric Triglyceride",
     "Octyldodecanol",
     "Glyceryl Stearate",
@@ -1278,7 +1215,7 @@
     "PFAS",
     "carcinogen in leave-on"
    ],
-   "status": "complete"
+   "status": "needs review"
   },
   {
    "product_name": "Daily Hydration Lotion with Broad Spectrum SPF 15",
@@ -1295,7 +1232,7 @@
   },
   {
    "product_name": "Daily Hydration Lotion",
-   "tier": "Puberty Safe",
+   "tier": "ungradable",
    "flag_count": 0,
    "product_type": "leave-on skincare",
    "flagged": [],
@@ -1308,7 +1245,7 @@
   },
   {
    "product_name": "Original Healing Rich Cream 16 oz. Jar",
-   "tier": "Avoid (High Priority Swap)",
+   "tier": "ungradable",
    "flag_count": 3,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -1318,7 +1255,6 @@
    ],
    "natural": [],
    "unknown": [
-    "Water",
     "Ceresin",
     "Lanolin Alcohol",
     "Piroctone Olamine"
@@ -1326,11 +1262,11 @@
    "esc": [
     "carcinogen in leave-on"
    ],
-   "status": "complete"
+   "status": "needs review"
   },
   {
    "product_name": "Original Healing Lotion",
-   "tier": "Avoid (High Priority Swap)",
+   "tier": "ungradable",
    "flag_count": 4,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -1341,7 +1277,6 @@
    ],
    "natural": [],
    "unknown": [
-    "Water",
     "Isopropyl Palmitate",
     "Sorbitol",
     "Diisostearoyl Polyglyceryl-3 Dimer Dilinoleate",
@@ -1352,26 +1287,24 @@
     "heavy metals",
     "carcinogen in leave-on"
    ],
-   "status": "complete"
+   "status": "needs review"
   },
   {
    "product_name": "Eucerin Baby Eczema Relief Hydrogel",
-   "tier": "Puberty Safe",
+   "tier": "ungradable",
    "flag_count": 0,
    "product_type": "leave-on skincare",
    "flagged": [],
    "natural": [],
    "unknown": [
-    "Colloidal Oatmeal",
-    "Water",
-    "Glycerin"
+    "Colloidal Oatmeal"
    ],
    "esc": [],
    "status": "needs review"
   },
   {
    "product_name": "Baby Eczema Relief Cream & Body Wash",
-   "tier": "Avoid (Moderate)",
+   "tier": "ungradable",
    "flag_count": 5,
    "product_type": "rinse-off skincare",
    "flagged": [
@@ -1384,9 +1317,7 @@
    "natural": [],
    "unknown": [
     "colloidal oatmeal",
-    "Water",
     "Isopropyl Palmitate",
-    "Glycerin",
     "Sodium Cocoamphoacetate",
     "Caprylic/Capric Triglyceride",
     "Octyldodecanol",
@@ -1401,7 +1332,7 @@
     "Sodium Hydroxide"
    ],
    "esc": [],
-   "status": "complete"
+   "status": "needs review"
   },
   {
    "product_name": "Baby Wash and Shampoo",
@@ -1412,15 +1343,13 @@
     "Sodium Myreth Sulfate"
    ],
    "natural": [],
-   "unknown": [
-    "Water"
-   ],
+   "unknown": [],
    "esc": [],
    "status": "needs review"
   },
   {
    "product_name": "Baby Eczema Relief Cream",
-   "tier": "Avoid (High Priority Swap)",
+   "tier": "ungradable",
    "flag_count": 5,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -1433,8 +1362,6 @@
    "natural": [],
    "unknown": [
     "Colloidal Oatmeal",
-    "Water",
-    "Glycerin",
     "Ricinus Communis (Castor) Seed Oil",
     "Glyceryl Stearate",
     "Caprylic/Capric Triglyceride",
@@ -1445,11 +1372,11 @@
    "esc": [
     "carcinogen in leave-on"
    ],
-   "status": "complete"
+   "status": "needs review"
   },
   {
    "product_name": "Baby Lotion",
-   "tier": "Puberty Safe",
+   "tier": "ungradable",
    "flag_count": 0,
    "product_type": "leave-on skincare",
    "flagged": [],

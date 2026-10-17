@@ -1,5 +1,7 @@
 # Aquaphor Audit Log
 
+> **Regrade 2026-10-16 (unified grader, D1 to D7):** the per-product status and tier sections written before this regrade are superseded. The current grades are in the spreadsheet and in the Regrade section at the end of this log.
+
 > **Superseded 2026-10-16 20:47 (UTC-05:00).** The grading results, tier counts, grader notes and manual review queue in this log were replaced by the unified-grader regrade at the end of this file. Sourcing notes still apply.
 
 **Brand URL:** https://www.aquaphorus.com/ (brand product names and partial lists)
@@ -374,3 +376,154 @@ The shared `_grader.py` was changed for the iron-oxide revert, and this brand wa
 - `aquaphor/aquaphor_content_mining.md` (date line updated; tier headline unchanged)
 - `aquaphor/aquaphor_audit_log.md` (this section)
 - Not modified: `aquaphor_ingredients.json`, `aquaphor_catalog.json`, `ref_compact.json`, the reference PDF. Nothing was committed or pushed. No `__pycache__` was created.
+
+## Regrade 2026-10-16: unified grader, practitioner decisions D1 to D7
+
+**Provenance:** Every product was regraded from the verbatim text in `aquaphor_ingredients.json` (unchanged). The grader is `_grader.py`, the same file in all five brand folders, and it writes `aquaphor_audit.xlsx` and `_grade_summary.json`. The pre-regrade workbook is the git HEAD copy and was used only for the change table below.
+
+### Practitioner decisions as applied
+
+- **D1 Silica (plain "Silica" only).** Reference categories [1, 2] still count as a flag. The PFAS-treated escalation does not apply. A product that would otherwise grade Puberty Safe grades Use Caution. "Silica (hydrated)" is LOW TOX and is unchanged. "Silica Silylate" and "Trimethylsiloxysilicate" keep their PFAS tags. "Silica Dimethyl Silylate" is not in the reference and stays unknown under D4.
+- **D2 Iron oxides (CI 77491, CI 77492, CI 77499, plain "iron oxides").** Categories [1, 2, 3] per the reference. Category 3 triggers the heavy-metal escalation (minimum Avoid (Moderate)). The PFAS tag is kept. The plain "iron oxides" entry carries the PFAS tag because its reference note aliases it to the three CI entries.
+- **D3 Bisabolol.** Category 4 full flag. It is soft only when chamomile oil or extract is listed in the same product. No product in these five brands lists chamomile, so every bisabolol here is a full flag.
+- **D4 Not in reference = unknown.** Ceramide (including the NP, AP, NG and 3 variants) and coconut oil are LOW TOX and are not flagged. Lanolin alcohol and botanical oils not in the reference are unknown. No reference entries were edited or added.
+- **D5 Water** (Water, Aqua, Eau, and parenthetical forms such as "Water (Aqua)"). Clear: no flag, no unknown. Recorded in the explicit exception table in `_grader.py`.
+- **D6 Glycerin.** Caution ingredient: no flag, no unknown. A product that would otherwise grade Puberty Safe grades Use Caution; otherwise the other flags decide. Recorded in the same exception table. Glycerin is not in the reference.
+- **D7 Ungradable.** A product that still carries an unknown after D1 to D6 has tier `ungradable`, audit_status `needs review`, and its unknowns listed in audit_notes. A product with no ingredient text has tier `ungradable` and audit_status `ingredients not found`. flag_count and flagged_ingredients are still recorded. Ungradable is counted apart from the five tiers.
+
+### Grader changes (minimal)
+
+- One `_grader.py` in every brand folder. Its loader reads all three JSON layouts used by these brands: a `products` list, a `products` mapping, and a top-level mapping.
+- Product URL falls back to a `url` key (Lubriderm).
+- Added: the D5 and D6 exception table, the Use Caution floor for silica and glycerin, the `ungradable` tier with its status rules, and a separate ungradable count.
+- No other grading rule was changed. The reference was not edited.
+
+### Result
+
+- Products: 41. Puberty Safe 0, Use Caution 0, Avoid (Mild) 0, Avoid (Moderate) 0, Avoid (High Priority Swap) 0.
+- **Ungradable: 41 (counted separately from the five tiers).** 38 with unresolved ingredients under D4, 3 with no ingredient text.
+- Moved from a graded tier to ungradable: 38. Moved from no tier to ungradable (no ingredient text): 3.
+- Pre-regrade distribution (git HEAD): Avoid (High Priority Swap) 31, Puberty Safe 3, (none) 3, Use Caution 2, Avoid (Moderate) 2.
+- Unique unknown ingredients remaining: 48.
+
+### Products that changed tier
+
+Pre-regrade tier from git HEAD, current tier from this regrade. "Unknowns left" is the number of distinct unknown ingredients still unresolved for that product.
+
+| Product | Before | Now | Unknowns left | Reason |
+|---|---|---|---|---|
+| Aquaphor® Moisturizing Cream (8oz.) | Avoid (High Priority Swap) | ungradable | 12 | D7: 12 unknown(s) remain |
+| Aquaphor® Hydrating Daily Lotion (3oz.) | Avoid (High Priority Swap) | ungradable | 8 | D7: 8 unknown(s) remain |
+| Aquaphor® Hydrating Daily Lotion (8oz.) | Avoid (High Priority Swap) | ungradable | 8 | D7: 8 unknown(s) remain |
+| Aquaphor® Hydrating Daily Lotion (16oz.) | Avoid (High Priority Swap) | ungradable | 8 | D7: 8 unknown(s) remain |
+| Aquaphor® Moisturizing Cream (1.89oz.) | Avoid (High Priority Swap) | ungradable | 8 | D7: 8 unknown(s) remain |
+| Aquaphor® Moisturizing Cream (16oz.) | Avoid (High Priority Swap) | ungradable | 12 | D7: 12 unknown(s) remain |
+| Aquaphor® Lip Repair Stick Naturally Inspired Aloe Vera Single Pack | Puberty Safe | ungradable | 11 | D7: 11 unknown(s) remain |
+| Aquaphor® Lip Repair Stick Naturally Inspired Coconut Single Pack | Puberty Safe | ungradable | 9 | D7: 9 unknown(s) remain |
+| Aquaphor® Baby Healing Ointment (7oz.) | Avoid (High Priority Swap) | ungradable | 2 | D7: 2 unknown(s) remain |
+| Aquaphor® Diaper Rash Paste (3.5oz.) | Puberty Safe | ungradable | 5 | D7: 5 unknown(s) remain |
+| Aquaphor® Lip Repair Stick | Avoid (High Priority Swap) | ungradable | 9 | D7: 9 unknown(s) remain |
+| Aquaphor® Lip Repair Stick + Sunscreen | Avoid (High Priority Swap) | ungradable | 11 | D7: 11 unknown(s) remain |
+| Aquaphor® Lip Protectant + SPF (Dual Pack) | Avoid (High Priority Swap) | ungradable | 9 | D7: 9 unknown(s) remain |
+| Aquaphor® Lip Repair Stick + Sunscreen (Dual Pack) | Avoid (High Priority Swap) | ungradable | 11 | D7: 11 unknown(s) remain |
+| Aquaphor® Children's Healing Ointment (14oz.) | Avoid (High Priority Swap) | ungradable | 2 | D7: 2 unknown(s) remain |
+| Aquaphor® Lip Repair | Use Caution | ungradable | 14 | D7: 14 unknown(s) remain |
+| Aquaphor® Lip Repair Stick (Dual Pack) | Avoid (High Priority Swap) | ungradable | 9 | D7: 9 unknown(s) remain |
+| Aquaphor® Baby Healing Balm Stick (0.65oz.) | Avoid (High Priority Swap) | ungradable | 4 | D7: 4 unknown(s) remain |
+| Aquaphor® Baby Wash & Shampoo (25.4oz.) | Avoid (Moderate) | ungradable | 1 | D7: 1 unknown(s) remain |
+| Aquaphor Baby Sensitive Lotion, Baby Lotion, 3 Fl Oz | Avoid (High Priority Swap) | ungradable | 8 | D7: 8 unknown(s) remain |
+| Aquaphor Baby Sensitive Lotion, Baby Lotion, 8 Fl Oz | Avoid (High Priority Swap) | ungradable | 8 | D7: 8 unknown(s) remain |
+| Aquaphor® Baby Healing Ointment (3oz.) | Avoid (High Priority Swap) | ungradable | 2 | D7: 2 unknown(s) remain |
+| Aquaphor® Baby Healing Ointment (14oz.) | Avoid (High Priority Swap) | ungradable | 2 | D7: 2 unknown(s) remain |
+| Aquaphor® Diaper Rash Cream (3oz.) | (no tier: no ingredient text) | ungradable | 0 | no ingredient text: no tier before or now |
+| Aquaphor® Lip Protectant + SPF 30 | Avoid (High Priority Swap) | ungradable | 9 | D7: 9 unknown(s) remain |
+| Aquaphor® Lip Repair (Dual Pack) | Use Caution | ungradable | 11 | D7: 11 unknown(s) remain |
+| Aquaphor® Baby Healing Ointment (2x.35oz.) | Avoid (High Priority Swap) | ungradable | 2 | D7: 2 unknown(s) remain |
+| Aquaphor® Baby Healing Ointment (1.75oz.) | Avoid (High Priority Swap) | ungradable | 2 | D7: 2 unknown(s) remain |
+| Aquaphor® Baby Wash & Shampoo (16.9 fl.oz) | Avoid (Moderate) | ungradable | 1 | D7: 1 unknown(s) remain |
+| Aquaphor® Ointment Body Spray (3.7oz.) | Avoid (High Priority Swap) | ungradable | 3 | D7: 3 unknown(s) remain |
+| Aquaphor Healing Ointment® (.25oz.) | Avoid (High Priority Swap) | ungradable | 2 | D7: 2 unknown(s) remain |
+| Aquaphor Healing Ointment® With Touch-Free Applicator (3oz.) | Avoid (High Priority Swap) | ungradable | 2 | D7: 2 unknown(s) remain |
+| Aquaphor® Children's Itch Relief Ointment (1 oz.) | Avoid (High Priority Swap) | ungradable | 4 | D7: 4 unknown(s) remain |
+| Aquaphor® Healing Balm Stick (0.65oz.) | Avoid (High Priority Swap) | ungradable | 4 | D7: 4 unknown(s) remain |
+| Aquaphor® Hand Mask | (no tier: no ingredient text) | ungradable | 0 | no ingredient text: no tier before or now |
+| Aquaphor® Foot Mask | Avoid (High Priority Swap) | ungradable | 11 | D7: 11 unknown(s) remain |
+| Aquaphor Healing Ointment® (1.75oz.) | Avoid (High Priority Swap) | ungradable | 2 | D7: 2 unknown(s) remain |
+| Aquaphor® Ointment Body Spray (6.2 oz) | Avoid (High Priority Swap) | ungradable | 3 | D7: 3 unknown(s) remain |
+| Aquaphor Healing Ointment® (14oz.) | Avoid (High Priority Swap) | ungradable | 2 | D7: 2 unknown(s) remain |
+| Aquaphor Healing Ointment® (2x.3.5oz) | (no tier: no ingredient text) | ungradable | 0 | no ingredient text: no tier before or now |
+| Aquaphor Healing Ointment® (7oz.) | Avoid (High Priority Swap) | ungradable | 2 | D7: 2 unknown(s) remain |
+
+Products whose tier did not change: 0.
+
+### Hand-check (two products)
+
+- **Aquaphor Moisturizing Cream (8oz.) (glycerin D6, bisabolol D3, ceramides D4).** Glycerin adds no flag. Bisabolol [4] is a full flag because no chamomile is listed. Ceramide AP, NP and NG are LOW TOX and add no flag. Panthenol, Cetyl Palmitate and Glyceryl Stearate SE are LOW TOX. Flags: Bisabolol, Pentylene Glycol [1, 2], Sodium Cetearyl Sulfate [1, 4, 5] (sulfate pattern) and Phenoxyethanol. The product stays ungradable with 12 unknowns, including Caprylic/Capric Triglyceride, Shea Butter, Tapioca Starch and Cholesterol.
+- **Aquaphor Healing Ointment® (7oz.) (petrolatum, bisabolol D3, lanolin alcohol D4, glycerin D6).** Petrolatum [1] and Mineral Oil [1] are flagged, as the reference lists them. Bisabolol is a full category 4 flag under D3. Glycerin adds no flag under D6, and Panthenol is LOW TOX. Ceresin and Lanolin Alcohol are not in the reference, so they are unknown under D4. The product is ungradable with 2 unknowns. The printed text uses "Active Ingredients:" and "Inactive Ingredients:" labels, which the grader strips in memory only.
+- Checked against the reference by hand: no other flagged name was missed. Pantolactone is not in the reference and stays unknown.
+
+### Unique unknown ingredients remaining (manual review queue)
+
+Each unknown is listed once, with the number of products it appears in. Counts are over all products, including ungradable ones.
+
+- Butyrospermum Parkii (Shea) Butter (16)
+- Caprylic/Capric Triglyceride (16)
+- Ricinus Communis (Castor) Seed Oil (16)
+- Ceresin (14)
+- Lanolin Alcohol (13)
+- Hydrogenated Castor Oil (12)
+- Octyldodecanol (11)
+- Tocopheryl Acetate (9)
+- Cholesterol (8)
+- Ethylhexyl Stearate (8)
+- Ascorbyl Palmitate (7)
+- Bis-Diglyceryl Polyacyladipate-2 (6)
+- Dicaprylyl Ether (6)
+- Helianthus Annuus (Sunflower) Seed Wax (6)
+- Hydroxypropyl Starch Phosphate (6)
+- Olea Europaea (Olive) Fruit Oil (6)
+- pantolactone (6)
+- Simmondsia Chinensis (Jojoba) Seed Oil (6)
+- Magnesium Stearate (5)
+- C18-38 Alkyl Hydroxystearoyl Stearate (4)
+- C20-40 Alkyl Stearate (4)
+- Glyceryl Stearate (4)
+- Pantolactone (4)
+- Helianthus Annuus (Sunflower) Seed Oil (3)
+- Persea Gratissima (Avocado) Oil (3)
+- Butane (2)
+- Carrageenan (2)
+- Copernicia Cerifera (Carnauba) Wax (2)
+- Glycine Soja (Soybean) Oil (2)
+- Hydrogenated Coco-Glycerides (2)
+- Microcrystalline Wax (2)
+- Phytosphingosine (2)
+- Polyglyceryl-4 Diisostearate/Polyhydroxystearate/Sebacate (2)
+- Sea Salt (2)
+- Sodium Ascorbyl Phosphate (2)
+- Tapioca Starch (2)
+- Acrylates/C10-30 Alkyl Acrylate Crosspolymer (1)
+- Aloe Barbadensis Leaf Juice Powder (1)
+- Disodium EDTA (1)
+- helianthus annuus (sunflower) seed oil (1)
+- Hydrocortisone (1)
+- Hydrogenated Polyisobutene (1)
+- Hydroxyacetophenone (1)
+- Lanolin alcohol (1)
+- Lecithin (1)
+- Menthoxypropanediol (1)
+- Sodium Hydroxide (1)
+- Urea (1)
+
+### Known limits found during the regrade (not changed; outside D1 to D7)
+
+- **Mica conditional not implemented.** The rubric says mica is not a concern unless it is the first or main ingredient. The grader flags Mica [1, 4] wherever it appears. Mica appears in no product in this brand.
+- **`-nium` pattern false positive.** "Vaccinium" (the cranberry genus) matches the quat pattern. It is flagged as [2] in Vaseline Lip Therapy Rosy Lips Stick. Partial flags only.
+- **Reference gap.** REF.txt has Polysorbate 20, 60 and 80 and Nylon-12, which ref_compact.json does not. Those ingredients stay unknown. Resolving them would change partial flags on 10 products across the five brands and would make no product gradable.
+
+### Anomalies
+
+- **No product is gradable.** Most products are blocked by common base ingredients the reference does not contain (Caprylic/Capric Triglyceride, Tapioca Starch, Shea Butter, Lanolin Alcohol, and similar).
+- **Lanolin Alcohol** (14 products, including the lowercase variant) is unknown under D4, as instructed.
+- **Three products have no ingredient text:** Aquaphor Diaper Rash Cream (3oz.), Aquaphor Hand Mask, and Aquaphor Healing Ointment (2x.3.5oz).
+- **Lip Repair Stick Naturally Inspired (Aloe Vera and Coconut).** Zero partial flags, but 11 and 9 unknowns respectively. The brand-printed fragment "Skin safe synthetic" is dropped by the grader's existing note-fragment rule.

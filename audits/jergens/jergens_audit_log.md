@@ -1,5 +1,7 @@
 # Jergens Audit Log
 
+> **Regrade 2026-10-16:** the per-product status and tier sections written before this regrade are superseded. The current grades are in the spreadsheet and in the Regrade section at the end of this log.
+
 **Brand URL:** https://us.jergens.com/ (jergens.com redirects here)
 **Audit start:** Enumeration began earlier in the session; exact start not recorded. Master product list logged 2026-10-16 23:25 UTC.
 **Audit end:** 2026-10-16 23:36 UTC (grading and output files written).
@@ -202,3 +204,246 @@ Recommended for the reference: base ingredients that are common across this cata
 - Working files: `_master_list.json`, `_grader_jergens.py`, `_grade_summary.json`, `_save.py`, `_master.py`
 
 No git commits or pushes. No other brand folders touched.
+
+## Regrade 2026-10-16: unified grader, practitioner decisions D1 to D7
+
+**Provenance:** Every product was regraded from the verbatim text in `jergens_ingredients.json` (unchanged). The grader is `_grader.py`, the same file in all five brand folders, and it writes `jergens_audit.xlsx` and `_grade_summary.json`. The pre-regrade workbook is the git HEAD copy and was used only for the change table below.
+
+### Practitioner decisions as applied
+
+- **D1 Silica (plain "Silica" only).** Reference categories [1, 2] still count as a flag. The PFAS-treated escalation does not apply. A product that would otherwise grade Puberty Safe grades Use Caution. "Silica (hydrated)" is LOW TOX and is unchanged. "Silica Silylate" and "Trimethylsiloxysilicate" keep their PFAS tags. "Silica Dimethyl Silylate" is not in the reference and stays unknown under D4.
+- **D2 Iron oxides (CI 77491, CI 77492, CI 77499, plain "iron oxides").** Categories [1, 2, 3] per the reference. Category 3 triggers the heavy-metal escalation (minimum Avoid (Moderate)). The PFAS tag is kept. The plain "iron oxides" entry carries the PFAS tag because its reference note aliases it to the three CI entries.
+- **D3 Bisabolol.** Category 4 full flag. It is soft only when chamomile oil or extract is listed in the same product. No product in these five brands lists chamomile, so every bisabolol here is a full flag.
+- **D4 Not in reference = unknown.** Ceramide (including the NP, AP, NG and 3 variants) and coconut oil are LOW TOX and are not flagged. Lanolin alcohol and botanical oils not in the reference are unknown. No reference entries were edited or added.
+- **D5 Water** (Water, Aqua, Eau, and parenthetical forms such as "Water (Aqua)"). Clear: no flag, no unknown. Recorded in the explicit exception table in `_grader.py`.
+- **D6 Glycerin.** Caution ingredient: no flag, no unknown. A product that would otherwise grade Puberty Safe grades Use Caution; otherwise the other flags decide. Recorded in the same exception table. Glycerin is not in the reference.
+- **D7 Ungradable.** A product that still carries an unknown after D1 to D6 has tier `ungradable`, audit_status `needs review`, and its unknowns listed in audit_notes. A product with no ingredient text has tier `ungradable` and audit_status `ingredients not found`. flag_count and flagged_ingredients are still recorded. Ungradable is counted apart from the five tiers.
+
+### Grader changes (minimal)
+
+- One `_grader.py` in every brand folder. Its loader reads all three JSON layouts used by these brands: a `products` list, a `products` mapping, and a top-level mapping.
+- Product URL falls back to a `url` key (Lubriderm).
+- Added: the D5 and D6 exception table, the Use Caution floor for silica and glycerin, the `ungradable` tier with its status rules, and a separate ungradable count.
+- No other grading rule was changed. The reference was not edited.
+
+### Result
+
+- Products: 38. Puberty Safe 0, Use Caution 0, Avoid (Mild) 0, Avoid (Moderate) 0, Avoid (High Priority Swap) 0.
+- **Ungradable: 38 (counted separately from the five tiers).** 31 with unresolved ingredients under D4, 7 with no ingredient text.
+- Moved from a graded tier to ungradable: 31. Moved from no tier to ungradable (no ingredient text): 7.
+- Pre-regrade distribution (git HEAD): Avoid (High Priority Swap) 31, (none) 7.
+- Unique unknown ingredients remaining: 143.
+
+### Products that changed tier
+
+Pre-regrade tier from git HEAD, current tier from this regrade. "Unknowns left" is the number of distinct unknown ingredients still unresolved for that product.
+
+| Product | Before | Now | Unknowns left | Reason |
+|---|---|---|---|---|
+| Daily Moisture | Avoid (High Priority Swap) | ungradable | 10 | D7: 10 unknown(s) remain |
+| Natural Glow Face Moisturizer +SPF 20 | Avoid (High Priority Swap) | ungradable | 10 | D7: 10 unknown(s) remain |
+| Natural Glow + Firming Daily Moisturizer | Avoid (High Priority Swap) | ungradable | 18 | D7: 18 unknown(s) remain |
+| Sparkling Berry Shea Fusion | Avoid (High Priority Swap) | ungradable | 10 | D7: 10 unknown(s) remain |
+| Nourishing Honey Moisturizer | Avoid (High Priority Swap) | ungradable | 11 | D7: 11 unknown(s) remain |
+| Natural Glow Instant Sun Moisturizer + Bronzer | Avoid (High Priority Swap) | ungradable | 25 | D7: 25 unknown(s) remain |
+| Deep Restoring Argan Oil Moisturizer | Avoid (High Priority Swap) | ungradable | 7 | D7: 7 unknown(s) remain |
+| Cherry Swirl Shea Fusion | (no tier: no ingredient text) | ungradable | 0 | no ingredient text: no tier before or now |
+| Vanilla Crush Shea Fusion | Avoid (High Priority Swap) | ungradable | 11 | D7: 11 unknown(s) remain |
+| Confetti Cake Shea Fusion | (no tier: no ingredient text) | ungradable | 0 | no ingredient text: no tier before or now |
+| Warm Amber Shea Fusion | Avoid (High Priority Swap) | ungradable | 11 | D7: 11 unknown(s) remain |
+| Hydrating Coconut Lotion | Avoid (High Priority Swap) | ungradable | 10 | D7: 10 unknown(s) remain |
+| Soothing Aloe Moisturizer | Avoid (High Priority Swap) | ungradable | 12 | D7: 12 unknown(s) remain |
+| Original Scent Moisturizer | Avoid (High Priority Swap) | ungradable | 7 | D7: 7 unknown(s) remain |
+| Skin Firming | Avoid (High Priority Swap) | ungradable | 14 | D7: 14 unknown(s) remain |
+| Lavender Dreams Shea Fusion | Avoid (High Priority Swap) | ungradable | 11 | D7: 11 unknown(s) remain |
+| Cherry Almond Lotion Bursts | Avoid (High Priority Swap) | ungradable | 10 | D7: 10 unknown(s) remain |
+| Enriching Shea Butter Lotion | Avoid (High Priority Swap) | ungradable | 16 | D7: 16 unknown(s) remain |
+| Sparkling Berry Lotion Bursts | Avoid (High Priority Swap) | ungradable | 14 | D7: 14 unknown(s) remain |
+| Ultra Healing Moisturizer | Avoid (High Priority Swap) | ungradable | 10 | D7: 10 unknown(s) remain |
+| Vanilla Crush Lotion Bursts | (no tier: no ingredient text) | ungradable | 0 | no ingredient text: no tier before or now |
+| Lavender Lotion Bursts | Avoid (High Priority Swap) | ungradable | 14 | D7: 14 unknown(s) remain |
+| Natural Glow Wet Skin Moisturizer | Avoid (High Priority Swap) | ungradable | 14 | D7: 14 unknown(s) remain |
+| Instant Flawless Kit Bundle | Avoid (High Priority Swap) | ungradable | 28 | D7: 28 unknown(s) remain |
+| Glow Body Applicator Mitt | (no tier: no ingredient text) | ungradable | 0 | no ingredient text: no tier before or now |
+| Natural Glow Instant Sun Drops | Avoid (High Priority Swap) | ungradable | 10 | D7: 10 unknown(s) remain |
+| Natural Glow Hydra Gel | Avoid (High Priority Swap) | ungradable | 10 | D7: 10 unknown(s) remain |
+| Gotta Glow Bundle | Avoid (High Priority Swap) | ungradable | 44 | D7: 44 unknown(s) remain |
+| Natural Glow Instant Sun Mousse | Avoid (High Priority Swap) | ungradable | 16 | D7: 16 unknown(s) remain |
+| Deep Conditioning Shea Cocoa Butter Blend | Avoid (High Priority Swap) | ungradable | 11 | D7: 11 unknown(s) remain |
+| Best Sellers Bundle | Avoid (High Priority Swap) | ungradable | 23 | D7: 23 unknown(s) remain |
+| Natural Glow Daily Moisturizer | Avoid (High Priority Swap) | ungradable | 17 | D7: 17 unknown(s) remain |
+| Tropical Escape Shea Fusion | (no tier: no ingredient text) | ungradable | 0 | no ingredient text: no tier before or now |
+| Wet Skin Moisturizer Shea Oil | Avoid (High Priority Swap) | ungradable | 11 | D7: 11 unknown(s) remain |
+| Wet Skin Moisturizer Coconut Oil | Avoid (High Priority Swap) | ungradable | 6 | D7: 6 unknown(s) remain |
+| Ultra Healing Fragrance Free Moisturizer | (no tier: no ingredient text) | ungradable | 0 | no ingredient text: no tier before or now |
+| Daily Glow Bundle | Avoid (High Priority Swap) | ungradable | 35 | D7: 35 unknown(s) remain |
+| Jergens Gift Card | (no tier: no ingredient text) | ungradable | 0 | no ingredient text: no tier before or now |
+
+Products whose tier did not change: 0.
+
+### Hand-check (two products)
+
+- **Daily Moisture (glycerin D6, water D5).** Water and glycerin are handled by the exception table and produce no flag or unknown. Fragrance is flagged (no disclosure, [1, 2, 4, 8]), along with Methylparaben and Ethylparaben [2, 4], Dimethicone [2, 6], Mineral Oil [1], Carbomer, Phenoxyethanol and Ceteareth-20. Stays ungradable with 10 unknowns, including Stearic Acid and Glyceryl Dilaurate.
+- **Wet Skin Moisturizer Coconut Oil (coconut oil D4).** Cocos Nucifera (Coconut) Oil is mapped to the reference's Coconut oil entry, which is LOW TOX, and is not flagged. Other flags: Mineral Oil [1], Ceteareth-20, Fragrance (no disclosure), Methylparaben, Phenoxyethanol, Ethylparaben. Stays ungradable with 6 unknowns, including Ethylhexyl Isononanoate and Sodium Hydroxide.
+
+### Unique unknown ingredients remaining (manual review queue)
+
+Each unknown is listed once, with the number of products it appears in. Counts are over all products, including ungradable ones.
+
+- Sodium Hydroxide (20)
+- Tocopheryl Acetate (20)
+- Stearic Acid (19)
+- Acrylates/C10-30 Alkyl Acrylate Crosspolymer (14)
+- Arginine (14)
+- Butyrospermum Parkii (Shea) Butter (11)
+- Ethylhexyl Isononanoate (10)
+- Hydroxyacetophenone (10)
+- Caramel (9)
+- Glyceryl Dilaurate (9)
+- Isopropyl Myristate (9)
+- Benzoic Acid (8)
+- C12-15 Alkyl Benzoate (8)
+- Citronellol (8)
+- Dihydroxyacetone (8)
+- Glyceryl Stearate (8)
+- Tetrasodium Glutamate Diacetate (8)
+- Caprylic/Capric Triglyceride (7)
+- Erythrulose (7)
+- Octyldodecyl Myristate (7)
+- Simmondsia Chinensis (Jojoba) Seed Oil (7)
+- Alpha-Isomethyl Ionone (6)
+- Benzyl Salicylate (6)
+- Hexyl Cinnamal (6)
+- Theobroma Cacao (Cocoa) Seed Butter (6)
+- Zea Mays (Corn) Starch (6)
+- Camellia Sinensis Leaf Extract (4)
+- Ext (4)
+- Hydroxyethyl Acrylate/Sodium Acryloyldimethyl Taurate Copolymer (4)
+- Isohexadecane (4)
+- Persea Gratissima (Avocado) Oil (4)
+- Polysorbate 60 (4)
+- Violet 2 (4)
+- Ascorbyl Palmitate (3)
+- Avena Sativa (Oat) Meal Extract (3)
+- C13-14 Isoparaffin (3)
+- Calendula Officinalis Flower Extract (3)
+- Caramel FRAGRANCE (3)
+- Cocos Nucifera (Coconut) Water (3)
+- DIHYDROXYACETONE (3)
+- Ethylene/Propylene/Styrene Copolymer (3)
+- Hexamethylindanopyran (3)
+- Lecithin (3)
+- Olea Europaea (Olive) Fruit Oil (3)
+- Phenyl Trimethicone (3)
+- Red 4 (3)
+- Tetrahydro-2-isobutyl-4-methylpyran-4-ol (3)
+- Withania Somnifera Root Extract (3)
+- 1-Trimethyl-2-Cyclohexenyl-1-Penten-3-One (2)
+- 4-tert-Butylcyclohexyl Acetate (2)
+- Acetyl Hexamethyl Tetralin (2)
+- Acryloyldimethyl Taurate Copolymer (2)
+- Agar (2)
+- Argania Spinosa Kernel Oil (2)
+- Butylene/Ethylene/Styrene Copolymer (2)
+- Butyrospermum Parkii (Shea) Oil (2)
+- Centella Asiatica Extract (2)
+- cis-3-Hexenyl Salicylate (2)
+- Dicaprylyl Ether (2)
+- ERYTHRULOSE (2)
+- Ethyl Linalool (2)
+- EXT (2)
+- Fucus Vesiculosus Extract (2)
+- Hydrogenated Polydecene (2)
+- Hydrogenated Vegetable Oil (2)
+- Hydrolyzed Collagen (2)
+- Hydrolyzed Elastin (2)
+- Hydroxyethyl Acrylate/Sodium (2)
+- HYDROXYETHYL ACRYLATE/SODIUM ACRYLOYLDIMETHYL TAURATE COPOLYMER (2)
+- Isocyclemone E (2)
+- Isopropyl Myristate || [Glow Daily Moisturizer] Water (2)
+- Lanolin Oil (2)
+- Magnesium Aluminum Silicate (2)
+- Mangifera Indica (Mango) Seed Butter (2)
+- Methyl Decenol (2)
+- Methyldihydrojasmonate (2)
+- Orange 4 (2)
+- ORANGE 4 (2)
+- Polyimide-1 (2)
+- RED 4 FRAGRANCE (2)
+- Sodium Polyacrylate Starch (2)
+- Tapioca Starch (2)
+- VIOLET 2 (2)
+- Yellow 10 (2)
+- YELLOW 10 (2)
+- 3-(5,5,6-trimethylbicyclo[2.2.1]hept-2-yl) (1)
+- [Glow Face Moisturizer Sunscreen SPF 20] Avobenzone (1)
+- [Glow Instant Sun Moisturizing Mousse] WATER (1)
+- [Light Bronze shade] Water (1)
+- [Light Bronze Sunless Tanning Mousse] WATER (1)
+- [Light Bronze Sunless Tanning Mousse] Water (1)
+- [Original Scent] Water (1)
+- Aloe Barbadensis Leaf Extract (1)
+- AlphaIsomethyl Ionone (1)
+- Ananas Sativus (Pineapple) Fruit Juice (1)
+- And Octocrylene (1)
+- Anisaldehyde || [Ultra Healing] Water (1)
+- Anise Alcohol (1)
+- Benzaldehyde (1)
+- BENZOIC ACID (1)
+- Benzyl Acetate (1)
+- Butylene/Ethylene/ Styrene Copolymer (1)
+- BUTYROSPERMUM PARKII (SHEA) BUTTER (1)
+- C13- 14 ISOPARAFFIN (1)
+- Canola Oil (1)
+- Cetearyl (1)
+- Citrus Aurantium Amara (Bitter Orange) Flower Extract (1)
+- Citrus Grandis (Grapefruit) Juice (1)
+- Citrus Limon (Lemon) Juice (1)
+- Cocos Nucifera (Coconut) Fruit Extract (1)
+- Cucumis Sativus (Cucumber) Fruit Extract (1)
+- Cyclohexanol (1)
+- Dimethiconol (1)
+- Dimethyl Isosorbide (1)
+- Ethylparaben With an illuminating HYDRALUCENCE™ blend and Cherry Almond Essence (1)
+- Eucalyptus Globulus Leaf Extract (1)
+- gamma-Undecalactone (1)
+- GLYCERYL STEARATE (1)
+- Honey Extract (1)
+- Hydrolyzed Silk (1)
+- Hydrolyzed Wheat Protein/Pvp Crosspolymer (1)
+- HYDROXYPROPYL STARCH PHOSPHATE (1)
+- Isopropyl Palmitate (1)
+- ISOPROPYL PALMITATE (1)
+- Jojoba Esters (1)
+- Linalool || [Deep Bronze Sunless Tanning Mousse] WATER (1)
+- Linalool || [Glow Face Moisturizer Sunscreen] Avobenzone (1)
+- Linalool || [Ultra Deep Bronze Sunless Tanning Mousse] Water (1)
+- Phenethyl Alcohol || [Enriching Shea Butter] Water (1)
+- Polyisobutene (1)
+- Polysorbate 20 (1)
+- SIMMONDSIA CHINENSIS (JOJOBA) SEED OIL (1)
+- Sodium Metabisulfite (1)
+- Sodium Pca (1)
+- Sorbitan Isostearate (1)
+- Sorbitol (1)
+- Tocopherol FRAGRANCE (1)
+- TOCOPHERYL ACETATE (1)
+- Tridecyl Salicylate (1)
+- Yellow 10 FRAGRANCE (1)
+- Yellow 10 || [Deep Bronze shade] Water (1)
+- Yellow 10 || [Ultra Deep Bronze Sunless Tanning Mousse] Water (1)
+- ZEA MAYS (CORN) STARCH (1)
+
+### Known limits found during the regrade (not changed; outside D1 to D7)
+
+- **Mica conditional not implemented.** The rubric says mica is not a concern unless it is the first or main ingredient. The grader flags Mica [1, 4] wherever it appears. Mica appears in no product in this brand.
+- **`-nium` pattern false positive.** "Vaccinium" (the cranberry genus) matches the quat pattern. Flagged as [2] in Vaseline Lip Therapy Rosy Lips Stick. Partial flags only.
+- **Reference gap.** REF.txt has Polysorbate 20, 60, 80 and Nylon-12, which ref_compact.json does not. Those ingredients stay unknown. Resolving them would change partial flags on 10 products across the five brands and would make no product gradable.
+
+### Anomalies
+
+- **Bundle text is merged, not a clean INCI list.** The Gotta Glow Bundle, Daily Glow Bundle, Best Sellers Bundle and Instant Flawless Kit Bundle carry shade-specific lists joined with "||" and bracketed shade names (for example "Linalool || [Deep Bronze Sunless Tanning Mousse] Water"), plus repeated "FRAGRANCE INGREDIENTS:" blocks and fragments like "Ext. Violet 2" and "Ethylparaben With an illuminating HYDRALUCENCE blend". Those segments stay unknown under D4, so the bundles are ungradable. Their partial flags (up to 22) are not product grades and should be recaptured from the single-product pages before any bundle figure is published.
+- **Ultra Healing Fragrance Free Moisturizer** has no ingredient text, so its fragrance-free label cannot be checked from the data.
+- **Seven products have no ingredient text:** Cherry Swirl, Confetti Cake, Tropical Escape and Vanilla Crush Lotion Bursts (Shea Fusion and Bursts products), Glow Body Applicator Mitt, Jergens Gift Card, and Ultra Healing Fragrance Free Moisturizer.
+- **Cocos Nucifera (Coconut) Water and Fruit Extract** are botanicals not in the reference, so they are unknown under D4.
+- **Old files in this folder.** `_grader_jergens.py`, `_master.py`, `_save.py` and `_master_list.json` predate this regrade. `_grader_jergens.py` is superseded by `_grader.py` and was not run. Left in place for you to remove.

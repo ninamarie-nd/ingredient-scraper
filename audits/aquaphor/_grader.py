@@ -8,8 +8,11 @@ It reads <brand>_ingredients.json from its own folder (brand = folder name), loo
 ingredient in ../../ref_compact.json and ../../ingredient_aliases.json, and writes
 <brand>_audit.xlsx and _grade_summary.json into its own folder. Nothing else is written.
 
-Grading rules come from /home/claude/GRADING_RUBRIC.txt. The verbatim ingredient text in the
-JSON is never modified; normalization is applied only in memory.
+Grading rules come from /home/claude/GRADING_RUBRIC.txt and the practitioner decisions D1 to D7
+(2026-10-16) recorded below. The verbatim ingredient text in the JSON is never modified;
+normalization is applied only in memory. The input JSON may use any of the three layouts the
+brands were scraped into: {"products": [list]}, {"products": {name_or_slug: {...}}}, or a
+top-level {name: {...}} mapping.
 """
 import json
 import os
@@ -28,6 +31,7 @@ OUT_SUMMARY = os.path.join(HERE, '_grade_summary.json')
 CATALOG_PATH = os.path.join(HERE, f'{BRAND}_catalog.json')   # optional: brand product URL and brand category per product
 
 TIERS = ['Puberty Safe', 'Use Caution', 'Avoid (Mild)', 'Avoid (Moderate)', 'Avoid (High Priority Swap)']
+UNGRADABLE = 'ungradable'   # D7: not a tier. Any product with an unresolved unknown ingredient gets this instead.
 
 HEADERS = ['product_name', 'product_url', 'brand_category', 'product_type', 'ingredients_verbatim', 'tier',
            'flag_count', 'flagged_ingredients', 'naturally_occurring_allergens', 'unknown_ingredients',
@@ -74,9 +78,18 @@ for _k in REF:
 # Rubric exemptions: fatty alcohols are not drying alcohols (LOW TOX); behentrimonium methosulfate is LOW TOX.
 FATTY_ALC = ['cetearyl alcohol', 'cetyl alcohol', 'stearyl alcohol', 'behenyl alcohol', 'brassica alcohol', 'c14-22 alcohols']
 
-# Iron oxides (reference: categories 1, 2 and 3; PFAS treated). D2 was reverted 2026-10-16: no heavy-metal exemption.
+# D5 and D6 (practitioner, 2026-10-16): explicit exception table. These are grader rules, not reference edits.
+#   'clear'   = D5: water is clear. No flag, no unknown, no tier effect.
+#   'caution' = D6: glycerin is a caution ingredient. No flag, no unknown. If the product would otherwise grade
+#               Puberty Safe it grades Use Caution; otherwise the other flags decide.
+EXCEPTIONS = {'water': 'clear', 'aqua': 'clear', 'eau': 'clear', 'glycerin': 'caution'}
+WATER_PARTS = {'water', 'aqua', 'eau'}
+
+# Iron oxides (reference: categories 1, 2 and 3; PFAS treated). D2 (2026-10-16): heavy-metal escalation applies and the
+# PFAS tag stands. The plain "iron oxides" entry is an alias of CI 77491/77492/77499 per its reference note, so it carries the same tag.
 IRON_KEYS = {'ci 77491 (red iron oxide)', 'ci 77492 (yellow iron oxide)', 'ci 77499 (black iron oxide)', 'iron oxides'}
-# D1 (practitioner, 2026-10-16): unspecified "silica" does not trigger the PFAS-treated escalation.
+# D1 (practitioner, 2026-10-16): unspecified "silica" does not trigger the PFAS-treated escalation. The reference
+# category flags [1, 2] still count; a product that would otherwise be Puberty Safe grades Use Caution.
 SILICA_KEY = 'silica'
 # D3 (practitioner, 2026-10-16): bisabolol is soft only when chamomile oil or chamomile extract is also listed.
 CHAMOMILE = re.compile(r'chamomil|matricaria', re.I)
@@ -219,6 +232,17 @@ def has_eo_source(segments, exclude):
     return any(s != exclude and EO_SOURCE.search(s) for s in segments)
 
 
+def exception_kind(low):
+    """D5/D6 exception table lookup. Parentheticals are ignored: 'Water (Aqua)' and 'WATER (EAU)' are water."""
+    base = re.sub(r'\s+', ' ', re.sub(r'\s*\([^)]*\)', '', low)).strip(' .,;:-')
+    if base in EXCEPTIONS:
+        return EXCEPTIONS[base]
+    parts = [p.strip() for p in base.split('/')]
+    if all(p in WATER_PARTS for p in parts):          # 'aqua/water/eau' and similar
+        return 'clear'
+    return None
+
+
 # ------------------------------------------------------------------ lookup
 def conditional_flag(key, name, category):
     """Rubric product-type conditionals. Returns (kind, cats, label) or None."""
@@ -251,6 +275,11 @@ def lookup(ing, segments, name, category, product_type):
     out = {'pfas': False, 'formaldehyde': False}
     if not low:
         return dict(out, kind='ok', cats=[], label='empty')
+    exc = exception_kind(low)
+    if exc == 'clear':
+        return dict(out, kind='ok', cats=[], label='D5: water is clear')
+    if exc == 'caution':
+        return dict(out, kind='caution', cats=[], label='D6: glycerin, caution ingredient')
     if low == 'behentrimonium methosulfate' or any(fa in low for fa in FATTY_ALC):
         return dict(out, kind='ok', cats=[], label='rubric exemption')
 
@@ -311,6 +340,7 @@ def grade(product_name, product_type, category, verbatim):
     esc = set()
     pfas_hit = False
     heavy_stack = False
+    caution_hit = False      # D6: glycerin present (caution, not a flag)
     seen = set()
     for ing in segments:
         key = norm_key(ing)
@@ -325,6 +355,8 @@ def grade(product_name, product_type, category, verbatim):
                 esc.add('formaldehyde-releaser')
         elif r['kind'] == 'soft':
             natural.append({'name': ing, 'cats': r['cats'], 'label': r['label']})
+        elif r['kind'] == 'caution':
+            caution_hit = True
         elif r['kind'] == 'unknown':
             unknown.append(canonical_name(ing))
 
@@ -332,7 +364,7 @@ def grade(product_name, product_type, category, verbatim):
     max_cats = max([len(f['cats']) for f in flagged], default=0)
     has_paraben = any(re.search(r'paraben$', f['name'], re.I) for f in flagged)
     has_fragrance = any(f['label'].startswith('fragrance') for f in flagged)
-    has_heavy = any(3 in f['cats'] and not f['heavy_exempt'] for f in flagged)   # iron oxides are cat. 3 again (D2 reverted)
+    has_heavy = any(3 in f['cats'] and not f['heavy_exempt'] for f in flagged)   # D2: iron oxides (cat. 3) escalate
     has_form = 'formaldehyde-releaser' in esc
     has_sulfate = any(re.search(r'sulfate$', f['name'], re.I) for f in flagged)
     if has_heavy:
@@ -366,8 +398,18 @@ def grade(product_name, product_type, category, verbatim):
         notes.append('Heavy metal stacked with a cat. 1 or cat. 2 flag: Avoid (High Priority Swap).')
     # Practitioner decisions D1 to D3, recorded per product.
     flagged_keys = {norm_key(f['name']) for f in flagged}
-    if flagged_keys & {'silica'}:
+    silica_hit = bool(flagged_keys & {SILICA_KEY})
+    if silica_hit:
         notes.append('D1: unspecified silica does not trigger the PFAS-treated escalation.')
+    # D1 and D6: silica or glycerin means a Puberty Safe product grades Use Caution. Otherwise the other flags decide.
+    if (silica_hit or caution_hit) and tier == 'Puberty Safe':
+        tier = 'Use Caution'
+    if caution_hit:
+        notes.append('D6: glycerin is a caution ingredient (not a flag); it floors a Puberty Safe product at Use Caution.')
+    # D7: any unknown ingredient left after D1 to D6 makes the product ungradable. No tier is assigned.
+    if unknown:
+        tier = UNGRADABLE
+        notes.append('D7: ungradable. Unknown ingredient(s) remain after D1 to D6: ' + ', '.join(unknown) + '.')
     if any(norm_key(f['name']) in IRON_KEYS for f in flagged):
         notes.append('Iron oxides (reference cat. 1, 2, 3): heavy-metal (cat. 3) escalation applies; PFAS-treated tag applied as written.')
     for f in flagged:
@@ -409,13 +451,19 @@ SITE_LIMITATION = ''
 def load_products():
     global SITE_LIMITATION
     data = json.load(open(ING_PATH, encoding='utf-8'))
-    if isinstance(data, dict) and isinstance(data.get('products'), list):
+    if isinstance(data, list):
+        rows = [dict(p) for p in data if isinstance(p, dict)]
+    elif isinstance(data.get('products'), list):
         SITE_LIMITATION = data.get('site_limitation', '')
-        return data['products']
-    rows = []
-    for key, p in data.items():
-        if isinstance(p, dict):
-            rows.append(dict(p, product_name=p.get('product_name', key)))
+        rows = [dict(p) for p in data['products'] if isinstance(p, dict)]
+    elif isinstance(data.get('products'), dict):
+        SITE_LIMITATION = data.get('site_limitation', '')
+        rows = [dict(p, product_name=p.get('product_name') or k)
+                for k, p in data['products'].items() if isinstance(p, dict)]
+    else:
+        # Top-level {name: {...}} mapping. Skip the progress log and other non-product blocks.
+        rows = [dict(p, product_name=p.get('product_name', k)) for k, p in data.items()
+                if isinstance(p, dict) and 'ingredients_verbatim' in p]
     if os.path.exists(CATALOG_PATH):
         catalog = json.load(open(CATALOG_PATH, encoding='utf-8')).get('products', {})
         for row in rows:
@@ -429,6 +477,8 @@ def load_products():
 def product_url(p):
     if p.get('product_url'):
         return p['product_url']
+    if p.get('url'):
+        return p['url']
     m = re.search(r'https?://\S+', p.get('ingredient_source') or '')
     return m.group(0).rstrip(')') if m else ''
 
@@ -450,7 +500,7 @@ def main():
     ws = wb.active
     ws.title = 'audit'
     ws.append(HEADERS)
-    tier_counts = {t: 0 for t in TIERS}
+    tier_counts = {t: 0 for t in TIERS + [UNGRADABLE]}
     summary = []
     for p in products:
         name = p.get('product_name', '')
@@ -460,23 +510,30 @@ def main():
         url = product_url(p)
         status = 'needs review' if p.get('audit_status') == 'needs review' else 'complete'
         if not verbatim.strip():
-            ws.append([name, url, category, ptype, '', '', '', '', '', '', '',
-                       'Not graded: no ingredient text on the source page.',
-                       ((p.get('audit_notes') or '') + ' No verbatim ingredient text in the json; not graded.').strip(),
+            # D7: no ingredient text means no tier. Partial flags are empty because there is nothing to flag.
+            tier_counts[UNGRADABLE] += 1
+            ws.append([name, url, category, ptype, '', UNGRADABLE, 0, '', '', '', '',
+                       'Ungradable: no ingredient text on the source page, so no tier is assigned.',
+                       ((p.get('audit_notes') or '') + ' No verbatim ingredient text in the json; not graded (D7 ungradable).').strip(),
                        'ingredients not found'])
-            summary.append({'product_name': name, 'tier': None, 'status': 'ingredients not found'})
+            summary.append({'product_name': name, 'tier': UNGRADABLE, 'status': 'ingredients not found'})
             continue
         g = grade(name, ptype, category, verbatim)
         tier = g['tier']
         tier_counts[tier] += 1
+        if tier == UNGRADABLE:
+            status = 'needs review'
         flagged, natural, unknown = g['flagged'], g['natural'], g['unknown']
         esc_str = ', '.join(g['esc'])
-        if flagged:
+        if tier == UNGRADABLE:
+            summary_txt = (f"Ungradable: {len(unknown)} unknown ingredient(s) remain after D1 to D6, so no tier is assigned. "
+                           f"Partial flags recorded: {len(flagged)}.")
+        elif flagged:
             top = ', '.join(f['name'] for f in flagged[:3])
             summary_txt = f"{len(flagged)} flagged ingredient(s) in the printed list ({top}); tier applies to the printed subset only."
         else:
             summary_txt = 'No flagged ingredients in the printed list per reference and rubric conditionals.'
-        if unknown:
+        if unknown and tier != UNGRADABLE:
             summary_txt += f" {len(unknown)} unknown ingredient(s) not in reference."
         if esc_str:
             summary_txt += f" Escalation: {esc_str}."
@@ -506,8 +563,8 @@ def main():
     wb.save(OUT_XLSX)
     with open(OUT_SUMMARY, 'w', encoding='utf-8') as fh:
         json.dump({'brand': BRAND, 'tier_counts': tier_counts, 'rows': summary}, fh, indent=1, ensure_ascii=False)
-    graded = sum(tier_counts.values())
-    print(f'brand: {BRAND}  products: {len(products)}  graded: {graded}  not graded: {len(products) - graded}')
+    graded = sum(tier_counts[t] for t in TIERS)
+    print(f'brand: {BRAND}  products: {len(products)}  graded: {graded}  ungradable: {tier_counts[UNGRADABLE]}')
     print('tiers:', tier_counts)
 
 
