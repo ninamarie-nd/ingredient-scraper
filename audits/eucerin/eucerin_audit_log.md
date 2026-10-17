@@ -1,5 +1,7 @@
 # Eucerin Audit Log
 
+> **Superseded in part 2026-10-17.** The full brand-site list merge at the end of this file replaced the verbatim text, sources, audit status and tiers for 44 products, and set four products to needs review after a retailer fallback. Where this log and that section disagree, the end section is current.
+
 > **Regrade 2026-10-16 (unified grader, D1 to D7):** the per-product status and tier sections written before this regrade are superseded. The current grades are in the spreadsheet and in the Regrade section at the end of this log.
 
 > **Superseded 2026-10-16 20:47 (UTC-05:00).** The grading results, tier counts, grader notes and manual review queue in this log were replaced by the unified-grader regrade at the end of this file. Sourcing notes still apply.
@@ -903,3 +905,135 @@ Applied in this pass with the same `_grader.py` in every brand folder. The refer
 - Unknowns (15): Ethylhexyl Cocoate, Hydrogenated Coco-Glycerides, Caprylic/Capric Triglyceride, Butyrospermum Parkii (Shea) Butter, Glyceryl Stearate Citrate, Octyldodecanol, Tocopheryl Acetate, Ubiquinone, Biotin, Biosaccharide Gum-1, Sodium Ascorbyl Phosphate, Zea Mays (Corn) Oil, Beta-Carotene, Sodium Hydroxide, Trisodium EDTA.
 - Changes made: json record updated (ingredients_verbatim, ingredient_source, ingredient_source_url, audit_status, brand_site_key_ingredients, audit_notes; candidate_retailer_text and candidate_retailer_source removed). _grader.py: the RETAILER_TEXT_OVERRIDES entry for this product removed; no other rule changed. Regraded this folder only.
 - Known leftovers from the grader's global text: the xlsx audit_notes for this row still carry the brand-wide site-limitation sentence, and the json field audit_notes_retail still describes the CVS candidate. Neither was changed, per instructions.
+
+
+---
+
+## Update 2026-10-17: full brand-site lists (Learn more, View all) and retailer fallback
+
+This section supersedes the verbatim text, ingredient sources, audit status and tiers recorded above for the products listed here. The scraped text is not changed. Source files: `_scrape/worker_C.json` (products 24 to 35) and `_scrape/worker_E.json` (products 0 to 23 and 36 to 47).
+
+### Full brand-site lists (44 products)
+
+Ingredient source for each: "Eucerin brand site, full list (Learn more, View all)". Listing block: "full expanded list". Audit status: complete. The previous key-ingredient text is kept in `brand_site_key_ingredients`; the previous retailer source (where one existed) is named in `audit_notes`.
+
+| # | Product | Product URL |
+|---|---|---|
+| 0 | Advanced Repair Cream, 16 OZ | https://www.eucerinus.com/products/advanced-repair/advanced-repair-creme |
+| 1 | Advanced Repair Lotion | https://www.eucerinus.com/products/advanced-repair/eucerin-smoothing-repair-dry-skin-lotion |
+| 2 | Advanced Repair Hand Cream | https://www.eucerinus.com/products/advanced-repair/eucerin-intensive-repair-extra-enriched-hand-creme |
+| 3 | Eucerin Advanced Cleansing Body and Face Wash | https://www.eucerinus.com/products/advanced-repair/advanced-cleansing |
+| 4 | Advanced Repair Cream, 8 OZ | https://www.eucerinus.com/products/advanced-repair/advanced-repair-cream-tube |
+| 5 | Dark Spot Corrector Body Cream | https://www.eucerinus.com/products/radiant-tone/dark-spot-corrector-body-cream |
+| 6 | Dual Serum | https://www.eucerinus.com/products/radiant-tone/dual-serum |
+| 7 | Eye Cream | https://www.eucerinus.com/products/radiant-tone/eye-cream- |
+| 8 | Dark Spot Corrector Body Lotion | https://www.eucerinus.com/products/radiant-tone/dark-spot-corrector-body-lotion |
+| 9 | Daily Lotion SPF 30 | https://www.eucerinus.com/products/radiant-tone/daily-lotion-spf-30 |
+| 10 | Night Cream | https://www.eucerinus.com/products/radiant-tone/night-cream |
+| 11 | Cleansing Gel | https://www.eucerinus.com/products/radiant-tone/cleansing-gel |
+| 12 | Gel-Cream | https://www.eucerinus.com/products/immersive-hydration/immersive-hydration-gel-cream |
+| 13 | Moisture Boost Serum | https://www.eucerinus.com/products/immersive-hydration/immersive-hydration-moisture-boost-serum |
+| 14 | Hydrating Cleansing Gel, 13.5 FL OZ | https://www.eucerinus.com/products/gentle-cleansing/gentle-cleansing-hydrating-cleansing-gel |
+| 15 | Hydrating Cleansing Gel, 6.8 FL OZ | https://www.eucerinus.com/products/gentle-cleansing/hydrating-cleansing-gel |
+| 16 | Intensive Repair Lotion | https://www.eucerinus.com/products/intensive-repair/eucerin-intensive-repair-very-dry-skin-lotion |
+| 17 | Q10 Revitalize Night Cream | https://www.eucerinus.com/products/q10-active/q10-wrinkle |
+| 18 | Q10 Revitalize Daily Cream | https://www.eucerinus.com/products/q10-active/eucerin-q10-anti-wrinkle-sensitive-skin-creme |
+| 19 | Advanced Hydration After Sun Lotion | https://www.eucerinus.com/products/sun-protection/after-sun |
+| 23 | Advanced Hydration SPF 50 Sunscreen | https://www.eucerinus.com/products/sun-protection/advanced-hydration-sunscreen-50 |
+| 24 | Baby Sensitive Mineral SPF 50 Sunscreen Lotion | https://www.eucerinus.com/products/sun-protection/baby-mineral-lotion |
+| 25 | Clear Skin SPF 50 Face Sunscreen | https://www.eucerinus.com/products/sun-protection/clear-skin-spf-50-face-sunscreen |
+| 26 | Age Defense SPF 50 Face Sunscreen | https://www.eucerinus.com/products/sun-protection/age-defense-face-sunscreen |
+| 27 | Tinted Sensitive Mineral SPF 35 Face Sunscreen | https://www.eucerinus.com/products/sun-protection/tinted-mineral-lotion |
+| 28 | Tinted Age Defense SPF 50 Face Sunscreen | https://www.eucerinus.com/products/sun-protection/tinted-age-defense-spf-50-face-sunscreen |
+| 29 | Advanced Hydration SPF 30 Sunscreen Spray | https://www.eucerinus.com/products/sun-protection/advanced-hydration-spf-30-sunscreen-spray |
+| 30 | Roughness Relief Cream | https://www.eucerinus.com/products/roughness-relief/roughness-relief-cream |
+| 31 | Roughness Relief Lotion | https://www.eucerinus.com/products/roughness-relief/roughness-relief-lotion |
+| 32 | Eczema Relief Cream & Body Wash | https://www.eucerinus.com/products/eczema-relief/eczema-relief-cream-body-wash |
+| 33 | Eczema Relief Cream | https://www.eucerinus.com/products/eczema-relief/eczema-relief-body-creme |
+| 34 | Eucerin Eczema Relief Hydrogel | https://www.eucerinus.com/products/eczema-relief/-eucerin-eczema-relief-hydrogel |
+| 35 | Eczema Relief Flare-Up Treatment | https://www.eucerinus.com/products/eczema-relief/eczema-relief-flare-up-treatment |
+| 37 | Skin Calming Lotion | https://www.eucerinus.com/products/calming/skin-calming |
+| 38 | Skin Calming Cream | https://www.eucerinus.com/products/calming/eucerin-skin-calming-daily-moisturizing-creme |
+| 39 | Daily Hydration Lotion with Broad Spectrum SPF 15 | https://www.eucerinus.com/products/daily-hydration/eucerin-daily-protection-spf-15-moisturizing |
+| 40 | Daily Hydration Lotion | https://www.eucerinus.com/products/daily-hydration/eucerin-daily-replenishing-moisturizing-lotion |
+| 41 | Original Healing Rich Cream 16 oz. Jar | https://www.eucerinus.com/products/original/eucerin-original-healing-soothing-repair-creme |
+| 42 | Original Healing Lotion | https://www.eucerinus.com/products/original/eucerin-original-healing-soothing-repair-lotion |
+| 43 | Eucerin Baby Eczema Relief Hydrogel | https://www.eucerinus.com/products/baby/eucerin-baby-eczema-relief-hydrogel |
+| 44 | Baby Eczema Relief Cream & Body Wash | https://www.eucerinus.com/products/baby/eczema-relief-baby-cream-body-wash |
+| 45 | Baby Wash and Shampoo | https://www.eucerinus.com/products/baby/baby-wash-shampoo |
+| 46 | Baby Eczema Relief Cream | https://www.eucerinus.com/products/baby/baby-eczema-relief-cream |
+| 47 | Baby Lotion | https://www.eucerinus.com/products/baby/baby-lotion |
+
+### Retailer fallback (4 products, all still needs review)
+
+Order: CVS, Walgreens, Target, Walmart, Amazon, Ulta, Dermstore. One browser tab was opened for this pass (tab-11). Each of the four products matched on Walmart or Amazon before Ulta or Dermstore came up in the order, so Ulta and Dermstore were not checked. Notes:
+
+- CVS: product pages returned "Access Denied" in this browser (checked for product 20). Not used for the other three.
+- Walgreens: search returned a bot-challenge page. Not completed (challenges are not bypassed).
+
+| # | Product | Retailer result | Status | Verbatim |
+|---|---|---|---|---|
+| 20 | Sensitive Mineral SPF 50 Sunscreen | Walmart, "Eucerin Sun Sensitive Mineral Sunscreen Lotion SPF 50, 4 Fl Oz Tube": Active Zinc Oxide 24%, Inactive list copied. Target: no listing. | needs review (brand page prints no size; a near-identical Walmart "With Zinc Oxide Protection, 4 Fl Oz Tube" variant also exists) | copied from the Walmart page; unchanged from the prior retailer text |
+| 21 | Advanced Hydration Ultra-Light SPF 50 Face Sunscreen | Amazon B0DJTXV6XQ, "Eucerin Advanced Hydration Face Sunscreen Lotion, SPF 50, 1.7 FL OZ \| Ultra-Light Fluid": actives match the brand key ingredients. Target and Walmart: no exact name. | needs review (no size on the brand page; Amazon title differs in wording) | copied from the Amazon page; unchanged |
+| 22 | Advanced Hydration SPF 50 Sunscreen Spray | Walmart, "Eucerin Sun Advanced Hydration SPF 50 Sunscreen Spray ... 6 oz": actives match. The page also shows a stray "salicylic acid" block that was not used. | needs review (no size on the brand page) | copied from the Walmart page; unchanged |
+| 36 | Itch Relief Intensive Calming Lotion | Walmart, "Eucerin Itch Relief Intensive Calming Body Lotion ... with Menthol, 8.4 fl oz": Active Menthol 0.1% matches. Target: no listing. Walmart also lists "Eucerin Skin Calming Itch Relief Treatment, 8.4 fl oz" (matches the brand URL slug); not compared. | needs review (product identity not confirmed) | copied from the Walmart page; unchanged |
+
+No retailer result is marked complete. The four products keep their verbatim text, which is the retailer text copied this pass, and they are graded as provisional.
+
+### Candidate retailer listings (6 products)
+
+A candidate listing is kept only when its text is near-identical to the brand full list (similarity 0.95 or more, after removing punctuation and percentages).
+
+- Kept: Intensive Repair Lotion (CVS 8.4 OZ, same product page family; similarity about 0.96).
+- Removed: Advanced Repair Lotion (CVS 13.5 OZ pump, previously not used; 0.76), Advanced Hydration After Sun Lotion (CVS 6.8 OZ; 0.66), Daily Hydration Lotion (CVS 16.9 OZ; 0.88), Eucerin Baby Eczema Relief Hydrogel (Amazon 5 FL OZ; 0.93), Baby Lotion (CVS 13.5 OZ; 0.93).
+
+### Notes on products 30, 31 and 33 (differences recorded in `audit_notes`)
+
+- 30 Roughness Relief Cream: the Walmart text had Hydrogenated Cocoglycerides, Arginine HCl and Helianthus Annuus Seed Oil that the brand list does not print.
+- 31 Roughness Relief Lotion: the Walmart text had Nylon-12 that the brand list does not print; the brand list adds Tapioca Starch, Arginine and PCA.
+- 33 Eczema Relief Cream: the brand dialog list is much shorter than the earlier captured text (which included Ricinus Communis Seed Oil, Mineral Oil, Glyceryl Stearate and others). The brand text is recorded as shown and the grade rests on it.
+
+### Retailer-only ingredient in six Radiant Tone products
+
+The previous retailer texts for products 5 to 10 and product 19 carried ingredients that the brand list does not print: Isobutylamido Thiazolyl Resorcinol (products 5 to 10), Fragrance (Dual Serum, Advanced Hydration After Sun Lotion), Glycine Soja Oil and Licochalcone A. These are listed in each `audit_notes`. The grades now use the brand list only.
+
+### Dual Serum: Thiamidol
+
+The printed brand list for Dual Serum contains no Thiamidol. It is recorded as printed and flagged here for the practitioner. The grade uses the printed list. Dual Serum keeps its tier (Avoid (High Priority Swap)) because Phenoxyethanol (category 1) triggers the carcinogen-in-leave-on escalation and PFAS is escalated; its Fragrance from the retailer text is no longer on the list.
+
+### Grader change: UNGRADABLE_EXCEPTIONS emptied
+
+All five exception products had a full brand-site list after the merge, so each was removed from the exception list in `_grader.py`: Q10 Revitalize Night Cream; Daily Hydration Lotion with Broad Spectrum SPF 15; Daily Hydration Lotion; Eucerin Baby Eczema Relief Hydrogel; Baby Lotion. Each is graded from its verbatim text. No other grader rule was changed. The UNGRADABLE_EXCEPTIONS dictionary for eucerin is now empty.
+
+### Tier changes (old and new)
+
+Old tiers are from the 2026-10-17 grade before this merge. New tiers are from the rerun.
+
+| Product | Old tier | New tier | Why |
+|---|---|---|---|
+| Q10 Revitalize Night Cream (#17) | ungradable | Avoid (High Priority Swap) | Full list now present (was "Q10" only). Printed flags: Butylene Glycol, Carbomer, 1,2-Hexanediol (category 1, carcinogen in leave-on). 10 unknowns excluded; not Puberty Safe. |
+| Advanced Hydration After Sun Lotion (#19) | Use Caution | Avoid (High Priority Swap) | Full list adds Fragrance and other flags (6 printed flags), with PFAS and carcinogen-in-leave-on escalations. |
+| Advanced Hydration SPF 30 Sunscreen Spray (#29) | Avoid (Mild) | Avoid (High Priority Swap) | Full list adds inactive flags (Butylene Glycol, Styrene/Acrylates Copolymer, Diethylhexyl Syringylidenemalonate, VP/Eicosene Copolymer, 1,2-Hexanediol); 9 flags, which reaches the 8-flag rule. |
+| Daily Hydration Lotion with Broad Spectrum SPF 15 (#39) | ungradable | Avoid (High Priority Swap) | Full list present (was Octisalate only). Printed flags: Octisalate, Pentylene Glycol, Dimethicone, Phenoxyethanol; PFAS and carcinogen-in-leave-on escalations. |
+| Daily Hydration Lotion (#40) | ungradable | Avoid (High Priority Swap) | Full list present (was Sunflower Seed oil only). Printed flags: Petrolatum, Pentylene Glycol, Phenoxyethanol, Dimethicone, Carbomer; carcinogen-in-leave-on escalation. |
+| Eucerin Baby Eczema Relief Hydrogel (#43) | ungradable | Use Caution | Full list present. One printed flag (Alcohol Denat.); 6 unknowns excluded, so Puberty Safe is not reached and the grade is Use Caution. |
+| Baby Lotion (#47) | ungradable | Avoid (High Priority Swap) | Full list present (was Dexpanthenol only). Printed flags: Mineral Oil, Dimethicone, Phenoxyethanol, Carbomer, Pentylene Glycol; carcinogen-in-leave-on escalation. |
+
+Tier counts, 48 products: before the merge, Puberty Safe 0, Use Caution 5, Avoid (Mild) 2, Avoid (Moderate) 3, Avoid (High Priority Swap) 33, ungradable 5. After the merge: Puberty Safe 0, Use Caution 5, Avoid (Mild) 1, Avoid (Moderate) 3, Avoid (High Priority Swap) 39, ungradable 0.
+
+### Record and files
+
+- `eucerin_ingredients.json`: merged. Top-level `site_limitation` and `method` updated; `tier` and `flag_count` synced from the new grade. `tier_without_pfas_rule` was left as it was.
+- `_grader.py`: UNGRADABLE_EXCEPTIONS emptied (see above). No other change.
+- `eucerin_audit.xlsx` and `_grade_summary.json`: regenerated by the grader.
+- `eucerin_content_mining.md`: rewritten for the new counts.
+- Not changed: `_scrape/worker_C.json`, `_scrape/worker_E.json`, the reference, and the rubric.
+
+### Open items for the practitioner
+
+1. Confirm the four retailer-only products (20, 21, 22, 36) once the brand site or the variant can be confirmed. Their size is not printed on the brand site.
+2. Dual Serum: no Thiamidol in the printed list. Confirm whether the product is the Thiamidol formula.
+3. Product 33 (Eczema Relief Cream): the brand list is much shorter than the earlier capture. Confirm the brand list.
+4. Q10 Revitalize Daily Cream: its CVS candidate was removed (the paraben and DMDM hydantoin tier it had rested on). Its tier now comes from printed flags only.
+5. The earlier "Q10 Revitalize Daily Cream: full brand-site list" section above describes the CVS candidate tier and is superseded by this section.
+
