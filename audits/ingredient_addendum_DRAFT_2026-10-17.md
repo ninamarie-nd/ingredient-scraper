@@ -324,3 +324,16 @@
 | [glow face moisturizer sunscreen spf 20] avobenzone | 1 | Product name merged into ingredient text |
 | l-6 stearate | 1 | Truncated or duplicate fragment |
 | propylp | 1 | Truncated or duplicate fragment |
+
+## Part C: practitioner decisions (2026-10-17). Not from the reference PDF; for entry into the reference once categories are assigned
+
+| Ingredient | Practitioner decision | Open question |
+|---|---|---|
+| Helianthus annuus (sunflower) seed oil | Avoid (Mild) | Reference uses numbered categories, not tiers. Which category (or flag) produces Avoid (Mild)? |
+| Butyrospermum parkii (shea) butter | LOW TOX | none |
+| Aloe barbadensis leaf juice | LOW TOX | none |
+| Flavor (aroma) / flavor | Avoid (High) | Which categories produce Avoid (High) for an undisclosed flavor? |
+| Rule: butters | Butters are LOW TOX, unless the butter is made from or includes a seed oil, then Avoid (Mild) | Confirm the rule applies to ingredients like "cocoa seed butter" and "shea butter" |
+| Rule: plant oils and extracts | Use Caution by default, pending sourcing of each oil or extract for estrogenic activity (e.g., lavender) | Confirm this is the default for all plant oils and extracts |
+
+Entries awaiting a practitioner decision: Menthol, Xylitol, Calcium carbonate, Sodium hydroxide (proposed low tox by practitioner; not in reference; see research notes). Not yet categorized: Caprylic/capric triglyceride, stevia, calendula, lavender, peppermint, avocado, grape seed, castor and almond oils, levulinic acid, gluconolactone.
