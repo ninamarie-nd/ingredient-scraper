@@ -146,3 +146,44 @@ Each unknown is listed once, with the number of products it appears in. Counts a
 - **Advanced Therapy Lotion Fragrance-Free** does not list "Fragrance" in its printed text.
 - **Daily Moisture Lotion Fragrance-Free 24 fl oz, 2-count + 6 fl oz Travel Size** has no ingredient text. It is ungradable with no tier.
 - **Polysorbate entries** are unknown in this grader (reference gap above). Under REF.txt they would add [1, 2, 4, 5] flags to the two lotions that carry them (Advanced Therapy Lotion Fragrance-Free and Intense Skin Repair Lotion).
+
+## Regrade 2026-10-16, D8: one unknown ingredient gets a Use Caution floor
+
+This section supersedes the tier counts and ungradable counts in the regrade sections above. Flags, escalations and unknown lists are unchanged by D8 (checked for every product row).
+
+### Decision as applied
+
+- D8 (practitioner, 2026-10-16): a product with exactly one unknown ingredient gets the Use Caution floor, the same way D1 and D6 work. A Puberty Safe product becomes Use Caution. A higher tier from the other flags is kept.
+- The one unknown stays in unknown_ingredients and audit_notes. Status stays "complete" with the note "one unknown ingredient, Use Caution floor applied", except where the source JSON already carries a needs-review flag (see Open items).
+- Two or more unknowns: still ungradable under D7. Products with no ingredient text: still "ingredients not found" with no tier.
+
+### Grader change
+
+- One grader for all five brands (`_grader.py`), copied into each brand folder with identical contents and pointed at its own folder. The D8 block sits directly before the D7 check. D7 now applies at two or more unknowns. The ungradable summary text now reads "two or more". No other rule changed.
+
+### Tier counts, before and after D8
+
+- Before D8 (D1 to D7): graded 0, ungradable 7 (no ingredient text: 1).
+- After D8: Puberty Safe 0, Use Caution 0, Avoid (Mild) 0, Avoid (Moderate) 0, Avoid (High Priority Swap) 0; ungradable 7 (6 with two or more unknowns, 1 with no ingredient text). Total 7.
+
+### Products that left ungradable under D8
+
+None. No product in this brand has exactly one unknown ingredient.
+
+### Hand checks (two products)
+
+- **No product moved under D8.** The brand has no product with exactly one unknown.
+- **Advanced Therapy Body Wash Fragrance-Free (stays ungradable, six unknowns).** Sodium Hydroxide and Tocopheryl Acetate are both absent from REF.txt. D7 applies correctly.
+- **Intense Skin Repair Lotion (stays ungradable).** REF.txt lists Polysorbate 20 and Polysorbate 60 as categories 1, 2, 4 and 5. ref_compact.json has a malformed key for Polysorbate 20 and no usable entry for Polysorbate 60 or 80, so the grader treats them as unknown. This is a reference-compilation defect, not a grading decision, and it was not changed (the reference is not to be edited).
+
+### Unique unknown ingredients remaining (manual review queue)
+
+19 unique names in this brand (ignoring case), each still in the manual review queue. D8 does not remove any of them. Across all five brands: 308 unique names ignoring case, 354 distinct spellings as printed.
+
+### Open items for the practitioner
+
+- Polysorbate 20, 60 and 80 are missing or malformed in the compiled reference (see the hand check above). Intense Skin Repair Lotion is ungradable partly for this reason. Fixing the reference is the practitioner's decision; it was not changed here.
+
+### Files written this pass
+
+- `lubriderm/_grader.py` (D8 added), `lubriderm/lubriderm_audit.xlsx` (regenerated, 14 template columns), `lubriderm/_grade_summary.json` (regenerated), `lubriderm/lubriderm_content_mining.md`, and this log. The verbatim `lubriderm_ingredients.json` is unchanged.

@@ -4,9 +4,9 @@
   "Puberty Safe": 0,
   "Use Caution": 0,
   "Avoid (Mild)": 0,
-  "Avoid (Moderate)": 0,
+  "Avoid (Moderate)": 2,
   "Avoid (High Priority Swap)": 0,
-  "ungradable": 41
+  "ungradable": 39
  },
  "rows": [
   {
@@ -474,7 +474,7 @@
   },
   {
    "product_name": "Aquaphor® Baby Wash & Shampoo (25.4oz.)",
-   "tier": "ungradable",
+   "tier": "Avoid (Moderate)",
    "flag_count": 5,
    "product_type": "body wash/shampoo/conditioner",
    "flagged": [
@@ -489,7 +489,7 @@
     "Sea Salt"
    ],
    "esc": [],
-   "status": "needs review"
+   "status": "complete"
   },
   {
    "product_name": "Aquaphor Baby Sensitive Lotion, Baby Lotion, 3 Fl Oz",
@@ -686,7 +686,7 @@
   },
   {
    "product_name": "Aquaphor® Baby Wash & Shampoo (16.9 fl.oz)",
-   "tier": "ungradable",
+   "tier": "Avoid (Moderate)",
    "flag_count": 5,
    "product_type": "body wash/shampoo/conditioner",
    "flagged": [
@@ -701,7 +701,7 @@
     "Sea Salt"
    ],
    "esc": [],
-   "status": "needs review"
+   "status": "complete"
   },
   {
    "product_name": "Aquaphor® Ointment Body Spray (3.7oz.)",

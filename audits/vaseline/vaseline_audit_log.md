@@ -459,3 +459,50 @@ Each unknown is listed once, with the number of products it appears in. Counts a
 - **"White Petrolatum USP" is unknown** in Vaseline Healing Jelly Original and Lip Therapy Advanced Healing Tube. The reference's Petrolatum entry is category 1. Under D4 these stay unknown, so each shows 0 partial flags and 1 unknown. If you decide this is an alias of Petrolatum, each product gains a Petrolatum [1] flag and a "carcinogen in leave-on" escalation. This is a decision for you.
 - **Silica Dimethyl Silylate** (Cocoa Shimmer Jelly Stick) is unknown (see the Eucerin note).
 - **Mica (CI 77019)** is flagged in three shimmer products. This is the known mica gap above.
+
+## Regrade 2026-10-16, D8: one unknown ingredient gets a Use Caution floor
+
+This section supersedes the tier counts and ungradable counts in the regrade sections above. Flags, escalations and unknown lists are unchanged by D8 (checked for every product row).
+
+### Decision as applied
+
+- D8 (practitioner, 2026-10-16): a product with exactly one unknown ingredient gets the Use Caution floor, the same way D1 and D6 work. A Puberty Safe product becomes Use Caution. A higher tier from the other flags is kept.
+- The one unknown stays in unknown_ingredients and audit_notes. Status stays "complete" with the note "one unknown ingredient, Use Caution floor applied", except where the source JSON already carries a needs-review flag (see Open items).
+- Two or more unknowns: still ungradable under D7. Products with no ingredient text: still "ingredients not found" with no tier.
+
+### Grader change
+
+- One grader for all five brands (`_grader.py`), copied into each brand folder with identical contents and pointed at its own folder. The D8 block sits directly before the D7 check. D7 now applies at two or more unknowns. The ungradable summary text now reads "two or more". No other rule changed.
+
+### Tier counts, before and after D8
+
+- Before D8 (D1 to D7): graded 0, ungradable 52 (no ingredient text: 16).
+- After D8: Puberty Safe 0, Use Caution 2, Avoid (Mild) 0, Avoid (Moderate) 0, Avoid (High Priority Swap) 2; ungradable 48 (32 with two or more unknowns, 16 with no ingredient text). Total 52.
+
+### Products that left ungradable under D8
+
+Use Caution (floor applied):
+- Vaseline® Healing Jelly Original: unknown "White Petrolatum Usp"; now Use Caution.
+- Vaseline® Lip Therapy® Advanced Healing Tube: unknown "White Petrolatum USP"; now Use Caution.
+
+Kept a higher tier from other flags:
+- Vaseline® Healing Jelly Cocoa Butter: unknown "Theobroma Cacao (Cocoa) Seed Butter"; now Avoid (High Priority Swap).
+- Vaseline® Lip Therapy® Original Mini: unknown "Yellow 5 Lake"; now Avoid (High Priority Swap).
+
+### Hand checks (two products)
+
+- **Vaseline® Healing Jelly Original (ungradable to Use Caution).** Printed text "White Petrolatum Usp (100%)". One unknown, White Petrolatum Usp, and no flags. REF.txt has no white petrolatum entry; its Petrolatum entry (category 1) is under the plain name. Result Use Caution, as the D8 rule requires.
+- **Vaseline® Lip Therapy® Rosy Lips Tin (stays ungradable).** Printed text "Petrolatum, Flavor (Aroma), Titanium Dioxide (Ci 77891), Red 30 (Ci 73360)." Unknowns Flavor (Aroma) and Red 30 (Ci 73360) are both absent from REF.txt. Two unknowns, so D7 applies and no tier is assigned.
+
+### Unique unknown ingredients remaining (manual review queue)
+
+97 unique names in this brand (ignoring case), each still in the manual review queue. D8 does not remove any of them. Across all five brands: 308 unique names ignoring case, 354 distinct spellings as printed.
+
+### Open items for the practitioner
+
+- White Petrolatum USP (Healing Jelly Original and Lip Therapy Advanced Healing Tube) is the largest single driver of the D8 moves. The grader does not alias it (D4). If it is treated as petrolatum, both products move to Avoid (High Priority Swap) through the carcinogen-in-leave-on escalation.
+- Yellow 5 Lake (Lip Therapy Original Mini) and Theobroma Cacao (Cocoa) Seed Butter (Healing Jelly Cocoa Butter) are single unknowns on products already held at High Priority by Petrolatum. Their D8 result does not depend on how those names are resolved.
+
+### Files written this pass
+
+- `vaseline/_grader.py` (D8 added), `vaseline/vaseline_audit.xlsx` (regenerated, 14 template columns), `vaseline/_grade_summary.json` (regenerated), `vaseline/vaseline_content_mining.md`, and this log. The verbatim `vaseline_ingredients.json` is unchanged.

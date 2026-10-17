@@ -700,3 +700,51 @@ Each unknown is listed once, with the number of products it appears in. Counts a
 - **The three graded Eucerin products rest on partial ingredient text.** Advanced Hydration SPF 30 Sunscreen Spray has only four actives in its verbatim (Avobenzone, Homosalate, Octisalate, Octocrylene). Daily Hydration Lotion with Broad Spectrum SPF 15 has only "Octisalate (3.5)". Baby Wash and Shampoo has three ingredients. Their audit_status is `needs review` and their notes say "Unresolved". Their tiers are provisional and should not be published until the full INCI list is captured.
 - **Silica Dimethyl Silylate** (5 products) is not in the reference. It is a different INCI name from "Silica Silylate" (PFAS treated). It stays unknown under D4. A practitioner decision would change five ungradable products.
 - Eleven products carry `needs review` from the earlier scrape. This regrade keeps that status.
+
+## Regrade 2026-10-16, D8: one unknown ingredient gets a Use Caution floor
+
+This section supersedes the tier counts and ungradable counts in the regrade sections above. Flags, escalations and unknown lists are unchanged by D8 (checked for every product row).
+
+### Decision as applied
+
+- D8 (practitioner, 2026-10-16): a product with exactly one unknown ingredient gets the Use Caution floor, the same way D1 and D6 work. A Puberty Safe product becomes Use Caution. A higher tier from the other flags is kept.
+- The one unknown stays in unknown_ingredients and audit_notes. Status stays "complete" with the note "one unknown ingredient, Use Caution floor applied", except where the source JSON already carries a needs-review flag (see Open items).
+- Two or more unknowns: still ungradable under D7. Products with no ingredient text: still "ingredients not found" with no tier.
+
+### Grader change
+
+- One grader for all five brands (`_grader.py`), copied into each brand folder with identical contents and pointed at its own folder. The D8 block sits directly before the D7 check. D7 now applies at two or more unknowns. The ungradable summary text now reads "two or more". No other rule changed.
+
+### Tier counts, before and after D8
+
+- Before D8 (D1 to D7): graded 3, ungradable 45 (no ingredient text: 0).
+- After D8: Puberty Safe 0, Use Caution 5, Avoid (Mild) 2, Avoid (Moderate) 0, Avoid (High Priority Swap) 1; ungradable 40 (40 with two or more unknowns, 0 with no ingredient text). Total 48.
+
+### Products that left ungradable under D8
+
+Use Caution (floor applied):
+- Q10 Revitalize Night Cream: unknown "Q10"; now Use Caution.
+- Daily Hydration Lotion: unknown "helianthus annuus (sunflower) seed oil"; now Use Caution.
+- Eucerin Baby Eczema Relief Hydrogel: unknown "Colloidal Oatmeal"; now Use Caution.
+- Baby Lotion: unknown "Dexpanthenol"; now Use Caution.
+
+Kept a higher tier from other flags:
+- Moisture Boost Serum: unknown "Sodium Ascorbyl Phosphate"; now Avoid (High Priority Swap).
+
+### Hand checks (two products)
+
+- **Baby Lotion (ungradable to Use Caution).** Printed text "Dexpanthenol", one name only. REF.txt lists Panthenol as LOW TOX and has no Dexpanthenol entry, so the name is unknown and the D8 floor applies. The source notes mark this text unresolved, so the grade should not be published yet.
+- **Q10 Revitalize Daily Cream (stays ungradable).** Printed text "Q10, Shea Butter". Neither name is in REF.txt (Shea Butter has no entry under any spelling). Two unknowns, so D7 applies and no tier is assigned.
+
+### Unique unknown ingredients remaining (manual review queue)
+
+126 unique names in this brand (ignoring case), each still in the manual review queue. D8 does not remove any of them. Across all five brands: 308 unique names ignoring case, 354 distinct spellings as printed.
+
+### Open items for the practitioner
+
+- Four D8 Use Caution grades rest on source text the audit notes mark as unresolved or conflicting: Q10 Revitalize Night Cream (Q10 only), Daily Hydration Lotion (sunflower seed oil only), Baby Lotion (Dexpanthenol only), and Eucerin Baby Eczema Relief Hydrogel (retailer text conflicts). These four keep audit_status "needs review" from the source JSON. The D8 status rule would otherwise give "complete", but the flag is about sourcing, not the unknown, so it was kept. Confirm before publishing any of these grades.
+- Dexpanthenol (Baby Lotion) is a naming variant of Panthenol, which the reference lists as LOW TOX. If the practitioner aliases it, Baby Lotion would grade Puberty Safe on its one printed name, but that text is still not a full list.
+
+### Files written this pass
+
+- `eucerin/_grader.py` (D8 added), `eucerin/eucerin_audit.xlsx` (regenerated, 14 template columns), `eucerin/_grade_summary.json` (regenerated), `eucerin/eucerin_content_mining.md`, and this log. The verbatim `eucerin_ingredients.json` is unchanged.

@@ -447,3 +447,44 @@ Each unknown is listed once, with the number of products it appears in. Counts a
 - **Seven products have no ingredient text:** Cherry Swirl, Confetti Cake, Tropical Escape and Vanilla Crush Lotion Bursts (Shea Fusion and Bursts products), Glow Body Applicator Mitt, Jergens Gift Card, and Ultra Healing Fragrance Free Moisturizer.
 - **Cocos Nucifera (Coconut) Water and Fruit Extract** are botanicals not in the reference, so they are unknown under D4.
 - **Old files in this folder.** `_grader_jergens.py`, `_master.py`, `_save.py` and `_master_list.json` predate this regrade. `_grader_jergens.py` is superseded by `_grader.py` and was not run. Left in place for you to remove.
+
+## Regrade 2026-10-16, D8: one unknown ingredient gets a Use Caution floor
+
+This section supersedes the tier counts and ungradable counts in the regrade sections above. Flags, escalations and unknown lists are unchanged by D8 (checked for every product row).
+
+### Decision as applied
+
+- D8 (practitioner, 2026-10-16): a product with exactly one unknown ingredient gets the Use Caution floor, the same way D1 and D6 work. A Puberty Safe product becomes Use Caution. A higher tier from the other flags is kept.
+- The one unknown stays in unknown_ingredients and audit_notes. Status stays "complete" with the note "one unknown ingredient, Use Caution floor applied", except where the source JSON already carries a needs-review flag (see Open items).
+- Two or more unknowns: still ungradable under D7. Products with no ingredient text: still "ingredients not found" with no tier.
+
+### Grader change
+
+- One grader for all five brands (`_grader.py`), copied into each brand folder with identical contents and pointed at its own folder. The D8 block sits directly before the D7 check. D7 now applies at two or more unknowns. The ungradable summary text now reads "two or more". No other rule changed.
+
+### Tier counts, before and after D8
+
+- Before D8 (D1 to D7): graded 0, ungradable 38 (no ingredient text: 7).
+- After D8: Puberty Safe 0, Use Caution 0, Avoid (Mild) 0, Avoid (Moderate) 0, Avoid (High Priority Swap) 0; ungradable 38 (31 with two or more unknowns, 7 with no ingredient text). Total 38.
+
+### Products that left ungradable under D8
+
+None. No product in this brand has exactly one unknown ingredient.
+
+### Hand checks (two products)
+
+- **No product moved under D8.** The brand has no product with exactly one unknown.
+- **Wet Skin Moisturizer Coconut Oil (stays ungradable, six unknowns).** Magnesium Aluminum Silicate and Sodium Hydroxide are both absent from REF.txt. D7 applies correctly.
+- **Sparkling Berry Shea Fusion (stays ungradable, ten unknowns).** Butyrospermum Parkii (Shea) Butter is absent from REF.txt, and so are Sodium Hydroxide and Tocopheryl Acetate. D7 applies correctly.
+
+### Unique unknown ingredients remaining (manual review queue)
+
+128 unique names in this brand (ignoring case), each still in the manual review queue. D8 does not remove any of them. Across all five brands: 308 unique names ignoring case, 354 distinct spellings as printed.
+
+### Open items for the practitioner
+
+- No D8 items. The unique-unknown queue is the main open work for this brand.
+
+### Files written this pass
+
+- `jergens/_grader.py` (D8 added), `jergens/jergens_audit.xlsx` (regenerated, 14 template columns), `jergens/_grade_summary.json` (regenerated), `jergens/jergens_content_mining.md`, and this log. The verbatim `jergens_ingredients.json` is unchanged.

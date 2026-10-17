@@ -1,31 +1,31 @@
 # Aquaphor Audit — Content Mining Report
 
-**Date audited:** 2026-10-16 (regraded with the unified grader under practitioner decisions D1 to D7)
-**Products audited:** 41 listed: 0 graded, 38 ungradable (unresolved ingredients), 3 ungradable (no ingredient text)
+**Date audited:** 2026-10-16 (regraded with the unified grader under practitioner decisions D1 to D8)
+**Products audited:** 41 listed: 2 graded, 36 ungradable (two or more unknown ingredients), 3 ungradable (no ingredient text)
 **Source:** https://www.aquaphorus.com/ (product names and retailer-printed ingredient lists; sources per row in the audit log). aquaphor.com is an unrelated company and was not used.
 
-**Read this first:** "Ungradable" is not a grade. Under D4 and D7, a product with any ingredient the reference does not cover gets no tier. Most Aquaphor products contain at least one common base ingredient the reference does not list, such as Caprylic/Capric Triglyceride, Shea Butter, Castor Seed Oil, or Lanolin Alcohol. Partial flags are shown for ranking only.
+**Read this first:** "Ungradable" is not a grade. Under D4, D7 and D8, a product with two or more ingredients the reference does not cover gets no tier, and a product with exactly one gets a Use Caution floor or keeps a higher tier from its other flags. Most Aquaphor products contain at least one common base ingredient the reference does not list, such as Caprylic/Capric Triglyceride, Shea Butter, Castor Seed Oil, or Lanolin Alcohol. Partial flags are shown for ranking only.
 
 ---
 
 ## Section A — Brand-level callout
 
-**Headline finding:** None of the 41 Aquaphor products can be graded: 38 contain at least one ingredient the reference does not cover, and 3 have no ingredient text. Bisabolol, a category 4 flag, appears in the partial flags of 27 of 41 products.
+**Headline finding:** Of 41 Aquaphor products, 2 can be graded, both Avoid (Moderate): the two Baby Wash & Shampoo listings, each with five flags and one unknown (Sea Salt). The other 39 are ungradable: 36 carry two or more unknown ingredients and 3 have no ingredient text. No product moved to Use Caution under D8. Bisabolol, a category 4 flag, appears in the partial flags of 27 of 41 products.
 
 **Tier distribution (41 products):**
 - Puberty Safe: 0 (0%)
 - Use Caution: 0 (0%)
 - Avoid (Mild): 0 (0%)
-- Avoid (Moderate): 0 (0%)
+- Avoid (Moderate): 2 (5%)
 - Avoid (High Priority Swap): 0 (0%)
-- Ungradable, counted separately: 41 (100%), of which 38 have unresolved ingredients and 3 have no ingredient text
+- Ungradable, counted separately: 39 (95%), of which 36 carry two or more unknown ingredients (D7) and 3 have no ingredient text
 
 **Single most-flagged product:** Aquaphor Lip Protectant + SPF 30 and Aquaphor Lip Protectant + SPF (Dual Pack) — 7 partial flags each: Petrolatum (category 1), Avobenzone, Octinoxate, Octisalate, Octocrylene, Oxybenzone (category 2), and BHT.
 
 **Cleanest product (if any):** Aquaphor Lip Repair Stick Naturally Inspired, Aloe Vera and Coconut single packs — 0 partial flags each, with 11 and 9 unknowns. Zero flags here does not mean cleared.
 
 **Content angle for Section A:**
-"I tried to grade all 41 Aquaphor products. None can be graded yet, because the reference does not cover the base ingredients most of them share." Frame it as a coverage gap.
+"I tried to grade all 41 Aquaphor products. Two Baby Wash & Shampoo listings can be graded, and both come out Avoid (Moderate). The rest can't be graded yet, because the reference does not cover the base ingredients most of them share." Frame it as a coverage gap.
 
 ---
 
@@ -55,7 +55,7 @@
 
 **Best vs worst within categories:**
 - Chapped lips: Best = Naturally Inspired Aloe Vera Single Pack (0 partial flags, 11 unknowns). Worst = Lip Protectant + SPF (Dual Pack) (7 partial flags, 9 unknowns).
-- Baby care: Best = Baby Healing Ointment (7oz) (3 partial flags, 2 unknowns). Worst = Baby Wash & Shampoo (25.4oz) (5 partial flags, 1 unknown).
+- Baby care: Best = Baby Healing Ointment (7oz) (3 partial flags, 2 unknowns). Worst = Baby Wash & Shampoo (25.4oz) (5 partial flags, 1 unknown; graded Avoid (Moderate) under D8).
 - Cracked skin: Best = Healing Ointment (7oz) (3 partial flags, 2 unknowns). Worst = Foot Mask (5 partial flags, 11 unknowns).
 - Diaper rash: Diaper Rash Paste (3.5oz) (0 partial flags, 5 unknowns). Diaper Rash Cream (3oz) has no ingredient text.
 
@@ -80,3 +80,5 @@
 **Ingredient text not captured:** Aquaphor Diaper Rash Cream (3oz.), Aquaphor Hand Mask, and Aquaphor Healing Ointment (2x.3.5oz).
 
 **Naming decisions:** Lanolin Alcohol (D4) is the largest single decision for this brand. Under the reference it is not listed, so it stays unknown until you decide otherwise.
+
+**D8 (2026-10-16, one unknown ingredient):** Two Baby Wash & Shampoo listings (25.4 oz and 16.9 fl oz) moved from ungradable to Avoid (Moderate) on one unknown, Sea Salt, with five flags. No product moved to Use Caution.

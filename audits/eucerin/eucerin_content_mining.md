@@ -1,31 +1,31 @@
 # Eucerin (US) Audit — Content Mining Report
 
-**Date audited:** 2026-10-16 (regraded with the unified grader under practitioner decisions D1 to D7)
-**Products audited:** 48 listed: 3 graded, 45 ungradable (unresolved ingredients), 0 without ingredient text
+**Date audited:** 2026-10-16 (regraded with the unified grader under practitioner decisions D1 to D8)
+**Products audited:** 48 listed: 8 graded, 40 ungradable (two or more unknown ingredients), 0 without ingredient text
 **Source:** https://www.eucerinus.com/ (product names and retailer-printed ingredient lists; sources per row in the audit log)
 
-**Read this first:** "Ungradable" is not a grade. It means at least one ingredient in the printed list is not in the reference (D4), so no tier is assigned (D7). Partial flags on ungradable products are for ranking only. The three graded products are graded from partial ingredient text and are provisional.
+**Read this first:** "Ungradable" is not a grade. It means two or more printed ingredients are not in the reference (D4 and D7), so no tier is assigned. A product with exactly one such ingredient gets a Use Caution floor, or keeps a higher tier from its other flags (D8). Partial flags on ungradable products are for ranking only. The eight graded products are provisional; see Section A.
 
 ---
 
 ## Section A — Brand-level callout
 
-**Headline finding:** Of 48 Eucerin products, 3 can be graded (1 Use Caution, 2 Avoid (Mild)), none are Puberty Safe, and 45 are ungradable because the reference does not cover at least one ingredient in each printed list.
+**Headline finding:** Of 48 Eucerin products, 8 can be graded: 5 Use Caution, 2 Avoid (Mild), and 1 Avoid (High Priority Swap). The other 40 are ungradable because each carries two or more ingredients the reference does not cover. Four of the five Use Caution grades come from the D8 single-unknown floor on printed text that the audit notes mark as unresolved or conflicting, so they are provisional.
 
 **Tier distribution (48 products):**
 - Puberty Safe: 0 (0%)
-- Use Caution: 1 (2%)
+- Use Caution: 5 (10%)
 - Avoid (Mild): 2 (4%)
 - Avoid (Moderate): 0 (0%)
-- Avoid (High Priority Swap): 0 (0%)
-- Ungradable, counted separately: 45 (94%)
+- Avoid (High Priority Swap): 1 (2%)
+- Ungradable, counted separately: 40 (83%), of which 40 carry two or more unknown ingredients (D7) and 0 have no ingredient text
 
-**Single most-flagged product:** Tinted Age Defense SPF 50 Face Sunscreen — 13 partial flags, ungradable. The most-flagged graded product is Advanced Hydration SPF 30 Sunscreen Spray, Avoid (Mild), 4 flags (Avobenzone, Homosalate, Octisalate, Octocrylene), graded from the four listed actives only.
+**Single most-flagged product:** Tinted Age Defense SPF 50 Face Sunscreen — 13 partial flags, ungradable. The most-flagged graded products carry 4 flags each: Advanced Hydration SPF 30 Sunscreen Spray (Avoid (Mild), graded from four listed actives only) and Moisture Boost Serum (Avoid (High Priority Swap), escalated by a category 1 flag in a leave-on, with one unknown).
 
-**Cleanest product (if any):** Daily Hydration Lotion with Broad Spectrum SPF 15 — Use Caution, 1 flag (Octisalate). Its only captured ingredient text is "Octisalate (3.5)", so treat this grade as provisional.
+**Cleanest product (if any):** Daily Hydration Lotion with Broad Spectrum SPF 15 — Use Caution, 1 flag (Octisalate). Its only captured ingredient text is "Octisalate (3.5)", so treat this grade as provisional. Baby Lotion also shows zero flags under D8, but its only printed text is one name (Dexpanthenol), so it is not a clean result.
 
 **Content angle for Section A:**
-"I tried to grade all 48 Eucerin products against the reference. Only 3 had ingredient lists I could grade, because most contain common base ingredients the reference does not yet cover." Say it as a coverage gap, not a verdict on the products.
+"I tried to grade all 48 Eucerin products against the reference. Only 8 had ingredient text I could grade, and most of those are provisional, because most products contain common base ingredients the reference does not yet cover." Say it as a coverage gap, not a verdict on the products.
 
 ---
 
@@ -57,7 +57,7 @@
 **Best vs worst within categories:**
 - Sun protection: Best graded = Advanced Hydration SPF 30 Sunscreen Spray (Avoid (Mild), 4 flags, provisional). Worst = Tinted Age Defense SPF 50 Face Sunscreen (13 partial flags, ungradable).
 - Eczema Relief: Best = Eucerin Eczema Relief Hydrogel (1 partial flag, 7 unknowns). Worst = Eczema Relief Flare-Up Treatment (7 partial flags, 9 unknowns).
-- Baby: Best = Baby Lotion (0 partial flags, 1 unknown). Worst = Baby Eczema Relief Cream & Body Wash (5 partial flags, 14 unknowns).
+- Baby: Best = Baby Lotion (0 partial flags, 1 unknown; Use Caution under D8 on one printed name, not publishable). Worst = Baby Eczema Relief Cream & Body Wash (5 partial flags, 14 unknowns).
 - Cleansers: Hydrating Cleansing Gel, both sizes (0 partial flags, 5 unknowns each) vs Eucerin Advanced Cleansing Body and Face Wash (5 partial flags, 5 unknowns).
 
 **Similar marketing, different grades:**
@@ -72,7 +72,7 @@
 **Content angles for Section C:**
 1. "Same Eczema Relief line, 1 flag versus 7." (Hydrogel vs Flare-Up Treatment.)
 2. "Two sizes of the Hydrating Cleansing Gel: same list, same unknowns." Use for a format-versus-formula point.
-3. "Baby Lotion has 0 partial flags but one unknown ingredient. It can't be graded yet." Honest framing.
+3. "Baby Lotion has 0 partial flags and one unknown ingredient. Under D8 it is Use Caution, but its only printed text is one name, so it is not publishable." Honest framing.
 
 ---
 
@@ -82,4 +82,6 @@
 
 **Naming variant to decide:** Silica Dimethyl Silylate (5 products) is unknown. It is not the reference's "Silica Silylate" entry (categories 1 and 2, PFAS treated). If you decide it is an alias, those five products gain a PFAS escalation and a flag.
 
-**Provisional grades:** The three graded products are graded from partial text (see the Anomalies section of the audit log). Do not publish their tiers until the full INCI lists are captured.
+**Provisional grades:** The eight graded products are provisional (see the Anomalies section of the audit log). Four Use Caution grades rest on one printed name or on text the audit notes mark as conflicting, and the SPF 15 lotion and sunscreen spray rest on partial text. Do not publish their tiers until the full INCI lists are captured.
+
+**D8 (2026-10-16, one unknown ingredient):** Four products moved from ungradable to Use Caution, each on one unknown: Q10 Revitalize Night Cream (Q10), Daily Hydration Lotion (helianthus annuus (sunflower) seed oil), Eucerin Baby Eczema Relief Hydrogel (Colloidal Oatmeal) and Baby Lotion (Dexpanthenol). One moved to Avoid (High Priority Swap): Moisture Boost Serum (Sodium Ascorbyl Phosphate), where the existing flags already set that tier. All four Use Caution moves rest on source text the audit notes mark as unresolved or conflicting, so they are provisional.

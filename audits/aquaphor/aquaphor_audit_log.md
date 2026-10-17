@@ -527,3 +527,48 @@ Each unknown is listed once, with the number of products it appears in. Counts a
 - **Lanolin Alcohol** (14 products, including the lowercase variant) is unknown under D4, as instructed.
 - **Three products have no ingredient text:** Aquaphor Diaper Rash Cream (3oz.), Aquaphor Hand Mask, and Aquaphor Healing Ointment (2x.3.5oz).
 - **Lip Repair Stick Naturally Inspired (Aloe Vera and Coconut).** Zero partial flags, but 11 and 9 unknowns respectively. The brand-printed fragment "Skin safe synthetic" is dropped by the grader's existing note-fragment rule.
+
+## Regrade 2026-10-16, D8: one unknown ingredient gets a Use Caution floor
+
+This section supersedes the tier counts and ungradable counts in the regrade sections above. Flags, escalations and unknown lists are unchanged by D8 (checked for every product row).
+
+### Decision as applied
+
+- D8 (practitioner, 2026-10-16): a product with exactly one unknown ingredient gets the Use Caution floor, the same way D1 and D6 work. A Puberty Safe product becomes Use Caution. A higher tier from the other flags is kept.
+- The one unknown stays in unknown_ingredients and audit_notes. Status stays "complete" with the note "one unknown ingredient, Use Caution floor applied", except where the source JSON already carries a needs-review flag (see Open items).
+- Two or more unknowns: still ungradable under D7. Products with no ingredient text: still "ingredients not found" with no tier.
+
+### Grader change
+
+- One grader for all five brands (`_grader.py`), copied into each brand folder with identical contents and pointed at its own folder. The D8 block sits directly before the D7 check. D7 now applies at two or more unknowns. The ungradable summary text now reads "two or more". No other rule changed.
+
+### Tier counts, before and after D8
+
+- Before D8 (D1 to D7): graded 0, ungradable 41 (no ingredient text: 3).
+- After D8: Puberty Safe 0, Use Caution 0, Avoid (Mild) 0, Avoid (Moderate) 2, Avoid (High Priority Swap) 0; ungradable 39 (36 with two or more unknowns, 3 with no ingredient text). Total 41.
+
+### Products that left ungradable under D8
+
+Use Caution (floor applied):
+- None.
+
+Kept a higher tier from other flags:
+- Aquaphor® Baby Wash & Shampoo (25.4oz.): unknown "Sea Salt"; now Avoid (Moderate).
+- Aquaphor® Baby Wash & Shampoo (16.9 fl.oz): unknown "Sea Salt"; now Avoid (Moderate).
+
+### Hand checks (two products)
+
+- **Aquaphor® Baby Wash & Shampoo (25.4oz.) (ungradable to Avoid (Moderate)).** Sea Salt is the only unknown and is absent from REF.txt. Five flags: Sodium Myreth Sulfate (sulfate, rinse-off), PEG-200 Hydrogenated Glyceryl Palmate, Cocamidopropyl Betaine, Bisabolol (no chamomile listed, so a full flag), and Polyquaternium-10. Five flags gives Avoid (Moderate). Result correct.
+- **Aquaphor® Baby Healing Ointment (7oz.) (stays ungradable).** Unknowns Ceresin and Lanolin alcohol, both absent from REF.txt. D7 applies.
+
+### Unique unknown ingredients remaining (manual review queue)
+
+45 unique names in this brand (ignoring case), each still in the manual review queue. D8 does not remove any of them. Across all five brands: 308 unique names ignoring case, 354 distinct spellings as printed.
+
+### Open items for the practitioner
+
+- Sea Salt is the only unknown in each of the two Baby Wash & Shampoo products and is absent from REF.txt. Whether to add it to the reference is the practitioner's decision; until then both products stay on the D8 path to Avoid (Moderate).
+
+### Files written this pass
+
+- `aquaphor/_grader.py` (D8 added), `aquaphor/aquaphor_audit.xlsx` (regenerated, 14 template columns), `aquaphor/_grade_summary.json` (regenerated), `aquaphor/aquaphor_content_mining.md`, and this log. The verbatim `aquaphor_ingredients.json` is unchanged.

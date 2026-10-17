@@ -2,11 +2,11 @@
  "brand": "eucerin",
  "tier_counts": {
   "Puberty Safe": 0,
-  "Use Caution": 1,
+  "Use Caution": 5,
   "Avoid (Mild)": 2,
   "Avoid (Moderate)": 0,
-  "Avoid (High Priority Swap)": 0,
-  "ungradable": 45
+  "Avoid (High Priority Swap)": 1,
+  "ungradable": 40
  },
  "rows": [
   {
@@ -445,7 +445,7 @@
   },
   {
    "product_name": "Moisture Boost Serum",
-   "tier": "ungradable",
+   "tier": "Avoid (High Priority Swap)",
    "flag_count": 4,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -461,7 +461,7 @@
    "esc": [
     "carcinogen in leave-on"
    ],
-   "status": "needs review"
+   "status": "complete"
   },
   {
    "product_name": "Hydrating Cleansing Gel, 13.5 FL OZ",
@@ -530,7 +530,7 @@
   },
   {
    "product_name": "Q10 Revitalize Night Cream",
-   "tier": "ungradable",
+   "tier": "Use Caution",
    "flag_count": 0,
    "product_type": "leave-on skincare",
    "flagged": [],
@@ -1232,7 +1232,7 @@
   },
   {
    "product_name": "Daily Hydration Lotion",
-   "tier": "ungradable",
+   "tier": "Use Caution",
    "flag_count": 0,
    "product_type": "leave-on skincare",
    "flagged": [],
@@ -1291,7 +1291,7 @@
   },
   {
    "product_name": "Eucerin Baby Eczema Relief Hydrogel",
-   "tier": "ungradable",
+   "tier": "Use Caution",
    "flag_count": 0,
    "product_type": "leave-on skincare",
    "flagged": [],
@@ -1376,7 +1376,7 @@
   },
   {
    "product_name": "Baby Lotion",
-   "tier": "ungradable",
+   "tier": "Use Caution",
    "flag_count": 0,
    "product_type": "leave-on skincare",
    "flagged": [],

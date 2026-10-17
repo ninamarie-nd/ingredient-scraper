@@ -2,11 +2,11 @@
  "brand": "vaseline",
  "tier_counts": {
   "Puberty Safe": 0,
-  "Use Caution": 0,
+  "Use Caution": 2,
   "Avoid (Mild)": 0,
   "Avoid (Moderate)": 0,
-  "Avoid (High Priority Swap)": 0,
-  "ungradable": 52
+  "Avoid (High Priority Swap)": 2,
+  "ungradable": 48
  },
  "rows": [
   {
@@ -220,7 +220,7 @@
   },
   {
    "product_name": "Vaseline® Healing Jelly Original",
-   "tier": "ungradable",
+   "tier": "Use Caution",
    "flag_count": 0,
    "product_type": "leave-on skincare",
    "flagged": [],
@@ -229,11 +229,11 @@
     "White Petrolatum Usp"
    ],
    "esc": [],
-   "status": "needs review"
+   "status": "complete"
   },
   {
    "product_name": "Vaseline® Healing Jelly Cocoa Butter",
-   "tier": "ungradable",
+   "tier": "Avoid (High Priority Swap)",
    "flag_count": 2,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -247,11 +247,11 @@
    "esc": [
     "carcinogen in leave-on"
    ],
-   "status": "needs review"
+   "status": "complete"
   },
   {
    "product_name": "Vaseline® Lip Therapy® Advanced Healing Tube",
-   "tier": "ungradable",
+   "tier": "Use Caution",
    "flag_count": 0,
    "product_type": "lip product",
    "flagged": [],
@@ -260,7 +260,7 @@
     "White Petrolatum USP"
    ],
    "esc": [],
-   "status": "needs review"
+   "status": "complete"
   },
   {
    "product_name": "Vaseline® Cocoa Shimmer Jelly Stick",
@@ -711,7 +711,7 @@
   },
   {
    "product_name": "Vaseline® Lip Therapy® Original Mini",
-   "tier": "ungradable",
+   "tier": "Avoid (High Priority Swap)",
    "flag_count": 1,
    "product_type": "lip product",
    "flagged": [
@@ -724,7 +724,7 @@
    "esc": [
     "carcinogen in leave-on"
    ],
-   "status": "needs review"
+   "status": "complete"
   },
   {
    "product_name": "Vaseline® Lip Therapy® Rosy Mini",

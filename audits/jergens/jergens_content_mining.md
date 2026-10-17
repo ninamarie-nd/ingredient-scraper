@@ -1,16 +1,16 @@
 # Jergens Audit — Content Mining Report
 
-**Date audited:** 2026-10-16 (regraded with the unified grader under practitioner decisions D1 to D7)
-**Products audited:** 38 catalog items: 0 graded, 31 ungradable (unresolved ingredients), 7 ungradable (no ingredient text)
+**Date audited:** 2026-10-16 (regraded with the unified grader under practitioner decisions D1 to D8)
+**Products audited:** 38 catalog items: 0 graded, 31 ungradable (two or more unknown ingredients), 7 ungradable (no ingredient text)
 **Source:** https://us.jergens.com/ (Shop All and the category collections)
 
-**Read this first:** "Ungradable" is not a grade. It means at least one printed ingredient is not in the reference (D4), so no tier is assigned (D7). Bundles and multi-shade pages merge several ingredient lists into one block, so their partial flags are not product counts. Do not publish bundle figures until each bundle's single-product lists are captured.
+**Read this first:** "Ungradable" is not a grade. It means two or more printed ingredients are not in the reference (D4 and D7), so no tier is assigned. A product with exactly one such ingredient gets a Use Caution floor, or keeps a higher tier from its other flags (D8). Bundles and multi-shade pages merge several ingredient lists into one block, so their partial flags are not product counts. Do not publish bundle figures until each bundle's single-product lists are captured.
 
 ---
 
 ## Section A — Brand-level callout
 
-**Headline finding:** None of the 38 Jergens products can be graded: 31 contain at least one ingredient the reference does not cover, and 7 have no ingredient text. Fragrance is in the partial flags of 29 products.
+**Headline finding:** None of the 38 Jergens products can be graded: 31 carry two or more ingredients the reference does not cover, and 7 have no ingredient text. No Jergens product has exactly one unknown, so the D8 floor changes nothing for this brand. Fragrance is in the partial flags of 29 products.
 
 **Tier distribution (38 products):**
 - Puberty Safe: 0 (0%)
@@ -18,7 +18,7 @@
 - Avoid (Mild): 0 (0%)
 - Avoid (Moderate): 0 (0%)
 - Avoid (High Priority Swap): 0 (0%)
-- Ungradable, counted separately: 38 (100%), of which 31 have unresolved ingredients and 7 have no ingredient text
+- Ungradable, counted separately: 38 (100%), of which 31 carry two or more unknown ingredients (D7) and 7 have no ingredient text
 
 **Single most-flagged product:** Natural Glow Wet Skin Moisturizer — 15 partial flags, including Fragrance (no disclosure) and Dimethicone. The highest overall count is the Gotta Glow Bundle at 22, but it merges several product lists, so it is not a product count.
 
@@ -87,3 +87,5 @@
 **Botanicals not in the reference:** Cocos Nucifera (Coconut) Water and Cocos Nucifera (Coconut) Fruit Extract are unknown under D4. The coconut oil entry is LOW TOX and is not flagged.
 
 **Old files in this folder:** `_grader_jergens.py`, `_master.py`, `_save.py`, and `_master_list.json` predate the unified grader. `_grader_jergens.py` is superseded by `_grader.py` and was not run.
+
+**D8 (2026-10-16):** No product in this brand has exactly one unknown ingredient, so the Use Caution floor changes nothing here.

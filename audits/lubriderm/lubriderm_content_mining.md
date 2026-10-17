@@ -1,16 +1,16 @@
 # Lubriderm Audit — Content Mining Report
 
-**Date audited:** 2026-10-16 (regraded with the unified grader under practitioner decisions D1 to D7)
-**Products audited:** 7 listed: 0 graded, 6 ungradable (unresolved ingredients), 1 ungradable (no ingredient text)
+**Date audited:** 2026-10-16 (regraded with the unified grader under practitioner decisions D1 to D8)
+**Products audited:** 7 listed: 0 graded, 6 ungradable (two or more unknown ingredients), 1 ungradable (no ingredient text)
 **Source:** https://www.lubriderm.com/
 
-**Read this first:** "Ungradable" is not a grade. It means at least one printed ingredient is not in the reference (D4), so no tier is assigned (D7). Partial flags are for ranking only.
+**Read this first:** "Ungradable" is not a grade. It means two or more printed ingredients are not in the reference (D4 and D7), so no tier is assigned. A product with exactly one such ingredient gets a Use Caution floor, or keeps a higher tier from its other flags (D8). Partial flags are for ranking only.
 
 ---
 
 ## Section A — Brand-level callout
 
-**Headline finding:** None of the 7 Lubriderm products can be graded. Six contain at least one ingredient the reference does not cover, and the travel bundle has no ingredient text. Fragrance is printed in the ingredient list of Daily Moisture Lotion Fragrance-Free.
+**Headline finding:** None of the 7 Lubriderm products can be graded. Six carry two or more ingredients the reference does not cover, and the travel bundle has no ingredient text. No Lubriderm product has exactly one unknown, so the D8 floor changes nothing for this brand. Fragrance is printed in the ingredient list of Daily Moisture Lotion Fragrance-Free.
 
 **Tier distribution (7 products):**
 - Puberty Safe: 0 (0%)
@@ -18,7 +18,7 @@
 - Avoid (Mild): 0 (0%)
 - Avoid (Moderate): 0 (0%)
 - Avoid (High Priority Swap): 0 (0%)
-- Ungradable, counted separately: 7 (100%), of which 6 have unresolved ingredients and 1 has no ingredient text
+- Ungradable, counted separately: 7 (100%), of which 6 carry two or more unknown ingredients (D7) and 1 has no ingredient text
 
 **Single most-flagged product:** Intense Skin Repair Lotion — 6 partial flags (Mineral Oil, Dimethicone, Carbomer, Ceteareth-20, Phenoxyethanol, Fragrance). Its list also includes a Polysorbate entry that the reference (REF.txt) marks as a flag but the grader's compiled reference does not, so the partial count is likely to rise.
 
@@ -78,3 +78,5 @@
 **Reference gap:** Polysorbate 20, 60 and 80 are in REF.txt (categories 1, 2, 4 and 5) but missing from the compiled reference. Under this grader they are unknown, which makes Intense Skin Repair Lotion and Advanced Therapy Lotion Fragrance-Free ungradable. Merging them into the compiled reference would add partial flags and would not make any Lubriderm product gradable.
 
 **Ingredient text not captured:** Daily Moisture Lotion Fragrance-Free (24 fl oz, 2-count + 6 fl oz Travel Size) has no printed ingredient list in the data.
+
+**D8 (2026-10-16):** No product in this brand has exactly one unknown ingredient, so the Use Caution floor changes nothing here.

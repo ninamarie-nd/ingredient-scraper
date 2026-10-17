@@ -1,31 +1,31 @@
 # Vaseline Audit — Content Mining Report
 
-**Date audited:** 2026-10-16 (regraded with the unified grader under practitioner decisions D1 to D7)
-**Products audited:** 52 listed: 0 graded, 36 ungradable (unresolved ingredients), 16 ungradable (no ingredient text)
+**Date audited:** 2026-10-16 (regraded with the unified grader under practitioner decisions D1 to D8)
+**Products audited:** 52 listed: 4 graded, 32 ungradable (two or more unknown ingredients), 16 ungradable (no ingredient text)
 **Source:** https://www.vaseline.com/us/en/products.html (US site)
 
-**Read this first:** "Ungradable" is not a grade. It means at least one printed ingredient is not in the reference (D4), so no tier is assigned (D7). Partial flags are for ranking only. Sixteen product pages show no ingredient text at all, so they cannot be checked from the data.
+**Read this first:** "Ungradable" is not a grade. It means two or more printed ingredients are not in the reference (D4 and D7), so no tier is assigned. A product with exactly one such ingredient gets a Use Caution floor, or keeps a higher tier from its other flags (D8). Partial flags are for ranking only. Sixteen product pages show no ingredient text at all, so they cannot be checked from the data.
 
 ---
 
 ## Section A — Brand-level callout
 
-**Headline finding:** None of the 52 Vaseline products can be graded: 36 contain at least one ingredient the reference does not cover, and 16 have no ingredient text on the product page. Petrolatum is among the partial flags for 30 products.
+**Headline finding:** Four of the 52 Vaseline products can be graded: 2 Use Caution and 2 Avoid (High Priority Swap). The other 48 are ungradable: 32 carry two or more ingredients the reference does not cover, and 16 have no ingredient text. Both Use Caution grades rest on one unresolved name, White Petrolatum USP, which appears to be the reference's Petrolatum entry (category 1) under another name.
 
 **Tier distribution (52 products):**
 - Puberty Safe: 0 (0%)
-- Use Caution: 0 (0%)
+- Use Caution: 2 (4%)
 - Avoid (Mild): 0 (0%)
 - Avoid (Moderate): 0 (0%)
-- Avoid (High Priority Swap): 0 (0%)
-- Ungradable, counted separately: 52 (100%), of which 36 have unresolved ingredients and 16 have no ingredient text
+- Avoid (High Priority Swap): 2 (4%)
+- Ungradable, counted separately: 48 (92%), of which 32 carry two or more unknown ingredients (D7) and 16 have no ingredient text
 
 **Single most-flagged product:** Vaseline Intensive Care Cocoa Body Butter — 15 partial flags, including Petrolatum, Paraffin, Parfum (no disclosure), Methylparaben, BHT, and several silicones.
 
-**Cleanest product with text (if any):** Vaseline Healing Jelly Original — 0 partial flags, 1 unknown ("White Petrolatum USP"). The printed ingredient is petrolatum under another name, so the zero is a naming gap, not a clean result. The same is true of Lip Therapy Advanced Healing Tube.
+**Cleanest product with text (if any):** Vaseline Healing Jelly Original and Vaseline Lip Therapy Advanced Healing Tube — Use Caution under the D8 floor, 0 partial flags and 1 unknown each (White Petrolatum USP). This is a naming gap, not a clean result. If the name is treated as petrolatum, both move to Avoid (High Priority Swap).
 
 **Content angle for Section A:**
-"I checked 52 Vaseline products. None can be graded yet: most contain base ingredients the reference does not cover, and 16 pages show no ingredient list at all." Do not describe the no-text products as clean or unclean.
+"I checked 52 Vaseline products. Four can be graded so far, and the two Use Caution grades rest on one name the reference does not match. The rest can't be graded yet: most contain ingredients the reference does not cover, and 16 pages show no ingredient list at all." Keep it about coverage and missing data.
 
 ---
 
@@ -55,7 +55,7 @@
 ## Section C — Comparison angles
 
 **Best vs worst within categories (with text):**
-- Lip Therapy: Best = Original Mini (1 partial flag, 1 unknown). Worst = Rosy Lips Stick (5 partial flags as printed, 4 after the false positive; 14 unknowns).
+- Lip Therapy: Best = Original Mini (1 partial flag, 1 unknown; Avoid (High Priority Swap) from the petrolatum escalation). Worst = Rosy Lips Stick (5 partial flags as printed, 4 after the false positive; 14 unknowns).
 - Intensive Care lotions and creams: Best = Cocoa Radiant Gel Oil (2 partial flags, 2 unknowns). Worst = Cocoa Body Butter (15 partial flags, 24 unknowns).
 - Men: Men Fast Absorbing Lotion (10 partial flags, 10 unknowns) vs Men Cooling Hydration Lotion (11 partial flags, 13 unknowns) and Men Extra Strength Lotion (11 partial flags, 8 unknowns).
 - Radiant X: Replenishing Hydrating Body Oil (5 partial flags, 6 unknowns) vs Even Tone Nourishing Body Lotion (9 partial flags, 17 unknowns).
@@ -66,7 +66,7 @@
 - Vaseline Lip Therapy Original Stick (1 partial flag, 9 unknowns) and Vaseline Lip Therapy Rosy Lips Stick (4 to 5 partial flags) both sit in the same line.
 
 **Cleanest in each category (with text):**
-- Lip Therapy: Original Mini (1 partial flag, 1 unknown).
+- Lip Therapy: Original Mini (1 partial flag, 1 unknown; Avoid (High Priority Swap) from the petrolatum escalation).
 - Intensive Care: Cocoa Radiant Gel Oil (2 partial flags, 2 unknowns).
 - Radiant X: Replenishing Hydrating Body Oil (5 partial flags, 6 unknowns).
 
@@ -78,10 +78,12 @@
 
 ## Raw data summary
 
-**Unknown ingredients (manual review queue):** 119 distinct names. Most frequent: Stearic Acid (16 products), Theobroma Cacao (Cocoa) Seed Butter (10), Glyceryl Stearate (8), Tocopheryl Acetate (8), Helianthus Annuus (Sunflower) Seed Oil (8), Glycol Stearate (7), Acrylates/C10-30 Alkyl Acrylate Crosspolymer (7), Hexyl Cinnamal (7). The full deduplicated list is in the Regrade section of `vaseline_audit_log.md`.
+**Unknown ingredients (manual review queue):** 119 distinct spellings (97 ignoring case). Most frequent: Stearic Acid (16 products), Theobroma Cacao (Cocoa) Seed Butter (10), Glyceryl Stearate (8), Tocopheryl Acetate (8), Helianthus Annuus (Sunflower) Seed Oil (8), Glycol Stearate (7), Acrylates/C10-30 Alkyl Acrylate Crosspolymer (7), Hexyl Cinnamal (7). The full deduplicated list is in the Regrade section of `vaseline_audit_log.md`.
 
 **Name variants to decide (D4):**
-- White Petrolatum USP (2 products): the reference's Petrolatum entry is category 1. If you decide it is an alias, each product gains a Petrolatum flag and a "carcinogen in leave-on" escalation.
+- White Petrolatum USP (2 products): the reference's Petrolatum entry is category 1. If you decide it is an alias, each product gains a Petrolatum flag and a "carcinogen in leave-on" escalation. Both are Use Caution today on the D8 floor, so as an alias both would move to Avoid (High Priority Swap).
 - Silica Dimethyl Silylate (Cocoa Shimmer Jelly Stick): see the Eucerin note.
 
-**Known limits:** The Vaccinium false positive (Rosy Lips Stick) and the unimplemented mica conditional (three shimmer products) are listed in the audit log. Neither changes a tier here, since every product is ungradable, but both change the partial flags shown above.
+**Known limits:** The Vaccinium false positive (Rosy Lips Stick) and the unimplemented mica conditional (three shimmer products) are listed in the audit log. Neither changes a tier here: the four graded products contain neither, but both change the partial flags shown above.
+
+**D8 (2026-10-16, one unknown ingredient):** Two products moved from ungradable to Use Caution, Vaseline Healing Jelly Original and Vaseline Lip Therapy Advanced Healing Tube, both on the name White Petrolatum USP. Two other products kept their single unknown and moved to Avoid (High Priority Swap), where the petrolatum or other flags already set that tier: Healing Jelly Cocoa Butter (Theobroma Cacao (Cocoa) Seed Butter) and Lip Therapy Original Mini (Yellow 5 Lake).
