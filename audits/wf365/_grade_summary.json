@@ -1,0 +1,621 @@
+{
+ "brand": "wf365",
+ "tier_counts": {
+  "Puberty Safe": 0,
+  "Use Caution": 10,
+  "Avoid (Mild)": 1,
+  "Avoid (Moderate)": 7,
+  "Avoid (High Priority Swap)": 7,
+  "ungradable": 0
+ },
+ "rows": [
+  {
+   "product_name": "365 Volume & Thickness Shampoo Rosemary Mint",
+   "tier": "Avoid (Moderate)",
+   "flag_count": 3,
+   "product_type": "body wash/shampoo/conditioner",
+   "flagged": [
+    "Cocamidopropyl Hydroxysultaine",
+    "Parfum",
+    "Guar Hydroxypropyltrimonium Chloride"
+   ],
+   "natural": [],
+   "unknown": [
+    "Sodium Methyl 2-Sulfolaurate",
+    "Cetyl Betaine",
+    "Disodium 2-Sulfolaurate",
+    "Tetrasodium Glutamate Diacetate",
+    "Hydrolyzed Rice Protein",
+    "Hydrolyzed Collagen"
+   ],
+   "esc": [],
+   "status": "complete"
+  },
+  {
+   "product_name": "365 Shampoo Fragrance Free",
+   "tier": "Use Caution",
+   "flag_count": 2,
+   "product_type": "body wash/shampoo/conditioner",
+   "flagged": [
+    "Cocamidopropyl Hydroxysultaine",
+    "Polyquaternium-10"
+   ],
+   "natural": [],
+   "unknown": [
+    "Sodium Methyl 2-Sulfolaurate",
+    "Disodium 2-Sulfolaurate",
+    "Tetrasodium Glutamate Diacetate",
+    "Aloe Barbadensis Leaf Extract"
+   ],
+   "esc": [],
+   "status": "complete"
+  },
+  {
+   "product_name": "365 Moisture & Shine Shampoo Lavender",
+   "tier": "Avoid (Moderate)",
+   "flag_count": 4,
+   "product_type": "body wash/shampoo/conditioner",
+   "flagged": [
+    "Cocamidopropyl Hydroxysultaine",
+    "Guar Hydroxypropyltrimonium Chloride",
+    "Parfum",
+    "Polysorbate 20"
+   ],
+   "natural": [],
+   "unknown": [
+    "Sodium Methyl 2-Sulfolaurate",
+    "Cetyl Betaine",
+    "Disodium 2-Sulfolaurate",
+    "Hydrolyzed Jojoba Esters",
+    "Tetrasodium Glutamate Diacetate",
+    "Cannabis Sativa Seed Oil",
+    "Argania Spinosa Kernel Oil"
+   ],
+   "esc": [],
+   "status": "complete"
+  },
+  {
+   "product_name": "365 Moisture & Shine Conditioner Lavender",
+   "tier": "Avoid (Moderate)",
+   "flag_count": 3,
+   "product_type": "body wash/shampoo/conditioner",
+   "flagged": [
+    "Cetrimonium Chloride",
+    "Parfum",
+    "Polysorbate 20"
+   ],
+   "natural": [],
+   "unknown": [
+    "C13-15 Alkane",
+    "Lactic Acid",
+    "Stearamidopropyl Dimethylamine",
+    "Helianthus Annuus Seed Oil",
+    "Hydrolyzed Jojoba Esters",
+    "Sodium Hydroxide",
+    "Tetrasodium Glutamate Diacetate",
+    "Cannabis Sativa Seed Oil",
+    "Argania Spinosa Kernel Oil"
+   ],
+   "esc": [],
+   "status": "complete"
+  },
+  {
+   "product_name": "365 Conditioner Fragrance Free",
+   "tier": "Use Caution",
+   "flag_count": 2,
+   "product_type": "body wash/shampoo/conditioner",
+   "flagged": [
+    "Behentrimonium Chloride",
+    "Guar Hydroxypropyltrimonium Chloride"
+   ],
+   "natural": [],
+   "unknown": [
+    "Glyceryl Stearate",
+    "Cocos Nucifera Oil",
+    "Tetrasodium Glutamate Diacetate"
+   ],
+   "esc": [],
+   "status": "complete"
+  },
+  {
+   "product_name": "365 Anti-Dandruff 2-In-1 Shampoo & Conditioner",
+   "tier": "Avoid (Moderate)",
+   "flag_count": 6,
+   "product_type": "body wash/shampoo/conditioner",
+   "flagged": [
+    "Cocamidopropyl Betaine",
+    "Sodium Coco-Sulfate",
+    "Ammonium Lauryl Sulfate",
+    "Parfum",
+    "Polyquaternium-7",
+    "Guar Hydroxypropyltrimonium Chloride"
+   ],
+   "natural": [],
+   "unknown": [
+    "Glycol Stearate",
+    "Aloe Barbadensis Leaf Juice",
+    "Coco-Betaine",
+    "Gluconolactone",
+    "Cocos Nucifera Oil",
+    "Xylitol",
+    "Coco-Caprylate/Caprate",
+    "Hydrolyzed Quinoa",
+    "Prunus Amygdalus Dulcis Oil",
+    "Simmondsia Chinensis Seed Oil"
+   ],
+   "esc": [],
+   "status": "complete"
+  },
+  {
+   "product_name": "365 Colloidal Oatmeal Fragrance-Free Body Wash",
+   "tier": "Avoid (High Priority Swap)",
+   "flag_count": 6,
+   "product_type": "body wash/shampoo/conditioner",
+   "flagged": [
+    "Sodium Cocoyl Isethionate",
+    "Acrylates Copolymer",
+    "Phenoxyethanol",
+    "Guar Hydroxypropyltrimonium Chloride",
+    "Ethylhexylglycerin",
+    "Hexylene Glycol"
+   ],
+   "natural": [],
+   "unknown": [
+    "Arginine",
+    "Sodium Laurylglucosides Hydroxypropylsulfonate",
+    "Butyrospermum Parkii Butter",
+    "Colloidal Oatmeal"
+   ],
+   "esc": [
+    "PFAS"
+   ],
+   "status": "complete"
+  },
+  {
+   "product_name": "365 Gentle Skin Cleanser",
+   "tier": "Avoid (Mild)",
+   "flag_count": 2,
+   "product_type": "body wash/shampoo/conditioner",
+   "flagged": [
+    "Propanediol",
+    "Phenoxyethanol"
+   ],
+   "natural": [],
+   "unknown": [
+    "Sorbitan Caprylate",
+    "Sodium Stearoyl Glutamate",
+    "Acrylates/C10-30 Alkyl Acrylate Crosspolymer",
+    "Sodium Hydroxide"
+   ],
+   "esc": [],
+   "status": "complete"
+  },
+  {
+   "product_name": "365 Moisturizing Bar Fragrance Free",
+   "tier": "Use Caution",
+   "flag_count": 1,
+   "product_type": "body wash/shampoo/conditioner",
+   "flagged": [
+    "Sodium Cocoyl Isethionate"
+   ],
+   "natural": [],
+   "unknown": [
+    "Butyrospermum Parkii Butter",
+    "Theobroma Cacao Seed Butter",
+    "Stearic Acid",
+    "Tetrasodium Glutamate Diacetate",
+    "Rosmarinus Officinalis Extract"
+   ],
+   "esc": [],
+   "status": "complete"
+  },
+  {
+   "product_name": "365 Foaming Hand Soap Fragrance Free",
+   "tier": "Use Caution",
+   "flag_count": 1,
+   "product_type": "body wash/shampoo/conditioner",
+   "flagged": [
+    "Sodium Cocoyl Isethionate"
+   ],
+   "natural": [],
+   "unknown": [
+    "Sodium Cocoamphoacetate",
+    "Tetrasodium Glutamate Diacetate",
+    "Hydrolyzed Jojoba Esters",
+    "Aloe Barbadensis Leaf Juice",
+    "Arctium Lappa Root Extract",
+    "Chamomilla Recutita Flower Extract"
+   ],
+   "esc": [],
+   "status": "complete"
+  },
+  {
+   "product_name": "365 Liquid Hand Soap",
+   "tier": "Avoid (Moderate)",
+   "flag_count": 2,
+   "product_type": "body wash/shampoo/conditioner",
+   "flagged": [
+    "Cocamidopropyl Hydroxysultaine",
+    "Parfum"
+   ],
+   "natural": [],
+   "unknown": [
+    "Sodium Lauroyl Sarcosinate",
+    "Sodium Methyl 2-Sulfolaurate",
+    "Cyamopsis Tetragonoloba Gum",
+    "Disodium 2-Sulfolaurate",
+    "Tetrasodium Glutamate Diacetate",
+    "Hydrolyzed Jojoba Esters",
+    "Aloe Barbadensis Leaf Juice",
+    "Butyrospermum Parkii Butter",
+    "Arctium Lappa Root Extract",
+    "Chamomilla Recutita Flower Extract"
+   ],
+   "esc": [],
+   "status": "complete"
+  },
+  {
+   "product_name": "365 Liquid Hand Soap Anjou Pear",
+   "tier": "Avoid (Moderate)",
+   "flag_count": 2,
+   "product_type": "body wash/shampoo/conditioner",
+   "flagged": [
+    "Cocamidopropyl Hydroxysultaine",
+    "Parfum"
+   ],
+   "natural": [],
+   "unknown": [
+    "Sodium Lauroyl Sarcosinate",
+    "Sodium Methyl 2-Sulfolaurate",
+    "Cyamopsis Tetragonoloba Gum",
+    "Disodium 2-Sulfolaurate",
+    "Tetrasodium Glutamate Diacetate",
+    "Hydrolyzed Jojoba Esters",
+    "Aloe Barbadensis Leaf Juice",
+    "Butyrospermum Parkii Butter",
+    "Arctium Lappa Root Extract",
+    "Chamomilla Recutita Flower Extract"
+   ],
+   "esc": [],
+   "status": "complete"
+  },
+  {
+   "product_name": "365 Liquid Hand Soap Fragrance Free",
+   "tier": "Use Caution",
+   "flag_count": 1,
+   "product_type": "body wash/shampoo/conditioner",
+   "flagged": [
+    "Cocamidopropyl Hydroxysultaine"
+   ],
+   "natural": [],
+   "unknown": [
+    "Sodium Lauroyl Sarcosinate",
+    "Sodium Methyl 2-Sulfolaurate",
+    "Cyamopsis Tetragonoloba Gum",
+    "Disodium 2-Sulfolaurate",
+    "Tetrasodium Glutamate Diacetate",
+    "Hydrolyzed Jojoba Esters",
+    "Aloe Barbadensis Leaf Juice",
+    "Butyrospermum Parkii Butter",
+    "Arctium Lappa Root Extract",
+    "Chamomilla Recutita Flower Extract"
+   ],
+   "esc": [],
+   "status": "complete"
+  },
+  {
+   "product_name": "365 Maximum Moisture Lotion",
+   "tier": "Avoid (High Priority Swap)",
+   "flag_count": 5,
+   "product_type": "leave-on skincare",
+   "flagged": [
+    "Polysorbate 20",
+    "Dimethicone",
+    "Ethylhexylglycerin",
+    "Parfum",
+    "Phenoxyethanol"
+   ],
+   "natural": [],
+   "unknown": [
+    "Isopropyl Palmitate",
+    "Butyrospermum Parkii Butter",
+    "Cocos Nucifera Oil",
+    "Cannabis Sativa Seed Oil",
+    "Argania Spinosa Kernel Oil",
+    "Aloe Barbadensis Leaf Extract",
+    "Camellia Sinensis Leaf Extract",
+    "Chamomilla Recutita Flower Extract",
+    "Cucumis Sativus Fruit Extract",
+    "Lavandula Angustifolia Flower Extract",
+    "Tocopheryl Acetate",
+    "Lecithin",
+    "Echinacea Angustifolia Root Extract"
+   ],
+   "esc": [
+    "PFAS",
+    "carcinogen in leave-on"
+   ],
+   "status": "complete"
+  },
+  {
+   "product_name": "365 Maximum Moisture Lotion Lavender",
+   "tier": "Avoid (High Priority Swap)",
+   "flag_count": 5,
+   "product_type": "leave-on skincare",
+   "flagged": [
+    "Polysorbate 20",
+    "Dimethicone",
+    "Ethylhexylglycerin",
+    "Parfum",
+    "Phenoxyethanol"
+   ],
+   "natural": [],
+   "unknown": [
+    "Isopropyl Palmitate",
+    "Butyrospermum Parkii Butter",
+    "Cocos Nucifera Oil",
+    "Cannabis Sativa Seed Oil",
+    "Argania Spinosa Kernel Oil",
+    "Aloe Barbadensis Leaf Extract",
+    "Camellia Sinensis Leaf Extract",
+    "Chamomilla Recutita Flower Extract",
+    "Cucumis Sativus Fruit Extract",
+    "Lavandula Angustifolia Flower Extract",
+    "Tocopheryl Acetate",
+    "Lecithin",
+    "Echinacea Angustifolia Root Extract"
+   ],
+   "esc": [
+    "PFAS",
+    "carcinogen in leave-on"
+   ],
+   "status": "complete"
+  },
+  {
+   "product_name": "365 Colloidal Oatmeal Body Lotion Fragrance Free",
+   "tier": "Avoid (High Priority Swap)",
+   "flag_count": 3,
+   "product_type": "leave-on skincare",
+   "flagged": [
+    "Propanediol",
+    "Dimethicone",
+    "Phenoxyethanol"
+   ],
+   "natural": [],
+   "unknown": [
+    "Caprylic/Capric Triglyceride",
+    "Isopropyl Palmitate",
+    "Butyrospermum Parkii Butter",
+    "Sorbitan Caprylate",
+    "Colloidal Oatmeal",
+    "Acrylates/C10-30 Alkyl Acrylate Crosspolymer",
+    "Sodium Stearoyl Glutamate",
+    "Sodium Hydroxide",
+    "Avena Sativa Kernel Extract",
+    "Aloe Barbadensis Leaf Juice"
+   ],
+   "esc": [
+    "PFAS",
+    "carcinogen in leave-on"
+   ],
+   "status": "complete"
+  },
+  {
+   "product_name": "365 Baby Lotion Fragrance Free",
+   "tier": "Avoid (High Priority Swap)",
+   "flag_count": 4,
+   "product_type": "leave-on skincare",
+   "flagged": [
+    "Polysorbate 60",
+    "Phenoxyethanol",
+    "Dimethicone",
+    "Ethylhexylglycerin"
+   ],
+   "natural": [],
+   "unknown": [
+    "Isopropyl Palmitate",
+    "Caprylic/Capric Triglyceride",
+    "Sodium Hydroxide",
+    "Butyrospermum Parkii Butter",
+    "Lavandula Angustifolia Flower Extract",
+    "Calendula Officinalis Flower Extract",
+    "Helianthus Annuus Seed Oil",
+    "Spiraea Ulmaria Leaf Extract"
+   ],
+   "esc": [
+    "PFAS",
+    "carcinogen in leave-on"
+   ],
+   "status": "complete"
+  },
+  {
+   "product_name": "365 Mineral Sport Sunscreen Lotion SPF 30",
+   "tier": "Use Caution",
+   "flag_count": 0,
+   "product_type": "leave-on skincare",
+   "flagged": [],
+   "natural": [],
+   "unknown": [
+    "Helianthus Annuus Seed Oil",
+    "Simmondsia Chinensis Seed Oil",
+    "Cocos Nucifera Oil"
+   ],
+   "esc": [],
+   "status": "complete"
+  },
+  {
+   "product_name": "365 Daily Facial Cleanser Normal to Oily",
+   "tier": "Use Caution",
+   "flag_count": 1,
+   "product_type": "body wash/shampoo/conditioner",
+   "flagged": [
+    "Cocamidopropyl Hydroxysultaine"
+   ],
+   "natural": [],
+   "unknown": [
+    "Sodium Methyl 2-Sulfolaurate",
+    "Cocoyl Methyl Glucamide",
+    "Cetyl Betaine",
+    "Capryloyl/Caproyl Anhydro Methyl Glucamide",
+    "Disodium 2-Sulfolaurate",
+    "Tetrasodium Glutamate Diacetate",
+    "Aloe Barbadensis Leaf Juice"
+   ],
+   "esc": [],
+   "status": "complete"
+  },
+  {
+   "product_name": "365 Exfoliating Apricot Scrub",
+   "tier": "Avoid (Moderate)",
+   "flag_count": 6,
+   "product_type": "body wash/shampoo/conditioner",
+   "flagged": [
+    "Butylene Glycol",
+    "Parfum",
+    "Phenoxyethanol",
+    "Potassium Hydroxide",
+    "Carbomer",
+    "Ethylhexylglycerin"
+   ],
+   "natural": [],
+   "unknown": [
+    "Stearic Acid",
+    "Juglans Regia Shell Powder",
+    "Caprylic/Capric Triglyceride",
+    "Carthamus Tinctorius Seed Oil",
+    "Coco-Betaine",
+    "Butyrospermum Parkii Butter",
+    "Olea Europaea Fruit Oil",
+    "Sorbitan Sesquioleate",
+    "Hydrogenated Lecithin",
+    "Cocos Nucifera Oil",
+    "Glyceryl Stearate",
+    "Acrylates/C10-30 Alkyl Acrylate Crosspolymer",
+    "Behenic Acid",
+    "Myristic Acid",
+    "Prunus Armeniaca Fruit Extract"
+   ],
+   "esc": [],
+   "status": "complete"
+  },
+  {
+   "product_name": "365 Facial Toner Rose Petal",
+   "tier": "Avoid (High Priority Swap)",
+   "flag_count": 3,
+   "product_type": "leave-on skincare",
+   "flagged": [
+    "Pelargonium Graveolens Flower Oil",
+    "Phenethyl Alcohol",
+    "Phenoxyethanol"
+   ],
+   "natural": [],
+   "unknown": [
+    "Hamamelis Virginiana Water",
+    "Aloe Barbadensis Leaf Juice",
+    "Rosa Damascena Flower Water",
+    "Rose Flower Oil",
+    "Camellia Sinensis Leaf Extract",
+    "Eugenia Caryophyllus Leaf Oil",
+    "Anhydroxylitol",
+    "Xylitylglucoside",
+    "Xylitol",
+    "Gluconolactone"
+   ],
+   "esc": [
+    "carcinogen in leave-on"
+   ],
+   "status": "complete"
+  },
+  {
+   "product_name": "365 Cleansing Micellar Water",
+   "tier": "Avoid (High Priority Swap)",
+   "flag_count": 3,
+   "product_type": "leave-on skincare",
+   "flagged": [
+    "Alcohol",
+    "Polysorbate 20",
+    "Phenoxyethanol"
+   ],
+   "natural": [],
+   "unknown": [
+    "Aloe Barbadensis Leaf Juice",
+    "Xylitylglucoside",
+    "Xylitol",
+    "Caprylic/Capric Glycerides Polyglyceryl-10 Esters",
+    "Hamamelis Virginiana Water",
+    "Camellia Sinensis Leaf Extract",
+    "Capryloyl Glycine",
+    "Hydrolyzed Algin",
+    "Ethyl Lauroyl Arginate Hcl",
+    "Citrus Paradisi Fruit Extract",
+    "Cucumis Melo Fruit Extract",
+    "Citrus Aurantium Dulcis Peel Extract",
+    "Theobroma Cacao Extract",
+    "Citrus Tangerina Peel Extract",
+    "Cinnamomum Zeylanicum Bark Extract",
+    "Chlorella Vulgaris Extract",
+    "Sarcosine",
+    "Sea Water",
+    "Anhydroxylitol",
+    "Gluconolactone"
+   ],
+   "esc": [
+    "carcinogen in leave-on"
+   ],
+   "status": "complete"
+  },
+  {
+   "product_name": "365 Organic Lip Balm",
+   "tier": "Use Caution",
+   "flag_count": 0,
+   "product_type": "leave-on skincare",
+   "flagged": [],
+   "natural": [],
+   "unknown": [
+    "Cocos Nucifera Oil",
+    "Olea Europaea Fruit Oil",
+    "Butyrospermum Parkii Butter",
+    "Aroma",
+    "Theobroma Cacao Seed Butter",
+    "Cannabis Sativa Seed Oil",
+    "Honey"
+   ],
+   "esc": [],
+   "status": "complete"
+  },
+  {
+   "product_name": "365 Sweet Almond Oil",
+   "tier": "Use Caution",
+   "flag_count": 0,
+   "product_type": "leave-on skincare",
+   "flagged": [],
+   "natural": [],
+   "unknown": [
+    "Prunus Amygdalus Dulcis Oil"
+   ],
+   "esc": [],
+   "status": "complete"
+  },
+  {
+   "product_name": "365 Sensitive Cavity Fighting Toothpaste with Hemp Seed Oil",
+   "tier": "Use Caution",
+   "flag_count": 0,
+   "product_type": "oral care",
+   "flagged": [],
+   "natural": [],
+   "unknown": [
+    "Sodium Monofluorophosphate",
+    "Calcium Carbonate",
+    "Hydrated Silica",
+    "Xylitol",
+    "Carrageenan",
+    "Cannabis Sativa (Hemp) Seed Oil",
+    "Sodium Lauroyl Sarcosinate",
+    "Natural Flavor",
+    "Zinc Citrate"
+   ],
+   "esc": [],
+   "status": "complete"
+  }
+ ]
+}

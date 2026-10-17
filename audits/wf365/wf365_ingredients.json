@@ -1,0 +1,205 @@
+{
+ "brand": "365 by Whole Foods Market",
+ "products": [
+  {
+   "product_name": "365 Volume & Thickness Shampoo Rosemary Mint",
+   "product_url": "https://skinsort.com/products/365-everyday-value/volume-thick-shampoo-rosemary-mint",
+   "brand_category": "General",
+   "product_type": "body wash/shampoo/conditioner",
+   "ingredients_verbatim": "Water, Cocamidopropyl Hydroxysultaine, Sodium Methyl 2-Sulfolaurate, Cetyl Betaine, Glycerin, Parfum, Disodium 2-Sulfolaurate, Guar Hydroxypropyltrimonium Chloride, Citric Acid, Sodium Benzoate, Sodium Citrate, Potassium Sorbate, Tetrasodium Glutamate Diacetate, Hydrolyzed Rice Protein, Hydrolyzed Collagen",
+   "ingredient_source": "Carried over from prior wf365 audit (xlsx); verbatim text not re-scraped 2026-10-17"
+  },
+  {
+   "product_name": "365 Shampoo Fragrance Free",
+   "product_url": "https://skinsort.com/products/365-everyday-value/shampoo",
+   "brand_category": "General",
+   "product_type": "body wash/shampoo/conditioner",
+   "ingredients_verbatim": "Water, Cocamidopropyl Hydroxysultaine, Sodium Methyl 2-Sulfolaurate, Decyl Glucoside, Disodium 2-Sulfolaurate, Glycerin, Polyquaternium-10, Sodium Benzoate, Potassium Sorbate, Citric Acid, Sodium Chloride, Tetrasodium Glutamate Diacetate, Aloe Barbadensis Leaf Extract",
+   "ingredient_source": "Carried over from prior wf365 audit (xlsx); verbatim text not re-scraped 2026-10-17"
+  },
+  {
+   "product_name": "365 Moisture & Shine Shampoo Lavender",
+   "product_url": "https://skinsort.com/products/365-everyday-value/moisture-shine-shampoo",
+   "brand_category": "General",
+   "product_type": "body wash/shampoo/conditioner",
+   "ingredients_verbatim": "Water, Cocamidopropyl Hydroxysultaine, Sodium Methyl 2-Sulfolaurate, Glycerin, Cetyl Betaine, Disodium 2-Sulfolaurate, Guar Hydroxypropyltrimonium Chloride, Citric Acid, Parfum, Sodium Benzoate, Sodium Citrate, Hydrolyzed Jojoba Esters, Potassium Sorbate, Tetrasodium Glutamate Diacetate, Polysorbate 20, Cannabis Sativa Seed Oil, Argania Spinosa Kernel Oil",
+   "ingredient_source": "Carried over from prior wf365 audit (xlsx); verbatim text not re-scraped 2026-10-17"
+  },
+  {
+   "product_name": "365 Moisture & Shine Conditioner Lavender",
+   "product_url": "https://skinsort.com/products/365-everyday-value/moisture-shine-conditioner/lavender",
+   "brand_category": "General",
+   "product_type": "body wash/shampoo/conditioner",
+   "ingredients_verbatim": "Water, Cetearyl Alcohol, C13-15 Alkane, Cetyl Palmitate, Lactic Acid, Glycerin, Stearamidopropyl Dimethylamine, Cetrimonium Chloride, Helianthus Annuus Seed Oil, Parfum, Sodium Benzoate, Sodium Citrate, Panthenol, Potassium Sorbate, Hydrolyzed Jojoba Esters, Sodium Hydroxide, Tetrasodium Glutamate Diacetate, Polysorbate 20, Cannabis Sativa Seed Oil, Tocopherol, Argania Spinosa Kernel Oil",
+   "ingredient_source": "Carried over from prior wf365 audit (xlsx); verbatim text not re-scraped 2026-10-17"
+  },
+  {
+   "product_name": "365 Conditioner Fragrance Free",
+   "product_url": "https://skinsort.com/products/365-everyday-value/conditioner",
+   "brand_category": "General",
+   "product_type": "body wash/shampoo/conditioner",
+   "ingredients_verbatim": "Water, Cetearyl Alcohol, Glyceryl Stearate, Glycerin, Isoamyl Laurate, Cocos Nucifera Oil, Behentrimonium Chloride, Guar Hydroxypropyltrimonium Chloride, Sodium Benzoate, Potassium Sorbate, Tetrasodium Glutamate Diacetate",
+   "ingredient_source": "Carried over from prior wf365 audit (xlsx); verbatim text not re-scraped 2026-10-17"
+  },
+  {
+   "product_name": "365 Anti-Dandruff 2-In-1 Shampoo & Conditioner",
+   "product_url": "https://skinsort.com/products/365-everyday-value/anti-dandruff-2-in-1-shampoo-conditioner",
+   "brand_category": "General",
+   "product_type": "body wash/shampoo/conditioner",
+   "ingredients_verbatim": "Salicylic Acid, Water, Cocamidopropyl Betaine, Sodium Coco-Sulfate, Ammonium Lauryl Sulfate, Glycerin, Glycol Stearate, Aloe Barbadensis Leaf Juice, Coco-Betaine, Gluconolactone, Parfum, Benzyl Alcohol, Polyquaternium-7, Sodium Benzoate, Potassium Sorbate, Cocos Nucifera Oil, Citric Acid, Xylitol, Triethyl Citrate, Coconut Alkanes, Coco-Caprylate/Caprate, Guar Hydroxypropyltrimonium Chloride, Decyl Glucoside, Hydrolyzed Quinoa, Prunus Amygdalus Dulcis Oil, Simmondsia Chinensis Seed Oil",
+   "ingredient_source": "Carried over from prior wf365 audit (xlsx); verbatim text not re-scraped 2026-10-17"
+  },
+  {
+   "product_name": "365 Colloidal Oatmeal Fragrance-Free Body Wash",
+   "product_url": "https://skinsort.com/products/365-everyday-value/colloidal-oatmeal-fragrance-free-body-wash",
+   "brand_category": "General",
+   "product_type": "body wash/shampoo/conditioner",
+   "ingredients_verbatim": "Water, Sodium Cocoyl Isethionate, Glycerin, Disodium Cocoamphodiacetate, Acrylates Copolymer, Sodium Chloride, Arginine, Phenoxyethanol, Sodium Laurylglucosides Hydroxypropylsulfonate, Guar Hydroxypropyltrimonium Chloride, Benzyl Alcohol, Caprylyl Glycol, Ethylhexylglycerin, Butyrospermum Parkii Butter, Hexylene Glycol, Zeolite, Colloidal Oatmeal",
+   "ingredient_source": "Carried over from prior wf365 audit (xlsx); verbatim text not re-scraped 2026-10-17"
+  },
+  {
+   "product_name": "365 Gentle Skin Cleanser",
+   "product_url": "https://skinsort.com/products/365-everyday-value/gentle-skin-cleanser",
+   "brand_category": "General",
+   "product_type": "body wash/shampoo/conditioner",
+   "ingredients_verbatim": "Water, Propanediol, Cetearyl Alcohol, Phenoxyethanol, Sorbitan Caprylate, Coco-Glucoside, Glyceryl Oleate, Caprylyl Glycol, Sodium Stearoyl Glutamate, Benzyl Alcohol, Acrylates/C10-30 Alkyl Acrylate Crosspolymer, Allantoin, Sodium Hydroxide",
+   "ingredient_source": "Carried over from prior wf365 audit (xlsx); verbatim text not re-scraped 2026-10-17"
+  },
+  {
+   "product_name": "365 Moisturizing Bar Fragrance Free",
+   "product_url": "https://skinsort.com/products/365-everyday-value/moisturizing-bar-fragrance-free",
+   "brand_category": "General",
+   "product_type": "body wash/shampoo/conditioner",
+   "ingredients_verbatim": "Sodium Palmate, Sodium Cocoate, Water, Glycerin, Butyrospermum Parkii Butter, Sodium Cocoyl Isethionate, Theobroma Cacao Seed Butter, Stearic Acid, Titanium Dioxide, Sucrose Cocoate, Sodium Chloride, Tetrasodium Glutamate Diacetate, Rosmarinus Officinalis Extract",
+   "ingredient_source": "Carried over from prior wf365 audit (xlsx); verbatim text not re-scraped 2026-10-17"
+  },
+  {
+   "product_name": "365 Foaming Hand Soap Fragrance Free",
+   "product_url": "https://skinsort.com/products/365-everyday-value/foaming-hand-soap",
+   "brand_category": "General",
+   "product_type": "body wash/shampoo/conditioner",
+   "ingredients_verbatim": "Water, Decyl Glucoside, Sodium Cocoyl Isethionate, Sodium Cocoamphoacetate, Benzyl Alcohol, Sodium Citrate, Tetrasodium Glutamate Diacetate, Citric Acid, Salicylic Acid, Glycerin, Sorbic Acid, Hydrolyzed Jojoba Esters, Panthenol, Tocopherol, Aloe Barbadensis Leaf Juice, Arctium Lappa Root Extract, Chamomilla Recutita Flower Extract",
+   "ingredient_source": "Carried over from prior wf365 audit (xlsx); verbatim text not re-scraped 2026-10-17"
+  },
+  {
+   "product_name": "365 Liquid Hand Soap",
+   "product_url": "https://skinsort.com/products/365-everyday-value/liquid-hand-soap",
+   "brand_category": "General",
+   "product_type": "body wash/shampoo/conditioner",
+   "ingredients_verbatim": "Water, Glycerin, Cocamidopropyl Hydroxysultaine, Sodium Lauroyl Sarcosinate, Sodium Methyl 2-Sulfolaurate, Xanthan Gum, Parfum, Citric Acid, Decyl Glucoside, Cyamopsis Tetragonoloba Gum, Sodium Benzoate, Sodium Citrate, Potassium Sorbate, Disodium 2-Sulfolaurate, Tetrasodium Glutamate Diacetate, Panthenol, Hydrolyzed Jojoba Esters, Aloe Barbadensis Leaf Juice, Tocopherol, Butyrospermum Parkii Butter, Arctium Lappa Root Extract, Chamomilla Recutita Flower Extract",
+   "ingredient_source": "Carried over from prior wf365 audit (xlsx); verbatim text not re-scraped 2026-10-17"
+  },
+  {
+   "product_name": "365 Liquid Hand Soap Anjou Pear",
+   "product_url": "https://skinsort.com/products/365-everyday-value/liquid-hand-soap/anjou-pear",
+   "brand_category": "General",
+   "product_type": "body wash/shampoo/conditioner",
+   "ingredients_verbatim": "Water, Glycerin, Cocamidopropyl Hydroxysultaine, Sodium Lauroyl Sarcosinate, Sodium Methyl 2-Sulfolaurate, Xanthan Gum, Parfum, Citric Acid, Decyl Glucoside, Cyamopsis Tetragonoloba Gum, Sodium Benzoate, Sodium Citrate, Potassium Sorbate, Disodium 2-Sulfolaurate, Tetrasodium Glutamate Diacetate, Panthenol, Hydrolyzed Jojoba Esters, Aloe Barbadensis Leaf Juice, Tocopherol, Butyrospermum Parkii Butter, Arctium Lappa Root Extract, Chamomilla Recutita Flower Extract",
+   "ingredient_source": "Carried over from prior wf365 audit (xlsx); verbatim text not re-scraped 2026-10-17"
+  },
+  {
+   "product_name": "365 Liquid Hand Soap Fragrance Free",
+   "product_url": "https://skinsort.com/products/365-everyday-value/liquid-hand-soap/fragrance-free",
+   "brand_category": "General",
+   "product_type": "body wash/shampoo/conditioner",
+   "ingredients_verbatim": "Water, Glycerin, Cocamidopropyl Hydroxysultaine, Sodium Lauroyl Sarcosinate, Sodium Methyl 2-Sulfolaurate, Xanthan Gum, Citric Acid, Decyl Glucoside, Cyamopsis Tetragonoloba Gum, Sodium Benzoate, Sodium Citrate, Potassium Sorbate, Disodium 2-Sulfolaurate, Tetrasodium Glutamate Diacetate, Panthenol, Hydrolyzed Jojoba Esters, Aloe Barbadensis Leaf Juice, Tocopherol, Butyrospermum Parkii Butter, Arctium Lappa Root Extract, Chamomilla Recutita Flower Extract",
+   "ingredient_source": "Carried over from prior wf365 audit (xlsx); verbatim text not re-scraped 2026-10-17"
+  },
+  {
+   "product_name": "365 Maximum Moisture Lotion",
+   "product_url": "https://skinsort.com/products/365-everyday-value/maximum-moisture-lotion",
+   "brand_category": "General",
+   "product_type": "leave-on skincare",
+   "ingredients_verbatim": "Water, Stearyl Alcohol, Cetyl Alcohol, Cetearyl Alcohol, Isopropyl Palmitate, Polysorbate 20, Dimethicone, Ethylhexylglycerin, Glycerin, Parfum, Phenoxyethanol, Butyrospermum Parkii Butter, Cocos Nucifera Oil, Citric Acid, Cannabis Sativa Seed Oil, Argania Spinosa Kernel Oil, Aloe Barbadensis Leaf Extract, Camellia Sinensis Leaf Extract, Chamomilla Recutita Flower Extract, Cucumis Sativus Fruit Extract, Lavandula Angustifolia Flower Extract, Allantoin, Ascorbic Acid, Panthenol, Tocopheryl Acetate, Lecithin, Echinacea Angustifolia Root Extract",
+   "ingredient_source": "Carried over from prior wf365 audit (xlsx); verbatim text not re-scraped 2026-10-17"
+  },
+  {
+   "product_name": "365 Maximum Moisture Lotion Lavender",
+   "product_url": "https://skinsort.com/products/365-everyday-value/maximum-moisture-lotion/lavender",
+   "brand_category": "General",
+   "product_type": "leave-on skincare",
+   "ingredients_verbatim": "Water, Stearyl Alcohol, Cetyl Alcohol, Cetearyl Alcohol, Isopropyl Palmitate, Polysorbate 20, Dimethicone, Ethylhexylglycerin, Glycerin, Parfum, Phenoxyethanol, Butyrospermum Parkii Butter, Cocos Nucifera Oil, Citric Acid, Cannabis Sativa Seed Oil, Argania Spinosa Kernel Oil, Aloe Barbadensis Leaf Extract, Camellia Sinensis Leaf Extract, Chamomilla Recutita Flower Extract, Cucumis Sativus Fruit Extract, Lavandula Angustifolia Flower Extract, Allantoin, Ascorbic Acid, Panthenol, Tocopheryl Acetate, Lecithin, Echinacea Angustifolia Root Extract",
+   "ingredient_source": "Carried over from prior wf365 audit (xlsx); verbatim text not re-scraped 2026-10-17"
+  },
+  {
+   "product_name": "365 Colloidal Oatmeal Body Lotion Fragrance Free",
+   "product_url": "https://skinsort.com/products/365-everyday-value/colloidal-oatmeal-body-lotion",
+   "brand_category": "General",
+   "product_type": "leave-on skincare",
+   "ingredients_verbatim": "Water, Caprylic/Capric Triglyceride, Propanediol, Cetearyl Alcohol, Isopropyl Palmitate, Butyrospermum Parkii Butter, Dimethicone, Phenoxyethanol, Sorbitan Caprylate, Colloidal Oatmeal, Caprylyl Glycol, Benzyl Alcohol, Acrylates/C10-30 Alkyl Acrylate Crosspolymer, Sodium Stearoyl Glutamate, Allantoin, Niacinamide, Glycerin, Tocopherol, Sodium Hydroxide, Avena Sativa Kernel Extract, Aloe Barbadensis Leaf Juice, Sodium Benzoate, Potassium Sorbate",
+   "ingredient_source": "Carried over from prior wf365 audit (xlsx); verbatim text not re-scraped 2026-10-17"
+  },
+  {
+   "product_name": "365 Baby Lotion Fragrance Free",
+   "product_url": "https://skinsort.com/products/365-everyday-value/baby-lotion",
+   "brand_category": "General",
+   "product_type": "leave-on skincare",
+   "ingredients_verbatim": "Water, Cetearyl Alcohol, Glycerin, Isopropyl Palmitate, Stearyl Alcohol, Caprylic/Capric Triglyceride, Polysorbate 60, Phenoxyethanol, Dimethicone, Ethylhexylglycerin, Sodium Hydroxide, Butyrospermum Parkii Butter, Lavandula Angustifolia Flower Extract, Calendula Officinalis Flower Extract, Helianthus Annuus Seed Oil, Spiraea Ulmaria Leaf Extract",
+   "ingredient_source": "Carried over from prior wf365 audit (xlsx); verbatim text not re-scraped 2026-10-17"
+  },
+  {
+   "product_name": "365 Mineral Sport Sunscreen Lotion SPF 30",
+   "product_url": "https://skinsort.com/products/365-everyday-value/mineral-sport-sunscreen-lotion-spf-30",
+   "brand_category": "General",
+   "product_type": "leave-on skincare",
+   "ingredients_verbatim": "Zinc Oxide 18.75%, Helianthus Annuus Seed Oil, Beeswax, Simmondsia Chinensis Seed Oil, Cocos Nucifera Oil, Tocopherol",
+   "ingredient_source": "Carried over from prior wf365 audit (xlsx); verbatim text not re-scraped 2026-10-17"
+  },
+  {
+   "product_name": "365 Daily Facial Cleanser Normal to Oily",
+   "product_url": "https://skinsort.com/products/365-everyday-value/daily-facial-cleanser-for-normal-to-oily-skin",
+   "brand_category": "General",
+   "product_type": "body wash/shampoo/conditioner",
+   "ingredients_verbatim": "Water, Cocamidopropyl Hydroxysultaine, Sodium Methyl 2-Sulfolaurate, Glycerin, Cocoyl Methyl Glucamide, Cetyl Betaine, Capryloyl/Caproyl Anhydro Methyl Glucamide, Disodium 2-Sulfolaurate, Sodium Benzoate, Coco-Glucoside, Glyceryl Oleate, Sodium Chloride, Citric Acid, Sodium Citrate, Tetrasodium Glutamate Diacetate, Allantoin, Niacinamide, Panthenol, Aloe Barbadensis Leaf Juice",
+   "ingredient_source": "Carried over from prior wf365 audit (xlsx); verbatim text not re-scraped 2026-10-17"
+  },
+  {
+   "product_name": "365 Exfoliating Apricot Scrub",
+   "product_url": "https://skinsort.com/products/365-everyday-value/exfoliating-apricot-scrub",
+   "brand_category": "General",
+   "product_type": "body wash/shampoo/conditioner",
+   "ingredients_verbatim": "Water, Stearic Acid, Glycerin, Butylene Glycol, Cetyl Alcohol, Juglans Regia Shell Powder, Caprylic/Capric Triglyceride, Carthamus Tinctorius Seed Oil, Coco-Betaine, Cetearyl Olivate, Butyrospermum Parkii Butter, Olea Europaea Fruit Oil, Sorbitan Sesquioleate, Parfum, Phenoxyethanol, Potassium Hydroxide, Hydrogenated Lecithin, Cocos Nucifera Oil, Glyceryl Stearate, Sorbitan Olivate, Sodium Chloride, Caprylyl Glycol, Carbomer, Sorbitan Oleate Decylglucoside Crosspolymer, Hydroxyethylcellulose, Acrylates/C10-30 Alkyl Acrylate Crosspolymer, Behenic Acid, Ethylhexylglycerin, Behenyl Alcohol, Stearyl Alcohol, Myristic Acid, Prunus Armeniaca Fruit Extract",
+   "ingredient_source": "Carried over from prior wf365 audit (xlsx); verbatim text not re-scraped 2026-10-17"
+  },
+  {
+   "product_name": "365 Facial Toner Rose Petal",
+   "product_url": "https://skinsort.com/products/365-everyday-value/facial-toner",
+   "brand_category": "General",
+   "product_type": "leave-on skincare",
+   "ingredients_verbatim": "Water, Hamamelis Virginiana Water, Aloe Barbadensis Leaf Juice, Rosa Damascena Flower Water, Glycerin, Rose Flower Oil, Camellia Sinensis Leaf Extract, Pelargonium Graveolens Flower Oil, Eugenia Caryophyllus Leaf Oil, Anhydroxylitol, Xylitylglucoside, Phenethyl Alcohol, Xylitol, Gluconolactone, Phenoxyethanol, Potassium Sorbate, Sodium Benzoate",
+   "ingredient_source": "Carried over from prior wf365 audit (xlsx); verbatim text not re-scraped 2026-10-17"
+  },
+  {
+   "product_name": "365 Cleansing Micellar Water",
+   "product_url": "https://skinsort.com/products/365-everyday-value/cleansing-micellar-water",
+   "brand_category": "General",
+   "product_type": "leave-on skincare",
+   "ingredients_verbatim": "Water, Aloe Barbadensis Leaf Juice, Decyl Glucoside, Xylitylglucoside, Glycerin, Xylitol, Caprylic/Capric Glycerides Polyglyceryl-10 Esters, Hamamelis Virginiana Water, Camellia Sinensis Leaf Extract, Capryloyl Glycine, Hydrolyzed Algin, Ethyl Lauroyl Arginate Hcl, Triethyl Citrate, Citrus Paradisi Fruit Extract, Cucumis Melo Fruit Extract, Citrus Aurantium Dulcis Peel Extract, Theobroma Cacao Extract, Citrus Tangerina Peel Extract, Cinnamomum Zeylanicum Bark Extract, Chlorella Vulgaris Extract, Sarcosine, Sea Water, Anhydroxylitol, Alcohol, Polysorbate 20, Gluconolactone, Phenoxyethanol, Potassium Sorbate, Sodium Benzoate",
+   "ingredient_source": "Carried over from prior wf365 audit (xlsx); verbatim text not re-scraped 2026-10-17"
+  },
+  {
+   "product_name": "365 Organic Lip Balm",
+   "product_url": "https://www.skincarisma.com/products/365-everyday-value/organic-lip-balm",
+   "brand_category": "General",
+   "product_type": "leave-on skincare",
+   "ingredients_verbatim": "Cocos Nucifera Oil, Beeswax, Olea Europaea Fruit Oil, Butyrospermum Parkii Butter, Aroma, Theobroma Cacao Seed Butter, Cannabis Sativa Seed Oil, Tocopherol, Honey",
+   "ingredient_source": "Carried over from prior wf365 audit (xlsx); verbatim text not re-scraped 2026-10-17"
+  },
+  {
+   "product_name": "365 Sweet Almond Oil",
+   "product_url": "https://skinsort.com/products/365-everyday-value/sweet-almond-oil",
+   "brand_category": "General",
+   "product_type": "leave-on skincare",
+   "ingredients_verbatim": "Prunus Amygdalus Dulcis Oil, Tocopherol",
+   "ingredient_source": "Carried over from prior wf365 audit (xlsx); verbatim text not re-scraped 2026-10-17"
+  },
+  {
+   "product_name": "365 Sensitive Cavity Fighting Toothpaste with Hemp Seed Oil",
+   "product_url": "https://wfm.amazon.com/shipped-to-you/product/365-by-whole-foods-market-sensitive-cavity-fighting-toothpaste-with-hemp-seed-oil-5-5-ounce-b089lkvlc7",
+   "brand_category": "General",
+   "product_type": "oral care",
+   "ingredients_verbatim": "Sodium Monofluorophosphate 0.76% (0.13% w/v Fluoride Ion), Glycerin, Water, Calcium Carbonate, Hydrated Silica, Xylitol, Sodium Bicarbonate, Carrageenan, Cannabis Sativa (Hemp) Seed Oil, Sodium Lauroyl Sarcosinate, Natural Flavor, Zinc Citrate, Benzyl Alcohol",
+   "ingredient_source": "Carried over from prior wf365 audit (xlsx); verbatim text not re-scraped 2026-10-17"
+  }
+ ]
+}
