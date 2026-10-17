@@ -1,6 +1,6 @@
 # Aquaphor Audit — Content Mining Report
 
-**Date audited:** 2026-10-16 (regraded under practitioner decisions D1 to D4; no tier changed)
+**Date audited:** 2026-10-16 (regraded under practitioner decisions D1, D3 and D4, with D2 reverted; no tier changed)
 **Products audited:** 41 listed: 38 graded from a full printed list, 3 not graded (no ingredient text)
 **Source:** https://www.aquaphorus.com/ (product names and brand-site partial lists). aquaphor.com is an unrelated company and was not used.
 **Full INCI sources:** retailer product pages only (Walmart, CVS, Amazon). Each row names its retailer and URL in `audit_notes`.

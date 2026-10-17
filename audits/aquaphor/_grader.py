@@ -74,7 +74,7 @@ for _k in REF:
 # Rubric exemptions: fatty alcohols are not drying alcohols (LOW TOX); behentrimonium methosulfate is LOW TOX.
 FATTY_ALC = ['cetearyl alcohol', 'cetyl alcohol', 'stearyl alcohol', 'behenyl alcohol', 'brassica alcohol', 'c14-22 alcohols']
 
-# D2 (practitioner, 2026-10-16): iron oxides are exempt from the heavy-metal (cat. 3) escalation only.
+# Iron oxides (reference: categories 1, 2 and 3; PFAS treated). D2 was reverted 2026-10-16: no heavy-metal exemption.
 IRON_KEYS = {'ci 77491 (red iron oxide)', 'ci 77492 (yellow iron oxide)', 'ci 77499 (black iron oxide)', 'iron oxides'}
 # D1 (practitioner, 2026-10-16): unspecified "silica" does not trigger the PFAS-treated escalation.
 SILICA_KEY = 'silica'
@@ -291,10 +291,9 @@ def lookup(ing, segments, name, category, product_type):
             if key == SILICA_KEY:
                 pfas = False        # D1: unspecified silica is not PFAS-escalated
             if key in IRON_KEYS:
-                pfas = True         # D2: PFAS tag applied as written (practitioner to confirm for "iron oxides")
+                pfas = True         # iron oxides: PFAS tag applied as written in the reference
             form = key in FORMALDEHYDE
-            return dict(out, kind='flag', cats=cats, label='reference', pfas=pfas, formaldehyde=form,
-                        heavy_exempt=key in IRON_KEYS)   # D2: no heavy-metal (cat. 3) escalation for iron oxides
+            return dict(out, kind='flag', cats=cats, label='reference', pfas=pfas, formaldehyde=form)
         return dict(out, kind='ok', cats=[], label='reference, no category')
 
     if low in FORMALDEHYDE:
@@ -333,7 +332,7 @@ def grade(product_name, product_type, category, verbatim):
     max_cats = max([len(f['cats']) for f in flagged], default=0)
     has_paraben = any(re.search(r'paraben$', f['name'], re.I) for f in flagged)
     has_fragrance = any(f['label'].startswith('fragrance') for f in flagged)
-    has_heavy = any(3 in f['cats'] and not f['heavy_exempt'] for f in flagged)   # D2: iron oxides exempt
+    has_heavy = any(3 in f['cats'] and not f['heavy_exempt'] for f in flagged)   # iron oxides are cat. 3 again (D2 reverted)
     has_form = 'formaldehyde-releaser' in esc
     has_sulfate = any(re.search(r'sulfate$', f['name'], re.I) for f in flagged)
     if has_heavy:
@@ -369,9 +368,8 @@ def grade(product_name, product_type, category, verbatim):
     flagged_keys = {norm_key(f['name']) for f in flagged}
     if flagged_keys & {'silica'}:
         notes.append('D1: unspecified silica does not trigger the PFAS-treated escalation.')
-    if any(f['heavy_exempt'] for f in flagged):
-        notes.append('D2: iron oxides exempt from the heavy-metal (cat. 3) escalation. PFAS-treated escalation applied '
-                     'as written; pending practitioner confirmation.')
+    if any(norm_key(f['name']) in IRON_KEYS for f in flagged):
+        notes.append('Iron oxides (reference cat. 1, 2, 3): heavy-metal (cat. 3) escalation applies; PFAS-treated tag applied as written.')
     for f in flagged:
         if norm_key(f['name']) == 'bisabolol':
             notes.append('D3: bisabolol counted as a full flag (cat. 4); no chamomile oil or extract listed in this product.')

@@ -349,3 +349,28 @@ Aquaphor has no silica or iron oxide product, so the checks are on bisabolol, th
 - `aquaphor/aquaphor_content_mining.md` (unknown queue, Puberty Safe unknown counts and bisabolol wording updated; tiers unchanged)
 - `aquaphor/aquaphor_audit_log.md` (this section)
 - Not modified: `aquaphor_ingredients.json`, `aquaphor_catalog.json`. Nothing was committed or pushed, and no other folder was touched. No `__pycache__` was created.
+
+## Regrade 2026-10-16, D2 revert (supersedes D2 in the section above; no tier change)
+
+The shared `_grader.py` was changed for the iron-oxide revert, and this brand was regraded from `ingredients_verbatim`. The full rule text is in `eucerin/eucerin_audit_log.md`, under "Regrade 2026-10-16, D2 revert and rubric decisions."
+
+- **D1 (silica): kept.** No Aquaphor product contains silica. No effect.
+- **D2 (iron oxides): reverted.** No Aquaphor product contains iron oxides, so the revert has no effect here. Iron oxides carry categories 1, 2 and 3 in the reference, and the heavy-metal escalation applies again if they appear.
+- **D3 (bisabolol): kept.** Bisabolol is a full flag at category 4 in all 27 products that list it, because no chamomile oil or extract is listed beside it.
+- **D4 (not in the reference): kept.** Water, glycerin, botanical oils and lanolin alcohol are unknown. Ceramide and coconut oil are LOW TOX per the reference.
+
+### Tier counts (38 graded, 3 not graded)
+- Before and after the revert: Puberty Safe 3, Use Caution 2, Avoid (Mild) 0, Avoid (Moderate) 2, Avoid (High Priority Swap) 31.
+- **No product changed tier.** Flag lists, flag counts and escalation labels are unchanged: carcinogen in a leave-on in 27 products, PFAS-treated in 5, heavy metals in none.
+
+### Hand check (this pass)
+- **Aquaphor Healing Ointment (14oz.)**, bisabolol. Verbatim lists "Bisabolol" in the inactive block with no chamomile oil or extract. It is a full flag at category 4 (D3). Petrolatum [1] and Mineral Oil [1] are category 1 in a leave-on, so the escalation is carcinogen in leave-on and the tier is High Priority Swap. Three flags. The grader matches.
+- The iron-oxide and silica checks were done in the Eucerin log, because no Aquaphor product contains either.
+
+### Files written this pass
+- `aquaphor/_grader.py` (identical copy of the Eucerin grader after the revert)
+- `aquaphor/aquaphor_audit.xlsx` (41 rows, template columns, regenerated; output unchanged)
+- `aquaphor/_grade_summary.json` (regenerated)
+- `aquaphor/aquaphor_content_mining.md` (date line updated; tier headline unchanged)
+- `aquaphor/aquaphor_audit_log.md` (this section)
+- Not modified: `aquaphor_ingredients.json`, `aquaphor_catalog.json`, `ref_compact.json`, the reference PDF. Nothing was committed or pushed. No `__pycache__` was created.

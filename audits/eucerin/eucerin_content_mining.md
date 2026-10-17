@@ -1,6 +1,6 @@
 # Eucerin (US) Audit — Content Mining Report
 
-**Date audited:** 2026-10-16 (regraded under practitioner decisions D1 to D4; no tier changed)
+**Date audited:** 2026-10-16 (regraded under practitioner decisions D1, D3 and D4, with D2 reverted; no tier changed)
 **Products audited:** 48 listed, 48 graded, 0 not graded
 **Source:** https://www.eucerinus.com/ (product names and brand key-ingredient text). Full ingredient text comes from retailer product pages; see the audit log.
 
@@ -40,7 +40,7 @@
 
 **Most common risk category:** Category 4 (Allergies, Irritation, Corrosion) — flagged in 38 of 48 products. Category 2 (Endocrine Disruption) is in 37, Category 1 (Carcinogen) in 36, Category 5 (Microbiome-Busting) in 34.
 
-**Escalations triggered:** a category 1 ingredient in a leave-on product (32 products), a PFAS-treated ingredient (19 products), and a heavy metal (1 product: aluminum stearates in Original Healing Lotion). Two decisions changed the labels and not the tiers. Under D1, unspecified silica no longer triggers PFAS, which removed the label from Daily Lotion SPF 30 and Advanced Hydration Ultra-Light SPF 50 (both stay High Priority Swap on other flags). Under D2, iron oxides no longer trigger the heavy-metal escalation, which removed it from Eye Cream and both tinted sunscreens. Those three still carry PFAS as written, pending practitioner confirmation. The one remaining heavy-metal escalation rests on a naming-pattern inference (aluminum, category 3), not on a reference entry.
+**Escalations triggered:** a category 1 ingredient in a leave-on product (32 products), a PFAS-treated ingredient (19 products), and a heavy metal (4 products). Three of the heavy-metal labels come from iron oxides, which the reference lists as categories 1, 2 and 3: Eye Cream, Tinted Sensitive Mineral SPF 35 Face Sunscreen and Tinted Age Defense SPF 50 Face Sunscreen. The fourth is aluminum stearates in Original Healing Lotion, a naming-pattern inference (aluminum, category 3), not a reference entry. Under D1, unspecified silica does not trigger PFAS, which removed that label from Daily Lotion SPF 30 and Advanced Hydration Ultra-Light SPF 50 (both stay High Priority Swap on other flags). The iron-oxide products stay High Priority Swap in every case. They carry the heavy-metal and PFAS labels as written, and the PFAS tag on iron oxides is still pending practitioner confirmation.
 
 **"Clean marketing, dirty formula" finds:**
 - **Advanced Repair Cream, 16 oz.** The Target listing for this size is the Fragrance Free Body Cream, and the printed list has no fragrance. It still grades Avoid (High Priority Swap) with 5 flags: dimethicone (PFAS treated), phenoxyethanol (category 1), pentylene glycol, decylene glycol, and sodium cetearyl sulfate.
