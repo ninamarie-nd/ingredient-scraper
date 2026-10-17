@@ -1156,7 +1156,7 @@ select:focus{border-color:var(--teal);outline:2px solid var(--teal);outline-offs
     var tierKey = (p.t && state.tiers.hasOwnProperty(p.t)) ? p.t : 'Use Caution';
     if(!state.tiers[tierKey]) return false;
     if(state.brand && p.b !== state.brand) return false;
-    if(state.type && p.pt !== state.type) return false;
+    if(state.type && p.pt !== state.type && !(state.type==='Deodorant' && p.pt==='Antiperspirant Deodorant')) return false;
     if(state.q){
       // Multi-token search: every whitespace-separated token must appear somewhere
       // in the row — so "Dove shampoo" matches a Dove shampoo row even though
