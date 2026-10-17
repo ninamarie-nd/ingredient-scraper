@@ -596,3 +596,22 @@ Applied in this pass with the same `_grader.py` in every brand folder. The refer
 **Puberty Safe or Use Caution products that have unknown ingredients (review first):** none.
 
 **Unknown ingredients excluded from the grade:** 322 occurrences across 52 products, 95 distinct names (case-insensitive). The names are in each row's unknown_ingredients column.
+
+## Puberty Safe requires zero unknowns (2026-10-17)
+
+**Rule (practitioner, 2026-10-17):** A product can never be Puberty Safe if it has any unknown ingredient. A product with one or more unknown ingredients that would otherwise grade Puberty Safe grades Use Caution. Every other tier is unchanged. Unknown ingredients still add no flags and stay in unknown_ingredients and audit_notes. No other floor applies to unknowns. The rule is in `_grader.py` (one identical file in every brand folder), applied after the silica and glycerin floors. Each affected row's audit_notes carries the note "Puberty Safe requires zero unknown ingredients".
+
+**Products that moved from Puberty Safe to Use Caution:** none. This brand had no Puberty Safe product before the rule, and it has none now.
+
+**Tier counts, before and after (52 listed):**
+
+| Tier | Before | After |
+|---|---|---|
+| Puberty Safe | 0 | 0 |
+| Use Caution | 0 | 0 |
+| Avoid (Mild) | 0 | 0 |
+| Avoid (Moderate) | 0 | 0 |
+| Avoid (High Priority Swap) | 36 | 36 |
+| Ungradable | 16 | 16 |
+
+**Puberty Safe products remaining:** none.

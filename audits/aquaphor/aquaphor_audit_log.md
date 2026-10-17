@@ -661,3 +661,23 @@ Applied in this pass with the same `_grader.py` in every brand folder. The refer
 **Puberty Safe or Use Caution products that have unknown ingredients (review first):** Aquaphor® Lip Repair Stick Naturally Inspired Aloe Vera Single Pack (Use Caution, 11 unknown excluded, status complete); Aquaphor® Lip Repair Stick Naturally Inspired Coconut Single Pack (Puberty Safe, 9 unknown excluded, status complete); Aquaphor® Diaper Rash Paste (3.5oz.) (Use Caution, 5 unknown excluded, status complete); Aquaphor® Lip Repair (Use Caution, 14 unknown excluded, status complete); Aquaphor® Lip Repair (Dual Pack) (Use Caution, 11 unknown excluded, status complete)
 
 **Unknown ingredients excluded from the grade:** 233 occurrences across 41 products, 45 distinct names (case-insensitive). The names are in each row's unknown_ingredients column.
+
+## Puberty Safe requires zero unknowns (2026-10-17)
+
+**Rule (practitioner, 2026-10-17):** A product can never be Puberty Safe if it has any unknown ingredient. A product with one or more unknown ingredients that would otherwise grade Puberty Safe grades Use Caution. Every other tier is unchanged. Unknown ingredients still add no flags and stay in unknown_ingredients and audit_notes. No other floor applies to unknowns. The rule is in `_grader.py` (one identical file in every brand folder), applied after the silica and glycerin floors. Each affected row's audit_notes carries the note "Puberty Safe requires zero unknown ingredients".
+
+**Products that moved from Puberty Safe to Use Caution (1):**
+- Aquaphor® Lip Repair Stick Naturally Inspired Coconut Single Pack: 9 unknown ingredient(s): Octyldodecanol, Ricinus Communis (Castor) Seed Oil, Butyrospermum Parkii (Shea) Butter, Helianthus Annuus (Sunflower) Seed Wax, Hydrogenated Castor Oil, Simmondsia Chinensis (Jojoba) Seed Oil, Helianthus Annuus (Sunflower) Seed Oil, Ascorbyl Palmitate, Pantolactone.
+
+**Tier counts, before and after (41 listed):**
+
+| Tier | Before | After |
+|---|---|---|
+| Puberty Safe | 1 | 0 |
+| Use Caution | 4 | 5 |
+| Avoid (Mild) | 0 | 0 |
+| Avoid (Moderate) | 2 | 2 |
+| Avoid (High Priority Swap) | 31 | 31 |
+| Ungradable | 3 | 3 |
+
+**Puberty Safe products remaining:** none.

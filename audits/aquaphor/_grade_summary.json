@@ -1,8 +1,8 @@
 {
  "brand": "aquaphor",
  "tier_counts": {
-  "Puberty Safe": 1,
-  "Use Caution": 4,
+  "Puberty Safe": 0,
+  "Use Caution": 5,
   "Avoid (Mild)": 0,
   "Avoid (Moderate)": 2,
   "Avoid (High Priority Swap)": 31,
@@ -204,7 +204,7 @@
   },
   {
    "product_name": "Aquaphor® Lip Repair Stick Naturally Inspired Coconut Single Pack",
-   "tier": "Puberty Safe",
+   "tier": "Use Caution",
    "flag_count": 0,
    "product_type": "lip product",
    "flagged": [],

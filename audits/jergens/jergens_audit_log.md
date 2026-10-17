@@ -577,3 +577,24 @@ Applied in this pass with the same `_grader.py` in every brand folder. The refer
 **Puberty Safe or Use Caution products that have unknown ingredients (review first):** none.
 
 **Unknown ingredients excluded from the grade:** 451 occurrences across 38 products, 126 distinct names (case-insensitive). The names are in each row's unknown_ingredients column.
+
+## Puberty Safe requires zero unknowns (2026-10-17)
+
+**Rule (practitioner, 2026-10-17):** A product can never be Puberty Safe if it has any unknown ingredient. A product with one or more unknown ingredients that would otherwise grade Puberty Safe grades Use Caution. Every other tier is unchanged. Unknown ingredients still add no flags and stay in unknown_ingredients and audit_notes. No other floor applies to unknowns. The rule is in `_grader.py` (one identical file in every brand folder), applied after the silica and glycerin floors. Each affected row's audit_notes carries the note "Puberty Safe requires zero unknown ingredients".
+
+**Products that moved from Puberty Safe to Use Caution:** none. This brand had no Puberty Safe product before the rule, and it has none now.
+
+**Tier counts, before and after (38 listed):**
+
+| Tier | Before | After |
+|---|---|---|
+| Puberty Safe | 0 | 0 |
+| Use Caution | 0 | 0 |
+| Avoid (Mild) | 0 | 0 |
+| Avoid (Moderate) | 0 | 0 |
+| Avoid (High Priority Swap) | 31 | 31 |
+| Ungradable | 7 | 7 |
+
+**Puberty Safe products remaining:** none.
+
+**Parser anomaly found during hand-check (not changed).** Natural Glow Face Moisturizer +SPF 20 prints "And Octocrylene (1.1%)" in its active ingredient line. The grader reads "And Octocrylene" as an unknown rather than as octocrylene (reference category 2). The product grades Avoid (High Priority Swap) either way, but its partial flag count is one lower than it should be (12, not 13). This is a parser issue outside the zero-unknowns rule, so it was left as is. Fix it in a separate pass.

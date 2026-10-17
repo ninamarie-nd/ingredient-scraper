@@ -849,3 +849,26 @@ Applied in this pass with the same `_grader.py` in every brand folder. The refer
 **Puberty Safe or Use Caution products that have unknown ingredients (review first):** Cleansing Gel (Use Caution, 7 unknown excluded, status complete); Hydrating Cleansing Gel, 13.5 FL OZ (Use Caution, 5 unknown excluded, status complete); Hydrating Cleansing Gel, 6.8 FL OZ (Use Caution, 5 unknown excluded, status complete); Q10 Revitalize Daily Cream (Puberty Safe, 2 unknown excluded, status needs review); Advanced Hydration After Sun Lotion (Puberty Safe, 2 unknown excluded, status needs review); Eucerin Eczema Relief Hydrogel (Use Caution, 7 unknown excluded, status complete)
 
 **Unknown ingredients excluded from the grade:** 455 occurrences across 48 products, 126 distinct names (case-insensitive). The names are in each row's unknown_ingredients column.
+
+## Puberty Safe requires zero unknowns (2026-10-17)
+
+**Rule (practitioner, 2026-10-17):** A product can never be Puberty Safe if it has any unknown ingredient. A product with one or more unknown ingredients that would otherwise grade Puberty Safe grades Use Caution. Every other tier is unchanged. Unknown ingredients still add no flags and stay in unknown_ingredients and audit_notes. No other floor applies to unknowns. The rule is in `_grader.py` (one identical file in every brand folder), applied after the silica and glycerin floors. Each affected row's audit_notes carries the note "Puberty Safe requires zero unknown ingredients".
+
+**Products that moved from Puberty Safe to Use Caution (2):**
+- Q10 Revitalize Daily Cream: 2 unknown ingredient(s): Q10, Shea Butter.
+- Advanced Hydration After Sun Lotion: 2 unknown ingredient(s): Glycyrrhetinic Acid, Licochalcone A.
+
+**Q10 note.** The printed text for Q10 Revitalize Daily Cream is two names only. The audit notes say the CVS listing includes parabens and DMDM hydantoin, which this grade does not count. Its Use Caution tier is a floor, not a result.
+
+**Tier counts, before and after (48 listed):**
+
+| Tier | Before | After |
+|---|---|---|
+| Puberty Safe | 2 | 0 |
+| Use Caution | 4 | 6 |
+| Avoid (Mild) | 2 | 2 |
+| Avoid (Moderate) | 3 | 3 |
+| Avoid (High Priority Swap) | 32 | 32 |
+| Ungradable | 5 | 5 |
+
+**Puberty Safe products remaining:** none.

@@ -1,10 +1,10 @@
 # Vaseline Audit — Content Mining Report
 
-**Date audited:** 2026-10-16 (regraded 2026-10-17 under practitioner decisions D1 to D6 and changes 1 and 2, with D7 and D8 removed; see the audit log)
+**Date audited:** 2026-10-16 (regraded 2026-10-17 under practitioner decisions D1 to D6 and changes 1 and 2, with D7 and D8 removed, and the Puberty Safe zero-unknowns rule; see the audit log)
 **Products audited:** 52 listed: 36 graded (all Avoid (High Priority Swap)), 16 ungradable (no ingredient text)
 **Source:** https://www.vaseline.com/us/en/products.html (US site)
 
-**Read this first:** Each grade uses the known ingredients only. A printed ingredient the reference does not cover adds no flag and does not change the tier (2026-10-17, replacing D7 and D8). "Ungradable" now means only that the page shows no ingredient text. Partial flags are for ranking only. Sixteen product pages show no ingredient text at all, so they cannot be checked from the data. The unknown names are listed in each row and in the audit log.
+**Read this first:** Each grade uses the known ingredients only. A printed ingredient the reference does not cover adds no flag and does not change the tier (2026-10-17, replacing D7 and D8), with one exception: a product cannot be Puberty Safe while any ingredient is unknown, so it grades Use Caution instead (2026-10-17 zero-unknowns rule). "Ungradable" now means only that the page shows no ingredient text. Partial flags are for ranking only. Sixteen product pages show no ingredient text at all, so they cannot be checked from the data. The unknown names are listed in each row and in the audit log.
 
 ---
 
@@ -89,3 +89,5 @@
 **D7 and D8 removed (2026-10-17):** Under the earlier rules, products with two or more unknown ingredients were ungradable, and products with exactly one got a Use Caution floor. Both rules are gone. The 32 products that were ungradable on unknowns are now graded from their known ingredients, and all 32 are Avoid (High Priority Swap). Old and new tiers, and the unknown counts excluded from each grade, are in the Grading on known ingredients section of `vaseline_audit_log.md`.
 
 **Changes 1 and 2 (2026-10-17):** Change 1 (White Petrolatum USP as petrolatum) moved Healing Jelly Original and Lip Therapy Advanced Healing Tube from Use Caution to Avoid (High Priority Swap). Change 2 (all polysorbates flagged) added Polysorbate 80 to the flags of Intensive Care Hydra Replenish Hand Crème and Cocoa Body Butter. Neither change moved a product between ungradable and graded. Healing Jelly Cocoa Butter and Lip Therapy Original Mini were already Avoid (High Priority Swap) from their petrolatum flags.
+
+**Puberty Safe requires zero unknowns (2026-10-17):** No product in this brand moved. No product was Puberty Safe before the rule and none is now, so the tier counts in this section are unchanged. Unknown counts per product are in `vaseline_audit_log.md`.

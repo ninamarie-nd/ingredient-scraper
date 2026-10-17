@@ -1,8 +1,8 @@
 {
  "brand": "eucerin",
  "tier_counts": {
-  "Puberty Safe": 2,
-  "Use Caution": 4,
+  "Puberty Safe": 0,
+  "Use Caution": 6,
   "Avoid (Mild)": 2,
   "Avoid (Moderate)": 3,
   "Avoid (High Priority Swap)": 32,
@@ -543,7 +543,7 @@
   },
   {
    "product_name": "Q10 Revitalize Daily Cream",
-   "tier": "Puberty Safe",
+   "tier": "Use Caution",
    "flag_count": 0,
    "product_type": "leave-on skincare",
    "flagged": [],
@@ -557,7 +557,7 @@
   },
   {
    "product_name": "Advanced Hydration After Sun Lotion",
-   "tier": "Puberty Safe",
+   "tier": "Use Caution",
    "flag_count": 0,
    "product_type": "leave-on skincare",
    "flagged": [],

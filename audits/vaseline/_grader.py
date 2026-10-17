@@ -9,8 +9,9 @@ ingredient in ../../ref_compact.json and ../../ingredient_aliases.json, and writ
 <brand>_audit.xlsx and _grade_summary.json into its own folder. Nothing else is written.
 
 Grading rules come from /home/claude/GRADING_RUBRIC.txt and the practitioner decisions D1 to D6
-(2026-10-16) recorded below. D7 and D8 (unknown-ingredient rules) were removed 2026-10-17: unknown
-ingredients are excluded from the grade and never change the tier. The verbatim ingredient text in the JSON is never modified;
+(2026-10-16) recorded below. D7 and D8 (unknown-ingredient rules) were replaced 2026-10-17: unknown
+ingredients add no flags and set no floor, except that Puberty Safe requires zero unknowns (such a product grades
+Use Caution). The verbatim ingredient text in the JSON is never modified;
 normalization is applied only in memory. The input JSON may use any of the three layouts the
 brands were scraped into: {"products": [list]}, {"products": {name_or_slug: {...}}}, or a
 top-level {name: {...}} mapping.
@@ -426,10 +427,14 @@ def grade(product_name, product_type, category, verbatim):
         tier = 'Use Caution'
     if caution_hit:
         notes.append('D6: glycerin is a caution ingredient (not a flag); it floors a Puberty Safe product at Use Caution.')
-    # 2026-10-17 (practitioner decision, replaces D7 and D8): unknown ingredients are excluded from the grade.
-    # They add no flags and set no floor and no ungradable tier. They stay listed in unknown_ingredients.
+    # 2026-10-17 practitioner rule: unknown ingredients add no flags and set no floor and no ungradable tier. They stay
+    # listed in unknown_ingredients. The one exception: Puberty Safe requires zero unknowns, so a product that would
+    # otherwise grade Puberty Safe with any unknown grades Use Caution. No other tier is changed by unknowns.
     if unknown:
-        notes.append(f'{len(unknown)} unknown ingredient(s) excluded from grade (2026-10-17; replaces D7 and D8).')
+        notes.append(f'{len(unknown)} unknown ingredient(s) excluded from flags (2026-10-17).')
+    if unknown and tier == 'Puberty Safe':
+        tier = 'Use Caution'
+        notes.append(f'Puberty Safe requires zero unknown ingredients: {len(unknown)} unknown ingredient(s) move this product to Use Caution (2026-10-17 practitioner rule).')
     if any(norm_key(f['name']) in IRON_KEYS for f in flagged):
         notes.append('Iron oxides (reference cat. 1, 2, 3): heavy-metal (cat. 3) escalation applies; PFAS-treated tag applied as written.')
     for f in flagged:

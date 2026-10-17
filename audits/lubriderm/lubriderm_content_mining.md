@@ -1,10 +1,10 @@
 # Lubriderm Audit — Content Mining Report
 
-**Date audited:** 2026-10-16 (regraded 2026-10-17 under practitioner decisions D1 to D6 and change 2, polysorbate flags, with D7 and D8 removed)
+**Date audited:** 2026-10-16 (regraded 2026-10-17 under practitioner decisions D1 to D6 and change 2, polysorbate flags, with D7 and D8 removed, and the Puberty Safe zero-unknowns rule)
 **Products audited:** 7 listed: 6 graded (4 Avoid (High Priority Swap), 1 Avoid (Moderate), 1 Avoid (Mild)), 1 ungradable (no ingredient text)
 **Source:** https://www.lubriderm.com/
 
-**Read this first:** Each grade uses the known ingredients only. A printed ingredient the reference does not cover adds no flag and does not change the tier (2026-10-17, replacing D7 and D8). "Ungradable" now means only that the page shows no ingredient text. Partial flags are for ranking only.
+**Read this first:** Each grade uses the known ingredients only. A printed ingredient the reference does not cover adds no flag and does not change the tier (2026-10-17, replacing D7 and D8), with one exception: a product cannot be Puberty Safe while any ingredient is unknown, so it grades Use Caution instead (2026-10-17 zero-unknowns rule). "Ungradable" now means only that the page shows no ingredient text. Partial flags are for ranking only.
 
 ---
 
@@ -80,3 +80,5 @@
 **Ingredient text not captured:** Daily Moisture Lotion Fragrance-Free (24 fl oz, 2-count + 6 fl oz Travel Size) has no printed ingredient list in the data.
 
 **D7 and D8 removed (2026-10-17):** Six products that were ungradable on unknowns are now graded from their known ingredients: four Avoid (High Priority Swap), one Avoid (Moderate) and one Avoid (Mild). See the Grading on known ingredients section of `lubriderm_audit_log.md`.
+
+**Puberty Safe requires zero unknowns (2026-10-17):** No product in this brand moved. No product was Puberty Safe before the rule and none is now, so the tier counts in this section are unchanged. Unknown counts per product are in `lubriderm_audit_log.md`.
