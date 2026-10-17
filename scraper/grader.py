@@ -273,7 +273,7 @@ def grade(product_name, product_type, verbatim):
         # Also catches EU-labeled "Aroma" (same meaning as fragrance in INCI).
         # Specific disclosed aromatic compounds (linalool, limonene, geraniol,
         # citral, named plant oils) don't contain these words so they don't match.
-        if re.search(r'\b(fragrance|parfum|perfume|aroma)\b', low):
+        if re.search(r'\b(fragrance|parfum|perfume|aroma|flavou?r|flavoring)\b', low):
             flagged.append((ing, [1,2,4,8])); continue
         if low in FORMALDEHYDE:
             flagged.append((ing, [1,2,4,5])); escalations.add('formaldehyde-releaser'); continue
@@ -294,7 +294,7 @@ def grade(product_name, product_type, verbatim):
         low = re.sub(r'[\*†‡¤\.\s]+$', '', low).strip()
         # Match any ingredient containing fragrance/parfum/perfume/aroma as a word.
         # Mirrors the detection logic above so the tier escalation stays consistent.
-        return bool(re.search(r'\b(fragrance|parfum|perfume|aroma)\b', low))
+        return bool(re.search(r'\b(fragrance|parfum|perfume|aroma|flavou?r|flavoring)\b', low))
     has_fragrance = any(_is_fragrance_name(n) for n,_ in flagged)
     has_heavy = 'heavy metals' in escalations or any(3 in c for _,c in flagged)
     has_carc_lo = 'carcinogen in leave-on' in escalations
