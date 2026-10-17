@@ -122,7 +122,7 @@ PARABEN_ESC = 'paraben or DMDM hydantoin'
 # json field whose ingredient text the paraben/DMDM rule also reads. Flags and the printed verbatim text are not changed by
 # this; only the tier is set by the retailer listing, and the audit notes say so.
 RETAILER_TEXT_OVERRIDES = {
-    'eucerin': {'Q10 Revitalize Daily Cream': 'candidate_retailer_text'},
+    'eucerin': {},
 }
 
 # Rubric: naturally occurring fragrance components (soft only when the source essential oil is also listed).

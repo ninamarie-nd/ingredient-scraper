@@ -893,3 +893,13 @@ Applied in this pass with the same `_grader.py` in every brand folder. The refer
 **Hand-check (2 products):**
 - Cleansing Gel: Use Caution, one flag. Alcohol Denat. [4] is flagged by the grader's existing alcohol-denat naming pattern (no reference entry; line search of the reference finds none). One flag, category 4 only, no paraben, fragrance, heavy metal or formaldehyde releaser gives Use Caution. Glycerin is a caution ingredient, and unknowns are excluded from the grade. Confirmed, no change.
 - Q10 Revitalize Daily Cream: Avoid (High Priority Swap), changed from Use Caution. The printed text 'Q10, Shea Butter' has no reference entry for either name, so it gives zero flags and two unknowns. The rule reads the CVS candidate text (candidate_retailer_text, directed for this product): Methylparaben [2,4] (line 675), Ethylparaben [2,4] (line 470), Propylparaben [2,4] (line 948), Butylparaben [2,4] (line 206), Isobutylparaben [2,4] (line 564), DMDM hydantoin [1,2,4,5] (line 449). Confirmed. The tier rests on the retailer listing, as the audit note says.
+
+
+## Q10 Revitalize Daily Cream: full brand-site list
+
+- Verification: the brand-site expanded Ingredients list (Learn more, View all) matched the practitioner list, 24 of 24 tokens, no differences.
+- Old record: tier Avoid (High Priority Swap) from the CVS candidate (candidate_retailer_text, parabens and DMDM hydantoin), printed flag count 0, audit status needs review.
+- New record: tier Avoid (High Priority Swap) from printed flags, flag count 4 (Butylene Glycol, 1,2-Hexanediol, Carbomer, Phenoxyethanol), escalation carcinogen in leave-on, audit status complete.
+- Unknowns (15): Ethylhexyl Cocoate, Hydrogenated Coco-Glycerides, Caprylic/Capric Triglyceride, Butyrospermum Parkii (Shea) Butter, Glyceryl Stearate Citrate, Octyldodecanol, Tocopheryl Acetate, Ubiquinone, Biotin, Biosaccharide Gum-1, Sodium Ascorbyl Phosphate, Zea Mays (Corn) Oil, Beta-Carotene, Sodium Hydroxide, Trisodium EDTA.
+- Changes made: json record updated (ingredients_verbatim, ingredient_source, ingredient_source_url, audit_status, brand_site_key_ingredients, audit_notes; candidate_retailer_text and candidate_retailer_source removed). _grader.py: the RETAILER_TEXT_OVERRIDES entry for this product removed; no other rule changed. Regraded this folder only.
+- Known leftovers from the grader's global text: the xlsx audit_notes for this row still carry the brand-wide site-limitation sentence, and the json field audit_notes_retail still describes the CVS candidate. Neither was changed, per instructions.

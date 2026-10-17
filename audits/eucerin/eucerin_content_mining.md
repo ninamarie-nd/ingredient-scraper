@@ -99,3 +99,12 @@
 
 **Tier distribution after the rule (48 products):** Puberty Safe 0, Use Caution 5, Avoid (Mild) 2, Avoid (Moderate) 3, Avoid (High Priority Swap) 33, ungradable 5.
 
+
+## Q10 Revitalize Daily Cream: full brand-site list
+
+Source: Eucerin brand site, full ingredients (Learn more, View all), https://www.eucerinus.com/products/q10-active/eucerin-q10-anti-wrinkle-sensitive-skin-creme. The page's expanded list matched the practitioner list token for token (24 of 24, no differences). The CVS candidate formula was removed, and the paraben and DMDM hydantoin rule no longer reads any retailer text for this product.
+
+- Old tier (before this update): Avoid (High Priority Swap), set by the CVS candidate listing (paraben and DMDM hydantoin). Printed flag count: 0. Audit status: needs review.
+- New tier: Avoid (High Priority Swap), now set by printed flags. Flag count: 4 (Butylene Glycol, 1,2-Hexanediol, Carbomer, Phenoxyethanol). Automatic escalation: carcinogen in leave-on. Audit status: complete.
+- Unknown ingredients (15, excluded from flags): Ethylhexyl Cocoate, Hydrogenated Coco-Glycerides, Caprylic/Capric Triglyceride, Butyrospermum Parkii (Shea) Butter, Glyceryl Stearate Citrate, Octyldodecanol, Tocopheryl Acetate, Ubiquinone, Biotin, Biosaccharide Gum-1, Sodium Ascorbyl Phosphate, Zea Mays (Corn) Oil, Beta-Carotene, Sodium Hydroxide, Trisodium EDTA.
+- Headline tier counts for Eucerin are unchanged by this update (0 Puberty Safe, 5 Use Caution, 2 Avoid (Mild), 3 Avoid (Moderate), 33 Avoid (High Priority Swap), 5 ungradable). Earlier paragraphs in this file that describe the CVS-based paraben grade predate this update.
