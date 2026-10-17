@@ -22,11 +22,22 @@
    ],
    "natural": [],
    "unknown": [
+    "Water",
+    "Glycerin",
+    "Urea",
     "Hydrogenated Cocoglycerides",
+    "Octyldodecanol",
+    "Caprylic/Capric Triglyceride",
     "Butyrospermum Parkii (Shea) Butter",
-    "Ceramide NP",
+    "Sodium Lactate",
+    "Lactic Acid",
+    "Arginine HCI",
+    "Glycine",
+    "Alanine",
     "Carnitine",
+    "Sodium PCA",
     "Carrageenan",
+    "Cholesterol",
     "Helianthus Annuus (Sunflower) Seed Oil",
     "Tapioca Starch",
     "Acrylates/C10-30 Alkyl Acrylate Crosspolymer"
@@ -50,20 +61,31 @@
    ],
    "natural": [],
    "unknown": [
+    "Water",
+    "Glycerin",
     "glyceryl glucoside",
+    "sodium lactate",
     "butyrospermum parkii (shea) butter",
+    "Caprylic/Capric Triglyceride",
     "Methylpropanediol",
+    "Octyldodecanol",
     "Dicaprylyl Ether",
     "Tapioca Starch",
     "Hydrogenated Coco-Glycerides",
+    "Arginine HCL",
+    "Sodium PCA",
     "Dimethiconol",
+    "Lactic Acid",
     "Chondrus Crispus (Carrageenan)",
     "Carnitine",
-    "Ceramide 3",
     "Mannitol",
+    "Serine",
     "Sucrose",
     "Citrulline",
     "Glycogen",
+    "Histidine HCL",
+    "Alanine",
+    "Threonine",
     "Glutamic Acid",
     "Lysine HCL"
    ],
@@ -87,14 +109,24 @@
    ],
    "natural": [],
    "unknown": [
-    "CERAMIDE 3",
     "NATURAL MOISTURIZING FACTORS",
+    "Water",
+    "Glycerin",
+    "Urea",
+    "Glyceryl Stearate",
     "Hydrogenated Coco-Glycerides",
+    "Caprylic/Capric Triglyceride",
     "Butyl Adipate",
     "Dicaprylyl Ether",
+    "Sodium Lactate",
     "Tapioca Starch",
-    "Ceramide NP",
+    "Lactic Acid",
+    "Sodium PCA",
+    "Arginine HCI",
+    "Glycine",
+    "Alanine",
     "Carnitine",
+    "Cholesterol",
     "Helianthus Annuus (Sunflower) Seed Oil"
    ],
    "esc": [
@@ -117,8 +149,10 @@
    ],
    "natural": [],
    "unknown": [
+    "Water",
     "Sodium Cocoamphoacetate",
     "Lauryl Glucoside",
+    "Glycerin",
     "Diammonium Citrate",
     "Sodium Acetate",
     "Sodium Salicylate"
@@ -140,11 +174,22 @@
    ],
    "natural": [],
    "unknown": [
+    "Water",
+    "Glycerin",
+    "Urea",
     "Hydrogenated Coco-Glycerides",
+    "Octyldodecanol",
+    "Caprylic/Capric Triglyceride",
     "Butyrospermum Parkii (Shea) Butter",
-    "Ceramide NP",
+    "Sodium Lactate",
+    "Lactic Acid",
+    "Arginine HCl",
+    "Glycine",
+    "Alanine",
     "Carnitine",
+    "Sodium PCA",
     "Carrageenan",
+    "Cholesterol",
     "Helianthus Annuus (Sunflower) Seed Oil",
     "Tapioca Starch",
     "Acrylates/C10-30 Alkyl Acrylate Crosspolymer"
@@ -168,15 +213,20 @@
    ],
    "natural": [],
    "unknown": [
+    "Water",
+    "Glycerin",
     "Diisopropyl Adipate",
+    "Caprylic/Capric Triglyceride",
     "Glyceryl Stearate Citrate",
     "Butyrospermum Parkii (Shea) Butter",
     "Cocoglycerides",
     "Distarch Phosphate",
     "Isobutylamido Thiazolyl Resorcinol",
+    "Lactic Acid",
     "Glycyrrhiza Inflata Root Extract",
     "Hydroxypropyl Starch Phosphate",
     "Triisostearin",
+    "Sodium Hydroxide",
     "Tapioca Starch",
     "Pantolactone",
     "Trisodium EDTA"
@@ -201,6 +251,10 @@
    ],
    "natural": [],
    "unknown": [
+    "Water",
+    "Glycerin",
+    "Isopropyl Palmitate",
+    "Cetearyl Isononanoate",
     "Diisopropyl Adipate",
     "Propylheptyl Caprylate",
     "Distarch Phosphate",
@@ -210,6 +264,7 @@
     "Glucosylrutin",
     "Isoquercitrin",
     "Glycine Soja (Soybean) Oil",
+    "Glyceryl Stearate",
     "Hydroxypropyl Starch Phosphate",
     "Dehydroxanthan Gum",
     "Sodium Stearoyl Glutamate",
@@ -236,18 +291,23 @@
    ],
    "natural": [],
    "unknown": [
+    "Water",
+    "Glycerin",
+    "Caprylic/Capric Triglyceride",
     "Cocoglycerides",
+    "Isopropyl Palmitate",
+    "Glyceryl Stearate",
     "Diisopropyl Adipate",
     "Butyrospermum Parkii (Shea) Butter",
     "Glycyrrhiza Inflata Root Extract",
     "Pimpinella Anisum (Anise) Fruit Extract",
     "Isobutylamido Thiazolyl Resorcinol",
     "Sodium Stearoyl Glutamate",
+    "Sodium Hydroxide",
     "Trisodium EDTA",
     "Tin Oxide"
    ],
    "esc": [
-    "heavy metals",
     "PFAS",
     "carcinogen in leave-on"
    ],
@@ -266,13 +326,17 @@
    ],
    "natural": [],
    "unknown": [
+    "Water",
+    "Glycerin",
     "Diisopropyl Adipate",
     "Butylene Glycol Dicaprylate/ Dicaprate",
     "C12-15 Alkyl Benzoate",
     "Dibutyl Adipate",
     "Distarch Phosphate",
+    "Glyceryl Stearate",
     "Isobutylamido Thiazolyl Resorcinol",
     "Glycyrrhiza Inflata Root Extract",
+    "Tocopheryl Acetate",
     "Sodium Stearoyl Glutamate",
     "Trisodium EDTA"
    ],
@@ -299,6 +363,9 @@
    ],
    "natural": [],
    "unknown": [
+    "Water",
+    "Glycerin",
+    "Glyceryl Stearate",
     "Butylene Glycol Dicaprylate/Dicaprate",
     "C12-15 Alkyl Benzoate",
     "Dibutyl Adipate",
@@ -311,7 +378,6 @@
     "Disodium EDTA"
    ],
    "esc": [
-    "PFAS",
     "carcinogen in leave-on"
    ],
    "status": "complete"
@@ -328,7 +394,11 @@
    ],
    "natural": [],
    "unknown": [
+    "Water",
+    "Glycerin",
     "Butyrospermum Parkii (Shea) Butter",
+    "Cetearyl Isononanoate",
+    "Isopropyl Palmitate",
     "Glyceryl Stearate Citrate",
     "Hydrogenated Coco-Glycerides",
     "Methylpropanediol",
@@ -354,10 +424,15 @@
    ],
    "natural": [],
    "unknown": [
+    "Water",
     "Sodium Cocoamphoacetate",
+    "Glycerin",
+    "Coco-Betaine",
+    "Lactic Acid",
     "Dehydroxanthan Gum",
     "Glycolic Acid",
-    "Glyceryl Glucoside"
+    "Glyceryl Glucoside",
+    "Sodium Hydroxide"
    ],
    "esc": [],
    "status": "complete"
@@ -374,13 +449,18 @@
    ],
    "natural": [],
    "unknown": [
+    "Water",
+    "Glycerin",
     "Distarch Phosphate",
+    "Cetearyl Isononanoate",
+    "Isopropyl Palmitate",
     "Squalene",
     "Gellan Gum",
     "Carrageenan",
     "Pantolactone",
     "Glycine Soja (Soybean) Oil",
-    "Dehydroxanthan Gum"
+    "Dehydroxanthan Gum",
+    "Lactic Acid"
    ],
    "esc": [
     "carcinogen in leave-on"
@@ -400,6 +480,8 @@
    ],
    "natural": [],
    "unknown": [
+    "Water",
+    "Glycerin",
     "Sodium Ascorbyl Phosphate"
    ],
    "esc": [
@@ -415,6 +497,10 @@
    "flagged": [],
    "natural": [],
    "unknown": [
+    "Water",
+    "Glycerin",
+    "Coco-Betaine",
+    "Coco Glucoside",
     "Glyceryl Glucoside",
     "Acrylates/C10-30 Alkyl Acrylate Crosspolymer",
     "Trisodium EDTA"
@@ -430,6 +516,10 @@
    "flagged": [],
    "natural": [],
    "unknown": [
+    "Water",
+    "Glycerin",
+    "Coco-Betaine",
+    "Coco Glucoside",
     "Glyceryl Glucoside",
     "Acrylates/C10-30 Alkyl Acrylate Crosspolymer",
     "Trisodium EDTA"
@@ -451,8 +541,18 @@
    ],
    "natural": [],
    "unknown": [
+    "Water",
+    "Octyldodecanol",
+    "Caprylic/Capric Triglyceride",
+    "Isopropyl Palmitate",
+    "Sodium Lactate",
+    "Urea",
+    "Glycerin",
     "Methoxy PEG-22/Dodecyl Glycol Copolymer",
-    "Sorbitan Isostearate"
+    "Lactic Acid",
+    "Ozokerite",
+    "Sorbitan Isostearate",
+    "Hydrogenated Castor Oil"
    ],
    "esc": [
     "PFAS",
@@ -517,7 +617,9 @@
    ],
    "natural": [],
    "unknown": [
+    "Water",
     "C12-15 Alkyl Benzoate",
+    "Isopropyl Palmitate",
     "Ethylhexyl Pelargonate",
     "Bis-Octyldodecyl Dimer Dilinoleate/Propanediol Copolymer",
     "Ethylhexyl Methoxycrylene",
@@ -549,6 +651,7 @@
    "natural": [],
    "unknown": [
     "l-6 Stearate",
+    "Glycerin",
     "Silica Dimethyl Silylate",
     "Tapioca Starch",
     "Glycyrrhetinic Acid",
@@ -557,11 +660,11 @@
     "Hydroxyacetophenone",
     "Copernicia Cerifera (Carnauba) Wax",
     "Hydroxypropyl Methylcellulose",
+    "Glyceryl Stearate",
     "Polyglyceryl-6 Behenate",
     "Disodium EDTA"
    ],
    "esc": [
-    "PFAS",
     "carcinogen in leave-on"
    ],
    "status": "complete"
@@ -585,6 +688,7 @@
    ],
    "natural": [],
    "unknown": [
+    "Water",
     "Dimethyl Ether",
     "C12-15 Alkyl Benzoate",
     "Neopentyl Glycol Diheptanoate",
@@ -621,6 +725,7 @@
    ],
    "natural": [],
    "unknown": [
+    "Water",
     "C12-15 Alkyl Benzoate",
     "Neopentyl Glycol Diheptanoate",
     "Glycyrrhiza Inflata Root Extract",
@@ -653,7 +758,9 @@
    ],
    "natural": [],
    "unknown": [
+    "Water",
     "C12-15 Alkyl Benzoate",
+    "Isopropyl Palmitate",
     "Ethylhexyl Pelargonate",
     "Bis-Octyldodecyl Dimer Dilinoleate/Propanediol Copolymer",
     "Ethylhexyl Methoxycrylene",
@@ -687,6 +794,7 @@
    ],
    "natural": [],
    "unknown": [
+    "Water",
     "C12-15 Alkyl Benzoate",
     "Polyglyceryl-6 Stearate",
     "Sodium Stearoyl Glutamate",
@@ -701,6 +809,7 @@
     "Ethylcellulose",
     "Glyceryl Behenate",
     "Polyglyceryl-6 Octastearate",
+    "Glycerin",
     "Disodium EDTA",
     "Hydroxyacetophenone",
     "Polyglyceryl-6 Behenate",
@@ -732,6 +841,7 @@
    ],
    "natural": [],
    "unknown": [
+    "Water",
     "C12-15 Alkyl Benzoate",
     "Polyglyceryl-6 Stearate",
     "Sodium Stearoyl Glutamate",
@@ -746,6 +856,7 @@
     "Glyceryl Behenate",
     "L-Carnitine",
     "Polyglyceryl-6 Octastearate",
+    "Glycerin",
     "Disodium EDTA",
     "Hydroxyacetophenone",
     "Polyglyceryl-6 Behenate",
@@ -776,7 +887,9 @@
    ],
    "natural": [],
    "unknown": [
+    "Water",
     "C12-15 Alkyl Benzoate",
+    "Isopropyl Palmitate",
     "Ethylhexyl Pelargonate",
     "Bis-Octyldodecyl Dimer Dilinoleate/Propanediol Copolymer",
     "Ethylhexyl Methoxycrylene",
@@ -791,7 +904,6 @@
     "Polyglyceryl-6 Polyricinoleate"
    ],
    "esc": [
-    "heavy metals",
     "PFAS",
     "carcinogen in leave-on"
    ],
@@ -819,6 +931,7 @@
    ],
    "natural": [],
    "unknown": [
+    "Water",
     "C12-15 Alkyl Benzoate",
     "Polyglyceryl-6 Stearate",
     "Sodium Stearoyl Glutamate",
@@ -835,11 +948,12 @@
     "Ethylcellulose",
     "Glyceryl Behenate",
     "Polyglyceryl-6 Octastearate",
+    "Glycerin",
     "Polyglyceryl-6 Behenate",
+    "Sodium Polyacrylate",
     "Disodium EDTA"
    ],
    "esc": [
-    "heavy metals",
     "PFAS",
     "carcinogen in leave-on"
    ],
@@ -874,11 +988,23 @@
    ],
    "natural": [],
    "unknown": [
+    "Water",
+    "Urea",
+    "Glycerin",
+    "Caprylic/Capric Triglyceride",
+    "Glyceryl Stearate",
+    "Octyldodecanol",
     "Hydrogenated Cocoglycerides",
     "Ethylhexyl Cocoate",
+    "Sodium Lactate",
     "Distarch Phosphate",
-    "Ceramide NP",
+    "Lactic Acid",
+    "Sodium PCA",
+    "Arginine HCl",
+    "Glycine",
+    "Alanine",
     "Carnitine",
+    "Cholesterol",
     "Helianthus Annuus (Sunflower) Seed Oil"
    ],
    "esc": [
@@ -898,18 +1024,28 @@
    ],
    "natural": [],
    "unknown": [
+    "Water",
+    "Urea",
+    "Glycerin",
     "Isopropyl Stearate",
     "Dicaprylyl Ether",
     "Glyceryl Glucoside",
+    "Sodium Lactate",
     "Butyrospermum Parkii (Shea) Butter",
     "Nylon-12",
     "Polyglyceryl-4 Diisostearate/Polyhydroxystearate/Sebacate",
+    "Arginine HCL",
+    "Sodium PCA",
+    "Lactic Acid",
     "Carnitine",
     "Mannitol",
+    "Serine",
     "Sucrose",
     "Citrulline",
     "Glycogen",
-    "Ceramide NP",
+    "Histidine HCL",
+    "Alanine",
+    "Threonine",
     "Glutamic Acid",
     "Lysine HCL"
    ],
@@ -933,11 +1069,21 @@
    "natural": [],
    "unknown": [
     "colloidal oatmeal",
+    "Water",
+    "Isopropyl Palmitate",
+    "Glycerin",
     "Sodium Cocoamphoacetate",
+    "Caprylic/Capric Triglyceride",
+    "Octyldodecanol",
     "C12-15 Alkyl Benzoate",
-    "Ceramide NP",
+    "Cetearyl Isononanoate",
+    "Alanine",
+    "Arginine HCl",
     "Carnitine",
-    "Lauryl Glucoside"
+    "Glycine",
+    "Sodium PCA",
+    "Lauryl Glucoside",
+    "Sodium Hydroxide"
    ],
    "esc": [],
    "status": "complete"
@@ -957,9 +1103,13 @@
    "natural": [],
    "unknown": [
     "Colloidal Oatmeal",
+    "Water",
+    "Glycerin",
     "Ricinus Communis (Castor) Seed Oil",
+    "Glyceryl Stearate",
+    "Caprylic/Capric Triglyceride",
+    "Octyldodecanol",
     "Glycyrrhiza Inflata Root Extract",
-    "Ceramide NP",
     "Piroctone Olamine"
    ],
    "esc": [
@@ -978,8 +1128,12 @@
    "natural": [],
    "unknown": [
     "Colloidal Oatmeal",
+    "Water",
+    "Glycerin",
+    "Octyldodecanol",
+    "Caprylic/Capric Triglyceride",
     "Glycyrrhiza Inflata Root Extract",
-    "Ceramide NP",
+    "Phytosphingosine",
     "Gellan Gum",
     "Hydroxyacetophenone"
    ],
@@ -1003,9 +1157,13 @@
    "natural": [],
    "unknown": [
     "Colloidal Oatmeal",
+    "Water",
+    "Glycerin",
     "Ricinus Communis (Castor) Seed Oil",
+    "Caprylic/Capric Triglyceride",
+    "Octyldodecanol",
+    "Glyceryl Stearate",
     "Glycyrrhiza Inflata Root Extract",
-    "Ceramide NP",
     "Piroctone Olamine",
     "Menthoxypropanediol",
     "Trisodium EDTA"
@@ -1032,16 +1190,21 @@
    "natural": [],
    "unknown": [
     "Menthol",
+    "Water",
+    "Glycerin",
     "Hydrogenated Coco-Glycerides",
+    "Isopropyl Palmitate",
     "Triisostearin",
     "Palmitic Acid",
     "Stearic Acid",
     "Distarch Phosphate",
-    "Ceramide NP",
+    "Glyceryl Stearate",
+    "Arginine HCl",
     "Myristic Acid",
     "Arachidic Acid",
     "4-t-butylcyclohexanol",
     "Menthoxypropanediol",
+    "Sodium Hydroxide",
     "Trisodium EDTA"
    ],
    "esc": [
@@ -1066,6 +1229,11 @@
    ],
    "natural": [],
    "unknown": [
+    "Water",
+    "Glycerin",
+    "caprylic/capric triglyceride",
+    "Octyldodecanol",
+    "Glyceryl Stearate",
     "Colloidal Oatmeal",
     "Methylpropanediol",
     "Polyglyceryl-2 Caprate",
@@ -1093,6 +1261,11 @@
    ],
    "natural": [],
    "unknown": [
+    "Water",
+    "Glycerin",
+    "Caprylic/Capric Triglyceride",
+    "Octyldodecanol",
+    "Glyceryl Stearate",
     "Colloidal Oatmeal",
     "Methylpropanediol",
     "Piroctone Olamine",
@@ -1142,6 +1315,7 @@
    ],
    "natural": [],
    "unknown": [
+    "Water",
     "Ceresin",
     "Lanolin Alcohol",
     "Piroctone Olamine"
@@ -1164,6 +1338,9 @@
    ],
    "natural": [],
    "unknown": [
+    "Water",
+    "Isopropyl Palmitate",
+    "Sorbitol",
     "Diisostearoyl Polyglyceryl-3 Dimer Dilinoleate",
     "Polyglyceryl-4 Diisostearate/Polyhydroxystearate/Sebacate",
     "Lanolin Alcohol"
@@ -1182,7 +1359,9 @@
    "flagged": [],
    "natural": [],
    "unknown": [
-    "Colloidal Oatmeal"
+    "Colloidal Oatmeal",
+    "Water",
+    "Glycerin"
    ],
    "esc": [],
    "status": "needs review"
@@ -1202,11 +1381,21 @@
    "natural": [],
    "unknown": [
     "colloidal oatmeal",
+    "Water",
+    "Isopropyl Palmitate",
+    "Glycerin",
     "Sodium Cocoamphoacetate",
+    "Caprylic/Capric Triglyceride",
+    "Octyldodecanol",
     "C12-15 Alkyl Benzoate",
-    "Ceramide NP",
+    "Cetearyl Isononanoate",
+    "Alanine",
+    "Arginine HCl",
     "Carnitine",
-    "Lauryl Glucoside"
+    "Glycine",
+    "Sodium PCA",
+    "Lauryl Glucoside",
+    "Sodium Hydroxide"
    ],
    "esc": [],
    "status": "complete"
@@ -1220,7 +1409,9 @@
     "Sodium Myreth Sulfate"
    ],
    "natural": [],
-   "unknown": [],
+   "unknown": [
+    "Water"
+   ],
    "esc": [],
    "status": "needs review"
   },
@@ -1239,9 +1430,13 @@
    "natural": [],
    "unknown": [
     "Colloidal Oatmeal",
+    "Water",
+    "Glycerin",
     "Ricinus Communis (Castor) Seed Oil",
+    "Glyceryl Stearate",
+    "Caprylic/Capric Triglyceride",
+    "Octyldodecanol",
     "Glycyrrhiza Inflata Root Extract",
-    "Ceramide NP",
     "Piroctone Olamine"
    ],
    "esc": [

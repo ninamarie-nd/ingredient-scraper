@@ -1,6 +1,6 @@
 # Eucerin (US) Audit — Content Mining Report
 
-**Date audited:** 2026-10-16 (regraded with the unified grader)
+**Date audited:** 2026-10-16 (regraded under practitioner decisions D1 to D4; no tier changed)
 **Products audited:** 48 listed, 48 graded, 0 not graded
 **Source:** https://www.eucerinus.com/ (product names and brand key-ingredient text). Full ingredient text comes from retailer product pages; see the audit log.
 
@@ -28,7 +28,7 @@
 
 **Most-flagged products:** Tinted Age Defense SPF 50 Face Sunscreen (13 flags), Age Defense SPF 50 Face Sunscreen (11 flags), Clear Skin SPF 50 Face Sunscreen (11 flags), Advanced Hydration SPF 50 Sunscreen (10 flags).
 
-**Cleanest product:** Hydrating Cleansing Gel, both sizes (13.5 fl oz and 6.8 fl oz). Puberty Safe with zero flagged ingredients on the printed list. Three ingredient names in each list are still unknown, so the grade rests on the known subset.
+**Cleanest product:** Hydrating Cleansing Gel, both sizes (13.5 fl oz and 6.8 fl oz). Puberty Safe with zero flagged ingredients on the printed list. Seven ingredient names in each list are still unknown (water and glycerin among them), so the grade rests on the known subset.
 
 **Content angle for Section A:** "I checked the full ingredient lists for 37 Eucerin products. 30 of them grade High Priority Swap." Say which products are still pending before posting.
 
@@ -40,7 +40,7 @@
 
 **Most common risk category:** Category 4 (Allergies, Irritation, Corrosion) — flagged in 38 of 48 products. Category 2 (Endocrine Disruption) is in 37, Category 1 (Carcinogen) in 36, Category 5 (Microbiome-Busting) in 34.
 
-**Escalations triggered:** a category 1 ingredient in a leave-on product (32 products), a PFAS-treated ingredient (21 products), and a heavy metal (4 products: iron oxides in the tinted sunscreen and Eye Cream, and aluminum stearates in Original Healing Lotion).
+**Escalations triggered:** a category 1 ingredient in a leave-on product (32 products), a PFAS-treated ingredient (19 products), and a heavy metal (1 product: aluminum stearates in Original Healing Lotion). Two decisions changed the labels and not the tiers. Under D1, unspecified silica no longer triggers PFAS, which removed the label from Daily Lotion SPF 30 and Advanced Hydration Ultra-Light SPF 50 (both stay High Priority Swap on other flags). Under D2, iron oxides no longer trigger the heavy-metal escalation, which removed it from Eye Cream and both tinted sunscreens. Those three still carry PFAS as written, pending practitioner confirmation. The one remaining heavy-metal escalation rests on a naming-pattern inference (aluminum, category 3), not on a reference entry.
 
 **"Clean marketing, dirty formula" finds:**
 - **Advanced Repair Cream, 16 oz.** The Target listing for this size is the Fragrance Free Body Cream, and the printed list has no fragrance. It still grades Avoid (High Priority Swap) with 5 flags: dimethicone (PFAS treated), phenoxyethanol (category 1), pentylene glycol, decylene glycol, and sodium cetearyl sulfate.
@@ -107,24 +107,38 @@ Their tiers may change once a full printed list is confirmed. Puberty Safe rows 
 
 ## Manual review queue
 
-**101 unique unknown ingredient names** (deduplicated, whitespace and slash spacing ignored) across 45 products, 329 occurrences. These are not scored by the reference, the LOW TOX list, or the rubric's naming patterns, so they are marked `unknown — manual review needed` in the workbook. A Puberty Safe grade on a product with unknowns is provisional on the known subset. Puberty Safe products with unknowns: Hydrating Cleansing Gel, 13.5 FL OZ, Hydrating Cleansing Gel, 6.8 FL OZ, Q10 Revitalize Night Cream, Q10 Revitalize Daily Cream, Advanced Hydration After Sun Lotion, Daily Hydration Lotion, Eucerin Baby Eczema Relief Hydrogel, Baby Lotion.
+**127 unique unknown ingredient names** (deduplicated, case-insensitive, whitespace and slash spacing ignored) across 46 products, 528 occurrences. These are not scored by the reference or the rubric's naming patterns, so they are marked `unknown — manual review needed` in the workbook. Under decision D4, a name the reference does not list is unknown, not low tox. That is why Water (40 rows) and Glycerin (33 rows) now appear here. They add no flags, so no tier moves. A Puberty Safe grade on a product with unknowns is provisional on the known subset. All 8 Puberty Safe products carry unknowns (count in brackets):
+- Hydrating Cleansing Gel, 13.5 FL OZ (7)
+- Hydrating Cleansing Gel, 6.8 FL OZ (7)
+- Q10 Revitalize Night Cream (1)
+- Q10 Revitalize Daily Cream (2)
+- Advanced Hydration After Sun Lotion (2)
+- Daily Hydration Lotion (1)
+- Eucerin Baby Eczema Relief Hydrogel (3)
+- Baby Lotion (1)
 
 - 4-t-butylcyclohexanol
 - Acrylates/C10-30 Alkyl Acrylate Crosspolymer
+- Alanine
 - Aloe Barbadensis Leaf Juice
 - Arachidic Acid
+- Arginine HCI
+- Arginine HCL
 - Bis-Octyldodecyl Dimer Dilinoleate/Propanediol Copolymer
 - Butyl Adipate
 - Butylene Glycol Dicaprylate/ Dicaprate
 - Butyrospermum Parkii (Shea) Butter
 - C12-15 Alkyl Benzoate
+- Caprylic/Capric Triglyceride
 - Carnitine
 - Carrageenan
-- Ceramide 3
-- Ceramide NP
 - Ceresin
+- Cetearyl Isononanoate
+- Cholesterol
 - Chondrus Crispus (Carrageenan)
 - Citrulline
+- Coco Glucoside
+- Coco-Betaine
 - Cocoglycerides
 - colloidal oatmeal
 - Copernicia Cerifera (Carnauba) Wax
@@ -146,26 +160,33 @@ Their tiers may change once a full printed list is confirmed. Puberty Safe rows 
 - Gellan Gum
 - Glucosylrutin
 - Glutamic Acid
+- Glycerin
 - Glyceryl Behenate
 - glyceryl glucoside
+- Glyceryl Stearate
 - Glyceryl Stearate Citrate
+- Glycine
 - Glycine Soja (Soybean) Oil
 - Glycogen
 - Glycolic Acid
 - Glycyrrhetinic Acid
 - Glycyrrhiza Inflata Root Extract
 - Helianthus Annuus (Sunflower) Seed Oil
+- Histidine HCL
+- Hydrogenated Castor Oil
 - Hydrogenated Coco-Glycerides
 - Hydrogenated Cocoglycerides
 - Hydroxyacetophenone
 - Hydroxypropyl Methylcellulose
 - Hydroxypropyl Starch Phosphate
 - Isobutylamido Thiazolyl Resorcinol
+- Isopropyl Palmitate
 - Isopropyl Stearate
 - Isoquercitrin
 - Jojoba Esters
 - l-6 Stearate
 - L-Carnitine
+- Lactic Acid
 - Lanolin Alcohol
 - Lauryl Glucoside
 - Licochalcone A
@@ -179,8 +200,11 @@ Their tiers may change once a full printed list is confirmed. Puberty Safe rows 
 - NATURAL MOISTURIZING FACTORS
 - Neopentyl Glycol Diheptanoate
 - Nylon-12
+- Octyldodecanol
+- Ozokerite
 - Palmitic Acid
 - Pantolactone
+- Phytosphingosine
 - Pimpinella Anisum (Anise) Fruit Extract
 - Piroctone Olamine
 - Polyester-27
@@ -193,27 +217,35 @@ Their tiers may change once a full printed list is confirmed. Puberty Safe rows 
 - Propylheptyl Caprylate
 - Q10
 - Ricinus Communis (Castor) Seed Oil
+- Serine
 - Shea Butter
 - Silica Dimethyl Silylate
 - Simmondsia Chinensis (Jojoba) Seed Oil
 - Sodium Acetate
 - Sodium Ascorbyl Phosphate
 - Sodium Cocoamphoacetate
+- Sodium Hydroxide
+- Sodium Lactate
+- Sodium PCA
+- Sodium Polyacrylate
 - Sodium Salicylate
 - Sodium Stearoyl Glutamate
 - Sorbitan Isostearate
+- Sorbitol
 - Squalene
 - Stearic Acid
 - Sucrose
 - Tapioca Starch
+- Threonine
 - Tin Oxide
+- Tocopheryl Acetate
 - Triethoxycaprylylsilane
 - Triisostearin
 - Trisodium EDTA
+- Urea
+- Water
 
-Cleaned in this pass: percent values, trailing periods, "Purpose:" fragments, section labels, "Synthetics"-style prefixes, the "1,2-Hexanediol" comma split, HCl salt forms, missing-space joins ("SodiumChloride"), and misspellings. The previous workbook held 120 unique names.
-
----
+Cleaned in this pass: percent values, trailing periods, "Purpose:" fragments, section labels, "Synthetics"-style prefixes, the "1,2-Hexanediol" comma split, HCl salt forms, missing-space joins ("SodiumChloride"), and misspellings. Under D4, "Cocos Nucifera (Coconut) Oil" maps to the reference's coconut oil entry (LOW TOX), and "Ceramide NP" and "Ceramide 3" map to the reference's ceramide entry (LOW TOX). Earlier counts (120, then 101 names) used a different dedupe and are not comparable with this one.
 
 ## Reformulation and sourcing flags
 

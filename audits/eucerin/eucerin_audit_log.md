@@ -354,3 +354,58 @@ The sourcing notes above still apply. Where this section and an earlier section 
 - `eucerin/eucerin_audit_log.md` (this section)
 - Removed `eucerin/__pycache__` (left by an earlier import of the old grader)
 - Not modified: `eucerin_ingredients.json`. Nothing was committed, and no other folder was touched.
+
+## Regrade 2026-10-16, practitioner decisions D1 to D4 (supersedes the escalation labels, unknown queue and audit notes above; tiers unchanged)
+
+This pass applies the practitioner's rubric decisions D1 to D4 to the unified grader and regrades all 48 products from `ingredients_verbatim`. Where this section and an earlier section disagree on an escalation label, an unknown name or a note, this section is current.
+
+### Grader changes (minimal; no other rule changed)
+- **D1 (unspecified silica).** The `silica` entry skips the PFAS-treated escalation. It still flags as [1,2]. `Silica Silylate`, `trimethylsiloxysilicate` and `Silica (hydrated)` (LOW TOX) are unchanged. A product cannot grade Puberty Safe on unspecified silica, because it is a flag, so the Use Caution floor holds without an extra rule.
+- **D2 (iron oxides).** `CI 77491`, `CI 77492`, `CI 77499` and `iron oxides` skip the heavy-metal (category 3) escalation, including the heavy-metal stacking check. The PFAS-treated escalation is applied as written to all four names. The flag still lists [1,2,3].
+- **D3 (bisabolol).** Bisabolol is soft only when chamomile oil or chamomile extract is also listed. `Matricaria` (the INCI genus of chamomile) is accepted with it. Otherwise it is a full flag at category 4. Other naturally occurring components keep their existing essential-oil check.
+- **D4 (not in the reference).** The LOW TOX fallback list is removed. A name is LOW TOX only when the reference says so. Rubric exemptions for fatty alcohols and behentrimonium methosulfate are kept as written. Two name mappings were added: `Cocos Nucifera (Coconut) Oil` to the reference's coconut oil entry (LOW TOX), and `Ceramide NP`, `Ceramide AP`, `Ceramide NG` and `Ceramide 3` to the reference's ceramide entry (LOW TOX). Olive oil polyglyceryl-6 esters do not appear in either brand.
+- Each affected row's `audit_notes` records the D1, D2 or D3 note. The ingredients JSON was not edited.
+
+### Tier counts (48 graded)
+- Before (unified grader, 20:47 pass): Puberty Safe 8, Use Caution 3, Avoid (Mild) 2, Avoid (Moderate) 3, Avoid (High Priority Swap) 32.
+- After (this pass): Puberty Safe 8, Use Caution 3, Avoid (Mild) 2, Avoid (Moderate) 3, Avoid (High Priority Swap) 32.
+- **No product changed tier.** Flag lists and natural-allergen lists are also unchanged. Changes are to escalation labels and to the unknown column.
+
+### Products changed, by decision
+- **D1: PFAS label removed, tier unchanged.** Daily Lotion SPF 30 (9 flags) and Advanced Hydration Ultra-Light SPF 50 Face Sunscreen (8 flags). Silica was their only PFAS source. Both stay High Priority Swap on other flags. The other four silica products (Clear Skin SPF 50, Age Defense SPF 50, Tinted Sensitive Mineral SPF 35, Tinted Age Defense SPF 50) keep PFAS from dimethicone or cyclopentasiloxane.
+- **D2: heavy-metal label removed, PFAS label kept, tier unchanged.** Eye Cream, Tinted Sensitive Mineral SPF 35 Face Sunscreen and Tinted Age Defense SPF 50 Face Sunscreen. Each stays High Priority Swap on other PFAS-treated ingredients: synthetic fluorphlogopite (Eye Cream), dimethicone and cyclopentasiloxane (Tinted Sensitive), dimethicone (Tinted Age Defense). The iron PFAS question therefore changes the escalation label only; see Open items.
+- **D3: no change.** No Eucerin product lists bisabolol.
+- **D4: unknown column changed in 41 products; no flag or tier changed.** Water, glycerin, caprylic/capric triglyceride, octyldodecanol, glyceryl stearate, isopropyl palmitate, lactic acid and the amino acids moved from low tox to unknown. Ceramide NP and Ceramide 3 spellings and coconut oil moved from unknown to low tox.
+
+### Escalations, all 48 (after)
+- Carcinogen in a leave-on: 32 products (unchanged).
+- PFAS-treated: 19 products (was 21): the two D1 products dropped out. The three D2 products keep it.
+- Heavy metals: 1 product, Original Healing Lotion (aluminum stearates). Was 4. The aluminum flag is a naming-pattern inference (category 3), not a reference entry, so it is noted as an inference.
+
+### Unknown queue (after D4)
+- 127 unique names (case-insensitive; whitespace and slash spacing ignored), 528 occurrences, 46 products. The earlier figures (101 names, 329 occurrences) were counted with a different dedupe and are not comparable.
+- Largest additions from D4: Water (40 rows), Glycerin (33), Caprylic/Capric Triglyceride (16), Octyldodecanol (13), Glyceryl Stearate (13), Isopropyl Palmitate (12), Lactic Acid (10). Water and glycerin are not in the reference text (PDF or `ref_compact.json`).
+- Botanical oils and butters (shea, sunflower, jojoba, castor, soybean, carnauba wax) and Lanolin Alcohol stay unknown, as D4 requires.
+- All 8 Puberty Safe products carry unknowns. Their grades are provisional on the known subset: Hydrating Cleansing Gel 13.5 fl oz (7), Hydrating Cleansing Gel 6.8 fl oz (7), Q10 Revitalize Night Cream (1), Q10 Revitalize Daily Cream (2), Advanced Hydration After Sun Lotion (2), Daily Hydration Lotion (1), Eucerin Baby Eczema Relief Hydrogel (3), Baby Lotion (1).
+
+### Hand checks (3 products)
+Eucerin has no bisabolol product, so the bisabolol check was done on Aquaphor (see its log). Substitute for the third check: a silica product with a PFAS fallback.
+1. **Daily Lotion SPF 30** (silica). Read by hand from the verbatim text: silica [1,2] (flag; no PFAS escalation, D1); avobenzone, homosalate, octisalate and octocrylene [2] each (reference); alcohol denat. [4] (naming-pattern inference); phenoxyethanol [1,2,4,5,8]; ethylhexylglycerin [4,5]; fragrance without disclosure [1,2,4,8]. Nine flags, which reaches High Priority Swap at 8 or more. Carcinogen in a leave-on. Silica Dimethyl Silylate is unknown (not the same name as Silica Silylate). The grader matches.
+2. **Eye Cream** (iron oxides). Iron oxides [1,2,3] flagged with the heavy-metal escalation not applied (D2). PFAS applied as written to iron oxides, and independently through synthetic fluorphlogopite (reference: PFAS treated). Five flags. High Priority Swap. The grader matches.
+3. **Clear Skin SPF 50 Face Sunscreen** (silica with dimethicone). Silica [1,2] (no PFAS by D1). Dimethicone [2,6] is PFAS-treated in the reference, so the PFAS escalation stands. Butyloctyl salicylate [2] and diethylhexyl syringylidenemalonate [2] are reference entries. Eleven flags. High Priority Swap. The grader matches.
+
+### Open items for the practitioner
+1. **Iron oxides PFAS escalation (pending confirmation).** Affected products: Eye Cream; Tinted Sensitive Mineral SPF 35 Face Sunscreen; Tinted Age Defense SPF 50 Face Sunscreen. All three stay High Priority Swap whether or not iron oxides escalate, because each has another PFAS-treated ingredient. The decision changes only the automatic_escalation column for these three. Basis: the PDF tags PFAS treated on CI 77491, CI 77492 and CI 77499 only. There is no standalone "Iron oxides" row in the PDF. The `iron oxides` entry in `ref_compact.json` carries no PFAS tag and aliases to those three CI codes. The PFAS escalation for unqualified "Iron Oxides" therefore rests on D2. No CI-numbered iron oxide appears in either brand.
+2. **Iron oxides still carry three risk categories.** D2 exempts only the heavy-metal escalation. The three-category rule (Avoid (Mild) minimum) still applies to the iron flags. It does not change any Eucerin tier, because each iron product is High Priority Swap.
+3. **Silica Dimethyl Silylate** (unknown, 5 products) is not the reference's Silica Silylate (PFAS treated). D1 does not cover it, and it was not graded as PFAS. Needs a decision.
+4. **Water and glycerin** are unknown under D4 because the reference text does not list them. Consider adding them to the reference; not done here.
+5. **Ceramide and coconut mappings** are an interpretation of D4 (ceramide NP and Ceramide 3 are the same molecule; the reference's ceramide entry is LOW TOX). Confirm.
+6. **Aluminum stearates** (Original Healing Lotion) is the only remaining heavy-metal escalation, from a naming-pattern inference. Confirm that inference is acceptable.
+
+### Files written this pass
+- `eucerin/_grader.py` (D1 to D4 applied; identical copy in `aquaphor/`)
+- `eucerin/eucerin_audit.xlsx` (48 rows, template columns, regenerated)
+- `eucerin/_grade_summary.json` (regenerated)
+- `eucerin/eucerin_content_mining.md` (tier headline, escalation counts and manual review queue updated)
+- `eucerin/eucerin_audit_log.md` (this section)
+- Not modified: `eucerin_ingredients.json`. Nothing was committed or pushed, and no other folder was touched. No `__pycache__` was created (grader run with `-B`).

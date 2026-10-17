@@ -305,3 +305,47 @@ The comma-split check was run on the Eucerin 1,2-Hexandiol row (above). Aquaphor
 - `aquaphor/aquaphor_content_mining.md` (regenerated)
 - `aquaphor/aquaphor_audit_log.md` (this section)
 - Not modified: `aquaphor_ingredients.json`. Nothing was committed, and no other folder was touched.
+
+## Regrade 2026-10-16, practitioner decisions D1 to D4 (supersedes the unknown queue, grader notes and audit notes above; tiers unchanged)
+
+This pass applies the practitioner's rubric decisions D1 to D4 to the unified grader and regrades all 38 graded rows from `ingredients_verbatim`. Where this section and an earlier section disagree on an escalation label, an unknown name or a note, this section is current. The Eucerin log holds the full rule text.
+
+### Grader changes (minimal; no other rule changed)
+- Same `_grader.py` as Eucerin (identical copy). D1 to D4 are described in `eucerin/eucerin_audit_log.md`, under the same heading.
+- **D4 consequence for this brand.** The old LOW TOX fallback cleared water, glycerin, caprylic/capric triglyceride, hydrogenated castor oil, octyldodecanol, tocopheryl acetate, cholesterol, glyceryl stearate, phytosphingosine, urea and sodium hydroxide. These are not in the reference, so they are unknown now. The earlier entry claiming that ten names were resolved by the old list is superseded.
+- Mapped under D4: `Cocos Nucifera (Coconut) Oil` to the reference's coconut oil entry (LOW TOX). `Ceramide NP`, `Ceramide AP` and `Ceramide NG` to the reference's ceramide entry (LOW TOX).
+
+### Decisions as they apply here
+- **D1 (silica).** No Aquaphor product contains silica. No effect.
+- **D2 (iron oxides).** No Aquaphor product contains iron oxides. No effect.
+- **D3 (bisabolol).** Bisabolol appears in 27 of 38 graded products. No product lists a chamomile oil or chamomile extract, so every instance is a full flag (category 4). The Lip Repair tube and dual pack are Use Caution on that one flag, as before. Each affected row's `audit_notes` records the D3 result.
+- **D4.** Unknown column changed in 38 rows; no flag or tier changed.
+
+### Tier counts (38 graded; 3 not graded)
+- Before (unified grader, 20:47 pass): Puberty Safe 3, Use Caution 2, Avoid (Mild) 0, Avoid (Moderate) 2, Avoid (High Priority Swap) 31.
+- After (this pass): Puberty Safe 3, Use Caution 2, Avoid (Mild) 0, Avoid (Moderate) 2, Avoid (High Priority Swap) 31.
+- **No product changed tier.** Flag and natural-allergen lists are unchanged. Escalations are unchanged: carcinogen in a leave-on in 27 products, PFAS-treated in 5 (the four Lip Repair Stick listings and the Foot Mask), heavy metals in none.
+
+### Unknown queue (after D4)
+- 47 unique names (case-insensitive; whitespace and slash spacing ignored), 284 occurrences, 38 products.
+- Includes Water, Glycerin, Ascorbyl Palmitate, Lecithin, Ceresin, Lanolin Alcohol, Hydrocortisone, and the botanical oils and waxes (shea, castor, sunflower, jojoba, avocado, soybean, olive fruit oil, carnauba). Hydrocortisone (1%) is the OTC active in Children's Itch Relief and is not in the reference.
+- Puberty Safe rows with unknowns: Naturally Inspired Lip Repair Stick Aloe Vera (13), Naturally Inspired Lip Repair Stick Coconut (10), Diaper Rash Paste 3.5 oz (7). Their grades rest on the known subset.
+
+### Hand checks (3 products)
+Aquaphor has no silica or iron oxide product, so the checks are on bisabolol, the decision that applies here.
+1. **Aquaphor Lip Repair (tube)**. Bisabolol [4] is the only flag, a full flag with no chamomile source (D3). Octyldodecanol, Ricinus Communis (castor) seed oil, shea butter, Ascorbyl Palmitate, Lecithin, Tocopheryl Acetate, Sodium Ascorbyl Phosphate, Magnesium Stearate and Glyceryl Stearate are unknown. Magnesium Sulfate, Beeswax, Citric Acid and Glyceryl Oleate are reference LOW TOX. One flag, Use Caution. The grader matches.
+2. **Aquaphor Lip Repair (Dual Pack)**. Same bisabolol [4] flag (D3), same Use Caution tier. Unknowns: as above, minus Lecithin, Ascorbyl Palmitate, Glyceryl Stearate and Citric Acid, which this printing omits. The grader matches.
+3. **Aquaphor Baby Wash & Shampoo (25.4 oz)**. Rinse-off and daily, so the sulfate minimum applies. Sodium Myreth Sulfate [1,4,5] (naming-pattern inference, sulfate), PEG-200 Hydrogenated Glyceryl Palmate [1,2,4,5] (inference, PEG), Cocamidopropyl Betaine [1,4] (reference), Bisabolol [4] (D3, full flag), Polyquaternium-10 [2] (inference, -nium quat). Five flags, so Avoid (Moderate). Unknown: Water, Sea Salt. The grader matches.
+
+### Open items for the practitioner
+1. **Bisabolol category.** It affects every Aquaphor product that contains it (27). Under D3 each is a full flag at category 4 because no chamomile source is listed. If the fragrance set (1, 2, 4, 8) were applied instead, the two Lip Repair tubes would move to High Priority Swap. Not applied; this is the rubric question already recorded above, now settled by D3 for the category.
+2. **Hydrocortisone (1%)** remains unknown (not in the reference). Needs a pharmacology check before the product is described.
+3. **Water and glycerin** are unknown under D4, because the reference text does not list them. Consider adding them to the reference; not done here.
+
+### Files written this pass
+- `aquaphor/_grader.py` (D1 to D4 applied; identical copy of the Eucerin grader)
+- `aquaphor/aquaphor_audit.xlsx` (41 rows, template columns, regenerated; three rows marked ingredients not found)
+- `aquaphor/_grade_summary.json` (regenerated)
+- `aquaphor/aquaphor_content_mining.md` (unknown queue, Puberty Safe unknown counts and bisabolol wording updated; tiers unchanged)
+- `aquaphor/aquaphor_audit_log.md` (this section)
+- Not modified: `aquaphor_ingredients.json`, `aquaphor_catalog.json`. Nothing was committed or pushed, and no other folder was touched. No `__pycache__` was created.

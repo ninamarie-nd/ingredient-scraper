@@ -21,17 +21,20 @@
    ],
    "natural": [],
    "unknown": [
+    "Water",
+    "Glycerin",
+    "Caprylic/Capric Triglyceride",
     "Ethylhexyl Stearate",
     "Butyrospermum Parkii (Shea) Butter",
     "Hydrogenated Coco-Glycerides",
+    "Glyceryl Stearate",
     "Tapioca Starch",
-    "Ceramide AP",
-    "Ceramide NP",
-    "Ceramide NG",
+    "Cholesterol",
     "Olea Europaea (Olive) Fruit Oil",
     "Ricinus Communis (Castor) Seed Oil",
     "pantolactone",
-    "Carrageenan"
+    "Carrageenan",
+    "Hydrogenated Castor Oil"
    ],
    "esc": [
     "carcinogen in leave-on"
@@ -51,11 +54,12 @@
    ],
    "natural": [],
    "unknown": [
+    "Water",
+    "Glycerin",
     "Ethylhexyl Stearate",
+    "Caprylic/Capric Triglyceride",
     "Dicaprylyl Ether",
-    "Ceramide AP",
-    "Ceramide NP",
-    "Ceramide NG",
+    "Cholesterol",
     "Olea Europaea (Olive) Fruit Oil",
     "pantolactone",
     "Ricinus Communis (Castor) Seed Oil",
@@ -79,11 +83,12 @@
    ],
    "natural": [],
    "unknown": [
+    "Water",
+    "Glycerin",
     "Ethylhexyl Stearate",
+    "Caprylic/Capric Triglyceride",
     "Dicaprylyl Ether",
-    "Ceramide AP",
-    "Ceramide NP",
-    "Ceramide NG",
+    "Cholesterol",
     "Olea Europaea (Olive) Fruit Oil",
     "pantolactone",
     "Ricinus Communis (Castor) Seed Oil",
@@ -107,11 +112,12 @@
    ],
    "natural": [],
    "unknown": [
+    "Water",
+    "Glycerin",
     "Ethylhexyl Stearate",
+    "Caprylic/Capric Triglyceride",
     "Dicaprylyl Ether",
-    "Ceramide AP",
-    "Ceramide NP",
-    "Ceramide NG",
+    "Cholesterol",
     "Olea Europaea (Olive) Fruit Oil",
     "pantolactone",
     "Ricinus Communis (Castor) Seed Oil",
@@ -135,11 +141,12 @@
    ],
    "natural": [],
    "unknown": [
+    "Water",
+    "Glycerin",
     "Ethylhexyl Stearate",
+    "Caprylic/Capric Triglyceride",
     "Dicaprylyl Ether",
-    "Ceramide AP",
-    "Ceramide NP",
-    "Ceramide NG",
+    "Cholesterol",
     "Olea Europaea (Olive) Fruit Oil",
     "pantolactone",
     "Ricinus Communis (Castor) Seed Oil",
@@ -163,17 +170,20 @@
    ],
    "natural": [],
    "unknown": [
+    "Water",
+    "Glycerin",
+    "Caprylic/Capric Triglyceride",
     "Ethylhexyl Stearate",
     "Butyrospermum Parkii (Shea) Butter",
     "Hydrogenated Coco-Glycerides",
+    "Glyceryl Stearate",
     "Tapioca Starch",
-    "Ceramide AP",
-    "Ceramide NP",
-    "Ceramide NG",
+    "Cholesterol",
     "Olea Europaea (Olive) Fruit Oil",
     "Ricinus Communis (Castor) Seed Oil",
     "pantolactone",
-    "Carrageenan"
+    "Carrageenan",
+    "Hydrogenated Castor Oil"
    ],
    "esc": [
     "carcinogen in leave-on"
@@ -188,14 +198,18 @@
    "flagged": [],
    "natural": [],
    "unknown": [
+    "Octyldodecanol",
     "Ricinus Communis (Castor) Seed Oil",
     "Butyrospermum Parkii (Shea) Butter",
     "Helianthus Annuus (Sunflower) Seed Wax",
+    "Glycerin",
+    "Hydrogenated Castor Oil",
     "Polyglyceryl-4 Diisostearate/Polyhydroxystearate/Sebacate",
     "Aloe Barbadensis Leaf Juice Powder",
     "Simmondsia Chinensis (Jojoba) Seed Oil",
     "Helianthus Annuus (Sunflower) Seed Oil",
     "Ascorbyl Palmitate",
+    "Water",
     "Pantolactone"
    ],
    "esc": [],
@@ -209,13 +223,15 @@
    "flagged": [],
    "natural": [],
    "unknown": [
+    "Octyldodecanol",
     "Ricinus Communis (Castor) Seed Oil",
     "Butyrospermum Parkii (Shea) Butter",
     "Helianthus Annuus (Sunflower) Seed Wax",
-    "Cocos Nucifera (Coconut) Oil",
+    "Hydrogenated Castor Oil",
     "Simmondsia Chinensis (Jojoba) Seed Oil",
     "Helianthus Annuus (Sunflower) Seed Oil",
     "Ascorbyl Palmitate",
+    "Water",
     "Pantolactone"
    ],
    "esc": [],
@@ -234,7 +250,8 @@
    "natural": [],
    "unknown": [
     "Ceresin",
-    "Lanolin alcohol"
+    "Lanolin alcohol",
+    "Glycerin"
    ],
    "esc": [
     "carcinogen in leave-on"
@@ -249,9 +266,13 @@
    "flagged": [],
    "natural": [],
    "unknown": [
+    "Glycerin",
+    "Caprylic/Capric Triglyceride",
+    "Octyldodecanol",
     "Polyglyceryl-4 Diisostearate/Polyhydroxystearate/Sebacate",
     "Magnesium Stearate",
-    "Butyrospermum Parkii (Shea) Butter"
+    "Butyrospermum Parkii (Shea) Butter",
+    "Water"
    ],
    "esc": [],
    "status": "complete"
@@ -266,10 +287,14 @@
    ],
    "natural": [],
    "unknown": [
+    "Octyldodecanol",
     "Ricinus Communis (Castor) Seed Oil",
     "Bis-Diglyceryl Polyacyladipate-2",
     "Butyrospermum Parkii (Shea) Butter",
     "Helianthus Annuus (Sunflower) Seed Wax",
+    "Hydrogenated Castor Oil",
+    "Water",
+    "Tocopheryl Acetate",
     "Simmondsia Chinensis (Jojoba) Seed Oil",
     "Ascorbyl Palmitate"
    ],
@@ -292,12 +317,15 @@
    ],
    "natural": [],
    "unknown": [
+    "Octyldodecanol",
     "Ricinus Communis (Castor) Seed Oil",
     "Bis-Diglyceryl Polyacyladipate-2",
     "Butyrospermum Parkii (Shea) Butter",
+    "Hydrogenated Castor Oil",
     "Helianthus Annuus (Sunflower) Seed Wax",
     "Simmondsia Chinensis (Jojoba) Seed Oil",
     "Copernicia Cerifera (Carnauba) Wax",
+    "Tocopheryl Acetate",
     "Ascorbyl Palmitate",
     "helianthus annuus (sunflower) seed oil"
    ],
@@ -323,8 +351,14 @@
    "natural": [],
    "unknown": [
     "C18-38 Alkyl Hydroxystearoyl Stearate",
+    "Octyldodecanol",
+    "Glycerin",
     "Ricinus Communis (Castor) Seed Oil",
+    "Caprylic/Capric Triglyceride",
+    "Water",
     "Butyrospermum Parkii (Shea) Butter",
+    "Tocopheryl Acetate",
+    "Hydrogenated Castor Oil",
     "C20-40 Alkyl Stearate",
     "Magnesium Stearate"
    ],
@@ -347,12 +381,15 @@
    ],
    "natural": [],
    "unknown": [
+    "Octyldodecanol",
     "Ricinus Communis (Castor) Seed Oil",
     "Bis-Diglyceryl Polyacyladipate-2",
     "Butyrospermum Parkii (Shea) Butter",
+    "Hydrogenated Castor Oil",
     "Helianthus Annuus (Sunflower) Seed Wax",
     "Simmondsia Chinensis (Jojoba) Seed Oil",
     "Copernicia Cerifera (Carnauba) Wax",
+    "Tocopheryl Acetate",
     "Ascorbyl Palmitate",
     "Helianthus Annuus (Sunflower) Seed Oil"
    ],
@@ -374,7 +411,8 @@
    "natural": [],
    "unknown": [
     "Ceresin",
-    "Lanolin Alcohol"
+    "Lanolin Alcohol",
+    "Glycerin"
    ],
    "esc": [
     "carcinogen in leave-on"
@@ -391,15 +429,22 @@
    ],
    "natural": [],
    "unknown": [
+    "Octyldodecanol",
     "C18-38 Alkyl Hydroxystearoyl Stearate",
     "Ricinus Communis (Castor) Seed Oil",
+    "Caprylic/Capric Triglyceride",
+    "Glycerin",
     "Bis-Diglyceryl Polyacyladipate-2",
+    "Water",
     "Butyrospermum Parkii (Shea) Butter",
+    "Hydrogenated Castor Oil",
+    "Tocopheryl Acetate",
     "Sodium Ascorbyl Phosphate",
     "Lecithin",
     "Ascorbyl Palmitate",
     "C20-40 Alkyl Stearate",
-    "Magnesium Stearate"
+    "Magnesium Stearate",
+    "Glyceryl Stearate"
    ],
    "esc": [],
    "status": "complete"
@@ -414,10 +459,14 @@
    ],
    "natural": [],
    "unknown": [
+    "Octyldodecanol",
     "Ricinus Communis (Castor) Seed Oil",
     "Bis-Diglyceryl Polyacyladipate-2",
     "Butyrospermum Parkii (Shea) Butter",
     "Helianthus Annuus (Sunflower) Seed Wax",
+    "Hydrogenated Castor Oil",
+    "Water",
+    "Tocopheryl Acetate",
     "Simmondsia Chinensis (Jojoba) Seed Oil",
     "Ascorbyl Palmitate"
    ],
@@ -437,9 +486,11 @@
    ],
    "natural": [],
    "unknown": [
+    "Caprylic/Capric Triglyceride",
     "Persea Gratissima (Avocado) Oil",
     "Microcrystalline Wax",
-    "Butyrospermum Parkii (Shea) Butter"
+    "Butyrospermum Parkii (Shea) Butter",
+    "Glycerin"
    ],
    "esc": [
     "carcinogen in leave-on"
@@ -460,6 +511,7 @@
    ],
    "natural": [],
    "unknown": [
+    "Water",
     "Sea Salt"
    ],
    "esc": [],
@@ -477,11 +529,15 @@
    ],
    "natural": [],
    "unknown": [
+    "Water",
+    "Glycerin",
     "Ethylhexyl Stearate",
+    "Caprylic/Capric Triglyceride",
     "Dicaprylyl Ether",
     "Hydroxypropyl Starch Phosphate",
     "Pantolactone",
-    "Ceramide NP",
+    "Cholesterol",
+    "Phytosphingosine",
     "Glycine Soja (Soybean) Oil"
    ],
    "esc": [
@@ -501,11 +557,15 @@
    ],
    "natural": [],
    "unknown": [
+    "Water",
+    "Glycerin",
     "Ethylhexyl Stearate",
+    "Caprylic/Capric Triglyceride",
     "Dicaprylyl Ether",
     "Hydroxypropyl Starch Phosphate",
     "Pantolactone",
-    "Ceramide NP",
+    "Cholesterol",
+    "Phytosphingosine",
     "Glycine Soja (Soybean) Oil"
    ],
    "esc": [
@@ -526,7 +586,8 @@
    "natural": [],
    "unknown": [
     "Ceresin",
-    "Lanolin Alcohol"
+    "Lanolin Alcohol",
+    "Glycerin"
    ],
    "esc": [
     "carcinogen in leave-on"
@@ -546,7 +607,8 @@
    "natural": [],
    "unknown": [
     "Ceresin",
-    "Lanolin Alcohol"
+    "Lanolin Alcohol",
+    "Glycerin"
    ],
    "esc": [
     "carcinogen in leave-on"
@@ -575,8 +637,14 @@
    "natural": [],
    "unknown": [
     "C18-38 Alkyl Hydroxystearoyl Stearate",
+    "Octyldodecanol",
+    "Glycerin",
     "Ricinus Communis (Castor) Seed Oil",
+    "Caprylic/Capric Triglyceride",
+    "Water",
     "Butyrospermum Parkii (Shea) Butter",
+    "Tocopheryl Acetate",
+    "Hydrogenated Castor Oil",
     "C20-40 Alkyl Stearate",
     "Magnesium Stearate"
    ],
@@ -595,10 +663,16 @@
    ],
    "natural": [],
    "unknown": [
+    "Octyldodecanol",
     "C18-38 Alkyl Hydroxystearoyl Stearate",
     "Ricinus Communis (Castor) Seed Oil",
+    "Caprylic/Capric Triglyceride",
+    "Glycerin",
     "Bis-Diglyceryl Polyacyladipate-2",
+    "Water",
     "Butyrospermum Parkii (Shea) Butter",
+    "Hydrogenated Castor Oil",
+    "Tocopheryl Acetate",
     "Sodium Ascorbyl Phosphate",
     "C20-40 Alkyl Stearate",
     "Magnesium Stearate"
@@ -619,7 +693,8 @@
    "natural": [],
    "unknown": [
     "Ceresin",
-    "Lanolin Alcohol"
+    "Lanolin Alcohol",
+    "Glycerin"
    ],
    "esc": [
     "carcinogen in leave-on"
@@ -639,7 +714,8 @@
    "natural": [],
    "unknown": [
     "Ceresin",
-    "Lanolin Alcohol"
+    "Lanolin Alcohol",
+    "Glycerin"
    ],
    "esc": [
     "carcinogen in leave-on"
@@ -660,6 +736,7 @@
    ],
    "natural": [],
    "unknown": [
+    "Water",
     "Sea Salt"
    ],
    "esc": [],
@@ -679,7 +756,8 @@
    "unknown": [
     "Butane",
     "Ceresin",
-    "Lanolin Alcohol"
+    "Lanolin Alcohol",
+    "Glycerin"
    ],
    "esc": [
     "carcinogen in leave-on"
@@ -699,7 +777,8 @@
    "natural": [],
    "unknown": [
     "Ceresin",
-    "Lanolin Alcohol"
+    "Lanolin Alcohol",
+    "Glycerin"
    ],
    "esc": [
     "carcinogen in leave-on"
@@ -719,7 +798,8 @@
    "natural": [],
    "unknown": [
     "Ceresin",
-    "Lanolin Alcohol"
+    "Lanolin Alcohol",
+    "Glycerin"
    ],
    "esc": [
     "carcinogen in leave-on"
@@ -741,6 +821,7 @@
     "Hydrocortisone",
     "Ceresin",
     "Lanolin Alcohol",
+    "Glycerin",
     "Menthoxypropanediol"
    ],
    "esc": [
@@ -759,9 +840,11 @@
    ],
    "natural": [],
    "unknown": [
+    "Caprylic/Capric Triglyceride",
     "Persea Gratissima (Avocado) Oil",
     "Microcrystalline Wax",
-    "Butyrospermum Parkii (Shea) Butter"
+    "Butyrospermum Parkii (Shea) Butter",
+    "Glycerin"
    ],
    "esc": [
     "carcinogen in leave-on"
@@ -787,10 +870,17 @@
    ],
    "natural": [],
    "unknown": [
+    "Water",
+    "Glycerin",
+    "Urea",
     "Hydrogenated Polyisobutene",
+    "Glyceryl Stearate",
     "Butyrospermum Parkii (Shea) Butter",
     "Persea Gratissima (Avocado) Oil",
+    "Tocopheryl Acetate",
+    "Caprylic/Capric Triglyceride",
     "Acrylates/C10-30 Alkyl Acrylate Crosspolymer",
+    "Sodium Hydroxide",
     "Disodium EDTA",
     "Hydroxyacetophenone"
    ],
@@ -813,7 +903,8 @@
    "natural": [],
    "unknown": [
     "Ceresin",
-    "Lanolin Alcohol"
+    "Lanolin Alcohol",
+    "Glycerin"
    ],
    "esc": [
     "carcinogen in leave-on"
@@ -834,7 +925,8 @@
    "unknown": [
     "Butane",
     "Ceresin",
-    "Lanolin Alcohol"
+    "Lanolin Alcohol",
+    "Glycerin"
    ],
    "esc": [
     "carcinogen in leave-on"
@@ -854,7 +946,8 @@
    "natural": [],
    "unknown": [
     "Ceresin",
-    "Lanolin Alcohol"
+    "Lanolin Alcohol",
+    "Glycerin"
    ],
    "esc": [
     "carcinogen in leave-on"
@@ -879,7 +972,8 @@
    "natural": [],
    "unknown": [
     "Ceresin",
-    "Lanolin Alcohol"
+    "Lanolin Alcohol",
+    "Glycerin"
    ],
    "esc": [
     "carcinogen in leave-on"

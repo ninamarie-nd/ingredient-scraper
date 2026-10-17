@@ -1,6 +1,6 @@
 # Aquaphor Audit — Content Mining Report
 
-**Date audited:** 2026-10-16 (regraded with the unified grader)
+**Date audited:** 2026-10-16 (regraded under practitioner decisions D1 to D4; no tier changed)
 **Products audited:** 41 listed: 38 graded from a full printed list, 3 not graded (no ingredient text)
 **Source:** https://www.aquaphorus.com/ (product names and brand-site partial lists). aquaphor.com is an unrelated company and was not used.
 **Full INCI sources:** retailer product pages only (Walmart, CVS, Amazon). Each row names its retailer and URL in `audit_notes`.
@@ -35,7 +35,7 @@
 
 ## Section B — Pattern callouts
 
-**Most common flagged ingredient:** Bisabolol — flagged in 27 of 38 graded products as a full flag, because no source essential oil is listed beside it (rubric). See the open rubric question in the audit log. Petrolatum is next, in 18 products, and Mineral Oil in 14. Both are category 1 in the reference.
+**Most common flagged ingredient:** Bisabolol — flagged in 27 of 38 graded products as a full flag, because no chamomile oil or chamomile extract is listed beside it (decision D3; the rubric's soft flag needs the source oil). See the open rubric question in the audit log. Petrolatum is next, in 18 products, and Mineral Oil in 14. Both are category 1 in the reference.
 
 **Most common risk category:** Category 1 (Carcinogen) and Category 4 (Allergies, Irritation, Corrosion) tie — each flagged in 29 of 38 products. Category 2 (Endocrine Disruption) is in 17.
 
@@ -45,7 +45,7 @@
 - **Moisturizing Cream (8 oz, 1.89 oz, 16 oz) and Hydrating Daily Lotion (3 oz, 8 oz, 16 oz).** Marketed as fragrance-free and gentle. The lotions and creams all grade Avoid (High Priority Swap) with 4 flags, including phenoxyethanol (category 1) and sodium cetearyl sulfate.
 - **Baby Sensitive Lotion (3 fl oz and 8 fl oz).** Marketed as gentle for babies. Grades Avoid (High Priority Swap) for phenoxyethanol (category 1) and sodium cetearyl sulfate.
 - **Baby Wash & Shampoo (25.4 fl oz and 16.9 fl oz).** Marketed as tear-free and gentle. Grades Avoid (Moderate) with five flags: sodium myreth sulfate, PEG-200 hydrogenated glyceryl palmate, cocamidopropyl betaine, bisabolol, and polyquaternium-10.
-- **Naturally Inspired Lip Repair Sticks (Aloe Vera and Coconut).** The only Aquaphor lip sticks without dimethicone. Puberty Safe on the printed list, with 8 to 9 names still unknown.
+- **Naturally Inspired Lip Repair Sticks (Aloe Vera and Coconut).** The only Aquaphor lip sticks without dimethicone. Puberty Safe on the printed list, with 13 (Aloe Vera) and 10 (Coconut) names still unknown.
 
 **Repeated naming patterns:**
 - Petrolatum appears in 18 of 38 graded rows, including every petrolatum ointment, balm, body spray, and SPF lip product.
@@ -88,7 +88,7 @@
 
 ## Raw data summary
 
-**Unknown ingredients across the audit (manual review queue):** 40 unique names across 38 graded products, 190 occurrences. Deduplicated list:
+**Unknown ingredients across the audit (manual review queue):** 47 unique names across 38 graded products, 284 occurrences (case-insensitive dedupe). Deduplicated list:
 
 - Acrylates/C10-30 Alkyl Acrylate Crosspolymer
 - Aloe Barbadensis Leaf Juice Powder
@@ -98,20 +98,21 @@
 - Butyrospermum Parkii (Shea) Butter
 - C18-38 Alkyl Hydroxystearoyl Stearate
 - C20-40 Alkyl Stearate
+- Caprylic/Capric Triglyceride
 - Carrageenan
-- Ceramide AP
-- Ceramide NG
-- Ceramide NP
 - Ceresin
-- Cocos Nucifera (Coconut) Oil
+- Cholesterol
 - Copernicia Cerifera (Carnauba) Wax
 - Dicaprylyl Ether
 - Disodium EDTA
 - Ethylhexyl Stearate
+- Glycerin
+- Glyceryl Stearate
 - Glycine Soja (Soybean) Oil
 - Helianthus Annuus (Sunflower) Seed Oil
 - Helianthus Annuus (Sunflower) Seed Wax
 - Hydrocortisone
+- Hydrogenated Castor Oil
 - Hydrogenated Coco-Glycerides
 - Hydrogenated Polyisobutene
 - Hydroxyacetophenone
@@ -121,19 +122,25 @@
 - Magnesium Stearate
 - Menthoxypropanediol
 - Microcrystalline Wax
+- Octyldodecanol
 - Olea Europaea (Olive) Fruit Oil
 - pantolactone
 - Persea Gratissima (Avocado) Oil
+- Phytosphingosine
 - Polyglyceryl-4 Diisostearate/Polyhydroxystearate/Sebacate
 - Ricinus Communis (Castor) Seed Oil
 - Sea Salt
 - Simmondsia Chinensis (Jojoba) Seed Oil
 - Sodium Ascorbyl Phosphate
+- Sodium Hydroxide
 - Tapioca Starch
+- Tocopheryl Acetate
+- Urea
+- Water
 
-Puberty Safe products with unknowns: Aquaphor® Lip Repair Stick Naturally Inspired Aloe Vera Single Pack, Aquaphor® Lip Repair Stick Naturally Inspired Coconut Single Pack, Aquaphor® Diaper Rash Paste (3.5oz.).
+Puberty Safe products with unknowns (count in brackets): Aquaphor® Lip Repair Stick Naturally Inspired Aloe Vera Single Pack (13), Aquaphor® Lip Repair Stick Naturally Inspired Coconut Single Pack (10), Aquaphor® Diaper Rash Paste (3.5oz.) (7).
 
-Notable: Hydrocortisone (Children's Itch Relief, 1%) is an OTC active. It is not in the reference, so it is not graded and needs a pharmacology look before the product is described. Botanical oils, ceramides and lanolin alcohol are also in the unknown queue. They are not flagged, so they do not move any tier, but they keep the Puberty Safe grades provisional.
+Notable: Hydrocortisone (Children's Itch Relief, 1%) is an OTC active. It is not in the reference, so it is not graded and needs a pharmacology look before the product is described. Botanical oils, lanolin alcohol and ascorbyl palmitate are also unknown. Water and glycerin are not in the reference text, so under decision D4 they are unknown too. None of these is flagged, so none moves a tier, but they keep the Puberty Safe grades provisional. The ceramide variants (NP, AP, NG) now read as the reference's ceramide entry (LOW TOX), and the Coconut lip stick's "Cocos Nucifera (Coconut) Oil" reads as the reference's coconut oil entry (LOW TOX).
 
 **Reformulation and listing variance:**
 - The Lip Repair ointment 2-pack and the single tube list different inactive ingredients. Each row uses its own printed list.
@@ -143,7 +150,7 @@ Notable: Hydrocortisone (Children's Itch Relief, 1%) is an OTC active. It is not
 - Moisturizing Cream (1.89 oz, CVS): first three names differ from the brand text. Recorded as a conflict in `audit_notes`.
 - Baby Wash & Shampoo (25.4 oz, Amazon): position 3 differs. Recorded as a conflict.
 
-**Naturally occurring allergens:** none soft-flagged. Bisabolol is the only naturally occurring component in these lists, and no source essential oil is listed beside it, so each instance is a full flag.
+**Naturally occurring allergens:** none soft-flagged. Bisabolol is the only naturally occurring component in these lists. Under D3 no chamomile oil or extract is listed beside it in any product, so each instance is a full flag (category 4). The Lip Repair tube and dual pack are Use Caution on that one flag, and their audit_notes record the D3 check.
 
 **Rows not graded (3):**
 - Diaper Rash Cream 3 oz — size mismatch. Every retailer checked lists 3.5 oz only.

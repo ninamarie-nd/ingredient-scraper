@@ -56,6 +56,9 @@ TYPO_FIXES = {
     'butyrospemum parkii (shea) butter': 'butyrospermum parkii (shea) butter',
     'helianthus annus (sunflower) seed oil': 'helianthus annuus (sunflower) seed oil',
     'sunflower seed oil': 'helianthus annuus (sunflower) seed oil',
+    # D4 (practitioner, 2026-10-16): these name variants map to reference entries that are LOW TOX.
+    'cocos nucifera (coconut) oil': 'coconut oil',
+    'ceramide np': 'ceramide', 'ceramide ap': 'ceramide', 'ceramide ng': 'ceramide', 'ceramide 3': 'ceramide',
 }
 ALIASES.update(TYPO_FIXES)
 
@@ -65,28 +68,18 @@ for _k in REF:
     _b = re.sub(r'\s+', ' ', re.sub(r'\s*\([^)]*\)', '', _k)).strip()
     BASE_INDEX.setdefault(_b, _k)
 
-# Low tox names the reference does not list. Carried over from the Eucerin overlay (the base grader).
-# A reference entry always takes precedence over this list.
-LOW_TOX = set([
-    'water', 'aqua', 'glycerin', 'sodium chloride', 'citric acid', 'sodium citrate', 'sodium hyaluronate', 'niacinamide',
-    'phytosphingosine', 'xanthan gum', 'cholesterol', 'carbomer', 'panthenol', 'allantoin', 'sodium hydroxide',
-    'potassium hydroxide', 'potassium sorbate', 'sodium benzoate', 'tocopherol', 'tocopheryl acetate',
-    'caprylic/capric triglyceride', 'caprylyl glycol', 'sodium pca', 'lactic acid', 'salicylic acid', 'ascorbic acid',
-    'retinol', 'kaolin', 'squalane', 'hydroxyethylcellulose', 'sorbitol', 'urea', 'maltodextrin', 'dextran', 'glycine',
-    'threonine', 'arginine', 'serine', 'valine', 'proline', 'isoleucine', 'alanine', 'phenylalanine', 'histidine',
-    'aspartic acid', 'sodium lactate', 'glyceryl stearate', 'glyceryl oleate', 'octyldodecanol', 'isohexadecane',
-    'isopropyl myristate', 'isopropyl palmitate', 'ethylhexyl palmitate', 'cetyl palmitate', 'polysorbate 20',
-    'polysorbate 60', 'polysorbate 80', 'cetearyl isononanoate', 'coco-betaine', 'sodium cocoyl isethionate',
-    'sodium isethionate', 'hydrogenated vegetable oil', 'hydrogenated castor oil', 'ozokerite', 'hyaluronic acid',
-    'cetyl hydroxyethylcellulose', 'decyl glucoside', 'beeswax', 'dicaprylyl carbonate',
-    'triethylhexanoin', 'sorbitan stearate', 'benzoic acid', 'sodium polyacrylate', 'dipotassium phosphate',
-    'potassium phosphate', 'cetearyl alcohol', 'cetyl alcohol', 'stearyl alcohol', 'behenyl alcohol',
-    'brassica alcohol', 'c14-22 alcohols', 'caprylyl/capryl glucoside', 'coco-glucoside', 'coco glucoside',
-    'behentrimonium methosulfate',
-])
+# D4 (practitioner, 2026-10-16): no LOW TOX fallback list. An ingredient is LOW TOX only when the reference says so.
+# Names not in the reference (botanical oils, lanolin alcohol, water, glycerin, etc.) log as unknown.
 
 # Rubric exemptions: fatty alcohols are not drying alcohols (LOW TOX); behentrimonium methosulfate is LOW TOX.
 FATTY_ALC = ['cetearyl alcohol', 'cetyl alcohol', 'stearyl alcohol', 'behenyl alcohol', 'brassica alcohol', 'c14-22 alcohols']
+
+# D2 (practitioner, 2026-10-16): iron oxides are exempt from the heavy-metal (cat. 3) escalation only.
+IRON_KEYS = {'ci 77491 (red iron oxide)', 'ci 77492 (yellow iron oxide)', 'ci 77499 (black iron oxide)', 'iron oxides'}
+# D1 (practitioner, 2026-10-16): unspecified "silica" does not trigger the PFAS-treated escalation.
+SILICA_KEY = 'silica'
+# D3 (practitioner, 2026-10-16): bisabolol is soft only when chamomile oil or chamomile extract is also listed.
+CHAMOMILE = re.compile(r'chamomil|matricaria', re.I)
 
 # Rubric: naturally occurring fragrance components (soft only when the source essential oil is also listed).
 NAT_FRAG = {'linalool', 'limonene', 'citral', 'citronellal', 'geraniol', 'eugenol', 'isoeugenol', 'coumarin',
@@ -271,7 +264,11 @@ def lookup(ing, segments, name, category, product_type):
     if low in NAT_FRAG:
         key = resolve(low)
         cats = REF[key]['c'] if key and REF[key].get('c') else [4, 8]
-        if has_eo_source(segments, ing):
+        if low == 'bisabolol':   # D3: the source must be chamomile oil or chamomile extract
+            source_listed = any(s != ing and CHAMOMILE.search(s) and re.search(r'\b(oil|extract)\b', s, re.I) for s in segments)
+        else:
+            source_listed = has_eo_source(segments, ing)
+        if source_listed:
             return dict(out, kind='soft', cats=cats, label='natural component, source essential oil listed')
         if low == 'benzyl alcohol':
             return dict(out, kind='ok', cats=[], label='reference LOW TOX')
@@ -291,13 +288,15 @@ def lookup(ing, segments, name, category, product_type):
         cats = d.get('c', [])
         if cats:
             pfas = bool(re.search(r'PFAS treated', d.get('n') or '', re.I))
+            if key == SILICA_KEY:
+                pfas = False        # D1: unspecified silica is not PFAS-escalated
+            if key in IRON_KEYS:
+                pfas = True         # D2: PFAS tag applied as written (practitioner to confirm for "iron oxides")
             form = key in FORMALDEHYDE
-            return dict(out, kind='flag', cats=cats, label='reference', pfas=pfas, formaldehyde=form)
+            return dict(out, kind='flag', cats=cats, label='reference', pfas=pfas, formaldehyde=form,
+                        heavy_exempt=key in IRON_KEYS)   # D2: no heavy-metal (cat. 3) escalation for iron oxides
         return dict(out, kind='ok', cats=[], label='reference, no category')
 
-    salt_free = re.sub(r'\s+(hcl|hci)$', '', low)   # "Arginine HCl" is the arginine salt form
-    if low in LOW_TOX or base_key(low) in LOW_TOX or salt_free in LOW_TOX:
-        return dict(out, kind='ok', cats=[], label='LOW TOX list')
     if low in FORMALDEHYDE:
         return dict(out, kind='flag', cats=[1, 2, 4, 5], label='formaldehyde-releaser (name)', formaldehyde=True)
     for pat, cats, label in PATTERN_WATCH:
@@ -321,7 +320,7 @@ def grade(product_name, product_type, category, verbatim):
         seen.add(key)
         r = lookup(ing, segments, product_name, category, product_type)
         if r['kind'] == 'flag':
-            flagged.append({'name': ing, 'cats': r['cats'], 'label': r['label']})
+            flagged.append({'name': ing, 'cats': r['cats'], 'label': r['label'], 'heavy_exempt': r.get('heavy_exempt', False)})
             pfas_hit = pfas_hit or r.get('pfas', False)
             if r.get('formaldehyde'):
                 esc.add('formaldehyde-releaser')
@@ -334,7 +333,7 @@ def grade(product_name, product_type, category, verbatim):
     max_cats = max([len(f['cats']) for f in flagged], default=0)
     has_paraben = any(re.search(r'paraben$', f['name'], re.I) for f in flagged)
     has_fragrance = any(f['label'].startswith('fragrance') for f in flagged)
-    has_heavy = any(3 in f['cats'] for f in flagged)
+    has_heavy = any(3 in f['cats'] and not f['heavy_exempt'] for f in flagged)   # D2: iron oxides exempt
     has_form = 'formaldehyde-releaser' in esc
     has_sulfate = any(re.search(r'sulfate$', f['name'], re.I) for f in flagged)
     if has_heavy:
@@ -346,7 +345,7 @@ def grade(product_name, product_type, category, verbatim):
 
     # Heavy metal (cat. 3) stacked with a cat. 1 or cat. 2 flag from a different ingredient.
     for h in flagged:
-        if 3 in h['cats'] and any((o is not h) and (1 in o['cats'] or 2 in o['cats']) for o in flagged):
+        if 3 in h['cats'] and not h['heavy_exempt'] and any((o is not h) and (1 in o['cats'] or 2 in o['cats']) for o in flagged):
             heavy_stack = True
 
     order = TIERS
@@ -366,6 +365,19 @@ def grade(product_name, product_type, category, verbatim):
         tier = 'Avoid (High Priority Swap)'
     if heavy_stack:
         notes.append('Heavy metal stacked with a cat. 1 or cat. 2 flag: Avoid (High Priority Swap).')
+    # Practitioner decisions D1 to D3, recorded per product.
+    flagged_keys = {norm_key(f['name']) for f in flagged}
+    if flagged_keys & {'silica'}:
+        notes.append('D1: unspecified silica does not trigger the PFAS-treated escalation.')
+    if any(f['heavy_exempt'] for f in flagged):
+        notes.append('D2: iron oxides exempt from the heavy-metal (cat. 3) escalation. PFAS-treated escalation applied '
+                     'as written; pending practitioner confirmation.')
+    for f in flagged:
+        if norm_key(f['name']) == 'bisabolol':
+            notes.append('D3: bisabolol counted as a full flag (cat. 4); no chamomile oil or extract listed in this product.')
+    for n in natural:
+        if norm_key(n['name']) == 'bisabolol':
+            notes.append('D3: bisabolol counted as a soft (naturally occurring) flag; chamomile oil or extract is listed.')
 
     esc_list = [x for x in ['heavy metals', 'PFAS', 'formaldehyde-releaser', 'carcinogen in leave-on'] if x in esc]
     return {'tier': tier, 'flagged': flagged, 'natural': natural, 'unknown': unknown, 'esc': esc_list,
