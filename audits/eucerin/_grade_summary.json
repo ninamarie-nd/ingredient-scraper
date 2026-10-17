@@ -224,14 +224,15 @@
   {
    "product_name": "Dual Serum",
    "tier": "Avoid (High Priority Swap)",
-   "flag_count": 5,
+   "flag_count": 6,
    "product_type": "leave-on skincare",
    "flagged": [
     "Alcohol Denat",
     "Butylene Glycol",
     "Dimethicone",
     "Ethylhexylglycerin",
-    "Phenoxyethanol"
+    "Phenoxyethanol",
+    "Fragrance"
    ],
    "natural": [],
    "unknown": [
@@ -249,7 +250,9 @@
     "Dehydroxanthan Gum",
     "Gellan Gum",
     "Isoquercitrin",
-    "Trisodium EDTA"
+    "Trisodium EDTA",
+    "Isobutylamido Thiazolyl Resorcinol",
+    "Glycine Soja Oil"
    ],
    "esc": [
     "PFAS",
