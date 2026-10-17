@@ -91,17 +91,13 @@ FATTY_ALC = ['cetearyl alcohol', 'cetyl alcohol', 'stearyl alcohol', 'behenyl al
 EXCEPTIONS = {'water': 'clear', 'aqua': 'clear', 'eau': 'clear', 'glycerin': 'caution'}
 WATER_PARTS = {'water', 'aqua', 'eau'}
 
-# Change 3 (practitioner, 2026-10-17): explicit exception list. These Eucerin products are Use Caution in the 2026-10-16
-# grade and have audit_status "needs review" (source text unresolved). They move to ungradable. Flags, flagged
-# ingredients and the unknown ingredient are kept as recorded; only the tier changes. Keyed by brand folder, then exact product name.
+# Change 3 (practitioner, 2026-10-17): explicit exception list. Keyed by brand folder, then exact product name.
+# 2026-10-17 full-list merge: all five entries had a full brand-site list (Learn more, View all), so each was removed
+# from this list and the product is graded from its verbatim text. The list is now empty for eucerin.
+# Removed: Q10 Revitalize Night Cream; Daily Hydration Lotion with Broad Spectrum SPF 15; Daily Hydration Lotion;
+# Eucerin Baby Eczema Relief Hydrogel; Baby Lotion.
 UNGRADABLE_EXCEPTIONS = {
-    'eucerin': {
-        'Q10 Revitalize Night Cream': 'source text unresolved',
-        'Daily Hydration Lotion with Broad Spectrum SPF 15': 'source text unresolved',
-        'Daily Hydration Lotion': 'source text unresolved',
-        'Eucerin Baby Eczema Relief Hydrogel': 'source text unresolved',
-        'Baby Lotion': 'source text unresolved',
-    },
+    'eucerin': {},
 }
 
 # Iron oxides (reference: categories 1, 2 and 3; PFAS treated). D2 (2026-10-16): heavy-metal escalation applies and the
@@ -122,7 +118,7 @@ PARABEN_ESC = 'paraben or DMDM hydantoin'
 # json field whose ingredient text the paraben/DMDM rule also reads. Flags and the printed verbatim text are not changed by
 # this; only the tier is set by the retailer listing, and the audit notes say so.
 RETAILER_TEXT_OVERRIDES = {
-    'eucerin': {'Q10 Revitalize Daily Cream': 'candidate_retailer_text'},
+    'eucerin': {},
 }
 
 # Rubric: naturally occurring fragrance components (soft only when the source essential oil is also listed).
@@ -182,7 +178,10 @@ EO_SOURCE = re.compile(
 FRAG_DISCLOSED = re.compile(r'essential oils?', re.I)
 
 # ------------------------------------------------------------------ product type
-RINSE_OFF_TYPES = {'rinse-off skincare', 'body wash/shampoo/conditioner'}
+RINSE_OFF_TYPES = {'rinse-off skincare', 'body wash/shampoo/conditioner', 'Shampoo', 'Body Wash', 'Conditioner',
+                    '2-in-1 Shampoo+Conditioner', 'Face Wash / Cleanser', 'Bar Soap', 'Hand Soap', 'Baby Wash', 'Bath Product'}
+# 2026-10-17 recheck: dashboard product types that are clearly rinse-off. Ambiguous types (cleansing oils, scrubs,
+# makeup removers, face masks, dry shampoo) stay leave-on per the rubric default.
 
 
 def is_leave_on(product_type):

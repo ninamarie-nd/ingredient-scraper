@@ -178,7 +178,10 @@ EO_SOURCE = re.compile(
 FRAG_DISCLOSED = re.compile(r'essential oils?', re.I)
 
 # ------------------------------------------------------------------ product type
-RINSE_OFF_TYPES = {'rinse-off skincare', 'body wash/shampoo/conditioner'}
+RINSE_OFF_TYPES = {'rinse-off skincare', 'body wash/shampoo/conditioner', 'Shampoo', 'Body Wash', 'Conditioner',
+                    '2-in-1 Shampoo+Conditioner', 'Face Wash / Cleanser', 'Bar Soap', 'Hand Soap', 'Baby Wash', 'Bath Product'}
+# 2026-10-17 recheck: dashboard product types that are clearly rinse-off. Ambiguous types (cleansing oils, scrubs,
+# makeup removers, face masks, dry shampoo) stay leave-on per the rubric default.
 
 
 def is_leave_on(product_type):
