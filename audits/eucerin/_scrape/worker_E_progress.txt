@@ -1,0 +1,1 @@
+worker_E progress: 0 of 36 products scraped. Blocked at start: tabs_create failed 3 times ("Browser pane gone, gate off, or tab cap reached"). tabs_context shows 9 existing tabs, none created by this worker (seed, tab-1, tab-2, tab-4 to tab-9). Per rules, no existing tab was reused. Re-run once a tab slot is free.
