@@ -615,3 +615,36 @@ Applied in this pass with the same `_grader.py` in every brand folder. The refer
 | Ungradable | 16 | 16 |
 
 **Puberty Safe products remaining:** none.
+
+
+## Paraben and DMDM hydantoin rule
+
+**Applied:** 2026-10-17 (practitioner rule). Any paraben, or DMDM hydantoin, among the ingredients grades Avoid (High Priority Swap), whatever else the product contains. Implemented in `_grader.py` as an escalation (`PARABEN_DMDM_RE`, `paraben_dmdm_hits()`), recorded as `paraben or DMDM hydantoin` in automatic_escalation. Parabens match by the "paraben" pattern; DMDM hydantoin matches by name. The grader is identical in all five brand folders (md5 d3bf1f7b7e4dec362fa8f841257a96a9), and only this rule changed. No other rule was changed.
+
+**Products changed by this rule (old tier to new tier):**
+- None. No tier changed under this rule in this brand.
+
+**Products where the rule fires with no tier change (already Avoid (High Priority Swap)):**
+- Vaseline® Intensive Care™ Hydra Replenish Hand Crème
+- Vaseline® Soothing Hydration Lotion
+- Vaseline® Cocoa Radiant® Lotion
+- Vaseline® Nourishing Moisture Lotion
+- Vaseline® Calm Healing Lotion
+- Vaseline® Advanced Repair Unscented Lotion
+- Vaseline® Almond Smooth Lotion
+- Vaseline® Men Cooling Hydration Lotion
+- Vaseline® Intensive Care™ Cocoa Body Butter
+- Vaseline® Men Fast Absorbing Lotion
+- Vaseline® Men Extra Strength Lotion
+- Vaseline® Intensive Care™ Aloe Soothe Spray
+- Vaseline® Intensive Care™ Cocoa Radiant Spray
+
+**Source note:** None. Thirteen rows carry parabens in the printed text. All were already Avoid (High Priority Swap), so no tier changed.
+
+**Tier counts before and after the rule:**
+- Before: Puberty Safe: 0, Use Caution: 0, Avoid (Mild): 0, Avoid (Moderate): 0, Avoid (High Priority Swap): 36, ungradable: 16
+- After: Puberty Safe: 0, Use Caution: 0, Avoid (Mild): 0, Avoid (Moderate): 0, Avoid (High Priority Swap): 36, ungradable: 16
+
+**Hand-check (2 products):**
+- Vaseline® Soothing Hydration Lotion: Avoid (High Priority Swap). Nine printed-text flags: Petrolatum [1] (reference line 789), Triethanolamine [1,4] (line 1151), Phenoxyethanol [1,2,4,5,8] (line 801), Dimethicone [2,6] (line 417, PFAS treated), Methylparaben [2,4] (line 675), Propylparaben [2,4] (line 948), Carbomer [1,4,6] (line 256), Fragrance (Parfum) without disclosure [1,2,4,8], Linalool [4,8] as a full flag (no essential oil listed). Escalations: PFAS (dimethicone), carcinogen in leave-on (petrolatum), and now paraben. Nine flags also clears the eight-flag rule without the new rule, so the tier is unchanged.
+- Vaseline® Intensive Care™ Aloe Soothe Spray: Avoid (High Priority Swap). Seven printed-text flags: Dimethicone [2,6] (PFAS treated), Phenoxyethanol [1,2,4,5,8], Methylparaben [2,4], Propylparaben [2,4], Fragrance (Parfum) without disclosure [1,2,4,8], Carbomer [1,4,6], Petrolatum [1]. PFAS and carcinogen-in-leave-on escalations stand on their own. The spray wording does not change any conditional here. Tier unchanged by the new rule.

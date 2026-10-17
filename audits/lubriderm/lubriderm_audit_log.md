@@ -267,3 +267,24 @@ Applied in this pass with the same `_grader.py` in every brand folder. The refer
 | Ungradable | 1 | 1 |
 
 **Puberty Safe products remaining:** none.
+
+
+## Paraben and DMDM hydantoin rule
+
+**Applied:** 2026-10-17 (practitioner rule). Any paraben, or DMDM hydantoin, among the ingredients grades Avoid (High Priority Swap), whatever else the product contains. Implemented in `_grader.py` as an escalation (`PARABEN_DMDM_RE`, `paraben_dmdm_hits()`), recorded as `paraben or DMDM hydantoin` in automatic_escalation. Parabens match by the "paraben" pattern; DMDM hydantoin matches by name. The grader is identical in all five brand folders (md5 d3bf1f7b7e4dec362fa8f841257a96a9), and only this rule changed. No other rule was changed.
+
+**Products changed by this rule (old tier to new tier):**
+- None. No tier changed under this rule in this brand.
+
+**Products where the rule fires with no tier change (already Avoid (High Priority Swap)):**
+- None.
+
+**Source note:** None. No printed ingredient text contains a paraben or DMDM hydantoin, so no tier changed. Four audit notes (Daily Moisture Lotion Fragrance-Free, Daily Moisture Lotion, Advanced Therapy Body Wash Fragrance-Free, Daily Moisture Body Wash Lightly Scented) say the product copy is 'free of parabens'. That is brand copy, not ingredient text, so the rule does not read it.
+
+**Tier counts before and after the rule:**
+- Before: Puberty Safe: 0, Use Caution: 0, Avoid (Mild): 1, Avoid (Moderate): 1, Avoid (High Priority Swap): 4, ungradable: 1
+- After: Puberty Safe: 0, Use Caution: 0, Avoid (Mild): 1, Avoid (Moderate): 1, Avoid (High Priority Swap): 4, ungradable: 1
+
+**Hand-check (2 products):**
+- Advanced Therapy Body Wash Fragrance-Free: Avoid (Mild), three flags. Cocamidopropyl Betaine [1,4] (line 336), PEG-80 Sorbitan Laurate [1,2,4,5] (PEG- pattern), Sodium Cocoyl Isethionate [1] (line 1028). No category 3, formaldehyde releaser, fragrance, paraben, PFAS or sulfate-named ingredient (isethionate is not a sulfate). Three flags gives Avoid (Mild). Confirmed, no change.
+- Daily Moisture Lotion Fragrance-Free: Avoid (High Priority Swap). Mineral oil [1] (line 679) in a leave-on gives the carcinogen-in-leave-on escalation. Fragrance without disclosure [1,2,4,8] also present. No paraben or DMDM hydantoin in the printed text. Confirmed, no change.

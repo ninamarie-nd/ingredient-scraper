@@ -598,3 +598,39 @@ Applied in this pass with the same `_grader.py` in every brand folder. The refer
 **Puberty Safe products remaining:** none.
 
 **Parser anomaly found during hand-check (not changed).** Natural Glow Face Moisturizer +SPF 20 prints "And Octocrylene (1.1%)" in its active ingredient line. The grader reads "And Octocrylene" as an unknown rather than as octocrylene (reference category 2). The product grades Avoid (High Priority Swap) either way, but its partial flag count is one lower than it should be (12, not 13). This is a parser issue outside the zero-unknowns rule, so it was left as is. Fix it in a separate pass.
+
+
+## Paraben and DMDM hydantoin rule
+
+**Applied:** 2026-10-17 (practitioner rule). Any paraben, or DMDM hydantoin, among the ingredients grades Avoid (High Priority Swap), whatever else the product contains. Implemented in `_grader.py` as an escalation (`PARABEN_DMDM_RE`, `paraben_dmdm_hits()`), recorded as `paraben or DMDM hydantoin` in automatic_escalation. Parabens match by the "paraben" pattern; DMDM hydantoin matches by name. The grader is identical in all five brand folders (md5 d3bf1f7b7e4dec362fa8f841257a96a9), and only this rule changed. No other rule was changed.
+
+**Products changed by this rule (old tier to new tier):**
+- None. No tier changed under this rule in this brand.
+
+**Products where the rule fires with no tier change (already Avoid (High Priority Swap)):**
+- Daily Moisture
+- Natural Glow Face Moisturizer +SPF 20
+- Natural Glow + Firming Daily Moisturizer
+- Nourishing Honey Moisturizer
+- Deep Restoring Argan Oil Moisturizer
+- Hydrating Coconut Lotion
+- Soothing Aloe Moisturizer
+- Original Scent Moisturizer
+- Skin Firming
+- Cherry Almond Lotion Bursts
+- Instant Flawless Kit Bundle
+- Gotta Glow Bundle
+- Best Sellers Bundle
+- Wet Skin Moisturizer Shea Oil
+- Wet Skin Moisturizer Coconut Oil
+- Daily Glow Bundle
+
+**Source note:** None. Sixteen rows carry parabens or DMDM hydantoin in the printed text. All were already Avoid (High Priority Swap), so no tier changed.
+
+**Tier counts before and after the rule:**
+- Before: Puberty Safe: 0, Use Caution: 0, Avoid (Mild): 0, Avoid (Moderate): 0, Avoid (High Priority Swap): 31, ungradable: 7
+- After: Puberty Safe: 0, Use Caution: 0, Avoid (Mild): 0, Avoid (Moderate): 0, Avoid (High Priority Swap): 31, ungradable: 7
+
+**Hand-check (2 products):**
+- Daily Moisture: Avoid (High Priority Swap), eight flags. Dimethicone [2,6] (line 417, PFAS treated), Mineral Oil [1] (line 679), Ceteareth-20 [1,4,5] (graded by the -eth pattern; reference line 275 'Ceteareth' carries the same categories, so no tier effect), Fragrance without disclosure [1,2,4,8], Carbomer [1,4,6], Methylparaben [2,4], Phenoxyethanol [1,2,4,5,8], Ethylparaben [2,4]. Eight flags gives High Priority Swap without the new rule; the paraben rule adds a label only.
+- Skin Firming: Avoid (High Priority Swap), twelve flags. Aluminum Starch Octenylsuccinate [2,3] (line 119) is a category 3 heavy metal stacked with category 1 and 2 flags (Cyclopentasiloxane [1,2,6], Acrylates Copolymer [1,2,4,6] PFAS treated, Dimethicone). Dmdm Hydantoin [1,2,4,5] and Methylparaben and Propylparaben also appear. High Priority Swap holds without the new rule. Confirmed, no change. The octocrylene parser issue is not touched by this run.

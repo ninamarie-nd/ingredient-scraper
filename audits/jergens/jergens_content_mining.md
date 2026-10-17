@@ -93,3 +93,12 @@
 **Polysorbate flags (change 2, 2026-10-17):** Polysorbate 20 is flagged in Natural Glow Instant Sun Drops, and Polysorbate 60 in Natural Glow + Firming Daily Moisturizer, Natural Glow Daily Moisturizer, Gotta Glow Bundle and Daily Glow Bundle. Each product flagged under change 2 is already Avoid (High Priority Swap) on the known-ingredient grade, so the polysorbate flags do not change a tier here.
 
 **Puberty Safe requires zero unknowns (2026-10-17):** No product in this brand moved. No product was Puberty Safe before the rule and none is now, so the tier counts in this section are unchanged. Unknown counts per product are in `jergens_audit_log.md`.
+
+
+## Paraben and DMDM hydantoin rule (2026-10-17)
+
+**Changed by this rule:** none. Sixteen rows carry parabens or DMDM hydantoin in the printed text. All were already Avoid (High Priority Swap), so no tier changed.
+
+**Printed-text paraben or DMDM hydantoin rows (all already Avoid (High Priority Swap)):** 16 of 38 products. The escalation label is now recorded on each of them.
+
+**Tier distribution (unchanged by this rule):** Puberty Safe: 0, Use Caution: 0, Avoid (Mild): 0, Avoid (Moderate): 0, Avoid (High Priority Swap): 31, ungradable: 7.

@@ -4,25 +4,25 @@
 **Products audited:** 48 listed: 43 graded, 5 ungradable (all five by the change 3 exception list), 0 without ingredient text
 **Source:** https://www.eucerinus.com/ (product names and retailer-printed ingredient lists; sources per row in the audit log)
 
-**Read this first:** Each grade uses the known ingredients only. A printed ingredient the reference does not cover adds no flag and does not change the tier (2026-10-17, replacing D7 and D8), with one exception: a product cannot be Puberty Safe while any ingredient is unknown, so it grades Use Caution instead (2026-10-17 zero-unknowns rule). The five ungradable products are the change 3 exception list, not a coverage result. Partial flags are for ranking only. Six graded products are Use Caution with unknown ingredients excluded from the grade, and six carry needs review status; see Section A.
+**Read this first:** Each grade uses the known ingredients only. A printed ingredient the reference does not cover adds no flag and does not change the tier (2026-10-17, replacing D7 and D8), with one exception: a product cannot be Puberty Safe while any ingredient is unknown, so it grades Use Caution instead (2026-10-17 zero-unknowns rule). The five ungradable products are the change 3 exception list, not a coverage result. Partial flags are for ranking only. Five graded products are Use Caution with unknown ingredients excluded from the grade, and six carry needs review status; see Section A. Under the paraben and DMDM hydantoin rule (2026-10-17), Q10 Revitalize Daily Cream moved from Use Caution to Avoid (High Priority Swap); see the last section.
 
 ---
 
 ## Section A — Brand-level callout
 
-**Headline finding:** Of 48 Eucerin products, 43 can now be graded from their known ingredients: 0 Puberty Safe, 6 Use Caution, 2 Avoid (Mild), 3 Avoid (Moderate) and 32 Avoid (High Priority Swap). The five remaining products are the change 3 exception list (2026-10-17), which keeps them ungradable because their printed text is marked needs review. All six Use Caution grades carry unknown ingredients excluded from the grade, and two of them rest on only two printed ingredients each (Q10 Revitalize Daily Cream and Advanced Hydration After Sun Lotion). No Eucerin product is Puberty Safe under the zero-unknowns rule. Treat the brand as provisional until the full INCI lists are captured.
+**Headline finding:** Of 48 Eucerin products, 43 can now be graded from their known ingredients: 0 Puberty Safe, 5 Use Caution, 2 Avoid (Mild), 3 Avoid (Moderate) and 33 Avoid (High Priority Swap). The five remaining products are the change 3 exception list (2026-10-17), which keeps them ungradable because their printed text is marked needs review. All five Use Caution grades carry unknown ingredients excluded from the grade, and Advanced Hydration After Sun Lotion rests on only two printed ingredients. Q10 Revitalize Daily Cream, also two printed names, is Avoid (High Priority Swap) under the paraben and DMDM hydantoin rule, from a retailer listing whose variant is not confirmed. No Eucerin product is Puberty Safe under the zero-unknowns rule. Treat the brand as provisional until the full INCI lists are captured.
 
 **Tier distribution (48 products):**
 - Puberty Safe: 0 (0%)
-- Use Caution: 6 (13%)
+- Use Caution: 5 (10%)
 - Avoid (Mild): 2 (4%)
 - Avoid (Moderate): 3 (6%)
-- Avoid (High Priority Swap): 32 (67%)
+- Avoid (High Priority Swap): 33 (69%)
 - Ungradable, counted separately: 5 (10%), all by the change 3 exception list, and 0 with no ingredient text
 
 **Single most-flagged product:** Tinted Age Defense SPF 50 Face Sunscreen — 13 partial flags, Avoid (High Priority Swap) on its known ingredients, with 19 unknowns excluded.
 
-**Cleanest product (if any):** The zero-flag graded products are the four Use Caution grades with no flag: the two Hydrating Cleansing Gels (glycerin floor plus 5 unknowns each), and Q10 Revitalize Daily Cream and Advanced Hydration After Sun Lotion (each on two printed names, both marked needs review; they were Puberty Safe before the zero-unknowns rule). None of these is a clean result. The cleanest Avoid-tier product is Baby Wash and Shampoo, Avoid (Mild), 1 flag (Sodium Myreth Sulfate, sulfate pattern), provisional (audit status needs review). Q10 Revitalize Night Cream and Baby Lotion are ungradable under change 3.
+**Cleanest product (if any):** The zero-flag graded products are the three Use Caution grades with no flag: the two Hydrating Cleansing Gels (glycerin floor plus unknowns excluded from the grade), and Advanced Hydration After Sun Lotion (two printed names, marked needs review; it was Puberty Safe before the zero-unknowns rule). None of these is a clean result. The cleanest Avoid-tier product is Baby Wash and Shampoo, Avoid (Mild), 1 flag (Sodium Myreth Sulfate, sulfate pattern), provisional (audit status needs review). Q10 Revitalize Night Cream and Baby Lotion are ungradable under change 3.
 
 **Content angle for Section A:**
 "I graded 43 of the 48 Eucerin products from the ingredients the reference covers. Most land in the highest tier, and several grades rest on short or unverified text, so they are provisional." Say it as a coverage gap, not a verdict on the products.
@@ -82,10 +82,20 @@
 
 **Naming variant to decide:** Silica Dimethyl Silylate (5 products) is unknown. It is not the reference's "Silica Silylate" entry (categories 1 and 2, PFAS treated). If you decide it is an alias, those five products gain a PFAS escalation and a flag.
 
-**Provisional grades:** Six of the 43 graded products carry audit status needs review: Intensive Repair Lotion, Advanced Repair Lotion, Advanced Hydration SPF 30 Sunscreen Spray, Baby Wash and Shampoo, Q10 Revitalize Daily Cream and Advanced Hydration After Sun Lotion. The last two were Puberty Safe on two printed ingredients each until the zero-unknowns rule moved them to Use Caution, so they are the weakest grades in the brand. For Q10 Revitalize Daily Cream the printed text is two names only, and the audit notes say the CVS listing includes parabens and DMDM hydantoin, which this grade does not count. Its Use Caution tier is a floor, not a result. Do not publish any Eucerin tier until the full INCI lists are captured.
+**Provisional grades:** Six of the 43 graded products carry audit status needs review: Intensive Repair Lotion, Advanced Repair Lotion, Advanced Hydration SPF 30 Sunscreen Spray, Baby Wash and Shampoo, Q10 Revitalize Daily Cream and Advanced Hydration After Sun Lotion. Advanced Hydration After Sun Lotion was Puberty Safe on two printed ingredients until the zero-unknowns rule moved it to Use Caution. Q10 Revitalize Daily Cream was also Puberty Safe on two printed names until that rule; on 2026-10-17 the paraben and DMDM hydantoin rule set it to Avoid (High Priority Swap) from the CVS listing. Its printed text (Q10, Shea Butter) does not include those ingredients, and the CVS variant is not confirmed, so that tier rests on an unconfirmed listing. Do not publish any Eucerin tier until the full INCI lists are captured, and confirm the Q10 Revitalize Daily Cream variant before using it.
 
 **D7 and D8 removed (2026-10-17):** Under the earlier rules, products with two or more unknown ingredients were ungradable, and products with exactly one got a Use Caution floor. Both rules are gone. The 40 products that were ungradable on unknowns are now graded from their known ingredients: 31 Avoid (High Priority Swap), 4 Use Caution, 3 Avoid (Moderate) and 2 Puberty Safe. Under the zero-unknowns rule (below), both of those Puberty Safe grades are now Use Caution. Old and new tiers, and the unknown counts excluded from each grade, are in the Grading on known ingredients section of `eucerin_audit_log.md`.
 
 **Change 3 (2026-10-17, explicit exception):** Five products moved from Use Caution to ungradable: Q10 Revitalize Night Cream, Daily Hydration Lotion with Broad Spectrum SPF 15, Daily Hydration Lotion, Eucerin Baby Eczema Relief Hydrogel and Baby Lotion. Each has audit status needs review. The rule as written (Use Caution with needs review) matches five products, not four. The fifth is the Daily Hydration Lotion with Broad Spectrum SPF 15, whose grade rests on one printed key ingredient, Octisalate (3.5), and which has no unknown ingredient. Its Octisalate flag is kept in the row. If the four-product reading was intended, remove that one entry from UNGRADABLE_EXCEPTIONS in _grader.py and regrade.
 
-**Puberty Safe requires zero unknowns (2026-10-17):** Two products moved from Puberty Safe to Use Caution: Q10 Revitalize Daily Cream (2 unknowns) and Advanced Hydration After Sun Lotion (2 unknowns). Eucerin now has no Puberty Safe product. The before-and-after counts are in `eucerin_audit_log.md`.
+**Puberty Safe requires zero unknowns (2026-10-17):** Two products moved from Puberty Safe to Use Caution: Q10 Revitalize Daily Cream (2 unknowns) and Advanced Hydration After Sun Lotion (2 unknowns). Eucerin now has no Puberty Safe product. The before-and-after counts are in `eucerin_audit_log.md`. Q10 Revitalize Daily Cream has since moved on to Avoid (High Priority Swap) under the paraben and DMDM hydantoin rule (see the last section).
+
+
+## Paraben and DMDM hydantoin rule (2026-10-17)
+
+**Changed by this rule:** Q10 Revitalize Daily Cream moved from Use Caution to Avoid (High Priority Swap). The tier comes from the CVS 1.7 OZ candidate listing, which lists methylparaben, ethylparaben, propylparaben, butylparaben, isobutylparaben and DMDM hydantoin. The brand's own printed text ("Q10, Shea Butter") does not include them, and the variant match is not confirmed. Use it only after the variant is verified.
+
+**Already Avoid (High Priority Swap), no change:** none. No printed Eucerin ingredient text contains a paraben or DMDM hydantoin.
+
+**Tier distribution after the rule (48 products):** Puberty Safe 0, Use Caution 5, Avoid (Mild) 2, Avoid (Moderate) 3, Avoid (High Priority Swap) 33, ungradable 5.
+

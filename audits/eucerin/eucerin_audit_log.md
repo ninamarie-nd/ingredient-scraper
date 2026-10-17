@@ -872,3 +872,24 @@ Applied in this pass with the same `_grader.py` in every brand folder. The refer
 | Ungradable | 5 | 5 |
 
 **Puberty Safe products remaining:** none.
+
+
+## Paraben and DMDM hydantoin rule
+
+**Applied:** 2026-10-17 (practitioner rule). Any paraben, or DMDM hydantoin, among the ingredients grades Avoid (High Priority Swap), whatever else the product contains. Implemented in `_grader.py` as an escalation (`PARABEN_DMDM_RE`, `paraben_dmdm_hits()`), recorded as `paraben or DMDM hydantoin` in automatic_escalation. Parabens match by the "paraben" pattern; DMDM hydantoin matches by name. The grader is identical in all five brand folders (md5 d3bf1f7b7e4dec362fa8f841257a96a9), and only this rule changed. No other rule was changed.
+
+**Products changed by this rule (old tier to new tier):**
+- Q10 Revitalize Daily Cream: Use Caution to Avoid (High Priority Swap)
+
+**Products where the rule fires with no tier change (already Avoid (High Priority Swap)):**
+- None.
+
+**Source note:** Q10 Revitalize Daily Cream: Use Caution (old) to Avoid (High Priority Swap) (new). Source: the CVS 1.7 OZ candidate listing (candidate_retailer_text, candidate_retailer_source in the json). It lists methylparaben, ethylparaben, propylparaben, butylparaben, isobutylparaben and DMDM hydantoin. The brand's printed text, 'Q10, Shea Butter', does not include them. The variant match is not confirmed (see audit_notes_retail).
+
+**Tier counts before and after the rule:**
+- Before: Puberty Safe: 0, Use Caution: 6, Avoid (Mild): 2, Avoid (Moderate): 3, Avoid (High Priority Swap): 32, ungradable: 5
+- After: Puberty Safe: 0, Use Caution: 5, Avoid (Mild): 2, Avoid (Moderate): 3, Avoid (High Priority Swap): 33, ungradable: 5
+
+**Hand-check (2 products):**
+- Cleansing Gel: Use Caution, one flag. Alcohol Denat. [4] is flagged by the grader's existing alcohol-denat naming pattern (no reference entry; line search of the reference finds none). One flag, category 4 only, no paraben, fragrance, heavy metal or formaldehyde releaser gives Use Caution. Glycerin is a caution ingredient, and unknowns are excluded from the grade. Confirmed, no change.
+- Q10 Revitalize Daily Cream: Avoid (High Priority Swap), changed from Use Caution. The printed text 'Q10, Shea Butter' has no reference entry for either name, so it gives zero flags and two unknowns. The rule reads the CVS candidate text (candidate_retailer_text, directed for this product): Methylparaben [2,4] (line 675), Ethylparaben [2,4] (line 470), Propylparaben [2,4] (line 948), Butylparaben [2,4] (line 206), Isobutylparaben [2,4] (line 564), DMDM hydantoin [1,2,4,5] (line 449). Confirmed. The tier rests on the retailer listing, as the audit note says.

@@ -86,3 +86,10 @@
 **Changes 1 to 3 (2026-10-17):** No Aquaphor product has polysorbate or White Petrolatum USP, and none is on the Eucerin exception list, so changes 1 to 3 did not move any Aquaphor tier. The Avoid (Moderate) count is unchanged at 2, and the three no-text products remain ungradable.
 
 **Puberty Safe requires zero unknowns (2026-10-17):** One product moved from Puberty Safe to Use Caution: Aquaphor® Lip Repair Stick Naturally Inspired Coconut Single Pack (9 unknowns). No Aquaphor product is Puberty Safe now. The before-and-after counts are in `aquaphor_audit_log.md`.
+
+
+## Paraben and DMDM hydantoin rule (2026-10-17)
+
+**Changed by this rule:** none. No printed ingredient text contains a paraben or DMDM hydantoin, so no tier changed.
+
+**Tier distribution (unchanged by this rule):** Puberty Safe: 0, Use Caution: 5, Avoid (Mild): 0, Avoid (Moderate): 2, Avoid (High Priority Swap): 31, ungradable: 3.

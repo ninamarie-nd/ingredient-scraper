@@ -11,7 +11,8 @@ ingredient in ../../ref_compact.json and ../../ingredient_aliases.json, and writ
 Grading rules come from /home/claude/GRADING_RUBRIC.txt and the practitioner decisions D1 to D6
 (2026-10-16) recorded below. D7 and D8 (unknown-ingredient rules) were replaced 2026-10-17: unknown
 ingredients add no flags and set no floor, except that Puberty Safe requires zero unknowns (such a product grades
-Use Caution). The verbatim ingredient text in the JSON is never modified;
+Use Caution). Practitioner rule (2026-10-17): parabens and DMDM hydantoin grade Avoid (High Priority Swap), see
+PARABEN_DMDM_RE and RETAILER_TEXT_OVERRIDES. The verbatim ingredient text in the JSON is never modified;
 normalization is applied only in memory. The input JSON may use any of the three layouts the
 brands were scraped into: {"products": [list]}, {"products": {name_or_slug: {...}}}, or a
 top-level {name: {...}} mapping.
@@ -111,6 +112,18 @@ IRON_KEYS = {'ci 77491 (red iron oxide)', 'ci 77492 (yellow iron oxide)', 'ci 77
 SILICA_KEY = 'silica'
 # D3 (practitioner, 2026-10-16): bisabolol is soft only when chamomile oil or chamomile extract is also listed.
 CHAMOMILE = re.compile(r'chamomil|matricaria', re.I)
+
+# Practitioner rule (2026-10-17), escalation like the PFAS and heavy-metal escalations: any paraben, or DMDM hydantoin,
+# among the ingredients grades Avoid (High Priority Swap) whatever else the product contains. Matched on the cleaned
+# ingredient names: any name containing "paraben", and DMDM hydantoin by name.
+PARABEN_DMDM_RE = re.compile(r'paraben|dmdm\s*hydantoin', re.I)
+PARABEN_ESC = 'paraben or DMDM hydantoin'
+# Practitioner rule (2026-10-17), product-level source override. Keyed by brand folder, then exact product name, giving the
+# json field whose ingredient text the paraben/DMDM rule also reads. Flags and the printed verbatim text are not changed by
+# this; only the tier is set by the retailer listing, and the audit notes say so.
+RETAILER_TEXT_OVERRIDES = {
+    'eucerin': {'Q10 Revitalize Daily Cream': 'candidate_retailer_text'},
+}
 
 # Rubric: naturally occurring fragrance components (soft only when the source essential oil is also listed).
 NAT_FRAG = {'linalool', 'limonene', 'citral', 'citronellal', 'geraniol', 'eugenol', 'isoeugenol', 'coumarin',
@@ -355,7 +368,12 @@ def lookup(ing, segments, name, category, product_type):
 
 
 # ------------------------------------------------------------------ grading
-def grade(product_name, product_type, category, verbatim):
+def paraben_dmdm_hits(segments):
+    """Practitioner rule (2026-10-17): the ingredient names that trigger the paraben or DMDM hydantoin escalation."""
+    return list(dict.fromkeys(s for s in segments if PARABEN_DMDM_RE.search(s)))
+
+
+def grade(product_name, product_type, category, verbatim, retailer_text=None):
     segments = clean_segments(verbatim)
     flagged, natural, unknown = [], [], []
     esc = set()
@@ -444,7 +462,19 @@ def grade(product_name, product_type, category, verbatim):
         if norm_key(n['name']) == 'bisabolol':
             notes.append('D3: bisabolol counted as a soft (naturally occurring) flag; chamomile oil or extract is listed.')
 
-    esc_list = [x for x in ['heavy metals', 'PFAS', 'formaldehyde-releaser', 'carcinogen in leave-on'] if x in esc]
+    # Practitioner rule (2026-10-17): paraben or DMDM hydantoin in the ingredient text forces Avoid (High Priority Swap).
+    # The retailer text is read only for products named in RETAILER_TEXT_OVERRIDES.
+    pd_printed = paraben_dmdm_hits(segments)
+    pd_retail = paraben_dmdm_hits(clean_segments(retailer_text)) if retailer_text else []
+    if pd_printed or pd_retail:
+        esc.add(PARABEN_ESC)
+        tier = 'Avoid (High Priority Swap)'
+        if pd_printed:
+            notes.append(f"Practitioner rule (2026-10-17): {', '.join(pd_printed)} in the printed ingredient text: Avoid (High Priority Swap).")
+        if pd_retail:
+            notes.append(f"Practitioner rule (2026-10-17): tier set from the retailer listing ({', '.join(pd_retail)}). The brand's printed text does not include them.")
+
+    esc_list = [x for x in ['heavy metals', 'PFAS', 'formaldehyde-releaser', 'carcinogen in leave-on', PARABEN_ESC] if x in esc]
     return {'tier': tier, 'flagged': flagged, 'natural': natural, 'unknown': unknown, 'esc': esc_list,
             'segments': segments, 'rule_notes': notes}
 
@@ -543,7 +573,9 @@ def main():
                        'ingredients not found'])
             summary.append({'product_name': name, 'tier': UNGRADABLE, 'status': 'ingredients not found'})
             continue
-        g = grade(name, ptype, category, verbatim)
+        rt_field = RETAILER_TEXT_OVERRIDES.get(BRAND, {}).get(name)
+        retailer_text = (p.get(rt_field) or '') if rt_field else ''
+        g = grade(name, ptype, category, verbatim, retailer_text)
         tier = g['tier']
         rule_notes = g['rule_notes']
         exc_reason = UNGRADABLE_EXCEPTIONS.get(BRAND, {}).get(name)
@@ -578,6 +610,10 @@ def main():
             notes.append(f"Site limitation: {SITE_LIMITATION}")
         if p.get('audit_notes_retail'):
             notes.append(f"Retailer notes: {p['audit_notes_retail']}")
+        if rt_field and retailer_text:
+            notes.append(f"Paraben/DMDM rule source: {p.get('candidate_retailer_source') or 'retailer listing'} "
+                         f"(practitioner directive 2026-10-17). The brand's own printed text is '{verbatim}' and does not "
+                         f"include them; the variant match is not confirmed, so the tier rests on the retailer listing.")
         if p.get('audit_notes'):
             notes.append(f"Audit notes: {p['audit_notes']}")
         same = [x for x in text_map.get(verbatim, []) if x != name]

@@ -91,3 +91,12 @@
 **Changes 1 and 2 (2026-10-17):** Change 1 (White Petrolatum USP as petrolatum) moved Healing Jelly Original and Lip Therapy Advanced Healing Tube from Use Caution to Avoid (High Priority Swap). Change 2 (all polysorbates flagged) added Polysorbate 80 to the flags of Intensive Care Hydra Replenish Hand Crème and Cocoa Body Butter. Neither change moved a product between ungradable and graded. Healing Jelly Cocoa Butter and Lip Therapy Original Mini were already Avoid (High Priority Swap) from their petrolatum flags.
 
 **Puberty Safe requires zero unknowns (2026-10-17):** No product in this brand moved. No product was Puberty Safe before the rule and none is now, so the tier counts in this section are unchanged. Unknown counts per product are in `vaseline_audit_log.md`.
+
+
+## Paraben and DMDM hydantoin rule (2026-10-17)
+
+**Changed by this rule:** none. Thirteen rows carry parabens in the printed text. All were already Avoid (High Priority Swap), so no tier changed.
+
+**Printed-text paraben or DMDM hydantoin rows (all already Avoid (High Priority Swap)):** 13 of 52 products. The escalation label is now recorded on each of them.
+
+**Tier distribution (unchanged by this rule):** Puberty Safe: 0, Use Caution: 0, Avoid (Mild): 0, Avoid (Moderate): 0, Avoid (High Priority Swap): 36, ungradable: 16.

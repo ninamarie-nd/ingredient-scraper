@@ -82,3 +82,10 @@
 **D7 and D8 removed (2026-10-17):** Six products that were ungradable on unknowns are now graded from their known ingredients: four Avoid (High Priority Swap), one Avoid (Moderate) and one Avoid (Mild). See the Grading on known ingredients section of `lubriderm_audit_log.md`.
 
 **Puberty Safe requires zero unknowns (2026-10-17):** No product in this brand moved. No product was Puberty Safe before the rule and none is now, so the tier counts in this section are unchanged. Unknown counts per product are in `lubriderm_audit_log.md`.
+
+
+## Paraben and DMDM hydantoin rule (2026-10-17)
+
+**Changed by this rule:** none. No printed ingredient text contains a paraben or DMDM hydantoin, so no tier changed. Four audit notes (Daily Moisture Lotion Fragrance-Free, Daily Moisture Lotion, Advanced Therapy Body Wash Fragrance-Free, Daily Moisture Body Wash Lightly Scented) say the product copy is 'free of parabens'. That is brand copy, not ingredient text, so the rule does not read it.
+
+**Tier distribution (unchanged by this rule):** Puberty Safe: 0, Use Caution: 0, Avoid (Mild): 1, Avoid (Moderate): 1, Avoid (High Priority Swap): 4, ungradable: 1.

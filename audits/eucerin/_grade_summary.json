@@ -2,10 +2,10 @@
  "brand": "eucerin",
  "tier_counts": {
   "Puberty Safe": 0,
-  "Use Caution": 6,
+  "Use Caution": 5,
   "Avoid (Mild)": 2,
   "Avoid (Moderate)": 3,
-  "Avoid (High Priority Swap)": 32,
+  "Avoid (High Priority Swap)": 33,
   "ungradable": 5
  },
  "rows": [
@@ -543,7 +543,7 @@
   },
   {
    "product_name": "Q10 Revitalize Daily Cream",
-   "tier": "Use Caution",
+   "tier": "Avoid (High Priority Swap)",
    "flag_count": 0,
    "product_type": "leave-on skincare",
    "flagged": [],
@@ -552,7 +552,9 @@
     "Q10",
     "Shea Butter"
    ],
-   "esc": [],
+   "esc": [
+    "paraben or DMDM hydantoin"
+   ],
    "status": "needs review"
   },
   {

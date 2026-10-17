@@ -681,3 +681,24 @@ Applied in this pass with the same `_grader.py` in every brand folder. The refer
 | Ungradable | 3 | 3 |
 
 **Puberty Safe products remaining:** none.
+
+
+## Paraben and DMDM hydantoin rule
+
+**Applied:** 2026-10-17 (practitioner rule). Any paraben, or DMDM hydantoin, among the ingredients grades Avoid (High Priority Swap), whatever else the product contains. Implemented in `_grader.py` as an escalation (`PARABEN_DMDM_RE`, `paraben_dmdm_hits()`), recorded as `paraben or DMDM hydantoin` in automatic_escalation. Parabens match by the "paraben" pattern; DMDM hydantoin matches by name. The grader is identical in all five brand folders (md5 d3bf1f7b7e4dec362fa8f841257a96a9), and only this rule changed. No other rule was changed.
+
+**Products changed by this rule (old tier to new tier):**
+- None. No tier changed under this rule in this brand.
+
+**Products where the rule fires with no tier change (already Avoid (High Priority Swap)):**
+- None.
+
+**Source note:** None. No printed ingredient text contains a paraben or DMDM hydantoin, so no tier changed.
+
+**Tier counts before and after the rule:**
+- Before: Puberty Safe: 0, Use Caution: 5, Avoid (Mild): 0, Avoid (Moderate): 2, Avoid (High Priority Swap): 31, ungradable: 3
+- After: Puberty Safe: 0, Use Caution: 5, Avoid (Mild): 0, Avoid (Moderate): 2, Avoid (High Priority Swap): 31, ungradable: 3
+
+**Hand-check (2 products):**
+- Aquaphor® Lip Repair Stick Naturally Inspired Aloe Vera Single Pack: Use Caution, zero flags. Its printed list is mostly unknown names (for example Octyldodecanol, Shea Butter, Aloe Barbadensis Leaf Juice Powder). Under the zero-unknowns rule, a product with no flags but unknown names is Use Caution, not Puberty Safe. Glycerin is a caution ingredient. Confirmed, no change.
+- Aquaphor® Moisturizing Cream (8oz.): Avoid (High Priority Swap), four flags. Pentylene Glycol [1,2] (line 780) and Phenoxyethanol [1,2,4,5,8] (line 801) give the carcinogen-in-leave-on escalation. Bisabolol [4] is a full flag because no chamomile oil or extract is listed (line 181 for the reference entry). Sodium Cetearyl Sulfate [1,4,5] is graded by the sulfate pattern. Confirmed, no change.
