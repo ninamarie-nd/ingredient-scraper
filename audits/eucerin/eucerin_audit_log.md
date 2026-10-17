@@ -1,5 +1,7 @@
 # Eucerin Audit Log
 
+> **Superseded 2026-10-16 20:47 (UTC-05:00).** The grading results, tier counts, grader notes and manual review queue in this log were replaced by the unified-grader regrade at the end of this file. Sourcing notes still apply.
+
 **Brand URL:** https://www.eucerinus.com/ (US site)
 **Audit start:** 2026-10-16
 **Audit end:** see end of file
@@ -225,3 +227,130 @@ Unknowns are not scored. Any Puberty Safe grade on a row with unknowns is provis
 - `eucerin_content_mining.md` (rewritten on the new counts)
 - `audit_log.md` (this section)
 - `regrade2_summary.json` (in scratchpad, not in the eucerin folder)
+
+## Update 2026-10-16, round 2: remaining 13 rows (supersedes the round 1 sourcing counts above)
+
+Scope: retailer product pages only, in order CVS, Walgreens, Ulta, Dermstore, Amazon. No other sources. Ingredient text copied from each retailer's printed Ingredients block (CVS ingredients pages, Amazon Ingredients section). Round 2 did not recheck Target or Walmart; their round 1 results stand.
+
+### Sourcing counts after round 2
+
+Verified full lists: 37 of 48.
+- Walmart: 31 (round 1, unchanged)
+- CVS: 2 (rows 3 and 6, new this round)
+- Target: 1 (row 1, round 1)
+- Amazon: 3 (rows 13, 16, 22, round 1)
+
+Provisional: 11 rows, "needs review": 2, 17, 18, 19, 20, 30, 40, 41, 44, 46, 48.
+
+### Resolved this round
+
+- Row 3, Advanced Repair Hand Cream, 2.7 oz: CVS prodid 2410039. Full printed list. First three inactive ingredients (Water, Glycerin, Urea) match the brand text. Walmart copy (kept in walmart_alt_text) differs (no Water). Source is CVS.
+- Row 6, Dark Spot Corrector Body Cream, 7 oz: CVS prodid 922144. The only listing under this name on CVS, Walmart or Amazon. First three match the brand text. Brand prints no size; the size is recorded as not confirmed by the brand but the name is an exact match.
+
+### Remaining rows and retailers checked
+
+- Row 2, Advanced Repair Lotion (conflict): CVS checked. CVS 13.5 oz pump (prodid 361273) has a list starting Water, Glycerin, Urea, but it is a different size and format and does not state fragrance-free. Not used. Walmart (round 1) still conflicts with brand. Walgreens blocked by a bot-check page. Ulta holding page. Dermstore no results. Amazon not checked for this row.
+- Row 3: resolved (see above).
+- Row 6: resolved (see above).
+- Row 17, Intensive Repair Very Dry Skin Lotion (size not confirmed): CVS 8.4 oz (prodid 1016683) list matches the brand's first three and the Walmart text. CVS lists two sizes under this name and the brand prints no size. Held at needs review. Walgreens blocked. Ulta holding page. Dermstore not checked.
+- Row 18, Q10 Revitalize Night Cream (no text): CVS brand shop and search did not return it. Amazon: no Eucerin Q10 night cream listing (only Anti-Pigment Night Cream, different product). Dermstore "eucerin q10": no results. Walgreens blocked. Ulta holding page.
+- Row 19, Q10 Revitalize Daily Cream (candidate only): CVS Sensitive Skin Experts Q10 Anti-Wrinkle Face Creme 1.7 oz (prodid 361289). Full list with Q10 active and shea butter inactive. Brand prints two key ingredients only, so the cross-check cannot be done. Held at needs review. Walgreens blocked. Ulta holding page.
+- Row 20, Advanced Hydration After Sun Lotion (conflict): CVS 6.8 oz (prodid 145120) lists Glycyrrhetinic Acid but not Licochalcone A (brand key). Conflict kept; not used. Walgreens blocked. Ulta holding page.
+- Row 30, Advanced Hydration SPF 30 Sunscreen Spray (no text): CVS brand shop lists only SPF 50 spray (prodid 621595). Dermstore: no Eucerin SPF 30 spray. Walmart and Amazon checked in round 1: no listing. Walgreens blocked. Ulta holding page.
+- Row 40, Daily Hydration Lotion with Broad Spectrum SPF 15 (no match): CVS Daily Hydration Broad Spectrum SPF 15 Body Lotion 16.9 oz (prodid 1013203) has different actives (Avobenzone 2.0%, Homosalate 3.4%, Octisalate 3.4%, Octocrylene 4.7%) against brand key Octisalate (3.5). Not used. Dermstore not usable. Walgreens blocked. Ulta holding page.
+- Row 41, Daily Hydration Lotion (candidate only): CVS Daily Hydration Body Lotion 16.9 oz (prodid 1013215) full list with sunflower seed oil first among actives. Brand prints one key ingredient and no size. Held at needs review. Amazon multipack (round 1) not a clear match.
+- Row 44, Eucerin Baby Eczema Relief Hydrogel (conflict): Amazon 5 fl oz (ASIN B0DFJQVMD7) printed list starts Water, Glycerin, Alcohol Denat. and has no Colloidal Oatmeal, the brand's first key ingredient. Walmart (round 1) also lacks it. Conflict kept; not used for grade. CVS: only the adult Eucerin Eczema Relief Hydrogel Moisturizer, not used. Dermstore no results. Walgreens blocked. Ulta holding page.
+- Row 46, Baby Wash and Shampoo (no text): CVS brand shop and search returned no baby wash. Amazon: only a third-party Awiaub pack of three, not a clear match. Dermstore not applicable. Walgreens blocked. Ulta holding page.
+- Row 48, Baby Lotion (candidate only): CVS Eucerin Baby Body Lotion 13.5 oz (prodid 1030497) full list with Panthenol as the active (INCI for brand key Dexpanthenol). Brand prints one key and no size. Held at needs review. Walmart 13.5 fl oz (round 1) also candidate only.
+
+### Retailer status this round
+
+- CVS: productive. Cookie banner declined (Reject All). Search results sometimes do not render; the brand shop page (/shop/brand-shop/e/eucerin) gave product links. Ingredient text came from the /shop/ingredients/ pages.
+- Walgreens: blocked. The search page returned a "Challenge Validation" bot-check page. Not attempted further; no data used.
+- Ulta: returned a "Be Right Back" holding page on two attempts. Not usable.
+- Dermstore: productive for "no results" checks (baby hydrogel, SPF 30 spray, Q10). No product text found.
+- Amazon: productive for row 44 (conflict) and the baby wash candidate (not used).
+
+### Grading (round 2)
+
+- Grader: _grader.py with the round 1 overlay (regrade2.py), with one fix: the candidate-note line expected a dict, but the JSON stores strings. Fixed in regrade3.py (scratchpad). No grading rule changed.
+- Tiers, all 48: Puberty Safe 8, Use Caution 3, Avoid (Mild) 5, Avoid (Moderate) 0, Avoid (High Priority Swap) 32.
+- Tiers, verified 37: Puberty Safe 2, Use Caution 2, Avoid (Mild) 3, Avoid (Moderate) 0, Avoid (High Priority Swap) 30.
+- Changes from round 1 (all 48): Use Caution 4 to 3 and High Priority Swap 31 to 32. Row 6 moved from Use Caution (brand subset) to High Priority Swap (full CVS list: phenoxyethanol, category 1, leave-on; fragrance without breakdown).
+- The six Puberty Safe provisional rows (18, 19, 20, 41, 44, 48) grade on key-ingredient text only. Their Puberty Safe grade is provisional.
+- PFAS escalation changes no tier in this set (verified by the grader run: tiers with and without the rule are identical).
+- Hand checks: row 3 (CVS full list) and row 6 (CVS full list). Both High Priority Swap via phenoxyethanol (category 1) in a leave-on product; row 6 also has a fragrance flag. Matches the rubric.
+
+### Files written this round
+
+- eucerin_ingredients.json: rows 3 and 6 set to complete with CVS source; rows 2, 17, 18, 19, 20, 30, 40, 41, 44, 46, 48 kept at needs review with candidate texts (candidate_retailer_text, candidate_retailer_source) and reasons in audit_notes_retail. Brand text intact.
+- eucerin_audit.xlsx: regenerated, 14 OUTPUT_TEMPLATES columns, 48 rows.
+- eucerin_content_mining.md: rewritten on round 2 counts.
+- eucerin_audit_log.md: this section.
+- Scratchpad (not in folder): regrade3.py, regrade3_summary.json, round2_notes.py, write_cm_r2.py.
+
+### Open items
+
+- 11 rows still need review. The next step is a retailer I have not reached (Walgreens, Ulta) or a manual check on Amazon for row 2 and row 17.
+- Unknown queue: 108 unique names across the verified 37 rows, per-row in the workbook. Some are parse artifacts from sunscreen active lines.
+
+
+---
+
+## Regrade 2026-10-16 20:47 (UTC-05:00): unified grader (supersedes the grading results, tier counts and manual review queue above)
+
+The sourcing notes above still apply. Where this section and an earlier section disagree on a grade, tier, flag or unknown name, this section is current.
+
+### Why this regrade
+- The two brand graders disagreed. The Aquaphor grader had been patched so that `Petrolatum (41%)` went unmatched and pentylene glycol was low tox. Its product-type fallback ("hair styling") was inherited from the Briogeo grader.
+- The Eucerin overlay lacked the PFAS escalation, the product-type conditionals, the shampoo sulfate rule and the essential-oil source check for naturally occurring components.
+- Both brands are now graded by one `_grader.py` from `ingredients_verbatim`.
+
+### Grader
+- `_grader.py` (identical copy in `eucerin/` and `aquaphor/`). It reads `<brand>_ingredients.json` from its own folder, `../../ref_compact.json` and `../../ingredient_aliases.json`. It writes `<brand>_audit.xlsx` and `_grade_summary.json` into its own folder and nothing else. Aquaphor also reads `aquaphor_catalog.json` (see below).
+- Grading input is `ingredients_verbatim` only. The ingredients JSON was not edited. All normalization happens in memory.
+- Normalization: (1) strip parenthetical and bare percentages (`(41%)`, `41%`, `40.0%`, `(3 %)`); (2) drop `Purpose:` fragments and purpose notes, and the `Active:`, `Inactive:` and `Other ingredients:` labels; (3) strip trailing periods, asterisks, dashes and extra whitespace; (4) do not split on a comma followed by a digit, so `1,2-Hexanediol` stays whole; (5) split the printed `Panthenol Glycerin` (missing comma, Aquaphor Healing Ointment .25oz) into two names; (6) map scraper-side spelling variants (`1,2-Hexandiol`, `Ceteary Alcohol`, `Soidum Lactate`, `Sunflower Seed oil`, `Caprylic-Capric-Triglyceride`, `Glyceryl Glucosdie` and others); (7) treat HCl and HCI salt forms as the base name for the low-tox check; (8) split run-together forms such as `SodiumChloride`; (9) drop label prefixes such as `Synthetics:`.
+- Rubric rules applied as written: the five tiers and the tally; PFAS, heavy-metal, formaldehyde-releaser and carcinogen-in-leave-on escalations; the sulfate minimum of Avoid (Mild) in daily rinse-off products (rubric: shampoos); fatty alcohols and behentrimonium methosulfate exempt; naturally occurring components soft only when a source essential oil is listed; fragrance without disclosure a full flag; conditionals for titanium dioxide (cream not a concern, spray, powder or oral care flagged), zinc oxide (spray), mica (first ingredient), zeolite (powder), acetic acid (spray) and enzymes (powder).
+- Reference: `ref_compact.json` plus `ingredient_aliases.json`. Reference entries take precedence over the LOW TOX list. The LOW TOX list is the Eucerin overlay's list, unchanged. No low-tox entries were added from memory.
+- Product type comes from the brand category in the JSON. Anything not rinse-off (rinse-off skincare; body wash/shampoo/conditioner) is leave-on, per the "when in doubt" rule. Sunscreens are leave-on.
+
+### Results
+- Graded 48 of 48.
+- Tiers, all 48: Puberty Safe 8, Use Caution 3, Avoid (Mild) 2, Avoid (Moderate) 3, Avoid (High Priority Swap) 32.
+- Verified rows (37, audit_status complete): Puberty Safe 2, Use Caution 2, Avoid (Mild) 0, Avoid (Moderate) 3, Avoid (High Priority Swap) 30. Provisional rows (11, needs review) are listed in `eucerin_content_mining.md`.
+- Tier changes vs the last-pass workbook: 3 of 48.
+  - Eucerin Advanced Cleansing Body and Face Wash: Avoid (Mild) → Avoid (Moderate). Five flags once polyquaternium-10 is counted.
+  - Eczema Relief Cream & Body Wash: Avoid (Mild) → Avoid (Moderate). Five flags with decylene glycol.
+  - Baby Eczema Relief Cream & Body Wash: Avoid (Mild) → Avoid (Moderate). Five flags with decylene glycol.
+- Flagged-set or flag-count changes: 28 products, no tier effect beyond the three above. Main causes: decylene glycol flagged under the `-glycol` pattern (8 products); 1,2-hexanediol and BHT flagged (previously unknown); trailing periods and percentages removed from names (alcohol denat., octocrylene, avobenzone and similar; no count effect).
+- Escalations, all 48: PFAS-noted ingredient in 21 products; carcinogen in a leave-on in 32; heavy metals in 4 (iron oxides in the Eye Cream and both tinted sunscreens; aluminum stearates in Original Healing Lotion). The Eucerin overlay did not apply the PFAS rule. No Eucerin tier changed because of it, since those products were already High Priority Swap.
+
+### Unknown queue
+- 101 unique names after deduplication (whitespace and slash spacing ignored), across 45 products and 329 occurrences. The previous workbook held 120 unique names and 358 occurrences. The full deduplicated list is in `eucerin_content_mining.md`, under Manual review queue.
+- Cleaned in this pass: percentages, trailing periods, `Purpose:` fragments, `(Purpose)` and analgesic notes, `HCl`/`HCI` salt forms (Arginine, Histidine), `1,2-Hexandiol` and `1-2-Hexanediol` spellings, `Ceteary Alcohol`, `Soidum Lactate`, `Butyrospemum`, `Glyceryl Glucosdie`, run-together `SodiumChloride`-type forms, and the `Colloidal Oatmeal (1%)` and `Octocrylene (9%).` artifacts.
+- Still unknown after cleanup: 101 names. They are real names outside the reference and the rubric patterns. One, `l-6 Stearate`, looks like a truncated `Polyglyceryl-6 Stearate` from the same product. It was not assumed.
+- All 8 Puberty Safe rows carry at least one unknown name, so every Puberty Safe grade here is provisional on the known subset.
+
+### Hand checks (3 products)
+1. **Advanced Hydration SPF 50 Sunscreen Spray** (percentages and the comma-split name). Read by hand from the verbatim text: four UV filters at category 2 each (avobenzone, homosalate, octisalate, octocrylene); styrene/acrylates copolymer [1,4,6]; butylene glycol [1,2]; diethylhexyl syringylidenemalonate [2]; VP/eicosene copolymer [1,2,6] (PFAS treated); 1,2-Hexandiol [1,2]; potassium hydroxide [4]. Ten flags. Category 1 is present in a leave-on, and PFAS applies. Expected High Priority Swap. The grader matches.
+2. **Hydrating Cleansing Gel, 6.8 FL OZ** (Puberty Safe). Coco-betaine, coco glucoside, sodium hyaluronate, sodium benzoate and sodium chloride are low tox. Glyceryl glucoside, acrylates/C10-30 alkyl acrylate crosspolymer and trisodium EDTA are unknown. Zero flags. The grader matches. The three unknown names are why this grade rests on the known subset.
+3. **Advanced Repair Cream, 16 OZ**. Five flags: dimethicone [2,6] (PFAS treated), pentylene glycol [1,2], phenoxyethanol [1,2,4,5,8] (category 1 in a leave-on), decylene glycol [1,2], sodium cetearyl sulfate [1,4,5]. Expected High Priority Swap on PFAS and carcinogen. The grader matches.
+
+### Open rubric questions (not settled by the rubric text)
+1. **Bisabolol.** No source essential oil is listed beside it in these lists, so each instance is a full flag at its reference category (4). The rubric says "treat as full fragrance flags," which could mean categories 1, 2, 4 and 8. Applied here: reference categories. Affects Aquaphor directly (see its section).
+2. **PFAS note wording.** Applied to any flagged ingredient the reference notes as "PFAS treated." That includes dimethicone (15 Eucerin products) and unspecified silica (6 Eucerin sunscreens). The reference note reads "Hydrated silica is acceptable," so unspecified silica may not be intended as automatically PFAS. Mica ("may be PFAS treated") is not escalated. Titanium dioxide escalates only when it is itself flagged (spray or powder).
+3. **Heavy-metal stacking.** Escalates when a category 3 ingredient and a different flagged ingredient with category 1 or 2 are both present (for example iron oxides with synthetic fluorphlogopite in the tinted sunscreens and Eye Cream). If the rubric means one ingredient carrying categories 1 to 3 is enough, iron oxides alone would escalate. Not applied.
+4. **EDTA.** The reference's `edta` entry (category 4) carries "Watch for: -EDTA," but the rubric's watched-pattern list does not include EDTA. Not flagged. Disodium and trisodium EDTA stay unknown.
+5. **Names the reference does not list.** Botanical oils and extracts, ceramides, lanolin alcohol, ceresin and hydrocortisone stay unknown. The old Aquaphor grader cleared botanical names by pattern ("oil," "extract," "butter"), which the rubric does not allow. These names are not flagged, so they do not move a tier, but Puberty Safe calls rest on the known subset. Whether they should be low tox is a decision for Nina-Marie.
+6. **Scope of two rules.** Sunscreens are treated as leave-on, so the carcinogen rule applies to them. The sulfate minimum applies to all rinse-off types (rinse-off skincare and body wash/shampoo/conditioner), not only shampoos.
+7. **Watched patterns applied literally.** `-glycol` flags any name ending in glycol (decylene and pentylene glycol are now flagged). A polyquaternium name is treated as a `-nium` quat.
+8. **Reference file.** `ref_compact.json` truncates notes at about 100 characters. The full `ingredient_reference.json` has complete notes. One PFAS note (perfluorononyl) appears only in the full file, and no product in these two brands contains it. Recommend regenerating `ref_compact.json` from the full file.
+
+### Files written this pass
+- `eucerin/_grader.py` (unified grader; replaces the Eucerin overlay)
+- `eucerin/eucerin_audit.xlsx` (48 rows, template columns)
+- `eucerin/_grade_summary.json` (per-product detail behind these counts)
+- `eucerin/eucerin_content_mining.md` (regenerated)
+- `eucerin/eucerin_audit_log.md` (this section)
+- Removed `eucerin/__pycache__` (left by an earlier import of the old grader)
+- Not modified: `eucerin_ingredients.json`. Nothing was committed, and no other folder was touched.

@@ -1,108 +1,151 @@
 # Aquaphor Audit — Content Mining Report
 
-**Date audited:** 2026-10-16
-**Products audited:** 41 (33 with a full verified INCI list, 8 still needs review)
-**Brand source:** https://www.aquaphorus.com/ (product names and brand-site partial lists)
-**Full INCI source:** retailer product pages (Walmart; one Target listing checked for the hand and foot masks). Each verified row names its retailer and URL in `audit_notes`.
+**Date audited:** 2026-10-16 (regraded with the unified grader)
+**Products audited:** 41 listed: 38 graded from a full printed list, 3 not graded (no ingredient text)
+**Source:** https://www.aquaphorus.com/ (product names and brand-site partial lists). aquaphor.com is an unrelated company and was not used.
+**Full INCI sources:** retailer product pages only (Walmart, CVS, Amazon). Each row names its retailer and URL in `audit_notes`.
 
-**Data caveat:** The brand site shows only a partial ingredient block per product (the first names, or the active-ingredient list for OTC-format labels). The 33 verified rows use the full printed list from a retailer page for the same product and size. The 8 `needs review` rows keep a provisional tier from the brand's partial list. Verify packaging before any number goes into a caption.
+**Data caveats:**
+- The brand site shows only a partial ingredient block per product. Every graded row is graded from the full retailer-printed list for the same product and size.
+- All 38 graded rows were regraded with the unified grader in this pass, so the tiers below are the current ones. The earlier split between a prior-pass grader and a patched grader no longer applies.
+- Three rows have no tier: Diaper Rash Cream 3 oz, Hand Mask, and Healing Ointment 2 x 3.5 oz. No ingredient text was found for them, so they were not graded.
 
 ---
 
 ## Section A — Brand-level callout
 
-**Headline finding:** Of the 33 Aquaphor products with a full retailer-printed ingredient list, 26 (79%) grade Avoid (High Priority Swap). Every verified cream and lotion, every petrolatum ointment, and both SPF lip products carry a category 1 flag in a leave-on product, or a PFAS-treated flag, so the brand-site partial lists (19 Puberty Safe) overstated how clean the line is.
+**Headline finding:** Of the 38 Aquaphor products with a full printed ingredient list, 31 (82%) grade Avoid (High Priority Swap). Only three grade Puberty Safe: two Naturally Inspired lip sticks and the Diaper Rash Paste.
 
-**Tier distribution (all 41, verified and provisional):**
-- Puberty Safe: 9 (22.0%) — 5 verified, 4 provisional
-- Use Caution: 0 (0%)
-- Avoid (Mild): 2 (4.9%) — both verified (Baby Wash & Shampoo)
-- Avoid (Moderate): 0 (0%)
-- Avoid (High Priority Swap): 30 (73.2%) — 26 verified, 4 provisional
+**Tier distribution (all 38 graded rows; 3 not graded):**
+- Puberty Safe: 3 (8%)
+- Use Caution: 2 (5%)
+- Avoid (Mild): 0 (0%)
+- Avoid (Moderate): 2 (5%)
+- Avoid (High Priority Swap): 31 (82%)
+- Not graded: 3
 
-**Verified rows only (33):** Puberty Safe 5 (15.2%), Avoid (Mild) 2 (6.1%), Avoid (High Priority Swap) 26 (78.8%).
+**Single most-flagged product:** Aquaphor Lip Protectant + SPF 30 (single tube) and Aquaphor Lip Protectant + SPF (Dual Pack) — 7 flags each: petrolatum (category 1), avobenzone, octinoxate, octisalate, octocrylene, oxybenzone (category 2), and BHT. Both are High Priority Swap because petrolatum (category 1) sits in a leave-on.
 
-**Before (brand-site partial lists, all 41):** Puberty Safe 19, Use Caution 2, Avoid (Mild) 2, Avoid (High Priority Swap) 18.
-
-**Single most-flagged product:** Aquaphor® Lip Protectant + SPF 30 (0.35 oz tube) — 7 flags: petrolatum (cat. 1), avobenzone, octinoxate, octisalate, octocrylene, oxybenzone (cat. 2), BHT (cat. 1, 2). Escalated to High Priority Swap for petrolatum in a leave-on sunscreen.
-
-**Cleanest products (if any):** Aquaphor® Lip Repair (0.35 oz ointment tube) and the Naturally Inspired Lip Repair Sticks in Aloe Vera and Coconut (single sticks) are Puberty Safe with zero flags on the full list. Aquaphor® Diaper Rash Paste (3.5 oz, 40% zinc oxide) is also Puberty Safe with zero flags. Each still has ingredients to hand-check in the manual review queue.
+**Cleanest products:** Aquaphor Lip Repair Stick Naturally Inspired, Aloe Vera single pack and Coconut single pack (Puberty Safe, zero flags), and Aquaphor Diaper Rash Paste 3.5 oz (Puberty Safe, zero flags; zinc oxide is low tox in an ointment). Aquaphor Lip Repair (tube and dual pack) is Use Caution with one flag, bisabolol.
 
 **Content angle for Section A:**
-"I checked the full ingredient list of 33 Aquaphor products, not just the first few names on the website. 26 of them grade High Priority Swap. The website's partial lists had 19 looking clean." Pair this with a packaging check before posting.
+"I checked the full ingredient list of 38 Aquaphor products, not just the first few names on the website. 31 of them grade High Priority Swap." Pair this with the packaging check before posting.
 
 ---
 
 ## Section B — Pattern callouts
 
-**Most common flagged ingredient:** Petrolatum — flagged in 15 of 33 verified products (every petrolatum ointment, balm, body spray, and the SPF lip tube). Mineral Oil is flagged alongside it in 13.
+**Most common flagged ingredient:** Bisabolol — flagged in 27 of 38 graded products as a full flag, because no source essential oil is listed beside it (rubric). See the open rubric question in the audit log. Petrolatum is next, in 18 products, and Mineral Oil in 14. Both are category 1 in the reference.
 
-**Most common risk category:** Category 1 (Carcinogen) — 51 flag entries across the 33 verified products. Category 2 (Endocrine Disruption) — 29 entries, mostly the SPF filters.
+**Most common risk category:** Category 1 (Carcinogen) and Category 4 (Allergies, Irritation, Corrosion) tie — each flagged in 29 of 38 products. Category 2 (Endocrine Disruption) is in 17.
+
+**Escalations triggered:** a category 1 ingredient in a leave-on product (27 products) and a PFAS-treated ingredient (5 products: dimethicone in the lip sticks and Foot Mask).
 
 **"Clean marketing, dirty formula" finds:**
-- **Moisturizing Cream (8 oz tube and 16 oz jar).** The Walmart listing says it is a "hypoallergenic, non-comedogenic dry skin cream ... free of fragrance, parabens and dyes." It is accurate on those three points. It still grades High Priority Swap: phenoxyethanol (cat. 1, 2, 4, 5, 8), pentylene glycol (cat. 1, 2), and sodium cetearyl sulfate (sulfate pattern, inferred cat. 1, 4, 5), all in a leave-on.
-- **Baby Sensitive Lotion (3 fl oz and 8 fl oz).** Marketed as pediatrician-tested and gentle. Graded High Priority Swap for phenoxyethanol, sodium cetearyl sulfate, and ethylhexylglycerin.
-- **Baby Wash & Shampoo (25.4 fl oz and 16.9 fl oz).** Marketed as "Fragrance Free and Tear Free." Graded Avoid (Mild) for sodium myreth sulfate, PEG-200 hydrogenated glyceryl palmate, cocamidopropyl betaine, and bisabolol. No fragrance flag, but four other flags.
+- **Moisturizing Cream (8 oz, 1.89 oz, 16 oz) and Hydrating Daily Lotion (3 oz, 8 oz, 16 oz).** Marketed as fragrance-free and gentle. The lotions and creams all grade Avoid (High Priority Swap) with 4 flags, including phenoxyethanol (category 1) and sodium cetearyl sulfate.
+- **Baby Sensitive Lotion (3 fl oz and 8 fl oz).** Marketed as gentle for babies. Grades Avoid (High Priority Swap) for phenoxyethanol (category 1) and sodium cetearyl sulfate.
+- **Baby Wash & Shampoo (25.4 fl oz and 16.9 fl oz).** Marketed as tear-free and gentle. Grades Avoid (Moderate) with five flags: sodium myreth sulfate, PEG-200 hydrogenated glyceryl palmate, cocamidopropyl betaine, bisabolol, and polyquaternium-10.
+- **Naturally Inspired Lip Repair Sticks (Aloe Vera and Coconut).** The only Aquaphor lip sticks without dimethicone. Puberty Safe on the printed list, with 8 to 9 names still unknown.
 
 **Repeated naming patterns:**
-- Every verified cream and lotion (7 of 7 — Moisturizing Cream 8 oz and 16 oz, Hydrating Daily Lotion 3, 8, and 16 oz, Baby Sensitive Lotion 3 and 8 oz) contains phenoxyethanol and sodium cetearyl sulfate.
-- Every verified petrolatum product carries the same category 1 flag. Petrolatum sits at 30–41% across the ointment family.
-- Every SPF product lists four to six UV filters from one family (avobenzone, homosalate, octisalate, octocrylene, octinoxate, oxybenzone).
-- Dimethicone, which the reference marks PFAS-treated, appears in four lip-stick listings: the Lip Repair Stick (Shea Butter), its 2-pack, the Lip Repair & Protect SPF 30 stick, and its 2-pack.
+- Petrolatum appears in 18 of 38 graded rows, including every petrolatum ointment, balm, body spray, and SPF lip product.
+- Phenoxyethanol appears in 9 rows, all creams, lotions and the Foot Mask.
+- Every SPF product lists four or five UV filters from one family (avobenzone, homosalate, octisalate, octocrylene, octinoxate, oxybenzone).
+- Dimethicone, which the reference marks PFAS treated, appears in the four lip stick listings and the Foot Mask.
 
 **Content angles for Section B:**
-1. "Seven creams, seven phenoxyethanol": every Aquaphor cream and lotion with a full list contains phenoxyethanol. Frame it as what the label says, not as a health claim.
-2. "Dimethicone in a lip balm": the reference marks dimethicone as PFAS-treated. Four Aquaphor lip sticks list it, and the same brand sells a Naturally Inspired stick that does not.
-3. "The website showed one ingredient": the brand site's partial list for the ointments showed only "Petrolatum (41%)." The retailer's full list adds mineral oil, ceresin, lanolin alcohol, and others. Process post on why full-INCI transparency matters.
+1. "Eight creams and lotions, one preservative." Every Aquaphor cream and lotion with a full list contains phenoxyethanol. Frame it as what the label says, not as a health claim.
+2. "Dimethicone in a lip balm." The reference marks dimethicone PFAS treated. Four Aquaphor lip listings contain it, while the Naturally Inspired sticks do not.
+3. "The website showed one ingredient." The brand site's partial list for the ointments shows only "Petrolatum (41%)." The retailer's full list adds mineral oil, ceresin, lanolin alcohol and others.
 
 ---
 
 ## Section C — Comparison angles
 
 **Best vs worst within categories:**
-- Lip products: Best = Aquaphor® Lip Repair (0.35 oz ointment tube) and the Naturally Inspired Aloe Vera and Coconut single sticks (Puberty Safe). Worst = Aquaphor® Lip Protectant + SPF 30 (Avoid, High Priority Swap; 7 flags).
-- Leave-on creams and lotions: Best = Moisturizing Cream 8 oz (Avoid, High Priority Swap; 3 flags). Worst = same tier for every verified cream and lotion; no cream or lotion is Puberty Safe on its full list.
-- Ointments and balm sticks: All High Priority Swap, petrolatum or mineral oil in each. Fewest flags: Baby Healing Balm Stick (1 flag, petrolatum).
-- Body wash and shampoo: Both sizes Avoid (Mild), four flags each.
+- Lip products: Best = Naturally Inspired Lip Repair Stick, Aloe Vera or Coconut single pack (Puberty Safe, zero flags). Worst = Aquaphor Lip Protectant + SPF 30 (High Priority Swap, 7 flags).
+- Leave-on creams and lotions: Best = Aquaphor Baby Sensitive Lotion, 3 fl oz and 8 fl oz (High Priority Swap, 3 flags). Worst = Aquaphor Foot Mask (High Priority Swap, 5 flags, dimethicone and phenoxyethanol).
+- Ointments and balm sticks: every graded ointment and balm is High Priority Swap. The fewest flags are the two Healing Balm Stick 0.65 oz listings (2 flags each: petrolatum and bisabolol).
+- Body wash and shampoo: both sizes Avoid (Moderate), five flags each.
 
 **Similar marketing, different grades:**
-- Naturally Inspired Lip Repair Stick (Aloe Vera or Coconut, single) vs Lip Repair Stick (Shea Butter): both are "lip repair" sticks from one brand. The Aloe and Coconut sticks are Puberty Safe on their full lists. The Shea Butter stick is High Priority Swap because its full list includes dimethicone (PFAS-treated per the reference).
-- Lip Repair Stick + Sunscreen (SPF 30 stick) vs Lip Protectant + SPF 30 (tube): both SPF lip products. The stick is High Priority Swap for five flags including dimethicone. The tube is High Priority Swap for petrolatum and six SPF filters.
+- Lip Repair Stick (Shea Butter) vs Naturally Inspired Lip Repair Stick. Same brand, same "lip repair" front. The Shea stick is High Priority Swap for dimethicone (PFAS treated). The Naturally Inspired sticks are Puberty Safe.
+- Lip Repair (ointment tube) vs Lip Repair Stick. The tube is Use Caution for bisabolol alone. The stick is High Priority Swap for dimethicone.
+- Lip Repair Stick + Sunscreen (SPF 30 stick) vs Lip Protectant + SPF 30 (tube). Both are SPF lip products. The stick has 5 flags, including dimethicone. The tube has 7 flags, including petrolatum.
 
 **Cleanest in each category:**
-- Lip products: Aquaphor® Lip Repair (ointment tube) — Puberty Safe, zero flags on the full list.
-- Creams and lotions: Moisturizing Cream 8 oz — High Priority Swap, 3 flags. Lowest of the verified creams and lotions.
-- Ointments: Baby Healing Balm Stick — 1 flag.
-- Body wash: Baby Wash & Shampoo — Avoid (Mild), 4 flags.
+- Lip products: Naturally Inspired Lip Repair Stick, Aloe Vera (Puberty Safe, zero flags).
+- Creams and lotions: Aquaphor Baby Sensitive Lotion, 3 fl oz (High Priority Swap, 3 flags).
+- Ointments: Healing Balm Stick 0.65 oz, both listings (2 flags each).
+- Body wash: both Baby Wash & Shampoo sizes (five flags each). No cleaner option in this set.
 
 **Content angles for Section C:**
-1. "The same brand, two lip sticks": the Aloe Vera stick is Puberty Safe and the Shea Butter stick is High Priority Swap, with the same "lip repair" framing on the front.
-2. "The Walmart cream vs the Walmart lotion": two pump-or-jar moisturizers from one line, both High Priority Swap, both labelled fragrance-free.
-3. "Lotion for the same child": a parent who uses the Baby Sensitive Lotion and the Baby Healing Ointment on one child gets two different flag sets from one brand.
+1. "The same brand, two lip sticks." The Aloe Vera stick is Puberty Safe and the Shea Butter stick is High Priority Swap, with the same "lip repair" framing on the front.
+2. "Cream vs lotion from one line." Two moisturizers from one line, both High Priority Swap, both marketed as fragrance-free.
+3. "Lotion for the same child." A parent who uses the Baby Sensitive Lotion and the Baby Healing Ointment on one child gets different flag sets from one brand.
 
 ---
 
 ## Raw data summary
 
-**Unknown ingredients across the verified rows (manual review queue, deduplicated):**
-Ascorbyl Palmitate, Bis-Diglyceryl Polyacyladipate-2, Butane, C18-38 Alkyl Hydroxystearoyl Stearate, C20-40 Alkyl Stearate, Caprylic/Capric Triglyceride, Carrageenan, Ceresin, Cholesterol, Dicaprylyl Ether, Ethylhexyl Stearate, Glycerin, Glyceryl Stearate, Hydrocortisone, Hydrogenated Coco-Glycerides, Hydroxypropyl Starch Phosphate, Lanolin Alcohol, Lecithin, Magnesium Stearate, Menthoxypropanediol, Octyldodecanol, Pantalactone, Phytosphingosine, Polyglyceryl-4 Diisostearate/Polyhydroxystearate/Sebacate, Polyquaternium-10, Sea Salt, Sodium Ascorbyl Phosphate, Tapioca Starch, Tocopheryl Acetate, Water.
+**Unknown ingredients across the audit (manual review queue):** 40 unique names across 38 graded products, 190 occurrences. Deduplicated list:
 
-Water and glycerin are not in the reference PDF and are routed to manual review, not treated as low tox. Hydrocortisone (Children's Itch Relief, 1%) is the active in an OTC drug label and needs a pharmacology look before the product is described.
+- Acrylates/C10-30 Alkyl Acrylate Crosspolymer
+- Aloe Barbadensis Leaf Juice Powder
+- Ascorbyl Palmitate
+- Bis-Diglyceryl Polyacyladipate-2
+- Butane
+- Butyrospermum Parkii (Shea) Butter
+- C18-38 Alkyl Hydroxystearoyl Stearate
+- C20-40 Alkyl Stearate
+- Carrageenan
+- Ceramide AP
+- Ceramide NG
+- Ceramide NP
+- Ceresin
+- Cocos Nucifera (Coconut) Oil
+- Copernicia Cerifera (Carnauba) Wax
+- Dicaprylyl Ether
+- Disodium EDTA
+- Ethylhexyl Stearate
+- Glycine Soja (Soybean) Oil
+- Helianthus Annuus (Sunflower) Seed Oil
+- Helianthus Annuus (Sunflower) Seed Wax
+- Hydrocortisone
+- Hydrogenated Coco-Glycerides
+- Hydrogenated Polyisobutene
+- Hydroxyacetophenone
+- Hydroxypropyl Starch Phosphate
+- Lanolin alcohol
+- Lecithin
+- Magnesium Stearate
+- Menthoxypropanediol
+- Microcrystalline Wax
+- Olea Europaea (Olive) Fruit Oil
+- pantolactone
+- Persea Gratissima (Avocado) Oil
+- Polyglyceryl-4 Diisostearate/Polyhydroxystearate/Sebacate
+- Ricinus Communis (Castor) Seed Oil
+- Sea Salt
+- Simmondsia Chinensis (Jojoba) Seed Oil
+- Sodium Ascorbyl Phosphate
+- Tapioca Starch
+
+Puberty Safe products with unknowns: Aquaphor® Lip Repair Stick Naturally Inspired Aloe Vera Single Pack, Aquaphor® Lip Repair Stick Naturally Inspired Coconut Single Pack, Aquaphor® Diaper Rash Paste (3.5oz.).
+
+Notable: Hydrocortisone (Children's Itch Relief, 1%) is an OTC active. It is not in the reference, so it is not graded and needs a pharmacology look before the product is described. Botanical oils, ceramides and lanolin alcohol are also in the unknown queue. They are not flagged, so they do not move any tier, but they keep the Puberty Safe grades provisional.
 
 **Reformulation and listing variance:**
-- The Lip Repair ointment 2-pack and the single tube list different inactive ingredients. The 2-pack omits lecithin, ascorbyl palmitate, glyceryl stearate, glyceryl oleate, and citric acid. Each row uses its own printed list.
-- The Lip Repair Stick (Shea Butter) single and 2-pack print the same list.
-- The Baby Wash & Shampoo 25.4 fl oz and 16.9 fl oz print the same list.
+- The Lip Repair ointment 2-pack and the single tube list different inactive ingredients. Each row uses its own printed list.
+- The Baby Wash & Shampoo 25.4 fl oz (Amazon) and the Walmart 25.4 fl oz list match the user-supplied text. The brand-site text differs at position 3 (see audit log).
 
-**Conflicts between retailer and brand text:** None in the first three to five names for the 33 verified rows. Retailer lists add ingredients the brand site does not show, for example dimethicone in the lip sticks and phenoxyethanol and sodium cetearyl sulfate in the creams and lotions.
+**Conflicts between retailer and brand text:**
+- Moisturizing Cream (1.89 oz, CVS): first three names differ from the brand text. Recorded as a conflict in `audit_notes`.
+- Baby Wash & Shampoo (25.4 oz, Amazon): position 3 differs. Recorded as a conflict.
 
-**Naturally occurring allergens:** Bisabolol (cat. 4, 8) is the only soft-flagged item. It is shown as a naturally occurring fragrance component only where an essential-oil source is listed. Where it appears without one, it counts as a full flag.
+**Naturally occurring allergens:** none soft-flagged. Bisabolol is the only naturally occurring component in these lists, and no source essential oil is listed beside it, so each instance is a full flag.
 
-**Rows still needs review (8):**
-- Moisturizing Cream 1.89 oz — no Walmart listing for this size.
-- Diaper Rash Cream 3 oz — Walmart lists 3.5 oz only.
-- Hand Mask and Foot Mask — no printed Ingredients block on the Walmart listings. Target shows the hand mask (0.7 fl oz) with no visible ingredient block.
-- Lip Protectant + SPF Dual Pack — no matching dual-pack listing found.
-- Healing Balm Stick 0.65 oz (adult) — Walmart 3-pack listing has no Ingredients block.
-- Ointment Body Spray 6.2 oz — not located on Walmart (3.7 oz and multipacks only).
-- Healing Ointment 2 x 3.5 oz — not located.
+**Rows not graded (3):**
+- Diaper Rash Cream 3 oz — size mismatch. Every retailer checked lists 3.5 oz only.
+- Hand Mask — no readable ingredient text on Target or Walmart.
+- Healing Ointment 2 x 3.5 oz — no retailer listing of this size found.

@@ -1,0 +1,169 @@
+{
+ "note": "Brand product URL and brand category carried from the 2026-10-09..16 prior workbook. The ingredients json has neither field.",
+ "products": {
+  "Aquaphor® Moisturizing Cream (8oz.)": {
+   "product_url": "https://www.aquaphorus.com/products/aquaphor/aquaphor®-moisturizing-cream-(8oz,-d-,)",
+   "brand_category": "Dry Skin"
+  },
+  "Aquaphor® Hydrating Daily Lotion (3oz.)": {
+   "product_url": "https://www.aquaphorus.com/products/aquaphor/aquaphor®-hydrating-daily-lotion-(3oz,-d-,)",
+   "brand_category": "Dry Skin"
+  },
+  "Aquaphor® Hydrating Daily Lotion (8oz.)": {
+   "product_url": "https://www.aquaphorus.com/products/aquaphor/aquaphor®-hydrating-daily-lotion-(8oz,-d-,)",
+   "brand_category": "Dry Skin"
+  },
+  "Aquaphor® Hydrating Daily Lotion (16oz.)": {
+   "product_url": "https://www.aquaphorus.com/products/aquaphor/aquaphor®-hydrating-daily-lotion-(16oz,-d-,)",
+   "brand_category": "Dry Skin"
+  },
+  "Aquaphor® Moisturizing Cream (1.89oz.)": {
+   "product_url": "https://www.aquaphorus.com/products/aquaphor/aquaphor®-moisturizing-cream-(1,-d-,89oz,-d-,)",
+   "brand_category": "Dry Skin"
+  },
+  "Aquaphor® Moisturizing Cream (16oz.)": {
+   "product_url": "https://www.aquaphorus.com/products/aquaphor/aquaphor®-moisturizing-cream-(16oz,-d-,)",
+   "brand_category": "Dry Skin"
+  },
+  "Aquaphor® Lip Repair Stick Naturally Inspired Aloe Vera Single Pack": {
+   "product_url": "https://www.aquaphorus.com/products/aquaphor/lip-repair-stick-aloe-vera",
+   "brand_category": "Chapped Lips / Naturally Inspired"
+  },
+  "Aquaphor® Lip Repair Stick Naturally Inspired Coconut Single Pack": {
+   "product_url": "https://www.aquaphorus.com/products/aquaphor/lip-repair-stick-coconut-oil",
+   "brand_category": "Chapped Lips / Naturally Inspired"
+  },
+  "Aquaphor® Baby Healing Ointment (7oz.)": {
+   "product_url": "https://www.aquaphorus.com/products/aquaphor/aquaphor-baby-healing-ointment-7oz",
+   "brand_category": "Cracked Skin / Baby Care"
+  },
+  "Aquaphor® Diaper Rash Paste (3.5oz.)": {
+   "product_url": "https://www.aquaphorus.com/products/aquaphor/aquaphor-baby--diaper-rash-paste-3-5oz",
+   "brand_category": "Diaper Rash / Baby Care"
+  },
+  "Aquaphor® Lip Repair Stick": {
+   "product_url": "https://www.aquaphorus.com/products/aquaphor/aquaphor-lip-repair-stick",
+   "brand_category": "Chapped Lips"
+  },
+  "Aquaphor® Lip Repair Stick + Sunscreen": {
+   "product_url": "https://www.aquaphorus.com/products/aquaphor/aquaphor-lip-repair-stick-sunscreen",
+   "brand_category": "Chapped Lips"
+  },
+  "Aquaphor® Lip Protectant + SPF (Dual Pack)": {
+   "product_url": "https://www.aquaphorus.com/products/aquaphor/aquaphor-lip-protectant-spf-30-dual-pack",
+   "brand_category": "Chapped Lips"
+  },
+  "Aquaphor® Lip Repair Stick + Sunscreen (Dual Pack)": {
+   "product_url": "https://www.aquaphorus.com/products/aquaphor/aquaphor-lip-repair-stick-sunscreen-dual-pack",
+   "brand_category": "Chapped Lips"
+  },
+  "Aquaphor® Children's Healing Ointment (14oz.)": {
+   "product_url": "https://www.aquaphorus.com/products/aquaphor/aquaphor-childrens-healing-ointment-14oz",
+   "brand_category": "Cracked Skin"
+  },
+  "Aquaphor® Lip Repair": {
+   "product_url": "https://www.aquaphorus.com/products/aquaphor/aquaphor-lip-repair",
+   "brand_category": "Chapped Lips"
+  },
+  "Aquaphor® Lip Repair Stick (Dual Pack)": {
+   "product_url": "https://www.aquaphorus.com/products/aquaphor/aquaphor-lip-repair-stick-dual-pack",
+   "brand_category": "Chapped Lips"
+  },
+  "Aquaphor® Baby Healing Balm Stick (0.65oz.)": {
+   "product_url": "https://www.aquaphorus.com/products/aquaphor/aquaphor-baby-healing-balm-stick-65oz",
+   "brand_category": "Irritated skin"
+  },
+  "Aquaphor® Baby Wash & Shampoo (25.4oz.)": {
+   "product_url": "https://www.aquaphorus.com/products/aquaphor/aquaphor-baby-wash-and-shampoo-25-4floz",
+   "brand_category": "Sensitive skin"
+  },
+  "Aquaphor Baby Sensitive Lotion, Baby Lotion, 3 Fl Oz": {
+   "product_url": "https://www.aquaphorus.com/products/aquaphor/aquaphor-baby-sensitive-lotion,-baby-lotion,-3-fl-oz-",
+   "brand_category": "Dry Skin"
+  },
+  "Aquaphor Baby Sensitive Lotion, Baby Lotion, 8 Fl Oz": {
+   "product_url": "https://www.aquaphorus.com/products/aquaphor/aquaphor-baby-sensitive-lotion,-baby-lotion,-8-fl-oz-",
+   "brand_category": "Dry Skin"
+  },
+  "Aquaphor® Baby Healing Ointment (3oz.)": {
+   "product_url": "https://www.aquaphorus.com/products/aquaphor/aquaphor-baby-healing-ointment-3oz",
+   "brand_category": "Cracked Skin / Baby Care"
+  },
+  "Aquaphor® Baby Healing Ointment (14oz.)": {
+   "product_url": "https://www.aquaphorus.com/products/aquaphor/aquaphor-baby-healing-ointment-14oz",
+   "brand_category": "Cracked Skin / Baby Care"
+  },
+  "Aquaphor® Diaper Rash Cream (3oz.)": {
+   "product_url": "https://www.aquaphorus.com/products/aquaphor/aquaphor-baby--diaper-rash-cream-3-5oz",
+   "brand_category": "Diaper Rash / Baby Care"
+  },
+  "Aquaphor® Lip Protectant + SPF 30": {
+   "product_url": "https://www.aquaphorus.com/products/aquaphor/aquaphor-lip-protectant-spf-30",
+   "brand_category": "Chapped Lips"
+  },
+  "Aquaphor® Lip Repair (Dual Pack)": {
+   "product_url": "https://www.aquaphorus.com/products/aquaphor/aquaphor-lip-repair-dual-pack",
+   "brand_category": "Chapped Lips"
+  },
+  "Aquaphor® Baby Healing Ointment (2x.35oz.)": {
+   "product_url": "https://www.aquaphorus.com/products/aquaphor/aquaphor-baby-healing-ointment-2x035oz",
+   "brand_category": "Cracked Skin / Baby Care"
+  },
+  "Aquaphor® Baby Healing Ointment (1.75oz.)": {
+   "product_url": "https://www.aquaphorus.com/products/aquaphor/aquaphor-baby-healing-ointment-1-75oz",
+   "brand_category": "Cracked Skin / Baby Care"
+  },
+  "Aquaphor® Baby Wash & Shampoo (16.9 fl.oz)": {
+   "product_url": "https://www.aquaphorus.com/products/aquaphor/aquaphor-baby-wash-and-shampoo-16-9floz",
+   "brand_category": "Cracked Skin / Baby Care"
+  },
+  "Aquaphor® Ointment Body Spray (3.7oz.)": {
+   "product_url": "https://www.aquaphorus.com/products/aquaphor-repairing-ointment/aquaphor-ointment-body-spray-37oz",
+   "brand_category": "Cracked Skin"
+  },
+  "Aquaphor Healing Ointment® (.25oz.)": {
+   "product_url": "https://www.aquaphorus.com/products/aquaphor-repairing-ointment/aquaphor-healing-ointment-025oz",
+   "brand_category": "Cracked Skin"
+  },
+  "Aquaphor Healing Ointment® With Touch-Free Applicator (3oz.)": {
+   "product_url": "https://www.aquaphorus.com/products/aquaphor-repairing-ointment/aquaphor-healing-ointment-with-touch-free-applicator-3oz",
+   "brand_category": "Cracked Skin"
+  },
+  "Aquaphor® Children's Itch Relief Ointment (1 oz.)": {
+   "product_url": "https://www.aquaphorus.com/products/aquaphor-repairing-ointment/aquaphor-itch-relief-ointment-1oz",
+   "brand_category": "Itchy skin"
+  },
+  "Aquaphor® Healing Balm Stick (0.65oz.)": {
+   "product_url": "https://www.aquaphorus.com/products/aquaphor-repairing-ointment/aquaphor-healing-balm-stick-065oz",
+   "brand_category": "Irritated skin"
+  },
+  "Aquaphor® Hand Mask": {
+   "product_url": "https://www.aquaphorus.com/products/aquaphor-repairing-ointment/aquaphor-hand-mask",
+   "brand_category": "Cracked Skin"
+  },
+  "Aquaphor® Foot Mask": {
+   "product_url": "https://www.aquaphorus.com/products/aquaphor-repairing-ointment/aquaphor-foot-mask",
+   "brand_category": "Cracked Skin"
+  },
+  "Aquaphor Healing Ointment® (1.75oz.)": {
+   "product_url": "https://www.aquaphorus.com/products/aquaphor-repairing-ointment/aquaphor-healing-ointment-1,-d-,75oz",
+   "brand_category": "Cracked Skin"
+  },
+  "Aquaphor® Ointment Body Spray (6.2 oz)": {
+   "product_url": "https://www.aquaphorus.com/products/aquaphor-repairing-ointment/aquaphor-ointment-body-spray-62oz",
+   "brand_category": "Cracked Skin"
+  },
+  "Aquaphor Healing Ointment® (14oz.)": {
+   "product_url": "https://www.aquaphorus.com/products/aquaphor-repairing-ointment/aquaphor-healing-ointment-14oz",
+   "brand_category": "Cracked Skin"
+  },
+  "Aquaphor Healing Ointment® (2x.3.5oz)": {
+   "product_url": "https://www.aquaphorus.com/products/aquaphor-repairing-ointment/aquaphor-healing-ointment-minor-wound-care-2-035oz",
+   "brand_category": "Cracked Skin"
+  },
+  "Aquaphor Healing Ointment® (7oz.)": {
+   "product_url": "https://www.aquaphorus.com/products/aquaphor-repairing-ointment/aquaphor-healing-ointment-7oz",
+   "brand_category": "Cracked Skin"
+  }
+ }
+}

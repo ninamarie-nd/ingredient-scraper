@@ -1,190 +1,505 @@
-import json, re, sys
+"""Unified Puberty-Safe ingredient grader (one grader for every brand audit).
+
+Copy this file into a brand folder (audits/<brand>/_grader.py) and run it there:
+
+    python3 _grader.py
+
+It reads <brand>_ingredients.json from its own folder (brand = folder name), looks up each
+ingredient in ../../ref_compact.json and ../../ingredient_aliases.json, and writes
+<brand>_audit.xlsx and _grade_summary.json into its own folder. Nothing else is written.
+
+Grading rules come from /home/claude/GRADING_RUBRIC.txt. The verbatim ingredient text in the
+JSON is never modified; normalization is applied only in memory.
+"""
+import json
+import os
+import re
+
 import openpyxl
 
-BASE = '/home/claude/ingredient-scraper'
-REF_PATH = f'{BASE}/ref_compact.json'
-ALIAS_PATH = f'{BASE}/ingredient_aliases.json'
-ING_PATH = f'{BASE}/audits/eucerin/eucerin_ingredients.json'
-OUT_XLSX = f'{BASE}/audits/eucerin/eucerin_audit.xlsx'
+HERE = os.path.dirname(os.path.abspath(__file__))
+BRAND = os.path.basename(HERE)
+ROOT = os.path.abspath(os.path.join(HERE, '..', '..'))
+REF_PATH = os.path.join(ROOT, 'ref_compact.json')
+ALIAS_PATH = os.path.join(ROOT, 'ingredient_aliases.json')
+ING_PATH = os.path.join(HERE, f'{BRAND}_ingredients.json')
+OUT_XLSX = os.path.join(HERE, f'{BRAND}_audit.xlsx')
+OUT_SUMMARY = os.path.join(HERE, '_grade_summary.json')
+CATALOG_PATH = os.path.join(HERE, f'{BRAND}_catalog.json')   # optional: brand product URL and brand category per product
 
-ref_data = json.load(open(REF_PATH))
-REF = ref_data['ref']
-ALIASES = dict(ref_data['aliases'])
-ALIASES.update(json.load(open(ALIAS_PATH)))
-# Addendum 2026-10-09: bare "Zinc Oxide" in a cream/lotion is treated as zinc oxide (non-nano)
-ALIASES['zinc oxide'] = 'zinc oxide (non-nano)'
+TIERS = ['Puberty Safe', 'Use Caution', 'Avoid (Mild)', 'Avoid (Moderate)', 'Avoid (High Priority Swap)']
 
-# LOW TOX list carried over from the briogeo grader (names the reference file does not list)
+HEADERS = ['product_name', 'product_url', 'brand_category', 'product_type', 'ingredients_verbatim', 'tier',
+           'flag_count', 'flagged_ingredients', 'naturally_occurring_allergens', 'unknown_ingredients',
+           'automatic_escalation', 'one_line_summary', 'audit_notes', 'audit_status']
+
+# ------------------------------------------------------------------ reference
+_ref = json.load(open(REF_PATH, encoding='utf-8'))
+REF = _ref['ref']
+ALIASES = dict(_ref.get('aliases', {}))
+ALIASES.update(json.load(open(ALIAS_PATH, encoding='utf-8')))
+
+# Scraper-side fixes only (addendum 2026-10-09 "parser artifacts" and typos seen in these two brands).
+# These map a misspelled or variant name to the canonical name. They never add a reference entry.
+TYPO_FIXES = {
+    'aqua / water / eau': 'water', 'aqua/water/eau': 'water', 'water/aqua/eau': 'water',
+    'water/aqua': 'water', 'aqua/eau': 'water',
+    'phytosphyngosine': 'phytosphingosine', 'xantham gum': 'xanthan gum',
+    '3-butanediol': '2,3-butanediol', 'beeswax (cera alba)': 'beeswax',
+    'zinc oxide': 'zinc oxide (non-nano)',                 # addendum: bare zinc oxide in cream = non-nano
+    'ceteary alcohol': 'cetearyl alcohol', 'soidum lactate': 'sodium lactate',
+    '1,2-hexandiol': '1,2-hexanediol', '1-2-hexanediol': '1,2-hexanediol', '1,2 hexanediol': '1,2-hexanediol',
+    'caprylic-capric-triglyceride': 'caprylic/capric triglyceride',
+    'caprylic-capric triglyceride': 'caprylic/capric triglyceride',
+    'pantalactone': 'pantolactone',
+    'glyceryl glucosdie': 'glyceryl glucoside',
+    'butyrospemum parkii (shea) butter': 'butyrospermum parkii (shea) butter',
+    'helianthus annus (sunflower) seed oil': 'helianthus annuus (sunflower) seed oil',
+    'sunflower seed oil': 'helianthus annuus (sunflower) seed oil',
+}
+ALIASES.update(TYPO_FIXES)
+
+# Reference index keyed by base name (parenthetical common names removed), e.g. "bht" -> "bht (butylated hydroxytoluene)".
+BASE_INDEX = {}
+for _k in REF:
+    _b = re.sub(r'\s+', ' ', re.sub(r'\s*\([^)]*\)', '', _k)).strip()
+    BASE_INDEX.setdefault(_b, _k)
+
+# Low tox names the reference does not list. Carried over from the Eucerin overlay (the base grader).
+# A reference entry always takes precedence over this list.
 LOW_TOX = set([
-'water','aqua','glycerin','sodium chloride','citric acid','sodium citrate','sodium hyaluronate','niacinamide',
-'phytosphingosine','xanthan gum','cholesterol','carbomer','panthenol','allantoin','sodium hydroxide','potassium hydroxide',
-'potassium sorbate','sodium benzoate','tocopherol','tocopheryl acetate','caprylic/capric triglyceride','caprylyl glycol',
-'sodium pca','lactic acid','salicylic acid','ascorbic acid','retinol','kaolin','squalane','hydroxyethylcellulose',
-'sorbitol','urea','maltodextrin','dextran','glycine','threonine','arginine','serine','valine','proline','isoleucine',
-'alanine','phenylalanine','histidine','aspartic acid','sodium lactate','glyceryl stearate','glyceryl oleate',
-'octyldodecanol','isohexadecane','isopropyl myristate','isopropyl palmitate','ethylhexyl palmitate','cetyl palmitate',
-'polysorbate 20','polysorbate 60','polysorbate 80','cetearyl isononanoate','coco-betaine','sodium cocoyl isethionate',
-'sodium isethionate','hydrogenated vegetable oil','hydrogenated castor oil','ozokerite','hyaluronic acid',
-'cetyl hydroxyethylcellulose','decyl glucoside','beeswax','beeswax (cera alba)','dicaprylyl carbonate',
-'triethylhexanoin','sorbitan stearate','benzoic acid','sodium polyacrylate','dipotassium phosphate','potassium phosphate',
-'cetearyl alcohol','cetyl alcohol','stearyl alcohol','behenyl alcohol','brassica alcohol','c14-22 alcohols',
-'caprylyl/capryl glucoside','coco-glucoside','coco glucoside','behentrimonium methosulfate',
+    'water', 'aqua', 'glycerin', 'sodium chloride', 'citric acid', 'sodium citrate', 'sodium hyaluronate', 'niacinamide',
+    'phytosphingosine', 'xanthan gum', 'cholesterol', 'carbomer', 'panthenol', 'allantoin', 'sodium hydroxide',
+    'potassium hydroxide', 'potassium sorbate', 'sodium benzoate', 'tocopherol', 'tocopheryl acetate',
+    'caprylic/capric triglyceride', 'caprylyl glycol', 'sodium pca', 'lactic acid', 'salicylic acid', 'ascorbic acid',
+    'retinol', 'kaolin', 'squalane', 'hydroxyethylcellulose', 'sorbitol', 'urea', 'maltodextrin', 'dextran', 'glycine',
+    'threonine', 'arginine', 'serine', 'valine', 'proline', 'isoleucine', 'alanine', 'phenylalanine', 'histidine',
+    'aspartic acid', 'sodium lactate', 'glyceryl stearate', 'glyceryl oleate', 'octyldodecanol', 'isohexadecane',
+    'isopropyl myristate', 'isopropyl palmitate', 'ethylhexyl palmitate', 'cetyl palmitate', 'polysorbate 20',
+    'polysorbate 60', 'polysorbate 80', 'cetearyl isononanoate', 'coco-betaine', 'sodium cocoyl isethionate',
+    'sodium isethionate', 'hydrogenated vegetable oil', 'hydrogenated castor oil', 'ozokerite', 'hyaluronic acid',
+    'cetyl hydroxyethylcellulose', 'decyl glucoside', 'beeswax', 'dicaprylyl carbonate',
+    'triethylhexanoin', 'sorbitan stearate', 'benzoic acid', 'sodium polyacrylate', 'dipotassium phosphate',
+    'potassium phosphate', 'cetearyl alcohol', 'cetyl alcohol', 'stearyl alcohol', 'behenyl alcohol',
+    'brassica alcohol', 'c14-22 alcohols', 'caprylyl/capryl glucoside', 'coco-glucoside', 'coco glucoside',
+    'behentrimonium methosulfate',
 ])
-FATTY_ALC = ['cetearyl alcohol','cetyl alcohol','stearyl alcohol','behenyl alcohol','brassica alcohol','c14-22 alcohols']
-NAT_FRAG = {'linalool','limonene','citral','citronellal','geraniol','eugenol','isoeugenol','coumarin','farnesol',
-            'hydroxycitronellal','bisabolol'}
-EO_HINTS = ['oil','essential oil','extract','butter','juice','wax','absolute']
-FORMALDEHYDE = {'dmdm hydantoin','diazolidinyl urea','imidazolidinyl urea','quaternium-15','methenamine',
-                'paraformaldehyde','benzylhemiformal','5-bromo-5-nitro-1,3-dioxane','sodium hydroxymethylglycinate',
-                'glyoxal','polyoxymethylene urea','2-bromo-2-nitropropane-1,3-diol'}
+
+# Rubric exemptions: fatty alcohols are not drying alcohols (LOW TOX); behentrimonium methosulfate is LOW TOX.
+FATTY_ALC = ['cetearyl alcohol', 'cetyl alcohol', 'stearyl alcohol', 'behenyl alcohol', 'brassica alcohol', 'c14-22 alcohols']
+
+# Rubric: naturally occurring fragrance components (soft only when the source essential oil is also listed).
+NAT_FRAG = {'linalool', 'limonene', 'citral', 'citronellal', 'geraniol', 'eugenol', 'isoeugenol', 'coumarin',
+            'farnesol', 'hydroxycitronellal', 'benzyl alcohol', 'bisabolol'}
+
+FRAG_NAMES = {'fragrance', 'parfum', 'natural fragrance', 'parfum/fragrance', 'perfume', 'fragrance (parfum)'}
+
+FORMALDEHYDE = {'dmdm hydantoin', 'diazolidinyl urea', 'imidazolidinyl urea', 'quaternium-15', 'methenamine',
+                'paraformaldehyde', 'benzylhemiformal', '5-bromo-5-nitro-1,3-dioxane', 'sodium hydroxymethylglycinate',
+                'glyoxal', 'polyoxymethylene urea', '2-bromo-2-nitropropane-1,3-diol'}
+
+# Watched naming patterns from the rubric (-nium, -eth, -paraben, -glycol, Fragrance/Parfum, -siloxane, -sulfate,
+# formaldehyde-releaser names). Applied only after the reference lookup fails.
 PATTERN_WATCH = [
-    (re.compile(r'^peg[-\s]?\d', re.I), [1,2,4,5], 'PEG-'),
-    (re.compile(r'^ppg[-\s]?\d', re.I), [1,2,4,5], 'PPG-'),
-    (re.compile(r'(?:^|\s|-)(laureth|ceteth|oleth|steareth|trideceth|ceteareth|buteth|pareth|isoceteth)(?:-?\d|$)', re.I), [1,4,5], '-eth ethoxylate'),
-    (re.compile(r'siloxane$|cyclopentasiloxane|cyclohexasiloxane|cyclotetrasiloxane|cyclomethicone', re.I), [1,2,6], 'siloxane'),
-    (re.compile(r'(^|\s)dimethicone\b', re.I), [2,6], 'silicone'),
-    (re.compile(r'\bparaben\b', re.I), [2,4], 'paraben'),
-    (re.compile(r'sulfate$', re.I), [1,4,5], 'sulfate'),
+    (re.compile(r'^peg[-\s]?\d', re.I), [1, 2, 4, 5], 'PEG-'),
+    (re.compile(r'^ppg[-\s]?\d', re.I), [1, 2, 4, 5], 'PPG-'),
+    (re.compile(r'(?:^|\s|-)(laureth|ceteth|oleth|steareth|trideceth|ceteareth|buteth|pareth|isoceteth)(?:-?\d|$)', re.I), [1, 4, 5], '-eth ethoxylate'),
+    (re.compile(r'siloxane$|cyclopentasiloxane|cyclohexasiloxane|cyclotetrasiloxane|cyclomethicone', re.I), [1, 2, 6], 'siloxane'),
+    (re.compile(r'(^|\s)dimethicone\b', re.I), [2, 6], 'silicone'),
+    (re.compile(r'paraben$', re.I), [2, 4], 'paraben'),
+    (re.compile(r'sulfate$', re.I), [1, 4, 5], 'sulfate'),
     (re.compile(r'phthalate', re.I), [2], 'phthalate'),
-    (re.compile(r'^propylene glycol$|^butylene glycol$|^hexylene glycol$|^ethylene glycol$|^dipropylene glycol$', re.I), [1,2], '-glycol'),
-    (re.compile(r'monium chloride$|^behenalkonium|^stearalkonium|^cetrimonium|dicetyldimonium chloride$', re.I), [2], '-nium quat'),
-    (re.compile(r'\bphenoxyethanol\b', re.I), [1,2,4,5,8], 'phenoxyethanol'),
+    (re.compile(r'glycol$', re.I), [1, 2], '-glycol'),
+    (re.compile(r'^(?!.*ammonium).*nium\b|quaternium-\d', re.I), [2], '-nium quat'),
+    (re.compile(r'\bphenoxyethanol\b', re.I), [1, 2, 4, 5, 8], 'phenoxyethanol'),
     (re.compile(r'^alcohol\s*denat', re.I), [4], 'alcohol denat'),
     (re.compile(r'^alcohol$', re.I), [4], 'alcohol'),
     (re.compile(r'^aluminum|^aluminium', re.I), [3], 'aluminum'),
     (re.compile(r'^mineral oil$|^petrolatum$|^petroleum$|^paraffin$', re.I), [1], 'petroleum'),
-    (re.compile(r'^cocamidopropyl', re.I), [1,4], 'cocamidopropyl'),
+    (re.compile(r'^cocamidopropyl', re.I), [1, 4], 'cocamidopropyl'),
 ]
-FRAG_NAMES = ('fragrance','parfum','natural fragrance','parfum/fragrance','perfume','fragrance (parfum)')
 
-def norm(s):
-    s = s.lower().strip()
-    s = re.sub(r'\s*\([^)]*\)\s*$', '', s)     # drop trailing "(3%)" or "(3.5)" concentration notes
-    s = re.sub(r'\s+', ' ', s).strip(' .,;:*')
-    return s
+# Ingredients whose flag depends on product form (rubric product-type conditionals).
+CONDITIONAL_KEYS = {'ci 77891 (titanium dioxide)', 'zinc oxide (non-nano)', 'zeolite',
+                    'acetic acid (vinegar)', 'amylase', 'cellulase'}
 
-def is_fatty_alc(low):
-    return any(fa in low for fa in FATTY_ALC)
+# Purpose labels the brand prints as part of the ingredient block.
+PURPOSE_WORDS = {'sunscreen', 'skin protectant', 'skin protectant (ointment)', 'skin protectant ointment',
+                 'anti-itch', 'anti-itch ointment', 'uv filter', 'treatment or prevention of diaper rash'}
 
-def split_ingredients(text):
-    parts = re.split(r',', text)
-    return [p.strip() for p in parts if p.strip()]
+# Brand-printed fragments that are not ingredients (seen in the Aquaphor Naturally Inspired block).
+NOTE_FRAGMENTS = {'skin safe synthetic'}
 
-def lookup(ing):
-    """Return (kind, cats, label). kind: 'flag' | 'nat' | 'ok' | 'unknown' """
-    low = norm(ing)
-    if low == 'behentrimonium methosulfate' or is_fatty_alc(low):
-        return ('ok', [], 'rubric exemption')
+# Two ingredients printed with a missing comma (the Aquaphor Healing Ointment .25oz audit note says so).
+SPLIT_FIXES = {'panthenol glycerin': ['Panthenol', 'Glycerin']}
+
+# A source essential oil (rubric: "lavender oil, citrus oil, rose oil"). Carrier oils do not count.
+EO_SOURCE = re.compile(
+    r'essential oil|\babsolute\b|\b(lavender|rose|citrus|orange|lemon|lime|peppermint|spearmint|mint|eucalyptus|tea tree|'
+    r'melaleuca|chamomile|bergamot|sandalwood|ylang|jasmine|geranium|rosemary|cedar|cinnamon|clove|grapefruit|tangerine|'
+    r'neroli|patchouli|vetiver|basil|lemongrass|cypress|pine|anise|cardamom|sage|marjoram|myrrh|frankincense|thyme)\b'
+    r'.*\b(oil|absolute)\b', re.I)
+FRAG_DISCLOSED = re.compile(r'essential oils?', re.I)
+
+# ------------------------------------------------------------------ product type
+RINSE_OFF_TYPES = {'rinse-off skincare', 'body wash/shampoo/conditioner'}
+
+
+def is_leave_on(product_type):
+    """Rubric: the leave-on tier thresholds apply. Only the rinse-off types are excluded; ambiguous types default to leave-on."""
+    return product_type not in RINSE_OFF_TYPES
+
+
+def is_spray(name, category):
+    return bool(re.search(r'\bspray\b|aerosol|\bmist\b', f'{name} {category}', re.I))
+
+
+def is_powder(name, category):
+    return bool(re.search(r'\bpowder\b', f'{name} {category}', re.I))
+
+
+def is_oral(name, category):
+    return bool(re.search(r'toothpaste|mouthwash|oral care', f'{name} {category}', re.I))
+
+
+# ------------------------------------------------------------------ normalization
+def clean_segments(raw):
+    """Split the verbatim text into ingredient names. Normalization is in memory only."""
+    t = raw.replace('’', "'").replace(' ', ' ').replace('*', '')
+    t = re.sub(r'\.{2,}', ', ', t)                                              # "41%...Purpose:" -> comma
+    t = re.sub(r'\([^()]*purpose[^()]*\)', ', ', t, flags=re.I)                 # "(Purpose: Anti-Itch Ointment)"
+    t = re.sub(r'(?i)\b(?:active|inactive|other)\s+ingredients?\s*:', ', ', t)  # section labels
+    t = re.sub(r'(?i)\b(?:active|inactive)\s*:', ', ', t)
+    t = re.sub(r'(?i)\bingredients?\s*:', ', ', t)
+    t = re.sub(r'(?i)purpose\s*:[^,;]*?(?=\.\s|[,;]|$)', ', ', t)               # "Purpose: ..." fragments
+    t = re.sub(r'\(\s*[^()]*%[^()]*\)', '', t)                                  # (41%), (3 %), (9%)
+    t = re.sub(r'\(\s*[\d.\s]+\)', '', t)                                       # (3.5)
+    t = re.sub(r'\s*\((?=[^()]*(?:skin protectant|analgesic|anti-itch|purpose|external))[^()]*\)', '', t, flags=re.I)
+    t = re.sub(r'\s*\((?=[a-z])[^()]*\)', '', t)                                 # lowercase concentration/usage notes
+    t = re.sub(r'\s*[\d.]+\s*%', '', t)                                         # 41%, 40.0%
+    t = re.sub(r'\b(sodium|potassium|disodium|trisodium|ammonium|calcium|magnesium)(?=[a-z])', r'\1 ', t, flags=re.I)
+    parts = re.split(r',(?!\d)|;(?!\d)|\.\s+|\n', t)                            # "1,2-Hexanediol" is not split
+    out = []
+    for p in parts:
+        p = re.sub(r'\s+', ' ', p).strip(' .:,;-')
+        p = re.sub(r'^[A-Za-z][A-Za-z ]{1,25}:\s*', '', p).strip(' .:,;-')      # "Synthetics: X" -> "X"
+        if not p or p.lower() in PURPOSE_WORDS or p.lower() in NOTE_FRAGMENTS or re.fullmatch(r'[\d.\s-]+', p):
+            continue
+        out.extend(SPLIT_FIXES.get(p.lower(), [p]))
+    return out
+
+
+def norm_key(s):
+    low = s.lower().strip()
+    low = re.sub(r'\s*/\s*', '/', low)
+    low = re.sub(r'\s+', ' ', low).strip(' .,;:-')
+    return ALIASES.get(low, low) if low in TYPO_FIXES else low
+
+
+def canonical_name(ing):
+    """Display form of an unknown name: the scraper-side canonical spelling when one exists, otherwise the cleaned text."""
+    low = ing.lower().strip()
+    low = re.sub(r'\s*/\s*', '/', low)
+    low = re.sub(r'\s+', ' ', low).strip(' .,;:-')
+    return TYPO_FIXES.get(low, ing.strip(' .,;:-'))
+
+
+def base_key(low):
+    return re.sub(r'\s+', ' ', re.sub(r'\s*\([^)]*\)', '', low)).strip()
+
+
+def resolve(low):
+    """Reference key for a normalized name, or None. Tries the exact name, aliases, base-name index, and a salt-form fallback."""
+    cands = [low, ALIASES.get(low, low)]
+    b = base_key(low)
+    cands += [b, ALIASES.get(b, b), BASE_INDEX.get(b, '')]
+    salt = re.sub(r'\s+(hcl|hci)$', '', low)
+    if salt != low:
+        cands += [salt, base_key(salt), BASE_INDEX.get(base_key(salt), '')]
+    for c in cands:
+        if c and c in REF:
+            return c
+    return None
+
+
+def has_eo_source(segments, exclude):
+    return any(s != exclude and EO_SOURCE.search(s) for s in segments)
+
+
+# ------------------------------------------------------------------ lookup
+def conditional_flag(key, name, category):
+    """Rubric product-type conditionals. Returns (kind, cats, label) or None."""
+    if key == 'ci 77891 (titanium dioxide)':
+        if is_spray(name, category) or is_powder(name, category) or is_oral(name, category):
+            return ('flag', [1, 2, 3], 'titanium dioxide in spray, powder or oral care')
+        return ('ok', [], 'titanium dioxide in cream or lotion: not a concern (rubric)')
+    if key == 'zinc oxide (non-nano)':
+        if is_spray(name, category):
+            return ('flag', [], 'zinc oxide in spray or aerosol: avoid (rubric; no category in reference)')
+        return ('ok', [], 'zinc oxide in cream or lotion: low tox (rubric)')
+    if key == 'zeolite':
+        if is_powder(name, category):
+            return ('flag', [], 'zeolite in powdered form (rubric)')
+        return ('ok', [], 'zeolite not powdered: not a concern (rubric)')
+    if key == 'acetic acid (vinegar)':
+        if is_spray(name, category):
+            return ('flag', [8], 'acetic acid with inhalation exposure (spray)')
+        return ('ok', [], 'acetic acid without inhalation exposure (rubric)')
+    if key in ('amylase', 'cellulase'):
+        if is_powder(name, category):
+            return ('flag', [8], 'enzyme in powdered product (rubric)')
+        return ('ok', [], 'enzyme in liquid: lower concern (rubric)')
+    return None
+
+
+def lookup(ing, segments, name, category, product_type):
+    """Classify one ingredient. kind: flag | soft | ok | unknown. Also returns pfas and formaldehyde markers."""
+    low = norm_key(ing)
+    out = {'pfas': False, 'formaldehyde': False}
+    if not low:
+        return dict(out, kind='ok', cats=[], label='empty')
+    if low == 'behentrimonium methosulfate' or any(fa in low for fa in FATTY_ALC):
+        return dict(out, kind='ok', cats=[], label='rubric exemption')
+
+    # Fragrance / Parfum: a disclosed blend with the essential oils listed elsewhere is soft; otherwise full flag.
+    if base_key(low) in FRAG_NAMES:
+        if FRAG_DISCLOSED.search(ing) and has_eo_source(segments, ing):
+            return dict(out, kind='soft', cats=[4, 8], label='fragrance blend, essential oils disclosed elsewhere')
+        return dict(out, kind='flag', cats=[1, 2, 4, 8], label='fragrance without disclosure')
+
+    # Naturally occurring fragrance components: soft only when the source essential oil is listed.
     if low in NAT_FRAG:
-        return ('nat', [4,8], low)
-    key = ALIASES.get(low, low)
-    if key in REF:
+        key = resolve(low)
+        cats = REF[key]['c'] if key and REF[key].get('c') else [4, 8]
+        if has_eo_source(segments, ing):
+            return dict(out, kind='soft', cats=cats, label='natural component, source essential oil listed')
+        if low == 'benzyl alcohol':
+            return dict(out, kind='ok', cats=[], label='reference LOW TOX')
+        return dict(out, kind='flag', cats=cats, label='natural component, no source essential oil listed: full flag')
+
+    key = resolve(low)
+    if key in CONDITIONAL_KEYS:
+        c = conditional_flag(key, name, category)
+        if c is not None:
+            kind, cats, label = c
+            pfas = kind == 'flag' and bool(re.search(r'PFAS treated', REF[key].get('n') or '', re.I))
+            return dict(out, kind=kind, cats=cats, label=label, pfas=pfas)
+    if key and REF[key].get('l') and not REF[key].get('c'):
+        return dict(out, kind='ok', cats=[], label='reference LOW TOX')
+    if key:
         d = REF[key]
-        if d.get('l'):
-            return ('ok', [], 'reference LOW TOX')
         cats = d.get('c', [])
         if cats:
-            return ('flag', cats, 'reference')
-        return ('ok', [], 'reference, no category')
-    if low in LOW_TOX or key in LOW_TOX:
-        return ('ok', [], 'LOW TOX list')
-    if low in FRAG_NAMES:
-        return ('flag', [1,2,4,8], 'fragrance without disclosure')
+            pfas = bool(re.search(r'PFAS treated', d.get('n') or '', re.I))
+            form = key in FORMALDEHYDE
+            return dict(out, kind='flag', cats=cats, label='reference', pfas=pfas, formaldehyde=form)
+        return dict(out, kind='ok', cats=[], label='reference, no category')
+
+    salt_free = re.sub(r'\s+(hcl|hci)$', '', low)   # "Arginine HCl" is the arginine salt form
+    if low in LOW_TOX or base_key(low) in LOW_TOX or salt_free in LOW_TOX:
+        return dict(out, kind='ok', cats=[], label='LOW TOX list')
     if low in FORMALDEHYDE:
-        return ('flag', [1,2,4,5], 'formaldehyde-releaser')
+        return dict(out, kind='flag', cats=[1, 2, 4, 5], label='formaldehyde-releaser (name)', formaldehyde=True)
     for pat, cats, label in PATTERN_WATCH:
         if pat.search(low):
-            return ('flag', cats, 'inferred: ' + label)
-    return ('unknown', [], '')
+            return dict(out, kind='flag', cats=cats, label='inferred: ' + label)
+    return dict(out, kind='unknown', cats=[], label='')
 
-def grade(product_type, verbatim):
+
+# ------------------------------------------------------------------ grading
+def grade(product_name, product_type, category, verbatim):
+    segments = clean_segments(verbatim)
     flagged, natural, unknown = [], [], []
     esc = set()
+    pfas_hit = False
+    heavy_stack = False
     seen = set()
-    for ing in split_ingredients(verbatim):
-        low = norm(ing)
-        if low in seen: continue
-        seen.add(low)
-        kind, cats, label = lookup(ing)
-        if kind == 'flag':
-            flagged.append((ing, cats, label))
-            if 3 in cats: esc.add('heavy metals')
-            if norm(ing) in FORMALDEHYDE or ALIASES.get(low, low) in FORMALDEHYDE: esc.add('formaldehyde-releaser')
-            if 1 in cats and product_type == 'leave-on skincare': esc.add('carcinogen in leave-on')
-        elif kind == 'nat':
-            natural.append((ing, cats, label))
-        elif kind == 'unknown':
-            unknown.append(ing)
+    for ing in segments:
+        key = norm_key(ing)
+        if key in seen:
+            continue
+        seen.add(key)
+        r = lookup(ing, segments, product_name, category, product_type)
+        if r['kind'] == 'flag':
+            flagged.append({'name': ing, 'cats': r['cats'], 'label': r['label']})
+            pfas_hit = pfas_hit or r.get('pfas', False)
+            if r.get('formaldehyde'):
+                esc.add('formaldehyde-releaser')
+        elif r['kind'] == 'soft':
+            natural.append({'name': ing, 'cats': r['cats'], 'label': r['label']})
+        elif r['kind'] == 'unknown':
+            unknown.append(canonical_name(ing))
+
     flag_count = len(flagged)
-    has_paraben = any('paraben' in label or 'paraben' in n.lower() for n,_,label in flagged)
-    has_frag = any(label.startswith('fragrance') for _,_,label in flagged)
-    has_heavy = 'heavy metals' in esc
+    max_cats = max([len(f['cats']) for f in flagged], default=0)
+    has_paraben = any(re.search(r'paraben$', f['name'], re.I) for f in flagged)
+    has_fragrance = any(f['label'].startswith('fragrance') for f in flagged)
+    has_heavy = any(3 in f['cats'] for f in flagged)
     has_form = 'formaldehyde-releaser' in esc
-    has_carc_lo = 'carcinogen in leave-on' in esc
-    max_cats = max([len(c) for _,c,_ in flagged], default=0)
-    order = ['Puberty Safe','Use Caution','Avoid (Mild)','Avoid (Moderate)','Avoid (High Priority Swap)']
-    tier = 'Puberty Safe'
+    has_sulfate = any(re.search(r'sulfate$', f['name'], re.I) for f in flagged)
+    if has_heavy:
+        esc.add('heavy metals')
+    if pfas_hit:
+        esc.add('PFAS')
+    if is_leave_on(product_type) and any(1 in f['cats'] for f in flagged):
+        esc.add('carcinogen in leave-on')
+
+    # Heavy metal (cat. 3) stacked with a cat. 1 or cat. 2 flag from a different ingredient.
+    for h in flagged:
+        if 3 in h['cats'] and any((o is not h) and (1 in o['cats'] or 2 in o['cats']) for o in flagged):
+            heavy_stack = True
+
+    order = TIERS
     if flag_count == 0:
         tier = 'Puberty Safe'
-    elif flag_count <= 2 and max_cats < 3 and not has_paraben and not has_frag and not has_heavy and not has_form:
+    elif flag_count <= 2 and max_cats < 3 and not has_paraben and not has_fragrance and not has_heavy and not has_form:
         tier = 'Use Caution'
     else:
         tier = 'Avoid (Mild)'
-    if has_heavy or has_form or has_frag or flag_count >= 5:
-        if order.index(tier) < order.index('Avoid (Moderate)'):
-            tier = 'Avoid (Moderate)'
-    if has_carc_lo or flag_count >= 8 or (has_heavy and has_frag):
+    if has_heavy or has_form or has_fragrance or flag_count >= 5:
+        tier = max(tier, 'Avoid (Moderate)', key=order.index)
+    notes = []
+    if has_sulfate and product_type in RINSE_OFF_TYPES:
+        tier = max(tier, 'Avoid (Mild)', key=order.index)
+        notes.append('Sulfate-flagged ingredient in a daily rinse-off product: minimum Avoid (Mild) (rubric, shampoos).')
+    if pfas_hit or flag_count >= 8 or 'carcinogen in leave-on' in esc or heavy_stack:
         tier = 'Avoid (High Priority Swap)'
-    esc_list = []
-    for x in ['heavy metals','formaldehyde-releaser','carcinogen in leave-on']:
-        if x in esc: esc_list.append(x)
-    return tier, flagged, natural, unknown, esc_list
+    if heavy_stack:
+        notes.append('Heavy metal stacked with a cat. 1 or cat. 2 flag: Avoid (High Priority Swap).')
+
+    esc_list = [x for x in ['heavy metals', 'PFAS', 'formaldehyde-releaser', 'carcinogen in leave-on'] if x in esc]
+    return {'tier': tier, 'flagged': flagged, 'natural': natural, 'unknown': unknown, 'esc': esc_list,
+            'segments': segments, 'rule_notes': notes}
+
+
+def fmt_cats(cats):
+    return ','.join(str(c) for c in cats)
+
 
 def fmt_flags(items):
-    return ' / '.join(f"{n} [{','.join(str(c) for c in cats)}]" + (f" (inferred: {l[10:]})" if l.startswith('inferred: ') else '') for n,cats,l in items)
+    out = []
+    for f in items:
+        s = f"{f['name']} [{fmt_cats(f['cats'])}]"
+        if f['label'].startswith('inferred: '):
+            s += f" (inferred: {f['label'][10:]})"
+        elif f['label'] not in ('reference', 'reference, no category'):
+            s += f" ({f['label']})"
+        out.append(s)
+    return ' / '.join(out)
+
 
 def fmt_nat(items):
-    return ' / '.join(f"{n} [{','.join(str(c) for c in cats)}]" for n,cats,l in items)
+    return ' / '.join(f"{n['name']} [{fmt_cats(n['cats'])}]" for n in items)
 
-if __name__ == '__main__':
-    data = json.load(open(ING_PATH))
-    prods = data['products']
-    # identical-text detection across products
+
+# ------------------------------------------------------------------ input adapters
+SITE_LIMITATION = ''
+
+
+def load_products():
+    global SITE_LIMITATION
+    data = json.load(open(ING_PATH, encoding='utf-8'))
+    if isinstance(data, dict) and isinstance(data.get('products'), list):
+        SITE_LIMITATION = data.get('site_limitation', '')
+        return data['products']
+    rows = []
+    for key, p in data.items():
+        if isinstance(p, dict):
+            rows.append(dict(p, product_name=p.get('product_name', key)))
+    if os.path.exists(CATALOG_PATH):
+        catalog = json.load(open(CATALOG_PATH, encoding='utf-8')).get('products', {})
+        for row in rows:
+            extra = catalog.get(row['product_name'], {})
+            for field in ('product_url', 'brand_category'):
+                if not row.get(field) and extra.get(field):
+                    row[field] = extra[field]
+    return rows
+
+
+def product_url(p):
+    if p.get('product_url'):
+        return p['product_url']
+    m = re.search(r'https?://\S+', p.get('ingredient_source') or '')
+    return m.group(0).rstrip(')') if m else ''
+
+
+def brand_category(p):
+    if p.get('brand_category'):
+        return p['brand_category']
+    n = re.sub(r'\(.*?\)', '', p.get('product_name', ''))
+    return re.sub(r'^Aquaphor®?\s*', '', n).strip(' ,')
+
+
+def main():
+    products = load_products()
     text_map = {}
-    for p in prods:
-        text_map.setdefault(p['ingredients_verbatim'], []).append(p['product_name'])
-    wb = openpyxl.Workbook(); ws = wb.active; ws.title = 'audit'
-    headers = ["product_name","product_url","brand_category","product_type","ingredients_verbatim","tier","flag_count",
-               "flagged_ingredients","naturally_occurring_allergens","unknown_ingredients","automatic_escalation",
-               "one_line_summary","audit_notes","audit_status"]
-    ws.append(headers)
-    tiers = {}; results = []
-    for p in prods:
-        tier, flagged, natural, unknown, esc = grade(p['product_type'], p['ingredients_verbatim'])
-        tiers[tier] = tiers.get(tier,0)+1
-        fl = fmt_flags(flagged); nat = fmt_nat(natural); unk = ', '.join(unknown)
-        esc_s = ', '.join(esc)
+    for p in products:
+        text_map.setdefault(p.get('ingredients_verbatim', ''), []).append(p.get('product_name', ''))
+
+    wb = openpyxl.Workbook()
+    ws = wb.active
+    ws.title = 'audit'
+    ws.append(HEADERS)
+    tier_counts = {t: 0 for t in TIERS}
+    summary = []
+    for p in products:
+        name = p.get('product_name', '')
+        ptype = p.get('product_type') or 'leave-on skincare'
+        category = brand_category(p)
+        verbatim = p.get('ingredients_verbatim', '') or ''
+        url = product_url(p)
+        status = 'needs review' if p.get('audit_status') == 'needs review' else 'complete'
+        if not verbatim.strip():
+            ws.append([name, url, category, ptype, '', '', '', '', '', '', '',
+                       'Not graded: no ingredient text on the source page.',
+                       ((p.get('audit_notes') or '') + ' No verbatim ingredient text in the json; not graded.').strip(),
+                       'ingredients not found'])
+            summary.append({'product_name': name, 'tier': None, 'status': 'ingredients not found'})
+            continue
+        g = grade(name, ptype, category, verbatim)
+        tier = g['tier']
+        tier_counts[tier] += 1
+        flagged, natural, unknown = g['flagged'], g['natural'], g['unknown']
+        esc_str = ', '.join(g['esc'])
         if flagged:
-            top = ', '.join(n for n,_,_ in flagged[:3])
-            summary = f"{len(flagged)} flagged ingredient(s) in the printed list ({top}); tier applies to printed subset only."
+            top = ', '.join(f['name'] for f in flagged[:3])
+            summary_txt = f"{len(flagged)} flagged ingredient(s) in the printed list ({top}); tier applies to the printed subset only."
         else:
-            summary = "No flagged ingredients in the printed subset per reference."
+            summary_txt = 'No flagged ingredients in the printed list per reference and rubric conditionals.'
         if unknown:
-            summary += f" {len(unknown)} unknown ingredient(s) not in reference."
-        notes = [f"Printed block: {p['listing_block']}.",
-                 "Site publishes a partial list (key/active ingredients only, no full INCI); tier is provisional."]
-        same = [x for x in text_map[p['ingredients_verbatim']] if x != p['product_name']]
+            summary_txt += f" {len(unknown)} unknown ingredient(s) not in reference."
+        if esc_str:
+            summary_txt += f" Escalation: {esc_str}."
+        notes = []
+        if p.get('listing_block'):
+            notes.append(f"Printed block: {p['listing_block']}.")
+        if SITE_LIMITATION:
+            notes.append(f"Site limitation: {SITE_LIMITATION}")
+        if p.get('audit_notes_retail'):
+            notes.append(f"Retailer notes: {p['audit_notes_retail']}")
+        if p.get('audit_notes'):
+            notes.append(f"Audit notes: {p['audit_notes']}")
+        same = [x for x in text_map.get(verbatim, []) if x != name]
         if same:
             notes.append(f"Identical printed text on {len(same)} other product(s): {'; '.join(same[:4])}.")
-        if unknown:
-            notes.append("Unknown ingredients left unscored; tier does not account for them.")
-        if p['product_type'] == 'sunscreen' and 'zinc oxide' in p['ingredients_verbatim'].lower():
-            notes.append("Zinc Oxide treated as zinc oxide (non-nano) per addendum 2026-10-09; LOW TOX in lotions.")
-        row = [p['product_name'], p['product_url'], p['brand_category'], p['product_type'], p['ingredients_verbatim'],
-               tier, len(flagged), fl, nat, unk, esc_s, summary, ' '.join(notes), 'needs review']
-        ws.append(row); results.append(row)
+        notes.extend(g['rule_notes'])
+        if p.get('ingredient_source'):
+            notes.append(f"Ingredient source: {p['ingredient_source']}.")
+        row = [name, url, category, ptype, verbatim, tier, len(flagged), fmt_flags(flagged), fmt_nat(natural),
+               ('unknown — manual review needed: ' + ', '.join(unknown)) if unknown else '',
+               esc_str, summary_txt, ' '.join(notes).strip(), status]
+        ws.append(row)
+        summary.append({'product_name': name, 'tier': tier, 'flag_count': len(flagged), 'product_type': ptype,
+                        'flagged': [f['name'] for f in flagged], 'natural': [n['name'] for n in natural],
+                        'unknown': unknown, 'esc': g['esc'], 'status': status})
+
     wb.save(OUT_XLSX)
-    print('tiers:', tiers)
-    print('rows:', len(results))
-    json.dump({'tiers': tiers, 'rows': [dict(zip(headers, r)) for r in results]},
-              open(f'{BASE}/audits/eucerin/_grade_summary.json','w'), indent=1, ensure_ascii=False)
+    with open(OUT_SUMMARY, 'w', encoding='utf-8') as fh:
+        json.dump({'brand': BRAND, 'tier_counts': tier_counts, 'rows': summary}, fh, indent=1, ensure_ascii=False)
+    graded = sum(tier_counts.values())
+    print(f'brand: {BRAND}  products: {len(products)}  graded: {graded}  not graded: {len(products) - graded}')
+    print('tiers:', tier_counts)
+
+
+if __name__ == '__main__':
+    main()

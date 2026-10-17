@@ -43,10 +43,12 @@
    "ingredient_source": "Walmart (https://www.walmart.com/ip/Eucerin-Advanced-Repair-Lotion-Fragrance-Free-16-9-fl-oz-500-ml/798125970)",
    "ingredient_source_type": "retailer",
    "retailer_url": "https://www.walmart.com/ip/Eucerin-Advanced-Repair-Lotion-Fragrance-Free-16-9-fl-oz-500-ml/798125970",
-   "audit_notes_retail": "CONFLICT: Walmart printed list (Eucerin Advanced Repair Lotion, Fragrance Free, 16.9 fl oz) does not include Urea and its first ingredients differ from the brand-site text (Water, Glycerin, Urea). Both texts kept; not resolved. Walmart spellings kept as printed.",
+   "audit_notes_retail": "Round 2 (2026-10-16): CVS Eucerin Advanced Repair Body Lotion, 13.5 OZ pump (prodid 361273) prints a list starting Water, Glycerin, Urea, but it is a different size and pump format and does not state fragrance-free; the brand prints no size, so not used. The Walmart FF 16.9 fl oz copy (ingredients_verbatim) still conflicts with the brand text (no Urea, different first ingredients). Walgreens: blocked by a bot-check page, not attempted further. Ulta: holding page. Dermstore: no results. Amazon: not checked for this row. Unresolved.",
    "tier": "Avoid (High Priority Swap)",
    "flag_count": 4,
-   "tier_without_pfas_rule": "Avoid (High Priority Swap)"
+   "tier_without_pfas_rule": "Avoid (High Priority Swap)",
+   "candidate_retailer_text": "Water, Glycerin, Urea, Cetearyl Alcohol, Glyceryl Glucoside, Cyclomethicone, Sodium Lactate, Butyrospermum Parkii (Shea) Butter, Caprylic/Capric Triglyceride, Methylpropanediol, Octyldodecanol, Dicaprylyl Ether, Tapioca Starch, Glyceryl Stearate SE, Hydrogenated Coco-Glycerides, Arginine HCl, Sodium PCA, Dimethiconol, Lactic Acid, Chondrus Crispus (Carrageenan), Carnitine, Ceramide NP, Mannitol, Serine, Sucrose, Citrulline, Glycogen. Histidine HCl, Alanine, Threonine, Glutamic Acid, Lysine HCl, Sodium Chloride, Sodium Cetearyl Sulfate, 1,2-Hexanediol, Phenoxyethanol.",
+   "candidate_retailer_source": "CVS 13.5 OZ pump, not used (https://www.cvs.com/shop/ingredients/eucerin-advanced-repair-body-lotion-13-5-oz-prodid-361273)"
   },
   {
    "slug": "eucerin-intensive-repair-extra-enriched-hand-creme",
@@ -54,20 +56,22 @@
    "brand_category": "Advanced Repair",
    "product_type": "leave-on skincare",
    "product_name": "Advanced Repair Hand Cream",
-   "ingredients_verbatim": "Glycerin, Urea, Glyceryl Stearate, Dibutyl Adipate, Stearyl Alcohol, Dicaprylyl Ether, Cetearyl Alcohol, Sodium Lactate, Tapioca Starch, Glyceryl Stearate SE, Ceramide 3, Lactic Acid, Sodium PCA, Arginine HCL, Glycine, Alanine, Carnitine, Cholesterol, Helianthus Annuus Seed Extract, Dimethicone, Xanthan Gum, Pentylene Glycol, Phenoxyethanol, Decylene Glycol, Sodium Cetearyl Sulfate",
+   "ingredients_verbatim": "Active Ingredients: CERAMIDE 3, NATURAL MOISTURIZING FACTORS Inactive Ingredients: Water, Glycerin, Urea, Glyceryl Stearate, Hydrogenated Coco-Glycerides, Caprylic/Capric Triglyceride, Butyl Adipate, Stearyl Alcohol, Dicaprylyl Ether, Cetearyl Alcohol, Sodium Lactate, Tapioca Starch, Glyceryl Stearate SE, Ceramide NP, Lactic Acid, Sodium PCA, Arginine HCI, Glycine, Alanine, Carnitine, Cholesterol, Helianthus Annuus (Sunflower) Seed Oil, Dimethicone, Xanthan Gum, Pentylene Glycol, Phenoxyethanol, Decylene Glycol, Sodium Cetearyl Sulfate, Sodium Chloride.",
    "listing_block": "Ingredients (key-ingredients disclaimer shown)",
    "scrape_status": "captured",
    "audit_status_hint": "needs review",
    "graded": true,
-   "audit_status": "needs review",
+   "audit_status": "complete",
    "brand_site_text": "Water, Glycerin, Urea",
-   "ingredient_source": "Walmart (https://www.walmart.com/ip/Eucerin-Advanced-Repair-Hand-Cream-Fragrance-Free-2-7-oz-Tube/11997314)",
+   "ingredient_source": "CVS (https://www.cvs.com/shop/ingredients/eucerin-advanced-repair-hand-cream-2-7-oz-prodid-2410039)",
    "ingredient_source_type": "retailer",
-   "retailer_url": "https://www.walmart.com/ip/Eucerin-Advanced-Repair-Hand-Cream-Fragrance-Free-2-7-oz-Tube/11997314",
-   "audit_notes_retail": "CONFLICT: Walmart printed list (Eucerin Advanced Repair Hand Cream, Fragrance Free, 2.7 oz tube) starts Glycerin, Urea and has no Water, while the brand site prints Water, Glycerin, Urea. Both kept; not resolved.",
+   "retailer_url": "https://www.cvs.com/shop/ingredients/eucerin-advanced-repair-hand-cream-2-7-oz-prodid-2410039",
+   "audit_notes_retail": "CVS listing Eucerin Advanced Repair Hand Cream, 2.7 OZ (prodid 2410039), printed Ingredients block. First 3 inactive ingredients (Water, Glycerin, Urea) match brand-site text. Walmart copy (kept in walmart_alt_text) does not list Water and starts Glycerin, Urea; the two retailer texts differ, noted here. Walmart and CVS spellings kept as printed.",
    "tier": "Avoid (High Priority Swap)",
    "flag_count": 4,
-   "tier_without_pfas_rule": "Avoid (High Priority Swap)"
+   "tier_without_pfas_rule": "Avoid (High Priority Swap)",
+   "walmart_alt_text": "Glycerin, Urea, Glyceryl Stearate, Dibutyl Adipate, Stearyl Alcohol, Dicaprylyl Ether, Cetearyl Alcohol, Sodium Lactate, Tapioca Starch, Glyceryl Stearate SE, Ceramide 3, Lactic Acid, Sodium PCA, Arginine HCL, Glycine, Alanine, Carnitine, Cholesterol, Helianthus Annuus Seed Extract, Dimethicone, Xanthan Gum, Pentylene Glycol, Phenoxyethanol, Decylene Glycol, Sodium Cetearyl Sulfate",
+   "walmart_alt_source": "Walmart (https://www.walmart.com/ip/Eucerin-Advanced-Repair-Hand-Cream-Fragrance-Free-2-7-oz-Tube/11997314)"
   },
   {
    "slug": "advanced-cleansing",
@@ -117,17 +121,20 @@
    "brand_category": "Radiant Tone",
    "product_type": "leave-on skincare",
    "product_name": "Dark Spot Corrector Body Cream",
-   "ingredients_verbatim": "Water, Glycerin, Alcohol Denat.",
+   "ingredients_verbatim": "Water, Glycerin, Alcohol Denat., Cetearyl Alcohol, Diisopropyl Adipate, Panthenol, Caprylic/Capric Triglyceride, Glyceryl Stearate Citrate, Behenyl Alcohol, Cetyl Palmitate, Butyrospermum Parkii (Shea) Butter, Cocoglycerides, Distarch Phosphate, Isobutylamido Thiazolyl Resorcinol, Sodium Hyaluronate, Lactic Acid, Glycyrrhiza Inflata Root Extract, Hydroxypropyl Starch Phosphate, Triisostearin, Sodium Hydroxide, Citric Acid, Tapioca Starch, Xanthan Gum, Pantolactone, Trisodium EDTA, Ethylhexylglycerin, Caprylyl Glycol, Phenoxyethanol, Fragrance",
    "listing_block": "Ingredients (key-ingredients disclaimer shown)",
    "scrape_status": "captured",
    "audit_status_hint": "needs review",
    "graded": true,
-   "audit_status": "needs review",
-   "audit_notes_retail": "no retailer INCI found. Walmart and Amazon have no Dark Spot Corrector Body Cream listing (only the body lotion). Target search returned no results in this session; Ulta returned a holding page; CVS, Walgreens, Sephora, Dermstore not yet checked.",
-   "tier": "Use Caution",
-   "flag_count": 1,
-   "tier_without_pfas_rule": "Use Caution",
-   "brand_site_text": "Water, Glycerin, Alcohol Denat."
+   "audit_status": "complete",
+   "audit_notes_retail": "CVS listing Eucerin Radiant Tone Dark Spot Corrector Body Cream, 7 OZ (prodid 922144), the only listing under this name found on CVS, Walmart or Amazon. First 3 ingredients (Water, Glycerin, Alcohol Denat.) match brand-site text. Brand site prints no size, so the 7 oz size is not confirmed by the brand. Fragrance listed without breakdown; the grader will flag it.",
+   "tier": "Avoid (High Priority Swap)",
+   "flag_count": 4,
+   "tier_without_pfas_rule": "Avoid (High Priority Swap)",
+   "brand_site_text": "Water, Glycerin, Alcohol Denat.",
+   "ingredient_source": "CVS (https://www.cvs.com/shop/ingredients/eucerin-radiant-tone-dark-spot-corrector-body-cream-7-oz-prodid-922144)",
+   "ingredient_source_type": "retailer",
+   "retailer_url": "https://www.cvs.com/shop/ingredients/eucerin-radiant-tone-dark-spot-corrector-body-cream-7-oz-prodid-922144"
   },
   {
    "slug": "dual-serum",
@@ -355,10 +362,12 @@
    "ingredient_source": "Walmart (https://www.walmart.com/ip/Eucerin-Intensive-Repair-Body-Lotion-Fragrance-Free-Body-Moisturizer-16-9-fl-oz-Bottle/10413395)",
    "ingredient_source_type": "retailer",
    "retailer_url": "https://www.walmart.com/ip/Eucerin-Intensive-Repair-Body-Lotion-Fragrance-Free-Body-Moisturizer-16-9-fl-oz-Bottle/10413395",
-   "audit_notes_retail": "Walmart listing Eucerin Intensive Repair Body Lotion, Fragrance Free, 16.9 fl oz pump. First 3 match brand-site text. Brand listing prints no size, so the size match is not confirmed; status left at needs review. A 5 oz Very Dry Skin lotion on Walmart (22301266) has a different list (PEG-7 Hydrogenated Castor Oil in place of Octyldodecanol) and was not used.",
+   "audit_notes_retail": "Round 2: CVS Eucerin Intensive Repair Very Dry Skin Lotion, 8.4 OZ (prodid 1016683) prints a list whose first 3 ingredients match the brand text (Water, Mineral Oil, Octyldodecanol). It is the same list as the Walmart 16.9 fl oz pump already in ingredients_verbatim. CVS shows this name in 2 sizes and the brand site prints no size, so the size is not confirmed; held at needs review. Walgreens blocked (bot-check page). Ulta holding page. Dermstore not checked for this row.",
    "tier": "Avoid (High Priority Swap)",
    "flag_count": 5,
-   "tier_without_pfas_rule": "Avoid (High Priority Swap)"
+   "tier_without_pfas_rule": "Avoid (High Priority Swap)",
+   "candidate_retailer_text": "Water, Mineral Oil, Octyldodecanol, Caprylic/Capric Triglyceride, Isopropyl Palmitate, Sodium Lactate, Urea, Glycerin, PEG-7 Hydrogenated Castor Oil, Benzyl Alcohol, Dimethicone, Methoxy PEG-22/Dodecyl Glycol Copolymer, PEG-45/Dodecyl Glycol Copolymer, ! Magnesium Sulfate, Lactic Acid, Ozokerite, PEG-2 Hydrogenated Castor Oil, Sorbitan Isostearate, Hydrogenated Castor Oil.",
+   "candidate_retailer_source": "CVS 8.4 OZ (https://www.cvs.com/shop/ingredients/eucerin-intensive-repair-very-dry-skin-lotion-prodid-1016683)"
   },
   {
    "slug": "q10-wrinkle",
@@ -372,7 +381,7 @@
    "audit_status_hint": "needs review",
    "graded": true,
    "audit_status": "needs review",
-   "audit_notes_retail": "variant mismatch, not used: brand prints only Q10 as key ingredient. Walmart candidate 233160412 is Eucerin Q10 Anti-Wrinkle Night Cream with Pro-Retinol (contains Retinyl Palmitate, a different formula). Not clearly the same product.",
+   "audit_notes_retail": "Round 2: No Q10 Revitalize Night Cream found. CVS brand shop and search did not return it. Amazon search returned no Eucerin Q10 night cream (only Anti-Pigment Night Cream, a different product). Dermstore search for eucerin q10 returned no results. Walgreens blocked (bot-check page). Ulta holding page. Earlier Walmart candidate 233160412 contains Retinyl Palmitate (different formula, not used). Unresolved.",
    "tier": "Puberty Safe",
    "flag_count": 0,
    "tier_without_pfas_rule": "Puberty Safe",
@@ -390,16 +399,13 @@
    "audit_status_hint": "needs review",
    "graded": true,
    "audit_status": "needs review",
-   "candidate_retailer_text": {
-    "text": "Water, Glycerin, Ethylhexyl Cocoate, Hydrogenated Coco-Glycerides, Stearyl Alcohol, Butylene Glycol, Cetyl Alcohol, Caprylic/Capric Triglyceride, Butyrospermum Parkii (Shea) Butter, Glyceryl Stearate Citrate, Octyldodecanol, Tocopheryl Acetate, Ubiquinone, Biotin, Biosaccharide Gum-1, Sodium Ascorbyl Phosphate, Zea Mays (Corn) Oil, Beta-Carotene, Tocopherol, 1,2-Hexanediol, Carbomer, Sodium Hydroxide, Trisodium EDTA, Dehydroacetic Acid, Phenoxyethanol",
-    "retailer": "Walmart",
-    "url": "https://www.walmart.com/ip/Eucerin-Q10-Anti-Wrinkle-Face-Cream-for-Sensitive-Skin-1-7-Oz-Jar/25868522"
-   },
-   "audit_notes_retail": "Candidate only, not confirmed. Walmart listing Eucerin Q10 Anti-Wrinkle Face Cream, 1.7 oz, Non-Comedogenic contains Ubiquinone and Shea Butter (the brand key ingredients), but the brand text is key-ingredient only, so the first-ingredient cross-check cannot be done. Another Walmart listing (633889049) reads Refer to product label.",
+   "candidate_retailer_text": "Active Ingredients: Q10 Inactive Ingredients: WATER, GLYCERIN, ETHYLHEXYL COCOATE, STEARYL ALCOHOL, HYDROGENATED COCO-GLYCERIDES, BUTYLENE GLYCOL, CETYL ALCOHOL, CAPRYLIC/CAPRIC TRIGLYCERIDE, GLYCERYL STEARATE CITRATE, BUTYROSPERMUM PARKII (SHEA BUTTER), TOCOPHERYL ACETATE, BIOSACCHARIDE GUM-1, UBIQUINONE, TRIDECYL STEARATE, TRIDECYL TRIMELLITATE, MAGNESIUM ASCORBYL PHOSPHATE, BIOTIN, ZEA MAYS (CORN) OIL, BETA-CAROTENE, DIPENTAERYTHRITYL HEXACAPRYLATE/HEXACAPRATE, CARBOMER, TITANIUM DIOXIDE, ALUMINA, SILICA, SODIUM POLYACRYLATE, PHENOXYETHANOL, METHYLPARABEN, ETHYLPARABEN, PROPYLPARABEN, BUTYLPARABEN, ISOBUTYLPARABEN, DMDM HYDANTOIN, SODIUM HYDROXIDE, SODIUM HYDROXYMETHYLGLYCINATE",
+   "audit_notes_retail": "Round 2: candidate only, not used. CVS Eucerin Sensitive Skin Experts Q10 Anti-Wrinkle Face Creme 1.7 OZ (prodid 361289) prints a full list with Q10 as the active and shea butter as an inactive, and the name matches the brand URL slug. The brand prints only two key ingredients (Q10, Shea Butter), so the first-ingredient cross-check cannot be done and the variant is not clearly confirmed. Walmart Eucerin Q10 Anti-Wrinkle Face Cream 1.7 oz is also candidate only. Unresolved. The CVS text includes parabens and DMDM hydantoin.",
    "tier": "Puberty Safe",
    "flag_count": 0,
    "tier_without_pfas_rule": "Puberty Safe",
-   "brand_site_text": "Q10, Shea Butter"
+   "brand_site_text": "Q10, Shea Butter",
+   "candidate_retailer_source": "CVS 1.7 OZ (https://www.cvs.com/shop/ingredients/eucerin-sensitive-skin-experts-q10-anti-wrinkle-face-creme-1-7-oz-prodid-361289)"
   },
   {
    "slug": "after-sun",
@@ -413,16 +419,13 @@
    "audit_status_hint": "needs review",
    "graded": true,
    "audit_status": "needs review",
-   "candidate_retailer_text": {
-    "text": "Water, Alcohol Denat., Glycerin, Panthenol, Hydrogenated Coco-Glycerides, Isopropyl Palmitate, Glyceryl Stearate SE, Butyrospermum Parkii (Shea) Butter, Cetyl Alcohol, Glycyrrhiza Inflata Root Extract, Glycyrrhetinic Acid, Tocopherol, Pantolactone, Tapioca Starch, Glycine Soja (Soybean) Oil, Dimethicone, Sodium Cetearyl Sulfate, Phenoxyethanol, Carbomer, Sodium Hydroxide, Citric Acid, Fragrance.",
-    "retailer": "Walmart",
-    "url": "https://www.walmart.com/ip/Eucerin-Advanced-Hydration-After-Sun-Lotion-6-8-fl-oz-Tube/1041972542"
-   },
-   "audit_notes_retail": "CONFLICT, not used: Walmart listing Eucerin After Sun Moisturizing Lotion (6.7 fl oz) lists Glycyrrhetinic Acid but no Licochalcone A, which the brand lists. Its first ingredients (Water, Alcohol Denat.) also differ from the brand key list. Not confirmed.",
+   "candidate_retailer_text": "Active Ingredients: WATER, ALCOHOL DENAT., GLYCERIN, PANTHENOL, HYDROGENATED COCO-GLYCERIDES, ISOPROPYL PALMITATE, GLYCERYL STEARATE SE, BUTYROSPERMUM PARKII (SHEA) BUTTER, CETYL ALCOHOL, GLYCYRRHIZA INFLATA ROOT EXTRACT, GLYCYRRHETINIC ACID, TOCOPHEROL, PANTOLACTONE, TAPIOCA STARCH, GLYCINE SOJA (SOYBEAN) OIL, DIMETHICONE, SODIUM CETEARYL SULFATE, PHENOXYETHANOL, CARBOMER, SODIUM HYDROXIDE, CITRIC ACID, FRAGRANCE Inactive Ingredients: Aqua, Glycerin, Alcohol Denat, Butylene Glycol, Tapioca Starch, C12-15 Alkyl Benzoate, Glycine, Sodium Citrate, Cyclomethicone, Caprylic-Capric-Triglyceride, Octyldodecanol, Dicaprylyl Ether, Citric Acid, Xanthan Gum, Glucosylrutin, Isoquercitrin, Glycyrrhiza Inflata Root Extract, Tocopherol, Acrylates-C10-30-Alkyl-Acrylate-Crosspolymer, Dimethiconol, Ethylhexylglycerin, Benzoic Acid",
+   "audit_notes_retail": "Round 2: CONFLICT, not used. CVS Eucerin Advanced Hydration After Sun Lotion, 6.8 OZ (prodid 145120) lists Glycyrrhetinic Acid but not Licochalcone A, which the brand lists as a key ingredient. The CVS list also includes Fragrance. Walmart After Sun Moisturizing Lotion 6.7 fl oz conflicts too (no Licochalcone A). Held at needs review with both texts kept. Walgreens blocked. Ulta holding page. Dermstore not checked for this row.",
    "tier": "Puberty Safe",
    "flag_count": 0,
    "tier_without_pfas_rule": "Puberty Safe",
-   "brand_site_text": "Glycyrrhetinic Acid, Licochalcone A"
+   "brand_site_text": "Glycyrrhetinic Acid, Licochalcone A",
+   "candidate_retailer_source": "CVS 6.8 OZ (https://www.cvs.com/shop/ingredients/eucerin-advanced-hydration-after-sun-lotion-6-8-oz-prodid-145120)"
   },
   {
    "slug": "sensitive-mineral-spf-50-sunscreen-",
@@ -625,7 +628,7 @@
    "audit_status_hint": "needs review",
    "graded": true,
    "audit_status": "needs review",
-   "audit_notes_retail": "no retailer INCI found. No Eucerin Advanced Hydration SPF 30 spray listing on Walmart or Amazon (searched). Dermstore and CVS not yet checked.",
+   "audit_notes_retail": "Round 2: No Eucerin Advanced Hydration SPF 30 spray found. The CVS brand shop lists only Sun Advanced Hydration SPF 50 Spray 6 oz (prodid 621595). Dermstore search for eucerin sunscreen spray spf 30 returned no Eucerin SPF 30 spray. Walmart and Amazon: no listing in round 1. Walgreens blocked; Ulta holding page. Unresolved.",
    "tier": "Avoid (Mild)",
    "flag_count": 4,
    "tier_without_pfas_rule": "Avoid (Mild)",
@@ -832,7 +835,7 @@
    "audit_status_hint": "needs review",
    "graded": true,
    "audit_status": "needs review",
-   "audit_notes_retail": "no retailer INCI found. Walmart listing 912642578 prints no ingredient text; Amazon listings B082D8S4W3 and B00KIHJO3E print no ingredient text. Target not available in this session. Dermstore and CVS not yet checked.",
+   "audit_notes_retail": "Round 2: CVS Eucerin Daily Hydration Broad Spectrum SPF 15 Body Lotion, 16.9 OZ (prodid 1013203) is not a clear match and not used. Its printed actives are Avobenzone 2.0%, Homosalate 3.4%, Octisalate 3.4%, Octocrylene 4.7%, while the brand key is Octisalate (3.5). The brand row is the Daily Protection SPF 15 moisturizer, a different product name. Walmart 912642578 and Amazon B082D8S4W3 / B00KIHJO3E print no ingredient text (round 1). Dermstore and Walgreens not usable. Unresolved.",
    "tier": "Use Caution",
    "flag_count": 1,
    "tier_without_pfas_rule": "Use Caution",
@@ -850,16 +853,13 @@
    "audit_status_hint": "needs review",
    "graded": true,
    "audit_status": "needs review",
-   "candidate_retailer_text": {
-    "text": "Water, Helianthus Annuus SeedOil, Petrolatum, Glycerin, Glyceryl Stearate SE, Octyldodecanol, Caprylic-Capric-Triglyceride, Pentylene Glycol, Palmitic Acid, Stearic Acid, Phenoxyethanol, Dimethicone, Cetearyl Alcohol, Caprylyl Glycol, Panthenol, Tocopheryl Acetate, Cholesterol, Carbomer, Sodium Hydroxide, Trisodium EDTA, BHT",
-    "retailer": "Amazon",
-    "url": "https://www.amazon.com/dp/B00AYSBR96"
-   },
-   "audit_notes_retail": "Candidate only, not used. Amazon listing is Eucerin Daily Hydration Lotion, Multipack, 3 x 16.9 fl oz. Its list contains Helianthus Annuus Seed Oil, matching the brand key ingredient (Sunflower Seed oil), but the multipack variant is not a clear match for the brand single product, and the brand prints no size.",
+   "candidate_retailer_text": "Active Ingredients: HELIANTHUS ANNUUS (SUNFLOWER) SEED OIL, PETROLATUM, GLYCERIN, PANTHENOL, TOCOPHERYL ACETATE Inactive Ingredients: Water, Helianthus Annuus (Sunflower) Seed Oil, Petrolatum, Glycerin, Glyceryl Stearate SE, Octyldodecanol, Caprylic/Capric Triglyceride, Pentylene Glycol, Palmitic Acid, Stearic Acid, Phenoxyethanol, Dimethicone, Cetearyl Alcohol, Caprylyl Glycol, Panthenol, Tocopheryl Acetate, Cholesterol, Carbomer, Sodium Hydroxide, Trisodium EDTA, BHT.",
+   "audit_notes_retail": "Round 2: candidate only, not used. CVS Eucerin Daily Hydration Body Lotion, 16.9 OZ (prodid 1013215) prints a full list with sunflower seed oil as the first active. The brand prints only the single key ingredient (Sunflower Seed oil) and no size, so the cross-check cannot be done and the variant is not clearly the brand product. Amazon multipack (3 x 16.9 fl oz) is also a candidate only. Unresolved.",
    "tier": "Puberty Safe",
    "flag_count": 0,
    "tier_without_pfas_rule": "Puberty Safe",
-   "brand_site_text": "Sunflower Seed oil"
+   "brand_site_text": "Sunflower Seed oil",
+   "candidate_retailer_source": "CVS 16.9 OZ (https://www.cvs.com/shop/ingredients/eucerin-daily-hydration-body-lotion-16-9-oz-prodid-1013215)"
   },
   {
    "slug": "eucerin-original-healing-soothing-repair-creme",
@@ -915,16 +915,13 @@
    "audit_status_hint": "needs review",
    "graded": true,
    "audit_status": "needs review",
-   "candidate_retailer_text": {
-    "text": "Water, Glycerin, Alcohol Denat., Octyldodecanol, Caprylic/Capric Triglyceride, Sodium Hyaluronate, Glycyrrhiza Inflata Root Extract, CeramideNP, Phytosphingosine, Oleic Acid, BehenylAlcohol, Cetyl Alcohol, Gellan Gum, Xanthan Gum, Hydroxyacetophenone, Caprylyl Glycol, Citric Acid",
-    "retailer": "Walmart",
-    "url": "https://www.walmart.com/ip/Eucerin-Baby-Eczema-Hydrogel-5oz-Tube/13173618198"
-   },
-   "audit_notes_retail": "Candidate only, not confirmed. Walmart Eucerin Baby Eczema Relief Hydrogel, 5 fl oz: its printed Ingredients field does not include Colloidal Oatmeal, the brand active, so the brand Colloidal Oatmeal, Water, Glycerin pattern cannot be confirmed. Water and Glycerin appear first.",
+   "candidate_retailer_text": "Water, Glycerin, Alcohol Denat., Octyldodecanol, Caprylic/Capric Triglyceride, Sodium Hyaluronate, Glycyrrhiza Inflata Root Extract, CeramideNP, Phytosphingosine, Oleic Acid, BehenylAlcohol, Cetyl Alcohol, Gellan Gum, Xanthan Gum, Hydroxyacetophenone, Caprylyl Glycol, Citric Acid",
+   "audit_notes_retail": "Round 2: CONFLICT, not used. Amazon Eucerin Baby Eczema Relief Hydrogel 5 FL OZ (ASIN B0DFJQVMD7, sold by Amazon.com) prints an Ingredients block that starts Water, Glycerin, Alcohol Denat. and does not list Colloidal Oatmeal, the first brand key ingredient. The Walmart copy also has no Colloidal Oatmeal. Brand text conflicts with both retailers; held at needs review with both kept. CVS: no baby hydrogel found (only the adult Eucerin Eczema Relief Hydrogel Moisturizer, not used). Dermstore search returned no results. Walgreens blocked; Ulta holding page.",
    "tier": "Puberty Safe",
    "flag_count": 0,
    "tier_without_pfas_rule": "Puberty Safe",
-   "brand_site_text": "Colloidal Oatmeal, Water, Glycerin"
+   "brand_site_text": "Colloidal Oatmeal, Water, Glycerin",
+   "candidate_retailer_source": "Amazon 5 FL OZ (https://www.amazon.com/Eucerin-Hydrogel-Eczema-Prone-Fragrance-Moisturizer/dp/B0DFJQVMD7)"
   },
   {
    "slug": "eczema-relief-baby-cream-body-wash",
@@ -959,7 +956,7 @@
    "audit_status_hint": "needs review",
    "graded": true,
    "audit_status": "needs review",
-   "audit_notes_retail": "no retailer INCI found. Walmart 682440208 and 14819669289 print no ingredient text; Amazon B01G7L6YDW shows only shea butter and B0C4WG48N9 shows no list. Target not available in this session.",
+   "audit_notes_retail": "Round 2: No usable text. CVS brand shop and search returned no Eucerin Baby Wash and Shampoo. Amazon search returned only a third-party Awiaub pack of three (13.5 oz), not a clear match, not used. Walmart 682440208 and 14819669289 print no ingredient text (round 1). Walgreens blocked; Ulta holding page. Unresolved.",
    "tier": "Avoid (Mild)",
    "flag_count": 1,
    "tier_without_pfas_rule": "Avoid (Mild)",
@@ -998,16 +995,13 @@
    "audit_status_hint": "needs review",
    "graded": true,
    "audit_status": "needs review",
-   "candidate_retailer_text": {
-    "text": "Water, Cetyl Palmitate, Glycerin, Mineral Oil, Cetyl Alcohol, Polybutene, Sorbitan Stearate, Tapioca Starch, Panthenol, Butyrospermum Parkii (Shea) Butter, Dimethicone, Phenoxyethanol, Carbomer, Pentylene Glycol, Caprylyl Glycol, Sodium Hydroxide, Sodium Citrate, Citric Acid",
-    "retailer": "Walmart",
-    "url": "https://www.walmart.com/ip/Eucerin-Baby-Lotion-Fragrance-Free-13-5-fl-oz-Bottle/50463431"
-   },
-   "audit_notes_retail": "Candidate only, not confirmed. Walmart Eucerin Baby Lotion, 13.5 fl oz, Fragrance Free lists Panthenol, the INCI name for the brand key ingredient Dexpanthenol. Brand printed only one key ingredient, so the first-ingredient cross-check cannot be done. Size not printed on brand listing.",
+   "candidate_retailer_text": "Active Ingredients: PANTHENOL, BUTYROSPERMUM PARKII (SHEA) BUTTER Inactive Ingredients: Water, Cetyl Palmitate, Glycerin, Mineral Oil, Cetyl Alcohol, Polybutene, Sorbitan Stearate, Tapioca Starch, Panthenol, Butyrospermum Parkii (Shea) Butter, Dimethicone, Phenoxyethanol, Carbomer, Pentylene Glycol, Caprylyl Glycol, Sodium Hydroxide, Sodium Citrate, Citric Acid.",
+   "audit_notes_retail": "Round 2: candidate only, not used. CVS Eucerin Baby Body Lotion, 13.5 OZ (prodid 1030497) prints a full list with Panthenol as the active (the INCI name for the brand key Dexpanthenol). The brand prints one key ingredient and no size, so the cross-check cannot be done. Walmart 13.5 fl oz Baby Lotion (Panthenol, fragrance free) is also a candidate only. Unresolved.",
    "tier": "Puberty Safe",
    "flag_count": 0,
    "tier_without_pfas_rule": "Puberty Safe",
-   "brand_site_text": "Dexpanthenol"
+   "brand_site_text": "Dexpanthenol",
+   "candidate_retailer_source": "CVS 13.5 OZ (https://www.cvs.com/shop/ingredients/eucerin-baby-body-lotion-13-5-oz-prodid-1030497)"
   }
  ],
  "progress": {

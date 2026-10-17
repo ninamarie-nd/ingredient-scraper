@@ -1,0 +1,1266 @@
+{
+ "brand": "eucerin",
+ "tier_counts": {
+  "Puberty Safe": 8,
+  "Use Caution": 3,
+  "Avoid (Mild)": 2,
+  "Avoid (Moderate)": 3,
+  "Avoid (High Priority Swap)": 32
+ },
+ "rows": [
+  {
+   "product_name": "Advanced Repair Cream, 16 OZ",
+   "tier": "Avoid (High Priority Swap)",
+   "flag_count": 5,
+   "product_type": "leave-on skincare",
+   "flagged": [
+    "Dimethicone",
+    "Pentylene Glycol",
+    "Phenoxyethanol",
+    "Decylene Glycol",
+    "Sodium Cetearyl Sulfate"
+   ],
+   "natural": [],
+   "unknown": [
+    "Hydrogenated Cocoglycerides",
+    "Butyrospermum Parkii (Shea) Butter",
+    "Ceramide NP",
+    "Carnitine",
+    "Carrageenan",
+    "Helianthus Annuus (Sunflower) Seed Oil",
+    "Tapioca Starch",
+    "Acrylates/C10-30 Alkyl Acrylate Crosspolymer"
+   ],
+   "esc": [
+    "PFAS",
+    "carcinogen in leave-on"
+   ],
+   "status": "complete"
+  },
+  {
+   "product_name": "Advanced Repair Lotion",
+   "tier": "Avoid (High Priority Swap)",
+   "flag_count": 4,
+   "product_type": "leave-on skincare",
+   "flagged": [
+    "Cyclomethicone",
+    "Sodium Cetearyl Sulfate",
+    "1,2-Hexanediol",
+    "Phenoxyethanol"
+   ],
+   "natural": [],
+   "unknown": [
+    "glyceryl glucoside",
+    "butyrospermum parkii (shea) butter",
+    "Methylpropanediol",
+    "Dicaprylyl Ether",
+    "Tapioca Starch",
+    "Hydrogenated Coco-Glycerides",
+    "Dimethiconol",
+    "Chondrus Crispus (Carrageenan)",
+    "Carnitine",
+    "Ceramide 3",
+    "Mannitol",
+    "Sucrose",
+    "Citrulline",
+    "Glycogen",
+    "Glutamic Acid",
+    "Lysine HCL"
+   ],
+   "esc": [
+    "PFAS",
+    "carcinogen in leave-on"
+   ],
+   "status": "needs review"
+  },
+  {
+   "product_name": "Advanced Repair Hand Cream",
+   "tier": "Avoid (High Priority Swap)",
+   "flag_count": 5,
+   "product_type": "leave-on skincare",
+   "flagged": [
+    "Dimethicone",
+    "Pentylene Glycol",
+    "Phenoxyethanol",
+    "Decylene Glycol",
+    "Sodium Cetearyl Sulfate"
+   ],
+   "natural": [],
+   "unknown": [
+    "CERAMIDE 3",
+    "NATURAL MOISTURIZING FACTORS",
+    "Hydrogenated Coco-Glycerides",
+    "Butyl Adipate",
+    "Dicaprylyl Ether",
+    "Tapioca Starch",
+    "Ceramide NP",
+    "Carnitine",
+    "Helianthus Annuus (Sunflower) Seed Oil"
+   ],
+   "esc": [
+    "PFAS",
+    "carcinogen in leave-on"
+   ],
+   "status": "complete"
+  },
+  {
+   "product_name": "Eucerin Advanced Cleansing Body and Face Wash",
+   "tier": "Avoid (Moderate)",
+   "flag_count": 5,
+   "product_type": "rinse-off skincare",
+   "flagged": [
+    "Sodium Myreth Sulfate",
+    "Glycol Distearate",
+    "PEG-40 Hydrogenated Castor Oil",
+    "Polyquaternium-10",
+    "PEG-200 Hydrogenated Glyceryl Palmate"
+   ],
+   "natural": [],
+   "unknown": [
+    "Sodium Cocoamphoacetate",
+    "Lauryl Glucoside",
+    "Diammonium Citrate",
+    "Sodium Acetate",
+    "Sodium Salicylate"
+   ],
+   "esc": [],
+   "status": "complete"
+  },
+  {
+   "product_name": "Advanced Repair Cream, 8 OZ",
+   "tier": "Avoid (High Priority Swap)",
+   "flag_count": 5,
+   "product_type": "leave-on skincare",
+   "flagged": [
+    "Dimethicone",
+    "Pentylene Glycol",
+    "Phenoxyethanol",
+    "Decylene Glycol",
+    "Sodium Cetearyl Sulfate"
+   ],
+   "natural": [],
+   "unknown": [
+    "Hydrogenated Coco-Glycerides",
+    "Butyrospermum Parkii (Shea) Butter",
+    "Ceramide NP",
+    "Carnitine",
+    "Carrageenan",
+    "Helianthus Annuus (Sunflower) Seed Oil",
+    "Tapioca Starch",
+    "Acrylates/C10-30 Alkyl Acrylate Crosspolymer"
+   ],
+   "esc": [
+    "PFAS",
+    "carcinogen in leave-on"
+   ],
+   "status": "complete"
+  },
+  {
+   "product_name": "Dark Spot Corrector Body Cream",
+   "tier": "Avoid (High Priority Swap)",
+   "flag_count": 4,
+   "product_type": "leave-on skincare",
+   "flagged": [
+    "Alcohol Denat",
+    "Ethylhexylglycerin",
+    "Phenoxyethanol",
+    "Fragrance"
+   ],
+   "natural": [],
+   "unknown": [
+    "Diisopropyl Adipate",
+    "Glyceryl Stearate Citrate",
+    "Butyrospermum Parkii (Shea) Butter",
+    "Cocoglycerides",
+    "Distarch Phosphate",
+    "Isobutylamido Thiazolyl Resorcinol",
+    "Glycyrrhiza Inflata Root Extract",
+    "Hydroxypropyl Starch Phosphate",
+    "Triisostearin",
+    "Tapioca Starch",
+    "Pantolactone",
+    "Trisodium EDTA"
+   ],
+   "esc": [
+    "carcinogen in leave-on"
+   ],
+   "status": "complete"
+  },
+  {
+   "product_name": "Dual Serum",
+   "tier": "Avoid (High Priority Swap)",
+   "flag_count": 6,
+   "product_type": "leave-on skincare",
+   "flagged": [
+    "Alcohol Denat",
+    "Butylene Glycol",
+    "Dimethicone",
+    "Phenoxyethanol",
+    "Ethylhexylglycerin",
+    "Fragrance"
+   ],
+   "natural": [],
+   "unknown": [
+    "Diisopropyl Adipate",
+    "Propylheptyl Caprylate",
+    "Distarch Phosphate",
+    "Sodium Ascorbyl Phosphate",
+    "Isobutylamido Thiazolyl Resorcinol",
+    "Glycyrrhiza Inflata Root Extract",
+    "Glucosylrutin",
+    "Isoquercitrin",
+    "Glycine Soja (Soybean) Oil",
+    "Hydroxypropyl Starch Phosphate",
+    "Dehydroxanthan Gum",
+    "Sodium Stearoyl Glutamate",
+    "Gellan Gum",
+    "Trisodium EDTA"
+   ],
+   "esc": [
+    "PFAS",
+    "carcinogen in leave-on"
+   ],
+   "status": "complete"
+  },
+  {
+   "product_name": "Eye Cream",
+   "tier": "Avoid (High Priority Swap)",
+   "flag_count": 5,
+   "product_type": "leave-on skincare",
+   "flagged": [
+    "Alcohol Denat",
+    "Synthetic Fluorphlogopite",
+    "Phenoxyethanol",
+    "Ethylhexylglycerin",
+    "Iron Oxides"
+   ],
+   "natural": [],
+   "unknown": [
+    "Cocoglycerides",
+    "Diisopropyl Adipate",
+    "Butyrospermum Parkii (Shea) Butter",
+    "Glycyrrhiza Inflata Root Extract",
+    "Pimpinella Anisum (Anise) Fruit Extract",
+    "Isobutylamido Thiazolyl Resorcinol",
+    "Sodium Stearoyl Glutamate",
+    "Trisodium EDTA",
+    "Tin Oxide"
+   ],
+   "esc": [
+    "heavy metals",
+    "PFAS",
+    "carcinogen in leave-on"
+   ],
+   "status": "complete"
+  },
+  {
+   "product_name": "Dark Spot Corrector Body Lotion",
+   "tier": "Avoid (High Priority Swap)",
+   "flag_count": 4,
+   "product_type": "leave-on skincare",
+   "flagged": [
+    "Alcohol Denat",
+    "Ethylhexylglycerin",
+    "Phenoxyethanol",
+    "Fragrance"
+   ],
+   "natural": [],
+   "unknown": [
+    "Diisopropyl Adipate",
+    "Butylene Glycol Dicaprylate/ Dicaprate",
+    "C12-15 Alkyl Benzoate",
+    "Dibutyl Adipate",
+    "Distarch Phosphate",
+    "Isobutylamido Thiazolyl Resorcinol",
+    "Glycyrrhiza Inflata Root Extract",
+    "Sodium Stearoyl Glutamate",
+    "Trisodium EDTA"
+   ],
+   "esc": [
+    "carcinogen in leave-on"
+   ],
+   "status": "complete"
+  },
+  {
+   "product_name": "Daily Lotion SPF 30",
+   "tier": "Avoid (High Priority Swap)",
+   "flag_count": 9,
+   "product_type": "sunscreen",
+   "flagged": [
+    "Avobenzone",
+    "Homosalate",
+    "Octisalate",
+    "Octocrylene",
+    "Alcohol Denat",
+    "Silica",
+    "Phenoxyethanol",
+    "Ethylhexylglycerin",
+    "Fragrance"
+   ],
+   "natural": [],
+   "unknown": [
+    "Butylene Glycol Dicaprylate/Dicaprate",
+    "C12-15 Alkyl Benzoate",
+    "Dibutyl Adipate",
+    "Silica Dimethyl Silylate",
+    "Isobutylamido Thiazolyl Resorcinol",
+    "Glycyrrhiza Inflata Root Extract",
+    "Sodium Stearoyl Glutamate",
+    "Glyceryl Behenate",
+    "Polyglyceryl-6 Octastearate",
+    "Disodium EDTA"
+   ],
+   "esc": [
+    "PFAS",
+    "carcinogen in leave-on"
+   ],
+   "status": "complete"
+  },
+  {
+   "product_name": "Night Cream",
+   "tier": "Avoid (High Priority Swap)",
+   "flag_count": 3,
+   "product_type": "leave-on skincare",
+   "flagged": [
+    "Alcohol Denat",
+    "Phenoxyethanol",
+    "Fragrance"
+   ],
+   "natural": [],
+   "unknown": [
+    "Butyrospermum Parkii (Shea) Butter",
+    "Glyceryl Stearate Citrate",
+    "Hydrogenated Coco-Glycerides",
+    "Methylpropanediol",
+    "Isobutylamido Thiazolyl Resorcinol",
+    "Glucosylrutin",
+    "Pantolactone",
+    "Glycyrrhiza Inflata Root Extract",
+    "Isoquercitrin",
+    "Distarch Phosphate"
+   ],
+   "esc": [
+    "carcinogen in leave-on"
+   ],
+   "status": "complete"
+  },
+  {
+   "product_name": "Cleansing Gel",
+   "tier": "Use Caution",
+   "flag_count": 1,
+   "product_type": "rinse-off skincare",
+   "flagged": [
+    "Alcohol Denat"
+   ],
+   "natural": [],
+   "unknown": [
+    "Sodium Cocoamphoacetate",
+    "Dehydroxanthan Gum",
+    "Glycolic Acid",
+    "Glyceryl Glucoside"
+   ],
+   "esc": [],
+   "status": "complete"
+  },
+  {
+   "product_name": "Gel-Cream",
+   "tier": "Avoid (High Priority Swap)",
+   "flag_count": 3,
+   "product_type": "leave-on skincare",
+   "flagged": [
+    "Alcohol Denat",
+    "Phenoxyethanol",
+    "Fragrance"
+   ],
+   "natural": [],
+   "unknown": [
+    "Distarch Phosphate",
+    "Squalene",
+    "Gellan Gum",
+    "Carrageenan",
+    "Pantolactone",
+    "Glycine Soja (Soybean) Oil",
+    "Dehydroxanthan Gum"
+   ],
+   "esc": [
+    "carcinogen in leave-on"
+   ],
+   "status": "complete"
+  },
+  {
+   "product_name": "Moisture Boost Serum",
+   "tier": "Avoid (High Priority Swap)",
+   "flag_count": 4,
+   "product_type": "leave-on skincare",
+   "flagged": [
+    "Alcohol Denat",
+    "Butylene Glycol",
+    "PEG-40 Hydrogenated Castor Oil",
+    "Fragrance"
+   ],
+   "natural": [],
+   "unknown": [
+    "Sodium Ascorbyl Phosphate"
+   ],
+   "esc": [
+    "carcinogen in leave-on"
+   ],
+   "status": "complete"
+  },
+  {
+   "product_name": "Hydrating Cleansing Gel, 13.5 FL OZ",
+   "tier": "Puberty Safe",
+   "flag_count": 0,
+   "product_type": "rinse-off skincare",
+   "flagged": [],
+   "natural": [],
+   "unknown": [
+    "Glyceryl Glucoside",
+    "Acrylates/C10-30 Alkyl Acrylate Crosspolymer",
+    "Trisodium EDTA"
+   ],
+   "esc": [],
+   "status": "complete"
+  },
+  {
+   "product_name": "Hydrating Cleansing Gel, 6.8 FL OZ",
+   "tier": "Puberty Safe",
+   "flag_count": 0,
+   "product_type": "rinse-off skincare",
+   "flagged": [],
+   "natural": [],
+   "unknown": [
+    "Glyceryl Glucoside",
+    "Acrylates/C10-30 Alkyl Acrylate Crosspolymer",
+    "Trisodium EDTA"
+   ],
+   "esc": [],
+   "status": "complete"
+  },
+  {
+   "product_name": "Intensive Repair Lotion",
+   "tier": "Avoid (High Priority Swap)",
+   "flag_count": 5,
+   "product_type": "leave-on skincare",
+   "flagged": [
+    "Mineral Oil",
+    "PEG-7 Hydrogenated Castor Oil",
+    "Dimethicone",
+    "PEG-45/Dodecyl Glycol Copolymer",
+    "PEG-2 Hydrogenated Castor Oil"
+   ],
+   "natural": [],
+   "unknown": [
+    "Methoxy PEG-22/Dodecyl Glycol Copolymer",
+    "Sorbitan Isostearate"
+   ],
+   "esc": [
+    "PFAS",
+    "carcinogen in leave-on"
+   ],
+   "status": "needs review"
+  },
+  {
+   "product_name": "Q10 Revitalize Night Cream",
+   "tier": "Puberty Safe",
+   "flag_count": 0,
+   "product_type": "leave-on skincare",
+   "flagged": [],
+   "natural": [],
+   "unknown": [
+    "Q10"
+   ],
+   "esc": [],
+   "status": "needs review"
+  },
+  {
+   "product_name": "Q10 Revitalize Daily Cream",
+   "tier": "Puberty Safe",
+   "flag_count": 0,
+   "product_type": "leave-on skincare",
+   "flagged": [],
+   "natural": [],
+   "unknown": [
+    "Q10",
+    "Shea Butter"
+   ],
+   "esc": [],
+   "status": "needs review"
+  },
+  {
+   "product_name": "Advanced Hydration After Sun Lotion",
+   "tier": "Puberty Safe",
+   "flag_count": 0,
+   "product_type": "leave-on skincare",
+   "flagged": [],
+   "natural": [],
+   "unknown": [
+    "Glycyrrhetinic Acid",
+    "Licochalcone A"
+   ],
+   "esc": [],
+   "status": "needs review"
+  },
+  {
+   "product_name": "Sensitive Mineral SPF 50 Sunscreen",
+   "tier": "Avoid (High Priority Swap)",
+   "flag_count": 7,
+   "product_type": "sunscreen",
+   "flagged": [
+    "Butyloctyl Salicylate",
+    "Cetyl PEG/PPG-10/1 Dimethicone",
+    "Propylene Glycol",
+    "Cyclopentasiloxane",
+    "Dimethicone",
+    "PEG-12 Dimethicone Crosspolymer",
+    "1,2-Hexanediol"
+   ],
+   "natural": [],
+   "unknown": [
+    "C12-15 Alkyl Benzoate",
+    "Ethylhexyl Pelargonate",
+    "Bis-Octyldodecyl Dimer Dilinoleate/Propanediol Copolymer",
+    "Ethylhexyl Methoxycrylene",
+    "Polyester-27",
+    "Triethoxycaprylylsilane",
+    "Hydroxyacetophenone"
+   ],
+   "esc": [
+    "PFAS",
+    "carcinogen in leave-on"
+   ],
+   "status": "complete"
+  },
+  {
+   "product_name": "Advanced Hydration Ultra-Light SPF 50 Face Sunscreen",
+   "tier": "Avoid (High Priority Swap)",
+   "flag_count": 8,
+   "product_type": "sunscreen",
+   "flagged": [
+    "Avobenzone",
+    "Homosalate",
+    "Octisalate",
+    "Octocrylene",
+    "Silica",
+    "Diethylhexyl Syringylidenemalonate",
+    "Phenoxyethanol",
+    "Potassium Hydroxide"
+   ],
+   "natural": [],
+   "unknown": [
+    "l-6 Stearate",
+    "Silica Dimethyl Silylate",
+    "Tapioca Starch",
+    "Glycyrrhetinic Acid",
+    "Glycyrrhiza Inflata Root Extract",
+    "Sodium Ascorbyl Phosphate",
+    "Hydroxyacetophenone",
+    "Copernicia Cerifera (Carnauba) Wax",
+    "Hydroxypropyl Methylcellulose",
+    "Polyglyceryl-6 Behenate",
+    "Disodium EDTA"
+   ],
+   "esc": [
+    "PFAS",
+    "carcinogen in leave-on"
+   ],
+   "status": "complete"
+  },
+  {
+   "product_name": "Advanced Hydration SPF 50 Sunscreen Spray",
+   "tier": "Avoid (High Priority Swap)",
+   "flag_count": 10,
+   "product_type": "sunscreen",
+   "flagged": [
+    "Avobenzone",
+    "Homosalate",
+    "Octisalate",
+    "Octocrylene",
+    "Styrene/Acrylates Copolymer",
+    "Butylene Glycol",
+    "Diethylhexyl Syringylidenemalonate",
+    "VP/Eicosene Copolymer",
+    "1,2-Hexandiol",
+    "Potassium Hydroxide"
+   ],
+   "natural": [],
+   "unknown": [
+    "Dimethyl Ether",
+    "C12-15 Alkyl Benzoate",
+    "Neopentyl Glycol Diheptanoate",
+    "Glycyrrhiza Inflata Root Extract",
+    "Glycyrrhetinic Acid",
+    "Aloe Barbadensis Leaf Juice",
+    "Hydroxyacetophenone",
+    "Acrylates/C10-30 Alkyl Acrylate Crosspolymer",
+    "Disodium EDTA",
+    "Sodium Ascorbyl Phosphate"
+   ],
+   "esc": [
+    "PFAS",
+    "carcinogen in leave-on"
+   ],
+   "status": "complete"
+  },
+  {
+   "product_name": "Advanced Hydration SPF 50 Sunscreen",
+   "tier": "Avoid (High Priority Swap)",
+   "flag_count": 10,
+   "product_type": "sunscreen",
+   "flagged": [
+    "Avobenzone",
+    "Homosalate",
+    "Octisalate",
+    "Octocrylene",
+    "Styrene/Acrylates Copolymer",
+    "Butylene Glycol",
+    "Diethylhexyl Syringylidenemalonate",
+    "VP/Eicosene Copolymer",
+    "1,2-Hexandiol",
+    "Potassium Hydroxide"
+   ],
+   "natural": [],
+   "unknown": [
+    "C12-15 Alkyl Benzoate",
+    "Neopentyl Glycol Diheptanoate",
+    "Glycyrrhiza Inflata Root Extract",
+    "Glycyrrhetinic Acid",
+    "Aloe Barbadensis Leaf Juice",
+    "Hydroxyacetophenone",
+    "Acrylates/C10-30 Alkyl Acrylate Crosspolymer",
+    "Disodium EDTA",
+    "Sodium Ascorbyl Phosphate"
+   ],
+   "esc": [
+    "PFAS",
+    "carcinogen in leave-on"
+   ],
+   "status": "complete"
+  },
+  {
+   "product_name": "Baby Sensitive Mineral SPF 50 Sunscreen Lotion",
+   "tier": "Avoid (High Priority Swap)",
+   "flag_count": 7,
+   "product_type": "sunscreen",
+   "flagged": [
+    "Butyloctyl Salicylate",
+    "Cetyl PEG/PPG-10/1 Dimethicone",
+    "Propylene Glycol",
+    "Cyclopentasiloxane",
+    "Dimethicone",
+    "PEG-12 Dimethicone Crosspolymer",
+    "1,2-Hexanediol"
+   ],
+   "natural": [],
+   "unknown": [
+    "C12-15 Alkyl Benzoate",
+    "Ethylhexyl Pelargonate",
+    "Bis-Octyldodecyl Dimer Dilinoleate/Propanediol Copolymer",
+    "Ethylhexyl Methoxycrylene",
+    "Polyester-27",
+    "Triethoxycaprylylsilane",
+    "Hydroxyacetophenone"
+   ],
+   "esc": [
+    "PFAS",
+    "carcinogen in leave-on"
+   ],
+   "status": "complete"
+  },
+  {
+   "product_name": "Clear Skin SPF 50 Face Sunscreen",
+   "tier": "Avoid (High Priority Swap)",
+   "flag_count": 11,
+   "product_type": "sunscreen",
+   "flagged": [
+    "Avobenzone",
+    "Homosalate",
+    "Octisalate",
+    "Octocrylene",
+    "Alcohol Denat",
+    "Butyloctyl Salicylate",
+    "Silica",
+    "Dimethicone",
+    "Diethylhexyl Syringylidenemalonate",
+    "Phenoxyethanol",
+    "Ethylhexylglycerin"
+   ],
+   "natural": [],
+   "unknown": [
+    "C12-15 Alkyl Benzoate",
+    "Polyglyceryl-6 Stearate",
+    "Sodium Stearoyl Glutamate",
+    "Diisostearoyl Polyglyceryl-3 Dimer Dilinoleate",
+    "Butylene Glycol Dicaprylate/Dicaprate",
+    "Copernicia Cerifera (Carnauba) Wax",
+    "Dibutyl Adipate",
+    "L-Carnitine",
+    "Glycyrrhiza Inflata Root Extract",
+    "Glycyrrhetinic Acid",
+    "Silica Dimethyl Silylate",
+    "Ethylcellulose",
+    "Glyceryl Behenate",
+    "Polyglyceryl-6 Octastearate",
+    "Disodium EDTA",
+    "Hydroxyacetophenone",
+    "Polyglyceryl-6 Behenate",
+    "Sodium Ascorbyl Phosphate"
+   ],
+   "esc": [
+    "PFAS",
+    "carcinogen in leave-on"
+   ],
+   "status": "complete"
+  },
+  {
+   "product_name": "Age Defense SPF 50 Face Sunscreen",
+   "tier": "Avoid (High Priority Swap)",
+   "flag_count": 11,
+   "product_type": "sunscreen",
+   "flagged": [
+    "Avobenzone",
+    "Homosalate",
+    "Octisalate",
+    "Octocrylene",
+    "Alcohol Denat",
+    "Butyloctyl Salicylate",
+    "Silica",
+    "Dimethicone",
+    "Diethylhexyl Syringylidenemalonate",
+    "Phenoxyethanol",
+    "Ethylhexylglycerin"
+   ],
+   "natural": [],
+   "unknown": [
+    "C12-15 Alkyl Benzoate",
+    "Polyglyceryl-6 Stearate",
+    "Sodium Stearoyl Glutamate",
+    "Diisostearoyl Polyglyceryl-3 Dimer Dilinoleate",
+    "Butylene Glycol Dicaprylate/Dicaprate",
+    "Copernicia Cerifera (Carnauba) Wax",
+    "Dibutyl Adipate",
+    "Glycyrrhiza Inflata Root Extract",
+    "Glycyrrhetinic Acid",
+    "Silica Dimethyl Silylate",
+    "Ethylcellulose",
+    "Glyceryl Behenate",
+    "L-Carnitine",
+    "Polyglyceryl-6 Octastearate",
+    "Disodium EDTA",
+    "Hydroxyacetophenone",
+    "Polyglyceryl-6 Behenate",
+    "Sodium Ascorbyl Phosphate"
+   ],
+   "esc": [
+    "PFAS",
+    "carcinogen in leave-on"
+   ],
+   "status": "complete"
+  },
+  {
+   "product_name": "Tinted Sensitive Mineral SPF 35 Face Sunscreen",
+   "tier": "Avoid (High Priority Swap)",
+   "flag_count": 10,
+   "product_type": "sunscreen",
+   "flagged": [
+    "Butyloctyl Salicylate",
+    "Cetyl PEG/PPG-10/1 Dimethicone",
+    "Propylene Glycol",
+    "Cyclopentasiloxane",
+    "Dimethicone",
+    "Diethylhexyl Syringylidenemalonate",
+    "PEG-12 Dimethicone Crosspolymer",
+    "1,2-Hexanediol",
+    "Silica",
+    "Iron Oxides"
+   ],
+   "natural": [],
+   "unknown": [
+    "C12-15 Alkyl Benzoate",
+    "Ethylhexyl Pelargonate",
+    "Bis-Octyldodecyl Dimer Dilinoleate/Propanediol Copolymer",
+    "Ethylhexyl Methoxycrylene",
+    "Polyester-27",
+    "Glycyrrhiza Inflata Root Extract",
+    "Glycyrrhetinic Acid",
+    "Sodium Ascorbyl Phosphate",
+    "Simmondsia Chinensis (Jojoba) Seed Oil",
+    "Triethoxycaprylylsilane",
+    "Hydroxyacetophenone",
+    "Jojoba Esters",
+    "Polyglyceryl-6 Polyricinoleate"
+   ],
+   "esc": [
+    "heavy metals",
+    "PFAS",
+    "carcinogen in leave-on"
+   ],
+   "status": "complete"
+  },
+  {
+   "product_name": "Tinted Age Defense SPF 50 Face Sunscreen",
+   "tier": "Avoid (High Priority Swap)",
+   "flag_count": 13,
+   "product_type": "sunscreen",
+   "flagged": [
+    "Avobenzone",
+    "Homosalate",
+    "Octisalate",
+    "Octocrylene",
+    "Alcohol Denat",
+    "Butyloctyl Salicylate",
+    "Silica",
+    "Diethylhexyl Syringylidenemalonate",
+    "Dimethicone",
+    "Phenoxyethanol",
+    "Ethylhexylglycerin",
+    "1,2-Hexanediol",
+    "Iron Oxides"
+   ],
+   "natural": [],
+   "unknown": [
+    "C12-15 Alkyl Benzoate",
+    "Polyglyceryl-6 Stearate",
+    "Sodium Stearoyl Glutamate",
+    "Diisostearoyl Polyglyceryl-3 Dimer Dilinoleate",
+    "Butylene Glycol Dicaprylate/Dicaprate",
+    "Copernicia Cerifera (Carnauba) Wax",
+    "Dibutyl Adipate",
+    "Glycyrrhiza Inflata Root Extract",
+    "Glycyrrhetinic Acid",
+    "L-Carnitine",
+    "Sodium Ascorbyl Phosphate",
+    "Hydroxyacetophenone",
+    "Silica Dimethyl Silylate",
+    "Ethylcellulose",
+    "Glyceryl Behenate",
+    "Polyglyceryl-6 Octastearate",
+    "Polyglyceryl-6 Behenate",
+    "Disodium EDTA"
+   ],
+   "esc": [
+    "heavy metals",
+    "PFAS",
+    "carcinogen in leave-on"
+   ],
+   "status": "complete"
+  },
+  {
+   "product_name": "Advanced Hydration SPF 30 Sunscreen Spray",
+   "tier": "Avoid (Mild)",
+   "flag_count": 4,
+   "product_type": "sunscreen",
+   "flagged": [
+    "Avobenzone",
+    "Homosalate",
+    "Octisalate",
+    "Octocrylene"
+   ],
+   "natural": [],
+   "unknown": [],
+   "esc": [],
+   "status": "needs review"
+  },
+  {
+   "product_name": "Roughness Relief Cream",
+   "tier": "Avoid (High Priority Swap)",
+   "flag_count": 4,
+   "product_type": "leave-on skincare",
+   "flagged": [
+    "Dimethicone",
+    "Phenoxyethanol",
+    "Carbomer",
+    "Sodium Cetearyl Sulfate"
+   ],
+   "natural": [],
+   "unknown": [
+    "Hydrogenated Cocoglycerides",
+    "Ethylhexyl Cocoate",
+    "Distarch Phosphate",
+    "Ceramide NP",
+    "Carnitine",
+    "Helianthus Annuus (Sunflower) Seed Oil"
+   ],
+   "esc": [
+    "PFAS",
+    "carcinogen in leave-on"
+   ],
+   "status": "complete"
+  },
+  {
+   "product_name": "Roughness Relief Lotion",
+   "tier": "Avoid (High Priority Swap)",
+   "flag_count": 2,
+   "product_type": "leave-on skincare",
+   "flagged": [
+    "1,2-Hexanediol",
+    "Phenoxyethanol"
+   ],
+   "natural": [],
+   "unknown": [
+    "Isopropyl Stearate",
+    "Dicaprylyl Ether",
+    "Glyceryl Glucoside",
+    "Butyrospermum Parkii (Shea) Butter",
+    "Nylon-12",
+    "Polyglyceryl-4 Diisostearate/Polyhydroxystearate/Sebacate",
+    "Carnitine",
+    "Mannitol",
+    "Sucrose",
+    "Citrulline",
+    "Glycogen",
+    "Ceramide NP",
+    "Glutamic Acid",
+    "Lysine HCL"
+   ],
+   "esc": [
+    "carcinogen in leave-on"
+   ],
+   "status": "complete"
+  },
+  {
+   "product_name": "Eczema Relief Cream & Body Wash",
+   "tier": "Avoid (Moderate)",
+   "flag_count": 5,
+   "product_type": "rinse-off skincare",
+   "flagged": [
+    "Sodium Myreth Sulfate",
+    "Phenoxyethanol",
+    "Carbomer",
+    "Pentylene Glycol",
+    "Decylene Glycol"
+   ],
+   "natural": [],
+   "unknown": [
+    "colloidal oatmeal",
+    "Sodium Cocoamphoacetate",
+    "C12-15 Alkyl Benzoate",
+    "Ceramide NP",
+    "Carnitine",
+    "Lauryl Glucoside"
+   ],
+   "esc": [],
+   "status": "complete"
+  },
+  {
+   "product_name": "Eczema Relief Cream",
+   "tier": "Avoid (High Priority Swap)",
+   "flag_count": 5,
+   "product_type": "leave-on skincare",
+   "flagged": [
+    "Mineral Oil",
+    "PEG-40 Stearate",
+    "1,2-Hexanediol",
+    "Phenoxyethanol",
+    "Ethylhexylglycerin"
+   ],
+   "natural": [],
+   "unknown": [
+    "Colloidal Oatmeal",
+    "Ricinus Communis (Castor) Seed Oil",
+    "Glycyrrhiza Inflata Root Extract",
+    "Ceramide NP",
+    "Piroctone Olamine"
+   ],
+   "esc": [
+    "carcinogen in leave-on"
+   ],
+   "status": "complete"
+  },
+  {
+   "product_name": "Eucerin Eczema Relief Hydrogel",
+   "tier": "Use Caution",
+   "flag_count": 1,
+   "product_type": "leave-on skincare",
+   "flagged": [
+    "Alcohol Denat"
+   ],
+   "natural": [],
+   "unknown": [
+    "Colloidal Oatmeal",
+    "Glycyrrhiza Inflata Root Extract",
+    "Ceramide NP",
+    "Gellan Gum",
+    "Hydroxyacetophenone"
+   ],
+   "esc": [],
+   "status": "complete"
+  },
+  {
+   "product_name": "Eczema Relief Flare-Up Treatment",
+   "tier": "Avoid (High Priority Swap)",
+   "flag_count": 7,
+   "product_type": "leave-on skincare",
+   "flagged": [
+    "Mineral Oil",
+    "PEG-40 Stearate",
+    "Decylene Glycol",
+    "1,2-Hexanediol",
+    "Phenoxyethanol",
+    "Ethylhexylglycerin",
+    "BHT"
+   ],
+   "natural": [],
+   "unknown": [
+    "Colloidal Oatmeal",
+    "Ricinus Communis (Castor) Seed Oil",
+    "Glycyrrhiza Inflata Root Extract",
+    "Ceramide NP",
+    "Piroctone Olamine",
+    "Menthoxypropanediol",
+    "Trisodium EDTA"
+   ],
+   "esc": [
+    "carcinogen in leave-on"
+   ],
+   "status": "complete"
+  },
+  {
+   "product_name": "Itch Relief Intensive Calming Lotion",
+   "tier": "Avoid (High Priority Swap)",
+   "flag_count": 7,
+   "product_type": "leave-on skincare",
+   "flagged": [
+    "Alcohol Denat",
+    "Laureth-9",
+    "Dimethicone",
+    "PEG-100 Stearate",
+    "Pentylene Glycol",
+    "Ethylhexylglycerin",
+    "Carbomer"
+   ],
+   "natural": [],
+   "unknown": [
+    "Menthol",
+    "Hydrogenated Coco-Glycerides",
+    "Triisostearin",
+    "Palmitic Acid",
+    "Stearic Acid",
+    "Distarch Phosphate",
+    "Ceramide NP",
+    "Myristic Acid",
+    "Arachidic Acid",
+    "4-t-butylcyclohexanol",
+    "Menthoxypropanediol",
+    "Trisodium EDTA"
+   ],
+   "esc": [
+    "PFAS",
+    "carcinogen in leave-on"
+   ],
+   "status": "complete"
+  },
+  {
+   "product_name": "Skin Calming Lotion",
+   "tier": "Avoid (High Priority Swap)",
+   "flag_count": 7,
+   "product_type": "leave-on skincare",
+   "flagged": [
+    "Mineral Oil",
+    "Dimethicone",
+    "PEG-40 Stearate",
+    "Phenoxyethanol",
+    "1-2-Hexanediol",
+    "Carbomer",
+    "Decylene Glycol"
+   ],
+   "natural": [],
+   "unknown": [
+    "Colloidal Oatmeal",
+    "Methylpropanediol",
+    "Polyglyceryl-2 Caprate",
+    "Piroctone Olamine"
+   ],
+   "esc": [
+    "PFAS",
+    "carcinogen in leave-on"
+   ],
+   "status": "complete"
+  },
+  {
+   "product_name": "Skin Calming Cream",
+   "tier": "Avoid (High Priority Swap)",
+   "flag_count": 7,
+   "product_type": "leave-on skincare",
+   "flagged": [
+    "Mineral Oil",
+    "Dimethicone",
+    "PEG-40 Stearate",
+    "1,2-Hexanediol",
+    "Phenoxyethanol",
+    "Carbomer",
+    "Decylene Glycol"
+   ],
+   "natural": [],
+   "unknown": [
+    "Colloidal Oatmeal",
+    "Methylpropanediol",
+    "Piroctone Olamine",
+    "Polyglyceryl-2 Caprate"
+   ],
+   "esc": [
+    "PFAS",
+    "carcinogen in leave-on"
+   ],
+   "status": "complete"
+  },
+  {
+   "product_name": "Daily Hydration Lotion with Broad Spectrum SPF 15",
+   "tier": "Use Caution",
+   "flag_count": 1,
+   "product_type": "sunscreen",
+   "flagged": [
+    "Octisalate"
+   ],
+   "natural": [],
+   "unknown": [],
+   "esc": [],
+   "status": "needs review"
+  },
+  {
+   "product_name": "Daily Hydration Lotion",
+   "tier": "Puberty Safe",
+   "flag_count": 0,
+   "product_type": "leave-on skincare",
+   "flagged": [],
+   "natural": [],
+   "unknown": [
+    "helianthus annuus (sunflower) seed oil"
+   ],
+   "esc": [],
+   "status": "needs review"
+  },
+  {
+   "product_name": "Original Healing Rich Cream 16 oz. Jar",
+   "tier": "Avoid (High Priority Swap)",
+   "flag_count": 3,
+   "product_type": "leave-on skincare",
+   "flagged": [
+    "Petrolatum",
+    "Mineral Oil",
+    "Phenoxyethanol"
+   ],
+   "natural": [],
+   "unknown": [
+    "Ceresin",
+    "Lanolin Alcohol",
+    "Piroctone Olamine"
+   ],
+   "esc": [
+    "carcinogen in leave-on"
+   ],
+   "status": "complete"
+  },
+  {
+   "product_name": "Original Healing Lotion",
+   "tier": "Avoid (High Priority Swap)",
+   "flag_count": 4,
+   "product_type": "leave-on skincare",
+   "flagged": [
+    "Mineral Oil",
+    "Propylene Glycol",
+    "Aluminum Stearates",
+    "Phenoxyethanol"
+   ],
+   "natural": [],
+   "unknown": [
+    "Diisostearoyl Polyglyceryl-3 Dimer Dilinoleate",
+    "Polyglyceryl-4 Diisostearate/Polyhydroxystearate/Sebacate",
+    "Lanolin Alcohol"
+   ],
+   "esc": [
+    "heavy metals",
+    "carcinogen in leave-on"
+   ],
+   "status": "complete"
+  },
+  {
+   "product_name": "Eucerin Baby Eczema Relief Hydrogel",
+   "tier": "Puberty Safe",
+   "flag_count": 0,
+   "product_type": "leave-on skincare",
+   "flagged": [],
+   "natural": [],
+   "unknown": [
+    "Colloidal Oatmeal"
+   ],
+   "esc": [],
+   "status": "needs review"
+  },
+  {
+   "product_name": "Baby Eczema Relief Cream & Body Wash",
+   "tier": "Avoid (Moderate)",
+   "flag_count": 5,
+   "product_type": "rinse-off skincare",
+   "flagged": [
+    "Sodium Myreth Sulfate",
+    "Phenoxyethanol",
+    "Carbomer",
+    "Pentylene Glycol",
+    "Decylene Glycol"
+   ],
+   "natural": [],
+   "unknown": [
+    "colloidal oatmeal",
+    "Sodium Cocoamphoacetate",
+    "C12-15 Alkyl Benzoate",
+    "Ceramide NP",
+    "Carnitine",
+    "Lauryl Glucoside"
+   ],
+   "esc": [],
+   "status": "complete"
+  },
+  {
+   "product_name": "Baby Wash and Shampoo",
+   "tier": "Avoid (Mild)",
+   "flag_count": 1,
+   "product_type": "body wash/shampoo/conditioner",
+   "flagged": [
+    "Sodium Myreth Sulfate"
+   ],
+   "natural": [],
+   "unknown": [],
+   "esc": [],
+   "status": "needs review"
+  },
+  {
+   "product_name": "Baby Eczema Relief Cream",
+   "tier": "Avoid (High Priority Swap)",
+   "flag_count": 5,
+   "product_type": "leave-on skincare",
+   "flagged": [
+    "Mineral Oil",
+    "PEG-40 Stearate",
+    "1,2-Hexanediol",
+    "Phenoxyethanol",
+    "Ethylhexylglycerin"
+   ],
+   "natural": [],
+   "unknown": [
+    "Colloidal Oatmeal",
+    "Ricinus Communis (Castor) Seed Oil",
+    "Glycyrrhiza Inflata Root Extract",
+    "Ceramide NP",
+    "Piroctone Olamine"
+   ],
+   "esc": [
+    "carcinogen in leave-on"
+   ],
+   "status": "complete"
+  },
+  {
+   "product_name": "Baby Lotion",
+   "tier": "Puberty Safe",
+   "flag_count": 0,
+   "product_type": "leave-on skincare",
+   "flagged": [],
+   "natural": [],
+   "unknown": [
+    "Dexpanthenol"
+   ],
+   "esc": [],
+   "status": "needs review"
+  }
+ ]
+}

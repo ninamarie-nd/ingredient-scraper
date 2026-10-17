@@ -1,5 +1,7 @@
 # Aquaphor Audit Log
 
+> **Superseded 2026-10-16 20:47 (UTC-05:00).** The grading results, tier counts, grader notes and manual review queue in this log were replaced by the unified-grader regrade at the end of this file. Sourcing notes still apply.
+
 **Brand URL:** https://www.aquaphorus.com/ (brand product names and partial lists)
 **Full INCI source:** approved retailer product pages (Walmart primary; Target checked for hand and foot masks)
 **Audit start:** 2026-10-16 (first pass, brand site only, 41 products)
@@ -148,3 +150,158 @@ Note: "Lanolin alcohol" and "Lanolin Alcohol" are the same ingredient printed wi
 - The Aloe Vera and Coconut lip sticks print a "1% skin safe synthetic" line. It is a labelling note, not an ingredient; it was removed from the grading input only.
 - Grading notes: the grader was patched for this pass to handle drug-label prefixes ("Active:", "Inactive:", "Purpose:") and the lip and sunscreen leave-on escalation. The grader file itself (_grader.py) is unchanged.
 
+
+---
+
+## Pass 2 — 2026-10-16 (remaining 8 products, Baby Wash verification, regrade)
+
+**Scope and rules:** Retailer product pages only (CVS, Walgreens, Ulta, Dermstore, Amazon, then Walmart and Target). Ingredient text copied from the page (ingredients block or expanded ingredients section). No forums, blogs, INCI databases, or WebFetch summaries.
+
+### Sourcing counts after pass 2
+
+| Source | Products |
+|---|---|
+| Walmart (retailer page) | 33 |
+| CVS (retailer page) | 2 |
+| Amazon (retailer page; Baby Wash user-supplied, confirmed on listing) | 3 |
+| **Full printed INCI, total** | **38** |
+| Needs review (no full list) | 3 |
+
+Pass 1 had 33 full lists (all Walmart, including Baby Wash). Pass 2 moved Baby Wash 25.4 oz to Amazon, added 5 retailer lists, and left 3 unresolved.
+
+### The 8 remaining products
+
+| # | Product | Result | Retailers checked (in order) and outcome |
+|---|---|---|---|
+| 1 | Moisturizing Cream 1.89 oz | RESOLVED, CVS (prodid 923320) | CVS: match on name and size. Ingredients page read. First three conflict with brand text (recorded). |
+| 2 | Diaper Rash Cream 3 oz | UNRESOLVED | CVS: Diaper Rash Paste 3.5 oz only. Walgreens: Diaper Rash Cream with Zinc Oxide 3.5 oz. Amazon: Diaper Rash Cream Multipack 3 x 3.5 oz and Diaper Rash Paste 3.5 oz. Dermstore: no Aquaphor brand stocked. Ulta: page blocked ("Be Right Back"). Walmart: 3.5 oz only (pass 1; not re-checked). Target: not checked this pass. |
+| 3 | Hand Mask | UNRESOLVED | CVS: no Hand Mask results. Walgreens: no Hand Mask results. Ulta: blocked. Dermstore: no Aquaphor brand. Amazon (B0B5FJFWW8): Repairing Hand Masks, 6 Masks x 0.7 FL OZ, a 6-pack, not a single-unit match, not used. Target (A-86416643, 0.7 fl oz): Ingredients and Label info panels expanded, no readable text. Walmart (1791022082, 1 Pair): ingredients section expanded, no readable text. |
+| 4 | Foot Mask | RESOLVED, CVS (prodid 648998) | CVS: Advanced Therapy Repairing Foot Masks, 1 Pair. Active and Inactive lists contain the same 24 items in the same order; title-case Inactive list used. First three match brand text. Target foot mask (0.7 fl oz) not used. |
+| 5 | Lip Protectant + SPF 30 Dual Pack | RESOLVED, Amazon (B0D14XMH8R) | Amazon: Lip Balm, Lip Repair, SPF 30, 0.35 oz tube, Pack of 2. Actives match brand text (name and percentage). CVS: no SPF lip tube dual pack (Lip Repair Stick plus Sunscreen single only). Walgreens: Lip Repair Stick + Sunscreen SPF 30 Dual Pack is a stick, not used. |
+| 6 | Adult Healing Balm Stick (3-pack listing) | RESOLVED, Walmart (15374315224, 3 pack) | Walmart: 3-pack listing. Ingredients section was collapsed and was expanded; Active Petrolatum 30%, Inactive list read. Amazon (B09RYRCXKM): single 0.65 oz, no 3-pack option. CVS (prodid 515770): single 0.65 oz. Walgreens: single 0.65 oz listings. Target (A-86416642): single 0.65 oz. Walmart 0.65 oz Pack of 3 (7455005955): pass 1 reported no ingredients block; not re-checked. |
+| 7 | Ointment Body Spray 6.2 oz | RESOLVED, Amazon (B07TR75W9H) | Amazon: Advanced Therapy Ointment Body Spray, 6.2 OZ, Pack of 1. First three (Butane, Petrolatum, Mineral Oil) match brand text. CVS: 3.7 oz only (prodid 1680005). Walmart: 3.7 oz and multipacks (pass 1). Walgreens: Ointment Body Spray 3.7 oz (search results also show a "Healing Ointment Body Spray, Moisturizing - 6.2 oz" listing, not opened this pass; a backup if Amazon is not accepted). |
+| 8 | Healing Ointment 2 x 3.5 oz | UNRESOLVED | CVS: 0.35 oz 2 CT, 1.75 oz, 3 oz No Touch, 5 oz, 7 oz. Walgreens: 0.35 oz x 2, 1.75 oz, 7 oz, 14 oz. Amazon: Multipack 3 x 2.8 oz, 3 x 1.75 oz, Value Pack 2 x 0.35 oz. Walmart: 0.35 oz x 2, 1.75 oz, 3 x 1.75 oz, 3 x 7 oz. Target: 1.75 oz, 2.8 oz jar. Dermstore: no Aquaphor brand. Ulta: blocked. |
+
+### Baby Wash 25.4 oz second-look verification
+
+- **Amazon listing:** https://www.amazon.com/dp/B01NAFQIJ9, titled "Aquaphor Baby Body Wash and Shampoo, 25.4 FL OZ", Tear Free, Fragrance Free. The Ingredients block was read with page text extraction.
+- **Result:** The Amazon Ingredients text matches the user-supplied list word for word:
+  Water, Decyl Glucoside, Sodium Myreth Sulfate, PEG-200 Hydrogenated Glyceryl Palmate, Cocamidopropyl Betaine, Panthenol, Bisabolol, Polyquaternium-10, Sea Salt, Citric Acid, Sodium Chloride, Sodium Benzoate.
+- **Brand-site comparison:** Brand text begins Water, Decyl Glucoside, PEG-200 Hydrogenated Glyceryl Palmate. The first two match. Position 3 conflicts (Amazon: Sodium Myreth Sulfate; brand: PEG-200 Hydrogenated Glyceryl Palmate). Both texts kept, and the conflict is recorded in `audit_notes`.
+- **Source label used:** "Amazon (user-supplied, confirmed on listing)". Status: complete.
+- **Earlier attribution:** Pass 1 labeled this row as Walmart. That attribution was not confirmed by the Walmart page in this pass and has been replaced.
+
+### Grader changes (`_grader.py`)
+
+1. The /tmp summary path is now `/home/claude/ingredient-scraper/audits/aquaphor/aquaphor_grader_summary.json`. No /tmp writes remain.
+2. Input plumbing only, not grading logic: the grader loads the JSON row dicts and passes `ingredients_verbatim` to the grading loop. Product type is read from a `product_type` field on each row (taken from the pass-1 workbook), with `infer_product_type()` as fallback. The on-disk inference returns "hair styling" for every Aquaphor name, which would have removed the leave-on carcinogen escalation.
+3. `grade()`, `split_ingredients()`, the LOW_TOX list, the pattern watch list, and the tier logic are unchanged.
+
+**Discrepancy found (not fixed, needs a decision):** Running the current `_grader.py` on the same input does not reproduce the pass-1 workbook results. Examples on unchanged ingredient lists:
+- Baby Healing Ointment 7 oz: pass 1 = High Priority Swap, 2 flags (petrolatum, mineral oil). Current grader = Puberty Safe, 0 flags, because "Petrolatum (41%)" is not matched after the percent parse.
+- Moisturizing Cream 8 oz: pass 1 flagged Pentylene Glycol. Current LOW_TOX list treats pentylene glycol as low tox.
+- Water and glycerin: pass 1 routed them to unknown; current LOW_TOX treats them as low tox, contrary to the report's stated policy.
+
+Because of this, the 33 prior-pass rows keep their pass-1 tier, flags, and summary values. The 5 newly sourced lists were graded with `grade()` unchanged, after removing percent figures and "Purpose:" tags from the input text. `ingredients_verbatim` keeps the printed text. Running `_grader.py` as-is regenerates all 41 rows with the current logic, which changes about 25 products and must not be used to rebuild the workbook until the discrepancies are reconciled.
+
+### Workbook and grading notes
+
+- `aquaphor_audit.xlsx` was rebuilt with the exact template columns.
+- Each `audit_notes` field is the JSON `audit_notes` for that row.
+- `product_url`, `brand_category`, `product_type` keep their pass-1 values.
+- Foot Mask: dimethicone is listed as PFAS-treated in the reference and escalates the row to High Priority Swap. The phenoxyethanol cat. 1 flag escalates it too. Hand-checked against `ref_compact.json`.
+- Moisturizing Cream 1.89 oz: phenoxyethanol cat. 1 in a leave-on escalates to High Priority Swap. Hand-checked against `ref_compact.json`.
+- Lip Protectant + SPF 30 Dual Pack: keeps product type "sunscreen" from pass 1. The cat. 1 escalation applies only to "leave-on skincare", so this row grades Avoid (Moderate) with 7 flags. The single Lip Protectant + SPF 30 row (lip product type) grades High Priority Swap with 7 flags. Both are leave-on tubes. Nina to confirm the product type.
+- Unknowns for the 5 new rows follow the current LOW_TOX list (water and glycerin not listed as unknown). Unknowns for the remaining rows follow pass 1.
+
+### Tier counts
+
+| Tier | Pass 1 (all 41, mixed) | Pass 2 graded (38) | Pass 2 all 41 |
+|---|---|---|---|
+| Puberty Safe | 9 | 5 | 5 (12.2%) |
+| Use Caution | 0 | 0 | 0 |
+| Avoid (Mild) | 2 | 2 | 2 (4.9%) |
+| Avoid (Moderate) | 0 | 1 | 1 (2.4%) |
+| Avoid (High Priority Swap) | 30 | 30 | 30 (73.2%) |
+| Needs review (no tier) | 0 | 0 | 3 (7.3%) |
+
+Pass 1 counts included 8 rows graded from brand-site partial lists. Those are now either regraded (5) or cleared to needs review (3).
+
+### Files
+
+- Ingredients (source of truth): `/home/claude/ingredient-scraper/audits/aquaphor/aquaphor_ingredients.json`
+- Workbook: `/home/claude/ingredient-scraper/audits/aquaphor/aquaphor_audit.xlsx`
+- Content mining: `/home/claude/ingredient-scraper/audits/aquaphor/aquaphor_content_mining.md`
+- Grader: `/home/claude/ingredient-scraper/audits/aquaphor/_grader.py`
+- Pass-1 workbook backup (outside the folder): `/tmp/claude-0/-home-claude/65f708ba-e2ad-54e0-aca6-2eedefaf61d7/scratchpad/aquaphor_audit_prepass.xlsx`
+
+
+---
+
+## Regrade 2026-10-16 20:47 (UTC-05:00): unified grader (supersedes the grading results, tier counts, grader notes and manual review queue above)
+
+The retailer sourcing notes above still apply. Where this section and an earlier section disagree on a grade, tier, flag or unknown name, this section is current.
+
+### Why this regrade
+- The prior pass graded 33 rows with one grader and 5 newer rows with a patched grader. The patched grader treated `Petrolatum (41%)` as unmatched, treated pentylene glycol as low tox, and treated bisabolol as a soft natural component because the product text contained the word "oil" (its essential-oil check matched carrier oils). Its low-tox list also included names the reference flags, such as 1,2-hexanediol, 2,3-butanediol and panthenyl hydroxypropyl steardimonium chloride.
+- All 38 graded rows are regraded here with the same grader and rules used for Eucerin. The earlier split between passes no longer applies.
+
+### Grader
+- `_grader.py` (identical copy in `eucerin/` and `aquaphor/`). It reads `<brand>_ingredients.json` from its own folder, `../../ref_compact.json` and `../../ingredient_aliases.json`. It writes `<brand>_audit.xlsx` and `_grade_summary.json` into its own folder and nothing else. Aquaphor also reads `aquaphor_catalog.json` (see below).
+- Grading input is `ingredients_verbatim` only. The ingredients JSON was not edited. All normalization happens in memory.
+- Normalization: (1) strip parenthetical and bare percentages (`(41%)`, `41%`, `40.0%`, `(3 %)`); (2) drop `Purpose:` fragments and purpose notes, and the `Active:`, `Inactive:` and `Other ingredients:` labels; (3) strip trailing periods, asterisks, dashes and extra whitespace; (4) do not split on a comma followed by a digit, so `1,2-Hexanediol` stays whole; (5) split the printed `Panthenol Glycerin` (missing comma, Aquaphor Healing Ointment .25oz) into two names; (6) map scraper-side spelling variants (`1,2-Hexandiol`, `Ceteary Alcohol`, `Soidum Lactate`, `Sunflower Seed oil`, `Caprylic-Capric-Triglyceride`, `Glyceryl Glucosdie` and others); (7) treat HCl and HCI salt forms as the base name for the low-tox check; (8) split run-together forms such as `SodiumChloride`; (9) drop label prefixes such as `Synthetics:`.
+- Rubric rules applied as written: the five tiers and the tally; PFAS, heavy-metal, formaldehyde-releaser and carcinogen-in-leave-on escalations; the sulfate minimum of Avoid (Mild) in daily rinse-off products (rubric: shampoos); fatty alcohols and behentrimonium methosulfate exempt; naturally occurring components soft only when a source essential oil is listed; fragrance without disclosure a full flag; conditionals for titanium dioxide (cream not a concern, spray, powder or oral care flagged), zinc oxide (spray), mica (first ingredient), zeolite (powder), acetic acid (spray) and enzymes (powder).
+- Reference: `ref_compact.json` plus `ingredient_aliases.json`. Reference entries take precedence over the LOW TOX list. The LOW TOX list is the Eucerin overlay's list, unchanged. No low-tox entries were added from memory.
+- Product type comes from the brand category in the JSON. Anything not rinse-off (rinse-off skincare; body wash/shampoo/conditioner) is leave-on, per the "when in doubt" rule. Sunscreens are leave-on.
+
+### Catalog file
+- `aquaphor_catalog.json` holds the brand product URL and brand category for each of the 41 products, carried from the prior workbook. The ingredients JSON has neither field and was not edited. The grader merges them into `product_url` and `brand_category`, so the brand-site URLs are kept. Each row's `audit_notes` still names the retailer used for the INCI text.
+
+### Results
+- Graded 38 of 41. Three are not graded: Diaper Rash Cream 3 oz, Hand Mask and Healing Ointment 2 x 3.5 oz. No ingredient text was found for them on any source checked, and they are marked `ingredients not found`.
+- Tiers, 38 graded: Puberty Safe 3, Use Caution 2, Avoid (Mild) 0, Avoid (Moderate) 2, Avoid (High Priority Swap) 31.
+- Tier changes vs the last-pass workbook: 5 of 38.
+  - Aquaphor Lip Protectant + SPF (Dual Pack): Avoid (Moderate) → Avoid (High Priority Swap). Petrolatum (category 1) in a leave-on.
+  - Aquaphor Lip Repair (tube): Puberty Safe → Use Caution. Bisabolol as a full flag (no source essential oil listed).
+  - Aquaphor Lip Repair (Dual Pack): Puberty Safe → Use Caution. Same reason.
+  - Aquaphor Baby Wash & Shampoo (25.4 oz): Avoid (Mild) → Avoid (Moderate). Five flags, with polyquaternium-10 counted.
+  - Aquaphor Baby Wash & Shampoo (16.9 fl oz): Avoid (Mild) → Avoid (Moderate). Same reason.
+- Flagged-set or flag-count changes: 27 products. Main causes: bisabolol as a full flag (one more flag in 25 products); mineral oil counted in the Body Spray 6.2 oz (1 → 3 flags); disodium EDTA no longer flagged in the Foot Mask (now unknown; see open questions).
+- Escalations: carcinogen in a leave-on in 27 products; PFAS-noted ingredient (dimethicone) in 5 (the four Lip Repair Stick listings and the Foot Mask). Heavy metals: none.
+
+### Unknown queue
+- 40 unique names (previous workbook: 32), across 38 products and 190 occurrences. The full deduplicated list is in `aquaphor_content_mining.md`, under Raw data summary.
+- Why it grew: the old grader cleared botanical oil, extract, butter and wax names by pattern, and cleared ceramides, pantolactone spellings and other names by its own low-tox list. The rubric allows neither, so those names are unknown now. Ten names that the old list had were resolved (water, glycerin, caprylic/capric triglyceride, cholesterol, glyceryl stearate, octyldodecanol, tocopheryl acetate, phytosphingosine, pantolactone spelling, polyquaternium-10 as a flag).
+- No unknown name is flagged, so none of these moves a tier directly. Puberty Safe calls rest on the known subset: the two Naturally Inspired lip sticks have 8 and 9 unknown names, and the Diaper Rash Paste has 3.
+
+### Hand checks (3 products)
+1. **Advanced Hydration SPF 50 Sunscreen Spray** (Eucerin row, kept for the comma-split check) (percentages and the comma-split name). Read by hand from the verbatim text: four UV filters at category 2 each (avobenzone, homosalate, octisalate, octocrylene); styrene/acrylates copolymer [1,4,6]; butylene glycol [1,2]; diethylhexyl syringylidenemalonate [2]; VP/eicosene copolymer [1,2,6] (PFAS treated); 1,2-Hexandiol [1,2]; potassium hydroxide [4]. Ten flags. Category 1 is present in a leave-on, and PFAS applies. Expected High Priority Swap. The grader matches.
+2. **Hydrating Cleansing Gel, 6.8 FL OZ** (Puberty Safe). Coco-betaine, coco glucoside, sodium hyaluronate, sodium benzoate and sodium chloride are low tox. Glyceryl glucoside, acrylates/C10-30 alkyl acrylate crosspolymer and trisodium EDTA are unknown. Zero flags. The grader matches. The three unknown names are why this grade rests on the known subset.
+3. **Advanced Repair Cream, 16 OZ**. Five flags: dimethicone [2,6] (PFAS treated), pentylene glycol [1,2], phenoxyethanol [1,2,4,5,8] (category 1 in a leave-on), decylene glycol [1,2], sodium cetearyl sulfate [1,4,5]. Expected High Priority Swap on PFAS and carcinogen. The grader matches.
+
+2. **Aquaphor Healing Ointment® (7oz.)** (percentages). Verbatim: `Active Ingredients: Petrolatum (41%). Inactive Ingredients: Mineral Oil, Ceresin, Lanolin Alcohol, Panthenol, Glycerin, Bisabolol.` Read by hand: petrolatum [1], mineral oil [1], bisabolol [4] as a full flag. Ceresin and lanolin alcohol are unknown. Panthenol and glycerin are low tox. Category 1 in a leave-on gives High Priority Swap. Three flags. The grader matches.
+3. **Aquaphor® Lip Repair** (tube, Use Caution). Bisabolol is the only flagged ingredient (full flag, no essential oil listed). Nine names are unknown. One flag, Use Caution. The grader matches.
+4. **Aquaphor® Baby Wash & Shampoo (25.4oz.)** (rinse-off, sulfate). Sodium myreth sulfate [1,4,5] (sulfate); PEG-200 hydrogenated glyceryl palmate [1,2,4,5]; cocamidopropyl betaine [1,4]; bisabolol [4] as a full flag; polyquaternium-10 [2]. Five flags, Avoid (Moderate). Sea Salt is unknown. The grader matches.
+
+The comma-split check was run on the Eucerin 1,2-Hexandiol row (above). Aquaphor has no comma-in-name ingredient. Its one missing comma, `Panthenol Glycerin` in the Healing Ointment .25oz, is split by the grader.
+### Open rubric questions (not settled by the rubric text)
+1. **Bisabolol.** No source essential oil is listed beside it in these lists, so each instance is a full flag at its reference category (4). The rubric says "treat as full fragrance flags," which could mean categories 1, 2, 4 and 8. Applied here: reference categories. Affects Aquaphor directly (see its section).
+2. **PFAS note wording.** Applied to any flagged ingredient the reference notes as "PFAS treated." That includes dimethicone (15 Eucerin products) and unspecified silica (6 Eucerin sunscreens). The reference note reads "Hydrated silica is acceptable," so unspecified silica may not be intended as automatically PFAS. Mica ("may be PFAS treated") is not escalated. Titanium dioxide escalates only when it is itself flagged (spray or powder).
+3. **Heavy-metal stacking.** Escalates when a category 3 ingredient and a different flagged ingredient with category 1 or 2 are both present (for example iron oxides with synthetic fluorphlogopite in the tinted sunscreens and Eye Cream). If the rubric means one ingredient carrying categories 1 to 3 is enough, iron oxides alone would escalate. Not applied.
+4. **EDTA.** The reference's `edta` entry (category 4) carries "Watch for: -EDTA," but the rubric's watched-pattern list does not include EDTA. Not flagged. Disodium and trisodium EDTA stay unknown.
+5. **Names the reference does not list.** Botanical oils and extracts, ceramides, lanolin alcohol, ceresin and hydrocortisone stay unknown. The old Aquaphor grader cleared botanical names by pattern ("oil," "extract," "butter"), which the rubric does not allow. These names are not flagged, so they do not move a tier, but Puberty Safe calls rest on the known subset. Whether they should be low tox is a decision for Nina-Marie.
+6. **Scope of two rules.** Sunscreens are treated as leave-on, so the carcinogen rule applies to them. The sulfate minimum applies to all rinse-off types (rinse-off skincare and body wash/shampoo/conditioner), not only shampoos.
+7. **Watched patterns applied literally.** `-glycol` flags any name ending in glycol (decylene and pentylene glycol are now flagged). A polyquaternium name is treated as a `-nium` quat.
+8. **Reference file.** `ref_compact.json` truncates notes at about 100 characters. The full `ingredient_reference.json` has complete notes. One PFAS note (perfluorononyl) appears only in the full file, and no product in these two brands contains it. Recommend regenerating `ref_compact.json` from the full file.
+
+9. **Aquaphor-specific.** Bisabolol affects 27 of 38 products. Under the reference category (4), the two Lip Repair tubes are Use Caution. If the fragrance-level set (1, 2, 4, 8) applies, both move to High Priority Swap (category 1 in a leave-on), and every bisabolol product's flag count rises. This is the question with the largest effect on this brand.
+10. **Hydrocortisone (1%)** in Children's Itch Relief Ointment is an OTC active that the reference does not list. It stays unknown. The product is High Priority Swap anyway, from petrolatum and mineral oil.
+
+### Files written this pass
+- `aquaphor/_grader.py` (unified grader, identical to the Eucerin copy)
+- `aquaphor/aquaphor_catalog.json` (new: brand product URL and brand category per product, carried from the prior workbook)
+- `aquaphor/aquaphor_audit.xlsx` (41 rows, template columns; three rows marked ingredients not found)
+- `aquaphor/_grade_summary.json` (per-product detail behind these counts)
+- `aquaphor/aquaphor_content_mining.md` (regenerated)
+- `aquaphor/aquaphor_audit_log.md` (this section)
+- Not modified: `aquaphor_ingredients.json`. Nothing was committed, and no other folder was touched.
