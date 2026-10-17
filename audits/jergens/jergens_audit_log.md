@@ -488,3 +488,34 @@ None. No product in this brand has exactly one unknown ingredient.
 ### Files written this pass
 
 - `jergens/_grader.py` (D8 added), `jergens/jergens_audit.xlsx` (regenerated, 14 template columns), `jergens/_grade_summary.json` (regenerated), `jergens/jergens_content_mining.md`, and this log. The verbatim `jergens_ingredients.json` is unchanged.
+
+## Regrade 2026-10-17: changes 1 to 3 (practitioner decisions)
+
+Applied in this pass with the same `_grader.py` in every brand folder. The reference was edited only for change 2 (`ref_compact.json`). The reference PDF text was not edited.
+
+**Change 1: White Petrolatum USP is petrolatum.** Alias recorded in the grader's alias table (`TYPO_FIXES` in `_grader.py`): "white petrolatum usp", "white petrolatum (usp)" and "white petrolatum", each mapped to the reference entry `petrolatum` (reference category 1). Source: REF.txt line 789 (Petrolatum, category 1). Basis: practitioner decision; White Petrolatum USP is a purified grade of petroleum jelly. `ingredient_aliases.json` was not edited, because this pass writes only inside the brand folders and `ref_compact.json`.
+
+**Change 2: all polysorbates flagged.** `ref_compact.json`: added Polysorbate 20, 21, 40, 60, 61, 65, 80, 81 and 85, categories 1, 2, 4 and 5, note "Watch for: Polysorbate- (#)", transcribed from REF.txt lines 885 to 910. Removed one malformed key, `polysorbate 20 1 2 4 5 watch for: polysorbate- (#)`, a parser artifact with an empty category list that was the only prior polysorbate row. Reference entries: 434 before, 442 after. The grader also flags any other polysorbate number through a `^polysorbate` pattern, labeled "inferred". Nothing else in the reference changed.
+
+**Change 3: explicit ungradable exceptions.** Not applicable to this brand. The exception list holds Eucerin products only, and none of this brand's products is on it.
+
+**Tier changes in this brand:**
+- None. Every product keeps its 2026-10-16 tier.
+
+**Flag and unknown changes from change 2 (tiers unchanged unless listed above):**
+- Natural Glow + Firming Daily Moisturizer: flags 12 to 13 (Polysorbate 60); unknowns 18 to 17 (Polysorbate 60 no longer unknown); tier ungradable.
+- Natural Glow Instant Sun Drops: flags 6 to 7 (Polysorbate 20); unknowns 10 to 9 (Polysorbate 20 no longer unknown); tier ungradable.
+- Gotta Glow Bundle: flags 22 to 23 (Polysorbate 60); unknowns 44 to 43 (Polysorbate 60 no longer unknown); tier ungradable.
+- Natural Glow Daily Moisturizer: flags 8 to 9 (Polysorbate 60); unknowns 17 to 16 (Polysorbate 60 no longer unknown); tier ungradable.
+- Daily Glow Bundle: flags 20 to 21 (Polysorbate 60); unknowns 35 to 34 (Polysorbate 60 no longer unknown); tier ungradable.
+
+**D7 and D8 counts, recomputed from the new flags:**
+- D8 (exactly one unknown): 0 to 0.
+- D7 (two or more unknowns, ungradable): 31 to 31.
+- Unique unknown ingredient spellings in this brand: 143 to 141.
+
+**Hand checks (2026-10-17):**
+- Natural Glow Instant Sun Drops: Polysorbate 20 flagged [1,2,4,5], flags 6 to 7, unknowns 10 to 9, still ungradable. Agrees.
+- Natural Glow Daily Moisturizer: Polysorbate 60 flagged [1,2,4,5], flags 8 to 9, unknowns 17 to 16, still ungradable. Agrees. No White Petrolatum USP or Eucerin exception in this brand.
+
+**Tier counts after this pass:** ungradable: 38.

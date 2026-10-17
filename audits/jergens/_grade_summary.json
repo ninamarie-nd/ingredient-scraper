@@ -86,7 +86,7 @@
   {
    "product_name": "Natural Glow + Firming Daily Moisturizer",
    "tier": "ungradable",
-   "flag_count": 12,
+   "flag_count": 13,
    "product_type": "leave-on skincare",
    "flagged": [
     "Petrolatum",
@@ -100,6 +100,7 @@
     "Bht",
     "Propylparaben",
     "Ethylparaben",
+    "Polysorbate 60",
     "Butylene Glycol"
    ],
    "natural": [],
@@ -111,7 +112,6 @@
     "Stearic Acid",
     "Hydroxyethyl Acrylate/Sodium Acryloyldimethyl Taurate Copolymer",
     "Isohexadecane",
-    "Polysorbate 60",
     "Cocos Nucifera (Coconut) Water",
     "Hydrolyzed Collagen",
     "Polyimide-1",
@@ -850,12 +850,13 @@
   {
    "product_name": "Natural Glow Instant Sun Drops",
    "tier": "ungradable",
-   "flag_count": 6,
+   "flag_count": 7,
    "product_type": "leave-on skincare",
    "flagged": [
     "Alcohol Denat",
     "Propylene Glycol",
     "Propanediol",
+    "Polysorbate 20",
     "Fragrance",
     "Phenoxyethanol",
     "Linalool"
@@ -863,7 +864,6 @@
    "natural": [],
    "unknown": [
     "Dihydroxyacetone",
-    "Polysorbate 20",
     "Erythrulose",
     "Sodium Metabisulfite",
     "Tocopheryl Acetate",
@@ -913,7 +913,7 @@
   {
    "product_name": "Gotta Glow Bundle",
    "tier": "ungradable",
-   "flag_count": 22,
+   "flag_count": 23,
    "product_type": "other",
    "flagged": [
     "ALCOHOL DENAT",
@@ -937,6 +937,7 @@
     "Ceteareth-20",
     "Petrolatum",
     "BHT",
+    "Polysorbate 60",
     "Linalool"
    ],
    "natural": [],
@@ -971,7 +972,6 @@
     "Octyldodecyl Myristate",
     "Stearic Acid",
     "Isohexadecane",
-    "Polysorbate 60",
     "Olea Europaea (Olive) Fruit Oil",
     "Avena Sativa (Oat) Meal Extract",
     "Calendula Officinalis Flower Extract",
@@ -1129,7 +1129,7 @@
   {
    "product_name": "Natural Glow Daily Moisturizer",
    "tier": "ungradable",
-   "flag_count": 8,
+   "flag_count": 9,
    "product_type": "leave-on skincare",
    "flagged": [
     "Mineral Oil",
@@ -1139,7 +1139,8 @@
     "Steareth-2",
     "Fragrance",
     "Petrolatum",
-    "BHT"
+    "BHT",
+    "Polysorbate 60"
    ],
    "natural": [],
    "unknown": [
@@ -1151,7 +1152,6 @@
     "Hydroxyethyl Acrylate/Sodium Acryloyldimethyl Taurate Copolymer",
     "Isohexadecane",
     "Erythrulose",
-    "Polysorbate 60",
     "Olea Europaea (Olive) Fruit Oil",
     "Avena Sativa (Oat) Meal Extract",
     "Calendula Officinalis Flower Extract",
@@ -1240,7 +1240,7 @@
   {
    "product_name": "Daily Glow Bundle",
    "tier": "ungradable",
-   "flag_count": 20,
+   "flag_count": 21,
    "product_type": "other",
    "flagged": [
     "Octisalate",
@@ -1261,6 +1261,7 @@
     "Ceteareth-20",
     "Petrolatum",
     "BHT",
+    "Polysorbate 60",
     "Dipropylene Glycol",
     "Linalool"
    ],
@@ -1287,7 +1288,6 @@
     "Stearic Acid",
     "Hydroxyethyl Acrylate/Sodium Acryloyldimethyl Taurate Copolymer",
     "Isohexadecane",
-    "Polysorbate 60",
     "Olea Europaea (Olive) Fruit Oil",
     "Avena Sativa (Oat) Meal Extract",
     "Calendula Officinalis Flower Extract",

@@ -748,3 +748,37 @@ Kept a higher tier from other flags:
 ### Files written this pass
 
 - `eucerin/_grader.py` (D8 added), `eucerin/eucerin_audit.xlsx` (regenerated, 14 template columns), `eucerin/_grade_summary.json` (regenerated), `eucerin/eucerin_content_mining.md`, and this log. The verbatim `eucerin_ingredients.json` is unchanged.
+
+## Regrade 2026-10-17: changes 1 to 3 (practitioner decisions)
+
+Applied in this pass with the same `_grader.py` in every brand folder. The reference was edited only for change 2 (`ref_compact.json`). The reference PDF text was not edited.
+
+**Change 1: White Petrolatum USP is petrolatum.** Alias recorded in the grader's alias table (`TYPO_FIXES` in `_grader.py`): "white petrolatum usp", "white petrolatum (usp)" and "white petrolatum", each mapped to the reference entry `petrolatum` (reference category 1). Source: REF.txt line 789 (Petrolatum, category 1). Basis: practitioner decision; White Petrolatum USP is a purified grade of petroleum jelly. `ingredient_aliases.json` was not edited, because this pass writes only inside the brand folders and `ref_compact.json`.
+
+**Change 2: all polysorbates flagged.** `ref_compact.json`: added Polysorbate 20, 21, 40, 60, 61, 65, 80, 81 and 85, categories 1, 2, 4 and 5, note "Watch for: Polysorbate- (#)", transcribed from REF.txt lines 885 to 910. Removed one malformed key, `polysorbate 20 1 2 4 5 watch for: polysorbate- (#)`, a parser artifact with an empty category list that was the only prior polysorbate row. Reference entries: 434 before, 442 after. The grader also flags any other polysorbate number through a `^polysorbate` pattern, labeled "inferred". Nothing else in the reference changed.
+
+**Change 3: explicit ungradable exceptions.** `UNGRADABLE_EXCEPTIONS` in `_grader.py` lists five Eucerin products by exact name. Each is set to tier `ungradable` with the reason "source text unresolved" in audit_notes. Flag count, flagged ingredients and any unknown ingredient are kept as recorded. Products: Q10 Revitalize Night Cream; Daily Hydration Lotion with Broad Spectrum SPF 15; Daily Hydration Lotion; Eucerin Baby Eczema Relief Hydrogel; Baby Lotion.
+
+**Count check on change 3.** The brief named four Eucerin products. Its test, graded Use Caution with audit_status "needs review" (and, for the D8 rows, one unknown), matches five rows in the 2026-10-16 output. The grader applies that test as written. The fifth row, Daily Hydration Lotion with Broad Spectrum SPF 15, has no unknown: its Use Caution came from an Octisalate flag on the printed text "Octisalate (3.5)", which the audit marks unresolved. To apply four instead, remove that one entry from `UNGRADABLE_EXCEPTIONS` and regrade. This is the open decision for the practitioner.
+
+**Tier changes in this brand:**
+- Q10 Revitalize Night Cream: Use Caution to ungradable. Reason: change 3: explicit exception (source text unresolved; audit_status needs review).
+- Daily Hydration Lotion with Broad Spectrum SPF 15: Use Caution to ungradable. Reason: change 3: explicit exception (source text unresolved; audit_status needs review).
+- Daily Hydration Lotion: Use Caution to ungradable. Reason: change 3: explicit exception (source text unresolved; audit_status needs review).
+- Eucerin Baby Eczema Relief Hydrogel: Use Caution to ungradable. Reason: change 3: explicit exception (source text unresolved; audit_status needs review).
+- Baby Lotion: Use Caution to ungradable. Reason: change 3: explicit exception (source text unresolved; audit_status needs review).
+
+**Flag and unknown changes from change 2 (tiers unchanged unless listed above):**
+- None in this brand. No product carries a polysorbate or White Petrolatum USP.
+
+**D7 and D8 counts, recomputed from the new flags:**
+- D8 (exactly one unknown): 5 to 5.
+- D7 (two or more unknowns, ungradable): 40 to 40. Plus 5 products ungradable under change 3.
+- Unique unknown ingredient spellings in this brand: 133 to 133.
+
+**Hand checks (2026-10-17):**
+- No polysorbate and no White Petrolatum USP in this brand, so the polysorbate check is not applicable here. Changes 1 and 2 do not reach this brand.
+- Q10 Revitalize Night Cream: verbatim "Q10" only, 0 flags, one unknown (Q10). Exception applies: ungradable, unknown kept. Agrees.
+- Daily Hydration Lotion with Broad Spectrum SPF 15: verbatim "Octisalate (3.5)", Octisalate flagged [2], no unknown. Exception applies: ungradable, flag kept. Agrees.
+
+**Tier counts after this pass:** ungradable: 45; Avoid (High Priority Swap): 1; Avoid (Mild): 2.

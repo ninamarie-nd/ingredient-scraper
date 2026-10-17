@@ -1,6 +1,6 @@
 # Jergens Audit — Content Mining Report
 
-**Date audited:** 2026-10-16 (regraded with the unified grader under practitioner decisions D1 to D8)
+**Date audited:** 2026-10-16 (regraded 2026-10-17 under practitioner decisions D1 to D8 and change 2, polysorbate flags)
 **Products audited:** 38 catalog items: 0 graded, 31 ungradable (two or more unknown ingredients), 7 ungradable (no ingredient text)
 **Source:** https://us.jergens.com/ (Shop All and the category collections)
 
@@ -20,7 +20,7 @@
 - Avoid (High Priority Swap): 0 (0%)
 - Ungradable, counted separately: 38 (100%), of which 31 carry two or more unknown ingredients (D7) and 7 have no ingredient text
 
-**Single most-flagged product:** Natural Glow Wet Skin Moisturizer — 15 partial flags, including Fragrance (no disclosure) and Dimethicone. The highest overall count is the Gotta Glow Bundle at 22, but it merges several product lists, so it is not a product count.
+**Single most-flagged product:** Natural Glow Wet Skin Moisturizer — 15 partial flags, including Fragrance (no disclosure) and Dimethicone. The highest overall count is the Gotta Glow Bundle at 23, but it merges several product lists, so it is not a product count.
 
 **Cleanest product with text (if any):** Sparkling Berry Shea Fusion — 4 partial flags (Fragrance, Dimethicone, Ceteareth-20, Phenoxyethanol), 10 unknowns.
 
@@ -56,31 +56,31 @@
 **Best vs worst within categories (with text):**
 - Shea Fusions: Best = Sparkling Berry Shea Fusion (4 partial flags, 10 unknowns). Worst = Lavender Dreams Shea Fusion (8 partial flags, 11 unknowns).
 - Everyday Lotions: Best = Original Scent Moisturizer (6 partial flags, 7 unknowns). Worst = Nourishing Honey Moisturizer (11 partial flags, 11 unknowns).
-- Buildable Glow: Best = Natural Glow Hydra Gel (6 partial flags, 10 unknowns). Worst = Natural Glow + Firming Daily Moisturizer (12 partial flags, 18 unknowns).
-- Vacation Skin (sun-related): Best = Natural Glow Instant Sun Drops (6 partial flags, 10 unknowns). Worst = Natural Glow Instant Sun Moisturizer + Bronzer (14 partial flags, 25 unknowns).
+- Buildable Glow: Best = Natural Glow Hydra Gel (6 partial flags, 10 unknowns). Worst = Natural Glow + Firming Daily Moisturizer (13 partial flags, 17 unknowns).
+- Vacation Skin (sun-related): Best = Natural Glow Instant Sun Drops (7 partial flags, 9 unknowns). Worst = Natural Glow Instant Sun Moisturizer + Bronzer (14 partial flags, 25 unknowns).
 - In-shower: Best = Wet Skin Moisturizer Coconut Oil (6 partial flags, 6 unknowns). Worst = Natural Glow Wet Skin Moisturizer (15 partial flags, 14 unknowns).
 - Bundles are excluded from this comparison because their lists are merged.
 
 **Similar marketing, different grades:**
-- Natural Glow Instant Sun Drops (6 partial flags) and Natural Glow Instant Sun Moisturizer + Bronzer (14 partial flags) share the "Natural Glow Instant Sun" name. The moisturizer-plus-bronzer adds a shade-specific bronzing list.
+- Natural Glow Instant Sun Drops (7 partial flags) and Natural Glow Instant Sun Moisturizer + Bronzer (14 partial flags) share the "Natural Glow Instant Sun" name. The moisturizer-plus-bronzer adds a shade-specific bronzing list.
 - Wet Skin Moisturizer Coconut Oil (6) and Wet Skin Moisturizer Shea Oil (7) share the same format. The coconut-oil version lists coconut oil, which the reference marks LOW TOX under D4 and does not flag.
 
 **Cleanest in each category (with text):**
 - Shea Fusions: Sparkling Berry Shea Fusion (4 partial flags).
 - Everyday Lotions: Original Scent Moisturizer (6 partial flags).
 - Buildable Glow: Natural Glow Hydra Gel (6 partial flags).
-- Vacation Skin: Natural Glow Instant Sun Drops (6 partial flags).
+- Vacation Skin: Natural Glow Instant Sun Drops (7 partial flags).
 - In-shower: Wet Skin Moisturizer Coconut Oil (6 partial flags).
 
 **Content angles for Section C:**
-1. "Two Natural Glow Instant Sun products, 6 partial flags and 14. The name is the same; the bronzer makes the difference."
+1. "Two Natural Glow Instant Sun products, 7 partial flags and 14. The name is the same; the bronzer makes the difference."
 2. "The Coconut Oil wet-skin moisturizer lists coconut oil, which the reference marks low tox. Its partial flags still come from fragrance and parabens." Keep it factual.
 
 ---
 
 ## Raw data summary
 
-**Unknown ingredients (manual review queue):** 143 distinct names. Most frequent: Sodium Hydroxide (20 products), Tocopheryl Acetate (20), Stearic Acid (19), Arginine (14), Acrylates/C10-30 Alkyl Acrylate Crosspolymer (14), Butyrospermum Parkii (Shea) Butter (11), Ethylhexyl Isononanoate (10), Hydroxyacetophenone (10). The full deduplicated list is in the Regrade section of `jergens_audit_log.md`.
+**Unknown ingredients (manual review queue):** 141 distinct names. Most frequent: Sodium Hydroxide (20 products), Tocopheryl Acetate (20), Stearic Acid (19), Arginine (14), Acrylates/C10-30 Alkyl Acrylate Crosspolymer (14), Butyrospermum Parkii (Shea) Butter (11), Ethylhexyl Isononanoate (10), Hydroxyacetophenone (10). The full deduplicated list is in the Regrade section of `jergens_audit_log.md`.
 
 **Parser artifacts (not ingredients):** Bundle lists contain "||" separators, bracketed shade names (for example "[Glow Daily Moisturizer] Water"), repeated "FRAGRANCE INGREDIENTS:" blocks, and fragments such as "Caramel FRAGRANCE", "Ext. Violet 2", and "Ethylparaben With an illuminating HYDRALUCENCE blend". These stay unknown under D4, which is why the bundles are ungradable. Recapture the single-product pages.
 
@@ -89,3 +89,5 @@
 **Old files in this folder:** `_grader_jergens.py`, `_master.py`, `_save.py`, and `_master_list.json` predate the unified grader. `_grader_jergens.py` is superseded by `_grader.py` and was not run.
 
 **D8 (2026-10-16):** No product in this brand has exactly one unknown ingredient, so the Use Caution floor changes nothing here.
+
+**Polysorbate flags (change 2, 2026-10-17):** Polysorbate 20 is flagged in Natural Glow Instant Sun Drops, and Polysorbate 60 in Natural Glow + Firming Daily Moisturizer, Natural Glow Daily Moisturizer, Gotta Glow Bundle and Daily Glow Bundle. No Jergens tier changed: every product still has two or more unknown ingredients.

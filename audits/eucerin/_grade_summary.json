@@ -2,11 +2,11 @@
  "brand": "eucerin",
  "tier_counts": {
   "Puberty Safe": 0,
-  "Use Caution": 5,
+  "Use Caution": 0,
   "Avoid (Mild)": 2,
   "Avoid (Moderate)": 0,
   "Avoid (High Priority Swap)": 1,
-  "ungradable": 40
+  "ungradable": 45
  },
  "rows": [
   {
@@ -530,7 +530,7 @@
   },
   {
    "product_name": "Q10 Revitalize Night Cream",
-   "tier": "Use Caution",
+   "tier": "ungradable",
    "flag_count": 0,
    "product_type": "leave-on skincare",
    "flagged": [],
@@ -1219,7 +1219,7 @@
   },
   {
    "product_name": "Daily Hydration Lotion with Broad Spectrum SPF 15",
-   "tier": "Use Caution",
+   "tier": "ungradable",
    "flag_count": 1,
    "product_type": "sunscreen",
    "flagged": [
@@ -1232,7 +1232,7 @@
   },
   {
    "product_name": "Daily Hydration Lotion",
-   "tier": "Use Caution",
+   "tier": "ungradable",
    "flag_count": 0,
    "product_type": "leave-on skincare",
    "flagged": [],
@@ -1291,7 +1291,7 @@
   },
   {
    "product_name": "Eucerin Baby Eczema Relief Hydrogel",
-   "tier": "Use Caution",
+   "tier": "ungradable",
    "flag_count": 0,
    "product_type": "leave-on skincare",
    "flagged": [],
@@ -1376,7 +1376,7 @@
   },
   {
    "product_name": "Baby Lotion",
-   "tier": "Use Caution",
+   "tier": "ungradable",
    "flag_count": 0,
    "product_type": "leave-on skincare",
    "flagged": [],

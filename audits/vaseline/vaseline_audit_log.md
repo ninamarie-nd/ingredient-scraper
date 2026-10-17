@@ -506,3 +506,34 @@ Kept a higher tier from other flags:
 ### Files written this pass
 
 - `vaseline/_grader.py` (D8 added), `vaseline/vaseline_audit.xlsx` (regenerated, 14 template columns), `vaseline/_grade_summary.json` (regenerated), `vaseline/vaseline_content_mining.md`, and this log. The verbatim `vaseline_ingredients.json` is unchanged.
+
+## Regrade 2026-10-17: changes 1 to 3 (practitioner decisions)
+
+Applied in this pass with the same `_grader.py` in every brand folder. The reference was edited only for change 2 (`ref_compact.json`). The reference PDF text was not edited.
+
+**Change 1: White Petrolatum USP is petrolatum.** Alias recorded in the grader's alias table (`TYPO_FIXES` in `_grader.py`): "white petrolatum usp", "white petrolatum (usp)" and "white petrolatum", each mapped to the reference entry `petrolatum` (reference category 1). Source: REF.txt line 789 (Petrolatum, category 1). Basis: practitioner decision; White Petrolatum USP is a purified grade of petroleum jelly. `ingredient_aliases.json` was not edited, because this pass writes only inside the brand folders and `ref_compact.json`.
+
+**Change 2: all polysorbates flagged.** `ref_compact.json`: added Polysorbate 20, 21, 40, 60, 61, 65, 80, 81 and 85, categories 1, 2, 4 and 5, note "Watch for: Polysorbate- (#)", transcribed from REF.txt lines 885 to 910. Removed one malformed key, `polysorbate 20 1 2 4 5 watch for: polysorbate- (#)`, a parser artifact with an empty category list that was the only prior polysorbate row. Reference entries: 434 before, 442 after. The grader also flags any other polysorbate number through a `^polysorbate` pattern, labeled "inferred". Nothing else in the reference changed.
+
+**Change 3: explicit ungradable exceptions.** Not applicable to this brand. The exception list holds Eucerin products only, and none of this brand's products is on it.
+
+**Tier changes in this brand:**
+- Vaseline® Healing Jelly Original: Use Caution to Avoid (High Priority Swap). Reason: change 1: White Petrolatum USP read as petrolatum (category 1), carcinogen-in-leave-on escalation.
+- Vaseline® Lip Therapy® Advanced Healing Tube: Use Caution to Avoid (High Priority Swap). Reason: change 1: White Petrolatum USP read as petrolatum (category 1), carcinogen-in-leave-on escalation.
+
+**Flag and unknown changes from change 2 (tiers unchanged unless listed above):**
+- Vaseline® Intensive Care™ Hydra Replenish Hand Crème: flags 11 to 12 (Polysorbate 80); unknowns 12 to 11 (Polysorbate 80 no longer unknown); tier ungradable.
+- Vaseline® Healing Jelly Original: flags 0 to 1 (White Petrolatum Usp); unknowns 1 to 0 (White Petrolatum Usp no longer unknown); tier Avoid (High Priority Swap).
+- Vaseline® Lip Therapy® Advanced Healing Tube: flags 0 to 1 (White Petrolatum USP); unknowns 1 to 0 (White Petrolatum USP no longer unknown); tier Avoid (High Priority Swap).
+- Vaseline® Intensive Care™ Cocoa Body Butter: flags 15 to 16 (Polysorbate 80); unknowns 24 to 23 (Polysorbate 80 no longer unknown); tier ungradable.
+
+**D7 and D8 counts, recomputed from the new flags:**
+- D8 (exactly one unknown): 4 to 2.
+- D7 (two or more unknowns, ungradable): 32 to 32.
+- Unique unknown ingredient spellings in this brand: 119 to 116.
+
+**Hand checks (2026-10-17):**
+- Intensive Care Hydra Replenish Hand Crème: Polysorbate 80 is in the verbatim list and flags [1,2,4,5]. Flag count 11 to 12, unknowns 12 to 11. Still ungradable (D7). Agrees with the manual read.
+- Healing Jelly Original: verbatim "White Petrolatum Usp (100%)" reads as petrolatum, category 1, one flag in a leave-on, so the carcinogen-in-leave-on escalation gives Avoid (High Priority Swap). Agrees.
+
+**Tier counts after this pass:** ungradable: 48; Avoid (High Priority Swap): 4.

@@ -63,6 +63,9 @@ TYPO_FIXES = {
     # D4 (practitioner, 2026-10-16): these name variants map to reference entries that are LOW TOX.
     'cocos nucifera (coconut) oil': 'coconut oil',
     'ceramide np': 'ceramide', 'ceramide ap': 'ceramide', 'ceramide ng': 'ceramide', 'ceramide 3': 'ceramide',
+    # Change 1 (practitioner, 2026-10-17): White Petrolatum USP is a purified grade of petrolatum. It maps to the
+    # reference entry 'petrolatum' (REF.txt line 789, category 1). Recorded here as a grader alias, not in the reference PDF text.
+    'white petrolatum usp': 'petrolatum', 'white petrolatum (usp)': 'petrolatum', 'white petrolatum': 'petrolatum',
 }
 ALIASES.update(TYPO_FIXES)
 
@@ -84,6 +87,19 @@ FATTY_ALC = ['cetearyl alcohol', 'cetyl alcohol', 'stearyl alcohol', 'behenyl al
 #               Puberty Safe it grades Use Caution; otherwise the other flags decide.
 EXCEPTIONS = {'water': 'clear', 'aqua': 'clear', 'eau': 'clear', 'glycerin': 'caution'}
 WATER_PARTS = {'water', 'aqua', 'eau'}
+
+# Change 3 (practitioner, 2026-10-17): explicit exception list. These Eucerin products are Use Caution in the 2026-10-16
+# grade and have audit_status "needs review" (source text unresolved). They move to ungradable. Flags, flagged
+# ingredients and the unknown ingredient are kept as recorded; only the tier changes. Keyed by brand folder, then exact product name.
+UNGRADABLE_EXCEPTIONS = {
+    'eucerin': {
+        'Q10 Revitalize Night Cream': 'source text unresolved',
+        'Daily Hydration Lotion with Broad Spectrum SPF 15': 'source text unresolved',
+        'Daily Hydration Lotion': 'source text unresolved',
+        'Eucerin Baby Eczema Relief Hydrogel': 'source text unresolved',
+        'Baby Lotion': 'source text unresolved',
+    },
+}
 
 # Iron oxides (reference: categories 1, 2 and 3; PFAS treated). D2 (2026-10-16): heavy-metal escalation applies and the
 # PFAS tag stands. The plain "iron oxides" entry is an alias of CI 77491/77492/77499 per its reference note, so it carries the same tag.
@@ -123,6 +139,9 @@ PATTERN_WATCH = [
     (re.compile(r'^aluminum|^aluminium', re.I), [3], 'aluminum'),
     (re.compile(r'^mineral oil$|^petrolatum$|^petroleum$|^paraffin$', re.I), [1], 'petroleum'),
     (re.compile(r'^cocamidopropyl', re.I), [1, 4], 'cocamidopropyl'),
+    # Change 2 (practitioner, 2026-10-17): any polysorbate is flagged. The nine numbers in REF.txt lines 885 to 910 resolve
+    # through the reference entries first; this pattern catches any other polysorbate number.
+    (re.compile(r'^polysorbate\b', re.I), [1, 2, 4, 5], 'polysorbate'),
 ]
 
 # Ingredients whose flag depends on product form (rubric product-type conditionals).
@@ -528,12 +547,25 @@ def main():
             continue
         g = grade(name, ptype, category, verbatim)
         tier = g['tier']
+        rule_notes = g['rule_notes']
+        exc_reason = UNGRADABLE_EXCEPTIONS.get(BRAND, {}).get(name)
+        if exc_reason and tier != UNGRADABLE:
+            # Change 3: explicit exception. The D8 note describes a Use Caution floor that no longer applies.
+            tier = UNGRADABLE
+            rule_notes = [n for n in rule_notes if not n.startswith('D8:')]
+            note = f'Moved to ungradable: {exc_reason} (practitioner exception, 2026-10-17, change 3).'
+            if g['unknown']:
+                note += f" Unknown kept: {', '.join(g['unknown'])}."
+            rule_notes.append(note)
         tier_counts[tier] += 1
         if tier == UNGRADABLE:
             status = 'needs review'
         flagged, natural, unknown = g['flagged'], g['natural'], g['unknown']
         esc_str = ', '.join(g['esc'])
-        if tier == UNGRADABLE:
+        if tier == UNGRADABLE and exc_reason:
+            summary_txt = (f"Ungradable: {exc_reason} (practitioner exception, 2026-10-17). "
+                           f"Partial flags recorded: {len(flagged)}.")
+        elif tier == UNGRADABLE:
             summary_txt = (f"Ungradable: {len(unknown)} unknown ingredients remain (D7, two or more), so no tier is assigned. "
                            f"Partial flags recorded: {len(flagged)}.")
         elif flagged:
@@ -557,7 +589,7 @@ def main():
         same = [x for x in text_map.get(verbatim, []) if x != name]
         if same:
             notes.append(f"Identical printed text on {len(same)} other product(s): {'; '.join(same[:4])}.")
-        notes.extend(g['rule_notes'])
+        notes.extend(rule_notes)
         if p.get('ingredient_source'):
             notes.append(f"Ingredient source: {p['ingredient_source']}.")
         row = [name, url, category, ptype, verbatim, tier, len(flagged), fmt_flags(flagged), fmt_nat(natural),

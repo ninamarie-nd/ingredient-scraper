@@ -2,10 +2,10 @@
  "brand": "vaseline",
  "tier_counts": {
   "Puberty Safe": 0,
-  "Use Caution": 2,
+  "Use Caution": 0,
   "Avoid (Mild)": 0,
   "Avoid (Moderate)": 0,
-  "Avoid (High Priority Swap)": 2,
+  "Avoid (High Priority Swap)": 4,
   "ungradable": 48
  },
  "rows": [
@@ -182,7 +182,7 @@
   {
    "product_name": "Vaseline® Intensive Care™ Hydra Replenish Hand Crème",
    "tier": "ungradable",
-   "flag_count": 11,
+   "flag_count": 12,
    "product_type": "leave-on skincare",
    "flagged": [
     "Dimethicone",
@@ -192,6 +192,7 @@
     "Petrolatum",
     "Fragrance (Parfum)",
     "Methylparaben",
+    "Polysorbate 80",
     "Carbomer",
     "Propylparaben",
     "Coumarin",
@@ -204,7 +205,6 @@
     "Sodium Acrylate/Sodium Acryloyldimethyl Taurate Copolymer",
     "Isohexadecane",
     "Glyceryl Stearate",
-    "Polysorbate 80",
     "Disodium Edta",
     "Caramel",
     "Theobroma Cacao (Cocoa) Seed Butter",
@@ -220,15 +220,17 @@
   },
   {
    "product_name": "Vaseline® Healing Jelly Original",
-   "tier": "Use Caution",
-   "flag_count": 0,
+   "tier": "Avoid (High Priority Swap)",
+   "flag_count": 1,
    "product_type": "leave-on skincare",
-   "flagged": [],
-   "natural": [],
-   "unknown": [
+   "flagged": [
     "White Petrolatum Usp"
    ],
-   "esc": [],
+   "natural": [],
+   "unknown": [],
+   "esc": [
+    "carcinogen in leave-on"
+   ],
    "status": "complete"
   },
   {
@@ -251,15 +253,17 @@
   },
   {
    "product_name": "Vaseline® Lip Therapy® Advanced Healing Tube",
-   "tier": "Use Caution",
-   "flag_count": 0,
+   "tier": "Avoid (High Priority Swap)",
+   "flag_count": 1,
    "product_type": "lip product",
-   "flagged": [],
-   "natural": [],
-   "unknown": [
+   "flagged": [
     "White Petrolatum USP"
    ],
-   "esc": [],
+   "natural": [],
+   "unknown": [],
+   "esc": [
+    "carcinogen in leave-on"
+   ],
    "status": "complete"
   },
   {
@@ -586,7 +590,7 @@
   {
    "product_name": "Vaseline® Intensive Care™ Cocoa Body Butter",
    "tier": "ungradable",
-   "flag_count": 15,
+   "flag_count": 16,
    "product_type": "leave-on skincare",
    "flagged": [
     "Petrolatum",
@@ -601,6 +605,7 @@
     "PEG-80",
     "PEG-90",
     "Phenoxyethanol",
+    "Polysorbate 80",
     "Propylparaben",
     "Steareth-75",
     "Triethanolamine"
@@ -624,7 +629,6 @@
     "Maltodextrin",
     "Microcrystalline Wax",
     "Diisostearate",
-    "Polysorbate 80",
     "Potato Starch Modified",
     "Sodium Acrylate/Sodium Acryloyldimethyl Taurate Copolymer",
     "Sorbitan Monooleate",

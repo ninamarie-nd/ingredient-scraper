@@ -1,6 +1,6 @@
 # Aquaphor Audit — Content Mining Report
 
-**Date audited:** 2026-10-16 (regraded with the unified grader under practitioner decisions D1 to D8)
+**Date audited:** 2026-10-16 (regraded 2026-10-17 under practitioner decisions D1 to D8 and changes 1 to 3; no Aquaphor product changed tier or flags)
 **Products audited:** 41 listed: 2 graded, 36 ungradable (two or more unknown ingredients), 3 ungradable (no ingredient text)
 **Source:** https://www.aquaphorus.com/ (product names and retailer-printed ingredient lists; sources per row in the audit log). aquaphor.com is an unrelated company and was not used.
 
@@ -82,3 +82,5 @@
 **Naming decisions:** Lanolin Alcohol (D4) is the largest single decision for this brand. Under the reference it is not listed, so it stays unknown until you decide otherwise.
 
 **D8 (2026-10-16, one unknown ingredient):** Two Baby Wash & Shampoo listings (25.4 oz and 16.9 fl oz) moved from ungradable to Avoid (Moderate) on one unknown, Sea Salt, with five flags. No product moved to Use Caution.
+
+**Changes 1 to 3 (2026-10-17):** No Aquaphor product was affected. None has polysorbate or White Petrolatum USP, and none is on the Eucerin exception list. The Avoid (Moderate) and ungradable counts are unchanged.

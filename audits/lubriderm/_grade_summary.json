@@ -70,12 +70,13 @@
   {
    "product_name": "Advanced Therapy Lotion Fragrance-Free",
    "tier": "ungradable",
-   "flag_count": 5,
+   "flag_count": 6,
    "product_type": "leave-on skincare",
    "flagged": [
     "Mineral Oil",
     "Dimethicone",
     "Carbomer",
+    "Polysorbate 60",
     "Ceteareth-20",
     "Phenoxyethanol"
    ],
@@ -87,7 +88,6 @@
     "Avena Sativa (Oat) Kernel Oil",
     "Palmitic Acid",
     "Stearic Acid",
-    "Polysorbate 60",
     "Lecithin",
     "Sodium Hydroxide"
    ],
@@ -122,12 +122,13 @@
   {
    "product_name": "Intense Skin Repair Lotion",
    "tier": "ungradable",
-   "flag_count": 6,
+   "flag_count": 7,
    "product_type": "leave-on skincare",
    "flagged": [
     "Mineral Oil",
     "Dimethicone",
     "Carbomer",
+    "Polysorbate 60",
     "Ceteareth-20",
     "Phenoxyethanol",
     "Fragrance"
@@ -144,7 +145,6 @@
     "Magnesium Aspartate",
     "Palmitic Acid",
     "Stearic Acid",
-    "Polysorbate 60",
     "Lecithin",
     "Disodium EDTA",
     "Sodium Hydroxide"

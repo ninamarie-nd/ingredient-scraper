@@ -1,6 +1,6 @@
 # Lubriderm Audit — Content Mining Report
 
-**Date audited:** 2026-10-16 (regraded with the unified grader under practitioner decisions D1 to D8)
+**Date audited:** 2026-10-16 (regraded 2026-10-17 under practitioner decisions D1 to D8 and change 2, polysorbate flags)
 **Products audited:** 7 listed: 0 graded, 6 ungradable (two or more unknown ingredients), 1 ungradable (no ingredient text)
 **Source:** https://www.lubriderm.com/
 
@@ -20,7 +20,7 @@
 - Avoid (High Priority Swap): 0 (0%)
 - Ungradable, counted separately: 7 (100%), of which 6 carry two or more unknown ingredients (D7) and 1 has no ingredient text
 
-**Single most-flagged product:** Intense Skin Repair Lotion — 6 partial flags (Mineral Oil, Dimethicone, Carbomer, Ceteareth-20, Phenoxyethanol, Fragrance). Its list also includes a Polysorbate entry that the reference (REF.txt) marks as a flag but the grader's compiled reference does not, so the partial count is likely to rise.
+**Single most-flagged product:** Intense Skin Repair Lotion — 7 partial flags (Mineral Oil, Dimethicone, Carbomer, Polysorbate 60, Ceteareth-20, Phenoxyethanol, Fragrance). The Polysorbate 60 flag was added under change 2 (2026-10-17), from REF.txt (categories 1, 2, 4 and 5).
 
 **Cleanest product with text (if any):** Advanced Therapy Body Wash Fragrance-Free — 3 partial flags (Cocamidopropyl Betaine, PEG-80 Sorbitan Laurate, Sodium Cocoyl Isethionate), 6 unknowns. This is the lowest partial count with text, not a clean grade.
 
@@ -54,7 +54,7 @@
 ## Section C — Comparison angles
 
 **Best vs worst within categories:**
-- Lotions: Best (partial) = Daily Moisture Lotion Fragrance-Free (4 partial flags, 10 unknowns). Worst (partial) = Intense Skin Repair Lotion (6 partial flags, 14 unknowns). Advanced Therapy Lotion Fragrance-Free sits between them (5 partial flags, 9 unknowns).
+- Lotions: Best (partial) = Daily Moisture Lotion Fragrance-Free (4 partial flags, 10 unknowns). Worst (partial) = Intense Skin Repair Lotion (7 partial flags, 13 unknowns). Advanced Therapy Lotion Fragrance-Free sits between them (6 partial flags, 8 unknowns).
 - Body washes: Best (partial) = Advanced Therapy Body Wash Fragrance-Free (3 partial flags, 6 unknowns). Worst (partial) = Daily Moisture Body Wash Lightly Scented (5 partial flags, 6 unknowns).
 - Bundle: no ingredient text, so not compared.
 
@@ -67,15 +67,15 @@
 
 **Content angles for Section C:**
 1. "Advanced Therapy Body Wash Fragrance-Free versus Daily Moisture Body Wash Lightly Scented: 3 partial flags versus 5. The difference is the fragrance." Keep it to the printed lists.
-2. "Intense Skin Repair Lotion has the most partial flags in the line, at 6." Note the Polysorbate gap first.
+2. "Intense Skin Repair Lotion has the most partial flags in the line, at 7, including Polysorbate 60."
 
 ---
 
 ## Raw data summary
 
-**Unknown ingredients (manual review queue):** 19 distinct names. Most frequent: Sodium Hydroxide (6 products), Avena Sativa (Oat) Kernel Oil (6), Butyrospermum Parkii (Shea) Butter (4), Caprylic/Capric Triglyceride (4), Disodium EDTA (3), Magnesium Aspartate (3), Zinc Gluconate (3), Copper Gluconate (3). The full deduplicated list is in the Regrade section of `lubriderm_audit_log.md`.
+**Unknown ingredients (manual review queue):** 18 distinct names. Most frequent: Sodium Hydroxide (6 products), Avena Sativa (Oat) Kernel Oil (6), Butyrospermum Parkii (Shea) Butter (4), Caprylic/Capric Triglyceride (4), Disodium EDTA (3), Magnesium Aspartate (3), Zinc Gluconate (3), Copper Gluconate (3). The full deduplicated list is in the Regrade section of `lubriderm_audit_log.md`.
 
-**Reference gap:** Polysorbate 20, 60 and 80 are in REF.txt (categories 1, 2, 4 and 5) but missing from the compiled reference. Under this grader they are unknown, which makes Intense Skin Repair Lotion and Advanced Therapy Lotion Fragrance-Free ungradable. Merging them into the compiled reference would add partial flags and would not make any Lubriderm product gradable.
+**Reference gap (closed under change 2):** Polysorbate 60 is now in the compiled reference, transcribed from REF.txt lines 885 to 910 (categories 1, 2, 4 and 5). It is flagged in Intense Skin Repair Lotion and Advanced Therapy Lotion Fragrance-Free. Neither product becomes gradable: each still has at least two unknown ingredients.
 
 **Ingredient text not captured:** Daily Moisture Lotion Fragrance-Free (24 fl oz, 2-count + 6 fl oz Travel Size) has no printed ingredient list in the data.
 
