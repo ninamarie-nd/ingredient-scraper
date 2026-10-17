@@ -1,43 +1,330 @@
 {
- "Aquaphor® Moisturizing Cream (8oz.)": "Water, Glycerin, Caprylic/Capric Triglyceride",
- "Aquaphor® Hydrating Daily Lotion (3oz.)": "Water, Glycerin, Cetearyl Alcohol",
- "Aquaphor® Hydrating Daily Lotion (8oz.)": "Water, Glycerin, Cetearyl Alcohol",
- "Aquaphor® Hydrating Daily Lotion (16oz.)": "Water, Glycerin, Cetearyl Alcohol",
- "Aquaphor® Moisturizing Cream (1.89oz.)": "Water, Glycerin, Caprylic/Capric Triglyceride",
- "Aquaphor® Moisturizing Cream (16oz.)": "Water, Glycerin, Caprylic/Capric Triglyceride",
- "Aquaphor® Lip Repair Stick Naturally Inspired Aloe Vera Single Pack": "Octyldodecanol, Ricinus Communis Seed Oil, Butyrospermum Parkii (Shea) Butter",
- "Aquaphor® Lip Repair Stick Naturally Inspired Coconut Single Pack": "Octyldodecanol, Ricinus Communis Seed Oil, Butyrospermum Parkii (Shea) Butter",
- "Aquaphor® Baby Healing Ointment (7oz.)": "Petrolatum (41%)",
- "Aquaphor® Diaper Rash Paste (3.5oz.)": "Zinc Oxide (40%)",
- "Aquaphor® Lip Repair Stick": "Octyldodecanol, Ricinus Communis Seed Oil, Beeswax",
- "Aquaphor® Lip Repair Stick + Sunscreen": "Avobenzone (3%), Homosalate (9%), Octisalate (4.5%), Octocrylene (9%)",
- "Aquaphor® Lip Protectant + SPF (Dual Pack)": "Petrolatum (31%), Avobenzone (3%), Octinoxate (6.75%), Octisalate (4.5%), Octocrylene (2%), Oxybenzone (5.4%)",
- "Aquaphor® Lip Repair Stick + Sunscreen (Dual Pack)": "Avobenzone (3%), Homosalate (9%), Octisalate (4.5%), Octocrylene (9%)",
- "Aquaphor® Children's Healing Ointment (14oz.)": "Petrolatum (41%)",
- "Aquaphor® Lip Repair": "Octyldodecanol, C18-38 Alkyl Hydroxystearoyl Stearate, Ricinus Communis Seed Oil",
- "Aquaphor® Lip Repair Stick (Dual Pack)": "Octyldodecanol, Ricinus Communis Seed Oil, Beeswax",
- "Aquaphor® Baby Healing Balm Stick (0.65oz.)": "Petrolatum (30%)",
- "Aquaphor® Baby Wash & Shampoo (25.4oz.)": "Water, Decyl Glucoside, PEG-200 Hydrogenated Glyceryl Palmate",
- "Aquaphor Baby Sensitive Lotion, Baby Lotion, 3 Fl Oz": "Water, Glycerin, Cetearyl Alcohol",
- "Aquaphor Baby Sensitive Lotion, Baby Lotion, 8 Fl Oz": "Water, Glycerin, Cetearyl Alcohol",
- "Aquaphor® Baby Healing Ointment (3oz.)": "Petrolatum (41%)",
- "Aquaphor® Baby Healing Ointment (14oz.)": "Petrolatum (41%)",
- "Aquaphor® Diaper Rash Cream (3oz.)": "Zinc Oxide (15%)",
- "Aquaphor® Lip Protectant + SPF 30": "Petrolatum (31%), Avobenzone (3%), Octinoxate (6.75%), Octisalate (4.5%), Octocrylene (2%), Oxybenzone (5.4%)",
- "Aquaphor® Lip Repair (Dual Pack)": "Octyldodecanol, C18-38 Alkyl Hydroxystearoyl Stearate, Ricinus Communis Seed Oil",
- "Aquaphor® Baby Healing Ointment (2x.35oz.)": "Petrolatum (41%)",
- "Aquaphor® Baby Healing Ointment (1.75oz.)": "Petrolatum (41%)",
- "Aquaphor® Baby Wash & Shampoo (16.9 fl.oz)": "Water, Decyl Glucoside, PEG-200 Hydrogenated Glyceryl Palmate",
- "Aquaphor® Ointment Body Spray (3.7oz.)": "Butane, Petrolatum, Mineral Oil",
- "Aquaphor Healing Ointment® (.25oz.)": "Petrolatum (41%)",
- "Aquaphor Healing Ointment® With Touch-Free Applicator (3oz.)": "Petrolatum (41%)",
- "Aquaphor® Children's Itch Relief Ointment (1 oz.)": "Hydrocortisone (1%)",
- "Aquaphor® Healing Balm Stick (0.65oz.)": "Petrolatum (30%)",
- "Aquaphor® Hand Mask": "Water, Glycerin, Urea",
- "Aquaphor® Foot Mask": "Water, Glycerin, Urea",
- "Aquaphor Healing Ointment® (1.75oz.)": "Petrolatum (41%)",
- "Aquaphor® Ointment Body Spray (6.2 oz)": "Butane, Petrolatum, Mineral Oil",
- "Aquaphor Healing Ointment® (14oz.)": "Petrolatum (41%)",
- "Aquaphor Healing Ointment® (2x.3.5oz)": "Petrolatum (41%)",
- "Aquaphor Healing Ointment® (7oz.)": "Petrolatum (41%)"
+ "Aquaphor® Moisturizing Cream (8oz.)": {
+  "brand_site_text": "Water, Glycerin, Caprylic/Capric Triglyceride",
+  "ingredients_verbatim": "Water, Glycerin, Caprylic/Capric Triglyceride, Cetyl Alcohol, Ethylhexyl Stearate, Butyrospermum Parkii (Shea) Butter, Hydrogenated Coco-Glycerides, Cetyl Palmitate, Glyceryl Stearate SE, Glyceryl Stearate, Tapioca Starch, Panthenol, Bisabolol, Tocopherol, Sodium Hyaluronate, Cholesterol, Ceramide AP, Ceramide NP, Ceramide NG, Olea Europaea (Olive) Fruit Oil, Ricinus Communis (Castor) Seed Oil, Pantalactone, Carrageenan, Xanthan Gum, Pentylene Glycol, Hydrogenated Castor Oil, Caprylyl Glycol, Sodium Cetearyl Sulfate, Phenoxyethanol, Sodium Citrate, Citric Acid.",
+  "ingredient_source": "Walmart - https://www.walmart.com/ip/Aquaphor-Moisturizing-Cream-8-oz/19840324444",
+  "ingredient_source_type": "retailer",
+  "status": "complete",
+  "audit_notes": "Walmart listing 'Aquaphor Moisturizing Face and Body Cream, 8 oz Tube'. Cross-check: first three ingredients (Water, Glycerin, Caprylic/Capric Triglyceride) match brand site. Printed list uses a non-ASCII hyphen in 'Coco-Glycerides'."
+ },
+ "Aquaphor® Hydrating Daily Lotion (3oz.)": {
+  "brand_site_text": "Water, Glycerin, Cetearyl Alcohol",
+  "ingredients_verbatim": "Water, Glycerin, Cetearyl Alcohol, Ethylhexyl Stearate, Glyceryl Stearate SE, Caprylic/Capric Triglyceride, Dicaprylyl Ether, Panthenol, Bisabolol, Tocopherol, Sodium Hyaluronate, Cholesterol, Ceramide AP, Ceramide NP, Ceramide NG, Olea Europaea (Olive) Fruit Oil, Pantalactone, Ricinus Communis (Castor) Seed Oil, Cetyl Alcohol, Hydroxypropyl Starch Phosphate, Sodium Cetearyl Sulfate, Ethylhexylglycerin, Phenoxyethanol, Sodium Citrate, Citric Acid.",
+  "ingredient_source": "Walmart - https://www.walmart.com/ip/Aquaphor-Hydrating-Daily-Lotion-3-oz/19860762998",
+  "ingredient_source_type": "retailer",
+  "status": "complete",
+  "audit_notes": "Walmart listing 'Aquaphor Daily Hydrating Face and Body Lotion, 3 fl oz Tube'. Cross-check: first three match brand site."
+ },
+ "Aquaphor® Hydrating Daily Lotion (8oz.)": {
+  "brand_site_text": "Water, Glycerin, Cetearyl Alcohol",
+  "ingredients_verbatim": "Water, Glycerin, Cetearyl Alcohol, Ethylhexyl Stearate, Glyceryl Stearate SE, Caprylic/Capric Triglyceride, Dicaprylyl Ether, Panthenol, Bisabolol, Tocopherol, Sodium Hyaluronate, Cholesterol, Ceramide AP, Ceramide NP, Ceramide NG, Olea Europaea (Olive) Fruit Oil, Pantalactone, Ricinus Communis (Castor) Seed Oil, Cetyl Alcohol, Hydroxypropyl Starch Phosphate, Sodium Cetearyl Sulfate, Ethylhexylglycerin, Phenoxyethanol, Sodium Citrate, Citric Acid.",
+  "ingredient_source": "Walmart - https://www.walmart.com/ip/Aquaphor-Hydrating-Daily-Lotion-8-oz/19897618953",
+  "ingredient_source_type": "retailer",
+  "status": "complete",
+  "audit_notes": "Walmart listing 'Aquaphor Daily Hydrating Face and Body Lotion, 8 fl oz Pump Bottle'. Cross-check: first three (Water, Glycerin, Cetearyl Alcohol) match brand site."
+ },
+ "Aquaphor® Hydrating Daily Lotion (16oz.)": {
+  "brand_site_text": "Water, Glycerin, Cetearyl Alcohol",
+  "ingredients_verbatim": "Water, Glycerin, Cetearyl Alcohol, Ethylhexyl Stearate, Glyceryl Stearate SE, Caprylic/Capric Triglyceride, Dicaprylyl Ether, Panthenol, Bisabolol, Tocopherol, Sodium Hyaluronate, Cholesterol, Ceramide AP, Ceramide NP, Ceramide NG, Olea Europaea (Olive) Fruit Oil, Pantalactone, Ricinus Communis (Castor) Seed Oil, Cetyl Alcohol, Hydroxypropyl Starch Phosphate, Sodium Cetearyl Sulfate, Ethylhexylglycerin, Phenoxyethanol, Sodium Citrate, Citric Acid.",
+  "ingredient_source": "Walmart - https://www.walmart.com/ip/Aquaphor-Hydrating-Daily-Lotion-16-oz/19832201924",
+  "ingredient_source_type": "retailer",
+  "status": "complete",
+  "audit_notes": "Walmart listing 'Aquaphor Daily Hydrating Face and Body Lotion, 16 fl oz Pump Bottle'. Cross-check: first three match brand site."
+ },
+ "Aquaphor® Moisturizing Cream (1.89oz.)": {
+  "brand_site_text": "Water, Glycerin, Caprylic/Capric Triglyceride",
+  "ingredients_verbatim": "",
+  "ingredient_source": "",
+  "ingredient_source_type": "",
+  "status": "needs review",
+  "audit_notes": "no retailer INCI found. Walmart Aquaphor Moisturizing Cream listings are 8 oz and 16 oz only. Not used."
+ },
+ "Aquaphor® Moisturizing Cream (16oz.)": {
+  "brand_site_text": "Water, Glycerin, Caprylic/Capric Triglyceride",
+  "ingredients_verbatim": "Water, Glycerin, Caprylic/Capric Triglyceride, Cetyl Alcohol, Ethylhexyl Stearate, Butyrospermum Parkii (Shea) Butter, Hydrogenated Coco-Glycerides, Cetyl Palmitate, Glyceryl Stearate SE, Glyceryl Stearate, Tapioca Starch, Panthenol, Bisabolol, Tocopherol, Sodium Hyaluronate, Cholesterol, Ceramide AP, Ceramide NP, Ceramide NG, Olea Europaea (Olive) Fruit Oil, Ricinus Communis (Castor) Seed Oil, Pantalactone, Carrageenan, Xanthan Gum, Pentylene Glycol, Hydrogenated Castor Oil, Caprylyl Glycol, Sodium Cetearyl Sulfate, Phenoxyethanol, Sodium Citrate, Citric Acid.",
+  "ingredient_source": "Walmart - https://www.walmart.com/ip/Aquaphor-Moisturizing-Cream-16-oz/19815416701",
+  "ingredient_source_type": "retailer",
+  "status": "complete",
+  "audit_notes": "Walmart listing 'Aquaphor Moisturizing Face and Body Cream, 16 oz Jar'. Cross-check: first three ingredients match brand site (Water, Glycerin, Caprylic/Capric Triglyceride)."
+ },
+ "Aquaphor® Lip Repair Stick Naturally Inspired Aloe Vera Single Pack": {
+  "brand_site_text": "Octyldodecanol, Ricinus Communis Seed Oil, Butyrospermum Parkii (Shea) Butter",
+  "ingredients_verbatim": "Octyldodecanol, Ricinus Communis (Castor) Seed Oil, Butyrospermum Parkii (Shea) Butter, Beeswax, Helianthus Annuus (Sunflower) Seed Wax, Glycerin, Hydrogenated Castor Oil, Polyglyceryl-4 Diisostearate/Polyhydroxystearate/Sebacate, Aloe Barbadensis Leaf Juice Powder, Panthenol, Simmondsia Chinensis (Jojoba) Seed Oil, Helianthus Annuus (Sunflower) Seed Oil, Tocopherol, Ascorbyl Palmitate, Water. 1% skin safe synthetic ingredients: Ascorbyl Palmitate, Panthenol, Pantolactone, Tocopherol, Sodium Citrate, Citric Acid.",
+  "ingredient_source": "Walmart - https://www.walmart.com/ip/Aquaphor-Naturally-Inspired-Lip-Repair-Lip-Balm-Stick-with-Aloe-Vera-0-17-oz-Stick/5322031840",
+  "ingredient_source_type": "retailer",
+  "status": "complete",
+  "audit_notes": "Walmart listing 'Aquaphor Naturally Inspired Lip Repair Balm Stick for Very Dry Lips with Aloe Vera, 0.17 oz' (single stick). Cross-check: first three match brand site. Brand-site list named Ricinus Communis Seed Oil; retailer uses Ricinus Communis (Castor) Seed Oil, same ingredient."
+ },
+ "Aquaphor® Lip Repair Stick Naturally Inspired Coconut Single Pack": {
+  "brand_site_text": "Octyldodecanol, Ricinus Communis Seed Oil, Butyrospermum Parkii (Shea) Butter",
+  "ingredients_verbatim": "Octyldodecanol, Ricinus Communis (Castor) Seed Oil, Butyrospermum Parkii (Shea) Butter, Beeswax, Helianthus Annuus (Sunflower) Seed Wax, Cocos Nucifera (Coconut) Oil, Hydrogenated Castor Oil, Panthenol, Simmondsia Chinensis (Jojoba) Seed Oil, Helianthus Annuus (Sunflower) Seed Oil, Tocopherol, Ascorbyl Palmitate, Water, Pantolactone, Citric Acid. Synthetics: Ascorbyl Palmitate, Panthenol, Pantolactone, Tocopherol, Citric Acid",
+  "ingredient_source": "Walmart - https://www.walmart.com/ip/Aquaphor-Naturally-Inspired-Lip-Repair-Lip-Balm-Stick-with-Coconut-Oil-0-17-oz-Stick/5415018384",
+  "ingredient_source_type": "retailer",
+  "status": "complete",
+  "audit_notes": "Walmart listing 'Aquaphor Naturally Inspired Lip Repair Balm Stick for Very Dry Lips with Coconut Oil, 0.17 oz' (single stick). Cross-check: first three match brand site."
+ },
+ "Aquaphor® Baby Healing Ointment (7oz.)": {
+  "brand_site_text": "Petrolatum (41%)",
+  "ingredients_verbatim": "Active Ingredients: Petrolatum (41%). Inactive Ingredients: Mineral Oil, Ceresin, Lanolin alcohol, Panthenol, Glycerin, Bisabolol.",
+  "ingredient_source": "Walmart - https://www.walmart.com/ip/Aquaphor-Baby-Healing-Ointment-Advanced-Therapy-Skin-Protectant-7-Oz-Tube/52639069",
+  "ingredient_source_type": "retailer",
+  "status": "complete",
+  "audit_notes": "Walmart Aquaphor Baby Advanced Therapy Healing Ointment 7 oz listing; Drug Facts ingredients block. Retailer listing titled 'Aquaphor Baby Advanced Therapy Healing Ointment, 7 oz' matches product variant."
+ },
+ "Aquaphor® Diaper Rash Paste (3.5oz.)": {
+  "brand_site_text": "Zinc Oxide (40%)",
+  "ingredients_verbatim": "Active Ingredient: Zinc Oxide 40.0%...Purpose: Skin Protectant Ointment. Inactive Ingredients: Glycerin, Caprylic/Capric Triglyceride, Octyldodecanol, Polyglyceryl-4 Diisostearate/Polyhydroxystearate/Sebacate, Magnesium Stearate, Panthenol, Butyrospermum Parkii (Shea) Butter, Water.",
+  "ingredient_source": "Walmart - https://www.walmart.com/ip/Aquaphor-Baby-Diaper-Rash-Paste-Maximum-Strength-40-Zinc-Oxide-Diaper-Rash-Cream-Diaper-Rash-Ointment-3-5-oz/299965693",
+  "ingredient_source_type": "retailer",
+  "status": "complete",
+  "audit_notes": "Walmart listing 'Aquaphor Baby Diaper Rash Paste, Maximum Strength 40% Zinc Oxide, 3.5 oz'. Cross-check: brand-site Zinc Oxide (40%) matches the active."
+ },
+ "Aquaphor® Lip Repair Stick": {
+  "brand_site_text": "Octyldodecanol, Ricinus Communis Seed Oil, Beeswax",
+  "ingredients_verbatim": "Octyldodecanol, Ricinus Communis (Castor) Seed Oil, Beeswax, Bis-Diglyceryl Polyacyladipate-2, Butyrospermum Parkii (Shea) Butter, Helianthus Annuus (Sunflower) Seed Wax, Hydrogenated Castor Oil, Panthenol, Dimethicone, Water, Tocopheryl Acetate, Simmondsia Chinensis (Jojoba) Seed Oil, Tocopherol, Ascorbyl Palmitate",
+  "ingredient_source": "Walmart - https://www.walmart.com/ip/Aquaphor-Lip-Repair-Stick-Lip-Balm-for-Dry-Chapped-Lips/621710698",
+  "ingredient_source_type": "retailer",
+  "status": "complete",
+  "audit_notes": "Walmart listing 'Aquaphor Lip Repair Balm Stick for Dry Chapped Lips with Shea Butter, 0.17 oz'. Cross-check: first three match brand site. Dimethicone appears in this retailer list but not in the brand-site partial list; flagged for grader."
+ },
+ "Aquaphor® Lip Repair Stick + Sunscreen": {
+  "brand_site_text": "Avobenzone (3%), Homosalate (9%), Octisalate (4.5%), Octocrylene (9%)",
+  "ingredients_verbatim": "Active Ingredients: Avobenzone (3 %), Sunscreen; Homosalate (9 %), Sunscreen; Octisalate (4.5 %), Sunscreen; Octocrylene (9 %), Sunscreen. Inactive Ingredients: Octyldodecanol, Ricinus Communis (Castor) Seed Oil, Beeswax, Bis-Diglyceryl Polyacyladipate-2, Butyrospermum Parkii (Shea) Butter, Hydrogenated Castor Oil, Helianthus Annuus (Sunflower) Seed Wax, Cetearyl Alcohol, Dimethicone, Simmondsia Chinensis (Jojoba) Seed Oil, Copernicia Cerifera (Carnauba) Wax, Tocopheryl Acetate, Ascorbyl Palmitate, Helianthus Annus (Sunflower) Seed Oil, Tocopherol.",
+  "ingredient_source": "Walmart - https://www.walmart.com/ip/Aquaphor-Lip-Repair-Stick-Spf-30/1370153078",
+  "ingredient_source_type": "retailer",
+  "status": "complete",
+  "audit_notes": "Walmart listing 'Aquaphor Broad Spectrum SPF 30 Lip Repair Stick + Sunscreen 0.17 oz'. Cross-check: actives Avobenzone, Homosalate, Octisalate, Octocrylene match brand site."
+ },
+ "Aquaphor® Lip Protectant + SPF (Dual Pack)": {
+  "brand_site_text": "Petrolatum (31%), Avobenzone (3%), Octinoxate (6.75%), Octisalate (4.5%), Octocrylene (2%), Oxybenzone (5.4%)",
+  "ingredients_verbatim": "",
+  "ingredient_source": "",
+  "ingredient_source_type": "",
+  "status": "needs review",
+  "audit_notes": "no retailer INCI found yet. The single Lip Protectant + SPF 30 (0.35 oz tube) matched on Walmart; no Dual Pack listing with matching actives located on Walmart or Target search. Not used."
+ },
+ "Aquaphor® Lip Repair Stick + Sunscreen (Dual Pack)": {
+  "brand_site_text": "Avobenzone (3%), Homosalate (9%), Octisalate (4.5%), Octocrylene (9%)",
+  "ingredients_verbatim": "Active Ingredients: Avobenzone 3%, Homosalate 9%, Octisalate 4.5%, Octocrylene 9%. Other Ingredients: Octyldodecanol, Ricinus Communis (Castor) Seed Oil, Beeswax, Bis-Diglyceryl Polyacyladipate-2, Butyrospermum Parkii (Shea) Butter, Hydrogenated Castor Oil, Helianthus Annuus (Sunflower) Seed Wax, Cetearyl Alcohol, Dimethicone, Simmondsia Chinensis (Jojoba) Seed Oil, Copernicia Cerifera (Carnauba) Wax, Tocopheryl Acetate, Ascorbyl Palmitate, Helianthus Annuus (Sunflower) Seed Oil, Tocopherol.",
+  "ingredient_source": "Walmart - https://www.walmart.com/ip/Aquaphor-Lip-Repair-Protect-SPF-30-Stick-Dual-Pack-0-34oz-Pack-of-2-sticks/15665510241",
+  "ingredient_source_type": "retailer",
+  "status": "complete",
+  "audit_notes": "Walmart listing 'Aquaphor Lip Repair & Protect SPF 30 Stick, 2pk, 0.35oz, Clear'. Cross-check: actives match brand site (Avobenzone 3, Homosalate 9, Octisalate 4.5, Octocrylene 9). Retailer 2-pack title, same product."
+ },
+ "Aquaphor® Children's Healing Ointment (14oz.)": {
+  "brand_site_text": "Petrolatum (41%)",
+  "ingredients_verbatim": "Active: Petrolatum (41%)...Purpose: Skin Protectant (Ointment). Inactive: Mineral Oil, Ceresin, Lanolin Alcohol, Panthenol, Glycerin, Bisabolol",
+  "ingredient_source": "Walmart - https://www.walmart.com/ip/Aquaphor-Children-s-Healing-Ointment-Skin-Protectant-14oz-Jar/1612392187",
+  "ingredient_source_type": "retailer",
+  "status": "complete",
+  "audit_notes": "Walmart listing 'Aquaphor Children's Healing Ointment for Dry, Chapped or Irritated Skin, Hypoallergenic, 14 oz'. Cross-check: active Petrolatum (41%) matches brand site."
+ },
+ "Aquaphor® Lip Repair": {
+  "brand_site_text": "Octyldodecanol, C18-38 Alkyl Hydroxystearoyl Stearate, Ricinus Communis Seed Oil",
+  "ingredients_verbatim": "Octyldodecanol, C18-38 Alkyl Hydroxystearoyl Stearate, Ricinus Communis (Castor) Seed Oil, Caprylic/Capric Triglyceride, Glycerin, Bis-Diglyceryl Polyacyladipate-2, Panthenol, Water, Polyglyceryl-3 Diisostearate, Butyrospermum Parkii (Shea) Butter, Hydrogenated Castor Oil, Tocopheryl Acetate, Bisabolol, Sodium Ascorbyl Phosphate, Lecithin, Tocopherol, Ascorbyl Palmitate, Beeswax, C20-40 Alkyl Stearate, Magnesium Stearate, Magnesium Sulfate, Glyceryl Stearate, Glyceryl Oleate, Citric Acid",
+  "ingredient_source": "Walmart - https://www.walmart.com/ip/Aquaphor-Aquaphor-Lip-Repair-Ointment-Tube-35-fl-oz-0-35-Fl-Oz/662828970",
+  "ingredient_source_type": "retailer",
+  "status": "complete",
+  "audit_notes": "Walmart listing 'Aquaphor Lip Repair Ointment, .35 fl oz' (tube). Cross-check: first three match brand site."
+ },
+ "Aquaphor® Lip Repair Stick (Dual Pack)": {
+  "brand_site_text": "Octyldodecanol, Ricinus Communis Seed Oil, Beeswax",
+  "ingredients_verbatim": "Octyldodecanol, Ricinus Communis (Castor) Seed Oil, Beeswax, Bis-Diglyceryl Polyacyladipate-2, Butyrospermum Parkii (Shea) Butter, Helianthus Annuus (Sunflower) Seed Wax, Hydrogenated Castor Oil, Panthenol, Dimethicone, Water, Tocopheryl Acetate, Simmondsia Chinensis (Jojoba) Seed Oil, Tocopherol, Ascorbyl Palmitate",
+  "ingredient_source": "Walmart - https://www.walmart.com/ip/Aquaphor-Lip-Repair-Stick-Lip-Balm-for-Dry-Chapped-Lips/304762780",
+  "ingredient_source_type": "retailer",
+  "status": "complete",
+  "audit_notes": "Walmart listing 'Aquaphor, Lip Repair Balm Stick, 0.17 oz, 2 Pack for Dry Chapped Lips'. Cross-check: first three match brand site. Same printed list as the single Lip Repair Stick. Dimethicone appears in retailer list only."
+ },
+ "Aquaphor® Baby Healing Balm Stick (0.65oz.)": {
+  "brand_site_text": "Petrolatum (30%)",
+  "ingredients_verbatim": "Active ingredients: Petrolatum 30% (Purpose: Skin Protectant)... Inactive ingredients: Caprylic/Capric Triglyceride, Persea Gratissima (Avocado) Oil, Microcrystalline Wax, Beeswax, Butyrospermum Parkii (Shea) Butter, Tocopherol, Panthenol, Glycerin, Bisabolol.",
+  "ingredient_source": "Walmart - https://www.walmart.com/ip/Aquaphor-Baby-Healing-Balm-Stick-0-65-Oz/677483860",
+  "ingredient_source_type": "retailer",
+  "status": "complete",
+  "audit_notes": "Walmart listing 'Aquaphor Baby Healing Balm Stick with Avocado Oil and Shea Butter, 0.65 oz'. Cross-check: brand-site Petrolatum (30%) matches."
+ },
+ "Aquaphor® Baby Wash & Shampoo (25.4oz.)": {
+  "brand_site_text": "Water, Decyl Glucoside, PEG-200 Hydrogenated Glyceryl Palmate",
+  "ingredients_verbatim": "Water, Decyl Glucoside, Sodium Myreth Sulfate, PEG-200 Hydrogenated Glyceryl Palmate, Cocamidopropyl Betaine, Panthenol, Bisabolol, Polyquaternium-10, Sea Salt, Citric Acid, Sodium Chloride, Sodium Benzoate.",
+  "ingredient_source": "Walmart - https://www.walmart.com/ip/Aquaphor-Baby-Wash-and-Shampoo-Unscented-Baby-Shampoo-and-Wash-25-4-Fl-Oz-Pump-Bottle/5032877839",
+  "ingredient_source_type": "retailer",
+  "status": "complete",
+  "audit_notes": "Walmart listing 'Aquaphor Baby Wash & Shampoo, Fragrance Free and Tear Free, 25.4 fl oz'. Cross-check: first three (Water, Decyl Glucoside, PEG-200 Hydrogenated Glyceryl Palmate) match brand site. Panel text was read from the listing's collapsible Ingredients block; ancestry check was inconclusive, so re-verify this row if Nina wants a second look. Sodium Myreth Sulfate is a sulfate and is flagged by the grader."
+ },
+ "Aquaphor Baby Sensitive Lotion, Baby Lotion, 3 Fl Oz": {
+  "brand_site_text": "Water, Glycerin, Cetearyl Alcohol",
+  "ingredients_verbatim": "Water, Glycerin, Cetearyl Alcohol, Ethylhexyl Stearate, Glyceryl Stearate SE, Caprylic/Capric Triglyceride, Dicaprylyl Ether, Panthenol, Cetyl Alcohol, Hydroxypropyl Starch Phosphate, Tocopherol, Sodium Hyaluronate, Pantolactone, Ceramide NP, Cholesterol, Phytosphingosine, Oleic Acid, Glycine Soja (Soybean) Oil, Phenoxyethanol, Sodium Citrate, Sodium Cetearyl Sulfate, Ethylhexylglycerin, Citric Acid.",
+  "ingredient_source": "Walmart - https://www.walmart.com/ip/Aquaphor-Baby-Sensitive-Lotion-3oz/19974261109",
+  "ingredient_source_type": "retailer",
+  "status": "complete",
+  "audit_notes": "Walmart listing 'Aquaphor Baby Sensitive Lotion, Baby Lotion, 3 fl oz'. Cross-check: first three match brand site."
+ },
+ "Aquaphor Baby Sensitive Lotion, Baby Lotion, 8 Fl Oz": {
+  "brand_site_text": "Water, Glycerin, Cetearyl Alcohol",
+  "ingredients_verbatim": "Water, Glycerin, Cetearyl Alcohol, Ethylhexyl Stearate, Glyceryl Stearate SE, Caprylic/Capric Triglyceride, Dicaprylyl Ether, Panthenol, Cetyl Alcohol, Hydroxypropyl Starch Phosphate, Tocopherol, Sodium Hyaluronate, Pantolactone, Ceramide NP, Cholesterol, Phytosphingosine, Oleic Acid, Glycine Soja (Soybean) Oil, Phenoxyethanol, Sodium Citrate, Sodium Cetearyl Sulfate, Ethylhexylglycerin, Citric Acid.",
+  "ingredient_source": "Walmart - https://www.walmart.com/ip/Aquaphor-Baby-Sensitive-Daily-Lotion-8-oz/19736656895",
+  "ingredient_source_type": "retailer",
+  "status": "complete",
+  "audit_notes": "Walmart listing 'Aquaphor, Baby Sensitive Lotion, Baby Lotion, 8 fl oz'. Cross-check: first three match brand site (Water, Glycerin, Cetearyl Alcohol)."
+ },
+ "Aquaphor® Baby Healing Ointment (3oz.)": {
+  "brand_site_text": "Petrolatum (41%)",
+  "ingredients_verbatim": "Active Ingredients: Petrolatum (41%)...Purpose: Skin Protectant (Ointment). Inactive Ingredients: Mineral Oil, Ceresin, Lanolin Alcohol, Panthenol, Glycerin, Bisabolol.",
+  "ingredient_source": "Walmart - https://www.walmart.com/ip/Aquaphor-Baby-Healing-Ointment-Newborn-Skin-Care-and-Diaper-Rash-3-oz-Plastic-Bottle/11997291",
+  "ingredient_source_type": "retailer",
+  "status": "complete",
+  "audit_notes": "Walmart listing 'Aquaphor Baby Advanced Therapy Healing Ointment Skin Protectant, 3 oz' (plastic bottle). Cross-check: active Petrolatum (41%) matches brand site."
+ },
+ "Aquaphor® Baby Healing Ointment (14oz.)": {
+  "brand_site_text": "Petrolatum (41%)",
+  "ingredients_verbatim": "Active Ingredients: Petrolatum (41%). Inactive Ingredients: Mineral Oil, Ceresin, Lanolin Alcohol, Panthenol, Glycerin, Bisabolol.",
+  "ingredient_source": "Walmart - https://www.walmart.com/ip/Aquaphor-Baby-Healing-Ointment-Baby-Skin-Care-and-Diaper-Rash-14-oz/44997847",
+  "ingredient_source_type": "retailer",
+  "status": "complete",
+  "audit_notes": "Walmart listing 'Aquaphor, Baby Healing Ointment, 14 oz, for Diaper Rash and Skin Care'. Cross-check: active Petrolatum (41%) matches brand site."
+ },
+ "Aquaphor® Diaper Rash Cream (3oz.)": {
+  "brand_site_text": "Zinc Oxide (15%)",
+  "ingredients_verbatim": "",
+  "ingredient_source": "",
+  "ingredient_source_type": "",
+  "status": "needs review",
+  "audit_notes": "variant mismatch. Walmart Aquaphor Diaper Rash Cream listings are 3.5 oz only. The brand list says 3 oz. Not used."
+ },
+ "Aquaphor® Lip Protectant + SPF 30": {
+  "brand_site_text": "Petrolatum (31%), Avobenzone (3%), Octinoxate (6.75%), Octisalate (4.5%), Octocrylene (2%), Oxybenzone (5.4%)",
+  "ingredients_verbatim": "Active: Petrolatum 31.0%...Purpose: Skin Protectant, Avobenzone 3.0%...Purpose: Sunscreen, Octinoxate 6.75%...Purpose: Sunscreen, Octisalate 4.5%...Purpose: Sunscreen, Octocrylene 2.0%...Purpose: Sunscreen, Oxybenzone 5.4%...Purpose: Sunscreen. Inactive: C18-38 Alkyl Hydroxystearoyl Stearate, Octyldodecanol, Glycerin, Ricinus Communis (Castor) Seed Oil, Caprylic/Capric Triglyceride, Panthenol, Water, Polyglyceryl-3 Diisostearate, Butyrospermum Parkii (Shea) Butter, Tocopheryl Acetate, Hydrogenated Castor Oil, Beeswax, C20-40 Alkyl Stearate, Magnesium Sulfate, Magnesium Stearate, BHT.",
+  "ingredient_source": "Walmart - https://www.walmart.com/ip/Aquaphor-Lip-Repair-Lip-Balm-with-Sunscreen-Lip-Balm-SPF-30-0-35-Oz-Tube/23623346",
+  "ingredient_source_type": "retailer",
+  "status": "complete",
+  "audit_notes": "Walmart listing 'Aquaphor, Lip Repair Lip Balm with Sunscreen, SPF 30, 0.35 fl oz' (tube). Cross-check: all six actives match brand-site values exactly."
+ },
+ "Aquaphor® Lip Repair (Dual Pack)": {
+  "brand_site_text": "Octyldodecanol, C18-38 Alkyl Hydroxystearoyl Stearate, Ricinus Communis Seed Oil",
+  "ingredients_verbatim": "Octyldodecanol, C18-38 Alkyl Hydroxystearoyl Stearate, Ricinus Communis (Castor) Seed Oil, Caprylic/Capric Triglyceride, Glycerin, Panthenol, Bis-Diglyceryl Polyacyladipate-2, Water, Polyglyceryl-3 Diisostearate, Butyrospermum Parkii (Shea) Butter, Hydrogenated Castor Oil, Tocopherol, Tocopheryl Acetate, Sodium Ascorbyl Phosphate, Bisabolol, Beeswax, C20-40 Alkyl Stearate, Magnesium Stearate, Magnesium Sulfate",
+  "ingredient_source": "Walmart - https://www.walmart.com/ip/Aquaphor-Lip-Repair-Ointment-Long-lasting-Moisture-to-Soothe-Dry-Chapped-Lips-0-35-oz-Pack-of-2-tubes/374868721",
+  "ingredient_source_type": "retailer",
+  "status": "complete",
+  "audit_notes": "Walmart listing 'Aquaphor, Lip Repair Ointment, 0.35 fl oz, 2 Pack, with Shea Butter'. Cross-check: first three match brand site. Printed 2-pack list differs slightly from the single-tube listing (no Lecithin, Ascorbyl Palmitate, Glyceryl Stearate, Glyceryl Oleate, or Citric Acid), so the 2-pack list is used for the 2-pack row."
+ },
+ "Aquaphor® Baby Healing Ointment (2x.35oz.)": {
+  "brand_site_text": "Petrolatum (41%)",
+  "ingredients_verbatim": "Active: Petrolatum 41%...Purpose: Skin Protectant (Ointment) Treatment or Prevention of Diaper Rash. Inactive: Mineral Oil, Ceresin, Lanolin Alcohol, Panthenol, Glycerin, Bisabolol",
+  "ingredient_source": "Walmart - https://www.walmart.com/ip/Aquaphor-Baby-Healing-Ointment-Baby-Skin-Care-and-Diaper-Rash-On-the-go/25868523",
+  "ingredient_source_type": "retailer",
+  "status": "complete",
+  "audit_notes": "Walmart listing 'Aquaphor Baby Healing Ointment for Teething, Drool and Diaper Rash, Travel Size, 0.35 oz, 2 Pack'. Same product, 2-pack size matches. Cross-check: active Petrolatum 41% matches brand site."
+ },
+ "Aquaphor® Baby Healing Ointment (1.75oz.)": {
+  "brand_site_text": "Petrolatum (41%)",
+  "ingredients_verbatim": "Active ingredient: Petrolatum 41%; Purpose: Skin Protectant. Inactive ingredients: Mineral Oil, Ceresin, Lanolin Alcohol, Panthenol, Glycerin, Bisabolol",
+  "ingredient_source": "Walmart - https://www.walmart.com/ip/Aquaphor-Baby-Healing-Ointment-Baby-Skin-Care-and-Diaper-Rash-Travel-Size/16777958",
+  "ingredient_source_type": "retailer",
+  "status": "complete",
+  "audit_notes": "Walmart listing 'Aquaphor Baby Healing Ointment Skin Protectant, 1.75 OZ' (travel size). Cross-check: active Petrolatum 41% matches brand site."
+ },
+ "Aquaphor® Baby Wash & Shampoo (16.9 fl.oz)": {
+  "brand_site_text": "Water, Decyl Glucoside, PEG-200 Hydrogenated Glyceryl Palmate",
+  "ingredients_verbatim": "Water, Decyl Glucoside, Sodium Myreth Sulfate, PEG-200 Hydrogenated Glyceryl Palmate, Cocamidopropyl Betaine, Panthenol, Bisabolol, Polyquaternium-10, Sea Salt, Citric Acid, Sodium Chloride, Sodium Benzoate.",
+  "ingredient_source": "Walmart - https://www.walmart.com/ip/Aquaphor-Baby-Wash-Shampoo-16-9-oz/164941301",
+  "ingredient_source_type": "retailer",
+  "status": "complete",
+  "audit_notes": "Walmart listing 'Aquaphor, Baby Wash & Shampoo, 16.9 fl oz, Fragrance Free Tear Free'. Cross-check: first three match brand site. Same printed list as the 25.4 fl oz listing."
+ },
+ "Aquaphor® Ointment Body Spray (3.7oz.)": {
+  "brand_site_text": "Butane, Petrolatum, Mineral Oil",
+  "ingredients_verbatim": "Butane, Petrolatum, Mineral Oil, Ceresin, Lanolin Alcohol, Panthenol, Glycerin, Bisabolol.",
+  "ingredient_source": "Walmart - https://www.walmart.com/ip/Aquaphor-Ointment-Body-Spray-3-7-Oz-Spray-Can/817364182",
+  "ingredient_source_type": "retailer",
+  "status": "complete",
+  "audit_notes": "Walmart listing 'Aquaphor, Body Spray, 3.7 oz, Skin Relief, Fragrance Free, Easy-to-Apply'. Cross-check: first three ingredients (Butane, Petrolatum, Mineral Oil) match brand site. Page also shows a stray 'salicylic acid' table row that belongs to another listing; not used as an ingredient."
+ },
+ "Aquaphor Healing Ointment® (.25oz.)": {
+  "brand_site_text": "Petrolatum (41%)",
+  "ingredients_verbatim": "Active Ingredients: Petrolatum 41%...Purpose: Skin Protectant (Ointment)/Treatment or Prevention of Diaper Rash. Inactive Ingredients: Mineral Oil, Ceresin, Lanolin Alcohol, Panthenol Glycerin, Bisabolol",
+  "ingredient_source": "Walmart - https://www.walmart.com/ip/Aquaphor-Healing-Ointment-Advanced-Therapy-Skin-Protectant-0-25-Oz-Jar/40170172",
+  "ingredient_source_type": "retailer",
+  "status": "complete",
+  "audit_notes": "Walmart listing 'Aquaphor Healing Ointment Advanced Therapy Skin Protectant, Travel Size, 0.25 Oz Jar'. Variant match on size. Cross-check: active Petrolatum (41%) matches brand site. Printed label has a missing comma after Panthenol and a diaper-rash purpose line; kept as printed."
+ },
+ "Aquaphor Healing Ointment® With Touch-Free Applicator (3oz.)": {
+  "brand_site_text": "Petrolatum (41%)",
+  "ingredients_verbatim": "Active Ingredients: Petrolatum (41%)...Purpose: Skin Protectant (Ointment). Inactive Ingredients: Mineral Oil, Ceresin, Lanolin Alcohol, Panthenol, Glycerin, Bisabolol",
+  "ingredient_source": "Walmart - https://www.walmart.com/ip/Aquaphor-Healing-Ointment-Advanced-Therapy-Skin-Protectant-3-oz/40816008",
+  "ingredient_source_type": "retailer",
+  "status": "complete",
+  "audit_notes": "Walmart listing 'Aquaphor Healing Ointment Skin Protectant ... Touch-Free, 3 oz'. Cross-check: active Petrolatum (41%) matches brand site."
+ },
+ "Aquaphor® Children's Itch Relief Ointment (1 oz.)": {
+  "brand_site_text": "Hydrocortisone (1%)",
+  "ingredients_verbatim": "Active ingredients: Hydrocortisone 1% (Purpose: Anti-Itch Ointment)... Inactive ingredients: Petrolatum, Mineral Oil, Ceresin, Lanolin Alcohol, Panthenol, Glycerin, Bisabolol, Menthoxypropanediol.",
+  "ingredient_source": "Walmart - https://www.walmart.com/ip/Aquaphor-Children-s-Itch-Relief-Ointment-1-Hydrocortisone-Anti-Itch-Ointment-1-Oz-Tube/1598170819",
+  "ingredient_source_type": "retailer",
+  "status": "complete",
+  "audit_notes": "Walmart listing 'Aquaphor Children's Itch Relief Ointment, 1% Hydrocortisone Anti-Itch Cream, Fast-Acting, 1 oz'. Cross-check: brand site Hydrocortisone (1%) matches first active. Drug-labeled product: hydrocortisone is an OTC active."
+ },
+ "Aquaphor® Healing Balm Stick (0.65oz.)": {
+  "brand_site_text": "Petrolatum (30%)",
+  "ingredients_verbatim": "",
+  "ingredient_source": "",
+  "ingredient_source_type": "",
+  "status": "needs review",
+  "audit_notes": "no retailer INCI found on Walmart. The Aquaphor Healing Balm Stick 0.65 oz (Pack of 3) listing shows no Ingredients block. Retry elsewhere."
+ },
+ "Aquaphor® Hand Mask": {
+  "brand_site_text": "Water, Glycerin, Urea",
+  "ingredients_verbatim": "",
+  "ingredient_source": "",
+  "ingredient_source_type": "",
+  "status": "needs review",
+  "audit_notes": "no retailer INCI found. Walmart (1-pair hand mask) and Target (Advanced Therapy Repairing Hand Mask 0.7 fl oz) listings show no printed Ingredients block for the product. Not used."
+ },
+ "Aquaphor® Foot Mask": {
+  "brand_site_text": "Water, Glycerin, Urea",
+  "ingredients_verbatim": "",
+  "ingredient_source": "",
+  "ingredient_source_type": "",
+  "status": "needs review",
+  "audit_notes": "no retailer INCI found. Walmart (1-pair foot mask) listing has no printed Aquaphor Ingredients block. Target listing for Advanced Therapy Repairing Foot Mask 0.7 fl oz exists but its ingredients were not visible. Not used."
+ },
+ "Aquaphor Healing Ointment® (1.75oz.)": {
+  "brand_site_text": "Petrolatum (41%)",
+  "ingredients_verbatim": "Active: Petrolatum (41%)...Purpose: Skin Protectant (Ointment). Inactive: Mineral Oil, Ceresin, Lanolin Alcohol, Panthenol, Glycerin, Bisabolol.",
+  "ingredient_source": "Walmart - https://www.walmart.com/ip/Aquaphor-Healing-Ointment-Skin-Protectant-For-Dry-and-Cracked-Skin-1-75-oz-Tube/761757933",
+  "ingredient_source_type": "retailer",
+  "status": "complete",
+  "audit_notes": "Walmart listing 'Aquaphor Healing Ointment Skin Protectant For Dry and Cracked Skin, 1.75 oz. Tube'. Cross-check: active Petrolatum (41%) matches brand site."
+ },
+ "Aquaphor® Ointment Body Spray (6.2 oz)": {
+  "brand_site_text": "Butane, Petrolatum, Mineral Oil",
+  "ingredients_verbatim": "",
+  "ingredient_source": "",
+  "ingredient_source_type": "",
+  "status": "needs review",
+  "audit_notes": "variant mismatch / no retailer INCI found. Walmart lists the Aquaphor Ointment Body Spray in 3.7 oz and multipacks only. The 3.7 oz row is used for the 3.7 oz product; 6.2 oz not located."
+ },
+ "Aquaphor Healing Ointment® (14oz.)": {
+  "brand_site_text": "Petrolatum (41%)",
+  "ingredients_verbatim": "Active: Petrolatum (41%)...Purpose: Skin Protectant (Ointment). Inactive: Mineral Oil, Ceresin, Lanolin Alcohol, Panthenol, Glycerin, Bisabolol",
+  "ingredient_source": "Walmart - https://www.walmart.com/ip/Aquaphor-Healing-Ointment-Advanced-Therapy-Skin-Protectant-for-Dry-Compromised-Skin-14-oz-Jar/10810942",
+  "ingredient_source_type": "retailer",
+  "status": "complete",
+  "audit_notes": "Walmart listing 'Aquaphor Healing Ointment Skin Protectant, Fragrance Free, 14 oz Jar'. Cross-check: active Petrolatum (41%) matches brand site."
+ },
+ "Aquaphor Healing Ointment® (2x.3.5oz)": {
+  "brand_site_text": "Petrolatum (41%)",
+  "ingredients_verbatim": "",
+  "ingredient_source": "",
+  "ingredient_source_type": "",
+  "status": "needs review",
+  "audit_notes": "variant mismatch / no retailer INCI found. Walmart search for a 2 x 3.5 oz Aquaphor Healing Ointment returned only Baby Diaper Rash Paste 3.5 oz 2-pack and 1.75 oz travel packs. Not used."
+ },
+ "Aquaphor Healing Ointment® (7oz.)": {
+  "brand_site_text": "Petrolatum (41%)",
+  "ingredients_verbatim": "Active Ingredients: Petrolatum (41%). Inactive Ingredients: Mineral Oil, Ceresin, Lanolin Alcohol, Panthenol, Glycerin, Bisabolol.",
+  "ingredient_source": "Walmart - https://www.walmart.com/ip/Aquaphor-Advanced-Therapy-Healing-Ointment-Skin-Protectant-7-oz/45800609",
+  "ingredient_source_type": "retailer",
+  "status": "complete",
+  "audit_notes": "Walmart listing 'Aquaphor, Healing Ointment for Dry Skin, Fragrance Free, 7 oz'. Cross-check: brand-site active Petrolatum (41%) matches first listed retailer ingredient."
+ }
 }

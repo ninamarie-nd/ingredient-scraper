@@ -148,3 +148,80 @@ Reference notes: Zinc Oxide (bare) treated as zinc oxide (non-nano) per addendum
 **Audit end:** 2026-10-16 23:28 UTC
 **Products successfully scraped:** 48 of 48
 **Products graded:** 48 (tiers: 27 Puberty Safe, 6 Use Caution, 10 Avoid (Mild), 0 Avoid (Moderate), 5 Avoid (High Priority Swap))
+
+## Update 2026-10-16: retailer ingredient pass (supersedes counts above)
+
+The counts in the "Audit end" section above (27/6/10/0/5) came from the brand-site Ingredients blocks only. They are superseded by the retailer pass below.
+
+### Retailer sourcing
+
+Approved sources, in priority: Ulta, Target, Walmart, CVS, Walgreens, Amazon, Sephora, Dermstore. Brand-site text is kept in `brand_site_text` for every row. Each row's source, URL, and status are in `eucerin_ingredients.json`.
+
+Verified full lists: 35 of 48.
+- Walmart: 31 (products 4, 5, 7, 8, 9, 10, 11, 12, 14, 15, 21, 23, 24, 25, 26, 27, 28, 29, 31, 32, 33, 34, 35, 36, 37, 38, 39, 42, 43, 45, 47)
+- Target: 1 (product 1)
+- Amazon: 3 (products 13, 16, 22)
+
+Provisional (13 rows, "needs review"):
+- Conflicts: 2, 3
+- Size not confirmed: 17
+- Candidate text only: 19, 20, 41, 44, 48
+- No usable text: 6, 18, 30, 40, 46
+
+Retailer status:
+- Walmart: productive. Ingredient text read from the page's data payload (Ingredients field). Product 15's first URL pointed at the wrong item (a fishing lure); corrected by search.
+- Target: search returned "no match" for all queries after an early success. Only product 1 was verified, from its product page. Not recoverable in this pass.
+- Amazon: productive. Text read from the Ingredients section.
+- Ulta: returned a "Be Right Back" holding page. Not usable.
+- CVS, Walgreens, Sephora: not checked in this pass.
+- Dermstore: no results recorded in this pass.
+
+Retailer text was copied verbatim. Product 22's Amazon text had a clipped word, noted in its row. Two rows (2, 3) have conflicting text between retailer and brand; both are provisional until resolved.
+
+### Grading
+
+Grader: `_grader.py` (copied, imported only). The grader has known gaps against `GRADING_RUBRIC.txt`, so an overlay was applied in `regrade2.py`:
+- Plain "Fragrance" was not detected as fragrance. Fixed in overlay.
+- PFAS-treated escalation to High Priority Swap was not implemented. Added. It changes no tiers in this set (see sensitivity below).
+- Heavy metal (category 3) plus category 1 or 2 escalation was not implemented. Added.
+- Leave-on carcinogen rule for sunscreens was not implemented. Added.
+- Titanium dioxide cream exemption (non-spray) was not implemented. Added.
+- Comma split broke "1,2-Hexanediol" into two tokens. Protected in grade input and aliased.
+
+Grade input also normalizes Active/Inactive labels, "Skin Protectant", and "Purpose: Sunscreen" strings, inserts a space after "Sodium" in run-together tokens, and converts "3%" to "(3%)".
+
+### Results
+
+All 48 rows (verified plus provisional):
+- Puberty Safe: 8
+- Use Caution: 4
+- Avoid (Mild): 5
+- Avoid (Moderate): 0
+- Avoid (High Priority Swap): 31
+
+Verified 35 only:
+- Puberty Safe: 2
+- Use Caution: 2
+- Avoid (Mild): 3
+- Avoid (Moderate): 0
+- Avoid (High Priority Swap): 28
+
+### Sensitivity
+
+- The PFAS escalation rule changes no tiers in this set. Tiers with and without it are identical.
+- Phenoxyethanol (category 1) in a leave-on product triggers High Priority Swap. It appears in 25 of 48 rows. Nine High Priority Swap rows reach that tier only through this rule. This is the main driver of the 31 High Priority Swap total. Reviewers should confirm the rule's application before publishing.
+- Category presence, verified 35: category 4 in 33, category 2 in 31, category 1 in 31, category 5 in 29, category 8 in 24, category 6 in 17, category 3 in 4.
+
+### Unknown ingredient queue
+
+Deduplicated across verified rows: Colloidal Oatmeal, Q10, Sodium Cocoamphoacetate, Gluco-Glycerol, APG Complex, Shea Butter, Glycyrrhetinic Acid, Licochalcone A, Menthol, Sunflower Seed Oil, Dexpanthenol, Tin Oxide, Hydroxyacetophenone, Dehydroxanthan Gum, Synthetic Fluorphlogopite.
+
+Unknowns are not scored. Any Puberty Safe grade on a row with unknowns is provisional.
+
+### Files written
+
+- `eucerin_ingredients.json` (per-row source, URL, status, brand_site_text, tier)
+- `eucerin_audit.xlsx` (14 OUTPUT_TEMPLATES columns)
+- `eucerin_content_mining.md` (rewritten on the new counts)
+- `audit_log.md` (this section)
+- `regrade2_summary.json` (in scratchpad, not in the eucerin folder)
