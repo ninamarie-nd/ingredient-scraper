@@ -782,3 +782,70 @@ Applied in this pass with the same `_grader.py` in every brand folder. The refer
 - Daily Hydration Lotion with Broad Spectrum SPF 15: verbatim "Octisalate (3.5)", Octisalate flagged [2], no unknown. Exception applies: ungradable, flag kept. Agrees.
 
 **Tier counts after this pass:** ungradable: 45; Avoid (High Priority Swap): 1; Avoid (Mild): 2.
+
+## Grading on known ingredients (2026-10-17)
+
+**Rule (practitioner decision, replaces D7 and D8).** D7 (two or more unknown ingredients made a product ungradable) and D8 (exactly one unknown set a Use Caution floor) are removed. Unknown ingredients are excluded from the grade: they add no flags, set no floor, and never make a product ungradable. Each product is graded from its known ingredients only, using the reference flags, D1 to D6, the rubric conditionals and the explicit exception tables. Unknown names stay in the unknown_ingredients and audit_notes columns for review. No other rule changed; the petrolatum alias and the polysorbate flags are as they were.
+
+**Ungradable now means only** (a) no ingredient text on the page: 0 product(s), or (b) the explicit exception list: 5 product(s).
+
+**Tier counts after this regrade (48 products):**
+- Puberty Safe: 2
+- Use Caution: 4
+- Avoid (Mild): 2
+- Avoid (Moderate): 3
+- Avoid (High Priority Swap): 32
+- ungradable: 5 (no ingredient text: 0; exception list: 5)
+
+**Exception products still ungradable (change 3 list):** Q10 Revitalize Night Cream; Daily Hydration Lotion with Broad Spectrum SPF 15; Daily Hydration Lotion; Eucerin Baby Eczema Relief Hydrogel; Baby Lotion. Their flags and unknowns are kept in the row; only the tier is withheld.
+
+**Products that moved from ungradable into a graded tier:** 40. Each was ungradable before this regrade.
+
+| Product | Old tier | New tier | Unknowns excluded from grade | Audit status |
+|---|---|---|---|---|
+| Advanced Repair Cream, 16 OZ | ungradable | Avoid (High Priority Swap) | 17 | complete |
+| Advanced Repair Lotion | ungradable | Avoid (High Priority Swap) | 25 | needs review |
+| Advanced Repair Hand Cream | ungradable | Avoid (High Priority Swap) | 17 | complete |
+| Eucerin Advanced Cleansing Body and Face Wash | ungradable | Avoid (Moderate) | 5 | complete |
+| Advanced Repair Cream, 8 OZ | ungradable | Avoid (High Priority Swap) | 17 | complete |
+| Dark Spot Corrector Body Cream | ungradable | Avoid (High Priority Swap) | 15 | complete |
+| Dual Serum | ungradable | Avoid (High Priority Swap) | 17 | complete |
+| Eye Cream | ungradable | Avoid (High Priority Swap) | 13 | complete |
+| Dark Spot Corrector Body Lotion | ungradable | Avoid (High Priority Swap) | 11 | complete |
+| Daily Lotion SPF 30 | ungradable | Avoid (High Priority Swap) | 11 | complete |
+| Night Cream | ungradable | Avoid (High Priority Swap) | 12 | complete |
+| Cleansing Gel | ungradable | Use Caution | 7 | complete |
+| Gel-Cream | ungradable | Avoid (High Priority Swap) | 10 | complete |
+| Hydrating Cleansing Gel, 13.5 FL OZ | ungradable | Use Caution | 5 | complete |
+| Hydrating Cleansing Gel, 6.8 FL OZ | ungradable | Use Caution | 5 | complete |
+| Intensive Repair Lotion | ungradable | Avoid (High Priority Swap) | 10 | needs review |
+| Q10 Revitalize Daily Cream | ungradable | Puberty Safe | 2 | needs review |
+| Advanced Hydration After Sun Lotion | ungradable | Puberty Safe | 2 | needs review |
+| Sensitive Mineral SPF 50 Sunscreen | ungradable | Avoid (High Priority Swap) | 8 | complete |
+| Advanced Hydration Ultra-Light SPF 50 Face Sunscreen | ungradable | Avoid (High Priority Swap) | 12 | complete |
+| Advanced Hydration SPF 50 Sunscreen Spray | ungradable | Avoid (High Priority Swap) | 10 | complete |
+| Advanced Hydration SPF 50 Sunscreen | ungradable | Avoid (High Priority Swap) | 9 | complete |
+| Baby Sensitive Mineral SPF 50 Sunscreen Lotion | ungradable | Avoid (High Priority Swap) | 8 | complete |
+| Clear Skin SPF 50 Face Sunscreen | ungradable | Avoid (High Priority Swap) | 18 | complete |
+| Age Defense SPF 50 Face Sunscreen | ungradable | Avoid (High Priority Swap) | 18 | complete |
+| Tinted Sensitive Mineral SPF 35 Face Sunscreen | ungradable | Avoid (High Priority Swap) | 14 | complete |
+| Tinted Age Defense SPF 50 Face Sunscreen | ungradable | Avoid (High Priority Swap) | 19 | complete |
+| Roughness Relief Cream | ungradable | Avoid (High Priority Swap) | 16 | complete |
+| Roughness Relief Lotion | ungradable | Avoid (High Priority Swap) | 22 | complete |
+| Eczema Relief Cream & Body Wash | ungradable | Avoid (Moderate) | 14 | complete |
+| Eczema Relief Cream | ungradable | Avoid (High Priority Swap) | 7 | complete |
+| Eucerin Eczema Relief Hydrogel | ungradable | Use Caution | 7 | complete |
+| Eczema Relief Flare-Up Treatment | ungradable | Avoid (High Priority Swap) | 9 | complete |
+| Itch Relief Intensive Calming Lotion | ungradable | Avoid (High Priority Swap) | 15 | complete |
+| Skin Calming Lotion | ungradable | Avoid (High Priority Swap) | 7 | complete |
+| Skin Calming Cream | ungradable | Avoid (High Priority Swap) | 7 | complete |
+| Original Healing Rich Cream 16 oz. Jar | ungradable | Avoid (High Priority Swap) | 3 | complete |
+| Original Healing Lotion | ungradable | Avoid (High Priority Swap) | 5 | complete |
+| Baby Eczema Relief Cream & Body Wash | ungradable | Avoid (Moderate) | 14 | complete |
+| Baby Eczema Relief Cream | ungradable | Avoid (High Priority Swap) | 7 | complete |
+
+**Graded products whose tier did not change:** 3.
+
+**Puberty Safe or Use Caution products that have unknown ingredients (review first):** Cleansing Gel (Use Caution, 7 unknown excluded, status complete); Hydrating Cleansing Gel, 13.5 FL OZ (Use Caution, 5 unknown excluded, status complete); Hydrating Cleansing Gel, 6.8 FL OZ (Use Caution, 5 unknown excluded, status complete); Q10 Revitalize Daily Cream (Puberty Safe, 2 unknown excluded, status needs review); Advanced Hydration After Sun Lotion (Puberty Safe, 2 unknown excluded, status needs review); Eucerin Eczema Relief Hydrogel (Use Caution, 7 unknown excluded, status complete)
+
+**Unknown ingredients excluded from the grade:** 455 occurrences across 48 products, 126 distinct names (case-insensitive). The names are in each row's unknown_ingredients column.

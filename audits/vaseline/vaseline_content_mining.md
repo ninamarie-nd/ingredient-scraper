@@ -1,31 +1,31 @@
 # Vaseline Audit — Content Mining Report
 
-**Date audited:** 2026-10-16 (regraded 2026-10-17 under practitioner decisions D1 to D8 and changes 1 and 2; see the audit log)
-**Products audited:** 52 listed: 4 graded (all Avoid (High Priority Swap)), 32 ungradable (two or more unknown ingredients), 16 ungradable (no ingredient text)
+**Date audited:** 2026-10-16 (regraded 2026-10-17 under practitioner decisions D1 to D6 and changes 1 and 2, with D7 and D8 removed; see the audit log)
+**Products audited:** 52 listed: 36 graded (all Avoid (High Priority Swap)), 16 ungradable (no ingredient text)
 **Source:** https://www.vaseline.com/us/en/products.html (US site)
 
-**Read this first:** "Ungradable" is not a grade. It means two or more printed ingredients are not in the reference (D4 and D7), so no tier is assigned. A product with exactly one such ingredient gets a Use Caution floor, or keeps a higher tier from its other flags (D8). Partial flags are for ranking only. Sixteen product pages show no ingredient text at all, so they cannot be checked from the data.
+**Read this first:** Each grade uses the known ingredients only. A printed ingredient the reference does not cover adds no flag and does not change the tier (2026-10-17, replacing D7 and D8). "Ungradable" now means only that the page shows no ingredient text. Partial flags are for ranking only. Sixteen product pages show no ingredient text at all, so they cannot be checked from the data. The unknown names are listed in each row and in the audit log.
 
 ---
 
 ## Section A — Brand-level callout
 
-**Headline finding:** Four of the 52 Vaseline products can be graded, and all four are Avoid (High Priority Swap), each on petrolatum (category 1) in a leave-on. The other 48 are ungradable: 32 carry two or more ingredients the reference does not cover, and 16 have no ingredient text. Two of the four are the White Petrolatum USP products, which the practitioner alias (change 1, 2026-10-17) treats as petrolatum; they were Use Caution before that change.
+**Headline finding:** 36 of the 52 Vaseline products can now be graded from their known ingredients, and all 36 are Avoid (High Priority Swap), each with a category 1 flag in a leave-on. The other 16 have no ingredient text. Two of the 36 are the White Petrolatum USP products, which the practitioner alias (change 1, 2026-10-17) treats as petrolatum; they were Use Caution before that change.
 
 **Tier distribution (52 products):**
 - Puberty Safe: 0 (0%)
 - Use Caution: 0 (0%)
 - Avoid (Mild): 0 (0%)
 - Avoid (Moderate): 0 (0%)
-- Avoid (High Priority Swap): 4 (8%)
-- Ungradable, counted separately: 48 (92%), of which 32 carry two or more unknown ingredients (D7) and 16 have no ingredient text
+- Avoid (High Priority Swap): 36 (69%)
+- Ungradable, counted separately: 16 (31%), all with no ingredient text
 
 **Single most-flagged product:** Vaseline Intensive Care Cocoa Body Butter — 16 partial flags, including Petrolatum, Paraffin, Parfum (no disclosure), Methylparaben, BHT, Polysorbate 80 (flagged from 2026-10-17, change 2), and several silicones.
 
 **Cleanest product with text (if any):** Vaseline Healing Jelly Original and Vaseline Lip Therapy Advanced Healing Tube — Avoid (High Priority Swap) on one flag each (White Petrolatum USP, treated as petrolatum under change 1). Each has one flag and no unknown ingredient, and that flag is a category 1 flag in a leave-on. Fewest flags is not the same as clean.
 
 **Content angle for Section A:**
-"I checked 52 Vaseline products. Four can be graded so far, and all four land in the highest tier. The rest can't be graded yet: most contain ingredients the reference does not cover, and 16 pages show no ingredient list at all." Keep it about coverage and missing data.
+"I checked 52 Vaseline products. I can grade 36 from the ingredients the reference covers, and all 36 land in the highest tier on a category 1 flag. The other 16 pages show no ingredient list at all." Keep it about coverage and missing data.
 
 ---
 
@@ -72,20 +72,20 @@
 
 **Content angles for Section C:**
 1. "The Cocoa Radiant gel oil has 2 partial flags. The Cocoa Body Butter has 15. Same brand, same names." Use the counts and the reference categories.
-2. "Men Cooling versus Men Fast Absorbing: 11 versus 10 partial flags. Neither can be graded yet."
+2. "Men Cooling versus Men Fast Absorbing: 11 versus 10 partial flags. Both grade Avoid (High Priority Swap) on their known ingredients."
 
 ---
 
 ## Raw data summary
 
-**Unknown ingredients (manual review queue):** 116 distinct spellings (95 ignoring case) after changes 1 and 2. Most frequent: Stearic Acid (16 products), Theobroma Cacao (Cocoa) Seed Butter (10), Glyceryl Stearate (8), Tocopheryl Acetate (8), Helianthus Annuus (Sunflower) Seed Oil (8), Glycol Stearate (7), Acrylates/C10-30 Alkyl Acrylate Crosspolymer (7), Hexyl Cinnamal (7). The full deduplicated list is in the Regrade section of `vaseline_audit_log.md`.
+**Unknown ingredients (manual review queue):** 116 distinct spellings (95 ignoring case) after changes 1 and 2. Most frequent: Stearic Acid (16 products), Theobroma Cacao (Cocoa) Seed Butter (10), Glyceryl Stearate (8), Tocopheryl Acetate (8), Helianthus Annuus (Sunflower) Seed Oil (8), Glycol Stearate (7), Acrylates/C10-30 Alkyl Acrylate Crosspolymer (7), Hexyl Cinnamal (7). All 322 unknown occurrences are excluded from the grade. The full deduplicated list is in the Regrade section of `vaseline_audit_log.md`.
 
 **Name variants (D4 and change 1):**
 - White Petrolatum USP (2 products): decided under change 1 (2026-10-17). It is an alias of petrolatum (reference category 1), recorded in the grader's alias table. Both products now grade Avoid (High Priority Swap) on the carcinogen-in-leave-on escalation. The reference PDF text is unchanged.
 - Silica Dimethyl Silylate (Cocoa Shimmer Jelly Stick): see the Eucerin note.
 
-**Known limits:** The Vaccinium false positive (Rosy Lips Stick) and the unimplemented mica conditional (three shimmer products) are listed in the audit log. Neither changes a tier here: the four graded products contain neither, but both change the partial flags shown above.
+**Known limits:** The Vaccinium false positive (Rosy Lips Stick) and the unimplemented mica conditional (three shimmer products) are listed in the audit log. Neither changes a tier here: every graded product carries the category 1 carcinogen-in-leave-on escalation, so removing the false flag or applying the mica condition cannot move a tier. Both change the partial flags shown above.
 
-**D8 (2026-10-16, one unknown ingredient):** Two products moved from ungradable to Use Caution, Vaseline Healing Jelly Original and Vaseline Lip Therapy Advanced Healing Tube, both on the name White Petrolatum USP. Two other products kept their single unknown and moved to Avoid (High Priority Swap), where the petrolatum or other flags already set that tier: Healing Jelly Cocoa Butter (Theobroma Cacao (Cocoa) Seed Butter) and Lip Therapy Original Mini (Yellow 5 Lake).
+**D7 and D8 removed (2026-10-17):** Under the earlier rules, products with two or more unknown ingredients were ungradable, and products with exactly one got a Use Caution floor. Both rules are gone. The 32 products that were ungradable on unknowns are now graded from their known ingredients, and all 32 are Avoid (High Priority Swap). Old and new tiers, and the unknown counts excluded from each grade, are in the Grading on known ingredients section of `vaseline_audit_log.md`.
 
 **Changes 1 and 2 (2026-10-17):** Change 1 (White Petrolatum USP as petrolatum) moved Healing Jelly Original and Lip Therapy Advanced Healing Tube from Use Caution to Avoid (High Priority Swap). Change 2 (all polysorbates flagged) added Polysorbate 80 to the flags of Intensive Care Hydra Replenish Hand Crème and Cocoa Body Butter. Neither change moved a product between ungradable and graded. Healing Jelly Cocoa Butter and Lip Therapy Original Mini were already Avoid (High Priority Swap) from their petrolatum flags.

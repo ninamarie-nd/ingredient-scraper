@@ -5,8 +5,8 @@
   "Use Caution": 0,
   "Avoid (Mild)": 0,
   "Avoid (Moderate)": 0,
-  "Avoid (High Priority Swap)": 4,
-  "ungradable": 48
+  "Avoid (High Priority Swap)": 36,
+  "ungradable": 16
  },
  "rows": [
   {
@@ -31,7 +31,7 @@
   },
   {
    "product_name": "Vaseline® Radiant X Even Tone Nourishing Body Lotion",
-   "tier": "ungradable",
+   "tier": "Avoid (High Priority Swap)",
    "flag_count": 9,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -69,11 +69,11 @@
     "PFAS",
     "carcinogen in leave-on"
    ],
-   "status": "needs review"
+   "status": "complete"
   },
   {
    "product_name": "Vaseline® Radiant X Replenishing Hydrating Body Oil",
-   "tier": "ungradable",
+   "tier": "Avoid (High Priority Swap)",
    "flag_count": 5,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -95,11 +95,11 @@
    "esc": [
     "carcinogen in leave-on"
    ],
-   "status": "needs review"
+   "status": "complete"
   },
   {
    "product_name": "Vaseline® Radiant X Deep Nourishment Body Cream",
-   "tier": "ungradable",
+   "tier": "Avoid (High Priority Swap)",
    "flag_count": 9,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -137,11 +137,11 @@
     "PFAS",
     "carcinogen in leave-on"
    ],
-   "status": "needs review"
+   "status": "complete"
   },
   {
    "product_name": "Vaseline® Radiant X Deep Nourishment Hand Butter",
-   "tier": "ungradable",
+   "tier": "Avoid (High Priority Swap)",
    "flag_count": 10,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -177,11 +177,11 @@
     "PFAS",
     "carcinogen in leave-on"
    ],
-   "status": "needs review"
+   "status": "complete"
   },
   {
    "product_name": "Vaseline® Intensive Care™ Hydra Replenish Hand Crème",
-   "tier": "ungradable",
+   "tier": "Avoid (High Priority Swap)",
    "flag_count": 12,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -216,7 +216,7 @@
     "PFAS",
     "carcinogen in leave-on"
    ],
-   "status": "needs review"
+   "status": "complete"
   },
   {
    "product_name": "Vaseline® Healing Jelly Original",
@@ -268,7 +268,7 @@
   },
   {
    "product_name": "Vaseline® Cocoa Shimmer Jelly Stick",
-   "tier": "ungradable",
+   "tier": "Avoid (High Priority Swap)",
    "flag_count": 8,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -295,11 +295,11 @@
     "PFAS",
     "carcinogen in leave-on"
    ],
-   "status": "needs review"
+   "status": "complete"
   },
   {
    "product_name": "Vaseline® All-Over Body Balm Jelly Stick",
-   "tier": "ungradable",
+   "tier": "Avoid (High Priority Swap)",
    "flag_count": 2,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -315,11 +315,11 @@
    "esc": [
     "carcinogen in leave-on"
    ],
-   "status": "needs review"
+   "status": "complete"
   },
   {
    "product_name": "Vaseline® Soothing Hydration Lotion",
-   "tier": "ungradable",
+   "tier": "Avoid (High Priority Swap)",
    "flag_count": 9,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -350,11 +350,11 @@
     "PFAS",
     "carcinogen in leave-on"
    ],
-   "status": "needs review"
+   "status": "complete"
   },
   {
    "product_name": "Vaseline® Cocoa Radiant® Lotion",
-   "tier": "ungradable",
+   "tier": "Avoid (High Priority Swap)",
    "flag_count": 13,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -391,11 +391,11 @@
     "PFAS",
     "carcinogen in leave-on"
    ],
-   "status": "needs review"
+   "status": "complete"
   },
   {
    "product_name": "Vaseline® Nourishing Moisture Lotion",
-   "tier": "ungradable",
+   "tier": "Avoid (High Priority Swap)",
    "flag_count": 12,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -434,11 +434,11 @@
     "PFAS",
     "carcinogen in leave-on"
    ],
-   "status": "needs review"
+   "status": "complete"
   },
   {
    "product_name": "Vaseline® Calm Healing Lotion",
-   "tier": "ungradable",
+   "tier": "Avoid (High Priority Swap)",
    "flag_count": 12,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -474,11 +474,11 @@
     "PFAS",
     "carcinogen in leave-on"
    ],
-   "status": "needs review"
+   "status": "complete"
   },
   {
    "product_name": "Vaseline® Advanced Repair Unscented Lotion",
-   "tier": "ungradable",
+   "tier": "Avoid (High Priority Swap)",
    "flag_count": 7,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -504,11 +504,11 @@
     "PFAS",
     "carcinogen in leave-on"
    ],
-   "status": "needs review"
+   "status": "complete"
   },
   {
    "product_name": "Vaseline® Almond Smooth Lotion",
-   "tier": "ungradable",
+   "tier": "Avoid (High Priority Swap)",
    "flag_count": 10,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -545,11 +545,11 @@
     "PFAS",
     "carcinogen in leave-on"
    ],
-   "status": "needs review"
+   "status": "complete"
   },
   {
    "product_name": "Vaseline® Men Cooling Hydration Lotion",
-   "tier": "ungradable",
+   "tier": "Avoid (High Priority Swap)",
    "flag_count": 11,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -585,11 +585,11 @@
     "PFAS",
     "carcinogen in leave-on"
    ],
-   "status": "needs review"
+   "status": "complete"
   },
   {
    "product_name": "Vaseline® Intensive Care™ Cocoa Body Butter",
-   "tier": "ungradable",
+   "tier": "Avoid (High Priority Swap)",
    "flag_count": 16,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -640,11 +640,11 @@
     "PFAS",
     "carcinogen in leave-on"
    ],
-   "status": "needs review"
+   "status": "complete"
   },
   {
    "product_name": "Vaseline® Men Fast Absorbing Lotion",
-   "tier": "ungradable",
+   "tier": "Avoid (High Priority Swap)",
    "flag_count": 10,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -676,11 +676,11 @@
     "PFAS",
     "carcinogen in leave-on"
    ],
-   "status": "needs review"
+   "status": "complete"
   },
   {
    "product_name": "Vaseline® Men Extra Strength Lotion",
-   "tier": "ungradable",
+   "tier": "Avoid (High Priority Swap)",
    "flag_count": 11,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -711,7 +711,7 @@
     "PFAS",
     "carcinogen in leave-on"
    ],
-   "status": "needs review"
+   "status": "complete"
   },
   {
    "product_name": "Vaseline® Lip Therapy® Original Mini",
@@ -732,7 +732,7 @@
   },
   {
    "product_name": "Vaseline® Lip Therapy® Rosy Mini",
-   "tier": "ungradable",
+   "tier": "Avoid (High Priority Swap)",
    "flag_count": 1,
    "product_type": "lip product",
    "flagged": [
@@ -747,11 +747,11 @@
    "esc": [
     "carcinogen in leave-on"
    ],
-   "status": "needs review"
+   "status": "complete"
   },
   {
    "product_name": "Vaseline® Lip Therapy® Cocoa Butter Mini",
-   "tier": "ungradable",
+   "tier": "Avoid (High Priority Swap)",
    "flag_count": 1,
    "product_type": "lip product",
    "flagged": [
@@ -766,11 +766,11 @@
    "esc": [
     "carcinogen in leave-on"
    ],
-   "status": "needs review"
+   "status": "complete"
   },
   {
    "product_name": "Vaseline® Lip Therapy® Crème Brûlée Mini",
-   "tier": "ungradable",
+   "tier": "Avoid (High Priority Swap)",
    "flag_count": 1,
    "product_type": "lip product",
    "flagged": [
@@ -785,11 +785,11 @@
    "esc": [
     "carcinogen in leave-on"
    ],
-   "status": "needs review"
+   "status": "complete"
   },
   {
    "product_name": "Vaseline® Intensive Care™ Aloe Soothe Spray",
-   "tier": "ungradable",
+   "tier": "Avoid (High Priority Swap)",
    "flag_count": 7,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -815,11 +815,11 @@
     "PFAS",
     "carcinogen in leave-on"
    ],
-   "status": "needs review"
+   "status": "complete"
   },
   {
    "product_name": "Vaseline® Intensive Care™ Cocoa Radiant Spray",
-   "tier": "ungradable",
+   "tier": "Avoid (High Priority Swap)",
    "flag_count": 7,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -845,11 +845,11 @@
     "PFAS",
     "carcinogen in leave-on"
    ],
-   "status": "needs review"
+   "status": "complete"
   },
   {
    "product_name": "Vaseline® Lip Therapy® Original Stick",
-   "tier": "ungradable",
+   "tier": "Avoid (High Priority Swap)",
    "flag_count": 1,
    "product_type": "lip product",
    "flagged": [
@@ -870,11 +870,11 @@
    "esc": [
     "carcinogen in leave-on"
    ],
-   "status": "needs review"
+   "status": "complete"
   },
   {
    "product_name": "Vaseline® Lip Therapy® Rosy Lips Stick",
-   "tier": "ungradable",
+   "tier": "Avoid (High Priority Swap)",
    "flag_count": 5,
    "product_type": "lip product",
    "flagged": [
@@ -906,11 +906,11 @@
     "PFAS",
     "carcinogen in leave-on"
    ],
-   "status": "needs review"
+   "status": "complete"
   },
   {
    "product_name": "Vaseline® Lip Therapy® Aloe Vera Stick",
-   "tier": "ungradable",
+   "tier": "Avoid (High Priority Swap)",
    "flag_count": 4,
    "product_type": "lip product",
    "flagged": [
@@ -939,11 +939,11 @@
     "PFAS",
     "carcinogen in leave-on"
    ],
-   "status": "needs review"
+   "status": "complete"
   },
   {
    "product_name": "Vaseline® Lip Therapy® Cocoa Butter Stick",
-   "tier": "ungradable",
+   "tier": "Avoid (High Priority Swap)",
    "flag_count": 4,
    "product_type": "lip product",
    "flagged": [
@@ -974,11 +974,11 @@
     "PFAS",
     "carcinogen in leave-on"
    ],
-   "status": "needs review"
+   "status": "complete"
   },
   {
    "product_name": "Vaseline® Lip Therapy® Rosy Lips Tin",
-   "tier": "ungradable",
+   "tier": "Avoid (High Priority Swap)",
    "flag_count": 1,
    "product_type": "lip product",
    "flagged": [
@@ -992,7 +992,7 @@
    "esc": [
     "carcinogen in leave-on"
    ],
-   "status": "needs review"
+   "status": "complete"
   },
   {
    "product_name": "Vaseline® Baby Healing Jelly",
@@ -1001,7 +1001,7 @@
   },
   {
    "product_name": "Sunlit Glow Body Shimmer Gel Oil",
-   "tier": "ungradable",
+   "tier": "Avoid (High Priority Swap)",
    "flag_count": 7,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -1029,11 +1029,11 @@
     "PFAS",
     "carcinogen in leave-on"
    ],
-   "status": "needs review"
+   "status": "complete"
   },
   {
    "product_name": "Golden Hour Glow Bronze Body Shimmer Gel Oil",
-   "tier": "ungradable",
+   "tier": "Avoid (High Priority Swap)",
    "flag_count": 8,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -1063,7 +1063,7 @@
     "PFAS",
     "carcinogen in leave-on"
    ],
-   "status": "needs review"
+   "status": "complete"
   },
   {
    "product_name": "Vaseline® Baby Healing Jelly Tube",
@@ -1112,7 +1112,7 @@
   },
   {
    "product_name": "Vaseline® Intensive Care™ Cocoa Radiant Gel Oil",
-   "tier": "ungradable",
+   "tier": "Avoid (High Priority Swap)",
    "flag_count": 2,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -1127,7 +1127,7 @@
    "esc": [
     "carcinogen in leave-on"
    ],
-   "status": "needs review"
+   "status": "complete"
   },
   {
    "product_name": "Vaseline Lip Therapy Pink Grapefruit Mini",
@@ -1141,7 +1141,7 @@
   },
   {
    "product_name": "Vaseline® Pro VitaB3 Supple & Soft Serum Burst Lotion",
-   "tier": "ungradable",
+   "tier": "Avoid (High Priority Swap)",
    "flag_count": 8,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -1176,11 +1176,11 @@
     "PFAS",
     "carcinogen in leave-on"
    ],
-   "status": "needs review"
+   "status": "complete"
   },
   {
    "product_name": "Vaseline® Pro VitaB3 Luminous Glow Serum Burst Lotion",
-   "tier": "ungradable",
+   "tier": "Avoid (High Priority Swap)",
    "flag_count": 7,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -1212,7 +1212,7 @@
     "PFAS",
     "carcinogen in leave-on"
    ],
-   "status": "needs review"
+   "status": "complete"
   }
  ]
 }

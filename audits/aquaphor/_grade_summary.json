@@ -1,17 +1,17 @@
 {
  "brand": "aquaphor",
  "tier_counts": {
-  "Puberty Safe": 0,
-  "Use Caution": 0,
+  "Puberty Safe": 1,
+  "Use Caution": 4,
   "Avoid (Mild)": 0,
   "Avoid (Moderate)": 2,
-  "Avoid (High Priority Swap)": 0,
-  "ungradable": 39
+  "Avoid (High Priority Swap)": 31,
+  "ungradable": 3
  },
  "rows": [
   {
    "product_name": "Aquaphor® Moisturizing Cream (8oz.)",
-   "tier": "ungradable",
+   "tier": "Avoid (High Priority Swap)",
    "flag_count": 4,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -38,11 +38,11 @@
    "esc": [
     "carcinogen in leave-on"
    ],
-   "status": "needs review"
+   "status": "complete"
   },
   {
    "product_name": "Aquaphor® Hydrating Daily Lotion (3oz.)",
-   "tier": "ungradable",
+   "tier": "Avoid (High Priority Swap)",
    "flag_count": 4,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -65,11 +65,11 @@
    "esc": [
     "carcinogen in leave-on"
    ],
-   "status": "needs review"
+   "status": "complete"
   },
   {
    "product_name": "Aquaphor® Hydrating Daily Lotion (8oz.)",
-   "tier": "ungradable",
+   "tier": "Avoid (High Priority Swap)",
    "flag_count": 4,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -92,11 +92,11 @@
    "esc": [
     "carcinogen in leave-on"
    ],
-   "status": "needs review"
+   "status": "complete"
   },
   {
    "product_name": "Aquaphor® Hydrating Daily Lotion (16oz.)",
-   "tier": "ungradable",
+   "tier": "Avoid (High Priority Swap)",
    "flag_count": 4,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -119,11 +119,11 @@
    "esc": [
     "carcinogen in leave-on"
    ],
-   "status": "needs review"
+   "status": "complete"
   },
   {
    "product_name": "Aquaphor® Moisturizing Cream (1.89oz.)",
-   "tier": "ungradable",
+   "tier": "Avoid (High Priority Swap)",
    "flag_count": 4,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -146,11 +146,11 @@
    "esc": [
     "carcinogen in leave-on"
    ],
-   "status": "needs review"
+   "status": "complete"
   },
   {
    "product_name": "Aquaphor® Moisturizing Cream (16oz.)",
-   "tier": "ungradable",
+   "tier": "Avoid (High Priority Swap)",
    "flag_count": 4,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -177,11 +177,11 @@
    "esc": [
     "carcinogen in leave-on"
    ],
-   "status": "needs review"
+   "status": "complete"
   },
   {
    "product_name": "Aquaphor® Lip Repair Stick Naturally Inspired Aloe Vera Single Pack",
-   "tier": "ungradable",
+   "tier": "Use Caution",
    "flag_count": 0,
    "product_type": "lip product",
    "flagged": [],
@@ -200,11 +200,11 @@
     "Pantolactone"
    ],
    "esc": [],
-   "status": "needs review"
+   "status": "complete"
   },
   {
    "product_name": "Aquaphor® Lip Repair Stick Naturally Inspired Coconut Single Pack",
-   "tier": "ungradable",
+   "tier": "Puberty Safe",
    "flag_count": 0,
    "product_type": "lip product",
    "flagged": [],
@@ -221,11 +221,11 @@
     "Pantolactone"
    ],
    "esc": [],
-   "status": "needs review"
+   "status": "complete"
   },
   {
    "product_name": "Aquaphor® Baby Healing Ointment (7oz.)",
-   "tier": "ungradable",
+   "tier": "Avoid (High Priority Swap)",
    "flag_count": 3,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -241,11 +241,11 @@
    "esc": [
     "carcinogen in leave-on"
    ],
-   "status": "needs review"
+   "status": "complete"
   },
   {
    "product_name": "Aquaphor® Diaper Rash Paste (3.5oz.)",
-   "tier": "ungradable",
+   "tier": "Use Caution",
    "flag_count": 0,
    "product_type": "leave-on skincare",
    "flagged": [],
@@ -258,11 +258,11 @@
     "Butyrospermum Parkii (Shea) Butter"
    ],
    "esc": [],
-   "status": "needs review"
+   "status": "complete"
   },
   {
    "product_name": "Aquaphor® Lip Repair Stick",
-   "tier": "ungradable",
+   "tier": "Avoid (High Priority Swap)",
    "flag_count": 1,
    "product_type": "lip product",
    "flagged": [
@@ -283,11 +283,11 @@
    "esc": [
     "PFAS"
    ],
-   "status": "needs review"
+   "status": "complete"
   },
   {
    "product_name": "Aquaphor® Lip Repair Stick + Sunscreen",
-   "tier": "ungradable",
+   "tier": "Avoid (High Priority Swap)",
    "flag_count": 5,
    "product_type": "sunscreen",
    "flagged": [
@@ -314,11 +314,11 @@
    "esc": [
     "PFAS"
    ],
-   "status": "needs review"
+   "status": "complete"
   },
   {
    "product_name": "Aquaphor® Lip Protectant + SPF (Dual Pack)",
-   "tier": "ungradable",
+   "tier": "Avoid (High Priority Swap)",
    "flag_count": 7,
    "product_type": "sunscreen",
    "flagged": [
@@ -345,11 +345,11 @@
    "esc": [
     "carcinogen in leave-on"
    ],
-   "status": "needs review"
+   "status": "complete"
   },
   {
    "product_name": "Aquaphor® Lip Repair Stick + Sunscreen (Dual Pack)",
-   "tier": "ungradable",
+   "tier": "Avoid (High Priority Swap)",
    "flag_count": 5,
    "product_type": "sunscreen",
    "flagged": [
@@ -376,11 +376,11 @@
    "esc": [
     "PFAS"
    ],
-   "status": "needs review"
+   "status": "complete"
   },
   {
    "product_name": "Aquaphor® Children's Healing Ointment (14oz.)",
-   "tier": "ungradable",
+   "tier": "Avoid (High Priority Swap)",
    "flag_count": 3,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -396,11 +396,11 @@
    "esc": [
     "carcinogen in leave-on"
    ],
-   "status": "needs review"
+   "status": "complete"
   },
   {
    "product_name": "Aquaphor® Lip Repair",
-   "tier": "ungradable",
+   "tier": "Use Caution",
    "flag_count": 1,
    "product_type": "lip product",
    "flagged": [
@@ -424,11 +424,11 @@
     "Glyceryl Stearate"
    ],
    "esc": [],
-   "status": "needs review"
+   "status": "complete"
   },
   {
    "product_name": "Aquaphor® Lip Repair Stick (Dual Pack)",
-   "tier": "ungradable",
+   "tier": "Avoid (High Priority Swap)",
    "flag_count": 1,
    "product_type": "lip product",
    "flagged": [
@@ -449,11 +449,11 @@
    "esc": [
     "PFAS"
    ],
-   "status": "needs review"
+   "status": "complete"
   },
   {
    "product_name": "Aquaphor® Baby Healing Balm Stick (0.65oz.)",
-   "tier": "ungradable",
+   "tier": "Avoid (High Priority Swap)",
    "flag_count": 2,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -470,7 +470,7 @@
    "esc": [
     "carcinogen in leave-on"
    ],
-   "status": "needs review"
+   "status": "complete"
   },
   {
    "product_name": "Aquaphor® Baby Wash & Shampoo (25.4oz.)",
@@ -493,7 +493,7 @@
   },
   {
    "product_name": "Aquaphor Baby Sensitive Lotion, Baby Lotion, 3 Fl Oz",
-   "tier": "ungradable",
+   "tier": "Avoid (High Priority Swap)",
    "flag_count": 3,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -515,11 +515,11 @@
    "esc": [
     "carcinogen in leave-on"
    ],
-   "status": "needs review"
+   "status": "complete"
   },
   {
    "product_name": "Aquaphor Baby Sensitive Lotion, Baby Lotion, 8 Fl Oz",
-   "tier": "ungradable",
+   "tier": "Avoid (High Priority Swap)",
    "flag_count": 3,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -541,11 +541,11 @@
    "esc": [
     "carcinogen in leave-on"
    ],
-   "status": "needs review"
+   "status": "complete"
   },
   {
    "product_name": "Aquaphor® Baby Healing Ointment (3oz.)",
-   "tier": "ungradable",
+   "tier": "Avoid (High Priority Swap)",
    "flag_count": 3,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -561,11 +561,11 @@
    "esc": [
     "carcinogen in leave-on"
    ],
-   "status": "needs review"
+   "status": "complete"
   },
   {
    "product_name": "Aquaphor® Baby Healing Ointment (14oz.)",
-   "tier": "ungradable",
+   "tier": "Avoid (High Priority Swap)",
    "flag_count": 3,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -581,7 +581,7 @@
    "esc": [
     "carcinogen in leave-on"
    ],
-   "status": "needs review"
+   "status": "complete"
   },
   {
    "product_name": "Aquaphor® Diaper Rash Cream (3oz.)",
@@ -590,7 +590,7 @@
   },
   {
    "product_name": "Aquaphor® Lip Protectant + SPF 30",
-   "tier": "ungradable",
+   "tier": "Avoid (High Priority Swap)",
    "flag_count": 7,
    "product_type": "sunscreen",
    "flagged": [
@@ -617,11 +617,11 @@
    "esc": [
     "carcinogen in leave-on"
    ],
-   "status": "needs review"
+   "status": "complete"
   },
   {
    "product_name": "Aquaphor® Lip Repair (Dual Pack)",
-   "tier": "ungradable",
+   "tier": "Use Caution",
    "flag_count": 1,
    "product_type": "lip product",
    "flagged": [
@@ -642,11 +642,11 @@
     "Magnesium Stearate"
    ],
    "esc": [],
-   "status": "needs review"
+   "status": "complete"
   },
   {
    "product_name": "Aquaphor® Baby Healing Ointment (2x.35oz.)",
-   "tier": "ungradable",
+   "tier": "Avoid (High Priority Swap)",
    "flag_count": 3,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -662,11 +662,11 @@
    "esc": [
     "carcinogen in leave-on"
    ],
-   "status": "needs review"
+   "status": "complete"
   },
   {
    "product_name": "Aquaphor® Baby Healing Ointment (1.75oz.)",
-   "tier": "ungradable",
+   "tier": "Avoid (High Priority Swap)",
    "flag_count": 3,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -682,7 +682,7 @@
    "esc": [
     "carcinogen in leave-on"
    ],
-   "status": "needs review"
+   "status": "complete"
   },
   {
    "product_name": "Aquaphor® Baby Wash & Shampoo (16.9 fl.oz)",
@@ -705,7 +705,7 @@
   },
   {
    "product_name": "Aquaphor® Ointment Body Spray (3.7oz.)",
-   "tier": "ungradable",
+   "tier": "Avoid (High Priority Swap)",
    "flag_count": 3,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -722,11 +722,11 @@
    "esc": [
     "carcinogen in leave-on"
    ],
-   "status": "needs review"
+   "status": "complete"
   },
   {
    "product_name": "Aquaphor Healing Ointment® (.25oz.)",
-   "tier": "ungradable",
+   "tier": "Avoid (High Priority Swap)",
    "flag_count": 3,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -742,11 +742,11 @@
    "esc": [
     "carcinogen in leave-on"
    ],
-   "status": "needs review"
+   "status": "complete"
   },
   {
    "product_name": "Aquaphor Healing Ointment® With Touch-Free Applicator (3oz.)",
-   "tier": "ungradable",
+   "tier": "Avoid (High Priority Swap)",
    "flag_count": 3,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -762,11 +762,11 @@
    "esc": [
     "carcinogen in leave-on"
    ],
-   "status": "needs review"
+   "status": "complete"
   },
   {
    "product_name": "Aquaphor® Children's Itch Relief Ointment (1 oz.)",
-   "tier": "ungradable",
+   "tier": "Avoid (High Priority Swap)",
    "flag_count": 3,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -784,11 +784,11 @@
    "esc": [
     "carcinogen in leave-on"
    ],
-   "status": "needs review"
+   "status": "complete"
   },
   {
    "product_name": "Aquaphor® Healing Balm Stick (0.65oz.)",
-   "tier": "ungradable",
+   "tier": "Avoid (High Priority Swap)",
    "flag_count": 2,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -805,7 +805,7 @@
    "esc": [
     "carcinogen in leave-on"
    ],
-   "status": "needs review"
+   "status": "complete"
   },
   {
    "product_name": "Aquaphor® Hand Mask",
@@ -814,7 +814,7 @@
   },
   {
    "product_name": "Aquaphor® Foot Mask",
-   "tier": "ungradable",
+   "tier": "Avoid (High Priority Swap)",
    "flag_count": 5,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -842,11 +842,11 @@
     "PFAS",
     "carcinogen in leave-on"
    ],
-   "status": "needs review"
+   "status": "complete"
   },
   {
    "product_name": "Aquaphor Healing Ointment® (1.75oz.)",
-   "tier": "ungradable",
+   "tier": "Avoid (High Priority Swap)",
    "flag_count": 3,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -862,11 +862,11 @@
    "esc": [
     "carcinogen in leave-on"
    ],
-   "status": "needs review"
+   "status": "complete"
   },
   {
    "product_name": "Aquaphor® Ointment Body Spray (6.2 oz)",
-   "tier": "ungradable",
+   "tier": "Avoid (High Priority Swap)",
    "flag_count": 3,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -883,11 +883,11 @@
    "esc": [
     "carcinogen in leave-on"
    ],
-   "status": "needs review"
+   "status": "complete"
   },
   {
    "product_name": "Aquaphor Healing Ointment® (14oz.)",
-   "tier": "ungradable",
+   "tier": "Avoid (High Priority Swap)",
    "flag_count": 3,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -903,7 +903,7 @@
    "esc": [
     "carcinogen in leave-on"
    ],
-   "status": "needs review"
+   "status": "complete"
   },
   {
    "product_name": "Aquaphor Healing Ointment® (2x.3.5oz)",
@@ -912,7 +912,7 @@
   },
   {
    "product_name": "Aquaphor Healing Ointment® (7oz.)",
-   "tier": "ungradable",
+   "tier": "Avoid (High Priority Swap)",
    "flag_count": 3,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -928,7 +928,7 @@
    "esc": [
     "carcinogen in leave-on"
    ],
-   "status": "needs review"
+   "status": "complete"
   }
  ]
 }

@@ -215,3 +215,36 @@ Applied in this pass with the same `_grader.py` in every brand folder. The refer
 - Advanced Therapy Lotion Fragrance-Free: Polysorbate 60 flagged [1,2,4,5], flags 5 to 6, unknowns 9 to 8, still ungradable. Agrees. No White Petrolatum USP or Eucerin exception in this brand.
 
 **Tier counts after this pass:** ungradable: 7.
+
+## Grading on known ingredients (2026-10-17)
+
+**Rule (practitioner decision, replaces D7 and D8).** D7 (two or more unknown ingredients made a product ungradable) and D8 (exactly one unknown set a Use Caution floor) are removed. Unknown ingredients are excluded from the grade: they add no flags, set no floor, and never make a product ungradable. Each product is graded from its known ingredients only, using the reference flags, D1 to D6, the rubric conditionals and the explicit exception tables. Unknown names stay in the unknown_ingredients and audit_notes columns for review. No other rule changed; the petrolatum alias and the polysorbate flags are as they were.
+
+**Ungradable now means only** (a) no ingredient text on the page: 1 product(s), or (b) the explicit exception list: 0 product(s).
+
+**Tier counts after this regrade (7 products):**
+- Puberty Safe: 0
+- Use Caution: 0
+- Avoid (Mild): 1
+- Avoid (Moderate): 1
+- Avoid (High Priority Swap): 4
+- ungradable: 1 (no ingredient text: 1; exception list: 0)
+
+**Exception products still ungradable:** none. This brand has no entries in the change 3 exception list.
+
+**Products that moved from ungradable into a graded tier:** 6. Each was ungradable before this regrade.
+
+| Product | Old tier | New tier | Unknowns excluded from grade | Audit status |
+|---|---|---|---|---|
+| Daily Moisture Lotion Fragrance-Free | ungradable | Avoid (High Priority Swap) | 10 | complete |
+| Daily Moisture Lotion | ungradable | Avoid (High Priority Swap) | 10 | complete |
+| Advanced Therapy Lotion Fragrance-Free | ungradable | Avoid (High Priority Swap) | 8 | complete |
+| Advanced Therapy Body Wash Fragrance-Free | ungradable | Avoid (Mild) | 6 | complete |
+| Intense Skin Repair Lotion | ungradable | Avoid (High Priority Swap) | 13 | complete |
+| Daily Moisture Body Wash Lightly Scented | ungradable | Avoid (Moderate) | 6 | complete |
+
+**Graded products whose tier did not change:** 0.
+
+**Puberty Safe or Use Caution products that have unknown ingredients (review first):** none.
+
+**Unknown ingredients excluded from the grade:** 53 occurrences across 7 products, 18 distinct names (case-insensitive). The names are in each row's unknown_ingredients column.

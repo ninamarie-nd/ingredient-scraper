@@ -598,3 +598,66 @@ Applied in this pass with the same `_grader.py` in every brand folder. The refer
 - No polysorbate, no White Petrolatum USP and no Eucerin exception in this brand, so changes 1 to 3 do not reach it. Second check, unchanged: Aquaphor Baby Wash & Shampoo (25.4oz) has five flags and one unknown (Sea Salt), Avoid (Moderate) on the five-flag rule. Agrees.
 
 **Tier counts after this pass:** ungradable: 39; Avoid (Moderate): 2.
+
+## Grading on known ingredients (2026-10-17)
+
+**Rule (practitioner decision, replaces D7 and D8).** D7 (two or more unknown ingredients made a product ungradable) and D8 (exactly one unknown set a Use Caution floor) are removed. Unknown ingredients are excluded from the grade: they add no flags, set no floor, and never make a product ungradable. Each product is graded from its known ingredients only, using the reference flags, D1 to D6, the rubric conditionals and the explicit exception tables. Unknown names stay in the unknown_ingredients and audit_notes columns for review. No other rule changed; the petrolatum alias and the polysorbate flags are as they were.
+
+**Ungradable now means only** (a) no ingredient text on the page: 3 product(s), or (b) the explicit exception list: 0 product(s).
+
+**Tier counts after this regrade (41 products):**
+- Puberty Safe: 1
+- Use Caution: 4
+- Avoid (Mild): 0
+- Avoid (Moderate): 2
+- Avoid (High Priority Swap): 31
+- ungradable: 3 (no ingredient text: 3; exception list: 0)
+
+**Exception products still ungradable:** none. This brand has no entries in the change 3 exception list.
+
+**Products that moved from ungradable into a graded tier:** 36. Each was ungradable before this regrade.
+
+| Product | Old tier | New tier | Unknowns excluded from grade | Audit status |
+|---|---|---|---|---|
+| Aquaphor® Moisturizing Cream (8oz.) | ungradable | Avoid (High Priority Swap) | 12 | complete |
+| Aquaphor® Hydrating Daily Lotion (3oz.) | ungradable | Avoid (High Priority Swap) | 8 | complete |
+| Aquaphor® Hydrating Daily Lotion (8oz.) | ungradable | Avoid (High Priority Swap) | 8 | complete |
+| Aquaphor® Hydrating Daily Lotion (16oz.) | ungradable | Avoid (High Priority Swap) | 8 | complete |
+| Aquaphor® Moisturizing Cream (1.89oz.) | ungradable | Avoid (High Priority Swap) | 8 | complete |
+| Aquaphor® Moisturizing Cream (16oz.) | ungradable | Avoid (High Priority Swap) | 12 | complete |
+| Aquaphor® Lip Repair Stick Naturally Inspired Aloe Vera Single Pack | ungradable | Use Caution | 11 | complete |
+| Aquaphor® Lip Repair Stick Naturally Inspired Coconut Single Pack | ungradable | Puberty Safe | 9 | complete |
+| Aquaphor® Baby Healing Ointment (7oz.) | ungradable | Avoid (High Priority Swap) | 2 | complete |
+| Aquaphor® Diaper Rash Paste (3.5oz.) | ungradable | Use Caution | 5 | complete |
+| Aquaphor® Lip Repair Stick | ungradable | Avoid (High Priority Swap) | 9 | complete |
+| Aquaphor® Lip Repair Stick + Sunscreen | ungradable | Avoid (High Priority Swap) | 11 | complete |
+| Aquaphor® Lip Protectant + SPF (Dual Pack) | ungradable | Avoid (High Priority Swap) | 9 | complete |
+| Aquaphor® Lip Repair Stick + Sunscreen (Dual Pack) | ungradable | Avoid (High Priority Swap) | 11 | complete |
+| Aquaphor® Children's Healing Ointment (14oz.) | ungradable | Avoid (High Priority Swap) | 2 | complete |
+| Aquaphor® Lip Repair | ungradable | Use Caution | 14 | complete |
+| Aquaphor® Lip Repair Stick (Dual Pack) | ungradable | Avoid (High Priority Swap) | 9 | complete |
+| Aquaphor® Baby Healing Balm Stick (0.65oz.) | ungradable | Avoid (High Priority Swap) | 4 | complete |
+| Aquaphor Baby Sensitive Lotion, Baby Lotion, 3 Fl Oz | ungradable | Avoid (High Priority Swap) | 8 | complete |
+| Aquaphor Baby Sensitive Lotion, Baby Lotion, 8 Fl Oz | ungradable | Avoid (High Priority Swap) | 8 | complete |
+| Aquaphor® Baby Healing Ointment (3oz.) | ungradable | Avoid (High Priority Swap) | 2 | complete |
+| Aquaphor® Baby Healing Ointment (14oz.) | ungradable | Avoid (High Priority Swap) | 2 | complete |
+| Aquaphor® Lip Protectant + SPF 30 | ungradable | Avoid (High Priority Swap) | 9 | complete |
+| Aquaphor® Lip Repair (Dual Pack) | ungradable | Use Caution | 11 | complete |
+| Aquaphor® Baby Healing Ointment (2x.35oz.) | ungradable | Avoid (High Priority Swap) | 2 | complete |
+| Aquaphor® Baby Healing Ointment (1.75oz.) | ungradable | Avoid (High Priority Swap) | 2 | complete |
+| Aquaphor® Ointment Body Spray (3.7oz.) | ungradable | Avoid (High Priority Swap) | 3 | complete |
+| Aquaphor Healing Ointment® (.25oz.) | ungradable | Avoid (High Priority Swap) | 2 | complete |
+| Aquaphor Healing Ointment® With Touch-Free Applicator (3oz.) | ungradable | Avoid (High Priority Swap) | 2 | complete |
+| Aquaphor® Children's Itch Relief Ointment (1 oz.) | ungradable | Avoid (High Priority Swap) | 4 | complete |
+| Aquaphor® Healing Balm Stick (0.65oz.) | ungradable | Avoid (High Priority Swap) | 4 | complete |
+| Aquaphor® Foot Mask | ungradable | Avoid (High Priority Swap) | 11 | complete |
+| Aquaphor Healing Ointment® (1.75oz.) | ungradable | Avoid (High Priority Swap) | 2 | complete |
+| Aquaphor® Ointment Body Spray (6.2 oz) | ungradable | Avoid (High Priority Swap) | 3 | complete |
+| Aquaphor Healing Ointment® (14oz.) | ungradable | Avoid (High Priority Swap) | 2 | complete |
+| Aquaphor Healing Ointment® (7oz.) | ungradable | Avoid (High Priority Swap) | 2 | complete |
+
+**Graded products whose tier did not change:** 2.
+
+**Puberty Safe or Use Caution products that have unknown ingredients (review first):** Aquaphor® Lip Repair Stick Naturally Inspired Aloe Vera Single Pack (Use Caution, 11 unknown excluded, status complete); Aquaphor® Lip Repair Stick Naturally Inspired Coconut Single Pack (Puberty Safe, 9 unknown excluded, status complete); Aquaphor® Diaper Rash Paste (3.5oz.) (Use Caution, 5 unknown excluded, status complete); Aquaphor® Lip Repair (Use Caution, 14 unknown excluded, status complete); Aquaphor® Lip Repair (Dual Pack) (Use Caution, 11 unknown excluded, status complete)
+
+**Unknown ingredients excluded from the grade:** 233 occurrences across 41 products, 45 distinct names (case-insensitive). The names are in each row's unknown_ingredients column.

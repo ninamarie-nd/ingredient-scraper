@@ -5,13 +5,13 @@
   "Use Caution": 0,
   "Avoid (Mild)": 0,
   "Avoid (Moderate)": 0,
-  "Avoid (High Priority Swap)": 0,
-  "ungradable": 38
+  "Avoid (High Priority Swap)": 31,
+  "ungradable": 7
  },
  "rows": [
   {
    "product_name": "Daily Moisture",
-   "tier": "ungradable",
+   "tier": "Avoid (High Priority Swap)",
    "flag_count": 8,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -41,11 +41,11 @@
     "PFAS",
     "carcinogen in leave-on"
    ],
-   "status": "needs review"
+   "status": "complete"
   },
   {
    "product_name": "Natural Glow Face Moisturizer +SPF 20",
-   "tier": "ungradable",
+   "tier": "Avoid (High Priority Swap)",
    "flag_count": 12,
    "product_type": "sunscreen",
    "flagged": [
@@ -81,11 +81,11 @@
     "formaldehyde-releaser",
     "carcinogen in leave-on"
    ],
-   "status": "needs review"
+   "status": "complete"
   },
   {
    "product_name": "Natural Glow + Firming Daily Moisturizer",
-   "tier": "ungradable",
+   "tier": "Avoid (High Priority Swap)",
    "flag_count": 13,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -128,11 +128,11 @@
     "formaldehyde-releaser",
     "carcinogen in leave-on"
    ],
-   "status": "needs review"
+   "status": "complete"
   },
   {
    "product_name": "Sparkling Berry Shea Fusion",
-   "tier": "ungradable",
+   "tier": "Avoid (High Priority Swap)",
    "flag_count": 4,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -158,11 +158,11 @@
     "PFAS",
     "carcinogen in leave-on"
    ],
-   "status": "needs review"
+   "status": "complete"
   },
   {
    "product_name": "Nourishing Honey Moisturizer",
-   "tier": "ungradable",
+   "tier": "Avoid (High Priority Swap)",
    "flag_count": 11,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -197,11 +197,11 @@
     "PFAS",
     "carcinogen in leave-on"
    ],
-   "status": "needs review"
+   "status": "complete"
   },
   {
    "product_name": "Natural Glow Instant Sun Moisturizer + Bronzer",
-   "tier": "ungradable",
+   "tier": "Avoid (High Priority Swap)",
    "flag_count": 14,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -252,11 +252,11 @@
     "PFAS",
     "carcinogen in leave-on"
    ],
-   "status": "needs review"
+   "status": "complete"
   },
   {
    "product_name": "Deep Restoring Argan Oil Moisturizer",
-   "tier": "ungradable",
+   "tier": "Avoid (High Priority Swap)",
    "flag_count": 12,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -288,7 +288,7 @@
     "PFAS",
     "carcinogen in leave-on"
    ],
-   "status": "needs review"
+   "status": "complete"
   },
   {
    "product_name": "Cherry Swirl Shea Fusion",
@@ -297,7 +297,7 @@
   },
   {
    "product_name": "Vanilla Crush Shea Fusion",
-   "tier": "ungradable",
+   "tier": "Avoid (High Priority Swap)",
    "flag_count": 6,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -326,7 +326,7 @@
     "PFAS",
     "carcinogen in leave-on"
    ],
-   "status": "needs review"
+   "status": "complete"
   },
   {
    "product_name": "Confetti Cake Shea Fusion",
@@ -335,7 +335,7 @@
   },
   {
    "product_name": "Warm Amber Shea Fusion",
-   "tier": "ungradable",
+   "tier": "Avoid (High Priority Swap)",
    "flag_count": 7,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -365,11 +365,11 @@
     "PFAS",
     "carcinogen in leave-on"
    ],
-   "status": "needs review"
+   "status": "complete"
   },
   {
    "product_name": "Hydrating Coconut Lotion",
-   "tier": "ungradable",
+   "tier": "Avoid (High Priority Swap)",
    "flag_count": 10,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -401,11 +401,11 @@
     "PFAS",
     "carcinogen in leave-on"
    ],
-   "status": "needs review"
+   "status": "complete"
   },
   {
    "product_name": "Soothing Aloe Moisturizer",
-   "tier": "ungradable",
+   "tier": "Avoid (High Priority Swap)",
    "flag_count": 7,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -436,11 +436,11 @@
     "PFAS",
     "carcinogen in leave-on"
    ],
-   "status": "needs review"
+   "status": "complete"
   },
   {
    "product_name": "Original Scent Moisturizer",
-   "tier": "ungradable",
+   "tier": "Avoid (High Priority Swap)",
    "flag_count": 6,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -465,11 +465,11 @@
     "PFAS",
     "carcinogen in leave-on"
    ],
-   "status": "needs review"
+   "status": "complete"
   },
   {
    "product_name": "Skin Firming",
-   "tier": "ungradable",
+   "tier": "Avoid (High Priority Swap)",
    "flag_count": 12,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -509,11 +509,11 @@
     "formaldehyde-releaser",
     "carcinogen in leave-on"
    ],
-   "status": "needs review"
+   "status": "complete"
   },
   {
    "product_name": "Lavender Dreams Shea Fusion",
-   "tier": "ungradable",
+   "tier": "Avoid (High Priority Swap)",
    "flag_count": 8,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -544,11 +544,11 @@
     "PFAS",
     "carcinogen in leave-on"
    ],
-   "status": "needs review"
+   "status": "complete"
   },
   {
    "product_name": "Cherry Almond Lotion Bursts",
-   "tier": "ungradable",
+   "tier": "Avoid (High Priority Swap)",
    "flag_count": 11,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -582,11 +582,11 @@
     "PFAS",
     "carcinogen in leave-on"
    ],
-   "status": "needs review"
+   "status": "complete"
   },
   {
    "product_name": "Enriching Shea Butter Lotion",
-   "tier": "ungradable",
+   "tier": "Avoid (High Priority Swap)",
    "flag_count": 10,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -624,11 +624,11 @@
     "PFAS",
     "carcinogen in leave-on"
    ],
-   "status": "needs review"
+   "status": "complete"
   },
   {
    "product_name": "Sparkling Berry Lotion Bursts",
-   "tier": "ungradable",
+   "tier": "Avoid (High Priority Swap)",
    "flag_count": 8,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -662,11 +662,11 @@
     "PFAS",
     "carcinogen in leave-on"
    ],
-   "status": "needs review"
+   "status": "complete"
   },
   {
    "product_name": "Ultra Healing Moisturizer",
-   "tier": "ungradable",
+   "tier": "Avoid (High Priority Swap)",
    "flag_count": 9,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -698,7 +698,7 @@
     "PFAS",
     "carcinogen in leave-on"
    ],
-   "status": "needs review"
+   "status": "complete"
   },
   {
    "product_name": "Vanilla Crush Lotion Bursts",
@@ -707,7 +707,7 @@
   },
   {
    "product_name": "Lavender Lotion Bursts",
-   "tier": "ungradable",
+   "tier": "Avoid (High Priority Swap)",
    "flag_count": 8,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -741,11 +741,11 @@
     "PFAS",
     "carcinogen in leave-on"
    ],
-   "status": "needs review"
+   "status": "complete"
   },
   {
    "product_name": "Natural Glow Wet Skin Moisturizer",
-   "tier": "ungradable",
+   "tier": "Avoid (High Priority Swap)",
    "flag_count": 15,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -786,11 +786,11 @@
     "PFAS",
     "carcinogen in leave-on"
    ],
-   "status": "needs review"
+   "status": "complete"
   },
   {
    "product_name": "Instant Flawless Kit Bundle",
-   "tier": "ungradable",
+   "tier": "Avoid (High Priority Swap)",
    "flag_count": 11,
    "product_type": "other",
    "flagged": [
@@ -840,7 +840,7 @@
    "esc": [
     "carcinogen in leave-on"
    ],
-   "status": "needs review"
+   "status": "complete"
   },
   {
    "product_name": "Glow Body Applicator Mitt",
@@ -849,7 +849,7 @@
   },
   {
    "product_name": "Natural Glow Instant Sun Drops",
-   "tier": "ungradable",
+   "tier": "Avoid (High Priority Swap)",
    "flag_count": 7,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -876,11 +876,11 @@
    "esc": [
     "carcinogen in leave-on"
    ],
-   "status": "needs review"
+   "status": "complete"
   },
   {
    "product_name": "Natural Glow Hydra Gel",
-   "tier": "ungradable",
+   "tier": "Avoid (High Priority Swap)",
    "flag_count": 6,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -908,11 +908,11 @@
     "PFAS",
     "carcinogen in leave-on"
    ],
-   "status": "needs review"
+   "status": "complete"
   },
   {
    "product_name": "Gotta Glow Bundle",
-   "tier": "ungradable",
+   "tier": "Avoid (High Priority Swap)",
    "flag_count": 23,
    "product_type": "other",
    "flagged": [
@@ -991,11 +991,11 @@
     "PFAS",
     "carcinogen in leave-on"
    ],
-   "status": "needs review"
+   "status": "complete"
   },
   {
    "product_name": "Natural Glow Instant Sun Mousse",
-   "tier": "ungradable",
+   "tier": "Avoid (High Priority Swap)",
    "flag_count": 7,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -1029,11 +1029,11 @@
    "esc": [
     "carcinogen in leave-on"
    ],
-   "status": "needs review"
+   "status": "complete"
   },
   {
    "product_name": "Deep Conditioning Shea Cocoa Butter Blend",
-   "tier": "ungradable",
+   "tier": "Avoid (High Priority Swap)",
    "flag_count": 9,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -1065,11 +1065,11 @@
     "PFAS",
     "carcinogen in leave-on"
    ],
-   "status": "needs review"
+   "status": "complete"
   },
   {
    "product_name": "Best Sellers Bundle",
-   "tier": "ungradable",
+   "tier": "Avoid (High Priority Swap)",
    "flag_count": 19,
    "product_type": "other",
    "flagged": [
@@ -1124,11 +1124,11 @@
     "PFAS",
     "carcinogen in leave-on"
    ],
-   "status": "needs review"
+   "status": "complete"
   },
   {
    "product_name": "Natural Glow Daily Moisturizer",
-   "tier": "ungradable",
+   "tier": "Avoid (High Priority Swap)",
    "flag_count": 9,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -1165,7 +1165,7 @@
     "PFAS",
     "carcinogen in leave-on"
    ],
-   "status": "needs review"
+   "status": "complete"
   },
   {
    "product_name": "Tropical Escape Shea Fusion",
@@ -1174,7 +1174,7 @@
   },
   {
    "product_name": "Wet Skin Moisturizer Shea Oil",
-   "tier": "ungradable",
+   "tier": "Avoid (High Priority Swap)",
    "flag_count": 7,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -1203,11 +1203,11 @@
    "esc": [
     "carcinogen in leave-on"
    ],
-   "status": "needs review"
+   "status": "complete"
   },
   {
    "product_name": "Wet Skin Moisturizer Coconut Oil",
-   "tier": "ungradable",
+   "tier": "Avoid (High Priority Swap)",
    "flag_count": 6,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -1230,7 +1230,7 @@
    "esc": [
     "carcinogen in leave-on"
    ],
-   "status": "needs review"
+   "status": "complete"
   },
   {
    "product_name": "Ultra Healing Fragrance Free Moisturizer",
@@ -1239,7 +1239,7 @@
   },
   {
    "product_name": "Daily Glow Bundle",
-   "tier": "ungradable",
+   "tier": "Avoid (High Priority Swap)",
    "flag_count": 21,
    "product_type": "other",
    "flagged": [
@@ -1307,7 +1307,7 @@
     "PFAS",
     "carcinogen in leave-on"
    ],
-   "status": "needs review"
+   "status": "complete"
   },
   {
    "product_name": "Jergens Gift Card",

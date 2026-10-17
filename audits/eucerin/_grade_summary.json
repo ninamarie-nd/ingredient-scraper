@@ -1,17 +1,17 @@
 {
  "brand": "eucerin",
  "tier_counts": {
-  "Puberty Safe": 0,
-  "Use Caution": 0,
+  "Puberty Safe": 2,
+  "Use Caution": 4,
   "Avoid (Mild)": 2,
-  "Avoid (Moderate)": 0,
-  "Avoid (High Priority Swap)": 1,
-  "ungradable": 45
+  "Avoid (Moderate)": 3,
+  "Avoid (High Priority Swap)": 32,
+  "ungradable": 5
  },
  "rows": [
   {
    "product_name": "Advanced Repair Cream, 16 OZ",
-   "tier": "ungradable",
+   "tier": "Avoid (High Priority Swap)",
    "flag_count": 5,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -45,11 +45,11 @@
     "PFAS",
     "carcinogen in leave-on"
    ],
-   "status": "needs review"
+   "status": "complete"
   },
   {
    "product_name": "Advanced Repair Lotion",
-   "tier": "ungradable",
+   "tier": "Avoid (High Priority Swap)",
    "flag_count": 4,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -94,7 +94,7 @@
   },
   {
    "product_name": "Advanced Repair Hand Cream",
-   "tier": "ungradable",
+   "tier": "Avoid (High Priority Swap)",
    "flag_count": 5,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -128,11 +128,11 @@
     "PFAS",
     "carcinogen in leave-on"
    ],
-   "status": "needs review"
+   "status": "complete"
   },
   {
    "product_name": "Eucerin Advanced Cleansing Body and Face Wash",
-   "tier": "ungradable",
+   "tier": "Avoid (Moderate)",
    "flag_count": 5,
    "product_type": "rinse-off skincare",
    "flagged": [
@@ -151,11 +151,11 @@
     "Sodium Salicylate"
    ],
    "esc": [],
-   "status": "needs review"
+   "status": "complete"
   },
   {
    "product_name": "Advanced Repair Cream, 8 OZ",
-   "tier": "ungradable",
+   "tier": "Avoid (High Priority Swap)",
    "flag_count": 5,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -189,11 +189,11 @@
     "PFAS",
     "carcinogen in leave-on"
    ],
-   "status": "needs review"
+   "status": "complete"
   },
   {
    "product_name": "Dark Spot Corrector Body Cream",
-   "tier": "ungradable",
+   "tier": "Avoid (High Priority Swap)",
    "flag_count": 4,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -223,11 +223,11 @@
    "esc": [
     "carcinogen in leave-on"
    ],
-   "status": "needs review"
+   "status": "complete"
   },
   {
    "product_name": "Dual Serum",
-   "tier": "ungradable",
+   "tier": "Avoid (High Priority Swap)",
    "flag_count": 6,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -262,11 +262,11 @@
     "PFAS",
     "carcinogen in leave-on"
    ],
-   "status": "needs review"
+   "status": "complete"
   },
   {
    "product_name": "Eye Cream",
-   "tier": "ungradable",
+   "tier": "Avoid (High Priority Swap)",
    "flag_count": 5,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -297,11 +297,11 @@
     "PFAS",
     "carcinogen in leave-on"
    ],
-   "status": "needs review"
+   "status": "complete"
   },
   {
    "product_name": "Dark Spot Corrector Body Lotion",
-   "tier": "ungradable",
+   "tier": "Avoid (High Priority Swap)",
    "flag_count": 4,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -327,11 +327,11 @@
    "esc": [
     "carcinogen in leave-on"
    ],
-   "status": "needs review"
+   "status": "complete"
   },
   {
    "product_name": "Daily Lotion SPF 30",
-   "tier": "ungradable",
+   "tier": "Avoid (High Priority Swap)",
    "flag_count": 9,
    "product_type": "sunscreen",
    "flagged": [
@@ -362,11 +362,11 @@
    "esc": [
     "carcinogen in leave-on"
    ],
-   "status": "needs review"
+   "status": "complete"
   },
   {
    "product_name": "Night Cream",
-   "tier": "ungradable",
+   "tier": "Avoid (High Priority Swap)",
    "flag_count": 3,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -392,11 +392,11 @@
    "esc": [
     "carcinogen in leave-on"
    ],
-   "status": "needs review"
+   "status": "complete"
   },
   {
    "product_name": "Cleansing Gel",
-   "tier": "ungradable",
+   "tier": "Use Caution",
    "flag_count": 1,
    "product_type": "rinse-off skincare",
    "flagged": [
@@ -413,11 +413,11 @@
     "Sodium Hydroxide"
    ],
    "esc": [],
-   "status": "needs review"
+   "status": "complete"
   },
   {
    "product_name": "Gel-Cream",
-   "tier": "ungradable",
+   "tier": "Avoid (High Priority Swap)",
    "flag_count": 3,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -441,7 +441,7 @@
    "esc": [
     "carcinogen in leave-on"
    ],
-   "status": "needs review"
+   "status": "complete"
   },
   {
    "product_name": "Moisture Boost Serum",
@@ -465,7 +465,7 @@
   },
   {
    "product_name": "Hydrating Cleansing Gel, 13.5 FL OZ",
-   "tier": "ungradable",
+   "tier": "Use Caution",
    "flag_count": 0,
    "product_type": "rinse-off skincare",
    "flagged": [],
@@ -478,11 +478,11 @@
     "Trisodium EDTA"
    ],
    "esc": [],
-   "status": "needs review"
+   "status": "complete"
   },
   {
    "product_name": "Hydrating Cleansing Gel, 6.8 FL OZ",
-   "tier": "ungradable",
+   "tier": "Use Caution",
    "flag_count": 0,
    "product_type": "rinse-off skincare",
    "flagged": [],
@@ -495,11 +495,11 @@
     "Trisodium EDTA"
    ],
    "esc": [],
-   "status": "needs review"
+   "status": "complete"
   },
   {
    "product_name": "Intensive Repair Lotion",
-   "tier": "ungradable",
+   "tier": "Avoid (High Priority Swap)",
    "flag_count": 5,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -543,7 +543,7 @@
   },
   {
    "product_name": "Q10 Revitalize Daily Cream",
-   "tier": "ungradable",
+   "tier": "Puberty Safe",
    "flag_count": 0,
    "product_type": "leave-on skincare",
    "flagged": [],
@@ -557,7 +557,7 @@
   },
   {
    "product_name": "Advanced Hydration After Sun Lotion",
-   "tier": "ungradable",
+   "tier": "Puberty Safe",
    "flag_count": 0,
    "product_type": "leave-on skincare",
    "flagged": [],
@@ -571,7 +571,7 @@
   },
   {
    "product_name": "Sensitive Mineral SPF 50 Sunscreen",
-   "tier": "ungradable",
+   "tier": "Avoid (High Priority Swap)",
    "flag_count": 7,
    "product_type": "sunscreen",
    "flagged": [
@@ -598,11 +598,11 @@
     "PFAS",
     "carcinogen in leave-on"
    ],
-   "status": "needs review"
+   "status": "complete"
   },
   {
    "product_name": "Advanced Hydration Ultra-Light SPF 50 Face Sunscreen",
-   "tier": "ungradable",
+   "tier": "Avoid (High Priority Swap)",
    "flag_count": 8,
    "product_type": "sunscreen",
    "flagged": [
@@ -633,11 +633,11 @@
    "esc": [
     "carcinogen in leave-on"
    ],
-   "status": "needs review"
+   "status": "complete"
   },
   {
    "product_name": "Advanced Hydration SPF 50 Sunscreen Spray",
-   "tier": "ungradable",
+   "tier": "Avoid (High Priority Swap)",
    "flag_count": 10,
    "product_type": "sunscreen",
    "flagged": [
@@ -669,11 +669,11 @@
     "PFAS",
     "carcinogen in leave-on"
    ],
-   "status": "needs review"
+   "status": "complete"
   },
   {
    "product_name": "Advanced Hydration SPF 50 Sunscreen",
-   "tier": "ungradable",
+   "tier": "Avoid (High Priority Swap)",
    "flag_count": 10,
    "product_type": "sunscreen",
    "flagged": [
@@ -704,11 +704,11 @@
     "PFAS",
     "carcinogen in leave-on"
    ],
-   "status": "needs review"
+   "status": "complete"
   },
   {
    "product_name": "Baby Sensitive Mineral SPF 50 Sunscreen Lotion",
-   "tier": "ungradable",
+   "tier": "Avoid (High Priority Swap)",
    "flag_count": 7,
    "product_type": "sunscreen",
    "flagged": [
@@ -735,11 +735,11 @@
     "PFAS",
     "carcinogen in leave-on"
    ],
-   "status": "needs review"
+   "status": "complete"
   },
   {
    "product_name": "Clear Skin SPF 50 Face Sunscreen",
-   "tier": "ungradable",
+   "tier": "Avoid (High Priority Swap)",
    "flag_count": 11,
    "product_type": "sunscreen",
    "flagged": [
@@ -780,11 +780,11 @@
     "PFAS",
     "carcinogen in leave-on"
    ],
-   "status": "needs review"
+   "status": "complete"
   },
   {
    "product_name": "Age Defense SPF 50 Face Sunscreen",
-   "tier": "ungradable",
+   "tier": "Avoid (High Priority Swap)",
    "flag_count": 11,
    "product_type": "sunscreen",
    "flagged": [
@@ -825,11 +825,11 @@
     "PFAS",
     "carcinogen in leave-on"
    ],
-   "status": "needs review"
+   "status": "complete"
   },
   {
    "product_name": "Tinted Sensitive Mineral SPF 35 Face Sunscreen",
-   "tier": "ungradable",
+   "tier": "Avoid (High Priority Swap)",
    "flag_count": 10,
    "product_type": "sunscreen",
    "flagged": [
@@ -866,11 +866,11 @@
     "PFAS",
     "carcinogen in leave-on"
    ],
-   "status": "needs review"
+   "status": "complete"
   },
   {
    "product_name": "Tinted Age Defense SPF 50 Face Sunscreen",
-   "tier": "ungradable",
+   "tier": "Avoid (High Priority Swap)",
    "flag_count": 13,
    "product_type": "sunscreen",
    "flagged": [
@@ -915,7 +915,7 @@
     "PFAS",
     "carcinogen in leave-on"
    ],
-   "status": "needs review"
+   "status": "complete"
   },
   {
    "product_name": "Advanced Hydration SPF 30 Sunscreen Spray",
@@ -935,7 +935,7 @@
   },
   {
    "product_name": "Roughness Relief Cream",
-   "tier": "ungradable",
+   "tier": "Avoid (High Priority Swap)",
    "flag_count": 4,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -967,11 +967,11 @@
     "PFAS",
     "carcinogen in leave-on"
    ],
-   "status": "needs review"
+   "status": "complete"
   },
   {
    "product_name": "Roughness Relief Lotion",
-   "tier": "ungradable",
+   "tier": "Avoid (High Priority Swap)",
    "flag_count": 2,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -1006,11 +1006,11 @@
    "esc": [
     "carcinogen in leave-on"
    ],
-   "status": "needs review"
+   "status": "complete"
   },
   {
    "product_name": "Eczema Relief Cream & Body Wash",
-   "tier": "ungradable",
+   "tier": "Avoid (Moderate)",
    "flag_count": 5,
    "product_type": "rinse-off skincare",
    "flagged": [
@@ -1038,11 +1038,11 @@
     "Sodium Hydroxide"
    ],
    "esc": [],
-   "status": "needs review"
+   "status": "complete"
   },
   {
    "product_name": "Eczema Relief Cream",
-   "tier": "ungradable",
+   "tier": "Avoid (High Priority Swap)",
    "flag_count": 5,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -1065,11 +1065,11 @@
    "esc": [
     "carcinogen in leave-on"
    ],
-   "status": "needs review"
+   "status": "complete"
   },
   {
    "product_name": "Eucerin Eczema Relief Hydrogel",
-   "tier": "ungradable",
+   "tier": "Use Caution",
    "flag_count": 1,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -1086,11 +1086,11 @@
     "Hydroxyacetophenone"
    ],
    "esc": [],
-   "status": "needs review"
+   "status": "complete"
   },
   {
    "product_name": "Eczema Relief Flare-Up Treatment",
-   "tier": "ungradable",
+   "tier": "Avoid (High Priority Swap)",
    "flag_count": 7,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -1117,11 +1117,11 @@
    "esc": [
     "carcinogen in leave-on"
    ],
-   "status": "needs review"
+   "status": "complete"
   },
   {
    "product_name": "Itch Relief Intensive Calming Lotion",
-   "tier": "ungradable",
+   "tier": "Avoid (High Priority Swap)",
    "flag_count": 7,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -1155,11 +1155,11 @@
     "PFAS",
     "carcinogen in leave-on"
    ],
-   "status": "needs review"
+   "status": "complete"
   },
   {
    "product_name": "Skin Calming Lotion",
-   "tier": "ungradable",
+   "tier": "Avoid (High Priority Swap)",
    "flag_count": 7,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -1185,11 +1185,11 @@
     "PFAS",
     "carcinogen in leave-on"
    ],
-   "status": "needs review"
+   "status": "complete"
   },
   {
    "product_name": "Skin Calming Cream",
-   "tier": "ungradable",
+   "tier": "Avoid (High Priority Swap)",
    "flag_count": 7,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -1215,7 +1215,7 @@
     "PFAS",
     "carcinogen in leave-on"
    ],
-   "status": "needs review"
+   "status": "complete"
   },
   {
    "product_name": "Daily Hydration Lotion with Broad Spectrum SPF 15",
@@ -1245,7 +1245,7 @@
   },
   {
    "product_name": "Original Healing Rich Cream 16 oz. Jar",
-   "tier": "ungradable",
+   "tier": "Avoid (High Priority Swap)",
    "flag_count": 3,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -1262,11 +1262,11 @@
    "esc": [
     "carcinogen in leave-on"
    ],
-   "status": "needs review"
+   "status": "complete"
   },
   {
    "product_name": "Original Healing Lotion",
-   "tier": "ungradable",
+   "tier": "Avoid (High Priority Swap)",
    "flag_count": 4,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -1287,7 +1287,7 @@
     "heavy metals",
     "carcinogen in leave-on"
    ],
-   "status": "needs review"
+   "status": "complete"
   },
   {
    "product_name": "Eucerin Baby Eczema Relief Hydrogel",
@@ -1304,7 +1304,7 @@
   },
   {
    "product_name": "Baby Eczema Relief Cream & Body Wash",
-   "tier": "ungradable",
+   "tier": "Avoid (Moderate)",
    "flag_count": 5,
    "product_type": "rinse-off skincare",
    "flagged": [
@@ -1332,7 +1332,7 @@
     "Sodium Hydroxide"
    ],
    "esc": [],
-   "status": "needs review"
+   "status": "complete"
   },
   {
    "product_name": "Baby Wash and Shampoo",
@@ -1349,7 +1349,7 @@
   },
   {
    "product_name": "Baby Eczema Relief Cream",
-   "tier": "ungradable",
+   "tier": "Avoid (High Priority Swap)",
    "flag_count": 5,
    "product_type": "leave-on skincare",
    "flagged": [
@@ -1372,7 +1372,7 @@
    "esc": [
     "carcinogen in leave-on"
    ],
-   "status": "needs review"
+   "status": "complete"
   },
   {
    "product_name": "Baby Lotion",

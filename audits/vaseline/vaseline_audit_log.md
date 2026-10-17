@@ -537,3 +537,62 @@ Applied in this pass with the same `_grader.py` in every brand folder. The refer
 - Healing Jelly Original: verbatim "White Petrolatum Usp (100%)" reads as petrolatum, category 1, one flag in a leave-on, so the carcinogen-in-leave-on escalation gives Avoid (High Priority Swap). Agrees.
 
 **Tier counts after this pass:** ungradable: 48; Avoid (High Priority Swap): 4.
+
+## Grading on known ingredients (2026-10-17)
+
+**Rule (practitioner decision, replaces D7 and D8).** D7 (two or more unknown ingredients made a product ungradable) and D8 (exactly one unknown set a Use Caution floor) are removed. Unknown ingredients are excluded from the grade: they add no flags, set no floor, and never make a product ungradable. Each product is graded from its known ingredients only, using the reference flags, D1 to D6, the rubric conditionals and the explicit exception tables. Unknown names stay in the unknown_ingredients and audit_notes columns for review. No other rule changed; the petrolatum alias and the polysorbate flags are as they were.
+
+**Ungradable now means only** (a) no ingredient text on the page: 16 product(s), or (b) the explicit exception list: 0 product(s).
+
+**Tier counts after this regrade (52 products):**
+- Puberty Safe: 0
+- Use Caution: 0
+- Avoid (Mild): 0
+- Avoid (Moderate): 0
+- Avoid (High Priority Swap): 36
+- ungradable: 16 (no ingredient text: 16; exception list: 0)
+
+**Exception products still ungradable:** none. This brand has no entries in the change 3 exception list.
+
+**Products that moved from ungradable into a graded tier:** 32. Each was ungradable before this regrade.
+
+| Product | Old tier | New tier | Unknowns excluded from grade | Audit status |
+|---|---|---|---|---|
+| Vaseline® Radiant X Even Tone Nourishing Body Lotion | ungradable | Avoid (High Priority Swap) | 17 | complete |
+| Vaseline® Radiant X Replenishing Hydrating Body Oil | ungradable | Avoid (High Priority Swap) | 6 | complete |
+| Vaseline® Radiant X Deep Nourishment Body Cream | ungradable | Avoid (High Priority Swap) | 17 | complete |
+| Vaseline® Radiant X Deep Nourishment Hand Butter | ungradable | Avoid (High Priority Swap) | 14 | complete |
+| Vaseline® Intensive Care™ Hydra Replenish Hand Crème | ungradable | Avoid (High Priority Swap) | 11 | complete |
+| Vaseline® Cocoa Shimmer Jelly Stick | ungradable | Avoid (High Priority Swap) | 6 | complete |
+| Vaseline® All-Over Body Balm Jelly Stick | ungradable | Avoid (High Priority Swap) | 3 | complete |
+| Vaseline® Soothing Hydration Lotion | ungradable | Avoid (High Priority Swap) | 10 | complete |
+| Vaseline® Cocoa Radiant® Lotion | ungradable | Avoid (High Priority Swap) | 12 | complete |
+| Vaseline® Nourishing Moisture Lotion | ungradable | Avoid (High Priority Swap) | 15 | complete |
+| Vaseline® Calm Healing Lotion | ungradable | Avoid (High Priority Swap) | 12 | complete |
+| Vaseline® Advanced Repair Unscented Lotion | ungradable | Avoid (High Priority Swap) | 7 | complete |
+| Vaseline® Almond Smooth Lotion | ungradable | Avoid (High Priority Swap) | 15 | complete |
+| Vaseline® Men Cooling Hydration Lotion | ungradable | Avoid (High Priority Swap) | 13 | complete |
+| Vaseline® Intensive Care™ Cocoa Body Butter | ungradable | Avoid (High Priority Swap) | 23 | complete |
+| Vaseline® Men Fast Absorbing Lotion | ungradable | Avoid (High Priority Swap) | 10 | complete |
+| Vaseline® Men Extra Strength Lotion | ungradable | Avoid (High Priority Swap) | 8 | complete |
+| Vaseline® Lip Therapy® Rosy Mini | ungradable | Avoid (High Priority Swap) | 3 | complete |
+| Vaseline® Lip Therapy® Cocoa Butter Mini | ungradable | Avoid (High Priority Swap) | 3 | complete |
+| Vaseline® Lip Therapy® Crème Brûlée Mini | ungradable | Avoid (High Priority Swap) | 3 | complete |
+| Vaseline® Intensive Care™ Aloe Soothe Spray | ungradable | Avoid (High Priority Swap) | 7 | complete |
+| Vaseline® Intensive Care™ Cocoa Radiant Spray | ungradable | Avoid (High Priority Swap) | 7 | complete |
+| Vaseline® Lip Therapy® Original Stick | ungradable | Avoid (High Priority Swap) | 9 | complete |
+| Vaseline® Lip Therapy® Rosy Lips Stick | ungradable | Avoid (High Priority Swap) | 14 | complete |
+| Vaseline® Lip Therapy® Aloe Vera Stick | ungradable | Avoid (High Priority Swap) | 12 | complete |
+| Vaseline® Lip Therapy® Cocoa Butter Stick | ungradable | Avoid (High Priority Swap) | 14 | complete |
+| Vaseline® Lip Therapy® Rosy Lips Tin | ungradable | Avoid (High Priority Swap) | 2 | complete |
+| Sunlit Glow Body Shimmer Gel Oil | ungradable | Avoid (High Priority Swap) | 8 | complete |
+| Golden Hour Glow Bronze Body Shimmer Gel Oil | ungradable | Avoid (High Priority Swap) | 9 | complete |
+| Vaseline® Intensive Care™ Cocoa Radiant Gel Oil | ungradable | Avoid (High Priority Swap) | 2 | complete |
+| Vaseline® Pro VitaB3 Supple & Soft Serum Burst Lotion | ungradable | Avoid (High Priority Swap) | 15 | complete |
+| Vaseline® Pro VitaB3 Luminous Glow Serum Burst Lotion | ungradable | Avoid (High Priority Swap) | 13 | complete |
+
+**Graded products whose tier did not change:** 4.
+
+**Puberty Safe or Use Caution products that have unknown ingredients (review first):** none.
+
+**Unknown ingredients excluded from the grade:** 322 occurrences across 52 products, 95 distinct names (case-insensitive). The names are in each row's unknown_ingredients column.

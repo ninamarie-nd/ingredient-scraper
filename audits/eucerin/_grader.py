@@ -8,8 +8,9 @@ It reads <brand>_ingredients.json from its own folder (brand = folder name), loo
 ingredient in ../../ref_compact.json and ../../ingredient_aliases.json, and writes
 <brand>_audit.xlsx and _grade_summary.json into its own folder. Nothing else is written.
 
-Grading rules come from /home/claude/GRADING_RUBRIC.txt and the practitioner decisions D1 to D8
-(2026-10-16) recorded below. The verbatim ingredient text in the JSON is never modified;
+Grading rules come from /home/claude/GRADING_RUBRIC.txt and the practitioner decisions D1 to D6
+(2026-10-16) recorded below. D7 and D8 (unknown-ingredient rules) were removed 2026-10-17: unknown
+ingredients are excluded from the grade and never change the tier. The verbatim ingredient text in the JSON is never modified;
 normalization is applied only in memory. The input JSON may use any of the three layouts the
 brands were scraped into: {"products": [list]}, {"products": {name_or_slug: {...}}}, or a
 top-level {name: {...}} mapping.
@@ -31,7 +32,7 @@ OUT_SUMMARY = os.path.join(HERE, '_grade_summary.json')
 CATALOG_PATH = os.path.join(HERE, f'{BRAND}_catalog.json')   # optional: brand product URL and brand category per product
 
 TIERS = ['Puberty Safe', 'Use Caution', 'Avoid (Mild)', 'Avoid (Moderate)', 'Avoid (High Priority Swap)']
-UNGRADABLE = 'ungradable'   # D7: not a tier. Any product with an unresolved unknown ingredient gets this instead.
+UNGRADABLE = 'ungradable'   # Not a tier. Used only for products with no ingredient text and the explicit exception list below.
 
 HEADERS = ['product_name', 'product_url', 'brand_category', 'product_type', 'ingredients_verbatim', 'tier',
            'flag_count', 'flagged_ingredients', 'naturally_occurring_allergens', 'unknown_ingredients',
@@ -425,18 +426,10 @@ def grade(product_name, product_type, category, verbatim):
         tier = 'Use Caution'
     if caution_hit:
         notes.append('D6: glycerin is a caution ingredient (not a flag); it floors a Puberty Safe product at Use Caution.')
-    # D8 (2026-10-16): exactly one unknown ingredient gets the Use Caution floor, the same way D1 and D6 work.
-    # Avoid tiers from the other flags are kept. The unknown stays listed for manual review.
-    if len(unknown) == 1:
-        higher = tier != 'Puberty Safe' and tier != 'Use Caution'
-        if tier == 'Puberty Safe':
-            tier = 'Use Caution'
-        notes.append('D8: one unknown ingredient, Use Caution floor applied (' + unknown[0] + ').'
-                     + (' Higher tier from other flags kept.' if higher else ''))
-    # D7: two or more unknown ingredients after D1 to D8 make the product ungradable. No tier is assigned.
-    elif len(unknown) >= 2:
-        tier = UNGRADABLE
-        notes.append('D7: ungradable. Two or more unknown ingredients remain: ' + ', '.join(unknown) + '.')
+    # 2026-10-17 (practitioner decision, replaces D7 and D8): unknown ingredients are excluded from the grade.
+    # They add no flags and set no floor and no ungradable tier. They stay listed in unknown_ingredients.
+    if unknown:
+        notes.append(f'{len(unknown)} unknown ingredient(s) excluded from grade (2026-10-17; replaces D7 and D8).')
     if any(norm_key(f['name']) in IRON_KEYS for f in flagged):
         notes.append('Iron oxides (reference cat. 1, 2, 3): heavy-metal (cat. 3) escalation applies; PFAS-treated tag applied as written.')
     for f in flagged:
@@ -537,11 +530,11 @@ def main():
         url = product_url(p)
         status = 'needs review' if p.get('audit_status') == 'needs review' else 'complete'
         if not verbatim.strip():
-            # D7: no ingredient text means no tier. Partial flags are empty because there is nothing to flag.
+            # No ingredient text means no tier. Partial flags are empty because there is nothing to flag.
             tier_counts[UNGRADABLE] += 1
             ws.append([name, url, category, ptype, '', UNGRADABLE, 0, '', '', '', '',
                        'Ungradable: no ingredient text on the source page, so no tier is assigned.',
-                       ((p.get('audit_notes') or '') + ' No verbatim ingredient text in the json; not graded (D7 ungradable).').strip(),
+                       ((p.get('audit_notes') or '') + ' No verbatim ingredient text in the json; not graded.').strip(),
                        'ingredients not found'])
             summary.append({'product_name': name, 'tier': UNGRADABLE, 'status': 'ingredients not found'})
             continue
@@ -550,10 +543,9 @@ def main():
         rule_notes = g['rule_notes']
         exc_reason = UNGRADABLE_EXCEPTIONS.get(BRAND, {}).get(name)
         if exc_reason and tier != UNGRADABLE:
-            # Change 3: explicit exception. The D8 note describes a Use Caution floor that no longer applies.
+            # Change 3: explicit exception list (2026-10-17). Flags and unknowns are kept; only the tier changes.
             tier = UNGRADABLE
-            rule_notes = [n for n in rule_notes if not n.startswith('D8:')]
-            note = f'Moved to ungradable: {exc_reason} (practitioner exception, 2026-10-17, change 3).'
+            note =f'Moved to ungradable: {exc_reason} (practitioner exception, 2026-10-17, change 3).'
             if g['unknown']:
                 note += f" Unknown kept: {', '.join(g['unknown'])}."
             rule_notes.append(note)
@@ -565,16 +557,13 @@ def main():
         if tier == UNGRADABLE and exc_reason:
             summary_txt = (f"Ungradable: {exc_reason} (practitioner exception, 2026-10-17). "
                            f"Partial flags recorded: {len(flagged)}.")
-        elif tier == UNGRADABLE:
-            summary_txt = (f"Ungradable: {len(unknown)} unknown ingredients remain (D7, two or more), so no tier is assigned. "
-                           f"Partial flags recorded: {len(flagged)}.")
         elif flagged:
             top = ', '.join(f['name'] for f in flagged[:3])
             summary_txt = f"{len(flagged)} flagged ingredient(s) in the printed list ({top}); tier applies to the printed subset only."
         else:
             summary_txt = 'No flagged ingredients in the printed list per reference and rubric conditionals.'
         if unknown and tier != UNGRADABLE:
-            summary_txt += f" {len(unknown)} unknown ingredient(s) not in reference."
+            summary_txt += f" {len(unknown)} unknown ingredient(s) not in reference, excluded from grade."
         if esc_str:
             summary_txt += f" Escalation: {esc_str}."
         notes = []

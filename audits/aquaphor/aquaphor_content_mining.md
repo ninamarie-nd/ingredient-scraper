@@ -1,31 +1,31 @@
 # Aquaphor Audit — Content Mining Report
 
-**Date audited:** 2026-10-16 (regraded 2026-10-17 under practitioner decisions D1 to D8 and changes 1 to 3; no Aquaphor product changed tier or flags)
-**Products audited:** 41 listed: 2 graded, 36 ungradable (two or more unknown ingredients), 3 ungradable (no ingredient text)
+**Date audited:** 2026-10-16 (regraded 2026-10-17 under practitioner decisions D1 to D6 and changes 1 to 3, with D7 and D8 removed; flags are unchanged)
+**Products audited:** 41 listed: 38 graded (1 Puberty Safe, 4 Use Caution, 2 Avoid (Moderate), 31 Avoid (High Priority Swap)), 3 ungradable (no ingredient text)
 **Source:** https://www.aquaphorus.com/ (product names and retailer-printed ingredient lists; sources per row in the audit log). aquaphor.com is an unrelated company and was not used.
 
-**Read this first:** "Ungradable" is not a grade. Under D4, D7 and D8, a product with two or more ingredients the reference does not cover gets no tier, and a product with exactly one gets a Use Caution floor or keeps a higher tier from its other flags. Most Aquaphor products contain at least one common base ingredient the reference does not list, such as Caprylic/Capric Triglyceride, Shea Butter, Castor Seed Oil, or Lanolin Alcohol. Partial flags are shown for ranking only.
+**Read this first:** Each grade uses the known ingredients only. A printed ingredient the reference does not cover adds no flag and does not change the tier (2026-10-17, replacing D7 and D8). "Ungradable" now means only that the page shows no ingredient text. Most Aquaphor products contain base ingredients the reference does not list, such as Caprylic/Capric Triglyceride, Shea Butter, Castor Seed Oil, or Lanolin Alcohol. Those are excluded from the grade, so a Puberty Safe or Use Caution tier here can still rest on several unknowns. Partial flags are shown for ranking only.
 
 ---
 
 ## Section A — Brand-level callout
 
-**Headline finding:** Of 41 Aquaphor products, 2 can be graded, both Avoid (Moderate): the two Baby Wash & Shampoo listings, each with five flags and one unknown (Sea Salt). The other 39 are ungradable: 36 carry two or more unknown ingredients and 3 have no ingredient text. No product moved to Use Caution under D8. Bisabolol, a category 4 flag, appears in the partial flags of 27 of 41 products.
+**Headline finding:** Of 41 Aquaphor products, 38 can now be graded from their known ingredients: 31 Avoid (High Priority Swap), 2 Avoid (Moderate), 4 Use Caution and 1 Puberty Safe. The other 3 have no ingredient text. Five graded products are Puberty Safe or Use Caution even though each has 5 to 14 unknown ingredients, so those grades are the weakest in the brand. Bisabolol, a category 4 flag, appears in the partial flags of 27 of 41 products.
 
 **Tier distribution (41 products):**
-- Puberty Safe: 0 (0%)
-- Use Caution: 0 (0%)
+- Puberty Safe: 1 (2%)
+- Use Caution: 4 (10%)
 - Avoid (Mild): 0 (0%)
 - Avoid (Moderate): 2 (5%)
-- Avoid (High Priority Swap): 0 (0%)
-- Ungradable, counted separately: 39 (95%), of which 36 carry two or more unknown ingredients (D7) and 3 have no ingredient text
+- Avoid (High Priority Swap): 31 (76%)
+- Ungradable, counted separately: 3 (7%), all with no ingredient text
 
-**Single most-flagged product:** Aquaphor Lip Protectant + SPF 30 and Aquaphor Lip Protectant + SPF (Dual Pack) — 7 partial flags each: Petrolatum (category 1), Avobenzone, Octinoxate, Octisalate, Octocrylene, Oxybenzone (category 2), and BHT.
+**Single most-flagged product:** Aquaphor Lip Protectant + SPF 30 and Aquaphor Lip Protectant + SPF (Dual Pack) — 7 partial flags each: Petrolatum (category 1), Avobenzone, Octinoxate, Octisalate, Octocrylene, Oxybenzone (category 2), and BHT. Both grade Avoid (High Priority Swap) on their known ingredients.
 
-**Cleanest product (if any):** Aquaphor Lip Repair Stick Naturally Inspired, Aloe Vera and Coconut single packs — 0 partial flags each, with 11 and 9 unknowns. Zero flags here does not mean cleared.
+**Cleanest product (if any):** Aquaphor Lip Repair Stick Naturally Inspired, Aloe Vera and Coconut single packs — 0 partial flags each. The Coconut pack is Puberty Safe with 9 unknowns excluded, and the Aloe Vera pack is Use Caution with 11 excluded. Zero flags here does not mean cleared.
 
 **Content angle for Section A:**
-"I tried to grade all 41 Aquaphor products. Two Baby Wash & Shampoo listings can be graded, and both come out Avoid (Moderate). The rest can't be graded yet, because the reference does not cover the base ingredients most of them share." Frame it as a coverage gap.
+"I graded 38 of the 41 Aquaphor products from the ingredients the reference covers. Most come out Avoid (High Priority Swap) on the listed actives, and most also share base ingredients the reference does not cover, which are excluded from the grade. Only three pages show no ingredient list at all." Frame it as a coverage gap.
 
 ---
 
@@ -36,7 +36,7 @@
 **Most common risk category:** Category 4 (Allergies, Irritation, Corrosion) and Category 1 (Carcinogen), each flagged in 29 of 41 products (partial flags).
 
 **"Clean marketing, dirty formula" finds:**
-- The two "Naturally Inspired" lip sticks are the only products with zero partial flags. Each still has 9 to 11 ingredients the reference does not cover, so neither can be graded.
+- The two "Naturally Inspired" lip sticks are the only products with zero partial flags. Each still has 9 to 11 ingredients the reference does not cover, which are excluded from the grade. On their known ingredients, the Coconut pack is Puberty Safe and the Aloe Vera pack is Use Caution.
 - The Lip Protectant + SPF products carry seven partial flags, including sunscreen filters. A lip product with SPF is marketed differently from a plain lip balm, and the flags reflect that.
 
 **Repeated naming patterns:**
@@ -55,9 +55,9 @@
 
 **Best vs worst within categories:**
 - Chapped lips: Best = Naturally Inspired Aloe Vera Single Pack (0 partial flags, 11 unknowns). Worst = Lip Protectant + SPF (Dual Pack) (7 partial flags, 9 unknowns).
-- Baby care: Best = Baby Healing Ointment (7oz) (3 partial flags, 2 unknowns). Worst = Baby Wash & Shampoo (25.4oz) (5 partial flags, 1 unknown; graded Avoid (Moderate) under D8).
+- Baby care: Best = Baby Healing Ointment (7oz) (3 partial flags, 2 unknowns excluded; Avoid (High Priority Swap)). Worst = Baby Wash & Shampoo (25.4oz) (5 partial flags, 1 unknown excluded; Avoid (Moderate)).
 - Cracked skin: Best = Healing Ointment (7oz) (3 partial flags, 2 unknowns). Worst = Foot Mask (5 partial flags, 11 unknowns).
-- Diaper rash: Diaper Rash Paste (3.5oz) (0 partial flags, 5 unknowns). Diaper Rash Cream (3oz) has no ingredient text.
+- Diaper rash: Diaper Rash Paste (3.5oz) (0 partial flags, 5 unknowns excluded; Use Caution). Diaper Rash Cream (3oz) has no ingredient text.
 
 **Similar marketing, different grades:**
 - Lip Repair Stick (plain) has 1 partial flag (Dimethicone). Lip Repair Stick + Sunscreen has 5 (four sunscreen filters and Dimethicone). The sunscreen version is the one with the extra flags.
@@ -75,12 +75,12 @@
 
 ## Raw data summary
 
-**Unknown ingredients (manual review queue):** 48 distinct names. Most frequent: Caprylic/Capric Triglyceride (16 products), Butyrospermum Parkii (Shea) Butter (16), Ricinus Communis (Castor) Seed Oil (16), Ceresin (14), Lanolin Alcohol (13), Hydrogenated Castor Oil (12), Octyldodecanol (11), Tocopheryl Acetate (9). The full deduplicated list is in the Regrade section of `aquaphor_audit_log.md`.
+**Unknown ingredients (manual review queue):** 48 distinct names. Most frequent: Caprylic/Capric Triglyceride (16 products), Butyrospermum Parkii (Shea) Butter (16), Ricinus Communis (Castor) Seed Oil (16), Ceresin (14), Lanolin Alcohol (13), Hydrogenated Castor Oil (12), Octyldodecanol (11), Tocopheryl Acetate (9). All 233 unknown occurrences are excluded from the grade. The full deduplicated list is in the Regrade section of `aquaphor_audit_log.md`.
 
 **Ingredient text not captured:** Aquaphor Diaper Rash Cream (3oz.), Aquaphor Hand Mask, and Aquaphor Healing Ointment (2x.3.5oz).
 
-**Naming decisions:** Lanolin Alcohol (D4) is the largest single decision for this brand. Under the reference it is not listed, so it stays unknown until you decide otherwise.
+**Naming decisions:** Lanolin Alcohol (D4) is still the largest naming decision for this brand. It is excluded from the grade like any other unknown, but if it is added to the reference, every product that lists it may change tier.
 
-**D8 (2026-10-16, one unknown ingredient):** Two Baby Wash & Shampoo listings (25.4 oz and 16.9 fl oz) moved from ungradable to Avoid (Moderate) on one unknown, Sea Salt, with five flags. No product moved to Use Caution.
+**D7 and D8 removed (2026-10-17):** 36 products that were ungradable on unknowns are now graded from their known ingredients: 31 Avoid (High Priority Swap), 4 Use Caution and 1 Puberty Safe. The two Baby Wash & Shampoo listings were already Avoid (Moderate) and keep that tier. See the Grading on known ingredients section of `aquaphor_audit_log.md`.
 
-**Changes 1 to 3 (2026-10-17):** No Aquaphor product was affected. None has polysorbate or White Petrolatum USP, and none is on the Eucerin exception list. The Avoid (Moderate) and ungradable counts are unchanged.
+**Changes 1 to 3 (2026-10-17):** No Aquaphor product has polysorbate or White Petrolatum USP, and none is on the Eucerin exception list, so changes 1 to 3 did not move any Aquaphor tier. The Avoid (Moderate) count is unchanged at 2, and the three no-text products remain ungradable.

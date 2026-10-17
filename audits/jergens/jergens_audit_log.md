@@ -519,3 +519,61 @@ Applied in this pass with the same `_grader.py` in every brand folder. The refer
 - Natural Glow Daily Moisturizer: Polysorbate 60 flagged [1,2,4,5], flags 8 to 9, unknowns 17 to 16, still ungradable. Agrees. No White Petrolatum USP or Eucerin exception in this brand.
 
 **Tier counts after this pass:** ungradable: 38.
+
+## Grading on known ingredients (2026-10-17)
+
+**Rule (practitioner decision, replaces D7 and D8).** D7 (two or more unknown ingredients made a product ungradable) and D8 (exactly one unknown set a Use Caution floor) are removed. Unknown ingredients are excluded from the grade: they add no flags, set no floor, and never make a product ungradable. Each product is graded from its known ingredients only, using the reference flags, D1 to D6, the rubric conditionals and the explicit exception tables. Unknown names stay in the unknown_ingredients and audit_notes columns for review. No other rule changed; the petrolatum alias and the polysorbate flags are as they were.
+
+**Ungradable now means only** (a) no ingredient text on the page: 7 product(s), or (b) the explicit exception list: 0 product(s).
+
+**Tier counts after this regrade (38 products):**
+- Puberty Safe: 0
+- Use Caution: 0
+- Avoid (Mild): 0
+- Avoid (Moderate): 0
+- Avoid (High Priority Swap): 31
+- ungradable: 7 (no ingredient text: 7; exception list: 0)
+
+**Exception products still ungradable:** none. This brand has no entries in the change 3 exception list.
+
+**Products that moved from ungradable into a graded tier:** 31. Each was ungradable before this regrade.
+
+| Product | Old tier | New tier | Unknowns excluded from grade | Audit status |
+|---|---|---|---|---|
+| Daily Moisture | ungradable | Avoid (High Priority Swap) | 10 | complete |
+| Natural Glow Face Moisturizer +SPF 20 | ungradable | Avoid (High Priority Swap) | 10 | complete |
+| Natural Glow + Firming Daily Moisturizer | ungradable | Avoid (High Priority Swap) | 17 | complete |
+| Sparkling Berry Shea Fusion | ungradable | Avoid (High Priority Swap) | 10 | complete |
+| Nourishing Honey Moisturizer | ungradable | Avoid (High Priority Swap) | 11 | complete |
+| Natural Glow Instant Sun Moisturizer + Bronzer | ungradable | Avoid (High Priority Swap) | 25 | complete |
+| Deep Restoring Argan Oil Moisturizer | ungradable | Avoid (High Priority Swap) | 7 | complete |
+| Vanilla Crush Shea Fusion | ungradable | Avoid (High Priority Swap) | 11 | complete |
+| Warm Amber Shea Fusion | ungradable | Avoid (High Priority Swap) | 11 | complete |
+| Hydrating Coconut Lotion | ungradable | Avoid (High Priority Swap) | 10 | complete |
+| Soothing Aloe Moisturizer | ungradable | Avoid (High Priority Swap) | 12 | complete |
+| Original Scent Moisturizer | ungradable | Avoid (High Priority Swap) | 7 | complete |
+| Skin Firming | ungradable | Avoid (High Priority Swap) | 14 | complete |
+| Lavender Dreams Shea Fusion | ungradable | Avoid (High Priority Swap) | 11 | complete |
+| Cherry Almond Lotion Bursts | ungradable | Avoid (High Priority Swap) | 10 | complete |
+| Enriching Shea Butter Lotion | ungradable | Avoid (High Priority Swap) | 16 | complete |
+| Sparkling Berry Lotion Bursts | ungradable | Avoid (High Priority Swap) | 14 | complete |
+| Ultra Healing Moisturizer | ungradable | Avoid (High Priority Swap) | 10 | complete |
+| Lavender Lotion Bursts | ungradable | Avoid (High Priority Swap) | 14 | complete |
+| Natural Glow Wet Skin Moisturizer | ungradable | Avoid (High Priority Swap) | 14 | complete |
+| Instant Flawless Kit Bundle | ungradable | Avoid (High Priority Swap) | 28 | complete |
+| Natural Glow Instant Sun Drops | ungradable | Avoid (High Priority Swap) | 9 | complete |
+| Natural Glow Hydra Gel | ungradable | Avoid (High Priority Swap) | 10 | complete |
+| Gotta Glow Bundle | ungradable | Avoid (High Priority Swap) | 43 | complete |
+| Natural Glow Instant Sun Mousse | ungradable | Avoid (High Priority Swap) | 16 | complete |
+| Deep Conditioning Shea Cocoa Butter Blend | ungradable | Avoid (High Priority Swap) | 11 | complete |
+| Best Sellers Bundle | ungradable | Avoid (High Priority Swap) | 23 | complete |
+| Natural Glow Daily Moisturizer | ungradable | Avoid (High Priority Swap) | 16 | complete |
+| Wet Skin Moisturizer Shea Oil | ungradable | Avoid (High Priority Swap) | 11 | complete |
+| Wet Skin Moisturizer Coconut Oil | ungradable | Avoid (High Priority Swap) | 6 | complete |
+| Daily Glow Bundle | ungradable | Avoid (High Priority Swap) | 34 | complete |
+
+**Graded products whose tier did not change:** 0.
+
+**Puberty Safe or Use Caution products that have unknown ingredients (review first):** none.
+
+**Unknown ingredients excluded from the grade:** 451 occurrences across 38 products, 126 distinct names (case-insensitive). The names are in each row's unknown_ingredients column.
