@@ -329,11 +329,11 @@
 
 | Ingredient | Practitioner decision | Open question |
 |---|---|---|
-| Helianthus annuus (sunflower) seed oil | Avoid (Mild) | Reference uses numbered categories, not tiers. Which category (or flag) produces Avoid (Mild)? |
+| Helianthus annuus (sunflower) seed oil | RESCINDED 2026-10-17. Back to unknown pending sourcing. | none |
 | Butyrospermum parkii (shea) butter | LOW TOX | none |
 | Aloe barbadensis leaf juice | LOW TOX | none |
 | Flavor (aroma) / flavor | Avoid (High) | Which categories produce Avoid (High) for an undisclosed flavor? |
 | Rule: butters | Butters are LOW TOX, unless the butter is made from or includes a seed oil, then Avoid (Mild) | Confirm the rule applies to ingredients like "cocoa seed butter" and "shea butter" |
-| Rule: plant oils and extracts | Use Caution by default, pending sourcing of each oil or extract for estrogenic activity (e.g., lavender) | Confirm this is the default for all plant oils and extracts |
+| Rule: plant oils and extracts | WITHDRAWN 2026-10-17. No automatic Use Caution for plant oils. Each oil or extract is sourced individually (e.g., lavender for estrogenic activity). | none |
 
 Entries awaiting a practitioner decision: Menthol, Xylitol, Calcium carbonate, Sodium hydroxide (proposed low tox by practitioner; not in reference; see research notes). Not yet categorized: Caprylic/capric triglyceride, stevia, calendula, lavender, peppermint, avocado, grape seed, castor and almond oils, levulinic acid, gluconolactone.
