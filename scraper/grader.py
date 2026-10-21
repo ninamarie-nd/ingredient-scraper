@@ -208,9 +208,10 @@ def grade(product_name, product_type, verbatim):
             continue
         if low in LOW_TOX: continue
         if low.startswith('ceramide '): continue
-        if ' leaf extract' in low or ' flower extract' in low or ' fruit extract' in low or ' root extract' in low or ' seed extract' in low or ' bark extract' in low or ' peel extract' in low or ' stem extract' in low:
+        _sc = not re.match(r'^(peg|ppg)[-\s/]', low)  # PEG/PPG ethoxylates are never skipped as oils or extracts
+        if _sc and (' leaf extract' in low or ' flower extract' in low or ' fruit extract' in low or ' root extract' in low or ' seed extract' in low or ' bark extract' in low or ' peel extract' in low or ' stem extract' in low):
             continue
-        if 'ferment' in low or 'extract' in low or low.endswith(' oil') or 'butter' in low or 'juice' in low or low.endswith(' wax') or low.endswith(' bran') or ' seed oil' in low or ' root oil' in low or ' peel oil' in low or low.endswith(' water'):
+        if _sc and ('ferment' in low or 'extract' in low or low.endswith(' oil') or 'butter' in low or 'juice' in low or low.endswith(' wax') or low.endswith(' bran') or ' seed oil' in low or ' root oil' in low or ' peel oil' in low or low.endswith(' water')):
             continue
         if low.endswith(' acid') and not any(b in low for b in ['acrylic acid','sulfonic acid']):
             continue
