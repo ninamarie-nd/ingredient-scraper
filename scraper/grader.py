@@ -198,6 +198,7 @@ def grade(product_name, product_type, verbatim):
     for ing in ingredients:
         low = norm(ing)
         if not low or low in seen: continue
+        if re.match(r'^(aqua|water|eau)\)?(\s*[/(]\s*(aqua|water|eau)\s*\)?)*$', low): continue  # User decision: water is exempt
         seen.add(low)
         if 'behentrimonium methosulfate' in low: continue
         if is_fatty_alc(low): continue
@@ -309,7 +310,7 @@ def grade(product_name, product_type, verbatim):
         tier = 'Use Caution'
     elif flag_count >= 3 or max_cats >= 3 or has_paraben:
         tier = 'Avoid (Mild)'
-    order = ['Puberty Safe','Use Caution','Avoid (Mild)','Avoid (Moderate)','Avoid (High Priority Swap)']
+    order = ['Puberty Safe','Use Caution','Avoid (Mild)','Avoid (Moderate)','Avoid (High)']
     if has_heavy or has_form or has_fragrance or flag_count >= 5:
         if order.index(tier) < order.index('Avoid (Moderate)'):
             tier = 'Avoid (Moderate)'
@@ -339,10 +340,10 @@ def grade(product_name, product_type, verbatim):
     has_endocrine = bool(high_endo_hits) or len(cat2_hits) >= 3
 
     if has_pfas or flag_count >= 8 or has_carc_lo or (has_heavy and has_cat2 and has_fragrance):
-        tier = 'Avoid (High Priority Swap)'
+        tier = 'Avoid (High)'
     # Multi-marker endocrine disruption on its own is enough to escalate to HPS
     if has_endocrine and (len(cat2_hits) >= 3 or len(high_endo_hits) >= 2):
-        tier = 'Avoid (High Priority Swap)'
+        tier = 'Avoid (High)'
 
     esc = []
     if has_pfas: esc.append('PFAS')
@@ -462,7 +463,7 @@ def build_outputs(brand_slug, brand_name, brand_url, ingredients, out_dir, scrap
         cm_lines.append(f"**Headline finding:** Of {total} {brand_name} products enumerated, 0 could be graded because INCI lists are not published on the brand site.")
     cm_lines.append('')
     cm_lines.append('**Tier distribution:**')
-    for t in ['Puberty Safe','Use Caution','Avoid (Mild)','Avoid (Moderate)','Avoid (High Priority Swap)']:
+    for t in ['Puberty Safe','Use Caution','Avoid (Mild)','Avoid (Moderate)','Avoid (High)']:
         n = tier_count.get(t, 0)
         cm_lines.append(f"- {t}: {n} ({pct(n)})")
     if skipped_count:
@@ -527,7 +528,7 @@ def build_outputs(brand_slug, brand_name, brand_url, ingredients, out_dir, scrap
         n, c = top_flag[0]
         pct_n = f"{(c*100)/graded_count:.0f}%"
         cm_lines.append(f"- \"{brand_name} uses {n.title()} in {c} of {graded_count} products I scanned — that's {pct_n} of the graded catalog.\"")
-    cm_lines.append(f"- \"The tier distribution across {brand_name} is {tier_count.get('Puberty Safe',0)} Puberty Safe / {tier_count.get('Use Caution',0)} Use Caution / {tier_count.get('Avoid (Mild)',0)} Avoid Mild / {tier_count.get('Avoid (Moderate)',0)} Avoid Moderate / {tier_count.get('Avoid (High Priority Swap)',0)} Avoid HPS. The shape of that distribution is the story.\"")
+    cm_lines.append(f"- \"The tier distribution across {brand_name} is {tier_count.get('Puberty Safe',0)} Puberty Safe / {tier_count.get('Use Caution',0)} Use Caution / {tier_count.get('Avoid (Mild)',0)} Avoid Mild / {tier_count.get('Avoid (Moderate)',0)} Avoid Moderate / {tier_count.get('Avoid (High)',0)} Avoid HPS. The shape of that distribution is the story.\"")
     cm_lines.append('')
     cm_lines.append('---')
     cm_lines.append('')
@@ -589,7 +590,7 @@ def build_outputs(brand_slug, brand_name, brand_url, ingredients, out_dir, scrap
     log_lines.append('')
     log_lines.append('## Tier roll-up')
     log_lines.append('')
-    for t in ['Puberty Safe','Use Caution','Avoid (Mild)','Avoid (Moderate)','Avoid (High Priority Swap)']:
+    for t in ['Puberty Safe','Use Caution','Avoid (Mild)','Avoid (Moderate)','Avoid (High)']:
         log_lines.append(f"- {t}: {tier_count.get(t, 0)}")
     if skipped_count:
         log_lines.append(f"- Ingredients not published: {skipped_count}")
