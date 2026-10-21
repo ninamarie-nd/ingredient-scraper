@@ -16,8 +16,6 @@ REF_PATH = os.path.join(HERE, 'ref_compact.json')
 ref_data = json.load(open(REF_PATH))
 REF = ref_data.get('ref', ref_data)
 ALIASES = ref_data.get('aliases', {})
-# Ingredients cleared by manual review (not in the reference; reviewer decision).
-MANUAL_REVIEWED_OK = {'tocopheryl acetate'}
 ALIASES.update({'white petrolatum': 'petrolatum', 'white petrolatum usp': 'petrolatum', 'petrolatum 100%': 'petrolatum'})  # same ingredient, different label names
 if not ALIASES:
     # fallback: load aliases.json
@@ -203,6 +201,7 @@ def grade(product_name, product_type, verbatim):
         low = norm(ing)
         if not low or low in seen: continue
         if re.match(r'^(aqua|water|eau)\)?(\s*[/(]\s*(aqua|water|eau)\s*\)?)*$', low): continue  # User decision: water is exempt
+        if low in ('glycerin', 'vegetable glycerin'): continue  # User decision: glycerin is left alone (not flagged, not unknown)
         seen.add(low)
         if 'behentrimonium methosulfate' in low: continue
         if is_fatty_alc(low): continue
@@ -361,11 +360,6 @@ def grade(product_name, product_type, verbatim):
     if has_form: esc.append('formaldehyde-releaser')
     if has_carc_lo: esc.append('carcinogen in leave-on')
     if has_endocrine: esc.append('endocrine disruption')
-    # Unknown ingredients (not in the reference) cannot leave a product Puberty Safe.
-    # Ingredients the reviewer has cleared by hand are excluded from this check.
-    _open_unknown = [u for u in unknown if re.sub(r'\s*\(.*$', '', u).strip().lower() not in MANUAL_REVIEWED_OK]
-    if _open_unknown and tier == 'Puberty Safe':
-        tier = 'Use Caution'
     return tier, flag_count, flagged, natural, unknown, esc
 
 
