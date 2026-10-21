@@ -16,6 +16,7 @@ REF_PATH = os.path.join(HERE, 'ref_compact.json')
 ref_data = json.load(open(REF_PATH))
 REF = ref_data.get('ref', ref_data)
 ALIASES = ref_data.get('aliases', {})
+ALIASES.update({'white petrolatum': 'petrolatum', 'white petrolatum usp': 'petrolatum', 'petrolatum 100%': 'petrolatum'})  # same ingredient, different label names
 if not ALIASES:
     # fallback: load aliases.json
     aliases_path = os.path.join(HERE, 'ingredient_aliases.json')
