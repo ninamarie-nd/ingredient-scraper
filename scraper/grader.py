@@ -37,6 +37,7 @@ LOW_TOX = set([
 LOW_TOX.discard('pentylene glycol')
 
 PATTERN_WATCH = [
+    (re.compile(r'\bpolyquaternium-\d+\b|\bquaternium-(?!15\b)\d+\b|\b(trimonium|dimonium|nium) (chloride|methosulfate|sulfate)\b', re.I), [2], 'quaternary ammonium (quat)'),
     # Catches: PEG-X, PPG-X, PEG-X-Y, PEG X, PEG/PPG-X/Y (combined ethoxylate form).
     # Previously only matched "peg-" or "ppg-" + digit, so combined "PEG/PPG-8/3 LAURATE"
     # (and all siblings) fell through unflagged.
@@ -206,7 +207,7 @@ def grade(product_name, product_type, verbatim):
         if nf:
             natural.append((ing, [4,8]))
             continue
-        if low in LOW_TOX: continue
+        if low in LOW_TOX and ALIASES.get(low, low) in REF and not REF[ALIASES.get(low, low)].get('c'): continue
         if low.startswith('ceramide '): continue
         _sc = not re.match(r'^(peg|ppg)[-\s/]', low)  # PEG/PPG ethoxylates are never skipped as oils or extracts
         if _sc and (' leaf extract' in low or ' flower extract' in low or ' fruit extract' in low or ' root extract' in low or ' seed extract' in low or ' bark extract' in low or ' peel extract' in low or ' stem extract' in low):
@@ -216,6 +217,11 @@ def grade(product_name, product_type, verbatim):
         if low.endswith(' acid') and not any(b in low for b in ['acrylic acid','sulfonic acid']):
             continue
         key = ALIASES.get(low, low)
+        if key not in REF:
+            _base = re.sub(r'\s*\([^)]*\)\s*$', '', key).strip()
+            _inner = re.search(r'\(([^)]*)\)\s*$', key)
+            if _base in REF: key = _base
+            elif _inner and _inner.group(1).strip() in REF: key = _inner.group(1).strip()
         if key in REF:
             d = REF[key]
             if d.get('l'):
