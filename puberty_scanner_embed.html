@@ -892,17 +892,13 @@ select:focus{border-color:var(--teal);outline:2px solid var(--teal);outline-offs
   .page .ing[data-tip]:active { transform: scale(0.96); }
 }
 
-.ez-banner{width:100%;display:flex;align-items:center;justify-content:space-between;gap:16px;margin:12px 0 8px;padding:16px 20px;border-radius:14px;border:2px solid #0f766e;background:var(--surface);color:inherit;cursor:pointer;font:inherit;text-align:left;box-shadow:var(--shadow-sm)}
-.ez-banner:hover{box-shadow:var(--shadow)}
-.ez-banner .ez-title{display:block;font-size:18px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:#0f766e}
-.ez-banner .ez-sub{display:block;font-size:13px;opacity:.8;margin-top:2px}
-.ez-banner .ez-count{display:flex;flex-direction:column;align-items:center;min-width:76px;padding:6px 12px;border-radius:10px;background:#0f766e;color:#fff}
-.ez-banner .ez-count span:first-child{font-size:22px;font-weight:800;line-height:1}
-.ez-banner .ez-count-l{font-size:11px;text-transform:uppercase;letter-spacing:.05em}
-.ez-banner[aria-pressed="true"]{background:#0f766e;color:#fff;border-color:#0f766e}
-.ez-banner[aria-pressed="true"] .ez-title,.ez-banner[aria-pressed="true"] .ez-sub{color:#fff}
-.ez-banner[aria-pressed="true"] .ez-count{background:#fff;color:#0f766e}
-@media (max-width:600px){.ez-banner{padding:14px 16px}.ez-banner .ez-title{font-size:16px}}
+.ez-switch{display:inline-flex;align-items:center;gap:8px;height:100%;min-height:38px;padding:0 12px;border:1px solid var(--border);border-radius:var(--radius-sm,8px);background:var(--surface);color:var(--fg,inherit);font:inherit;font-size:14px;cursor:pointer;white-space:nowrap}
+.ez-switch:hover{border-color:var(--teal,#0f766e)}
+.ez-switch .ez-track{position:relative;width:34px;height:20px;border-radius:999px;background:var(--border,#cbd5e1);transition:background .15s ease;flex:none}
+.ez-switch .ez-knob{position:absolute;top:2px;left:2px;width:16px;height:16px;border-radius:50%;background:#fff;box-shadow:0 1px 2px rgba(0,0,0,.25);transition:transform .15s ease}
+.ez-switch[aria-pressed="true"] .ez-track{background:var(--teal,#0f766e)}
+.ez-switch[aria-pressed="true"] .ez-knob{transform:translateX(14px)}
+.ez-switch[aria-pressed="true"]{border-color:var(--teal,#0f766e);font-weight:600}
 </style>
 </head>
 <body>
@@ -932,16 +928,13 @@ select:focus{border-color:var(--teal);outline:2px solid var(--teal);outline-offs
     <button class="tier-stat t-moderate" data-tier="Avoid (Moderate)" aria-pressed="true"><span class="n" id="n-moderate">0</span><div class="l">Avoid (Moderate)</div></button>
     <button class="tier-stat t-hps" data-tier="Avoid (High)" aria-pressed="true"><span class="n" id="n-hps">0</span><div class="l">Avoid (High)</div></button>
   </nav>
-  <button type="button" id="ez" class="ez-banner" aria-pressed="false">
-    <span class="ez-main"><span class="ez-title">Eczema Safe only</span></span>
-    <span class="ez-count"><span id="n-ez">0</span><span class="ez-count-l">products</span></span>
-  </button>
 
   <div class="filters">
     <div class="search"><input type="search" id="q" placeholder="Search brand, product, type, or ingredient — try &quot;dove shampoo&quot;…" aria-label="Search products"></div>
     <select id="brand" aria-label="Brand"><option value="">All brands</option></select>
     <select id="type" aria-label="Product type"><option value="">All types</option></select>
     <select id="curl" aria-label="Hair type"><option value="">All hair types</option><option value="curl">Curly or coily hair</option></select>
+    <button type="button" id="ez" class="ez-switch" aria-pressed="false" title="Show only Puberty Safe products with no skin-irritation ingredients"><span class="ez-track"><span class="ez-knob"></span></span><span class="ez-label">Eczema Safe only</span></button>
     <select id="sort" aria-label="Sort">
       <option value="tier">Sort: safest first</option>
       <option value="tier-worst">Sort: worst first</option>
@@ -1128,7 +1121,6 @@ select:focus{border-color:var(--teal);outline:2px solid var(--teal);outline-offs
     counts[k] = counts[k] + 1;
   });
   document.getElementById('n-safe').textContent = counts['Puberty Safe'];
-  document.getElementById('n-ez').textContent = products.filter(function(p){ return p.ez; }).length.toLocaleString('en-US');
   document.getElementById('n-caution').textContent = counts['Use Caution'];
   document.getElementById('n-mild').textContent = counts['Avoid (Mild)'];
   document.getElementById('n-moderate').textContent = counts['Avoid (Moderate)'];
