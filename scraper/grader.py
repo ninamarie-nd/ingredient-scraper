@@ -293,7 +293,11 @@ def grade(product_name, product_type, verbatim):
         k = n.lower()
         if k in sn: continue
         sn.add(k); uq.append((n,c))
-    flagged = uq
+    flagged_all = uq
+    # Skin-irritation-only flags (category 4 and nothing else) stay visible in the
+    # flagged list but do not count toward the tier. Irritation alone never moves a
+    # product out of Puberty Safe; it only affects the Eczema Safe label.
+    flagged = [(n, c) for n, c in flagged_all if set(c) != {4}]
     flag_count = len(flagged)
     has_paraben = any('paraben' in n.lower() for n,_ in flagged)
     # Match any fragrance variant: trailing *, **, dagger, parentheticals, "Fragrance (Parfum)*", etc.
@@ -360,7 +364,7 @@ def grade(product_name, product_type, verbatim):
     if has_form: esc.append('formaldehyde-releaser')
     if has_carc_lo: esc.append('carcinogen in leave-on')
     if has_endocrine: esc.append('endocrine disruption')
-    return tier, flag_count, flagged, natural, unknown, esc
+    return tier, flag_count, flagged_all, natural, unknown, esc
 
 
 def build_outputs(brand_slug, brand_name, brand_url, ingredients, out_dir, scrape_notes=None):
