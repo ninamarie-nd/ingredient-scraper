@@ -1,1 +1,4787 @@
-{"ref": {"1.2 benzisothiazol-3(2h)-one": {"c": [4, 7], "l": false, "n": ""}, "2-bromo-2-nitropropane-1,3-diol": {"c": [1, 2, 4, 5], "l": false, "n": "Watch for: Bromopol Formaldehyde; 1,4-dioxane, ethylene oxid"}, "2-butoxyethanol": {"c": [2], "l": false, "n": "Watch for: -oxyethanol Same as butoxyethanol"}, "2-ethoxyethanol": {"c": [2], "l": false, "n": "Watch for: -oxyethanol"}, "2-methoxyethanol": {"c": [2], "l": false, "n": "Watch for: -oxyethanol"}, "2-methyl-2h-isothizole-3-one": {"c": [4, 7], "l": false, "n": ""}, "5-bromo-5-nitro-1,3-dioxane": {"c": [1, 4], "l": false, "n": "Formaldehyde"}, "acetic acid (vinegar)": {"c": [8], "l": false, "n": "Avoid inhaling fumes; ensure adequate ventilation"}, "acrylamide": {"c": [1], "l": false, "n": "Watch for: \"-acrylamide\""}, "acrylates copolymer": {"c": [1, 2, 4, 6], "l": false, "n": "PFAS treated"}, "acrylic acid": {"c": [1, 4, 6], "l": false, "n": ""}, "alkoxylated amine substituted triaryl": {"c": [1], "l": false, "n": "Alkoxylate Methane"}, "alkyl (50% c14, 40% c12, 10% c16) dimethyl": {"c": [2], "l": false, "n": "Watch for: -nium benzyl ammonium chloride Quat"}, "alkyl c12-14 dimethylethylbenzyl ammonium": {"c": [2], "l": false, "n": "Watch for: -nium Chloride Quat"}, "alkyl c12-18 dimethylbenzyl ammonium": {"c": [2], "l": false, "n": "Watch for: -nium Chloride Quat"}, "allantoin": {"c": [], "l": true, "n": ""}, "aluminum": {"c": [3], "l": false, "n": ""}, "aluminum hydroxide": {"c": [4], "l": false, "n": ""}, "aluminum starch octenylsuccinate": {"c": [2, 3], "l": false, "n": ""}, "aminopropyl diglycol dimaleate": {"c": [4], "l": false, "n": "Watch for: \"-glycol\""}, "ammonia": {"c": [4, 8], "l": false, "n": ""}, "ammonium acryloyldimethyltaurate/vp": {"c": [1, 6], "l": false, "n": "Watch for: \"Vinyl-\" Copolymer Vinyl"}, "ammonium cocoyl isethionate": {"c": [1], "l": false, "n": "Watch for: isethionate 1,4-dioxane, ethylene oxide"}, "amyl cinnamal": {"c": [4, 8], "l": false, "n": "Watch for: \"(Natural) Fragrance or Parfum\""}, "amylase": {"c": [8], "l": false, "n": "Enzyme; Avoid in powdered products as much as possible"}, "anisinic acid": {"c": [], "l": true, "n": ""}, "arsenic": {"c": [1, 3], "l": false, "n": "Watch for: FD&C #; D&C #, CI #"}, "ascorbic acid (vitamin c)": {"c": [], "l": true, "n": "Watch for: \"Ascorb-\""}, "avobenzone": {"c": [2], "l": false, "n": ""}, "behenalkonium betaine": {"c": [2], "l": false, "n": "Watch for: -nium"}, "behentrimonium methosulfate": {"c": [], "l": true, "n": ""}, "behentrimonium sulfate": {"c": [2, 4], "l": false, "n": "Watch for: \"-nium\" and \"-sulfate\""}, "behenyl alcohol": {"c": [], "l": true, "n": "Watch for: \"-alcohol\""}, "bentonite clay": {"c": [], "l": true, "n": ""}, "benzalkonium chloride": {"c": [2, 4, 8], "l": false, "n": ""}, "benzethonium chloride": {"c": [2, 4, 8], "l": false, "n": ""}, "benzisothiazolinone": {"c": [2, 4, 5, 8], "l": false, "n": "Suspected endocrine disruptor"}, "benzophenone- 1, 2,": {"c": [3], "l": false, "n": ",4, 5, or 9 2 Watch for: Benzophenone- #"}, "benzyl alcohol": {"c": [], "l": true, "n": ""}, "benzylhemiformal": {"c": [1, 4], "l": false, "n": "Formaldehyde"}, "benzylparaben": {"c": [2, 4], "l": false, "n": ""}, "beta-myrcene": {"c": [1, 4, 8], "l": false, "n": "Watch for: (Natural) Fragrance or Parfum"}, "betaine": {"c": [], "l": true, "n": ""}, "bha (butylated hydroxyanisole)": {"c": [1, 2], "l": false, "n": ""}, "bht (butylated hydroxytoluene)": {"c": [1, 2], "l": false, "n": ""}, "bisabolol": {"c": [4], "l": false, "n": "From chamomile plants"}, "bleach": {"c": [4, 7, 8], "l": false, "n": "Same as \"sodium hypochlorite\""}, "brassica alcohol": {"c": [], "l": true, "n": ""}, "brassica glycerides": {"c": [], "l": true, "n": ""}, "brassicyl isoleucinate esylate": {"c": [], "l": true, "n": ""}, "brassicyl valinate esylate": {"c": [], "l": true, "n": ""}, "butoxyethanol": {"c": [2], "l": false, "n": "Watch for: -oxyethanol Same as 2-butoxyethanol"}, "butyl acetate": {"c": [4, 8], "l": false, "n": "Watch for: (Natural) Fragrance or Parfum"}, "butylene glycol": {"c": [1, 2], "l": false, "n": "Watch for: -glycol"}, "butyloctyl salicylate": {"c": [2], "l": false, "n": ""}, "butylparaben": {"c": [2, 4], "l": false, "n": ""}, "butylphenyl methylpropional": {"c": [2], "l": false, "n": "Same as lilial"}, "c10 16-alkyldimethyl": {"c": [2], "l": false, "n": ""}, "c10-16 alkyldimethylamine oxide": {"c": [1, 2], "l": false, "n": "Watch for: -amine C10-16 pareth 1 Watch for: -eth 1,4-dioxan"}, "c12-16 alcohols ethoxylated propoxylated": {"c": [1], "l": false, "n": "Watch for: -ethoxylated 1,4-dioxane, ethylene oxide"}, "c12-18 ethoxylated alcohols": {"c": [1], "l": false, "n": "Watch for: -ethoxylated 1,4-dioxane, ethylene oxide"}, "c6-12 ethoxylated alcohols": {"c": [1], "l": false, "n": "Watch for: -ethoxylated 1,4-dioxane, ethylene oxide"}, "c9-11 alkyl glucoside": {"c": [], "l": true, "n": ""}, "cadmium": {"c": [1, 3], "l": false, "n": "Watch for: FD&C #; D&C #, CI #"}, "caffeine": {"c": [], "l": true, "n": ""}, "calcium formate": {"c": [], "l": true, "n": ""}, "calcium gluconate": {"c": [], "l": true, "n": ""}, "calomel": {"c": [1, 3], "l": false, "n": ""}, "capryleth-4 1 watch for: -eth": {"c": [], "l": false, "n": "1,4-dioxane, ethylene oxide"}, "caprylhydroxamic acid": {"c": [], "l": true, "n": ""}, "capryloyl glycerin/sebacic acid copolymer": {"c": [], "l": true, "n": ""}, "caprylyl glycol": {"c": [], "l": true, "n": ""}, "carbomer": {"c": [1, 4, 6], "l": false, "n": ""}, "carnauba starch": {"c": [], "l": true, "n": ""}, "cashmeran (dpmi)": {"c": [1, 4, 8], "l": false, "n": "Watch for: \"(Natural) Fragrance or Parfum\" Musk-type compoun"}, "celestolide (abdi)": {"c": [1, 4, 8], "l": false, "n": "Watch for: \"(Natural) Fragrance or Parfum\" Musk-type compoun"}, "cellulase": {"c": [8], "l": false, "n": "Enzyme; Avoid in powdered products as much as possible"}, "cellulose gum": {"c": [], "l": true, "n": ""}, "ceramide": {"c": [], "l": true, "n": ""}, "ceteareth": {"c": [1, 4, 5], "l": false, "n": "Watch for: -eth 1,4-dioxane, ethylene oxide"}, "cetearyl alcohol": {"c": [], "l": true, "n": "Watch for: \"-alcohol\""}, "cetearyl glucoside": {"c": [], "l": true, "n": "Watch for: -glucoside\""}, "cetearyl olivate": {"c": [], "l": true, "n": ""}, "cetrimonium chloride": {"c": [2], "l": false, "n": "Watch for: -nium"}, "cetyl alcohol": {"c": [], "l": true, "n": ""}, "cetyl palmitate": {"c": [], "l": true, "n": ""}, "cetyl pyridinium chloride": {"c": [2], "l": false, "n": "Watch for: -nium"}, "chloromethylisothiazolinone": {"c": [4, 5, 8], "l": false, "n": ""}, "chlorphenesin": {"c": [4], "l": false, "n": ""}, "ci 42090 (blue 1)": {"c": [1, 2, 3], "l": false, "n": "Watch for: FD&C #; D&C #, CI # PFAS treated"}, "ci 77007 (ultramarines)": {"c": [1, 2, 3], "l": false, "n": "Watch for: FD&C #; D&C #, CI # PFAS treated"}, "ci 77491 (red iron oxide)": {"c": [1, 2, 3], "l": false, "n": "Watch for: FD&C #; D&C #, CI # PFAS treated"}, "ci 77492 (yellow iron oxide)": {"c": [1, 2, 3], "l": false, "n": "Watch for: FD&C #; D&C #, CI # PFAS treated"}, "ci 77499 (black iron oxide)": {"c": [1, 2, 3], "l": false, "n": "Watch for: FD&C #; D&C #, CI # PFAS treated"}, "ci 77891 (titanium dioxide)": {"c": [1, 2, 3], "l": false, "n": "Watch for: FD&C #; D&C #, CI # PFAS treated; Not a concern i"}, "cinnamal": {"c": [4, 8], "l": false, "n": "Watch for: \"(Natural) Fragrance or Parfum\""}, "citral": {"c": [4, 8], "l": false, "n": "Watch for: \"(Natural) Fragrance or Parfum\""}, "citric acid": {"c": [], "l": true, "n": ""}, "citronellal": {"c": [4, 8], "l": false, "n": "Watch for: \"(Natural) Fragrance or Parfum\""}, "cocamide dea": {"c": [1, 4], "l": false, "n": "Watch for: -EA Nitrosamines"}, "cocamide mea": {"c": [1, 4], "l": false, "n": "Watch for: -EA Nitrosamines"}, "cocamidopropyl betaine": {"c": [1, 4], "l": false, "n": "Watch for: -amidopropyl Nitrosamines"}, "cocamidopropyl hydroxysultaine": {"c": [1, 4], "l": false, "n": "Watch for: -amidopropyl Nitrosamines Cocamidopropylamine Oxi"}, "coco-glucoside": {"c": [], "l": true, "n": "Watch for: -glucoside\""}, "coconut acid": {"c": [], "l": true, "n": ""}, "coconut alkanes (aka coco- caprylate)": {"c": [], "l": true, "n": ""}, "coconut oil": {"c": [], "l": true, "n": ""}, "copper": {"c": [], "l": true, "n": ""}, "coumarin": {"c": [4, 8], "l": false, "n": "Watch for: \"(Natural) Fragrance or Parfum\""}, "cyclomethicone": {"c": [1, 2, 6], "l": false, "n": "Watch for: -\"siloxane\" PFAS treated"}, "cyclopentasiloxane": {"c": [1, 2, 6], "l": false, "n": "Watch for: -\"siloxane\" PFAS treated"}, "cyclotetrasiloxane": {"c": [1, 2, 6], "l": false, "n": "Watch for: -\"siloxane\" PFAS treated"}, "dea oleth-3 phosphate": {"c": [1, 4], "l": false, "n": "Watch for: -EA Nitrosamines"}, "dea-cetyl phosphate": {"c": [1, 4], "l": false, "n": "Watch for: -EA Nitrosamines"}, "decanal": {"c": [4, 8], "l": false, "n": "Watch for: \"(Natural) Fragrance or Parfum\""}, "decyl-glucoside": {"c": [], "l": true, "n": "Watch for: -glucoside\""}, "dehydroacetic acid": {"c": [], "l": true, "n": ""}, "denatonium benzoate": {"c": [4, 7], "l": false, "n": ""}, "di(2-ethylhexyl) phthalate (dehp)": {"c": [2], "l": false, "n": "Watch for: \"(Natural) Fragrance or Parfum\""}, "di-n-butyl phthalate (dnbp)": {"c": [2], "l": false, "n": "Watch for: \"(Natural) Fragrance or Parfum\""}, "diazolidinylurea": {"c": [1, 2, 4, 5], "l": false, "n": "Formaldehyde; 1,4-dioxane, ethylene oxide"}, "dicetyldimonium chloride": {"c": [2], "l": false, "n": "Watch for: -nium"}, "diethanolamine (dea)": {"c": [1, 4], "l": false, "n": "Watch for: -EA Nitrosamines"}, "diethyl phthalate (dep)": {"c": [2], "l": false, "n": "Watch for: \"(Natural) Fragrance or Parfum\""}, "diethylamino hydroxybenzoyl hexyl": {"c": [4], "l": false, "n": "contamination with phthalates (German Federal Institute for "}, "diethylhexyl sodium sulfosuccinate": {"c": [5], "l": false, "n": ""}, "diheptyl succinate": {"c": [], "l": true, "n": ""}, "dihydrogenated tallow benzylmonium": {"c": [2], "l": false, "n": "Watch for: -nium chloride"}, "diisobutyl phthalate (dibp)": {"c": [2], "l": false, "n": "Watch for: \"(Natural) Fragrance or Parfum\""}, "dimethicone": {"c": [6], "l": false, "n": "Silicone polymer. Flagged for environmental persistence only. Not a PFAS and not an endocrine disruptor."}, "dimethicone/vinyl dimethicone crosspolymer": {"c": [1], "l": false, "n": "Watch for: -crosspolymer vinyl formamide"}, "dimethyl phthalate (dmp)": {"c": [2], "l": false, "n": "Watch for: \"(Natural) Fragrance or Parfum\""}, "dimethylimidazolidinone rice starch": {"c": [2], "l": false, "n": ""}, "dipalmitoyl hydroxyproline": {"c": [], "l": true, "n": ""}, "dipropylene glycol": {"c": [2], "l": false, "n": "glycol ether"}, "dipropylene glycol butyl ether": {"c": [2], "l": false, "n": "glycol ether"}, "disodium cocoamphodiacetate": {"c": [], "l": true, "n": ""}, "disodium decyl phenyl ether disulfonate": {"c": [4, 7], "l": false, "n": ""}, "disodium distyrylbiphenyl disulfonate": {"c": [7], "l": false, "n": ""}, "disodium laurimidodiproprionate": {"c": [4], "l": false, "n": ""}, "disteardimonium hectorite": {"c": [2], "l": false, "n": "Watch for: -num PFAS treated"}, "dmdm hydantoin": {"c": [1, 2, 4, 5], "l": false, "n": "Formaldehyde; 1,4-dioxane, ethylene oxide"}, "dodecyl phenol ethoxylate": {"c": [1, 2], "l": false, "n": "1,4-dioxane, ethylene oxide"}, "edta": {"c": [4], "l": false, "n": "Watch for: \"-EDTA\""}, "estragole": {"c": [1, 4, 8], "l": false, "n": "Watch for: (Natural) Fragrance or Parfum"}, "ethanolamine": {"c": [4], "l": false, "n": ""}, "ethyl acetate": {"c": [4], "l": false, "n": ""}, "ethylene glycol": {"c": [1, 2], "l": false, "n": "Watch for: -glycol"}, "ethylhexyl palmitate": {"c": [], "l": true, "n": ""}, "ethylhexylglycerin": {"c": [4], "l": false, "n": ""}, "ethylparaben": {"c": [2, 4], "l": false, "n": ""}, "eugenol": {"c": [4, 8], "l": false, "n": "Watch for: \"(Natural) Fragrance or Parfum\""}, "farnesol": {"c": [4, 8], "l": false, "n": "Watch for: \"(Natural) Fragrance or Parfum\""}, "fragrance/parfum": {"c": [1, 2, 4, 8], "l": false, "n": "Watch for: \"(Natural) Fragrance or Parfum\" carcinogens, phth"}, "furanone": {"c": [4, 8], "l": false, "n": "Watch for: \"(Natural) Fragrance or Parfum\""}, "galaxolide (hhcb)": {"c": [1, 4, 8], "l": false, "n": "Watch for: \"(Natural) Fragrance or Parfum\" Musk-type compoun"}, "geraniol": {"c": [4, 8], "l": false, "n": "Watch for: \"(Natural) Fragrance or Parfum\""}, "gluconic acid": {"c": [], "l": true, "n": ""}, "glutathione": {"c": [], "l": true, "n": ""}, "glyceryl caprylate": {"c": [], "l": true, "n": ""}, "glyceryl oleate": {"c": [], "l": true, "n": ""}, "glyceryl stearate se": {"c": [], "l": true, "n": ""}, "glycol distearate": {"c": [4], "l": false, "n": "Watch for: \"-glycol\""}, "glycolipids": {"c": [], "l": true, "n": ""}, "glyoxal": {"c": [1, 2, 4, 5], "l": false, "n": "Formaldehyde; 1,4-dioxane, ethylene oxide"}, "glyoxylic acid": {"c": [2], "l": false, "n": "Liver, kidney, and lung damage"}, "goldenseal extract - hydrastis canadensis": {"c": [], "l": true, "n": ""}, "grape alcohol": {"c": [], "l": true, "n": ""}, "grapefruit seed extract": {"c": [2, 4, 5], "l": false, "n": "benzethonium chloride, methylparaben, and benzalkonium chlor"}, "guar hydroxypropyltrimonium chloride": {"c": [2], "l": false, "n": "Watch for: -nium"}, "heptyl undecylenate": {"c": [], "l": true, "n": ""}, "hexoxyethanol": {"c": [1, 5], "l": false, "n": "Kidney, reproductive, and developmental toxicity"}, "hexylene glycol": {"c": [1, 2], "l": false, "n": "Watch for: -glycol"}, "homosalate": {"c": [2], "l": false, "n": ""}, "hyaluronic acid": {"c": [], "l": true, "n": ""}, "hydroquinone": {"c": [1], "l": false, "n": "Watch for: \"-hydroquinone\""}, "hydroxycitronellal": {"c": [4, 8], "l": false, "n": "Watch for: \"(Natural) Fragrance or Parfum\""}, "hydroxyethyl urea": {"c": [4], "l": false, "n": ""}, "hydroxyethylcellulose": {"c": [], "l": true, "n": ""}, "hydroxyethylpiperazine ethane sulfonic acid": {"c": [4], "l": false, "n": ""}, "hydroxypropyltrimonium chloride": {"c": [2], "l": false, "n": "Watch for: -nium"}, "imidazolidinylurea": {"c": [1, 2, 4, 5], "l": false, "n": "Formaldehyde; 1,4-dioxane, ethylene oxide"}, "inulin": {"c": [], "l": true, "n": ""}, "ionone": {"c": [4, 8], "l": false, "n": "Watch for: \"(Natural) Fragrance or Parfum\""}, "isoamyl laurate": {"c": [], "l": true, "n": ""}, "isobutylparaben": {"c": [2, 4], "l": false, "n": ""}, "isocetyl stearoyl stearate": {"c": [], "l": true, "n": ""}, "isododecane": {"c": [1, 2], "l": false, "n": "PFAS treated"}, "isoeugenol": {"c": [4, 8], "l": false, "n": "Watch for: \"(Natural) Fragrance or Parfum\""}, "jojoba beads": {"c": [], "l": true, "n": ""}, "jojoba wax": {"c": [], "l": true, "n": ""}, "kaolin": {"c": [], "l": true, "n": ""}, "lactobacillus": {"c": [], "l": true, "n": ""}, "lauramide dea": {"c": [1, 4], "l": false, "n": "Watch for: -EA Nitrosamines"}, "lauramidopropyl betaine": {"c": [1, 4], "l": false, "n": "Watch for: -amidopropyl Nitrosamines"}, "lauramine oxide": {"c": [4, 5], "l": false, "n": ""}, "laureth-23 1 4 5 watch for: -eth": {"c": [], "l": false, "n": "1,4-dioxane, ethylene oxide Laureth-4 1 4 5 Watch for: -eth "}, "lauroyl lysine": {"c": [], "l": true, "n": ""}, "lauryl glucosides hydroxypropylsulfonate": {"c": [], "l": true, "n": ""}, "lauryl-glucoside": {"c": [], "l": true, "n": "Watch for: -glucoside\""}, "lead": {"c": [1, 3], "l": false, "n": "Watch for: FD&C #; D&C #, CI #"}, "leuconostoc/radish root ferment filtrate": {"c": [], "l": true, "n": ""}, "lilial": {"c": [2, 4, 8], "l": false, "n": "Watch for: \"(Natural) Fragrance or Parfum\" Musk-type compoun"}, "limonene": {"c": [4, 8], "l": false, "n": "Watch for: \"(Natural) Fragrance or Parfum\""}, "linalool": {"c": [4, 8], "l": false, "n": "Watch for: \"(Natural) Fragrance or Parfum\""}, "linoleamide mea": {"c": [1, 4], "l": false, "n": "Watch for: -EA Nitrosamines"}, "lipase": {"c": [], "l": true, "n": ""}, "magnesium chloride": {"c": [], "l": true, "n": ""}, "magnesium sulfate": {"c": [], "l": true, "n": ""}, "mannase": {"c": [], "l": true, "n": ""}, "mea c10-16 alkylbenzenesulfonate": {"c": [1], "l": false, "n": "Watch for: -EA Nitrosamines"}, "mea laureth sulfate": {"c": [1], "l": false, "n": "Watch for: -EA, -eth 1,4-dioxane, ethylene oxide; Nitrosamin"}, "mercuric": {"c": [1, 3], "l": false, "n": "Watch for: FD&C #; D&C #, CI #"}, "mercurio": {"c": [1, 3], "l": false, "n": "Watch for: FD&C #; D&C #, CI #"}, "mercurous chloride": {"c": [1, 3], "l": false, "n": "Watch for: FD&C #; D&C #, CI #"}, "mercury": {"c": [1, 3], "l": false, "n": "Watch for: FD&C #; D&C #, CI #"}, "methenamine": {"c": [1, 4], "l": false, "n": "Formaldehyde"}, "methicone": {"c": [1, 2, 6], "l": false, "n": "PFAS treated"}, "methyl di-t-butyl hydroxyhydrocinnamate": {"c": [2], "l": false, "n": ""}, "methyl isobutyl ketone (mibk)": {"c": [1, 8], "l": false, "n": "Watch for: (Natural) Fragrance or Parfum"}, "methyl-n-methylanthranilate": {"c": [1, 8], "l": false, "n": "Watch for: (Natural) Fragrance or Parfum"}, "methylchloroisothiazolinone": {"c": [4, 5], "l": false, "n": ""}, "methylene glycol": {"c": [1, 2], "l": false, "n": "Watch for: -glycol"}, "methyleugenol": {"c": [1, 8], "l": false, "n": "Watch for: (Natural) Fragrance or Parfum"}, "methylisothiazolinone": {"c": [4, 5], "l": false, "n": ""}, "methylparaben": {"c": [2, 4], "l": false, "n": ""}, "mica": {"c": [1, 4], "l": false, "n": "May be PFAS treated; Not a concern if it is not the first or", "cond": "inhalation_risk"}, "mineral oil": {"c": [1], "l": false, "n": ""}, "monoethanolamine": {"c": [1], "l": false, "n": "Watch for: -EA Nitrosamines"}, "musk": {"c": [1, 4, 8], "l": false, "n": "Watch for: \"(Natural) Fragrance or Parfum\""}, "myrcene": {"c": [1, 4], "l": false, "n": ""}, "myristamide dea": {"c": [1, 4], "l": false, "n": "Watch for: -EA Nitrosamines"}, "myristyl myristate": {"c": [], "l": true, "n": ""}, "n-alkyl ethylbenzyl dimethyl ammonium": {"c": [4], "l": false, "n": "Watch for: \"-nium\" (c12-c14) Quat"}, "naphthalene": {"c": [1, 8], "l": false, "n": "Watch for: (Natural) Fragrance or Parfum"}, "niacinamide (vitamin b3)": {"c": [], "l": true, "n": ""}, "nitrosamine-n- nitrosoethanolamine (ndela)": {"c": [1], "l": false, "n": ""}, "nonoxynol": {"c": [2], "l": false, "n": "Watch for: Nonoxynol- #"}, "nonyl phenol ethoxylate": {"c": [1, 2], "l": false, "n": "1,4-dioxane, ethylene oxide Nylon-12 1 2 6 PFAS treated"}, "octinoxate": {"c": [2], "l": false, "n": ""}, "octisalate": {"c": [2], "l": false, "n": ""}, "octocrylene": {"c": [2], "l": false, "n": ""}, "octyl phenol ethoxylate": {"c": [1, 2], "l": false, "n": "1,4-dioxane, ethylene oxide"}, "octyl/decyl glucoside": {"c": [], "l": true, "n": ""}, "octylisothiazolinone 4 5 8 4 5 8": {"c": [], "l": false, "n": ""}, "oleamide dea": {"c": [1, 4], "l": false, "n": "Watch for: -EA Nitrosamines"}, "oleic acid": {"c": [], "l": true, "n": ""}, "olive oil polyglyceryl-6 esters": {"c": [], "l": true, "n": ""}, "oxybenzone": {"c": [2], "l": false, "n": ""}, "p-anisic acid": {"c": [], "l": true, "n": ""}, "panthenol": {"c": [], "l": true, "n": ""}, "para amino-benzoic acid (paba)": {"c": [2], "l": false, "n": ""}, "paraffin": {"c": [1], "l": false, "n": ""}, "paraffinum liquidum": {"c": [1], "l": false, "n": ""}, "paraformaldehyde": {"c": [1, 4], "l": false, "n": "Formaldehyde"}, "peg ppg ethylhexyl ether": {"c": [1, 2, 4, 5], "l": false, "n": "1,4-dioxane, ethylene oxide"}, "peg-10 dimethicone": {"c": [2], "l": false, "n": "1,4-dioxane, ethylene oxide; PFAS treated"}, "peg-20 sorbitan cocoate": {"c": [1, 2, 4, 5], "l": false, "n": "Watch for: PEG- # sorbitan 1,4-dioxane, ethylene oxide"}, "peg-20 sorbitan oleate": {"c": [1, 2, 4, 5], "l": false, "n": "Watch for: PEG- # sorbitan 1,4-dioxane, ethylene oxide"}, "peg-40 sorbitan diisostearate": {"c": [1, 2, 4, 5], "l": false, "n": "Watch for: PEG- # sorbitan 1,4-dioxane, ethylene oxide"}, "peg-40 sorbitan oleate": {"c": [1, 2, 4, 5], "l": false, "n": "Watch for: PEG- # sorbitan 1,4-dioxane, ethylene oxide"}, "peg-6 methyl ether": {"c": [1, 4], "l": false, "n": "Watch for: PEG- # 1,4-dioxane, ethylene oxide"}, "pentaerythrityl distearate": {"c": [], "l": true, "n": ""}, "pentaerythrityl tetra-di-t-butyl": {"c": [1], "l": false, "n": "Antioxidant Hydroxyhydrocinnamate"}, "pentasodium pentetate": {"c": [2], "l": false, "n": ""}, "pentylene glycol": {"c": [1, 2], "l": false, "n": "Watch for: -glycol"}, "perfluorohexylethyl triethoxysilane": {"c": [1, 2], "l": false, "n": "PFAS, synthetic silicone"}, "perfluorononyl": {"c": [1, 2], "l": false, "n": "Watch for: -crosspolymer dimethicone/methicone/amodimet hico"}, "petrolatum": {"c": [1], "l": false, "n": ""}, "petroleum": {"c": [1], "l": false, "n": ""}, "phantolide (ahdi)": {"c": [1, 4, 8], "l": false, "n": "Watch for: \"(Natural) Fragrance or Parfum\" Musk-type compoun"}, "phenethyl alcohol": {"c": [4, 5, 8], "l": false, "n": "Similar to phenoxyethanol"}, "phenol ethoxylate": {"c": [1, 2], "l": false, "n": "alkylphenol ethoxylate"}, "phenoxyethanol": {"c": [1, 2, 4, 5], "l": false, "n": "Watch for: -oxyethanol 1,4-dioxane, ethylene oxide, fragranc"}, "phenoxyisopropanol": {"c": [7], "l": false, "n": ""}, "phytic acid": {"c": [], "l": true, "n": ""}, "poloxamer": {"c": [1], "l": false, "n": "Watch for: \"Poloxamer- #\" 1,4-dioxane, ethylene oxide, propy"}, "polyacrylamide": {"c": [1], "l": false, "n": "Watch for: \"-acrylamide\" acrylamide"}, "polyethylene": {"c": [6], "l": false, "n": ""}, "polyethylene glycol": {"c": [1, 2, 4, 5], "l": false, "n": "Watch for: (PEG)- # Formaldehyde; 1,4-dioxane, ethylene oxid"}, "polyethylene glycol 4-(tert- octylphenyl)": {"c": [1, 2], "l": false, "n": "alkylphenol ethoxylate ether"}, "polyethylene glycol mono(octyl)phenyl ether": {"c": [1, 2], "l": false, "n": "alkylphenol ethoxylate"}, "polyethyleneimine alkoxylated": {"c": [1], "l": false, "n": "Alkoxylate; ethylene oxide"}, "polyglyceryl-3 beeswax": {"c": [], "l": true, "n": ""}, "polyglyceryl-3 diisostearate": {"c": [], "l": true, "n": ""}, "polyglyceryl-3 stearate": {"c": [], "l": true, "n": ""}, "polyglyceryl-4 caprate": {"c": [], "l": true, "n": ""}, "polyhydroxystearic acid": {"c": [], "l": true, "n": ""}, "polymeric blue": {"c": [1], "l": false, "n": ""}, "polymeric red": {"c": [1], "l": false, "n": ""}, "polymethyl methacrylate": {"c": [1, 4, 6], "l": false, "n": ""}, "polymethylsilsesquioxane": {"c": [2], "l": false, "n": "PFAS treated"}, "polyoxyalkylene substituted chromophore": {"c": [1], "l": false, "n": "azo dye"}, "polyoxymethylene urea": {"c": [1, 2, 4, 5], "l": false, "n": "Formaldehyde; 1,4-dioxane, ethylene oxide"}, "polypropylene": {"c": [6], "l": false, "n": ""}, "polypropylene glycol": {"c": [1, 2, 4, 5], "l": false, "n": "Watch for: (PPG)-# Formaldehyde; 1,4-dioxane, ethylene oxide"}, "polysilicone": {"c": [6], "l": false, "n": ""}, "polytetrafluoroethylene": {"c": [1, 2], "l": false, "n": "PFAS"}, "polyurethane": {"c": [1, 6], "l": false, "n": "Watch for: Polyurethane - # isocyanate (potential human carc"}, "polyvinyl alcohol": {"c": [6], "l": false, "n": ""}, "polyvinylpyrrolidone": {"c": [1], "l": false, "n": "Watch for: \"Vinyl-\" formaldehyde, acetaldehyde"}, "potassium alum": {"c": [3], "l": false, "n": "Watch for: Contains aluminum Aluminum"}, "potassium cocoate": {"c": [], "l": true, "n": ""}, "potassium hydroxide": {"c": [4], "l": false, "n": ""}, "potassium oleate": {"c": [], "l": true, "n": ""}, "potassium olivate": {"c": [], "l": true, "n": ""}, "potassium sorbate": {"c": [], "l": true, "n": ""}, "ppg-2 methyl ether": {"c": [1, 4, 5], "l": false, "n": "Watch for: PPG- # 1,4-dioxane, ethylene oxide"}, "propanediol": {"c": [4], "l": false, "n": ""}, "propylene glycol": {"c": [1, 2], "l": false, "n": "Watch for: -glycol"}, "propylparaben": {"c": [2, 4], "l": false, "n": ""}, "protease": {"c": [], "l": true, "n": ""}, "pulegone": {"c": [1, 8], "l": false, "n": "Watch for: (Natural) Fragrance or Parfum"}, "pvp/va copolymers": {"c": [1, 4, 6], "l": false, "n": ""}, "pyridine": {"c": [1, 8], "l": false, "n": "Watch for: (Natural) Fragrance or Parfum"}, "quaternary ammonium compound": {"c": [1], "l": false, "n": "Watch for: \"MEA\" Amines Quaternium # 2 4 Watch for: -nium Qu"}, "resorcinol": {"c": [1, 2], "l": false, "n": ""}, "resveratrol": {"c": [], "l": true, "n": ""}, "rice bran wax": {"c": [], "l": true, "n": ""}, "rosemary extract": {"c": [], "l": true, "n": ""}, "saccharide isomerate": {"c": [], "l": true, "n": ""}, "salicylic acid": {"c": [], "l": true, "n": ""}, "silica": {"c": [1, 2], "l": false, "n": "Watch for: Hydrated silica is acceptable PFAS treated", "cond": "inhalation_risk"}, "silica (hydrated)": {"c": [], "l": true, "n": ""}, "silica silylate": {"c": [1, 2], "l": false, "n": "PFAS treated"}, "sodium anisate": {"c": [], "l": true, "n": ""}, "sodium benzoate": {"c": [], "l": true, "n": ""}, "sodium bicarbonate (baking soda)": {"c": [], "l": true, "n": ""}, "sodium borate": {"c": [2], "l": false, "n": ""}, "sodium c10-16 alkylbenzenesulfonate": {"c": [7], "l": false, "n": ""}, "sodium carbonate": {"c": [], "l": true, "n": ""}, "sodium carbonate peroxide": {"c": [], "l": true, "n": ""}, "sodium chloride (table salt)": {"c": [], "l": true, "n": ""}, "sodium citrate": {"c": [], "l": true, "n": ""}, "sodium coco-sulfate": {"c": [4, 5], "l": false, "n": "Watch for: \"-sulfate\" Contains Sodium Laurel Sulfate"}, "sodium cocoate": {"c": [], "l": true, "n": ""}, "sodium cocoyl alaninate": {"c": [], "l": true, "n": ""}, "sodium cocoyl isethionate": {"c": [1], "l": false, "n": "1,4-dioxane, ethylene oxide"}, "sodium cumenesulfonate": {"c": [4], "l": false, "n": ""}, "sodium dodecyl sulfate": {"c": [1, 4, 5], "l": false, "n": "Watch for: \"-sulfate\" 1,4-dioxane, ethylene oxide"}, "sodium gluconate": {"c": [], "l": true, "n": ""}, "sodium hyaluronate": {"c": [], "l": true, "n": ""}, "sodium hydroxymethylglycinate": {"c": [1, 2, 4, 5], "l": false, "n": "Formaldehyde; 1,4-dioxane, ethylene oxide"}, "sodium hypochlorite": {"c": [4, 7, 8], "l": false, "n": "Same as bleach"}, "sodium iminodisuccinate": {"c": [], "l": true, "n": ""}, "sodium laurel sulfate": {"c": [1, 4, 5], "l": false, "n": "Watch for: \"-sulfate\" 1,4-dioxane, ethylene oxide"}, "sodium laureth sulfate": {"c": [1, 4, 5], "l": false, "n": "Watch for: \"-sulfate\" 1,4-dioxane, ethylene oxide"}, "sodium lauryl sulfate": {"c": [1, 4, 5], "l": false, "n": "Watch for: \"-sulfate\" 1,4-dioxane, ethylene oxide"}, "sodium levulinate": {"c": [], "l": true, "n": ""}, "sodium olivoyl glutamate": {"c": [], "l": true, "n": ""}, "sodium palmate": {"c": [], "l": true, "n": ""}, "sodium phytate": {"c": [], "l": true, "n": ""}, "sodium pyrithione": {"c": [7], "l": false, "n": "antimicrobial"}, "sorbeth-2 beeswax": {"c": [1, 2, 4, 5], "l": false, "n": "Watch for: -eth 1,4-dioxane, ethylene oxide"}, "sorbeth-2 cocoate": {"c": [1, 2, 4, 5], "l": false, "n": "Watch for: -eth 1,4-dioxane, ethylene oxide"}, "sorbic acid": {"c": [], "l": true, "n": ""}, "sorbitan oleate": {"c": [], "l": true, "n": ""}, "sorbitan oleate decylglucoside crosspolymer": {"c": [], "l": true, "n": ""}, "sorbitan olivate": {"c": [], "l": true, "n": ""}, "sorbitan palmitate": {"c": [], "l": true, "n": ""}, "squalane": {"c": [], "l": true, "n": ""}, "stearalkonium chloride": {"c": [2], "l": false, "n": "Watch for: -nium"}, "stearamide mea": {"c": [1, 4], "l": false, "n": "Watch for: -EA Nitrosamines"}, "stearyl alcohol": {"c": [], "l": true, "n": ""}, "styrenated phenol ethoxylate": {"c": [1, 2], "l": false, "n": "1,4-dioxane, ethylene oxide"}, "styrene/acrylates copolymer": {"c": [1, 4, 6], "l": false, "n": "Styrene, acrylates"}, "subtilisin": {"c": [], "l": true, "n": "Enyme; Avoid in powdered products"}, "sucrose cocoate": {"c": [], "l": true, "n": ""}, "synthetic fluorphlogopite": {"c": [1, 2], "l": false, "n": "Watch for: \"-fluoro-\" PFAS treated"}, "talc": {"c": [1, 2], "l": false, "n": "PFAS treated", "cond": "inhalation_risk"}, "tea-lauryl sulfate": {"c": [1, 4], "l": false, "n": "Watch for: -EA Nitrosamines"}, "tetradecyl aminobutyroylvalylaminobutyric": {"c": [1, 2], "l": false, "n": "Watch for: \"-fluoro-\" urea trifluoroacetate PFAS"}, "tetrahexyldecyl ascorbate": {"c": [], "l": true, "n": "Watch for: \"ascorbate\" (vitamin C)"}, "tetrasodium edta": {"c": [1], "l": false, "n": "Watch for: EDTA formaldehyde"}, "tocopherol (vitamin e)": {"c": [], "l": true, "n": ""}, "toluene": {"c": [1], "l": false, "n": "Watch for: \"toluene\""}, "tosylamide/epoxy resin": {"c": [4], "l": false, "n": ""}, "totarol": {"c": [], "l": true, "n": ""}, "toxalide (ahtn)": {"c": [1, 4, 8], "l": false, "n": "Watch for: \"(Natural) Fragrance or Parfum\" Musk-type compoun"}, "traseolide (atii)": {"c": [1, 4, 8], "l": false, "n": "Watch for: \"(Natural) Fragrance or Parfum\" Musk-type compoun"}, "tribehenin": {"c": [], "l": true, "n": ""}, "triethanolamine (tea)": {"c": [1, 4], "l": false, "n": "Watch for: -EA Nitrosamines"}, "triethyl citrate": {"c": [], "l": true, "n": ""}, "trifluoropropyl cyclopentasiloxane": {"c": [1, 2], "l": false, "n": "PFAS, synthetic silicone"}, "trifluoropropyl cyclotetrasiloxane": {"c": [1, 2], "l": false, "n": "PFAS, synthetic silicone"}, "triheptanoin": {"c": [], "l": true, "n": ""}, "trimethylsiloxysilicate": {"c": [1, 2], "l": false, "n": "Watch for: \"-siloxy-\" PFAS treated, synthetic silicone"}, "tripropylene glycol n-butyl ether": {"c": [4], "l": false, "n": "Watch for: \"-glycol\""}, "trisodium citrate": {"c": [], "l": true, "n": ""}, "trisodium dicarboxymethyl alaninate": {"c": [], "l": true, "n": ""}, "trisodium ethylenediamine disuccinate": {"c": [], "l": true, "n": ""}, "vanillin": {"c": [4, 8], "l": false, "n": "Watch for: \"(Natural) Fragrance or Parfum\""}, "vinyl chloride": {"c": [1], "l": false, "n": "Watch for: \"Vinyl-\" acrylamide, vinyl formamide"}, "vinylpyrrolidone": {"c": [1], "l": false, "n": "Watch for: \"Vinyl-\" acrylamide, vinyl formamide"}, "vp/eicosene copolymer": {"c": [1, 2, 6], "l": false, "n": "PFAS treated"}, "walnut powder": {"c": [], "l": true, "n": ""}, "white petroleum": {"c": [1], "l": false, "n": ""}, "xanthan gum": {"c": [], "l": true, "n": ""}, "xylenes": {"c": [1], "l": false, "n": ""}, "xylenesulfonate": {"c": [1], "l": false, "n": "Watch for: xylene xylene"}, "zeolite": {"c": [], "l": true, "n": "Avoid in powdered form"}, "zinc oxide (non-nano)": {"c": [], "l": true, "n": "Avoid in sprays and aerosols The patterns to memorize first "}, "alumina": {"c": [3], "l": false, "n": "Aluminum-derived thickener/filler; heavy-metals escalation"}, "diethylhexyl syringylidenemalonate": {"c": [2], "l": false, "n": "Synthetic UV booster"}, "sodium dodecylbenzenesulfonate": {"c": [1], "l": false, "n": "Alkylbenzenesulfonate surfactant; 1,4-dioxane pathway. Watch for: -benzenesulfonate"}, "1,2-hexanediol": {"c": [1, 2], "l": false, "n": "Preservative booster; -glycol family"}, "2,3-butanediol": {"c": [1, 2], "l": false, "n": "Humectant; -glycol family"}, "ethylene/acrylic acid copolymer": {"c": [6], "l": false, "n": "Acrylate microplastic"}, "poly c10-30 alkyl acrylate": {"c": [6], "l": false, "n": "Acrylate microplastic"}, "sodium c14-16 olefin sulfonate": {"c": [4], "l": false, "n": "Harsh sulfonate surfactant; olefin sulfonate pattern"}, "iron oxides": {"c": [1, 2, 3], "l": false, "n": "When listed without CI# — composite colorant; alias to CI 77491/77492/77499", "cond": "inhalation_risk"}, "dimethyl mea": {"c": [2], "l": false, "n": "DMAE; -EA ethanolamine family; nitrosamine risk with amides"}, "lauryl pyrrolidone": {"c": [4], "l": false, "n": "Specialty surfactant/solubilizer"}, "polysilicone-11": {"c": [6], "l": false, "n": "Crosslinked silicone resin; PFAS escalation; microplastic"}, "peg/ppg/polybutylene glycol-8/5/3 glycerin": {"c": [1, 2, 4, 5], "l": false, "n": "PEG/PPG hybrid; 1,4-dioxane, ethylene oxide"}, "panthenyl hydroxypropyl steardimonium chloride": {"c": [2], "l": false, "n": "Quat pro-vitamin B5 conjugate; -nium"}, "sodium benzotriazolyl butylphenol sulfonate": {"c": [1, 2], "l": false, "n": "Polymeric UV absorber"}, "hydrolyzed vegetable protein pg-propyl silanetriol": {"c": [2, 6], "l": false, "n": "Silicone-protein conjugate"}, "behentrimonium chloride": {"c": [2], "l": false, "n": "Chloride form of behentrimonium — flagged quat; -nium (methosulfate form is LOW TOX, chloride is NOT)"}, "cetyl esters": {"c": [], "l": true, "n": "Fatty-ester emollient"}, "dicaprylyl carbonate": {"c": [], "l": true, "n": "Light ester emollient"}, "sodium lauroyl methyl isethionate": {"c": [], "l": true, "n": "Mild SLMI surfactant"}, "sorbitan stearate": {"c": [], "l": true, "n": "Sorbitan ester emulsifier"}, "triethylhexanoin": {"c": [], "l": true, "n": "Trihexanoin ester emollient"}, "cetyl hydroxyethylcellulose": {"c": [], "l": true, "n": "Cellulose-derived thickener"}, "decyl glucoside": {"c": [], "l": true, "n": "Mild nonionic surfactant"}, "beeswax": {"c": [], "l": true, "n": "Thickener and emollient"}, "cera alba": {"c": [], "l": true, "n": "Beeswax"}, "c14-22 alcohols": {"c": [], "l": true, "n": "Fatty alcohol blend; not a drying alcohol"}, "neopentyl glycol diethylhexanoate": {"c": [], "l": true, "n": "Ester emollient; diol backbone, not free glycol"}, "safflower glucoside": {"c": [], "l": true, "n": "Botanical glucoside"}, "potassium laurate": {"c": [], "l": true, "n": "Soap salt of lauric acid"}, "caprylyl/capryl glucoside": {"c": [], "l": true, "n": "Nonionic surfactant"}, "disodium edta": {"c": [], "l": true, "n": "Chelator. Low-concern at cosmetic levels (EWG 1-2)."}, "titanium dioxide": {"c": [1, 2], "l": false, "cond": "inhalation_risk", "n": "Inhalation risk in powders/sprays only (IARC 2B via inhalation). Safe in creams/balms."}, "polysorbate 20": {"c": [1, 2, 4, 5], "l": false, "n": "Watch for: Polysorbate- (#)"}, "polysorbate 21": {"c": [1, 2, 4, 5], "l": false, "n": "Watch for: Polysorbate- (#)"}, "polysorbate 40": {"c": [1, 2, 4, 5], "l": false, "n": "Watch for: Polysorbate- (#)"}, "polysorbate 60": {"c": [1, 2, 4, 5], "l": false, "n": "Watch for: Polysorbate- (#)"}, "polysorbate 61": {"c": [1, 2, 4, 5], "l": false, "n": "Watch for: Polysorbate- (#)"}, "polysorbate 65": {"c": [1, 2, 4, 5], "l": false, "n": "Watch for: Polysorbate- (#)"}, "polysorbate 80": {"c": [1, 2, 4, 5], "l": false, "n": "Watch for: Polysorbate- (#)"}, "polysorbate 81": {"c": [1, 2, 4, 5], "l": false, "n": "Watch for: Polysorbate- (#)"}, "polysorbate 85": {"c": [1, 2, 4, 5], "l": false, "n": "Watch for: Polysorbate- (#)"}}, "aliases": {"fragrance": "fragrance/parfum", "parfum": "fragrance/parfum", "parfum/fragrance": "fragrance/parfum", "fragrance/parfum": "fragrance/parfum", "natural fragrance": "fragrance/parfum", "titanium dioxide": "ci 77891 (titanium dioxide)", "ci 77891": "ci 77891 (titanium dioxide)", "red iron oxide": "ci 77491 (red iron oxide)", "yellow iron oxide": "ci 77492 (yellow iron oxide)", "black iron oxide": "ci 77499 (black iron oxide)", "ci 77491": "ci 77491 (red iron oxide)", "ci 77492": "ci 77492 (yellow iron oxide)", "ci 77499": "ci 77499 (black iron oxide)", "niacinamide": "niacinamide (vitamin b3)", "tocopherol": "tocopherol (vitamin e)", "ascorbic acid": "ascorbic acid (vitamin c)", "salt": "sodium chloride (table salt)", "sodium chloride": "sodium chloride (table salt)", "salicylic acid": "salicylic acid", "iron oxide": "iron oxides", "behentrimonium chloride": "behentrimonium chloride", "cera alba": "beeswax", "sodium c14-16 olefin sulfonate": "sodium c14-16 olefin sulfonate", "1,2 hexanediol": "1,2-hexanediol", "2,3 butanediol": "2,3-butanediol", "slmi": "sodium lauroyl methyl isethionate", "dmae": "dimethyl mea", "c14-16 olefin sulfonate": "sodium c14-16 olefin sulfonate"}}
+{
+ "ref": {
+  "1.2 benzisothiazol-3(2h)-one": {
+   "c": [
+    4,
+    7
+   ],
+   "l": false,
+   "n": ""
+  },
+  "2-bromo-2-nitropropane-1,3-diol": {
+   "c": [
+    1,
+    2,
+    4,
+    5
+   ],
+   "l": false,
+   "n": "Watch for: Bromopol Formaldehyde; 1,4-dioxane, ethylene oxide"
+  },
+  "2-butoxyethanol": {
+   "c": [
+    2
+   ],
+   "l": false,
+   "n": "Watch for: -oxyethanol Same as butoxyethanol"
+  },
+  "2-ethoxyethanol": {
+   "c": [
+    2
+   ],
+   "l": false,
+   "n": "Watch for: -oxyethanol"
+  },
+  "2-methoxyethanol": {
+   "c": [
+    2
+   ],
+   "l": false,
+   "n": "Watch for: -oxyethanol"
+  },
+  "2-methyl-2h-isothizole-3-one": {
+   "c": [
+    4,
+    7
+   ],
+   "l": false,
+   "n": ""
+  },
+  "5-bromo-5-nitro-1,3-dioxane": {
+   "c": [
+    1,
+    4
+   ],
+   "l": false,
+   "n": "Formaldehyde"
+  },
+  "acetic acid (vinegar)": {
+   "c": [
+    8
+   ],
+   "l": false,
+   "n": "Avoid inhaling fumes; ensure adequate ventilation"
+  },
+  "acrylamide": {
+   "c": [
+    1
+   ],
+   "l": false,
+   "n": "Watch for: \"-acrylamide\""
+  },
+  "acrylates copolymer": {
+   "c": [
+    1,
+    2,
+    4,
+    6
+   ],
+   "l": false,
+   "n": "PFAS treated"
+  },
+  "acrylic acid": {
+   "c": [
+    1,
+    4,
+    6
+   ],
+   "l": false,
+   "n": ""
+  },
+  "alkoxylated amine substituted triaryl methane": {
+   "c": [
+    1
+   ],
+   "l": false,
+   "n": "Alkoxylate"
+  },
+  "alkyl (50% c14, 40% c12, 10% c16) dimethyl": {
+   "c": [
+    2
+   ],
+   "l": false,
+   "n": "Watch for: -nium benzyl ammonium chloride Quat"
+  },
+  "alkyl c12-14 dimethylethylbenzyl ammonium chloride": {
+   "c": [
+    2
+   ],
+   "l": false,
+   "n": "Watch for: -nium Quat"
+  },
+  "alkyl c12-18 dimethylbenzyl ammonium": {
+   "c": [
+    2
+   ],
+   "l": false,
+   "n": "Watch for: -nium Chloride Quat"
+  },
+  "allantoin": {
+   "c": [],
+   "l": true,
+   "n": ""
+  },
+  "aluminum": {
+   "c": [
+    3
+   ],
+   "l": false,
+   "n": ""
+  },
+  "aluminum hydroxide": {
+   "c": [
+    4
+   ],
+   "l": false,
+   "n": ""
+  },
+  "aluminum starch octenylsuccinate": {
+   "c": [
+    2,
+    3
+   ],
+   "l": false,
+   "n": ""
+  },
+  "aminopropyl diglycol dimaleate": {
+   "c": [
+    4
+   ],
+   "l": false,
+   "n": "Watch for: \"-glycol\""
+  },
+  "ammonia": {
+   "c": [
+    4,
+    8
+   ],
+   "l": false,
+   "n": ""
+  },
+  "ammonium acryloyldimethyltaurate/vp copolymer": {
+   "c": [
+    1,
+    6
+   ],
+   "l": false,
+   "n": "Watch for: \"Vinyl-\" Vinyl"
+  },
+  "ammonium cocoyl isethionate": {
+   "c": [
+    1
+   ],
+   "l": false,
+   "n": "Watch for: isethionate 1,4-dioxane, ethylene oxide"
+  },
+  "amyl cinnamal": {
+   "c": [
+    4,
+    8
+   ],
+   "l": false,
+   "n": "Watch for: \"(Natural) Fragrance or Parfum\""
+  },
+  "amylase": {
+   "c": [
+    8
+   ],
+   "l": false,
+   "n": "Enzyme; Avoid in powdered products as much as possible"
+  },
+  "anisinic acid": {
+   "c": [],
+   "l": true,
+   "n": ""
+  },
+  "arsenic": {
+   "c": [
+    1,
+    3
+   ],
+   "l": false,
+   "n": "Watch for: FD&C #; D&C #, CI #"
+  },
+  "ascorbic acid (vitamin c)": {
+   "c": [],
+   "l": true,
+   "n": "Watch for: \"Ascorb-\""
+  },
+  "avobenzone": {
+   "c": [
+    2
+   ],
+   "l": false,
+   "n": ""
+  },
+  "behenalkonium betaine": {
+   "c": [
+    2
+   ],
+   "l": false,
+   "n": "Watch for: -nium"
+  },
+  "behentrimonium methosulfate": {
+   "c": [],
+   "l": true,
+   "n": ""
+  },
+  "behentrimonium sulfate": {
+   "c": [
+    2,
+    4
+   ],
+   "l": false,
+   "n": "Watch for: \"-nium\" and \"-sulfate\""
+  },
+  "behenyl alcohol": {
+   "c": [],
+   "l": true,
+   "n": "Watch for: \"-alcohol\""
+  },
+  "bentonite clay": {
+   "c": [],
+   "l": true,
+   "n": ""
+  },
+  "benzalkonium chloride": {
+   "c": [
+    2,
+    4,
+    8
+   ],
+   "l": false,
+   "n": ""
+  },
+  "benzethonium chloride": {
+   "c": [
+    2,
+    4,
+    8
+   ],
+   "l": false,
+   "n": ""
+  },
+  "benzisothiazolinone": {
+   "c": [
+    2,
+    4,
+    5,
+    8
+   ],
+   "l": false,
+   "n": "Suspected endocrine disruptor"
+  },
+  "benzophenone- 1, 2, 3 ,4, 5, or 9": {
+   "c": [
+    2
+   ],
+   "l": false,
+   "n": "Watch for: Benzophenone- #"
+  },
+  "benzyl alcohol": {
+   "c": [],
+   "l": true,
+   "n": ""
+  },
+  "benzylhemiformal": {
+   "c": [
+    1,
+    4
+   ],
+   "l": false,
+   "n": "Formaldehyde"
+  },
+  "benzylparaben": {
+   "c": [
+    2,
+    4
+   ],
+   "l": false,
+   "n": ""
+  },
+  "beta-myrcene": {
+   "c": [
+    1,
+    4,
+    8
+   ],
+   "l": false,
+   "n": "Watch for: (Natural) Fragrance or Parfum"
+  },
+  "betaine": {
+   "c": [],
+   "l": true,
+   "n": ""
+  },
+  "bha (butylated hydroxyanisole)": {
+   "c": [
+    1,
+    2
+   ],
+   "l": false,
+   "n": ""
+  },
+  "bht (butylated hydroxytoluene)": {
+   "c": [
+    1,
+    2
+   ],
+   "l": false,
+   "n": ""
+  },
+  "bisabolol": {
+   "c": [
+    4
+   ],
+   "l": false,
+   "n": "From chamomile plants"
+  },
+  "bleach": {
+   "c": [
+    4,
+    7,
+    8
+   ],
+   "l": false,
+   "n": "Same as \"sodium hypochlorite\""
+  },
+  "brassica alcohol": {
+   "c": [],
+   "l": true,
+   "n": ""
+  },
+  "brassica glycerides": {
+   "c": [],
+   "l": true,
+   "n": ""
+  },
+  "brassicyl isoleucinate esylate": {
+   "c": [],
+   "l": true,
+   "n": ""
+  },
+  "brassicyl valinate esylate": {
+   "c": [],
+   "l": true,
+   "n": ""
+  },
+  "butoxyethanol": {
+   "c": [
+    2
+   ],
+   "l": false,
+   "n": "Watch for: -oxyethanol Same as 2-butoxyethanol"
+  },
+  "butyl acetate": {
+   "c": [
+    4,
+    8
+   ],
+   "l": false,
+   "n": "Watch for: (Natural) Fragrance or Parfum"
+  },
+  "butylene glycol": {
+   "c": [
+    1,
+    2
+   ],
+   "l": false,
+   "n": "Watch for: -glycol"
+  },
+  "butyloctyl salicylate": {
+   "c": [
+    2
+   ],
+   "l": false,
+   "n": ""
+  },
+  "butylparaben": {
+   "c": [
+    2,
+    4
+   ],
+   "l": false,
+   "n": ""
+  },
+  "butylphenyl methylpropional": {
+   "c": [
+    2
+   ],
+   "l": false,
+   "n": "Same as lilial"
+  },
+  "c10 16-alkyldimethyl": {
+   "c": [
+    2
+   ],
+   "l": false,
+   "n": ""
+  },
+  "c10-16 alkyldimethylamine oxide": {
+   "c": [
+    1,
+    2
+   ],
+   "l": false,
+   "n": "Watch for: -amine"
+  },
+  "c10-16 pareth": {
+   "c": [
+    1
+   ],
+   "l": false,
+   "n": "Watch for: -eth 1,4-dioxane, ethylene oxide"
+  },
+  "c12-16 alcohols ethoxylated propoxylated": {
+   "c": [
+    1
+   ],
+   "l": false,
+   "n": "Watch for: -ethoxylated 1,4-dioxane, ethylene oxide"
+  },
+  "c12-18 ethoxylated alcohols": {
+   "c": [
+    1
+   ],
+   "l": false,
+   "n": "Watch for: -ethoxylated 1,4-dioxane, ethylene oxide"
+  },
+  "c6-12 ethoxylated alcohols": {
+   "c": [
+    1
+   ],
+   "l": false,
+   "n": "Watch for: -ethoxylated 1,4-dioxane, ethylene oxide"
+  },
+  "c9-11 alkyl glucoside": {
+   "c": [],
+   "l": true,
+   "n": ""
+  },
+  "cadmium": {
+   "c": [
+    1,
+    3
+   ],
+   "l": false,
+   "n": "Watch for: FD&C #; D&C #, CI #"
+  },
+  "caffeine": {
+   "c": [],
+   "l": true,
+   "n": ""
+  },
+  "calcium formate": {
+   "c": [],
+   "l": true,
+   "n": ""
+  },
+  "calcium gluconate": {
+   "c": [],
+   "l": true,
+   "n": ""
+  },
+  "calomel": {
+   "c": [
+    1,
+    3
+   ],
+   "l": false,
+   "n": ""
+  },
+  "capryleth-4": {
+   "c": [
+    1
+   ],
+   "l": false,
+   "n": "Watch for: -eth 1,4-dioxane, ethylene oxide"
+  },
+  "caprylhydroxamic acid": {
+   "c": [],
+   "l": true,
+   "n": "LOW TOX"
+  },
+  "capryloyl glycerin/sebacic acid copolymer": {
+   "c": [],
+   "l": true,
+   "n": ""
+  },
+  "caprylyl glycol": {
+   "c": [],
+   "l": true,
+   "n": ""
+  },
+  "carbomer": {
+   "c": [
+    1,
+    4,
+    6
+   ],
+   "l": false,
+   "n": ""
+  },
+  "carnauba starch": {
+   "c": [],
+   "l": true,
+   "n": ""
+  },
+  "cashmeran (dpmi)": {
+   "c": [
+    1,
+    4,
+    8
+   ],
+   "l": false,
+   "n": "Watch for: \"(Natural) Fragrance or Parfum\" Musk-type compound"
+  },
+  "celestolide (abdi)": {
+   "c": [
+    1,
+    4,
+    8
+   ],
+   "l": false,
+   "n": "Watch for: \"(Natural) Fragrance or Parfum\" Musk-type compound"
+  },
+  "cellulase": {
+   "c": [
+    8
+   ],
+   "l": false,
+   "n": "Enzyme; Avoid in powdered products as much as possible"
+  },
+  "cellulose gum": {
+   "c": [],
+   "l": true,
+   "n": ""
+  },
+  "ceramide": {
+   "c": [],
+   "l": true,
+   "n": ""
+  },
+  "ceteareth": {
+   "c": [
+    1,
+    4,
+    5
+   ],
+   "l": false,
+   "n": "Watch for: -eth 1,4-dioxane, ethylene oxide"
+  },
+  "cetearyl alcohol": {
+   "c": [],
+   "l": true,
+   "n": "Watch for: \"-alcohol\""
+  },
+  "cetearyl glucoside": {
+   "c": [],
+   "l": true,
+   "n": "Watch for: -glucoside\""
+  },
+  "cetearyl olivate": {
+   "c": [],
+   "l": true,
+   "n": ""
+  },
+  "cetrimonium chloride": {
+   "c": [
+    2
+   ],
+   "l": false,
+   "n": "Watch for: -nium"
+  },
+  "cetyl alcohol": {
+   "c": [],
+   "l": true,
+   "n": ""
+  },
+  "cetyl palmitate": {
+   "c": [],
+   "l": true,
+   "n": ""
+  },
+  "cetyl pyridinium chloride": {
+   "c": [
+    2
+   ],
+   "l": false,
+   "n": "Watch for: -nium"
+  },
+  "chloromethylisothiazolinone": {
+   "c": [
+    4,
+    5,
+    8
+   ],
+   "l": false,
+   "n": ""
+  },
+  "chlorphenesin": {
+   "c": [
+    4
+   ],
+   "l": false,
+   "n": ""
+  },
+  "ci 42090 (blue 1)": {
+   "c": [
+    1,
+    2,
+    3
+   ],
+   "l": false,
+   "n": "Watch for: FD&C #; D&C #, CI # PFAS treated"
+  },
+  "ci 77007 (ultramarines)": {
+   "c": [
+    1,
+    2,
+    3
+   ],
+   "l": false,
+   "n": "Watch for: FD&C #; D&C #, CI # PFAS treated"
+  },
+  "ci 77491 (red iron oxide)": {
+   "c": [
+    1,
+    2,
+    3
+   ],
+   "l": false,
+   "n": "Watch for: FD&C #; D&C #, CI # PFAS treated",
+   "cond": "inhalation_risk"
+  },
+  "ci 77492 (yellow iron oxide)": {
+   "c": [
+    1,
+    2,
+    3
+   ],
+   "l": false,
+   "n": "Watch for: FD&C #; D&C #, CI # PFAS treated",
+   "cond": "inhalation_risk"
+  },
+  "ci 77499 (black iron oxide)": {
+   "c": [
+    1,
+    2,
+    3
+   ],
+   "l": false,
+   "n": "Watch for: FD&C #; D&C #, CI # PFAS treated",
+   "cond": "inhalation_risk"
+  },
+  "ci 77891 (titanium dioxide)": {
+   "c": [
+    1,
+    2,
+    3
+   ],
+   "l": false,
+   "n": "Watch for: FD&C #; D&C #, CI # PFAS treated; Not a concern in cream-based skincare or makeup; avoid in sprays, aerosols, powders, and oral care",
+   "cond": "inhalation_risk"
+  },
+  "cinnamal": {
+   "c": [
+    4,
+    8
+   ],
+   "l": false,
+   "n": "Watch for: \"(Natural) Fragrance or Parfum\""
+  },
+  "citral": {
+   "c": [
+    4,
+    8
+   ],
+   "l": false,
+   "n": "Watch for: \"(Natural) Fragrance or Parfum\""
+  },
+  "citric acid": {
+   "c": [],
+   "l": true,
+   "n": ""
+  },
+  "citronellal": {
+   "c": [
+    4,
+    8
+   ],
+   "l": false,
+   "n": "Watch for: \"(Natural) Fragrance or Parfum\""
+  },
+  "cocamide dea": {
+   "c": [
+    1,
+    4
+   ],
+   "l": false,
+   "n": "Watch for: -EA Nitrosamines"
+  },
+  "cocamide mea": {
+   "c": [
+    1,
+    4
+   ],
+   "l": false,
+   "n": "Watch for: -EA Nitrosamines"
+  },
+  "cocamidopropyl betaine": {
+   "c": [
+    1,
+    4
+   ],
+   "l": false,
+   "n": "Watch for: -amidopropyl Nitrosamines"
+  },
+  "cocamidopropyl hydroxysultaine": {
+   "c": [
+    1,
+    4
+   ],
+   "l": false,
+   "n": "Watch for: -amidopropyl Nitrosamines"
+  },
+  "cocamidopropylamine oxide": {
+   "c": [
+    1,
+    4
+   ],
+   "l": false,
+   "n": "Nitrosamines"
+  },
+  "coco-glucoside": {
+   "c": [],
+   "l": true,
+   "n": "Watch for: -glucoside\""
+  },
+  "coconut acid": {
+   "c": [],
+   "l": true,
+   "n": ""
+  },
+  "coconut alkanes (aka coco- caprylate)": {
+   "c": [],
+   "l": true,
+   "n": ""
+  },
+  "coconut oil": {
+   "c": [],
+   "l": true,
+   "n": ""
+  },
+  "copper": {
+   "c": [],
+   "l": true,
+   "n": ""
+  },
+  "coumarin": {
+   "c": [
+    4,
+    8
+   ],
+   "l": false,
+   "n": "Watch for: \"(Natural) Fragrance or Parfum\""
+  },
+  "cyclomethicone": {
+   "c": [
+    1,
+    2,
+    6
+   ],
+   "l": false,
+   "n": "Watch for: -\"siloxane\" PFAS treated"
+  },
+  "cyclopentasiloxane": {
+   "c": [
+    1,
+    2,
+    6
+   ],
+   "l": false,
+   "n": "Watch for: -\"siloxane\" PFAS treated"
+  },
+  "cyclotetrasiloxane": {
+   "c": [
+    1,
+    2,
+    6
+   ],
+   "l": false,
+   "n": "Watch for: -\"siloxane\" PFAS treated"
+  },
+  "dea oleth-3 phosphate": {
+   "c": [
+    1,
+    4
+   ],
+   "l": false,
+   "n": "Watch for: -EA Nitrosamines"
+  },
+  "dea-cetyl phosphate": {
+   "c": [
+    1,
+    4
+   ],
+   "l": false,
+   "n": "Watch for: -EA Nitrosamines"
+  },
+  "decanal": {
+   "c": [
+    4,
+    8
+   ],
+   "l": false,
+   "n": "Watch for: \"(Natural) Fragrance or Parfum\""
+  },
+  "decyl-glucoside": {
+   "c": [],
+   "l": true,
+   "n": "Watch for: -glucoside\""
+  },
+  "dehydroacetic acid": {
+   "c": [],
+   "l": true,
+   "n": ""
+  },
+  "denatonium benzoate": {
+   "c": [
+    4,
+    7
+   ],
+   "l": false,
+   "n": ""
+  },
+  "di(2-ethylhexyl) phthalate (dehp)": {
+   "c": [
+    2
+   ],
+   "l": false,
+   "n": "Watch for: \"(Natural) Fragrance or Parfum\""
+  },
+  "di-n-butyl phthalate (dnbp)": {
+   "c": [
+    2
+   ],
+   "l": false,
+   "n": "Watch for: \"(Natural) Fragrance or Parfum\""
+  },
+  "diazolidinylurea": {
+   "c": [
+    1,
+    2,
+    4,
+    5
+   ],
+   "l": false,
+   "n": "Formaldehyde; 1,4-dioxane, ethylene oxide"
+  },
+  "dicetyldimonium chloride": {
+   "c": [
+    2
+   ],
+   "l": false,
+   "n": "Watch for: -nium"
+  },
+  "diethanolamine (dea)": {
+   "c": [
+    1,
+    4
+   ],
+   "l": false,
+   "n": "Watch for: -EA Nitrosamines"
+  },
+  "diethyl phthalate (dep)": {
+   "c": [
+    2
+   ],
+   "l": false,
+   "n": "Watch for: \"(Natural) Fragrance or Parfum\""
+  },
+  "diethylamino hydroxybenzoyl hexyl": {
+   "c": [
+    4
+   ],
+   "l": false,
+   "n": "contamination with phthalates (German Federal Institute for Risk Assessment) Benzoate"
+  },
+  "diethylhexyl sodium sulfosuccinate": {
+   "c": [
+    5
+   ],
+   "l": false,
+   "n": ""
+  },
+  "diheptyl succinate": {
+   "c": [],
+   "l": true,
+   "n": ""
+  },
+  "dihydrogenated tallow benzylmonium chloride": {
+   "c": [
+    2
+   ],
+   "l": false,
+   "n": "Watch for: -nium"
+  },
+  "diisobutyl phthalate (dibp)": {
+   "c": [
+    2
+   ],
+   "l": false,
+   "n": "Watch for: \"(Natural) Fragrance or Parfum\""
+  },
+  "dimethicone": {
+   "c": [
+    2,
+    6
+   ],
+   "l": false,
+   "n": "PFAS treated"
+  },
+  "dimethicone/vinyl dimethicone crosspolymer": {
+   "c": [
+    1
+   ],
+   "l": false,
+   "n": "Watch for: -crosspolymer vinyl formamide"
+  },
+  "dimethyl phthalate (dmp)": {
+   "c": [
+    2
+   ],
+   "l": false,
+   "n": "Watch for: \"(Natural) Fragrance or Parfum\""
+  },
+  "dimethylimidazolidinone rice starch": {
+   "c": [
+    2
+   ],
+   "l": false,
+   "n": ""
+  },
+  "dipalmitoyl hydroxyproline": {
+   "c": [],
+   "l": true,
+   "n": ""
+  },
+  "dipropylene glycol": {
+   "c": [
+    2
+   ],
+   "l": false,
+   "n": "glycol ether"
+  },
+  "dipropylene glycol butyl ether": {
+   "c": [
+    2
+   ],
+   "l": false,
+   "n": "glycol ether"
+  },
+  "disodium cocoamphodiacetate": {
+   "c": [],
+   "l": true,
+   "n": ""
+  },
+  "disodium decyl phenyl ether disulfonate": {
+   "c": [
+    4,
+    7
+   ],
+   "l": false,
+   "n": ""
+  },
+  "disodium distyrylbiphenyl disulfonate": {
+   "c": [
+    7
+   ],
+   "l": false,
+   "n": ""
+  },
+  "disodium laurimidodiproprionate": {
+   "c": [
+    4
+   ],
+   "l": false,
+   "n": ""
+  },
+  "disteardimonium hectorite": {
+   "c": [
+    2
+   ],
+   "l": false,
+   "n": "Watch for: -num PFAS treated"
+  },
+  "dmdm hydantoin": {
+   "c": [
+    1,
+    2,
+    4,
+    5
+   ],
+   "l": false,
+   "n": "Formaldehyde; 1,4-dioxane, ethylene oxide"
+  },
+  "dodecyl phenol ethoxylate": {
+   "c": [
+    1,
+    2
+   ],
+   "l": false,
+   "n": "1,4-dioxane, ethylene oxide"
+  },
+  "edta": {
+   "c": [
+    4
+   ],
+   "l": false,
+   "n": "Watch for: \"-EDTA\""
+  },
+  "estragole": {
+   "c": [
+    1,
+    4,
+    8
+   ],
+   "l": false,
+   "n": "Watch for: (Natural) Fragrance or Parfum"
+  },
+  "ethanolamine": {
+   "c": [
+    4
+   ],
+   "l": false,
+   "n": ""
+  },
+  "ethyl acetate": {
+   "c": [
+    4
+   ],
+   "l": false,
+   "n": ""
+  },
+  "ethylene glycol": {
+   "c": [
+    1,
+    2
+   ],
+   "l": false,
+   "n": "Watch for: -glycol"
+  },
+  "ethylhexyl palmitate": {
+   "c": [],
+   "l": true,
+   "n": ""
+  },
+  "ethylhexylglycerin": {
+   "c": [
+    4,
+    5
+   ],
+   "l": false,
+   "n": ""
+  },
+  "ethylparaben": {
+   "c": [
+    2,
+    4
+   ],
+   "l": false,
+   "n": ""
+  },
+  "eugenol": {
+   "c": [
+    4,
+    8
+   ],
+   "l": false,
+   "n": "Watch for: \"(Natural) Fragrance or Parfum\""
+  },
+  "farnesol": {
+   "c": [
+    4,
+    8
+   ],
+   "l": false,
+   "n": "Watch for: \"(Natural) Fragrance or Parfum\""
+  },
+  "fragrance/parfum": {
+   "c": [
+    1,
+    2,
+    4,
+    8
+   ],
+   "l": false,
+   "n": "Watch for: \"(Natural) Fragrance or Parfum\" carcinogens, phthalates, allergens"
+  },
+  "furanone": {
+   "c": [
+    4,
+    8
+   ],
+   "l": false,
+   "n": "Watch for: \"(Natural) Fragrance or Parfum\""
+  },
+  "galaxolide (hhcb)": {
+   "c": [
+    1,
+    4,
+    8
+   ],
+   "l": false,
+   "n": "Watch for: \"(Natural) Fragrance or Parfum\" Musk-type compound"
+  },
+  "geraniol": {
+   "c": [
+    4,
+    8
+   ],
+   "l": false,
+   "n": "Watch for: \"(Natural) Fragrance or Parfum\""
+  },
+  "gluconic acid": {
+   "c": [],
+   "l": true,
+   "n": ""
+  },
+  "glutathione": {
+   "c": [],
+   "l": true,
+   "n": ""
+  },
+  "glyceryl caprylate": {
+   "c": [],
+   "l": true,
+   "n": ""
+  },
+  "glyceryl oleate": {
+   "c": [],
+   "l": true,
+   "n": ""
+  },
+  "glyceryl stearate se": {
+   "c": [],
+   "l": true,
+   "n": ""
+  },
+  "glycol distearate": {
+   "c": [
+    4
+   ],
+   "l": false,
+   "n": "Watch for: \"-glycol\""
+  },
+  "glycolipids": {
+   "c": [],
+   "l": true,
+   "n": ""
+  },
+  "glyoxal": {
+   "c": [
+    1,
+    2,
+    4,
+    5
+   ],
+   "l": false,
+   "n": "Formaldehyde; 1,4-dioxane, ethylene oxide"
+  },
+  "glyoxylic acid": {
+   "c": [
+    2
+   ],
+   "l": false,
+   "n": "Liver, kidney, and lung damage"
+  },
+  "goldenseal extract - hydrastis canadensis": {
+   "c": [],
+   "l": true,
+   "n": ""
+  },
+  "grape alcohol": {
+   "c": [],
+   "l": true,
+   "n": ""
+  },
+  "grapefruit seed extract": {
+   "c": [
+    2,
+    4,
+    5
+   ],
+   "l": false,
+   "n": "benzethonium chloride, methylparaben, and benzalkonium chloride contamination (PMID: 16719494)"
+  },
+  "guar hydroxypropyltrimonium chloride": {
+   "c": [
+    2
+   ],
+   "l": false,
+   "n": "Watch for: -nium"
+  },
+  "heptyl undecylenate": {
+   "c": [],
+   "l": true,
+   "n": ""
+  },
+  "hexoxyethanol": {
+   "c": [
+    1,
+    5
+   ],
+   "l": false,
+   "n": "Kidney, reproductive, and developmental toxicity"
+  },
+  "hexylene glycol": {
+   "c": [
+    1,
+    2
+   ],
+   "l": false,
+   "n": "Watch for: -glycol"
+  },
+  "homosalate": {
+   "c": [
+    2
+   ],
+   "l": false,
+   "n": ""
+  },
+  "hyaluronic acid": {
+   "c": [],
+   "l": true,
+   "n": ""
+  },
+  "hydroquinone": {
+   "c": [
+    1
+   ],
+   "l": false,
+   "n": "Watch for: \"-hydroquinone\""
+  },
+  "hydroxycitronellal": {
+   "c": [
+    4,
+    8
+   ],
+   "l": false,
+   "n": "Watch for: \"(Natural) Fragrance or Parfum\""
+  },
+  "hydroxyethyl urea": {
+   "c": [
+    4
+   ],
+   "l": false,
+   "n": ""
+  },
+  "hydroxyethylcellulose": {
+   "c": [],
+   "l": true,
+   "n": ""
+  },
+  "hydroxyethylpiperazine ethane sulfonic acid": {
+   "c": [
+    4
+   ],
+   "l": false,
+   "n": ""
+  },
+  "hydroxypropyltrimonium chloride": {
+   "c": [
+    2
+   ],
+   "l": false,
+   "n": "Watch for: -nium"
+  },
+  "imidazolidinylurea": {
+   "c": [
+    1,
+    2,
+    4,
+    5
+   ],
+   "l": false,
+   "n": "Formaldehyde; 1,4-dioxane, ethylene oxide"
+  },
+  "inulin": {
+   "c": [],
+   "l": true,
+   "n": ""
+  },
+  "ionone": {
+   "c": [
+    4,
+    8
+   ],
+   "l": false,
+   "n": "Watch for: \"(Natural) Fragrance or Parfum\""
+  },
+  "isoamyl laurate": {
+   "c": [],
+   "l": true,
+   "n": ""
+  },
+  "isobutylparaben": {
+   "c": [
+    2,
+    4
+   ],
+   "l": false,
+   "n": ""
+  },
+  "isocetyl stearoyl stearate": {
+   "c": [],
+   "l": true,
+   "n": ""
+  },
+  "isododecane": {
+   "c": [
+    1,
+    2
+   ],
+   "l": false,
+   "n": "PFAS treated"
+  },
+  "isoeugenol": {
+   "c": [
+    4,
+    8
+   ],
+   "l": false,
+   "n": "Watch for: \"(Natural) Fragrance or Parfum\""
+  },
+  "jojoba beads": {
+   "c": [],
+   "l": true,
+   "n": ""
+  },
+  "jojoba wax": {
+   "c": [],
+   "l": true,
+   "n": ""
+  },
+  "kaolin": {
+   "c": [],
+   "l": true,
+   "n": ""
+  },
+  "lactobacillus": {
+   "c": [],
+   "l": true,
+   "n": ""
+  },
+  "lauramide dea": {
+   "c": [
+    1,
+    4
+   ],
+   "l": false,
+   "n": "Watch for: -EA Nitrosamines"
+  },
+  "lauramidopropyl betaine": {
+   "c": [
+    1,
+    4
+   ],
+   "l": false,
+   "n": "Watch for: -amidopropyl Nitrosamines"
+  },
+  "lauramine oxide": {
+   "c": [
+    4,
+    5
+   ],
+   "l": false,
+   "n": ""
+  },
+  "laureth-23": {
+   "c": [
+    1,
+    4,
+    5
+   ],
+   "l": false,
+   "n": "Watch for: -eth 1,4-dioxane, ethylene oxide"
+  },
+  "laureth-4": {
+   "c": [
+    1,
+    4,
+    5
+   ],
+   "l": false,
+   "n": "Watch for: -eth 1,4-dioxane, ethylene oxide"
+  },
+  "laureth-6": {
+   "c": [
+    1,
+    4,
+    5
+   ],
+   "l": false,
+   "n": "Watch for: -eth 1,4-dioxane, ethylene oxide"
+  },
+  "lauroyl lysine": {
+   "c": [],
+   "l": true,
+   "n": ""
+  },
+  "lauryl glucosides hydroxypropylsulfonate": {
+   "c": [],
+   "l": true,
+   "n": ""
+  },
+  "lauryl-glucoside": {
+   "c": [],
+   "l": true,
+   "n": "Watch for: -glucoside\""
+  },
+  "lead": {
+   "c": [
+    1,
+    3
+   ],
+   "l": false,
+   "n": "Watch for: FD&C #; D&C #, CI #"
+  },
+  "leuconostoc/radish root ferment filtrate": {
+   "c": [],
+   "l": true,
+   "n": ""
+  },
+  "lilial": {
+   "c": [
+    2,
+    4,
+    8
+   ],
+   "l": false,
+   "n": "Watch for: \"(Natural) Fragrance or Parfum\" Musk-type compound"
+  },
+  "limonene": {
+   "c": [
+    4,
+    8
+   ],
+   "l": false,
+   "n": "Watch for: \"(Natural) Fragrance or Parfum\""
+  },
+  "linalool": {
+   "c": [
+    4
+   ],
+   "l": false,
+   "n": "User decision 2026-10-27 (editorial sources only, no concern found): naturally occurring fragrance component, irritation category 4 only (rule 8)."
+  },
+  "linoleamide mea": {
+   "c": [
+    1,
+    4
+   ],
+   "l": false,
+   "n": "Watch for: -EA Nitrosamines"
+  },
+  "lipase": {
+   "c": [],
+   "l": true,
+   "n": ""
+  },
+  "magnesium chloride": {
+   "c": [],
+   "l": true,
+   "n": ""
+  },
+  "magnesium sulfate": {
+   "c": [],
+   "l": true,
+   "n": ""
+  },
+  "mannase": {
+   "c": [],
+   "l": true,
+   "n": "LOW TOX"
+  },
+  "mea c10-16 alkylbenzenesulfonate": {
+   "c": [
+    1
+   ],
+   "l": false,
+   "n": "Watch for: -EA Nitrosamines"
+  },
+  "mea laureth sulfate": {
+   "c": [
+    1
+   ],
+   "l": false,
+   "n": "Watch for: -EA, -eth 1,4-dioxane, ethylene oxide; Nitrosamines"
+  },
+  "mercuric": {
+   "c": [
+    1,
+    3
+   ],
+   "l": false,
+   "n": "Watch for: FD&C #; D&C #, CI #"
+  },
+  "mercurio": {
+   "c": [
+    1,
+    3
+   ],
+   "l": false,
+   "n": "Watch for: FD&C #; D&C #, CI #"
+  },
+  "mercurous chloride": {
+   "c": [
+    1,
+    3
+   ],
+   "l": false,
+   "n": "Watch for: FD&C #; D&C #, CI #"
+  },
+  "mercury": {
+   "c": [
+    1,
+    3
+   ],
+   "l": false,
+   "n": "Watch for: FD&C #; D&C #, CI #"
+  },
+  "methenamine": {
+   "c": [
+    1,
+    4
+   ],
+   "l": false,
+   "n": "Formaldehyde"
+  },
+  "methicone": {
+   "c": [
+    1,
+    2,
+    6
+   ],
+   "l": false,
+   "n": "PFAS treated"
+  },
+  "methyl di-t-butyl hydroxyhydrocinnamate": {
+   "c": [
+    2
+   ],
+   "l": false,
+   "n": ""
+  },
+  "methyl isobutyl ketone (mibk)": {
+   "c": [
+    1,
+    8
+   ],
+   "l": false,
+   "n": "Watch for: (Natural) Fragrance or Parfum"
+  },
+  "methyl-n-methylanthranilate": {
+   "c": [
+    1,
+    8
+   ],
+   "l": false,
+   "n": "Watch for: (Natural) Fragrance or Parfum"
+  },
+  "methylchloroisothiazolinone": {
+   "c": [
+    4,
+    5
+   ],
+   "l": false,
+   "n": ""
+  },
+  "methylene glycol": {
+   "c": [
+    1,
+    2
+   ],
+   "l": false,
+   "n": "Watch for: -glycol"
+  },
+  "methyleugenol": {
+   "c": [
+    1,
+    8
+   ],
+   "l": false,
+   "n": "Watch for: (Natural) Fragrance or Parfum"
+  },
+  "methylisothiazolinone": {
+   "c": [
+    4,
+    5
+   ],
+   "l": false,
+   "n": ""
+  },
+  "methylparaben": {
+   "c": [
+    2,
+    4
+   ],
+   "l": false,
+   "n": ""
+  },
+  "mica": {
+   "c": [
+    1,
+    4
+   ],
+   "l": false,
+   "n": "May be PFAS treated; Not a concern if it is not the first or main ingredient.",
+   "cond": "inhalation_risk"
+  },
+  "mineral oil": {
+   "c": [
+    1
+   ],
+   "l": false,
+   "n": ""
+  },
+  "monoethanolamine": {
+   "c": [
+    1
+   ],
+   "l": false,
+   "n": "Watch for: -EA Nitrosamines"
+  },
+  "musk": {
+   "c": [
+    1,
+    4,
+    8
+   ],
+   "l": false,
+   "n": "Watch for: \"(Natural) Fragrance or Parfum\""
+  },
+  "myrcene": {
+   "c": [
+    1,
+    4
+   ],
+   "l": false,
+   "n": ""
+  },
+  "myristamide dea": {
+   "c": [
+    1,
+    4
+   ],
+   "l": false,
+   "n": "Watch for: -EA Nitrosamines"
+  },
+  "myristyl myristate": {
+   "c": [],
+   "l": true,
+   "n": ""
+  },
+  "n-alkyl ethylbenzyl dimethyl ammonium (c12-c14)": {
+   "c": [
+    4
+   ],
+   "l": false,
+   "n": "Watch for: \"-nium\" Quat"
+  },
+  "naphthalene": {
+   "c": [
+    1,
+    8
+   ],
+   "l": false,
+   "n": "Watch for: (Natural) Fragrance or Parfum"
+  },
+  "niacinamide (vitamin b3)": {
+   "c": [],
+   "l": true,
+   "n": ""
+  },
+  "nitrosamine-n- nitrosoethanolamine (ndela)": {
+   "c": [
+    1
+   ],
+   "l": false,
+   "n": ""
+  },
+  "nonoxynol": {
+   "c": [
+    2
+   ],
+   "l": false,
+   "n": "Watch for: Nonoxynol- #"
+  },
+  "nonyl phenol ethoxylate": {
+   "c": [
+    1,
+    2
+   ],
+   "l": false,
+   "n": "1,4-dioxane, ethylene oxide"
+  },
+  "nylon-12": {
+   "c": [
+    1,
+    2,
+    6
+   ],
+   "l": false,
+   "n": "PFAS treated"
+  },
+  "octinoxate": {
+   "c": [
+    2
+   ],
+   "l": false,
+   "n": ""
+  },
+  "octisalate": {
+   "c": [
+    2
+   ],
+   "l": false,
+   "n": ""
+  },
+  "octocrylene": {
+   "c": [
+    2
+   ],
+   "l": false,
+   "n": ""
+  },
+  "octyl phenol ethoxylate": {
+   "c": [
+    1,
+    2
+   ],
+   "l": false,
+   "n": "1,4-dioxane, ethylene oxide"
+  },
+  "octyl/decyl glucoside": {
+   "c": [],
+   "l": true,
+   "n": ""
+  },
+  "octylisothiazolinone": {
+   "c": [
+    4,
+    5,
+    8
+   ],
+   "l": false,
+   "n": "4 5 8"
+  },
+  "oleamide dea": {
+   "c": [
+    1,
+    4
+   ],
+   "l": false,
+   "n": "Watch for: -EA Nitrosamines"
+  },
+  "oleic acid": {
+   "c": [],
+   "l": true,
+   "n": ""
+  },
+  "olive oil polyglyceryl-6 esters": {
+   "c": [],
+   "l": true,
+   "n": ""
+  },
+  "oxybenzone": {
+   "c": [
+    2
+   ],
+   "l": false,
+   "n": ""
+  },
+  "p-anisic acid": {
+   "c": [],
+   "l": true,
+   "n": ""
+  },
+  "panthenol": {
+   "c": [],
+   "l": true,
+   "n": ""
+  },
+  "para amino-benzoic acid (paba)": {
+   "c": [
+    2
+   ],
+   "l": false,
+   "n": ""
+  },
+  "paraffin": {
+   "c": [
+    1
+   ],
+   "l": false,
+   "n": ""
+  },
+  "paraffinum liquidum": {
+   "c": [
+    1
+   ],
+   "l": false,
+   "n": ""
+  },
+  "paraformaldehyde": {
+   "c": [
+    1,
+    4
+   ],
+   "l": false,
+   "n": "Formaldehyde"
+  },
+  "peg ppg ethylhexyl ether": {
+   "c": [
+    1,
+    2,
+    4,
+    5
+   ],
+   "l": false,
+   "n": "1,4-dioxane, ethylene oxide"
+  },
+  "peg-10 dimethicone": {
+   "c": [
+    2
+   ],
+   "l": false,
+   "n": "1,4-dioxane, ethylene oxide; PFAS treated"
+  },
+  "peg-20 sorbitan cocoate": {
+   "c": [
+    1,
+    2,
+    4,
+    5
+   ],
+   "l": false,
+   "n": "Watch for: PEG- # sorbitan 1,4-dioxane, ethylene oxide"
+  },
+  "peg-20 sorbitan oleate": {
+   "c": [
+    1,
+    2,
+    4,
+    5
+   ],
+   "l": false,
+   "n": "Watch for: PEG- # sorbitan 1,4-dioxane, ethylene oxide"
+  },
+  "peg-40 sorbitan diisostearate": {
+   "c": [
+    1,
+    2,
+    4,
+    5
+   ],
+   "l": false,
+   "n": "Watch for: PEG- # sorbitan 1,4-dioxane, ethylene oxide"
+  },
+  "peg-40 sorbitan oleate": {
+   "c": [
+    1,
+    2,
+    4,
+    5
+   ],
+   "l": false,
+   "n": "Watch for: PEG- # sorbitan 1,4-dioxane, ethylene oxide"
+  },
+  "peg-6 methyl ether": {
+   "c": [
+    1,
+    4
+   ],
+   "l": false,
+   "n": "Watch for: PEG- # 1,4-dioxane, ethylene oxide"
+  },
+  "pentaerythrityl distearate": {
+   "c": [],
+   "l": true,
+   "n": ""
+  },
+  "pentaerythrityl tetra-di-t-butyl": {
+   "c": [
+    1
+   ],
+   "l": false,
+   "n": "Antioxidant Hydroxyhydrocinnamate"
+  },
+  "pentasodium pentetate": {
+   "c": [
+    2
+   ],
+   "l": false,
+   "n": ""
+  },
+  "pentylene glycol": {
+   "c": [
+    1,
+    2
+   ],
+   "l": false,
+   "n": "Watch for: -glycol"
+  },
+  "perfluorohexylethyl triethoxysilane": {
+   "c": [
+    1,
+    2
+   ],
+   "l": false,
+   "n": "PFAS, synthetic silicone"
+  },
+  "perfluorononyl": {
+   "c": [
+    1,
+    2
+   ],
+   "l": false,
+   "n": "Watch for: -crosspolymer dimethicone/methicone/amodimet hicone PFAS, synthetic silicone crosspolymer"
+  },
+  "petrolatum": {
+   "c": [
+    1
+   ],
+   "l": false,
+   "n": "User decision 2026-10-27: PAH contamination concern (advocacy source); category 1 pending verified refining."
+  },
+  "petroleum": {
+   "c": [
+    1
+   ],
+   "l": false,
+   "n": ""
+  },
+  "phantolide (ahdi)": {
+   "c": [
+    1,
+    4,
+    8
+   ],
+   "l": false,
+   "n": "Watch for: \"(Natural) Fragrance or Parfum\" Musk-type compound"
+  },
+  "phenethyl alcohol": {
+   "c": [
+    4,
+    5,
+    8
+   ],
+   "l": false,
+   "n": "Similar to phenoxyethanol"
+  },
+  "phenol ethoxylate": {
+   "c": [
+    1,
+    2
+   ],
+   "l": false,
+   "n": "alkylphenol ethoxylate"
+  },
+  "phenoxyethanol": {
+   "c": [
+    1,
+    2,
+    4,
+    5,
+    8
+   ],
+   "l": false,
+   "n": "Watch for: -oxyethanol 1,4-dioxane, ethylene oxide, fragrance chemical"
+  },
+  "phenoxyisopropanol": {
+   "c": [
+    7
+   ],
+   "l": false,
+   "n": ""
+  },
+  "phytic acid": {
+   "c": [],
+   "l": true,
+   "n": ""
+  },
+  "poloxamer": {
+   "c": [
+    1
+   ],
+   "l": false,
+   "n": "Watch for: \"Poloxamer- #\" 1,4-dioxane, ethylene oxide, propylene oxide"
+  },
+  "poly (oxy-1,2-ethanediyl), alpha- (4-": {
+   "c": [
+    1,
+    2
+   ],
+   "l": false,
+   "n": "alkylphenol ethoxylate nonylphenyl)-omega-hydroxy-"
+  },
+  "poly (oxy-1,2-ethanediyl), alpha- (4- nonylphenyl)-omega-hydroxy-, branche": {
+   "c": [
+    1,
+    2
+   ],
+   "l": false,
+   "n": "alkylphenol ethoxylate"
+  },
+  "poly (oxy-1,2-ethanediyl), alpha-": {
+   "c": [
+    1,
+    2
+   ],
+   "l": false,
+   "n": "alkylphenol ethoxylate (isononylphenyl)-omega-hydroxy-"
+  },
+  "poly (oxy-1,2-ethanediyl), alpha- (nonylphenyl)-omega-hydroxy": {
+   "c": [
+    1,
+    2
+   ],
+   "l": false,
+   "n": "alkylphenol ethoxylate"
+  },
+  "poly (oxy-1,2-ethanediyl), alpha- (octylphenyl)-omega-hydroxy-, branched": {
+   "c": [
+    1,
+    2
+   ],
+   "l": false,
+   "n": "alkylphenol ethoxylate"
+  },
+  "polyacrylamide": {
+   "c": [
+    1
+   ],
+   "l": false,
+   "n": "Watch for: \"-acrylamide\" acrylamide"
+  },
+  "polyethylene": {
+   "c": [
+    6
+   ],
+   "l": false,
+   "n": ""
+  },
+  "polyethylene glycol": {
+   "c": [
+    1,
+    2,
+    4,
+    5
+   ],
+   "l": false,
+   "n": "Watch for: (PEG)- # Formaldehyde; 1,4-dioxane, ethylene oxide"
+  },
+  "polyethylene glycol 4-(tert- octylphenyl) ether": {
+   "c": [
+    1,
+    2
+   ],
+   "l": false,
+   "n": "alkylphenol ethoxylate"
+  },
+  "polyethylene glycol mono(octyl)phenyl ether": {
+   "c": [
+    1,
+    2
+   ],
+   "l": false,
+   "n": "alkylphenol ethoxylate"
+  },
+  "polyethyleneimine alkoxylated": {
+   "c": [
+    1
+   ],
+   "l": false,
+   "n": "Alkoxylate; ethylene oxide"
+  },
+  "polyglyceryl-3 beeswax": {
+   "c": [],
+   "l": true,
+   "n": ""
+  },
+  "polyglyceryl-3 diisostearate": {
+   "c": [],
+   "l": true,
+   "n": ""
+  },
+  "polyglyceryl-3 stearate": {
+   "c": [],
+   "l": true,
+   "n": ""
+  },
+  "polyglyceryl-4 caprate": {
+   "c": [],
+   "l": true,
+   "n": ""
+  },
+  "polyhydroxystearic acid": {
+   "c": [],
+   "l": true,
+   "n": ""
+  },
+  "polymeric blue": {
+   "c": [
+    1
+   ],
+   "l": false,
+   "n": ""
+  },
+  "polymeric red": {
+   "c": [
+    1
+   ],
+   "l": false,
+   "n": ""
+  },
+  "polymethyl methacrylate": {
+   "c": [
+    1,
+    4,
+    6
+   ],
+   "l": false,
+   "n": ""
+  },
+  "polymethylsilsesquioxane": {
+   "c": [
+    2
+   ],
+   "l": false,
+   "n": "PFAS treated"
+  },
+  "polyoxyalkylene substituted chromophore": {
+   "c": [
+    1
+   ],
+   "l": false,
+   "n": "azo dye"
+  },
+  "polyoxymethylene urea": {
+   "c": [
+    1,
+    2,
+    4,
+    5
+   ],
+   "l": false,
+   "n": "Formaldehyde; 1,4-dioxane, ethylene oxide"
+  },
+  "polypropylene": {
+   "c": [
+    6
+   ],
+   "l": false,
+   "n": ""
+  },
+  "polypropylene glycol": {
+   "c": [
+    1,
+    2,
+    4,
+    5
+   ],
+   "l": false,
+   "n": "Watch for: (PPG)-# Formaldehyde; 1,4-dioxane, ethylene oxide"
+  },
+  "polyquaternium-9": {
+   "c": [
+    1,
+    2
+   ],
+   "l": false,
+   "n": "Watch for: -nium Acrylamide"
+  },
+  "polysilicone": {
+   "c": [
+    6
+   ],
+   "l": false,
+   "n": ""
+  },
+  "polysorbate 20": {
+   "c": [
+    1,
+    2,
+    4,
+    5
+   ],
+   "l": false,
+   "n": "Watch for: Polysorbate- (#) Formaldehyde; 1,4-dioxane, ethylene oxide"
+  },
+  "polysorbate 21": {
+   "c": [
+    1,
+    2,
+    4,
+    5
+   ],
+   "l": false,
+   "n": "Watch for: Polysorbate- (#) Formaldehyde; 1,4-dioxane, ethylene oxide"
+  },
+  "polysorbate 40": {
+   "c": [
+    1,
+    2,
+    4,
+    5
+   ],
+   "l": false,
+   "n": "Watch for: Polysorbate- (#) Formaldehyde; 1,4-dioxane, ethylene oxide"
+  },
+  "polysorbate 60": {
+   "c": [
+    1,
+    2,
+    4,
+    5
+   ],
+   "l": false,
+   "n": "Watch for: Polysorbate- (#) Formaldehyde; 1,4-dioxane, ethylene oxide"
+  },
+  "polysorbate 61": {
+   "c": [
+    1,
+    2,
+    4,
+    5
+   ],
+   "l": false,
+   "n": "Watch for: Polysorbate- (#) Formaldehyde; 1,4-dioxane, ethylene oxide"
+  },
+  "polysorbate 65": {
+   "c": [
+    1,
+    2,
+    4,
+    5
+   ],
+   "l": false,
+   "n": "Watch for: Polysorbate- (#) Formaldehyde; 1,4-dioxane, ethylene oxide"
+  },
+  "polysorbate 80": {
+   "c": [
+    1,
+    2,
+    4,
+    5
+   ],
+   "l": false,
+   "n": "Watch for: Polysorbate- (#) Formaldehyde; 1,4-dioxane, ethylene oxide"
+  },
+  "polysorbate 81": {
+   "c": [
+    1,
+    2,
+    4,
+    5
+   ],
+   "l": false,
+   "n": "Watch for: Polysorbate- (#) Formaldehyde; 1,4-dioxane, ethylene oxide"
+  },
+  "polysorbate 85": {
+   "c": [
+    1,
+    2,
+    4,
+    5
+   ],
+   "l": false,
+   "n": "Watch for: Polysorbate- (#)"
+  },
+  "polytetrafluoroethylene": {
+   "c": [
+    1,
+    2
+   ],
+   "l": false,
+   "n": "PFAS"
+  },
+  "polyurethane": {
+   "c": [
+    1,
+    6
+   ],
+   "l": false,
+   "n": "Watch for: Polyurethane - # isocyanate (potential human carcinogen)"
+  },
+  "polyvinyl alcohol": {
+   "c": [
+    6
+   ],
+   "l": false,
+   "n": ""
+  },
+  "polyvinylpyrrolidone": {
+   "c": [
+    1
+   ],
+   "l": false,
+   "n": "Watch for: \"Vinyl-\" formaldehyde, acetaldehyde"
+  },
+  "potassium alum": {
+   "c": [
+    3
+   ],
+   "l": false,
+   "n": "Watch for: Contains aluminum Aluminum"
+  },
+  "potassium cocoate": {
+   "c": [],
+   "l": true,
+   "n": ""
+  },
+  "potassium hydroxide": {
+   "c": [
+    4
+   ],
+   "l": false,
+   "n": ""
+  },
+  "potassium oleate": {
+   "c": [],
+   "l": true,
+   "n": ""
+  },
+  "potassium olivate": {
+   "c": [],
+   "l": true,
+   "n": ""
+  },
+  "potassium sorbate": {
+   "c": [],
+   "l": true,
+   "n": ""
+  },
+  "ppg-2 methyl ether": {
+   "c": [
+    1,
+    4,
+    5
+   ],
+   "l": false,
+   "n": "Watch for: PPG- # 1,4-dioxane, ethylene oxide"
+  },
+  "propanediol": {
+   "c": [
+    4
+   ],
+   "l": false,
+   "n": ""
+  },
+  "propylene glycol": {
+   "c": [
+    1,
+    2
+   ],
+   "l": false,
+   "n": "Watch for: -glycol"
+  },
+  "propylparaben": {
+   "c": [
+    2,
+    4
+   ],
+   "l": false,
+   "n": ""
+  },
+  "protease": {
+   "c": [],
+   "l": true,
+   "n": ""
+  },
+  "pulegone": {
+   "c": [
+    1,
+    8
+   ],
+   "l": false,
+   "n": "Watch for: (Natural) Fragrance or Parfum"
+  },
+  "pvp/va copolymers": {
+   "c": [
+    1,
+    4,
+    6
+   ],
+   "l": false,
+   "n": ""
+  },
+  "pyridine": {
+   "c": [
+    1,
+    8
+   ],
+   "l": false,
+   "n": "Watch for: (Natural) Fragrance or Parfum"
+  },
+  "quaternary ammonium compound": {
+   "c": [
+    1
+   ],
+   "l": false,
+   "n": "Watch for: \"MEA\" Amines"
+  },
+  "quaternium #": {
+   "c": [
+    2,
+    4
+   ],
+   "l": false,
+   "n": "Watch for: -nium"
+  },
+  "quaternium-15": {
+   "c": [
+    1,
+    2,
+    4,
+    5
+   ],
+   "l": false,
+   "n": "Watch for: \"Quaternium- #\" or \"- nium\" Formaldehyde; 1,4-dioxane, ethylene oxide"
+  },
+  "resorcinol": {
+   "c": [
+    1,
+    2
+   ],
+   "l": false,
+   "n": ""
+  },
+  "resveratrol": {
+   "c": [],
+   "l": true,
+   "n": ""
+  },
+  "rice bran wax": {
+   "c": [],
+   "l": true,
+   "n": ""
+  },
+  "rosemary extract": {
+   "c": [],
+   "l": true,
+   "n": ""
+  },
+  "saccharide isomerate": {
+   "c": [],
+   "l": true,
+   "n": ""
+  },
+  "salicylic acid": {
+   "c": [],
+   "l": true,
+   "n": ""
+  },
+  "silica": {
+   "c": [
+    1,
+    2
+   ],
+   "l": false,
+   "n": "Watch for: Hydrated silica is acceptable PFAS treated",
+   "cond": "inhalation_risk"
+  },
+  "silica (hydrated)": {
+   "c": [],
+   "l": true,
+   "n": ""
+  },
+  "silica silylate": {
+   "c": [
+    1,
+    2
+   ],
+   "l": false,
+   "n": "PFAS treated"
+  },
+  "sodium anisate": {
+   "c": [],
+   "l": true,
+   "n": ""
+  },
+  "sodium benzoate": {
+   "c": [],
+   "l": true,
+   "n": ""
+  },
+  "sodium bicarbonate (baking soda)": {
+   "c": [],
+   "l": true,
+   "n": ""
+  },
+  "sodium borate": {
+   "c": [
+    2
+   ],
+   "l": false,
+   "n": ""
+  },
+  "sodium c10-16 alkylbenzenesulfonate": {
+   "c": [
+    7
+   ],
+   "l": false,
+   "n": ""
+  },
+  "sodium carbonate": {
+   "c": [],
+   "l": true,
+   "n": ""
+  },
+  "sodium carbonate peroxide": {
+   "c": [],
+   "l": true,
+   "n": ""
+  },
+  "sodium chloride (table salt)": {
+   "c": [],
+   "l": true,
+   "n": ""
+  },
+  "sodium citrate": {
+   "c": [],
+   "l": true,
+   "n": ""
+  },
+  "sodium coco-sulfate": {
+   "c": [
+    4,
+    5
+   ],
+   "l": false,
+   "n": "Watch for: \"-sulfate\" Contains Sodium Laurel Sulfate"
+  },
+  "sodium cocoate": {
+   "c": [],
+   "l": true,
+   "n": ""
+  },
+  "sodium cocoyl alaninate": {
+   "c": [],
+   "l": true,
+   "n": ""
+  },
+  "sodium cocoyl isethionate": {
+   "c": [
+    1
+   ],
+   "l": false,
+   "n": "1,4-dioxane, ethylene oxide"
+  },
+  "sodium cumenesulfonate": {
+   "c": [
+    4
+   ],
+   "l": false,
+   "n": ""
+  },
+  "sodium dodecyl sulfate": {
+   "c": [
+    1,
+    4,
+    5
+   ],
+   "l": false,
+   "n": "Watch for: \"-sulfate\" 1,4-dioxane, ethylene oxide"
+  },
+  "sodium gluconate": {
+   "c": [],
+   "l": true,
+   "n": ""
+  },
+  "sodium hyaluronate": {
+   "c": [],
+   "l": true,
+   "n": ""
+  },
+  "sodium hydroxymethylglycinate": {
+   "c": [
+    1,
+    2,
+    4,
+    5
+   ],
+   "l": false,
+   "n": "Formaldehyde; 1,4-dioxane, ethylene oxide"
+  },
+  "sodium hypochlorite": {
+   "c": [
+    4,
+    7,
+    8
+   ],
+   "l": false,
+   "n": "Same as bleach"
+  },
+  "sodium iminodisuccinate": {
+   "c": [],
+   "l": true,
+   "n": ""
+  },
+  "sodium laurel sulfate": {
+   "c": [
+    1,
+    4,
+    5
+   ],
+   "l": false,
+   "n": "Watch for: \"-sulfate\" 1,4-dioxane, ethylene oxide"
+  },
+  "sodium laureth sulfate": {
+   "c": [
+    1,
+    4,
+    5
+   ],
+   "l": false,
+   "n": "Watch for: \"-sulfate\" 1,4-dioxane, ethylene oxide"
+  },
+  "sodium lauryl sulfate": {
+   "c": [
+    1,
+    4,
+    5
+   ],
+   "l": false,
+   "n": "Watch for: \"-sulfate\" 1,4-dioxane, ethylene oxide"
+  },
+  "sodium levulinate": {
+   "c": [],
+   "l": true,
+   "n": ""
+  },
+  "sodium olivoyl glutamate": {
+   "c": [],
+   "l": true,
+   "n": ""
+  },
+  "sodium palmate": {
+   "c": [],
+   "l": true,
+   "n": ""
+  },
+  "sodium phytate": {
+   "c": [],
+   "l": true,
+   "n": ""
+  },
+  "sodium pyrithione": {
+   "c": [
+    7
+   ],
+   "l": false,
+   "n": "antimicrobial"
+  },
+  "sorbeth-2 beeswax": {
+   "c": [
+    1,
+    2,
+    4,
+    5
+   ],
+   "l": false,
+   "n": "Watch for: -eth 1,4-dioxane, ethylene oxide"
+  },
+  "sorbeth-2 cocoate": {
+   "c": [
+    1,
+    2,
+    4,
+    5
+   ],
+   "l": false,
+   "n": "Watch for: -eth 1,4-dioxane, ethylene oxide"
+  },
+  "sorbic acid": {
+   "c": [],
+   "l": true,
+   "n": ""
+  },
+  "sorbitan oleate": {
+   "c": [],
+   "l": true,
+   "n": ""
+  },
+  "sorbitan oleate decylglucoside crosspolymer": {
+   "c": [],
+   "l": true,
+   "n": ""
+  },
+  "sorbitan olivate": {
+   "c": [],
+   "l": true,
+   "n": ""
+  },
+  "sorbitan palmitate": {
+   "c": [],
+   "l": true,
+   "n": ""
+  },
+  "squalane": {
+   "c": [],
+   "l": true,
+   "n": ""
+  },
+  "stearalkonium chloride": {
+   "c": [
+    2
+   ],
+   "l": false,
+   "n": "Watch for: -nium"
+  },
+  "stearamide mea": {
+   "c": [
+    1,
+    4
+   ],
+   "l": false,
+   "n": "Watch for: -EA Nitrosamines"
+  },
+  "stearyl alcohol": {
+   "c": [],
+   "l": true,
+   "n": ""
+  },
+  "styrenated phenol ethoxylate": {
+   "c": [
+    1,
+    2
+   ],
+   "l": false,
+   "n": "1,4-dioxane, ethylene oxide"
+  },
+  "styrene/acrylates copolymer": {
+   "c": [
+    1,
+    4,
+    6
+   ],
+   "l": false,
+   "n": "Styrene, acrylates"
+  },
+  "subtilisin": {
+   "c": [],
+   "l": true,
+   "n": "Enyme; Avoid in powdered products  LOW TOX"
+  },
+  "sucrose cocoate": {
+   "c": [],
+   "l": true,
+   "n": ""
+  },
+  "synthetic fluorphlogopite": {
+   "c": [
+    1,
+    2
+   ],
+   "l": false,
+   "n": "Watch for: \"-fluoro-\" PFAS treated"
+  },
+  "talc": {
+   "c": [
+    1,
+    2
+   ],
+   "l": false,
+   "n": "PFAS treated",
+   "cond": "inhalation_risk"
+  },
+  "tea-lauryl sulfate": {
+   "c": [
+    1,
+    4
+   ],
+   "l": false,
+   "n": "Watch for: -EA Nitrosamines"
+  },
+  "tetradecyl aminobutyroylvalylaminobutyric": {
+   "c": [
+    1,
+    2
+   ],
+   "l": false,
+   "n": "Watch for: \"-fluoro-\" urea trifluoroacetate PFAS"
+  },
+  "tetrahexyldecyl ascorbate": {
+   "c": [],
+   "l": true,
+   "n": "Watch for: \"ascorbate\" (vitamin C)"
+  },
+  "tetrasodium edta": {
+   "c": [
+    1
+   ],
+   "l": false,
+   "n": "Watch for: EDTA formaldehyde"
+  },
+  "tocopherol (vitamin e)": {
+   "c": [],
+   "l": true,
+   "n": ""
+  },
+  "toluene": {
+   "c": [
+    1
+   ],
+   "l": false,
+   "n": "Watch for: \"toluene\""
+  },
+  "tosylamide/epoxy resin": {
+   "c": [
+    4
+   ],
+   "l": false,
+   "n": ""
+  },
+  "totarol": {
+   "c": [],
+   "l": true,
+   "n": ""
+  },
+  "toxalide (ahtn)": {
+   "c": [
+    1,
+    4,
+    8
+   ],
+   "l": false,
+   "n": "Watch for: \"(Natural) Fragrance or Parfum\" Musk-type compound"
+  },
+  "traseolide (atii)": {
+   "c": [
+    1,
+    4,
+    8
+   ],
+   "l": false,
+   "n": "Watch for: \"(Natural) Fragrance or Parfum\" Musk-type compound"
+  },
+  "tribehenin": {
+   "c": [],
+   "l": true,
+   "n": ""
+  },
+  "triethanolamine (tea)": {
+   "c": [
+    1,
+    4
+   ],
+   "l": false,
+   "n": "Watch for: -EA Nitrosamines"
+  },
+  "triethyl citrate": {
+   "c": [],
+   "l": true,
+   "n": ""
+  },
+  "trifluoropropyl cyclopentasiloxane": {
+   "c": [
+    1,
+    2
+   ],
+   "l": false,
+   "n": "PFAS, synthetic silicone"
+  },
+  "trifluoropropyl cyclotetrasiloxane": {
+   "c": [
+    1,
+    2
+   ],
+   "l": false,
+   "n": "PFAS, synthetic silicone"
+  },
+  "triheptanoin": {
+   "c": [],
+   "l": true,
+   "n": ""
+  },
+  "trimethylsiloxysilicate": {
+   "c": [
+    1,
+    2
+   ],
+   "l": false,
+   "n": "Watch for: \"-siloxy-\" PFAS treated, synthetic silicone"
+  },
+  "tripropylene glycol n-butyl ether": {
+   "c": [
+    4
+   ],
+   "l": false,
+   "n": "Watch for: \"-glycol\""
+  },
+  "trisodium citrate": {
+   "c": [],
+   "l": true,
+   "n": ""
+  },
+  "trisodium dicarboxymethyl alaninate": {
+   "c": [],
+   "l": true,
+   "n": ""
+  },
+  "trisodium ethylenediamine disuccinate": {
+   "c": [],
+   "l": true,
+   "n": ""
+  },
+  "vanillin": {
+   "c": [
+    4,
+    8
+   ],
+   "l": false,
+   "n": "Watch for: \"(Natural) Fragrance or Parfum\""
+  },
+  "vinyl chloride": {
+   "c": [
+    1
+   ],
+   "l": false,
+   "n": "Watch for: \"Vinyl-\" acrylamide, vinyl formamide"
+  },
+  "vinylpyrrolidone": {
+   "c": [
+    1
+   ],
+   "l": false,
+   "n": "Watch for: \"Vinyl-\" acrylamide, vinyl formamide"
+  },
+  "vp/eicosene copolymer": {
+   "c": [
+    1,
+    2,
+    6
+   ],
+   "l": false,
+   "n": "PFAS treated"
+  },
+  "walnut powder": {
+   "c": [],
+   "l": true,
+   "n": ""
+  },
+  "white petroleum": {
+   "c": [
+    1
+   ],
+   "l": false,
+   "n": ""
+  },
+  "xanthan gum": {
+   "c": [],
+   "l": true,
+   "n": ""
+  },
+  "xylenes": {
+   "c": [
+    1
+   ],
+   "l": false,
+   "n": ""
+  },
+  "xylenesulfonate": {
+   "c": [
+    1
+   ],
+   "l": false,
+   "n": "Watch for: xylene xylene"
+  },
+  "zeolite": {
+   "c": [],
+   "l": true,
+   "n": "Avoid in powdered form"
+  },
+  "zinc oxide (non-nano)": {
+   "c": [],
+   "l": true,
+   "n": "Avoid in sprays and aerosols  LOW TOX"
+  },
+  "alkoxylated amine substituted triaryl": {
+   "c": [
+    1
+   ],
+   "l": false,
+   "n": "Alkoxylate Methane"
+  },
+  "alkyl c12-14 dimethylethylbenzyl ammonium": {
+   "c": [
+    2
+   ],
+   "l": false,
+   "n": "Watch for: -nium Chloride Quat"
+  },
+  "ammonium acryloyldimethyltaurate/vp": {
+   "c": [
+    1,
+    6
+   ],
+   "l": false,
+   "n": "Watch for: \"Vinyl-\" Copolymer Vinyl"
+  },
+  "benzophenone- 1, 2,": {
+   "c": [
+    3
+   ],
+   "l": false,
+   "n": ",4, 5, or 9 2 Watch for: Benzophenone- #"
+  },
+  "dihydrogenated tallow benzylmonium": {
+   "c": [
+    2
+   ],
+   "l": false,
+   "n": "Watch for: -nium chloride"
+  },
+  "n-alkyl ethylbenzyl dimethyl ammonium": {
+   "c": [
+    4
+   ],
+   "l": false,
+   "n": "Watch for: \"-nium\" (c12-c14) Quat"
+  },
+  "polyethylene glycol 4-(tert- octylphenyl)": {
+   "c": [
+    1,
+    2
+   ],
+   "l": false,
+   "n": "alkylphenol ethoxylate ether"
+  },
+  "alumina": {
+   "c": [
+    3
+   ],
+   "l": false,
+   "n": "Aluminum-derived thickener/filler; heavy-metals escalation"
+  },
+  "diethylhexyl syringylidenemalonate": {
+   "c": [
+    2
+   ],
+   "l": false,
+   "n": "Synthetic UV booster"
+  },
+  "sodium dodecylbenzenesulfonate": {
+   "c": [
+    1
+   ],
+   "l": false,
+   "n": "Alkylbenzenesulfonate surfactant; 1,4-dioxane pathway. Watch for: -benzenesulfonate"
+  },
+  "1,2-hexanediol": {
+   "c": [
+    1,
+    2
+   ],
+   "l": false,
+   "n": "Preservative booster; -glycol family"
+  },
+  "2,3-butanediol": {
+   "c": [
+    1,
+    2
+   ],
+   "l": false,
+   "n": "Humectant; -glycol family"
+  },
+  "ethylene/acrylic acid copolymer": {
+   "c": [
+    6
+   ],
+   "l": false,
+   "n": "Acrylate microplastic"
+  },
+  "poly c10-30 alkyl acrylate": {
+   "c": [
+    6
+   ],
+   "l": false,
+   "n": "Acrylate microplastic"
+  },
+  "sodium c14-16 olefin sulfonate": {
+   "c": [
+    4
+   ],
+   "l": false,
+   "n": "Harsh sulfonate surfactant; olefin sulfonate pattern"
+  },
+  "iron oxides": {
+   "c": [
+    1,
+    2,
+    3
+   ],
+   "l": false,
+   "n": "When listed without CI# — composite colorant; alias to CI 77491/77492/77499",
+   "cond": "inhalation_risk"
+  },
+  "dimethyl mea": {
+   "c": [
+    2
+   ],
+   "l": false,
+   "n": "DMAE; -EA ethanolamine family; nitrosamine risk with amides"
+  },
+  "lauryl pyrrolidone": {
+   "c": [
+    4
+   ],
+   "l": false,
+   "n": "Specialty surfactant/solubilizer"
+  },
+  "polysilicone-11": {
+   "c": [
+    6
+   ],
+   "l": false,
+   "n": "Crosslinked silicone resin; PFAS escalation; microplastic"
+  },
+  "peg/ppg/polybutylene glycol-8/5/3 glycerin": {
+   "c": [
+    1,
+    2,
+    4,
+    5
+   ],
+   "l": false,
+   "n": "PEG/PPG hybrid; 1,4-dioxane, ethylene oxide"
+  },
+  "panthenyl hydroxypropyl steardimonium chloride": {
+   "c": [
+    2
+   ],
+   "l": false,
+   "n": "Quat pro-vitamin B5 conjugate; -nium"
+  },
+  "sodium benzotriazolyl butylphenol sulfonate": {
+   "c": [
+    1,
+    2
+   ],
+   "l": false,
+   "n": "Polymeric UV absorber"
+  },
+  "hydrolyzed vegetable protein pg-propyl silanetriol": {
+   "c": [
+    2,
+    6
+   ],
+   "l": false,
+   "n": "Silicone-protein conjugate"
+  },
+  "behentrimonium chloride": {
+   "c": [
+    2
+   ],
+   "l": false,
+   "n": "Chloride form of behentrimonium — flagged quat; -nium (methosulfate form is LOW TOX, chloride is NOT)"
+  },
+  "cetyl esters": {
+   "c": [],
+   "l": true,
+   "n": "Fatty-ester emollient"
+  },
+  "dicaprylyl carbonate": {
+   "c": [],
+   "l": true,
+   "n": "Light ester emollient"
+  },
+  "sodium lauroyl methyl isethionate": {
+   "c": [],
+   "l": true,
+   "n": "Mild SLMI surfactant"
+  },
+  "sorbitan stearate": {
+   "c": [],
+   "l": true,
+   "n": "Sorbitan ester emulsifier"
+  },
+  "triethylhexanoin": {
+   "c": [],
+   "l": true,
+   "n": "Trihexanoin ester emollient"
+  },
+  "cetyl hydroxyethylcellulose": {
+   "c": [],
+   "l": true,
+   "n": "Cellulose-derived thickener"
+  },
+  "decyl glucoside": {
+   "c": [],
+   "l": true,
+   "n": "Mild nonionic surfactant"
+  },
+  "beeswax": {
+   "c": [],
+   "l": true,
+   "n": "Thickener and emollient"
+  },
+  "cera alba": {
+   "c": [],
+   "l": true,
+   "n": "Beeswax"
+  },
+  "c14-22 alcohols": {
+   "c": [],
+   "l": true,
+   "n": "Fatty alcohol blend; not a drying alcohol"
+  },
+  "neopentyl glycol diethylhexanoate": {
+   "c": [],
+   "l": true,
+   "n": "Ester emollient; diol backbone, not free glycol"
+  },
+  "safflower glucoside": {
+   "c": [],
+   "l": true,
+   "n": "Botanical glucoside"
+  },
+  "potassium laurate": {
+   "c": [],
+   "l": true,
+   "n": "Soap salt of lauric acid"
+  },
+  "caprylyl/capryl glucoside": {
+   "c": [],
+   "l": true,
+   "n": "Nonionic surfactant"
+  },
+  "disodium edta": {
+   "c": [],
+   "l": true,
+   "n": "Chelator. Low-concern at cosmetic levels (EWG 1-2)."
+  },
+  "titanium dioxide": {
+   "c": [
+    1,
+    2,
+    3
+   ],
+   "l": false,
+   "cond": "inhalation_risk",
+   "n": "PDF: CI 77891. Not a concern in cream skincare/makeup; flagged in sprays, aerosols, powders, oral care."
+  },
+  "acacia senegal gum": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "acrylamide/sodium acryloyldimethyltaurate copolymer": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "acrylates/c10-30 alkyl acrylate crosspolymer": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "adenosine": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "alanine": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "algin": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "aloe barbadensis leaf juice": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "ammonium lactate": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "ammonium polyacryloyldimethyl taurate": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "anhydroxylitol": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "aqua": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "aqua / water / eau": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "aqua/eau": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "aqua/water/eau": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "argania spinosa kernel oil": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "arginine": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "arginine pca": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "ascorbic acid": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "ascorbyl palmitate": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "aspartic acid": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "avena sativa (oat) kernel flour": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "behenic acid": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "benzoic acid": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "benzotriazolyl dodecyl p-cresol": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "benzoyl peroxide": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "beta-carotene ci 40800": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "beta-glucan": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "biosaccharide gum-1": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "butyrospermum parkii (shea) butter": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "c12-13 alkyl lactate": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "c12-15 alkyl benzoate": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "c12-20 alkyl glucoside": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "c15-19 alkane": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "calcium pantothenate": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "camellia sinensis leaf extract": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "caprooyl glycine": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "caprooyl phytosphingosine": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "caprooyl sphingosine": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "caprooyl tetrapeptide-3": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "caproyl glycine": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "caprylic acid": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "caprylic/capric triglyceride": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "capryloyl glycine": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "capryloyl/caproyl methyl glucamide": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "carrageenan": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "cellulose": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "cetearyl ethylhexanoate": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "cetearyl isononanoate": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "charcoal powder": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "chitosan": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "chlorhexidine digluconate": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "cholecalciferol": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "cholesterol": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "coco-betaine": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "cocos nucifera (coconut) oil": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "colloidal oatmeal": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "copernicia cerifera (carnauba) wax": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "copper pca": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "copper tripeptide-34": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "curcumin": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "dextran": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "dicaprylyl ether": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "dipotassium glycyrrhizate": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "dipotassium phosphate": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "disodium cocoyl glutamate": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "distarch phosphate": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "eau": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "ethoxydiglycol": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "ethyl macadamiate": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "euphorbia cerifera (candelilla) wax": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "folic acid": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "fructose": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "fumaric acid": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "gluconolactone": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "glycerin": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "glyceryl isostearate": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "glyceryl laurate": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "glyceryl stearate": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "glycine": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "glycolic acid": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "hectorite": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "hexyl laurate": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "histidine": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "hydrocortisone": {
+   "c": [
+    2
+   ],
+   "l": false,
+   "n": "User decision 2026-10-27: drug (HPA-axis suppression, endocrine effect); not a cosmetic ingredient."
+  },
+  "hydrogenated castor oil": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "hydrogenated jojoba oil": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "hydrogenated lecithin": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "hydrogenated olive oil": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "hydrogenated palm glycerides": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "hydrogenated vegetable oil": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "hydrolyzed hyaluronic acid": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "hydroxyacetophenone": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "hydroxyapatite": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "hydroxypropyl guar": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "hydroxypropyl guar hydroxypropyltrimonium chloride": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "hydroxypropyl starch phosphate": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "isohexadecane": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "isoleucine": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "isononyl isononanoate": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "isopropyl alcohol": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "isopropyl myristate": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "isopropyl palmitate": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "isostearyl neopentanoate": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "jojoba esters": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "lactic acid": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "lauric acid": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "lauroyl/myristoyl methyl glucamide": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "lecithin": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "levulinic acid": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "lithium magnesium sodium silicate": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "magnesium stearate": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "malic acid": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "maltodextrin": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "menthyl lactate": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "methyl diisopropyl propionamide": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "methyl glucose sesquistearate": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "methylpropanediol": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "microcrystalline cellulose": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "mineral salts": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "myristic acid": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "niacinamide": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "octyldodecanol": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "olea europaea (olive) fruit oil": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "ozokerite": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "palmitic acid": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "palmitoyl tetrapeptide-7": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "palmitoyl tripeptide-1": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "pantolactone": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "pca": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "persea gratissima (avocado) oil": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "phenylalanine": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "phytosphingosine": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "piroctone olamine": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "polyacrylate crosspolymer-6": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "polyepsilon-lysine": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "polyglutamic acid": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "polyglyceryl-3 cocoate": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "polyglyceryl-3 polyricinoleate": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "polyglyceryl-4 isostearate": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "polyglyceryl-4 laurate": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "polyglyceryl-6 behenate": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "polyglyceryl-6 caprylate": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "polyglyceryl-6 esters": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "polyglyceryl-6 oleate": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "polyglyceryl-6 ricinoleate": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "polyglyceryl-6 stearate": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "polyquaternium-10": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "polyquaternium-37": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "polyquaternium-7": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "polyquaternium-71": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "polyurethane-62": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "potassium cetyl phosphate": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "potassium lactate": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "potassium phosphate": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "pramoxine hydrochloride": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "proline": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "prunus amygdalus dulcis (sweet almond) oil": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "pullulan": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "pyridoxine hcl": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "pyrus malus (apple) fruit extract": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "retinol": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "ricinus communis (castor) seed oil": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "sandalore": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "sclerotium gum": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "serine": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "simmondsia chinensis seed oil": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "sodium acrylates/beheneth-25 methacrylate crosspolymer": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "sodium acryloyldimethyltaurate/vp crosspolymer": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "sodium ascorbyl phosphate": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "sodium bicarbonate": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "sodium chloride": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "sodium cocoyl glutamate": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "sodium cocoyl methyl isethionate": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "sodium formate": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "sodium glycolate": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "sodium hyaluronate crosspolymer": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "sodium hydroxide": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "sodium isethionate": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "sodium lactate": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "sodium lauroyl lactylate": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "sodium lauroyl sarcosinate": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "sodium lauryl sulfoacetate": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "sodium metabisulfite": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "sodium methyl cocoyl taurate": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "sodium methyl oleoyl taurate": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "sodium pca": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "sodium polyacrylate": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "sodium polyitaconate": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "sodium starch octenylsuccinate": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "sorbitan isostearate": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "sorbitan tristearate": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "sorbitol": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "stearic acid": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "stearyl behenate": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "sucrose": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "sucrose laurate": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "sucrose palmitate": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "sucrose stearate": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "tetrasodium glutamate diacetate": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "threonine": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "titanium dioxide (ci 77891)": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "tocopherol": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "tocopheryl acetate": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "trideceth-6": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "trimethylbenzenepropanol": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "tripeptide-1": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "ubiquinone": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "urea": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "valine": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "volcanic ash": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "water": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "water/aqua": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "water/aqua/eau": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "xylitol": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "xylitylglucoside": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "zinc chloride": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "zinc citrate": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "zinc pca": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "zinc stearate": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
+  },
+  "eo® essential oil blend": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox: EO essential oil blend (user decision 2026-10-27: Puberty Safe for now)"
+  },
+  "bis-diglyceryl polyacyladipate-2": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox: Synthetic emollient; CIR 2013 safe in cosmetics (user decision 2026-10-27: Puberty Safe for now)"
+  },
+  "sodium stearoyl glutamate": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox: Amino-acid salt emulsifier; described as safe (user decision 2026-10-27: Puberty Safe for now)"
+  },
+  "c10-18 triglycerides": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox: Coconut/palm kernel fatty acid triester; non-irritating (user decision 2026-10-27: Puberty Safe for now)"
+  },
+  "phospholipids": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox: Phosphoglycerides; CIR 2020 safe (user decision 2026-10-27: Puberty Safe for now)"
+  },
+  "coco-caprylate/caprate": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox: Alias of Coconut alkanes (aka coco-caprylate), LOW TOX in PDF; CIR safe up to 50% (user decision 2026-10-27)"
+  },
+  "heptyl glucoside": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox: Glucoside surfactant; no data showing concern (user decision 2026-10-27: Puberty Safe for now)"
+  },
+  "biotin": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox: Vitamin B7; CIR safe as used; FDA GRAS as nutrient (user decision 2026-10-27: Puberty Safe for now)"
+  },
+  "glyceryl stearate citrate": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox: Plant-derived emulsifier; low irritation, non-comedogenic (user decision 2026-10-27: Puberty Safe for now)"
+  },
+  "ethanol": {
+   "c": [
+    4
+   ],
+   "l": false,
+   "n": "Irritation (category 4) only; drying/irritating in leave-on products. User decision 2026-10-27."
+  },
+  "ethyl alcohol": {
+   "c": [
+    4
+   ],
+   "l": false,
+   "n": "Irritation (category 4) only; drying/irritating in leave-on products. User decision 2026-10-27."
+  },
+  "oryzanol": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox: Antistatic/skin conditioner. Rat 90-day study: no significant endocrine effects; no carcinogenicity reported; Ames negative (PMC5615091). User rule: no concern found = safe (2026-10-27)."
+  },
+  "phytosterols": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox: Skin conditioner. No endocrine or carcinogenic concern found in sources read; estrogenicity study result not visible. User rule: not found = safe (2026-10-27)."
+  },
+  "zinc pyrithione": {
+   "c": [
+    1,
+    2
+   ],
+   "l": false,
+   "n": "User decision 2026-10-27: not low-tox; carcinogenic (cat 1) and reprotoxic (mapped to cat 2, closest available category). ECHA proposed CMR 1B."
+  },
+  "arnica": {
+   "c": [
+    4
+   ],
+   "l": false,
+   "n": "User decision 2026-10-27: skin irritation (cat 4) only; puberty safe, not eczema safe. Source: Norwegian risk profile (2012)."
+  },
+  "montmorillonite": {
+   "c": [
+    1,
+    2
+   ],
+   "l": false,
+   "cond": "inhalation_risk",
+   "n": "User decision 2026-10-27: problematic in loose powders and sprays only (inhalation fibrosis); mirrors silica treatment."
+  },
+  "alcohol denat": {
+   "c": [
+    2,
+    4
+   ],
+   "l": false,
+   "n": "User decision 2026-10-27: category 4 plus endocrine (cat 2) out of caution. CIR: data insufficient for some denaturants."
+  },
+  "honey": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox per user decision 2026-10-27: Eczema Safe (widely used in eczema products)."
+  },
+  "polyglycerin-3": {
+   "c": [],
+   "l": true,
+   "n": "User decision 2026-10-27 (editorial sources only, no concern found): editorial low irritation, no concern found; verify against CIR."
+  },
+  "glyceryl undecylenate": {
+   "c": [],
+   "l": true,
+   "n": "User decision 2026-10-27 (editorial sources only, no concern found): editorial low irritation, no concern found; verify against CIR."
+  },
+  "polyglyceryl-6 distearate": {
+   "c": [],
+   "l": true,
+   "n": "User decision 2026-10-27 (editorial sources only, no concern found): editorial low irritation, no concern found; verify against CIR."
+  },
+  "polyglyceryl-3 methylglucose distearate": {
+   "c": [],
+   "l": true,
+   "n": "User decision 2026-10-27 (editorial sources only, no concern found): editorial low irritation, no concern found; verify against CIR."
+  },
+  "polyglyceryl-10 laurate": {
+   "c": [],
+   "l": true,
+   "n": "User decision 2026-10-27 (editorial sources only, no concern found): editorial low irritation, no concern found; verify against CIR."
+  },
+  "polyglyceryl-4 diisostearate/polyhydroxystearate/sebacate": {
+   "c": [],
+   "l": true,
+   "n": "User decision 2026-10-27 (editorial sources only, no concern found): editorial low irritation, no concern found; verify against CIR."
+  },
+  "isosorbide dicaprylate": {
+   "c": [],
+   "l": true,
+   "n": "User decision 2026-10-27 (editorial sources only, no concern found): editorial low irritation, no concern found; verify against CIR."
+  },
+  "coco-caprylate": {
+   "c": [],
+   "l": true,
+   "n": "User decision 2026-10-27 (editorial sources only, no concern found): editorial low irritation, no concern found; verify against CIR."
+  },
+  "coco caprylate": {
+   "c": [],
+   "l": true,
+   "n": "User decision 2026-10-27 (editorial sources only, no concern found): editorial low irritation, no concern found; verify against CIR."
+  },
+  "gellan gum": {
+   "c": [],
+   "l": true,
+   "n": "User decision 2026-10-27 (editorial sources only, no concern found): editorial low irritation, no concern found; verify against CIR."
+  },
+  "dimethyl isosorbide": {
+   "c": [],
+   "l": true,
+   "n": "User decision 2026-10-27 (editorial sources only, no concern found): editorial low irritation, no concern found; verify against CIR."
+  },
+  "polyisobutene": {
+   "c": [],
+   "l": true,
+   "n": "User decision 2026-10-27 (editorial sources only, no concern found): editorial low irritation, no concern found; verify against CIR."
+  },
+  "hydrogenated poly(c6-20 olefin)": {
+   "c": [],
+   "l": true,
+   "n": "User decision 2026-10-27 (editorial sources only, no concern found): editorial low irritation, no concern found; verify against CIR."
+  },
+  "heptyl undecylate": {
+   "c": [],
+   "l": true,
+   "n": "User decision 2026-10-27 (editorial sources only, no concern found): editorial low irritation, no concern found; verify against CIR."
+  },
+  "polyglyceryl-2 caprate": {
+   "c": [
+    4
+   ],
+   "l": false,
+   "n": "User decision 2026-10-27 (editorial sources only, no concern found): related polyglyceryl esters mildly irritating; irritation category 4 only."
+  },
+  "manganese violet": {
+   "c": [
+    3
+   ],
+   "l": false,
+   "n": "User decision 2026-10-27 (editorial sources only, no concern found): manganese pigment; heavy-metal category 3."
+  },
+  "eucalyptol": {
+   "c": [],
+   "l": true,
+   "n": "User decision 2026-10-27 (editorial sources only, no concern found): reproductive read-across adequate; no irritation data (eczema status not established)."
+  },
+  "gamma-nonalactone": {
+   "c": [],
+   "l": true,
+   "n": "User decision 2026-10-27: puberty safe and eczema safe per research (high/medium confidence, no irritation or genotoxicity concern)."
+  },
+  "methylbenzyl acetate": {
+   "c": [],
+   "l": true,
+   "n": "User decision 2026-10-27: puberty safe and eczema safe per research (high/medium confidence, no irritation or genotoxicity concern)."
+  },
+  "hexyl acetate": {
+   "c": [],
+   "l": true,
+   "n": "User decision 2026-10-27: puberty safe and eczema safe per research (high/medium confidence, no irritation or genotoxicity concern)."
+  },
+  "dimethyl heptenal": {
+   "c": [],
+   "l": true,
+   "n": "User decision 2026-10-27: puberty safe and eczema safe per research (high/medium confidence, no irritation or genotoxicity concern)."
+  },
+  "mixed ionones": {
+   "c": [],
+   "l": true,
+   "n": "User decision 2026-10-27: puberty safe and eczema safe per research (high/medium confidence, no irritation or genotoxicity concern)."
+  },
+  "avena sativa (oatmeal) kernel meal": {
+   "c": [],
+   "l": true,
+   "n": "User decision 2026-10-27: puberty safe and eczema safe per research (high/medium confidence, no irritation or genotoxicity concern)."
+  },
+  "sodium dehydroacetate": {
+   "c": [],
+   "l": true,
+   "n": "User decision 2026-10-27: puberty safe and eczema safe per research (high/medium confidence, no irritation or genotoxicity concern)."
+  },
+  "ascorbyl glucoside": {
+   "c": [],
+   "l": true,
+   "n": "User decision 2026-10-27: puberty safe and eczema safe per research (high/medium confidence, no irritation or genotoxicity concern)."
+  },
+  "geranyl acetate": {
+   "c": [
+    4
+   ],
+   "l": false,
+   "n": "User decision 2026-10-27: skin sensitizer (RIFM)."
+  },
+  "benzyl nicotinate": {
+   "c": [
+    4
+   ],
+   "l": false,
+   "n": "User decision 2026-10-27: concentration-dependent irritation and sensitization."
+  },
+  "coco-glucosides": {
+   "c": [
+    4
+   ],
+   "l": false,
+   "n": "User decision 2026-10-27: can irritate some skin types."
+  },
+  "lauryl olivate": {
+   "c": [
+    4
+   ],
+   "l": false,
+   "n": "User decision 2026-10-27: flagged potential allergen."
+  },
+  "orange terpenes": {
+   "c": [
+    4
+   ],
+   "l": false,
+   "n": "User decision 2026-10-27: EU-labeled allergens (limonene, linalool, citral)."
+  },
+  "wild orange (certified organic ingredient)": {
+   "c": [
+    4
+   ],
+   "l": false,
+   "n": "User decision 2026-10-27: citrus peel oil; allergens and 5-MOP cap."
+  },
+  "tocopherol acetate": {
+   "c": [
+    4
+   ],
+   "l": false,
+   "n": "User decision 2026-10-27: contact dermatitis 0.5-1%, higher in eczema."
+  },
+  "alkyl acrylate crosspolymer": {
+   "c": [
+    4
+   ],
+   "l": false,
+   "n": "User decision 2026-10-27: weak irritation in intensified patch test; benzene-polymerized form not allowed."
+  },
+  "acrylates / c10-30 alkyl acrylate crosspolymer": {
+   "c": [
+    4
+   ],
+   "l": false,
+   "n": "User decision 2026-10-27: weak irritation and sensitization at 2%; benzene-polymerized form not allowed."
+  },
+  "sodium cocoamphoacetate": {
+   "c": [
+    4
+   ],
+   "l": false,
+   "n": "User decision 2026-10-27: contact allergy case report."
+  },
+  "asiaticoside": {
+   "c": [
+    4
+   ],
+   "l": false,
+   "n": "User decision 2026-10-27: possible cross-reactivity with Apiaceae allergy."
+  },
+  "octyldodecyl oleate": {
+   "c": [
+    4
+   ],
+   "l": false,
+   "n": "User decision 2026-10-27: irritation unassessed; hold eczema status."
+  },
+  "oil of wintergreen": {
+   "c": [
+    1,
+    2,
+    4
+   ],
+   "l": false,
+   "n": "User decision 2026-10-27: skin sensitizer (cat 4) and reproductive toxicant by read-across (cat 2). Carcinogen category 1 not assigned."
+  },
+  "carbamide peroxide": {
+   "c": [
+    1
+   ],
+   "l": false,
+   "n": "User decision 2026-10-27: hydrogen peroxide carcinogenicity signal in mice; treated as category 1 out of caution."
+  },
+  "blue yarrow (certified organic ingredient)": {
+   "c": [
+    1
+   ],
+   "l": false,
+   "n": "User decision 2026-10-27: CIR abstract names hydroquinone as a constituent of concern."
+  },
+  "sodium lauryl sarcosinate": {
+   "c": [
+    1
+   ],
+   "l": false,
+   "n": "User decision 2026-10-27: conflicting carcinogenicity entries; category 1 out of caution pending CAS check."
+  },
+  "minoxidil": {
+   "c": [
+    2
+   ],
+   "l": false,
+   "n": "User decision 2026-10-27: drug; case report of hypertrichosis; not a cosmetic ingredient. Category assigned out of caution."
+  }
+ },
+ "aliases": {
+  "fragrance": "fragrance/parfum",
+  "parfum": "fragrance/parfum",
+  "parfum/fragrance": "fragrance/parfum",
+  "fragrance/parfum": "fragrance/parfum",
+  "natural fragrance": "fragrance/parfum",
+  "titanium dioxide": "ci 77891 (titanium dioxide)",
+  "ci 77891": "ci 77891 (titanium dioxide)",
+  "red iron oxide": "ci 77491 (red iron oxide)",
+  "yellow iron oxide": "ci 77492 (yellow iron oxide)",
+  "black iron oxide": "ci 77499 (black iron oxide)",
+  "ci 77491": "ci 77491 (red iron oxide)",
+  "ci 77492": "ci 77492 (yellow iron oxide)",
+  "ci 77499": "ci 77499 (black iron oxide)",
+  "niacinamide": "niacinamide (vitamin b3)",
+  "tocopherol": "tocopherol (vitamin e)",
+  "ascorbic acid": "ascorbic acid (vitamin c)",
+  "salt": "sodium chloride (table salt)",
+  "sodium chloride": "sodium chloride (table salt)",
+  "salicylic acid": "salicylic acid",
+  "iron oxide": "iron oxides",
+  "behentrimonium chloride": "behentrimonium chloride",
+  "cera alba": "beeswax",
+  "sodium c14-16 olefin sulfonate": "sodium c14-16 olefin sulfonate",
+  "1,2 hexanediol": "1,2-hexanediol",
+  "2,3 butanediol": "2,3-butanediol",
+  "slmi": "sodium lauroyl methyl isethionate",
+  "dmae": "dimethyl mea",
+  "c14-16 olefin sulfonate": "sodium c14-16 olefin sulfonate",
+  "tocopherol (vitamin e": "tocopherol (vitamin e)",
+  "tocopherols": "tocopherol (vitamin e)",
+  "mixed tocopherols": "tocopherol (vitamin e)",
+  "vitamin e": "tocopherol (vitamin e)",
+  "lauryl glucoside": "lauryl-glucoside",
+  "pyrithione zinc": "zinc pyrithione",
+  "arnica montana (arnica) flower extract": "arnica",
+  "arnica montana extract": "arnica",
+  "arnica montana flower extract": "arnica",
+  "arnica montana flower extract (1)": "arnica",
+  "arnica*": "arnica",
+  "arnica": "arnica",
+  "arnica montana": "arnica",
+  "alcohol denatured": "alcohol denat",
+  "alcohol denat.": "alcohol denat",
+  "alcohol (denat.)": "alcohol denat",
+  "linaloolᵻ": "linalool",
+  "orange terpenes": "orange terpenes",
+  "tocopheryl": "tocopherol acetate",
+  "vitamin e acetate": "tocopherol acetate",
+  "petrolatum 30%": "petrolatum",
+  "hydrocortisone 1%": "hydrocortisone",
+  "methyl salicylate": "oil of wintergreen",
+  "wild orange": "wild orange (certified organic ingredient)",
+  "alcohol (dent)": "alcohol denat",
+  "polysorbate-20": "polysorbate 20"
+ }
+}

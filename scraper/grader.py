@@ -138,11 +138,17 @@ def split_ingredients(text):
     # Temporarily swap digit-digit commas for a sentinel, split, then restore.
     SENTINEL = '\x00'
     t = re.sub(r'(?<=\d),(?=\d)', SENTINEL, t)
+    # Keep commas inside parentheses together: "Glycerin (Vegetable, Organic)"
+    # is one ingredient, not a fragment "glycerin (vegetable" plus "organic)".
+    t = re.sub(r'\([^()]*\)', lambda m: m.group(0).replace(',', SENTINEL), t)
+    # Drop bracketed site notes such as "[brand site shows marketing-only summary]".
+    t = re.sub(r'\[[^\]]*\]?', '', t)
     parts = re.split(r'[,;]|\.\s+', t)
     parts = [p.replace(SENTINEL, ',') for p in parts]
     out = []
     for p in parts:
         p = p.strip(' .;,:')
+        p = re.sub(r'\s*\(\d{1,2}\)\s*$', '', p)  # footnote markers: "alcohol (1)"
         p = re.sub(r'\s*\d+(\.\d+)?\s*%\s*$', '', p)
         p = re.sub(r'^\s*\d+(\.\d+)?\s*%\s*', '', p)
         p = re.sub(r'\([^)]*\d+(\.\d+)?\s*%[^)]*\)', '', p)
@@ -150,6 +156,15 @@ def split_ingredients(text):
         low = p.lower()
         if low in ('ingredients','inactive ingredients','active ingredient','active ingredients','inactive','active'): continue
         if 'may contain' in low: continue
+        # Marketing claims printed in the ingredient area, not ingredients.
+        if re.fullmatch(r'(non[- ]?gmo|gmo[- ]free|bpa[- ]free(?: plastic)?|vegan|cruelty[- ]free|gluten[- ]free|not an? .*|plant[- ]based.*|made (with|in) .*|certified .* (cotton|organic)|.*\bsummary\b.*)\)?', low): continue
+        # Fragments left by an unmatched parenthesis ("non-gmo)") carry no ingredient name.
+        if low.endswith(')') and '(' not in low: continue
+        # Packaging and benefit copy printed next to the ingredient list.
+        if re.search(r'\b(wrappers?|applicators?|packaging|recyclable|compostable|pouch|bottle|pump)\b', low): continue
+        if re.search(r'chlorine-free|natural component|†', low): continue
+        if ' – ' in p or ' helps ' in low or 'botanical that' in low or 'stronger-looking' in low: continue
+        if re.fullmatch(r'inwater', low): continue
         out.append(p)
     return out
 
@@ -192,16 +207,47 @@ def infer_product_type(name, hint=None):
         return 'powder'
     return 'leave-on skincare'
 
+# Option 4 (approved): unknown ingredients that are fragrance components, botanicals,
+# or mineral salts/powders are listed in the summary as unknown but do not, by
+# themselves, lower a Puberty Safe product to Use Caution.
+_EXEMPT_FRAG = set(x for x in """hexyl cinnamal|citronellol|benzyl salicylate|benzyl benzoate|menthol|camphor|pinene|alpha-pinene|beta-pinene|terpineol|beta-caryophyllene|linalyl acetate|linalool|limonene|geraniol|citral|alpha-isomethyl ionone|tetramethyl acetyloctahydronaphthalenes|gamma-decalactone|maltol|isoamyl acetate|eugenol|cinnamyl alcohol|coumarin|farnesol|benzyl alcohol|hydroxycitronellal|amyl cinnamal|butylphenyl methylpropional""".split('|'))
+
+def is_exempt_unknown(name):
+    low = norm(name)
+    low = re.sub(r'[+^†‡]+', '', low)                      # footnote symbols: "Pinene+", "Sodium Hyaluronate^"
+    low = re.sub(r'\s*\(\d{1,2}\)\s*$', '', low).strip()
+    low = re.sub(r'(?<=[a-z])\d{1,2}$', '', low).strip()   # footnote digit: "Benzyl Benzoate1"
+    low = low.strip(' –-')
+    if low in _EXEMPT_FRAG: return True
+    # Botanicals: "organic ...", plant names with a Latin binomial, or entries marked as plant items.
+    if low.startswith('organic ') or re.search(r'\b(extract|powder|flour|seed|leaf|stem|bark|root|peel|flower|fruit|sucrose)\b', low): return True
+    if re.search(r'\b(olea|pisum|zea|cocos|bambusa|chenopodium|mentha|lavandula|vanilla|lavender|peppermint|tansy|ylang|hypericum|kale|lemon|carrot|rice|coconut|citrus|daucus|brassica)\b', low): return True
+    if 'silicon dioxide' in low: return True
+    if name.strip().endswith('*'): return True
+    # Mineral salts, clays, silica and powders.
+    if re.search(r'\b(carbonate|hydroxide|oxide|silica|bentonite|clay|sea salt|salt|ascorbate|starch)\b', low): return True
+    return False
+
+# Inhalation-only colorants and fillers: flagged only in powders, sprays, mists and aerosols.
+_INHAL_ONLY_WORDS = ('mica', 'silica', 'iron oxide', 'titanium dioxide', 'talc')
+
+def _inhal_only(name):
+    low = (name or '').lower()
+    if 'silylate' in low or 'silicone' in low: return False
+    if re.search(r'\bsilica\b', low) and 'hydrated' not in low: return True
+    return any(w in low for w in _INHAL_ONLY_WORDS if w != 'silica')
+
 def grade(product_name, product_type, verbatim):
     ingredients = split_ingredients(verbatim)
+    _inhal_product = is_inhalation_risk(product_name, product_type)
     verbatim_lower = verbatim.lower()
     flagged = []; natural = []; unknown = []; escalations = set()
     seen = set()
-    for ing in ingredients:
+    for _pos, ing in enumerate(ingredients, start=1):
         low = norm(ing)
         if not low or low in seen: continue
         if re.match(r'^(aqua|water|eau)\)?(\s*[/(]\s*(aqua|water|eau)\s*\)?)*$', low): continue  # User decision: water is exempt
-        if low in ('glycerin', 'vegetable glycerin'): continue  # User decision: glycerin is left alone (not flagged, not unknown)
+        if re.match(r'^(vegetable |organic )?glycerin\b\s*(\(.*\))?$', low): continue  # User decision: glycerin is left alone (not flagged, not unknown)
         seen.add(low)
         if 'behentrimonium methosulfate' in low: continue
         if is_fatty_alc(low): continue
@@ -211,13 +257,17 @@ def grade(product_name, product_type, verbatim):
             continue
         if low in LOW_TOX and ALIASES.get(low, low) in REF and not REF[ALIASES.get(low, low)].get('c'): continue
         if low.startswith('ceramide '): continue
-        _sc = not re.match(r'^(peg|ppg)[-\s/]', low)  # PEG/PPG ethoxylates are never skipped as oils or extracts
+        _sc = not re.match(r'^(peg|ppg)[-\s/]', low) and 'arnica' not in low  # PEG/PPG ethoxylates and arnica (user decision) are never skipped as extracts
         if _sc and (' leaf extract' in low or ' flower extract' in low or ' fruit extract' in low or ' root extract' in low or ' seed extract' in low or ' bark extract' in low or ' peel extract' in low or ' stem extract' in low):
             continue
         if _sc and ('ferment' in low or 'extract' in low or low.endswith(' oil') or 'butter' in low or 'juice' in low or low.endswith(' wax') or low.endswith(' bran') or ' seed oil' in low or ' root oil' in low or ' peel oil' in low or low.endswith(' water')):
             continue
         if low.endswith(' acid') and not any(b in low for b in ['acrylic acid','sulfonic acid']):
             continue
+        # Mica: a concern only when it is one of the first 3 ingredients (or in an inhalable product).
+        if 'mica' in low and not _inhal_product and _pos > 3: continue
+        # Inhalation-only colorants and fillers in non-inhalable products do not flag.
+        if _inhal_only(low) and not _inhal_product and 'mica' not in low: continue
         key = ALIASES.get(low, low)
         if key not in REF:
             _base = re.sub(r'\s*\([^)]*\)\s*$', '', key).strip()
@@ -260,6 +310,9 @@ def grade(product_name, product_type, verbatim):
         matched = False
         for pat, cats, label in PATTERN_WATCH:
             if pat.search(low):
+                if _inhal_only(label) and not _inhal_product:
+                    matched = True
+                    break
                 if cats:
                     flagged.append((ing + f' [inferred: {label}]', cats))
                     if 3 in cats:
@@ -297,7 +350,9 @@ def grade(product_name, product_type, verbatim):
     # Skin-irritation-only flags (category 4 and nothing else) stay visible in the
     # flagged list but do not count toward the tier. Irritation alone never moves a
     # product out of Puberty Safe; it only affects the Eczema Safe label.
-    flagged = [(n, c) for n, c in flagged_all if set(c) != {4}]
+    # Categories 4 (skin irritation) and 5 (microbiome / skin barrier) are listed in the
+    # summary but never count toward the tier. Approved by user.
+    flagged = [(n, c) for n, c in flagged_all if not set(c) <= {4, 5}]
     flag_count = len(flagged)
     has_paraben = any('paraben' in n.lower() for n,_ in flagged)
     # Match any fragrance variant: trailing *, **, dagger, parentheticals, "Fragrance (Parfum)*", etc.
@@ -364,6 +419,10 @@ def grade(product_name, product_type, verbatim):
     if has_form: esc.append('formaldehyde-releaser')
     if has_carc_lo: esc.append('carcinogen in leave-on')
     if has_endocrine: esc.append('endocrine disruption')
+    # Unknown ingredients lower a Puberty Safe product to Use Caution. For any other
+    # tier they do not change the grade; they are listed in the summary instead.
+    if tier == 'Puberty Safe' and [u for u in unknown if not is_exempt_unknown(u)]:
+        tier = 'Use Caution'
     return tier, flag_count, flagged_all, natural, unknown, esc
 
 
