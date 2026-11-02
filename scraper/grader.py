@@ -109,7 +109,7 @@ PATTERN_WATCH = [
     (re.compile(r'^methylisothiazolinone|^methylchloroisothiazolinone', re.I), [4,7], 'isothiazolinone'),
     (re.compile(r'monium|quaternium|alkonium', re.I), [2], 'nium quat (inferred from naming pattern)'),
     (re.compile(r'\w*eth\b', re.I), [1, 4, 5], 'eth ethoxylate (inferred from naming pattern)'),
-    (re.compile(r'^(?:[a-z\-]+\s*)*glycol$', re.I), [1, 2], 'glycol (inferred from naming pattern)'),
+    (re.compile(r'^[a-z\- ]*glycol$', re.I), [1, 2], 'glycol (inferred from naming pattern)'),
 ]
 
 def norm(s):
