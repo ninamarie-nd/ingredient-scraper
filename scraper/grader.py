@@ -57,7 +57,7 @@ PATTERN_WATCH = [
     (re.compile(r'sulfate$', re.I), [1,4,5], 'sulfate'),
     (re.compile(r'^sodium c14-16 olefin sulfonate$', re.I), [4], 'sodium C14-16 olefin sulfonate'),
     (re.compile(r'phthalate', re.I), [2], 'phthalate'),
-    (re.compile(r'\bbenzophenone\b', re.I), [3], 'benzophenone'),
+    (re.compile(r'\bbenzophenone\b', re.I), [2], 'benzophenone'),
     (re.compile(r'^propylene glycol$|^butylene glycol$|^hexylene glycol$|^ethylene glycol$|^dipropylene glycol$', re.I), [1,2], '-glycol'),
     (re.compile(r'monium chloride$|^behenalkonium|^stearalkonium|^cetrimonium|^cetyl pyridinium|^guar hydroxypropyltrimonium|hydroxypropyltrimonium chloride$|dicetyldimonium chloride$|^behentrimonium chloride', re.I), [2], '-nium quat'),
     # (Phenoxyethanol pattern moved up and corrected — dropped cat-8 formaldehyde-releaser flag.)
@@ -107,6 +107,9 @@ PATTERN_WATCH = [
     (re.compile(r'^sodium benzotriazolyl butylphenol sulfonate$', re.I), [1,2], 'polymeric UV absorber'),
     (re.compile(r'^dmdm hydantoin|^diazolidinyl urea|^imidazolidinyl urea|^quaternium-15', re.I), [1,2,4,5], 'formaldehyde releaser'),
     (re.compile(r'^methylisothiazolinone|^methylchloroisothiazolinone', re.I), [4,7], 'isothiazolinone'),
+    (re.compile(r'monium|quaternium|alkonium', re.I), [2], 'nium quat (inferred from naming pattern)'),
+    (re.compile(r'\w*eth\b', re.I), [1, 4, 5], 'eth ethoxylate (inferred from naming pattern)'),
+    (re.compile(r'^(?:[a-z\-]+\s*)*glycol$', re.I), [1, 2], 'glycol (inferred from naming pattern)'),
 ]
 
 def norm(s):
@@ -243,6 +246,7 @@ def grade(product_name, product_type, verbatim):
     verbatim_lower = verbatim.lower()
     flagged = []; natural = []; unknown = []; escalations = set()
     seen = set()
+    min_tiers = []  # reference entries that set a minimum tier (user decision 2026-11-01)
     for _pos, ing in enumerate(ingredients, start=1):
         low = norm(ing)
         if not low or low in seen: continue
@@ -255,6 +259,10 @@ def grade(product_name, product_type, verbatim):
         if nf:
             natural.append((ing, [4,8]))
             continue
+        # Rubric: a naturally occurring fragrance component is a soft flag only when its
+        # source (an essential oil / extract) is listed. Otherwise it is plain fragrance.
+        if low in NAT_FRAG:
+            flagged.append((ing, [1,2,4,8])); continue
         if low in LOW_TOX and ALIASES.get(low, low) in REF and not REF[ALIASES.get(low, low)].get('c'): continue
         if low.startswith('ceramide '): continue
         _sc = not re.match(r'^(peg|ppg)[-\s/]', low) and 'arnica' not in low  # PEG/PPG ethoxylates and arnica (user decision) are never skipped as extracts
@@ -276,6 +284,7 @@ def grade(product_name, product_type, verbatim):
             elif _inner and _inner.group(1).strip() in REF: key = _inner.group(1).strip()
         if key in REF:
             d = REF[key]
+            if d.get('min'): min_tiers.append(d['min'])
             if d.get('l'):
                 continue
             # Conditional flags: honored only when the product type matches
@@ -299,10 +308,11 @@ def grade(product_name, product_type, verbatim):
                 # any ingredient with "PFAS" in the note (e.g., dimethicone),
                 # which was over-flagging because the note was "PFAS treated
                 # [sometimes]" rather than "contains PFAS".
-                if 'pfas' in note and (
-                    key in ('silica silylate', 'trimethylsiloxysilicate',
-                            'perfluorooctyl triethoxysilane')
-                    or 'perfluoro' in low):
+                # Rubric: any reference ingredient noted "PFAS treated" forces Avoid (High).
+                # Conditional notes ("May be PFAS treated") do not trigger on their own.
+                if 'pfas treated' in note and 'may be pfas treated' not in note:
+                    escalations.add('PFAS')
+                elif 'pfas' in note and ('perfluoro' in low or 'pfas' in low):
                     escalations.add('PFAS')
                 if 1 in cats and product_type == 'leave-on skincare':
                     escalations.add('carcinogen in leave-on')
@@ -371,15 +381,17 @@ def grade(product_name, product_type, verbatim):
     has_form = 'formaldehyde-releaser' in escalations
     has_cat2 = any(2 in c for _,c in flagged)
     max_cats = max([len(c) for _,c in flagged], default=0)
+    # Tier thresholds count distinct risk categories (1,2,3,6,8; categories 4 and 5 do not count).
+    n_cats = len({k for _,c in flagged for k in c if k not in (4,5)})
     tier = 'Puberty Safe'
     if flag_count == 0:
         tier = 'Puberty Safe'
-    elif flag_count <= 2 and not has_paraben and not has_fragrance and not has_heavy and not has_form:
+    elif n_cats <= 2 and not has_paraben and not has_fragrance and not has_heavy and not has_form:
         tier = 'Use Caution'
-    elif flag_count >= 3 or max_cats >= 3 or has_paraben:
+    elif n_cats >= 3 or max_cats >= 3 or has_paraben:
         tier = 'Avoid (Mild)'
     order = ['Puberty Safe','Use Caution','Avoid (Mild)','Avoid (Moderate)','Avoid (High)']
-    if has_heavy or has_form or has_fragrance or flag_count >= 5:
+    if has_heavy or has_form or has_fragrance or n_cats >= 5:
         if order.index(tier) < order.index('Avoid (Moderate)'):
             tier = 'Avoid (Moderate)'
     # Endocrine disruption escalation. Triggered when either:
@@ -407,12 +419,16 @@ def grade(product_name, product_type, verbatim):
     cat2_hits = [n for n,c in flagged if 2 in c and not _is_fragrance_name(n)]
     has_endocrine = bool(high_endo_hits) or len(cat2_hits) >= 3
 
-    if has_pfas or flag_count >= 8 or has_carc_lo or (has_heavy and has_cat2 and has_fragrance):
+    has_cat1 = any(1 in c for _,c in flagged)
+    if has_pfas or n_cats >= 8 or has_carc_lo or (has_heavy and (has_cat1 or has_cat2)):
         tier = 'Avoid (High)'
     # Multi-marker endocrine disruption on its own is enough to escalate to HPS
     if has_endocrine and (len(cat2_hits) >= 3 or len(high_endo_hits) >= 2):
         tier = 'Avoid (High)'
 
+    _order = ['Puberty Safe','Use Caution','Avoid (Mild)','Avoid (Moderate)','Avoid (High)']
+    for _mt in min_tiers:
+        if _order.index(tier) < _order.index(_mt): tier = _mt
     esc = []
     if has_pfas: esc.append('PFAS')
     if has_heavy: esc.append('heavy metals')

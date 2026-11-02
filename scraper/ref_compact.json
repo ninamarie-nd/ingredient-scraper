@@ -1463,11 +1463,13 @@
   },
   "limonene": {
    "c": [
+    1,
+    2,
     4,
     8
    ],
    "l": false,
-   "n": "Watch for: \"(Natural) Fragrance or Parfum\""
+   "n": "Plain fragrance when no essential-oil source is listed (user decision 2026-11-01)"
   },
   "linalool": {
    "c": [
@@ -1644,7 +1646,8 @@
     1
    ],
    "l": false,
-   "n": ""
+   "n": "Petroleum-derived: min tier Avoid (High), like petrolatum (user decision 2026-11-01)",
+   "min": "Avoid (High)"
   },
   "monoethanolamine": {
    "c": [
@@ -1824,14 +1827,16 @@
     1
    ],
    "l": false,
-   "n": ""
+   "n": "Petroleum-derived: min tier Avoid (High), like petrolatum (user decision 2026-11-01)",
+   "min": "Avoid (High)"
   },
   "paraffinum liquidum": {
    "c": [
     1
    ],
    "l": false,
-   "n": ""
+   "n": "Petroleum-derived: min tier Avoid (High), like petrolatum (user decision 2026-11-01)",
+   "min": "Avoid (High)"
   },
   "paraformaldehyde": {
    "c": [
@@ -1954,7 +1959,8 @@
     1
    ],
    "l": false,
-   "n": "User decision 2026-10-27: PAH contamination concern (advocacy source); category 1 pending verified refining."
+   "n": "Petroleum-derived: min tier Avoid (High), like petrolatum (user decision 2026-11-01)",
+   "min": "Avoid (High)"
   },
   "petroleum": {
    "c": [
@@ -2482,7 +2488,8 @@
   "salicylic acid": {
    "c": [],
    "l": true,
-   "n": ""
+   "n": "Drug (user decision 2026-11-01). Min tier per user; not eczema safe. Puberty Safe; not eczema safe.",
+   "ez": false
   },
   "silica": {
    "c": [
@@ -3694,7 +3701,9 @@
     2
    ],
    "l": false,
-   "n": "User decision 2026-10-27: drug (HPA-axis suppression, endocrine effect); not a cosmetic ingredient."
+   "n": "Drug (user decision 2026-11-01). Min tier per user; not eczema safe. Avoid (Moderate).",
+   "min": "Avoid (Moderate)",
+   "ez": false
   },
   "hydrogenated castor oil": {
    "c": [],
@@ -4276,11 +4285,6 @@
    "l": true,
    "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
   },
-  "titanium dioxide (ci 77891)": {
-   "c": [],
-   "l": true,
-   "n": "Low-tox (from grader LOW_TOX list; added 2026-10-27)"
-  },
   "tocopherol": {
    "c": [],
    "l": true,
@@ -4726,6 +4730,1238 @@
    ],
    "l": false,
    "n": "User decision 2026-10-27: drug; case report of hypertrichosis; not a cosmetic ingredient. Category assigned out of caution."
+  },
+  "vitamin c (as ascorbic acid)": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox: vitamin/antioxidant/nutrient (user decision 2026-11-01)"
+  },
+  "skin safe synthetic ingredients: ascorbyl palmitate": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox: vitamin/antioxidant/nutrient (user decision 2026-11-01)"
+  },
+  "vitamin b3": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox: vitamin/antioxidant/nutrient (user decision 2026-11-01)"
+  },
+  "pro-vitamin b5": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox: vitamin/antioxidant/nutrient (user decision 2026-11-01)"
+  },
+  "mixed tocopherols (vitamin e)": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox: vitamin/antioxidant/nutrient (user decision 2026-11-01)"
+  },
+  "mixed tocopherols (vitamin e from sunflower oil)": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox: vitamin/antioxidant/nutrient (user decision 2026-11-01)"
+  },
+  "beta-carotene": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox: vitamin/antioxidant/nutrient (user decision 2026-11-01)"
+  },
+  "coq10": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox: vitamin/antioxidant/nutrient (user decision 2026-11-01)"
+  },
+  "quercetin": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox: vitamin/antioxidant/nutrient (user decision 2026-11-01)"
+  },
+  "retinyl propionate": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox: vitamin/antioxidant/nutrient (user decision 2026-11-01)"
+  },
+  "hydroxypinacolone retinoate": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox: vitamin/antioxidant/nutrient (user decision 2026-11-01)"
+  },
+  "melatonin": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox: nutrient/hormone supplement, user decision 2026-11-01. Not eczema safe per user.",
+   "ez": false
+  },
+  "zinc gluconate": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox: vitamin/antioxidant/nutrient (user decision 2026-11-01)"
+  },
+  "lysine hcl": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox: vitamin/antioxidant/nutrient (user decision 2026-11-01)",
+   "ez": true
+  },
+  "l-proline": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox: vitamin/antioxidant/nutrient (user decision 2026-11-01)",
+   "ez": true
+  },
+  "glucose": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox: vitamin/antioxidant/nutrient (user decision 2026-11-01)"
+  },
+  "trehalose": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox: vitamin/antioxidant/nutrient (user decision 2026-11-01)"
+  },
+  "erythritol": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox: vitamin/antioxidant/nutrient (user decision 2026-11-01)"
+  },
+  "glycogen": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox: vitamin/antioxidant/nutrient (user decision 2026-11-01)"
+  },
+  "glucomannan": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox: vitamin/antioxidant/nutrient (user decision 2026-11-01)"
+  },
+  "collagen peptides (from bovine)": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox: vitamin/antioxidant/nutrient (user decision 2026-11-01)"
+  },
+  "hydrolysed collagen": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox: vitamin/antioxidant/nutrient (user decision 2026-11-01)"
+  },
+  "cera alba (beeswax)/cire d'abeille": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox: wax, non-petroleum (user decision 2026-11-01)"
+  },
+  "synthetic beeswax": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox: wax, non-petroleum (user decision 2026-11-01)"
+  },
+  "euphorbia cerifera (candelilla wax)": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox: wax, non-petroleum (user decision 2026-11-01)"
+  },
+  "euphorbia cerifera (candelilla) cera": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox: wax, non-petroleum (user decision 2026-11-01)"
+  },
+  "euphorbia cerifera (candelilla) wax/cire de candelilla": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox: wax, non-petroleum (user decision 2026-11-01)"
+  },
+  "copernicia cerifera (carnauba) wax/cire de carnauba": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox: wax, non-petroleum (user decision 2026-11-01)"
+  },
+  "ceresin": {
+   "c": [
+    1
+   ],
+   "l": false,
+   "n": "Petroleum-derived: min tier Avoid (High), like petrolatum (user decision 2026-11-01)",
+   "min": "Avoid (High)"
+  },
+  "cera microcristallina (microcrystalline wax)/cire microcristalline": {
+   "c": [
+    1
+   ],
+   "l": false,
+   "n": "Petroleum-derived: min tier Avoid (High), like petrolatum (user decision 2026-11-01)",
+   "min": "Avoid (High)"
+  },
+  "petrolatum 30% (, skin protectant)": {
+   "c": [
+    1
+   ],
+   "l": false,
+   "n": "Petroleum-derived: min tier Avoid (High), like petrolatum (user decision 2026-11-01)",
+   "min": "Avoid (High)"
+  },
+  "inpetrolatum": {
+   "c": [
+    1
+   ],
+   "l": false,
+   "n": "Petroleum-derived: min tier Avoid (High), like petrolatum (user decision 2026-11-01)",
+   "min": "Avoid (High)"
+  },
+  "c9-12 alkane": {
+   "c": [
+    1
+   ],
+   "l": false,
+   "n": "Petroleum-derived: min tier Avoid (High), like petrolatum (user decision 2026-11-01)",
+   "min": "Avoid (High)"
+  },
+  "c13-15 alkane": {
+   "c": [
+    1
+   ],
+   "l": false,
+   "n": "Petroleum-derived: min tier Avoid (High), like petrolatum (user decision 2026-11-01)",
+   "min": "Avoid (High)"
+  },
+  "undecane": {
+   "c": [
+    1
+   ],
+   "l": false,
+   "n": "Petroleum-derived: min tier Avoid (High), like petrolatum (user decision 2026-11-01)",
+   "min": "Avoid (High)"
+  },
+  "tridecane": {
+   "c": [
+    1
+   ],
+   "l": false,
+   "n": "Petroleum-derived: min tier Avoid (High), like petrolatum (user decision 2026-11-01)",
+   "min": "Avoid (High)"
+  },
+  "polybutene": {
+   "c": [
+    1
+   ],
+   "l": false,
+   "n": "Petroleum-derived: min tier Avoid (High), like petrolatum (user decision 2026-11-01)",
+   "min": "Avoid (High)"
+  },
+  "hydrogenated polyisobutene": {
+   "c": [
+    1
+   ],
+   "l": false,
+   "n": "Petroleum-derived: min tier Avoid (High), like petrolatum (user decision 2026-11-01)",
+   "min": "Avoid (High)"
+  },
+  "argan oil* (cold pressed)": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox: cold-pressed oil (user decision 2026-11-01)"
+  },
+  "castor oil* (cold pressed)": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox: cold-pressed oil (user decision 2026-11-01)"
+  },
+  "canola oil (huile de colza)": {
+   "c": [],
+   "l": false,
+   "n": "Min tier set by user 2026-11-01 (canola, vegetable, hydrogenated oils are not Puberty Safe; Avoid (Mild))",
+   "min": "Avoid (Mild)"
+  },
+  "olus oil (vegetable oil)": {
+   "c": [],
+   "l": false,
+   "n": "Min tier set by user 2026-11-01 (canola, vegetable, hydrogenated oils are not Puberty Safe; Avoid (Mild))",
+   "min": "Avoid (Mild)"
+  },
+  "hydrogenated olive oil unsaponifiables": {
+   "c": [],
+   "l": false,
+   "n": "Min tier set by user 2026-11-01 (canola, vegetable, hydrogenated oils are not Puberty Safe; Avoid (Mild))",
+   "min": "Avoid (Mild)"
+  },
+  "hydrogenated olive oil stearyl esters": {
+   "c": [],
+   "l": false,
+   "n": "Min tier set by user 2026-11-01 (canola, vegetable, hydrogenated oils are not Puberty Safe; Avoid (Mild))",
+   "min": "Avoid (Mild)"
+  },
+  "hydrogenated ethylhexyl olivate": {
+   "c": [],
+   "l": false,
+   "n": "Min tier set by user 2026-11-01 (canola, vegetable, hydrogenated oils are not Puberty Safe; Avoid (Mild))",
+   "min": "Avoid (Mild)"
+  },
+  "hydrogenated castor oil behenyl esters": {
+   "c": [],
+   "l": false,
+   "n": "Min tier set by user 2026-11-01 (canola, vegetable, hydrogenated oils are not Puberty Safe; Avoid (Mild))",
+   "min": "Avoid (Mild)"
+  },
+  "hydrocortisone 1% (, anti-itch ointment)": {
+   "c": [
+    2
+   ],
+   "l": false,
+   "n": "Drug (user decision 2026-11-01). Min tier per user; not eczema safe. Avoid (Moderate).",
+   "min": "Avoid (Moderate)",
+   "ez": false
+  },
+  "sodium monofluorophosphate": {
+   "c": [],
+   "l": false,
+   "n": "Drug (user decision 2026-11-01). Min tier per user; not eczema safe. Fluoride. Avoid (Moderate).",
+   "min": "Avoid (Moderate)",
+   "ez": false
+  },
+  "sodium monofluorophosphate 0.76% (fluoride)": {
+   "c": [],
+   "l": false,
+   "n": "Drug (user decision 2026-11-01). Min tier per user; not eczema safe. Fluoride. Avoid (Moderate).",
+   "min": "Avoid (Moderate)",
+   "ez": false
+  },
+  "salicylic acid @": {
+   "c": [],
+   "l": true,
+   "n": "Drug (user decision 2026-11-01). Min tier per user; not eczema safe. Puberty Safe; not eczema safe.",
+   "ez": false
+  },
+  "salicylic acid –": {
+   "c": [],
+   "l": true,
+   "n": "Drug (user decision 2026-11-01). Min tier per user; not eczema safe. Puberty Safe; not eczema safe.",
+   "ez": false
+  },
+  "argan oil (cold pressed)": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox: cold-pressed oil (user decision 2026-11-01)"
+  },
+  "castor oil (cold pressed)": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox: cold-pressed oil (user decision 2026-11-01)"
+  },
+  "althea officinalis": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox: plant extract/gum (user decision 2026-11-01)"
+  },
+  "achillea millefolium (yarrow)": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox: plant extract/gum (user decision 2026-11-01)"
+  },
+  "calendula": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox: plant extract/gum (user decision 2026-11-01)"
+  },
+  "canarium luzonicum gum nonvolatiles": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox: plant extract/gum (user decision 2026-11-01)"
+  },
+  "cucumis sativas (cucumber)": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox: plant extract/gum (user decision 2026-11-01)"
+  },
+  "cyamopsis tetragonoloba (guar) gum": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox: plant extract/gum (user decision 2026-11-01)"
+  },
+  "equisetum arvense (horsetail)": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox: plant extract/gum (user decision 2026-11-01)"
+  },
+  "euterpe oleracea sterols": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox: plant extract/gum (user decision 2026-11-01)"
+  },
+  "euterpe oleracea (acai) sterols": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox: plant extract/gum (user decision 2026-11-01)"
+  },
+  "hibiscus syriacus (althaea)": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox: plant extract/gum (user decision 2026-11-01)"
+  },
+  "macrocystis pyrifera (kelp)": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox: plant extract/gum (user decision 2026-11-01)"
+  },
+  "tussilago farfara (coltsfoot)": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox: plant extract/gum (user decision 2026-11-01)"
+  },
+  "boswellia serrata gum": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox: plant extract/gum (user decision 2026-11-01)"
+  },
+  "prunus persica (peach) gum": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox: plant extract/gum (user decision 2026-11-01)"
+  },
+  "arabic/acacia gum": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox: plant extract/gum (user decision 2026-11-01)"
+  },
+  "flaxseed gel ( linumusitatissimum linseed)": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox: plant extract/gum (user decision 2026-11-01)"
+  },
+  "punica granatum sterols": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox: plant extract/gum (user decision 2026-11-01)"
+  },
+  "nettle": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox: plant extract/gum (user decision 2026-11-01)"
+  },
+  "oatmeal": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox: plant extract/gum (user decision 2026-11-01)"
+  },
+  "stevia (certified organic ingredient)": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox: plant extract/gum (user decision 2026-11-01)"
+  },
+  "sr-hydrozoan polypeptide-1 (vegan collagen)": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox: plant extract/gum (user decision 2026-11-01)"
+  },
+  "blood orange": {
+   "c": [
+    4
+   ],
+   "l": false,
+   "n": "Essential-oil botanical: soft, category 4 only (user decision 2026-11-01). Category 8 not counted: grader treats soft natural fragrance as category 4 only."
+  },
+  "cedarwood (certified organic ingredient)": {
+   "c": [
+    4
+   ],
+   "l": false,
+   "n": "Essential-oil botanical: soft, category 4 only (user decision 2026-11-01). Category 8 not counted: grader treats soft natural fragrance as category 4 only."
+  },
+  "chamomilla": {
+   "c": [
+    4
+   ],
+   "l": false,
+   "n": "Essential-oil botanical: soft, category 4 only (user decision 2026-11-01). Category 8 not counted: grader treats soft natural fragrance as category 4 only."
+  },
+  "chamomilla recutita (matricaria)": {
+   "c": [
+    4
+   ],
+   "l": false,
+   "n": "Essential-oil botanical: soft, category 4 only (user decision 2026-11-01). Category 8 not counted: grader treats soft natural fragrance as category 4 only."
+  },
+  "jasmine": {
+   "c": [
+    4
+   ],
+   "l": false,
+   "n": "Essential-oil botanical: soft, category 4 only (user decision 2026-11-01). Category 8 not counted: grader treats soft natural fragrance as category 4 only."
+  },
+  "rose (certified organic ingredient)": {
+   "c": [
+    4
+   ],
+   "l": false,
+   "n": "Essential-oil botanical: soft, category 4 only (user decision 2026-11-01). Category 8 not counted: grader treats soft natural fragrance as category 4 only."
+  },
+  "rosemary": {
+   "c": [
+    4
+   ],
+   "l": false,
+   "n": "Essential-oil botanical: soft, category 4 only (user decision 2026-11-01). Category 8 not counted: grader treats soft natural fragrance as category 4 only."
+  },
+  "rosmarinus officinalis (rosemary)": {
+   "c": [
+    4
+   ],
+   "l": false,
+   "n": "Essential-oil botanical: soft, category 4 only (user decision 2026-11-01). Category 8 not counted: grader treats soft natural fragrance as category 4 only."
+  },
+  "sage": {
+   "c": [
+    4
+   ],
+   "l": false,
+   "n": "Essential-oil botanical: soft, category 4 only (user decision 2026-11-01). Category 8 not counted: grader treats soft natural fragrance as category 4 only."
+  },
+  "salvia officinalis (sage)": {
+   "c": [
+    4
+   ],
+   "l": false,
+   "n": "Essential-oil botanical: soft, category 4 only (user decision 2026-11-01). Category 8 not counted: grader treats soft natural fragrance as category 4 only."
+  },
+  "thyme (certified organic ingredient)": {
+   "c": [
+    4
+   ],
+   "l": false,
+   "n": "Essential-oil botanical: soft, category 4 only (user decision 2026-11-01). Category 8 not counted: grader treats soft natural fragrance as category 4 only."
+  },
+  "thymus vulgaris (thyme)": {
+   "c": [
+    4
+   ],
+   "l": false,
+   "n": "Essential-oil botanical: soft, category 4 only (user decision 2026-11-01). Category 8 not counted: grader treats soft natural fragrance as category 4 only."
+  },
+  "melissa officinalis (balm mint)": {
+   "c": [
+    4
+   ],
+   "l": false,
+   "n": "Essential-oil botanical: soft, category 4 only (user decision 2026-11-01). Category 8 not counted: grader treats soft natural fragrance as category 4 only."
+  },
+  "vetiver (certified organic ingredient)": {
+   "c": [
+    4
+   ],
+   "l": false,
+   "n": "Essential-oil botanical: soft, category 4 only (user decision 2026-11-01). Category 8 not counted: grader treats soft natural fragrance as category 4 only."
+  },
+  "ravintsara (certified organic ingredient)": {
+   "c": [
+    4
+   ],
+   "l": false,
+   "n": "Essential-oil botanical: soft, category 4 only (user decision 2026-11-01). Category 8 not counted: grader treats soft natural fragrance as category 4 only."
+  },
+  "myrrh (certified organic ingredient)": {
+   "c": [
+    4
+   ],
+   "l": false,
+   "n": "Essential-oil botanical: soft, category 4 only (user decision 2026-11-01). Category 8 not counted: grader treats soft natural fragrance as category 4 only."
+  },
+  "alpha-terpinene": {
+   "c": [
+    1,
+    2,
+    4,
+    8
+   ],
+   "l": false,
+   "n": "Fragrance chemical: plain fragrance flag (user decision 2026-11-01)"
+  },
+  "alpha-terpinene+": {
+   "c": [
+    1,
+    2,
+    4,
+    8
+   ],
+   "l": false,
+   "n": "Fragrance chemical: plain fragrance flag (user decision 2026-11-01)"
+  },
+  "terpinolene": {
+   "c": [
+    1,
+    2,
+    4,
+    8
+   ],
+   "l": false,
+   "n": "Fragrance chemical: plain fragrance flag (user decision 2026-11-01)"
+  },
+  "terpinolene+": {
+   "c": [
+    1,
+    2,
+    4,
+    8
+   ],
+   "l": false,
+   "n": "Fragrance chemical: plain fragrance flag (user decision 2026-11-01)"
+  },
+  "neral": {
+   "c": [
+    1,
+    2,
+    4,
+    8
+   ],
+   "l": false,
+   "n": "Fragrance chemical: plain fragrance flag (user decision 2026-11-01)"
+  },
+  "benzaldehyde": {
+   "c": [
+    1,
+    2,
+    4,
+    8
+   ],
+   "l": false,
+   "n": "Fragrance chemical: plain fragrance flag (user decision 2026-11-01)"
+  },
+  "benzaldehyde+": {
+   "c": [
+    1,
+    2,
+    4,
+    8
+   ],
+   "l": false,
+   "n": "Fragrance chemical: plain fragrance flag (user decision 2026-11-01)"
+  },
+  "cinnamal+": {
+   "c": [
+    1,
+    2,
+    4,
+    8
+   ],
+   "l": false,
+   "n": "Fragrance chemical: plain fragrance flag (user decision 2026-11-01)"
+  },
+  "ethyl butyrate": {
+   "c": [
+    1,
+    2,
+    4,
+    8
+   ],
+   "l": false,
+   "n": "Fragrance chemical: plain fragrance flag (user decision 2026-11-01)"
+  },
+  "ethyl vanillin": {
+   "c": [
+    1,
+    2,
+    4,
+    8
+   ],
+   "l": false,
+   "n": "Fragrance chemical: plain fragrance flag (user decision 2026-11-01)"
+  },
+  "furaneol": {
+   "c": [
+    1,
+    2,
+    4,
+    8
+   ],
+   "l": false,
+   "n": "Fragrance chemical: plain fragrance flag (user decision 2026-11-01)"
+  },
+  "gamma-undecalactone": {
+   "c": [
+    1,
+    2,
+    4,
+    8
+   ],
+   "l": false,
+   "n": "Fragrance chemical: plain fragrance flag (user decision 2026-11-01)"
+  },
+  "gamma-undecenolactone": {
+   "c": [
+    1,
+    2,
+    4,
+    8
+   ],
+   "l": false,
+   "n": "Fragrance chemical: plain fragrance flag (user decision 2026-11-01)"
+  },
+  "grapefruit mercaptan": {
+   "c": [
+    1,
+    2,
+    4,
+    8
+   ],
+   "l": false,
+   "n": "Fragrance chemical: plain fragrance flag (user decision 2026-11-01)"
+  },
+  "menthol crystals": {
+   "c": [
+    1,
+    2,
+    4,
+    8
+   ],
+   "l": false,
+   "n": "Fragrance chemical: plain fragrance flag (user decision 2026-11-01)"
+  },
+  "polycitronellol": {
+   "c": [
+    1,
+    2,
+    4,
+    8
+   ],
+   "l": false,
+   "n": "Fragrance chemical: plain fragrance flag (user decision 2026-11-01)"
+  },
+  "polycitronellol acetate": {
+   "c": [
+    1,
+    2,
+    4,
+    8
+   ],
+   "l": false,
+   "n": "Fragrance chemical: plain fragrance flag (user decision 2026-11-01)"
+  },
+  "raspberry ketone methyl ether": {
+   "c": [
+    1,
+    2,
+    4,
+    8
+   ],
+   "l": false,
+   "n": "Fragrance chemical: plain fragrance flag (user decision 2026-11-01)"
+  },
+  "vanillin+": {
+   "c": [
+    1,
+    2,
+    4,
+    8
+   ],
+   "l": false,
+   "n": "Fragrance chemical: plain fragrance flag (user decision 2026-11-01)"
+  },
+  "vanillyl butyl ether": {
+   "c": [
+    1,
+    2,
+    4,
+    8
+   ],
+   "l": false,
+   "n": "Fragrance chemical: plain fragrance flag (user decision 2026-11-01)"
+  },
+  "dimethyl sulfone": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (user decision 2026-11-01)"
+  },
+  "xylityl sesquicaprylate": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (user decision 2026-11-01)"
+  },
+  "pumice": {
+   "c": [
+    1,
+    2
+   ],
+   "l": false,
+   "n": "Mineral, inhalation-only flag like silica/talc (user decision 2026-11-01)",
+   "cond": "inhalation_risk"
+  },
+  "boron nitride": {
+   "c": [
+    1,
+    2
+   ],
+   "l": false,
+   "n": "Mineral, inhalation-only flag like silica/talc (user decision 2026-11-01)",
+   "cond": "inhalation_risk"
+  },
+  "alcohol (derived from sugarcane)": {
+   "c": [],
+   "l": true,
+   "n": "Alcohol: not eczema safe (user decision 2026-11-01)",
+   "ez": false
+  },
+  "sugar cane alcohol 95% (sugar cane alcohol, water)": {
+   "c": [],
+   "l": true,
+   "n": "Alcohol: not eczema safe (user decision 2026-11-01)",
+   "ez": false
+  },
+  "arachidyl alcohol": {
+   "c": [],
+   "l": true,
+   "n": "Alcohol: not eczema safe (user decision 2026-11-01)",
+   "ez": false
+  },
+  "archidyl alcohol": {
+   "c": [],
+   "l": true,
+   "n": "Alcohol: not eczema safe (user decision 2026-11-01)",
+   "ez": false
+  },
+  "lanolin alcohol": {
+   "c": [],
+   "l": true,
+   "n": "Alcohol: not eczema safe (user decision 2026-11-01)",
+   "ez": false
+  },
+  "hamamelis virginiana (witch hazel) water (and) alcohol": {
+   "c": [],
+   "l": true,
+   "n": "Alcohol: not eczema safe (user decision 2026-11-01)",
+   "ez": false
+  },
+  "zinc ricinoleate": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox: zinc salt of castor-oil fatty acid (user decision 2026-11-01)"
+  },
+  "activated charcoal": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (charcoal; user decision 2026-11-01)",
+   "ez": true
+  },
+  "goat milk": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (goat milk; user decision 2026-11-01)",
+   "ez": true
+  },
+  "silk": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (silk; user decision 2026-11-01)",
+   "ez": true
+  },
+  "sunflower": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (sunflower; user decision 2026-11-01)",
+   "ez": true
+  },
+  "castor isostearate beeswax succinate": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (wax; user decision 2026-11-01)"
+  },
+  "zemea (corn) propanediol": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (propanediol; user decision 2026-11-01)"
+  },
+  "arginine/lysine polypeptide": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox (amino; user decision 2026-11-01)",
+   "ez": true
+  },
+  "milk protein": {
+   "c": [],
+   "l": true,
+   "n": "Low-tox; not eczema safe (user decision 2026-11-01)",
+   "ez": false
+  },
+  "blue 1 lake": {
+   "c": [],
+   "l": false,
+   "n": "Colorant: Avoid (High) (user decision 2026-11-01)",
+   "ez": false,
+   "min": "Avoid (High)"
+  },
+  "blue 1 lake (ci 42090)": {
+   "c": [],
+   "l": false,
+   "n": "Colorant: Avoid (High) (user decision 2026-11-01)",
+   "ez": false,
+   "min": "Avoid (High)"
+  },
+  "ci 15850": {
+   "c": [],
+   "l": false,
+   "n": "Colorant: Avoid (High) (user decision 2026-11-01)",
+   "ez": false,
+   "min": "Avoid (High)"
+  },
+  "ci 60725": {
+   "c": [],
+   "l": false,
+   "n": "Colorant: Avoid (High) (user decision 2026-11-01)",
+   "ez": false,
+   "min": "Avoid (High)"
+  },
+  "ci 61565": {
+   "c": [],
+   "l": false,
+   "n": "Colorant: Avoid (High) (user decision 2026-11-01)",
+   "ez": false,
+   "min": "Avoid (High)"
+  },
+  "ci 73360": {
+   "c": [],
+   "l": false,
+   "n": "Colorant: Avoid (High) (user decision 2026-11-01)",
+   "ez": false,
+   "min": "Avoid (High)"
+  },
+  "red 6 (ci 15850)": {
+   "c": [],
+   "l": false,
+   "n": "Colorant: Avoid (High) (user decision 2026-11-01)",
+   "ez": false,
+   "min": "Avoid (High)"
+  },
+  "red 6 lake (ci 15850)": {
+   "c": [],
+   "l": false,
+   "n": "Colorant: Avoid (High) (user decision 2026-11-01)",
+   "ez": false,
+   "min": "Avoid (High)"
+  },
+  "red 7 lake": {
+   "c": [],
+   "l": false,
+   "n": "Colorant: Avoid (High) (user decision 2026-11-01)",
+   "ez": false,
+   "min": "Avoid (High)"
+  },
+  "red 7 lake (ci 15850)": {
+   "c": [],
+   "l": false,
+   "n": "Colorant: Avoid (High) (user decision 2026-11-01)",
+   "ez": false,
+   "min": "Avoid (High)"
+  },
+  "red 7 lake (ci 15850) (shade: pink blossom": {
+   "c": [],
+   "l": false,
+   "n": "Colorant: Avoid (High) (user decision 2026-11-01)",
+   "ez": false,
+   "min": "Avoid (High)"
+  },
+  "yellow 5 lake": {
+   "c": [],
+   "l": false,
+   "n": "Colorant: Avoid (High) (user decision 2026-11-01)",
+   "ez": false,
+   "min": "Avoid (High)"
+  },
+  "yellow 5 lake (ci 19140)": {
+   "c": [],
+   "l": false,
+   "n": "Colorant: Avoid (High) (user decision 2026-11-01)",
+   "ez": false,
+   "min": "Avoid (High)"
+  },
+  "yellow 6 lake (ci 15985)": {
+   "c": [],
+   "l": false,
+   "n": "Colorant: Avoid (High) (user decision 2026-11-01)",
+   "ez": false,
+   "min": "Avoid (High)"
+  },
+  "calcium aluminum borosilicate": {
+   "c": [
+    3
+   ],
+   "l": false,
+   "n": "Contains aluminum: heavy metal category 3 (user decision 2026-11-01)"
+  },
+  "hydrogenated castor oil/sebacic acid copolymer": {
+   "c": [],
+   "l": false,
+   "n": "Hydrogenated oil: Avoid (Mild) (user decision 2026-11-01)",
+   "min": "Avoid (Mild)"
+  },
+  "limoneneϝ": {
+   "c": [
+    1,
+    2,
+    4,
+    8
+   ],
+   "l": false,
+   "n": "Fragrance chemical: plain fragrance (user decision 2026-11-01)"
+  },
+  "limoneneᵻ": {
+   "c": [
+    1,
+    2,
+    4,
+    8
+   ],
+   "l": false,
+   "n": "Fragrance chemical: plain fragrance (user decision 2026-11-01)"
+  },
+  "linalool ϝ": {
+   "c": [
+    1,
+    2,
+    4,
+    8
+   ],
+   "l": false,
+   "n": "Fragrance chemical: plain fragrance (user decision 2026-11-01)"
+  },
+  "vanillin+ (shade: nada": {
+   "c": [
+    1,
+    2,
+    4,
+    8
+   ],
+   "l": false,
+   "n": "Fragrance chemical: plain fragrance (user decision 2026-11-01)"
+  },
+  "fragance": {
+   "c": [
+    1,
+    2,
+    4,
+    8
+   ],
+   "l": false,
+   "n": "Misspelling of fragrance (user decision 2026-11-01)"
+  },
+  "water  certified organic ingredient ♥ fair trade ingredient": {
+   "c": [],
+   "l": true,
+   "n": "Water (user decision 2026-11-01)"
+  },
+  "unknown_ingredient": {
+   "c": [],
+   "l": true,
+   "n": "Not an ingredient: placeholder (user decision 2026-11-01)"
+  },
+  "sodium lauroyl oat amino acids": {
+   "c": [],
+   "l": true,
+   "n": "Amino acid derivative: low-tox (user decision 2026-11-01)",
+   "ez": true
+  },
+  "palmitoyl isoleucine": {
+   "c": [],
+   "l": true,
+   "n": "Amino acid derivative: low-tox (user decision 2026-11-01)",
+   "ez": true
+  },
+  "ethyl lauroyl arginate hcl": {
+   "c": [],
+   "l": true,
+   "n": "Amino acid derivative: low-tox (user decision 2026-11-01)",
+   "ez": true
+  },
+  "ectoin": {
+   "c": [],
+   "l": true,
+   "n": "Amino acid derivative: low-tox (user decision 2026-11-01)",
+   "ez": true
+  },
+  "calcium sodium borosilicate": {
+   "c": [
+    1,
+    2
+   ],
+   "l": false,
+   "n": "Inorganic mineral filler: inhalation-only flag, like boron nitride, pumice, silica and talc (user decision 2026-11-01)",
+   "cond": "inhalation_risk"
+  },
+  "super absorbent polymer": {
+   "c": [],
+   "l": false,
+   "n": "Use Caution: exact polymer identity unverified; often sodium polyacrylate but not confirmed (user decision 2026-11-01)",
+   "min": "Use Caution"
+  },
+  "optiphen": {
+   "c": [
+    1,
+    2,
+    4,
+    5,
+    8
+   ],
+   "l": false,
+   "n": "Contains phenoxyethanol; categories follow phenoxyethanol (user decision 2026-11-01)"
+  },
+  "optiphen nd": {
+   "c": [
+    1,
+    2,
+    4,
+    5,
+    8
+   ],
+   "l": false,
+   "n": "Contains phenoxyethanol; categories follow phenoxyethanol (user decision 2026-11-01)"
+  },
+  "ethylbisiminomethylguaiacol manganese chloride": {
+   "c": [
+    3
+   ],
+   "l": false,
+   "n": "Manganese complex: heavy metal category 3 (user decision 2026-11-01)"
+  },
+  "hexylresorcinol": {
+   "c": [
+    2,
+    7,
+    8
+   ],
+   "l": false,
+   "n": "Endocrine disruptor: category 2 (user decision 2026-11-01) Endocrine, acute, respiratory; Perplexity flag applied (user decision 2026-11-01)"
+  },
+  "hydroxypropyltrimonium honey": {
+   "c": [
+    2
+   ],
+   "l": false,
+   "n": "Quaternary ammonium (-nium): category 2 endocrine, not carcinogen; bee-derived (user decision 2026-11-01)"
+  },
+  "butylene/ethylene/styrene copolymer": {
+   "c": [
+    6
+   ],
+   "l": false,
+   "n": "Microplastic screen flag; Perplexity flag applied (user decision 2026-11-01)"
+  },
+  "ethylene/propylene/styrene copolymer": {
+   "c": [
+    6
+   ],
+   "l": false,
+   "n": "Microplastic screen flag; Perplexity flag applied (user decision 2026-11-01)"
+  },
+  "hydroxyethyl acrylate / sodium acryloyldimethyl taurate copolymer": {
+   "c": [
+    6
+   ],
+   "l": false,
+   "n": "Microplastic screen flag; Perplexity flag applied (user decision 2026-11-01)"
+  },
+  "hydroxyethyl acrylate/sodium acryloyldimethyl taurate copolymer": {
+   "c": [
+    6
+   ],
+   "l": false,
+   "n": "Microplastic screen flag; Perplexity flag applied (user decision 2026-11-01)"
+  },
+  "polyamide-8": {
+   "c": [
+    6
+   ],
+   "l": false,
+   "n": "Microplastic screen flag; Perplexity flag applied (user decision 2026-11-01)"
+  },
+  "pvp": {
+   "c": [
+    6
+   ],
+   "l": false,
+   "n": "Microplastic screen flag; Perplexity flag applied (user decision 2026-11-01)"
+  },
+  "sodium acrylates copolymer": {
+   "c": [
+    6
+   ],
+   "l": false,
+   "n": "Microplastic screen flag; Perplexity flag applied (user decision 2026-11-01)"
+  },
+  "sorbeth-30 tetraoleate": {
+   "c": [
+    6
+   ],
+   "l": false,
+   "n": "Microplastic screen flag; Perplexity flag applied (user decision 2026-11-01)"
+  },
+  "vp/hexadecene copolymer": {
+   "c": [
+    6
+   ],
+   "l": false,
+   "n": "Microplastic screen flag; Perplexity flag applied (user decision 2026-11-01)"
+  },
+  "water soluble biodegradable polyvinyl alcohol": {
+   "c": [
+    6
+   ],
+   "l": false,
+   "n": "Microplastic screen flag; Perplexity flag applied (user decision 2026-11-01)"
+  },
+  "trisodium edta": {
+   "c": [
+    4,
+    7,
+    8
+   ],
+   "l": false,
+   "n": "Acute and respiratory, allergy; Perplexity flag applied (user decision 2026-11-01)"
+  },
+  "2,6-dimethyl-7-octen-2-ol": {
+   "c": [
+    4,
+    8
+   ],
+   "l": false,
+   "n": "Respiratory and allergy; Perplexity flag applied (user decision 2026-11-01)"
+  },
+  "red clover": {
+   "c": [
+    2
+   ],
+   "l": false,
+   "n": "Endocrine (phytoestrogen); Perplexity flag applied (user decision 2026-11-01)"
+  },
+  "beta-sitosterol": {
+   "c": [
+    2
+   ],
+   "l": false,
+   "n": "Endocrine (experimental); Perplexity flag applied (user decision 2026-11-01)"
+  },
+  "ethyl hydroxypyrone": {
+   "c": [
+    1,
+    2,
+    4,
+    8
+   ],
+   "l": false,
+   "n": "Fragrance ingredient: plain fragrance flag (user decision 2026-11-01)"
+  },
+  "hydroxymethoxyphenyl decanone": {
+   "c": [
+    1,
+    2,
+    4,
+    8
+   ],
+   "l": false,
+   "n": "Fragrance ingredient: plain fragrance flag (user decision 2026-11-01)"
+  },
+  "menthoxypropanediol": {
+   "c": [
+    1,
+    2,
+    4,
+    8
+   ],
+   "l": false,
+   "n": "Fragrance ingredient: plain fragrance flag (user decision 2026-11-01)"
   }
  },
  "aliases": {
@@ -4782,6 +6018,12 @@
   "methyl salicylate": "oil of wintergreen",
   "wild orange": "wild orange (certified organic ingredient)",
   "alcohol (dent)": "alcohol denat",
-  "polysorbate-20": "polysorbate 20"
+  "polysorbate-20": "polysorbate 20",
+  "polyglyceryl-10 diisosterate": "polyglyceryl-10 diisostearate",
+  "phytosteryl/octydodecyl lauroyl glutamate": "phytosteryl/octyldodecyl lauroyl glutamate",
+  "incaprylic/capric triglyceride": "caprylic/capric triglyceride",
+  "ingylcerin": "glycerin",
+  "ingycerin": "glycerin",
+  "ingl ycerin": "glycerin"
  }
 }
