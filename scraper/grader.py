@@ -160,7 +160,13 @@ def split_ingredients(text):
         if low in ('ingredients','inactive ingredients','active ingredient','active ingredients','inactive','active'): continue
         if 'may contain' in low: continue
         # Marketing claims printed in the ingredient area, not ingredients.
-        if re.fullmatch(r'(non[- ]?gmo|gmo[- ]free|bpa[- ]free(?: plastic)?|vegan|cruelty[- ]free|gluten[- ]free|not an? .*|plant[- ]based.*|made (with|in) .*|certified .* (cotton|organic)|.*\bsummary\b.*)\)?', low): continue
+        # Certification and claim words printed in the ingredient area (e.g. CERTIFIED ORGANIC, FAIR TRADE).
+        if re.fullmatch(r'(?:(?:usda |certified |cosmos |ecocert |eco[- ]?cert |made with |contains )*'
+                        r'(?:organic|natural|vegan|halal|kosher|fair[- ]?trade|fair for life|non[- ]?gmo(?: project)?(?: verified)?|gmo[- ]free|'
+                        r'b[- ]?corp(?:oration)?|leaping bunny|cruelty[- ]free|gluten[- ]free|bpa[- ]free(?: plastic)?|'
+                        r'rainforest alliance|marine stewardship(?: council)?|carbon neutral|climate neutral|sustainably sourced|ethically sourced)'
+                        r'(?: certified| verified| sourced| ingredients?)*)\)?', low): continue
+        if re.fullmatch(r'(not an? .*|plant[- ]based.*|made (with|in) .*|certified (?:cotton|organic)|.*\bsummary\b.*)\)?', low): continue
         # Fragments left by an unmatched parenthesis ("non-gmo)") carry no ingredient name.
         if low.endswith(')') and '(' not in low: continue
         # Packaging and benefit copy printed next to the ingredient list.
