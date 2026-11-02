@@ -23,6 +23,12 @@ if not ALIASES:
     if os.path.exists(aliases_path):
         ALIASES = json.load(open(aliases_path))
 
+# Reference keys with a parenthetical (e.g. "zinc oxide (non-nano)") also match the bare name.
+for _k in list(REF.keys()):
+    _bare = re.sub(r'\s*\([^)]*\)', '', _k).strip()
+    if _bare and _bare != _k and _bare not in REF and _bare not in ALIASES:
+        ALIASES[_bare] = _k
+
 NAT_FRAG = {'linalool','limonene','citral','citronellal','geraniol','eugenol','isoeugenol','coumarin','farnesol','hydroxycitronellal','bisabolol'}
 EO_HINTS = ['oil','essential oil','extract','butter','juice','wax','absolute']
 FORMALDEHYDE = {'dmdm hydantoin','diazolidinyl urea','diazolidinylurea','imidazolidinyl urea','imidazolidinylurea','quaternium-15','methenamine','paraformaldehyde','benzylhemiformal','5-bromo-5-nitro-1,3-dioxane','sodium hydroxymethylglycinate','glyoxal','polyoxymethylene urea','2-bromo-2-nitropropane-1,3-diol'}
@@ -115,8 +121,12 @@ PATTERN_WATCH = [
 def norm(s):
     s = s.lower().strip()
     s = re.sub(r'\s+', ' ', s)
-    s = s.replace('*','').strip()
-    return s.strip(' .,;:')
+    s = s.replace('*','').replace('®','').replace('™','').strip()
+    s = re.sub(r'[\+†±ϝᵻ\^·\u200b]+$', '', s).strip()  # trailing footnote markers
+    s = re.sub(r'[^\x00-\x7f]+$', '', s).strip()  # trailing non-ASCII symbols (ϯ, ώ, etc.)
+    s = re.sub(r'[\s+/]+$', '', s).strip()  # trailing + or / from label symbols
+    s = re.sub(r'(?<=[a-z])\d$', '', s).strip()  # footnote digit attached to a word: linalool1
+    return s.strip(' .,;:-–')
 
 def is_fatty_alc(low):
     return any(fa in low for fa in FATTY_ALC_SUBSTR)
@@ -135,6 +145,7 @@ def split_ingredients(text):
     t = re.sub(r'(?i)^ingredients?\b\s*', '', t.strip())
     t = re.sub(r'\b[A-Z][a-zA-Z0-9+\- ]+:\s*', ', ', t)
     t = re.sub(r'\(code [^)]+\)', '', t, flags=re.I)
+    t = re.sub(r'\bSt\. ', 'St ', t)  # protect 'St. John's Wort' from the '. ' sentence split
     # Protect commas that live INSIDE a chemical name like "1,2-hexanediol"
     # or "1,3-butylene glycol" — splitting on them would turn one
     # ingredient into two unidentifiable fragments ("1" + "2-hexanediol").
@@ -151,6 +162,9 @@ def split_ingredients(text):
     out = []
     for p in parts:
         p = p.strip(' .;,:')
+        p = p.strip('*† ').strip()
+        if re.fullmatch(r'(no )?(parabens?|sunscreens?)\W*', p.lower()): continue  # not ingredients
+        if re.search(r'natural component of|\*?certified organic\s*$', p.lower()): continue  # footnote text, not an ingredient
         p = re.sub(r'\s*\(\d{1,2}\)\s*$', '', p)  # footnote markers: "alcohol (1)"
         p = re.sub(r'\s*\d+(\.\d+)?\s*%\s*$', '', p)
         p = re.sub(r'^\s*\d+(\.\d+)?\s*%\s*', '', p)
@@ -246,6 +260,25 @@ def _inhal_only(name):
     if re.search(r'\bsilica\b', low) and 'hydrated' not in low: return True
     return any(w in low for w in _INHAL_ONLY_WORDS if w != 'silica')
 
+# Dye colorants (FD&C / D&C, named dyes, and organic CI codes; not CI 77xxx pigments or minerals).
+DYE_RE = re.compile(r'\bfd&c\b|\bd&c\b|\b(red|yellow|blue|green|violet|orange|black)\s?\d{1,2}\b'
+                   r'|\bci\s?(?!75130\b)(?:1[0-9]{4}|[4-6][0-9]{4}|7[0-4][0-9]{3}|75[0-9]{3})\b', re.I)
+
+def _ruling_exempt(low):
+    """User rulings 2026-11-01: water, waxes, vitamins, and named extracts/botanicals with no reference entry are low tox."""
+    if low in REF or ALIASES.get(low, '') in REF: return False
+    if re.search(r'\b(water|aqua|eau)\b', low): return True
+    if re.search(r'\bwax\b|\bcera\b|\bvitamin\b', low): return True
+    if re.search(r'cobalamin|ascorbic|ascorbyl|niacin|niacinamide|riboflavin|thiamine|pyridoxine|folic|pantothenic|biotin|calciferol|cholecalciferol|\bb[1-9]\b|\bb1[0-2]\b', low): return True  # nutrients: map as vitamins (user ruling 2026-11-01)
+    if re.search(r'\b(sodium|potassium|magnesium|calcium|zinc|aluminum)\s?(chloride|carbonate|phosphate|sulfate|silicate|hydroxide|citrate)\b', low): return True  # mineral salts (user ruling 2026-11-01)
+    if re.search(r'\b(hydrated silica|silica|kaolin|bentonite|clay|sea salt|dead sea salt)\b', low): return True  # minerals and clays (user ruling 2026-11-01)
+    if re.search(r'\bextract\b', low): return True
+    if re.search(r'\bamino acids?\b|\barginine\b|\bcarnitine\b|\bcarnosine\b|\bkeratin amino\b', low): return True  # amino acids (user ruling 2026-11-01)
+    if re.search(r'\barrowroot\b|\bbioflavonoid|\binositol\b|\bpapain\b|\bglycine soja\b|\bsoy|\bsoybean\b|\bessential oil blend\b|\baromatherapy blend\b|\bherbal blend\b', low): return True  # mapped per user ruling 2026-11-01
+    if re.search(r'\bstarch\b', low) or re.search(r'\bhydrolyzed\b', low) and re.search(r'\b(protein|peptide|amino|starch|quinoa|rice|wheat|oat|soy|corn)\b', low): return True  # starches and hydrolyzed plant proteins: low tox (user ruling 2026-11-01)
+    if re.match(r'^[a-z]+ [a-z]+ \(', low) and re.search(r'\b(oil|butter|extract|leaf|flower|root|seed|fruit|juice|peel|kernel|bark|powder)\b', low): return True
+    return False
+
 def grade(product_name, product_type, verbatim):
     ingredients = split_ingredients(verbatim)
     _inhal_product = is_inhalation_risk(product_name, product_type)
@@ -253,10 +286,20 @@ def grade(product_name, product_type, verbatim):
     flagged = []; natural = []; unknown = []; escalations = set()
     seen = set()
     min_tiers = []  # reference entries that set a minimum tier (user decision 2026-11-01)
+    # User decision 2026-11-01: any dye colorant is Avoid (High). Pigments and minerals (CI 77xxx, titanium dioxide, iron oxides, mica) are not covered.
+    for _ing in ingredients:
+        _l = _ing.lower()
+        if re.search(r'\bwater\b|\baqua\b|\beau\b', _l) and not re.search(r'\b(lavender)\b', _l): pass  # water words recognized by _ruling_exempt
+        if DYE_RE.search(_ing):
+            min_tiers.append('Avoid (High)')
+            break
     for _pos, ing in enumerate(ingredients, start=1):
         low = norm(ing)
         if not low or low in seen: continue
+        if low in ('ext','ext.'): continue  # user ruling: not an ingredient
+        if re.fullmatch(r'[\d\W_]*', low): continue  # bare numbers and symbols are not ingredients
         if re.match(r'^(aqua|water|eau)\)?(\s*[/(]\s*(aqua|water|eau)\s*\)?)*$', low): continue  # User decision: water is exempt
+        if _ruling_exempt(low): continue
         if re.match(r'^(vegetable |organic )?glycerin\b\s*(\(.*\))?$', low): continue  # User decision: glycerin is left alone (not flagged, not unknown)
         seen.add(low)
         if 'behentrimonium methosulfate' in low: continue
