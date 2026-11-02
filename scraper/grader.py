@@ -344,7 +344,7 @@ def grade(product_name, product_type, verbatim):
                 continue
             cats = d.get('c', [])
             if cats:
-                flagged.append((ing, cats))
+                flagged.append((ing, cats + ([104] if d.get('cnt4') else [])))  # 104 = category 4 that counts toward tier (surfactant ruling 2026-11-02)
                 if key in FORMALDEHYDE or low in FORMALDEHYDE:
                     escalations.add('formaldehyde-releaser')
                 if 3 in cats:
@@ -431,7 +431,7 @@ def grade(product_name, product_type, verbatim):
     has_cat2 = any(2 in c for _,c in flagged)
     max_cats = max([len(c) for _,c in flagged], default=0)
     # Tier thresholds count distinct risk categories (1,2,3,6,8; categories 4 and 5 do not count).
-    n_cats = len({k for _,c in flagged for k in c if k not in (4,5)})
+    n_cats = len({(4 if k == 104 else k) for _,c in flagged for k in c if k not in (4,5) or k == 104})
     tier = 'Puberty Safe'
     if flag_count == 0:
         tier = 'Puberty Safe'
