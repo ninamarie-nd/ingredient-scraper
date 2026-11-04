@@ -299,7 +299,11 @@ def grade(product_name, product_type, verbatim):
         if low in ('ext','ext.'): continue  # user ruling: not an ingredient
         if re.fullmatch(r'[\d\W_]*', low): continue  # bare numbers and symbols are not ingredients
         if re.match(r'^(aqua|water|eau)\)?(\s*[/(]\s*(aqua|water|eau)\s*\)?)*$', low): continue  # User decision: water is exempt
-        if _ruling_exempt(low): continue
+        # Rule 7 (GRADING_MASTER): names containing fragrance/parfum/perfume/aroma/flavor are full flags.
+        # The skip rules below must not swallow them (e.g. 'Organic Fragrance Oil', 'fruit flavor extract').
+        # The essential-oil-blend soft case stays exempt.
+        _frag_word = bool(re.search(r'\b(fragrance|parfum|perfume|aroma|flavou?r|flavoring)\b(?![\s-]*free)', low)) and not re.search(r'\bessential oil blend\b|\baromatherapy blend\b|\bherbal blend\b', low)
+        if _ruling_exempt(low) and not _frag_word: continue
         if re.match(r'^(vegetable |organic )?glycerin\b\s*(\(.*\))?$', low): continue  # User decision: glycerin is left alone (not flagged, not unknown)
         seen.add(low)
         if 'behentrimonium methosulfate' in low: continue
@@ -315,9 +319,9 @@ def grade(product_name, product_type, verbatim):
         if low in LOW_TOX and ALIASES.get(low, low) in REF and not REF[ALIASES.get(low, low)].get('c'): continue
         if low.startswith('ceramide '): continue
         _sc = not re.match(r'^(peg|ppg)[-\s/]', low) and 'arnica' not in low  # PEG/PPG ethoxylates and arnica (user decision) are never skipped as extracts
-        if _sc and (' leaf extract' in low or ' flower extract' in low or ' fruit extract' in low or ' root extract' in low or ' seed extract' in low or ' bark extract' in low or ' peel extract' in low or ' stem extract' in low):
+        if _sc and not _frag_word and (' leaf extract' in low or ' flower extract' in low or ' fruit extract' in low or ' root extract' in low or ' seed extract' in low or ' bark extract' in low or ' peel extract' in low or ' stem extract' in low):
             continue
-        if _sc and ('ferment' in low or 'extract' in low or low.endswith(' oil') or 'butter' in low or 'juice' in low or low.endswith(' wax') or low.endswith(' bran') or ' seed oil' in low or ' root oil' in low or ' peel oil' in low or low.endswith(' water')):
+        if _sc and not _frag_word and ('ferment' in low or 'extract' in low or low.endswith(' oil') or 'butter' in low or 'juice' in low or low.endswith(' wax') or low.endswith(' bran') or ' seed oil' in low or ' root oil' in low or ' peel oil' in low or low.endswith(' water')):
             continue
         if low.endswith(' acid') and not any(b in low for b in ['acrylic acid','sulfonic acid']):
             continue
