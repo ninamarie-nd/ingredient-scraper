@@ -302,6 +302,9 @@ def grade(product_name, product_type, verbatim):
         # Rule 7 (GRADING_MASTER): names containing fragrance/parfum/perfume/aroma/flavor are full flags.
         # The skip rules below must not swallow them (e.g. 'Organic Fragrance Oil', 'fruit flavor extract').
         # The essential-oil-blend soft case stays exempt.
+        # Rule 5c: 'Fragrance (essential oil blend)' with the oils disclosed is a soft flag (user decision).
+        if re.search(r'\b(fragrance|parfum|perfume|aroma|flavou?r|flavoring)\b', low) and re.search(r'\bessential oil blend\b|\baromatherapy blend\b|\bherbal blend\b', low):
+            natural.append((ing, [4,8])); continue
         _frag_word = bool(re.search(r'\b(fragrance|parfum|perfume|aroma|flavou?r|flavoring)\b(?![\s-]*free)', low)) and not re.search(r'\bessential oil blend\b|\baromatherapy blend\b|\bherbal blend\b', low)
         if _ruling_exempt(low) and not _frag_word: continue
         if re.match(r'^(vegetable |organic )?glycerin\b\s*(\(.*\))?$', low): continue  # User decision: glycerin is left alone (not flagged, not unknown)
