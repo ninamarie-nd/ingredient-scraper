@@ -1,5 +1,19 @@
 {
  "ref": {
+  "honokiol": {
+    "c": [
+      2
+    ],
+    "l": false,
+    "n": "User decision 2026-11-04: category 2 (endocrine) out of caution. Experimental endocrine activity only: in-vitro aromatase and 5-alpha-reductase inhibition and reduced androgen-receptor signaling; magnolol partial estrogen-receptor antagonism in a cell assay. No human or leave-on exposure data; no CIR/SCCS leave-on safe concentration identified."
+  },
+  "magnolol": {
+    "c": [
+      2
+    ],
+    "l": false,
+    "n": "User decision 2026-11-04: category 2 (endocrine) out of caution. Experimental endocrine activity only: in-vitro aromatase and 5-alpha-reductase inhibition and reduced androgen-receptor signaling; magnolol partial estrogen-receptor antagonism in a cell assay. No human or leave-on exposure data; no CIR/SCCS leave-on safe concentration identified."
+  },
   "1.2 benzisothiazol-3(2h)-one": {
    "c": [
     4,
