@@ -370,7 +370,7 @@ def grade(product_name, product_type, verbatim):
                     escalations.add('PFAS')
                 elif 'pfas' in note and ('perfluoro' in low or 'pfas' in low):
                     escalations.add('PFAS')
-                if 1 in cats and product_type == 'leave-on skincare':
+                if 1 in cats and product_type in ('leave-on skincare', 'hair styling'):
                     escalations.add('carcinogen in leave-on')
             continue
         matched = False
@@ -390,7 +390,7 @@ def grade(product_name, product_type, verbatim):
                         escalations.add('PFAS')
                     if 'formaldehyde' in label.lower():
                         escalations.add('formaldehyde-releaser')
-                    if 1 in cats and product_type == 'leave-on skincare':
+                    if 1 in cats and product_type in ('leave-on skincare', 'hair styling'):
                         escalations.add('carcinogen in leave-on')
                 matched = True
                 break
