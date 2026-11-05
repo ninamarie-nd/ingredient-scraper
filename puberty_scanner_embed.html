@@ -1023,9 +1023,22 @@ select:focus{border-color:var(--teal);outline:2px solid var(--teal);outline-offs
     if(defEl) DEFS = JSON.parse(defEl.textContent);
   }catch(e){}
 
+  // Fallback for ingredients missing from ingredient-defs: use the reference table (with its aliases).
+  var REF_CAT_NAME = {1:'Carcinogen / developmental concern',2:'Hormone (endocrine) disruptor',3:'Heavy metal',4:'Skin irritant / sensitizer',5:'Microbiome / skin barrier',6:'Environmental persistence',7:'Acute toxicity',8:'Respiratory irritant'};
   function normDef(name){
     var k = String(name||'').toLowerCase().replace(/[\*\u2020\u2021]+$/,'').trim();
-    return DEFS[k] || null;
+    if(DEFS[k]) return DEFS[k];
+    try{
+      var refData = JSON.parse(document.getElementById('scanner-ref').textContent);
+      var ref = refData.ref || {}, al = refData.aliases || {};
+      var key = ref[k] ? k : (al[k] && ref[al[k]] ? al[k] : null);
+      if(key && DEFS[key]) return DEFS[key];
+      if(key){
+        var r = ref[key];
+        return { c: (r.c || []).map(function(n){ return REF_CAT_NAME[n]; }).filter(Boolean), b: r.n || '' };
+      }
+    }catch(e){}
+    return null;
   }
 
   function buildTip(name){
