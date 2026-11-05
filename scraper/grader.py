@@ -243,7 +243,7 @@ def infer_product_type(name, hint=None):
 # Option 4 (approved): unknown ingredients that are fragrance components, botanicals,
 # or mineral salts/powders are listed in the summary as unknown but do not, by
 # themselves, lower a Puberty Safe product to Use Caution.
-_EXEMPT_FRAG = set(x for x in """hexyl cinnamal|citronellol|benzyl salicylate|benzyl benzoate|menthol|camphor|pinene|alpha-pinene|beta-pinene|terpineol|beta-caryophyllene|linalyl acetate|linalool|limonene|geraniol|citral|alpha-isomethyl ionone|tetramethyl acetyloctahydronaphthalenes|gamma-decalactone|maltol|isoamyl acetate|eugenol|cinnamyl alcohol|coumarin|farnesol|benzyl alcohol|hydroxycitronellal|amyl cinnamal|butylphenyl methylpropional""".split('|'))
+_EXEMPT_FRAG = set(x for x in """hexyl cinnamal|citronellol|benzyl salicylate|benzyl benzoate|menthol|camphor|pinene|alpha-pinene|beta-pinene|terpineol|beta-caryophyllene|linalyl acetate|linalool|limonene|geraniol|citral|alpha-isomethyl ionone|tetramethyl acetyloctahydronaphthalenes|gamma-decalactone|maltol|isoamyl acetate|eugenol|cinnamyl alcohol|coumarin|farnesol|benzyl alcohol|hydroxycitronellal|amyl cinnamal|butylphenyl methylpropional|rosemary verbenone|msm""".split('|'))
 
 def is_exempt_unknown(name):
     low = norm(name)

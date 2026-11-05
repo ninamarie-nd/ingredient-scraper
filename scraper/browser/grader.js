@@ -33,7 +33,7 @@
     var LOW_TOX = new Set(C.LOW_TOX);
 
     var EXEMPT_FRAG = new Set(
-      'hexyl cinnamal|citronellol|benzyl salicylate|benzyl benzoate|menthol|camphor|pinene|alpha-pinene|beta-pinene|terpineol|beta-caryophyllene|linalyl acetate|linalool|limonene|geraniol|citral|alpha-isomethyl ionone|tetramethyl acetyloctahydronaphthalenes|gamma-decalactone|maltol|isoamyl acetate|eugenol|cinnamyl alcohol|coumarin|farnesol|benzyl alcohol|hydroxycitronellal|amyl cinnamal|butylphenyl methylpropional'.split('|')
+      'hexyl cinnamal|citronellol|benzyl salicylate|benzyl benzoate|menthol|camphor|pinene|alpha-pinene|beta-pinene|terpineol|beta-caryophyllene|linalyl acetate|linalool|limonene|geraniol|citral|alpha-isomethyl ionone|tetramethyl acetyloctahydronaphthalenes|gamma-decalactone|maltol|isoamyl acetate|eugenol|cinnamyl alcohol|coumarin|farnesol|benzyl alcohol|hydroxycitronellal|amyl cinnamal|butylphenyl methylpropional|rosemary verbenone|msm'.split('|')
     );
 
     var PATTERN_WATCH = [
