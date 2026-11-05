@@ -327,6 +327,9 @@
   function cropRect() {
     var t = +$('crop-top').value / 100, b = +$('crop-bottom').value / 100;
     var l = +$('crop-left').value / 100, r = +$('crop-right').value / 100;
+    // Keep at least 10% of the photo in each direction, so the box cannot collapse.
+    if (t + b > 0.9) { var kv = 0.9 / (t + b); t *= kv; b *= kv; }
+    if (l + r > 0.9) { var kh = 0.9 / (l + r); l *= kh; r *= kh; }
     var W = cropImg.naturalWidth, H = cropImg.naturalHeight;
     return { x: Math.round(l * W), y: Math.round(t * H), w: Math.round(W * (1 - l - r)), h: Math.round(H * (1 - t - b)) };
   }
@@ -388,7 +391,7 @@
     else if (dragEdge === 'bottom') v = (1 - p.y) * 100;
     else if (dragEdge === 'left') v = p.x * 100;
     else v = (1 - p.x) * 100;
-    v = Math.max(0, Math.min(40, Math.round(v)));
+    v = Math.max(0, Math.min(80, Math.round(v)));
     $('crop-' + dragEdge).value = v;
     drawCrop();
   });
