@@ -295,7 +295,9 @@ def _ruling_exempt(low):
     if re.match(r'^[a-z]+ [a-z]+ \(', low) and re.search(r'\b(oil|butter|extract|leaf|flower|root|seed|fruit|juice|peel|kernel|bark|powder)\b', low): return True
     return False
 
-def grade(product_name, product_type, verbatim):
+def grade(product_name, product_type, verbatim, disclosed_fragrance=False):
+    """disclosed_fragrance: user ruling for Attitude labels. When the fragrance line is starred and the
+    scents are starred too, the fragrance line itself is not graded (the scents are)."""
     ingredients = split_ingredients(verbatim)
     _inhal_product = is_inhalation_risk(product_name, product_type)
     verbatim_lower = verbatim.lower()
@@ -325,6 +327,7 @@ def grade(product_name, product_type, verbatim):
         if _ruling_exempt(low) and not _frag_word: continue
         if re.match(r'^(vegetable |organic |plant )?glycerin\b\s*(\(.*\))?$', low): continue  # User decision: glycerin is left alone (not flagged, not unknown)
         seen.add(low)
+        if disclosed_fragrance and re.match(r'^(fragrance|parfum)(\s*\((fragrance|parfum)\))?$', low): continue
         if 'behentrimonium methosulfate' in low: continue
         if is_fatty_alc(low): continue
         nf = is_natural_frag(low, verbatim_lower)

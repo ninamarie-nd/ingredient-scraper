@@ -282,7 +282,7 @@
     var FRAG_RE = /\b(fragrance|parfum|perfume|aroma|flavou?r|flavoring)\b/;
 
     // ---------- main ----------
-    function grade(productName, productType, verbatim) {
+    function grade(productName, productType, verbatim, disclosedFragrance) {
       var ingredients = splitIngredients(verbatim);
       var inhalProduct = isInhalationRisk(productName, productType);
       var vl = String(verbatim).toLowerCase();
@@ -309,6 +309,7 @@
         if (rulingExempt(low) && !fragWord) continue;
         if (/^(vegetable |organic |plant )?glycerin\b\s*(\(.*\))?$/.test(low)) continue;
         seen.add(low);
+        if (disclosedFragrance && /^(fragrance|parfum)(\s*\((fragrance|parfum)\))?$/.test(low)) continue;
         if (low.indexOf('behentrimonium methosulfate') >= 0) continue;
         if (isFattyAlc(low)) continue;
         var nf = isNaturalFrag(low, vl);
