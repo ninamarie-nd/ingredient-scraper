@@ -239,6 +239,8 @@
       low = stripChars(low, ' –-');
       if (EXEMPT_FRAG.has(low)) return true;
       if (low.indexOf('essential oil') >= 0) return true;
+      // User ruling 2026-11-05: sea kelp (Organic, Acadian, Ascophyllum) is fine.
+      if (low.indexOf('kelp') >= 0) return true;
       if (low.indexOf('organic ') === 0 || /\b(extract|powder|flour|seed|leaf|stem|bark|root|peel|flower|fruit|sucrose)\b/.test(low)) return true;
       if (/\b(olea|pisum|zea|cocos|bambusa|chenopodium|mentha|lavandula|vanilla|lavender|peppermint|tansy|ylang|hypericum|kale|lemon|carrot|rice|coconut|citrus|daucus|brassica)\b/.test(low)) return true;
       if (low.indexOf('silicon dioxide') >= 0) return true;

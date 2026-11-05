@@ -254,6 +254,8 @@ def is_exempt_unknown(name):
     if low in _EXEMPT_FRAG: return True
     # User ruling 2026-11-05: any essential oil ingredient is Puberty Safe.
     if 'essential oil' in low: return True
+    # User ruling 2026-11-05: sea kelp (Organic, Acadian, Ascophyllum) is fine.
+    if 'kelp' in low: return True
     # Botanicals: "organic ...", plant names with a Latin binomial, or entries marked as plant items.
     if low.startswith('organic ') or re.search(r'\b(extract|powder|flour|seed|leaf|stem|bark|root|peel|flower|fruit|sucrose)\b', low): return True
     if re.search(r'\b(olea|pisum|zea|cocos|bambusa|chenopodium|mentha|lavandula|vanilla|lavender|peppermint|tansy|ylang|hypericum|kale|lemon|carrot|rice|coconut|citrus|daucus|brassica)\b', low): return True
