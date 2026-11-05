@@ -191,6 +191,16 @@ def split_ingredients(text):
         out.append(p)
     return out
 
+def _is_leave_on(product_type):
+    """Leave-on = any product type that is not a rinse-off or oral-care type.
+    Stored dashboard types are free-form ("Body Lotion / Cream", "Hair Styling"),
+    so this matches by keyword rather than exact string."""
+    pt = (product_type or '').lower()
+    rinse_off = ('shampoo', 'wash', 'conditioner', 'bar soap', 'hand soap',
+                 'bath', 'shaving', 'scrub', 'exfoliant', 'cleansing',
+                 'toothpaste', 'mouthwash')
+    return not any(k in pt for k in rinse_off)
+
 def is_inhalation_risk(name, product_type):
     """True when a product is likely to be inhaled or lofted: loose powders,
     sprays, mists, aerosols. Silica/talc/mica/titanium dioxide/iron oxides
@@ -370,7 +380,7 @@ def grade(product_name, product_type, verbatim):
                     escalations.add('PFAS')
                 elif 'pfas' in note and ('perfluoro' in low or 'pfas' in low):
                     escalations.add('PFAS')
-                if 1 in cats and product_type.lower() in ('leave-on skincare', 'hair styling'):
+                if 1 in cats and _is_leave_on(product_type):
                     escalations.add('carcinogen in leave-on')
             continue
         matched = False
@@ -390,7 +400,7 @@ def grade(product_name, product_type, verbatim):
                         escalations.add('PFAS')
                     if 'formaldehyde' in label.lower():
                         escalations.add('formaldehyde-releaser')
-                    if 1 in cats and product_type.lower() in ('leave-on skincare', 'hair styling'):
+                    if 1 in cats and _is_leave_on(product_type):
                         escalations.add('carcinogen in leave-on')
                 matched = True
                 break
