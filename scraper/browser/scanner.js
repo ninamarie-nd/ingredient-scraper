@@ -42,49 +42,16 @@
   }
 
   // ----- fix OCR misreads by matching each ingredient to the reference names -----
-  var KNOWN = null, KNOWN_SET = null, KNOWN_BG = null;
-  // Names to match against: the reference list, plus ingredient names that appear in at least two
-  // products in the database. The database adds many common names the reference does not list.
+  var KNOWN = null;
   function knownNames() {
     if (KNOWN) return KNOWN;
     KNOWN = [];
-    KNOWN_SET = {};
-    function add(k) {
-      var n = String(k).toLowerCase().replace(/\s+/g, ' ').trim();
-      if (n && !KNOWN_SET[n]) { KNOWN_SET[n] = 1; KNOWN.push(n); }
-    }
+    var seen = {};
+    function add(k) { var n = String(k).toLowerCase().replace(/\s+/g, ' ').trim(); if (n && !seen[n]) { seen[n] = 1; KNOWN.push(n); } }
     var ref = JSON.parse(document.getElementById('scanner-ref').textContent);
     Object.keys(ref.ref || {}).forEach(add);
     Object.keys(ref.aliases || {}).forEach(add);
-    try {
-      var el = document.getElementById('product-data');
-      var data = el ? JSON.parse(el.textContent) : { products: [] };
-      var count = {};
-      (data.products || []).forEach(function (pr) {
-        var seenHere = {};
-        String(pr.ing || '').split(',').forEach(function (seg) {
-          var n = seg.toLowerCase().replace(/\s+/g, ' ').replace(/^[^a-z(]+/, '').replace(/[^a-z)]+$/, '').trim();
-          if (n.length < 4 || n.length > 60 || /[:%\/]/.test(n) || seenHere[n]) return;
-          seenHere[n] = 1;
-          count[n] = (count[n] || 0) + 1;
-        });
-      });
-      Object.keys(count).forEach(function (n) { if (count[n] >= 2) add(n); });
-    } catch (e) { /* no database on this page: reference names only */ }
-    KNOWN_BG = KNOWN.map(bigrams);
     return KNOWN;
-  }
-  function bigrams(str) {
-    var set = {}, i;
-    for (i = 0; i < str.length - 1; i++) set[str.substr(i, 2)] = 1;
-    return set;
-  }
-  // Fraction of shared letter pairs (Dice coefficient). Cheap pre-check before the full edit distance.
-  function diceScore(qb, nb) {
-    var shared = 0, qn = 0, nn = 0, k;
-    for (k in qb) { qn++; if (nb[k]) shared++; }
-    for (k in nb) nn++;
-    return qn + nn ? (2 * shared) / (qn + nn) : 0;
   }
   function editDistance(a, b) {
     var prev = [], cur, i, j, cost;
@@ -101,20 +68,13 @@
   }
   // Best reference name for one OCR'd ingredient, or null when nothing is close enough.
   function bestName(raw, inner) {
-    // Stray symbols from the photo ("|", "~", "»") are not words: drop them before matching.
-    var lower = raw.toLowerCase().replace(/[^a-z() \-]+/g, ' ').replace(/\s+/g, ' ').trim();
+    var lower = raw.toLowerCase().replace(/\s+/g, ' ').trim();
     if (!lower || lower.length < 4) return null;
     var names = knownNames(), best = null, bestSim = 0, i;
-    if (KNOWN_SET[lower]) return lower; // exact match: nothing to fix, but it still counts as a known name
-    var qb = bigrams(lower);
-    var qWords = lower.split(' ').length;
     for (i = 0; i < names.length; i++) {
       var n = names[i];
+      if (n === lower) return n; // exact match: nothing to fix, but it still counts as a known name
       if (Math.abs(n.length - lower.length) > (Math.max(n.length, lower.length) > 20 ? 9 : 6)) continue;
-      // Word count must agree, so a short piece cannot be stretched into a longer name ("Flower" -> "Flower Oil").
-      var nWords = n.split(' ').length;
-      if (nWords !== qWords) continue;
-      if (diceScore(qb, KNOWN_BG[i]) < 0.5) continue; // too different to be a misread of this name
       var d = editDistance(lower, n), sim = 1 - d / Math.max(lower.length, n.length);
       if (sim > bestSim) { bestSim = sim; best = n; }
     }
@@ -163,7 +123,7 @@
       var pieces = whole ? [{ text: whole, orig: clean }] : splitFix(clean);
       if (!pieces) { out.push(orig); return; }
       pieces.forEach(function (pc) {
-        var known = !!KNOWN_SET[pc.text.toLowerCase()];
+        var known = knownNames().indexOf(pc.text.toLowerCase()) >= 0;
         if (!known) { out.push(pc.text); return; }
         var shown = titleCase(pc.text);
         if (pc.orig.toLowerCase() !== pc.text.toLowerCase()) fixes.push([pc.orig, shown]);
@@ -269,7 +229,7 @@
         try {
           var longSide = Math.max(img.naturalWidth, img.naturalHeight);
           // OCR reads large letters best: enlarge small crops, shrink very large photos.
-          var s = Math.min(3000 / longSide, Math.max(1, 2400 / longSide));
+          var s = Math.min(1, 2000 / longSide);
           var c = document.createElement('canvas');
           c.width = Math.round(img.naturalWidth * s);
           c.height = Math.round(img.naturalHeight * s);
