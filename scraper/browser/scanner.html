@@ -2,7 +2,27 @@
   <div class="modal scan-modal" role="dialog" aria-modal="true" aria-labelledby="scan-title">
     <h2 id="scan-title">Scan a product label</h2>
     <p class="modal-sub">Take a photo of the ingredient list and we will grade the product. The photo is read on your device and is not uploaded.</p>
-    <label class="scan-pick">Take or choose a photo<input type="file" id="scan-file" accept="image/*" capture="environment"></label>
+    <div class="scan-sources" id="scan-sources">
+      <button type="button" class="ask-btn" id="scan-take">Take a photo</button>
+      <button type="button" class="ask-btn scan-alt" id="scan-library">Choose from library</button>
+    </div>
+    <input type="file" id="scan-camera" class="scan-hidden-input" accept="image/*" capture="environment" tabindex="-1" aria-hidden="true">
+    <input type="file" id="scan-file" class="scan-hidden-input" accept="image/*" tabindex="-1" aria-hidden="true">
+    <div class="scan-crop" id="scan-crop" hidden>
+      <p class="modal-sub">Crop the photo to just the ingredient list, or use the full photo.</p>
+      <canvas id="scan-crop-canvas" class="scan-crop-canvas"></canvas>
+      <div class="scan-crop-sliders">
+        <label>Top <input type="range" id="crop-top" min="0" max="40" value="0"></label>
+        <label>Bottom <input type="range" id="crop-bottom" min="0" max="40" value="0"></label>
+        <label>Left <input type="range" id="crop-left" min="0" max="40" value="0"></label>
+        <label>Right <input type="range" id="crop-right" min="0" max="40" value="0"></label>
+      </div>
+      <div class="modal-actions">
+        <button type="button" class="link" id="crop-cancel">Cancel</button>
+        <button type="button" class="link" id="crop-full">Full photo</button>
+        <button type="button" class="ask-btn" id="crop-use">Use this crop</button>
+      </div>
+    </div>
     <img id="scan-preview" class="scan-preview" alt="Photo of the ingredient list" hidden>
     <p class="modal-status" id="scan-status" role="status"></p>
 

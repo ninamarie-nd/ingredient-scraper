@@ -1641,13 +1641,45 @@ select:focus{border-color:var(--teal);outline:2px solid var(--teal);outline-offs
 .scan-result .scan-save{margin-top:12px;padding-top:6px;border-top:1px solid var(--border)}
 .scan-result .modal{box-shadow:none}
 .scan-result label{font-size:13px}
+/* Hero buttons: stack on phones with a real gap (the old margin-left made them touch when wrapped). */
+.hero-actions{display:flex;flex-wrap:wrap;justify-content:center;gap:12px}
+.hero-actions .ask-btn + .ask-btn{margin-left:0}
+.scan-sources{display:flex;flex-direction:column;gap:12px;margin:4px 0 14px}
+.scan-sources .ask-btn{width:100%}
+.scan-alt{background:#fff !important;color:var(--teal) !important;border:2px solid var(--teal) !important}
+.scan-hidden-input{position:absolute;width:1px;height:1px;opacity:0;pointer-events:none}
+.scan-crop{margin:4px 0 14px}
+.scan-crop-canvas{display:block;width:100%;height:auto;border-radius:8px;border:1px solid var(--border);background:#fff;touch-action:none}
+.scan-crop-sliders{display:grid;grid-template-columns:1fr 1fr;gap:6px 14px;margin:10px 0 4px}
+.scan-crop-sliders label{font-size:13px;display:block}
+.scan-crop-sliders input[type="range"]{width:100%}
 
 </style>
 <div class="modal-back" id="scan-modal" hidden>
   <div class="modal scan-modal" role="dialog" aria-modal="true" aria-labelledby="scan-title">
     <h2 id="scan-title">Scan a product label</h2>
     <p class="modal-sub">Take a photo of the ingredient list and we will grade the product. The photo is read on your device and is not uploaded.</p>
-    <label class="scan-pick">Take or choose a photo<input type="file" id="scan-file" accept="image/*" capture="environment"></label>
+    <div class="scan-sources" id="scan-sources">
+      <button type="button" class="ask-btn" id="scan-take">Take a photo</button>
+      <button type="button" class="ask-btn scan-alt" id="scan-library">Choose from library</button>
+    </div>
+    <input type="file" id="scan-camera" class="scan-hidden-input" accept="image/*" capture="environment" tabindex="-1" aria-hidden="true">
+    <input type="file" id="scan-file" class="scan-hidden-input" accept="image/*" tabindex="-1" aria-hidden="true">
+    <div class="scan-crop" id="scan-crop" hidden>
+      <p class="modal-sub">Crop the photo to just the ingredient list, or use the full photo.</p>
+      <canvas id="scan-crop-canvas" class="scan-crop-canvas"></canvas>
+      <div class="scan-crop-sliders">
+        <label>Top <input type="range" id="crop-top" min="0" max="40" value="0"></label>
+        <label>Bottom <input type="range" id="crop-bottom" min="0" max="40" value="0"></label>
+        <label>Left <input type="range" id="crop-left" min="0" max="40" value="0"></label>
+        <label>Right <input type="range" id="crop-right" min="0" max="40" value="0"></label>
+      </div>
+      <div class="modal-actions">
+        <button type="button" class="link" id="crop-cancel">Cancel</button>
+        <button type="button" class="link" id="crop-full">Full photo</button>
+        <button type="button" class="ask-btn" id="crop-use">Use this crop</button>
+      </div>
+    </div>
     <img id="scan-preview" class="scan-preview" alt="Photo of the ingredient list" hidden>
     <p class="modal-status" id="scan-status" role="status"></p>
 
@@ -2504,7 +2536,8 @@ select:focus{border-color:var(--teal);outline:2px solid var(--teal);outline-offs
   var G = window.makeGrader(JSON.parse(document.getElementById('scanner-ref').textContent));
 
   var $ = function (id) { return document.getElementById(id); };
-  var modal = $('scan-modal'), fileEl = $('scan-file'), preview = $('scan-preview'), statusEl = $('scan-status');
+  var modal = $('scan-modal'), fileEl = $('scan-file'), camEl = $('scan-camera'), preview = $('scan-preview'), statusEl = $('scan-status');
+  var cropBox = $('scan-crop'), cropCanvas = $('scan-crop-canvas'), cropSrc = null, cropFile = null, cropUrl = null;
   var resultEl = $('scan-result'), tierEl = $('scan-tier'), detailsEl = $('scan-details'), textEl = $('scan-text');
   var nameEl = $('scan-name'), brandEl = $('scan-brand'), typeEl = $('scan-type'), saveBtn = $('scan-save'), saveStatus = $('scan-save-status');
 
@@ -2575,7 +2608,14 @@ select:focus{border-color:var(--teal);outline:2px solid var(--teal);outline-offs
   function open() {
     modal.hidden = false;
     setStatus('');
-    fileEl.focus();
+    showSources();
+    $('scan-take').focus();
+  }
+  function showSources() {
+    $('scan-sources').hidden = false;
+    cropBox.hidden = true;
+    if (cropUrl) { URL.revokeObjectURL(cropUrl); cropUrl = null; }
+    cropSrc = null; cropFile = null;
   }
   function close() { modal.hidden = true; }
   function reset() {
@@ -2592,6 +2632,8 @@ select:focus{border-color:var(--teal);outline:2px solid var(--teal);outline-offs
     saveBtn.disabled = false;
     saveBtn.textContent = 'Save to my scans';
     fileEl.value = '';
+    camEl.value = '';
+    showSources();
     if (previewUrl) { URL.revokeObjectURL(previewUrl); previewUrl = null; }
     preview.removeAttribute('src');
     preview.hidden = true;
@@ -2599,7 +2641,9 @@ select:focus{border-color:var(--teal);outline:2px solid var(--teal);outline-offs
   }
   $('scan-open').addEventListener('click', open);
   $('scan-close').addEventListener('click', close);
-  $('scan-another').addEventListener('click', function () { reset(); fileEl.click(); });
+  $('scan-another').addEventListener('click', function () { reset(); });
+  $('scan-take').addEventListener('click', function () { camEl.click(); });
+  $('scan-library').addEventListener('click', function () { fileEl.click(); });
   modal.addEventListener('click', function (e) { if (e.target === modal) close(); });
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !modal.hidden) close(); });
 
@@ -2673,9 +2717,82 @@ select:focus{border-color:var(--teal);outline:2px solid var(--teal);outline-offs
     });
   }
 
-  fileEl.addEventListener('change', function () {
-    var f = fileEl.files && fileEl.files[0];
+  // ----- choose a photo -> optional crop -> read -----
+  function pickedFile(input) {
+    var f = input.files && input.files[0];
     if (!f || busy) return;
+    input.value = '';
+    showCrop(f);
+  }
+  fileEl.addEventListener('change', function () { pickedFile(fileEl); });
+  camEl.addEventListener('change', function () { pickedFile(camEl); });
+
+  var cropImg = null;
+  function showCrop(f) {
+    cropFile = f;
+    setStatus('');
+    resultEl.hidden = true;
+    preview.hidden = true;
+    $('scan-sources').hidden = true;
+    cropBox.hidden = false;
+    ['top', 'bottom', 'left', 'right'].forEach(function (k) { $('crop-' + k).value = 0; });
+    var img = new Image();
+    var url = URL.createObjectURL(f);
+    img.onload = function () {
+      cropImg = img;
+      cropSrc = url;
+      drawCrop();
+    };
+    img.onerror = function () {
+      URL.revokeObjectURL(url);
+      showSources();
+      setStatus("We couldn't open that photo. Try another one.");
+    };
+    img.src = url;
+  }
+  function cropRect() {
+    var t = +$('crop-top').value / 100, b = +$('crop-bottom').value / 100;
+    var l = +$('crop-left').value / 100, r = +$('crop-right').value / 100;
+    var W = cropImg.naturalWidth, H = cropImg.naturalHeight;
+    return { x: Math.round(l * W), y: Math.round(t * H), w: Math.round(W * (1 - l - r)), h: Math.round(H * (1 - t - b)) };
+  }
+  function drawCrop() {
+    if (!cropImg) return;
+    var W = cropImg.naturalWidth, H = cropImg.naturalHeight;
+    var scale = Math.min(1, 600 / W);
+    cropCanvas.width = Math.round(W * scale);
+    cropCanvas.height = Math.round(H * scale);
+    var ctx = cropCanvas.getContext('2d');
+    ctx.drawImage(cropImg, 0, 0, cropCanvas.width, cropCanvas.height);
+    var r = cropRect();
+    var sx = r.x * scale, sy = r.y * scale, sw = r.w * scale, sh = r.h * scale;
+    ctx.fillStyle = 'rgba(0,0,0,0.45)';
+    ctx.fillRect(0, 0, cropCanvas.width, sy);
+    ctx.fillRect(0, sy + sh, cropCanvas.width, cropCanvas.height - sy - sh);
+    ctx.fillRect(0, sy, sx, sh);
+    ctx.fillRect(sx + sw, sy, cropCanvas.width - sx - sw, sh);
+    ctx.lineWidth = 3;
+    ctx.strokeStyle = '#3aa0a4';
+    ctx.strokeRect(sx, sy, sw, sh);
+  }
+  ['top', 'bottom', 'left', 'right'].forEach(function (k) {
+    $('crop-' + k).addEventListener('input', drawCrop);
+  });
+  $('crop-cancel').addEventListener('click', function () { showSources(); fileEl.value = ''; camEl.value = ''; });
+  $('crop-full').addEventListener('click', function () { if (cropFile) startRead(cropFile); });
+  $('crop-use').addEventListener('click', function () {
+    if (!cropImg) return;
+    var r = cropRect();
+    var c = document.createElement('canvas');
+    c.width = r.w; c.height = r.h;
+    c.getContext('2d').drawImage(cropImg, r.x, r.y, r.w, r.h, 0, 0, r.w, r.h);
+    c.toBlob(function (blob) { startRead(blob || cropFile); }, 'image/jpeg', 0.95);
+  });
+
+  function startRead(f) {
+    if (busy) return;
+    cropBox.hidden = true;
+    $('scan-sources').hidden = true;
     if (previewUrl) URL.revokeObjectURL(previewUrl);
     previewUrl = URL.createObjectURL(f);
     preview.src = previewUrl;
@@ -2696,7 +2813,7 @@ select:focus{border-color:var(--teal);outline:2px solid var(--teal);outline-offs
       busy = false;
       setStatus('The text reader could not load. Check your internet connection and try the photo again.');
     });
-  });
+  }
 
   // ----- grade -----
   function summaryOf(r) {

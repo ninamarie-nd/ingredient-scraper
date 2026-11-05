@@ -11,3 +11,15 @@
 .scan-result .scan-save{margin-top:12px;padding-top:6px;border-top:1px solid var(--border)}
 .scan-result .modal{box-shadow:none}
 .scan-result label{font-size:13px}
+/* Hero buttons: stack on phones with a real gap (the old margin-left made them touch when wrapped). */
+.hero-actions{display:flex;flex-wrap:wrap;justify-content:center;gap:12px}
+.hero-actions .ask-btn + .ask-btn{margin-left:0}
+.scan-sources{display:flex;flex-direction:column;gap:12px;margin:4px 0 14px}
+.scan-sources .ask-btn{width:100%}
+.scan-alt{background:#fff !important;color:var(--teal) !important;border:2px solid var(--teal) !important}
+.scan-hidden-input{position:absolute;width:1px;height:1px;opacity:0;pointer-events:none}
+.scan-crop{margin:4px 0 14px}
+.scan-crop-canvas{display:block;width:100%;height:auto;border-radius:8px;border:1px solid var(--border);background:#fff;touch-action:none}
+.scan-crop-sliders{display:grid;grid-template-columns:1fr 1fr;gap:6px 14px;margin:10px 0 4px}
+.scan-crop-sliders label{font-size:13px;display:block}
+.scan-crop-sliders input[type="range"]{width:100%}

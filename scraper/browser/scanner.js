@@ -15,7 +15,8 @@
   var G = window.makeGrader(JSON.parse(document.getElementById('scanner-ref').textContent));
 
   var $ = function (id) { return document.getElementById(id); };
-  var modal = $('scan-modal'), fileEl = $('scan-file'), preview = $('scan-preview'), statusEl = $('scan-status');
+  var modal = $('scan-modal'), fileEl = $('scan-file'), camEl = $('scan-camera'), preview = $('scan-preview'), statusEl = $('scan-status');
+  var cropBox = $('scan-crop'), cropCanvas = $('scan-crop-canvas'), cropSrc = null, cropFile = null, cropUrl = null;
   var resultEl = $('scan-result'), tierEl = $('scan-tier'), detailsEl = $('scan-details'), textEl = $('scan-text');
   var nameEl = $('scan-name'), brandEl = $('scan-brand'), typeEl = $('scan-type'), saveBtn = $('scan-save'), saveStatus = $('scan-save-status');
 
@@ -86,7 +87,14 @@
   function open() {
     modal.hidden = false;
     setStatus('');
-    fileEl.focus();
+    showSources();
+    $('scan-take').focus();
+  }
+  function showSources() {
+    $('scan-sources').hidden = false;
+    cropBox.hidden = true;
+    if (cropUrl) { URL.revokeObjectURL(cropUrl); cropUrl = null; }
+    cropSrc = null; cropFile = null;
   }
   function close() { modal.hidden = true; }
   function reset() {
@@ -103,6 +111,8 @@
     saveBtn.disabled = false;
     saveBtn.textContent = 'Save to my scans';
     fileEl.value = '';
+    camEl.value = '';
+    showSources();
     if (previewUrl) { URL.revokeObjectURL(previewUrl); previewUrl = null; }
     preview.removeAttribute('src');
     preview.hidden = true;
@@ -110,7 +120,9 @@
   }
   $('scan-open').addEventListener('click', open);
   $('scan-close').addEventListener('click', close);
-  $('scan-another').addEventListener('click', function () { reset(); fileEl.click(); });
+  $('scan-another').addEventListener('click', function () { reset(); });
+  $('scan-take').addEventListener('click', function () { camEl.click(); });
+  $('scan-library').addEventListener('click', function () { fileEl.click(); });
   modal.addEventListener('click', function (e) { if (e.target === modal) close(); });
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !modal.hidden) close(); });
 
@@ -184,9 +196,82 @@
     });
   }
 
-  fileEl.addEventListener('change', function () {
-    var f = fileEl.files && fileEl.files[0];
+  // ----- choose a photo -> optional crop -> read -----
+  function pickedFile(input) {
+    var f = input.files && input.files[0];
     if (!f || busy) return;
+    input.value = '';
+    showCrop(f);
+  }
+  fileEl.addEventListener('change', function () { pickedFile(fileEl); });
+  camEl.addEventListener('change', function () { pickedFile(camEl); });
+
+  var cropImg = null;
+  function showCrop(f) {
+    cropFile = f;
+    setStatus('');
+    resultEl.hidden = true;
+    preview.hidden = true;
+    $('scan-sources').hidden = true;
+    cropBox.hidden = false;
+    ['top', 'bottom', 'left', 'right'].forEach(function (k) { $('crop-' + k).value = 0; });
+    var img = new Image();
+    var url = URL.createObjectURL(f);
+    img.onload = function () {
+      cropImg = img;
+      cropSrc = url;
+      drawCrop();
+    };
+    img.onerror = function () {
+      URL.revokeObjectURL(url);
+      showSources();
+      setStatus("We couldn't open that photo. Try another one.");
+    };
+    img.src = url;
+  }
+  function cropRect() {
+    var t = +$('crop-top').value / 100, b = +$('crop-bottom').value / 100;
+    var l = +$('crop-left').value / 100, r = +$('crop-right').value / 100;
+    var W = cropImg.naturalWidth, H = cropImg.naturalHeight;
+    return { x: Math.round(l * W), y: Math.round(t * H), w: Math.round(W * (1 - l - r)), h: Math.round(H * (1 - t - b)) };
+  }
+  function drawCrop() {
+    if (!cropImg) return;
+    var W = cropImg.naturalWidth, H = cropImg.naturalHeight;
+    var scale = Math.min(1, 600 / W);
+    cropCanvas.width = Math.round(W * scale);
+    cropCanvas.height = Math.round(H * scale);
+    var ctx = cropCanvas.getContext('2d');
+    ctx.drawImage(cropImg, 0, 0, cropCanvas.width, cropCanvas.height);
+    var r = cropRect();
+    var sx = r.x * scale, sy = r.y * scale, sw = r.w * scale, sh = r.h * scale;
+    ctx.fillStyle = 'rgba(0,0,0,0.45)';
+    ctx.fillRect(0, 0, cropCanvas.width, sy);
+    ctx.fillRect(0, sy + sh, cropCanvas.width, cropCanvas.height - sy - sh);
+    ctx.fillRect(0, sy, sx, sh);
+    ctx.fillRect(sx + sw, sy, cropCanvas.width - sx - sw, sh);
+    ctx.lineWidth = 3;
+    ctx.strokeStyle = '#3aa0a4';
+    ctx.strokeRect(sx, sy, sw, sh);
+  }
+  ['top', 'bottom', 'left', 'right'].forEach(function (k) {
+    $('crop-' + k).addEventListener('input', drawCrop);
+  });
+  $('crop-cancel').addEventListener('click', function () { showSources(); fileEl.value = ''; camEl.value = ''; });
+  $('crop-full').addEventListener('click', function () { if (cropFile) startRead(cropFile); });
+  $('crop-use').addEventListener('click', function () {
+    if (!cropImg) return;
+    var r = cropRect();
+    var c = document.createElement('canvas');
+    c.width = r.w; c.height = r.h;
+    c.getContext('2d').drawImage(cropImg, r.x, r.y, r.w, r.h, 0, 0, r.w, r.h);
+    c.toBlob(function (blob) { startRead(blob || cropFile); }, 'image/jpeg', 0.95);
+  });
+
+  function startRead(f) {
+    if (busy) return;
+    cropBox.hidden = true;
+    $('scan-sources').hidden = true;
     if (previewUrl) URL.revokeObjectURL(previewUrl);
     previewUrl = URL.createObjectURL(f);
     preview.src = previewUrl;
@@ -207,7 +292,7 @@
       busy = false;
       setStatus('The text reader could not load. Check your internet connection and try the photo again.');
     });
-  });
+  }
 
   // ----- grade -----
   function summaryOf(r) {
