@@ -227,7 +227,9 @@
       var url = URL.createObjectURL(file);
       img.onload = function () {
         try {
-          var s = Math.min(1, 2000 / Math.max(img.naturalWidth, img.naturalHeight));
+          var longSide = Math.max(img.naturalWidth, img.naturalHeight);
+          // OCR reads large letters best: enlarge small crops, shrink very large photos.
+          var s = Math.min(3000 / longSide, Math.max(1, 2400 / longSide));
           var c = document.createElement('canvas');
           c.width = Math.round(img.naturalWidth * s);
           c.height = Math.round(img.naturalHeight * s);
@@ -350,6 +352,49 @@
   ['top', 'bottom', 'left', 'right'].forEach(function (k) {
     $('crop-' + k).addEventListener('input', drawCrop);
   });
+  // Drag an edge of the blue box directly on the photo.
+  var dragEdge = null;
+  function canvasPoint(e) {
+    var r = cropCanvas.getBoundingClientRect();
+    return { x: (e.clientX - r.left) / r.width, y: (e.clientY - r.top) / r.height };
+  }
+  function edgeAt(p) {
+    var t = +$('crop-top').value / 100, b = 1 - (+$('crop-bottom').value / 100);
+    var l = +$('crop-left').value / 100, r = 1 - (+$('crop-right').value / 100);
+    var tol = 0.07, best = null, bd = tol;
+    var inX = p.x >= l - tol && p.x <= r + tol, inY = p.y >= t - tol && p.y <= b + tol;
+    if (inX) {
+      if (Math.abs(p.y - t) < bd) { bd = Math.abs(p.y - t); best = 'top'; }
+      if (Math.abs(p.y - b) < bd) { bd = Math.abs(p.y - b); best = 'bottom'; }
+    }
+    if (inY) {
+      if (Math.abs(p.x - l) < bd) { bd = Math.abs(p.x - l); best = 'left'; }
+      if (Math.abs(p.x - r) < bd) { bd = Math.abs(p.x - r); best = 'right'; }
+    }
+    return best;
+  }
+  cropCanvas.addEventListener('pointerdown', function (e) {
+    if (!cropImg) return;
+    var edge = edgeAt(canvasPoint(e));
+    if (!edge) return;
+    dragEdge = edge;
+    cropCanvas.setPointerCapture(e.pointerId);
+    e.preventDefault();
+  });
+  cropCanvas.addEventListener('pointermove', function (e) {
+    if (!dragEdge) return;
+    var p = canvasPoint(e), v;
+    if (dragEdge === 'top') v = p.y * 100;
+    else if (dragEdge === 'bottom') v = (1 - p.y) * 100;
+    else if (dragEdge === 'left') v = p.x * 100;
+    else v = (1 - p.x) * 100;
+    v = Math.max(0, Math.min(40, Math.round(v)));
+    $('crop-' + dragEdge).value = v;
+    drawCrop();
+  });
+  function endDrag() { dragEdge = null; }
+  cropCanvas.addEventListener('pointerup', endDrag);
+  cropCanvas.addEventListener('pointercancel', endDrag);
   $('crop-cancel').addEventListener('click', function () { showSources(); fileEl.value = ''; camEl.value = ''; });
   $('crop-full').addEventListener('click', function () { if (cropFile) startRead(cropFile); });
   $('crop-use').addEventListener('click', function () {
