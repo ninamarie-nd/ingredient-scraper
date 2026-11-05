@@ -183,6 +183,8 @@
         p = p.replace(/\s*\d+(\.\d+)?\s*%\s*$/, '');
         p = p.replace(/^\s*\d+(\.\d+)?\s*%\s*/, '');
         p = p.replace(/\([^)]*\d+(\.\d+)?\s*%[^)]*\)/g, '');
+        // Footnote text printed after an ingredient, e.g. 'Plant Glycerin* * Organic Ingredients'.
+        p = p.replace(/[\s*]*(certified\s+)?organic ingredients?\s*$/i, '').trim();
         if (!p) return;
         var low = p.toLowerCase();
         if (['ingredients', 'inactive ingredients', 'active ingredient', 'active ingredients', 'inactive', 'active'].indexOf(low) >= 0) return;

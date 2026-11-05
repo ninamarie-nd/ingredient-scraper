@@ -169,6 +169,8 @@ def split_ingredients(text):
         p = re.sub(r'\s*\d+(\.\d+)?\s*%\s*$', '', p)
         p = re.sub(r'^\s*\d+(\.\d+)?\s*%\s*', '', p)
         p = re.sub(r'\([^)]*\d+(\.\d+)?\s*%[^)]*\)', '', p)
+        # Footnote text printed after an ingredient, e.g. 'Plant Glycerin* * Organic Ingredients'.
+        p = re.sub(r'[\s*]*(certified\s+)?organic ingredients?\s*$', '', p, flags=re.I).strip()
         if not p: continue
         low = p.lower()
         if low in ('ingredients','inactive ingredients','active ingredient','active ingredients','inactive','active'): continue
