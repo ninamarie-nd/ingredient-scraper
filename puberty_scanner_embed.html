@@ -2978,16 +2978,12 @@ select:focus{border-color:var(--teal);outline:2px solid var(--teal);outline-offs
     var r = c.r;
     // If many words could not be matched, the photo was probably unclear or showed more than the ingredient list.
     var unreliable = r.ingredients.length >= 3 && (r.unknown.length / r.ingredients.length) > 0.3;
-    if (unreliable) {
-      tierEl.className = '';
-      tierEl.innerHTML = '<span class="tier-pill">Read unclear</span>';
-    } else {
-      tierEl.className = TIER_WRAP[r.tier] || '';
-      tierEl.innerHTML = '<span class="tier-pill">' + esc(r.tier) + '</span>';
-    }
+    // Always show the grade, labelled provisional when words could not be read.
+    tierEl.className = TIER_WRAP[r.tier] || '';
+    tierEl.innerHTML = '<span class="tier-pill">' + (unreliable ? 'Provisional: ' : '') + esc(r.tier) + '</span>';
     var html = '';
     if (unreliable) {
-      html += '<p class="scan-note"><b>Many words could not be matched to an ingredient, so this grade may be wrong.</b> Retake the photo with only the ingredient list in frame, close, flat and in focus, then scan again.</p>';
+      html += '<p class="scan-note"><b>Provisional.</b> Some words could not be read. This grade is based on the words that were read. The words we could not match are listed below. Fix them in the box, or retake the photo closer, then tap Regrade.</p>';
     }
     html += '<p class="scan-note">' + esc(summaryOf(r)) + ' Read ' + r.ingredients.length + ' ingredient' + (r.ingredients.length === 1 ? '' : 's') + '.</p>';
     if (c.dup) {
@@ -3004,7 +3000,7 @@ select:focus{border-color:var(--teal);outline:2px solid var(--teal);outline-offs
       }).join('') + '</ul>';
     }
     if (r.unknown.length) {
-      html += '<h3>Not in the reference, needs manual review</h3><ul>' + r.unknown.map(function (u) {
+      html += '<h3>' + (unreliable ? 'Words we could not read' : 'Not in the reference, needs manual review') + '</h3><ul>' + r.unknown.map(function (u) {
         return '<li>' + esc(u) + '</li>';
       }).join('') + '</ul>';
     }
