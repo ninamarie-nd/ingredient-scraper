@@ -76,7 +76,11 @@
   nameEl.addEventListener('input', function () {
     if (!typeTouched && nameEl.value.trim()) ensureType(G.inferProductType(nameEl.value.trim(), null));
   });
-  typeEl.addEventListener('change', function () { typeTouched = true; });
+  typeEl.addEventListener('change', function () {
+    typeTouched = true;
+    // Product type changes the grade (leave-on vs rinse-off), so re-grade if a result is showing.
+    if (current) gradeFromBox(false);
+  });
 
   // ----- open / close -----
   function open() {
