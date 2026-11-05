@@ -223,9 +223,20 @@
 
   function renderResult(c) {
     var r = c.r;
-    tierEl.className = TIER_WRAP[r.tier] || '';
-    tierEl.innerHTML = '<span class="tier-pill">' + esc(r.tier) + '</span>';
-    var html = '<p class="scan-note">' + esc(summaryOf(r)) + ' Read ' + r.ingredients.length + ' ingredient' + (r.ingredients.length === 1 ? '' : 's') + '.</p>';
+    // If many words could not be matched, the photo was probably unclear or showed more than the ingredient list.
+    var unreliable = r.ingredients.length >= 3 && (r.unknown.length / r.ingredients.length) > 0.3;
+    if (unreliable) {
+      tierEl.className = '';
+      tierEl.innerHTML = '<span class="tier-pill">Read unclear</span>';
+    } else {
+      tierEl.className = TIER_WRAP[r.tier] || '';
+      tierEl.innerHTML = '<span class="tier-pill">' + esc(r.tier) + '</span>';
+    }
+    var html = '';
+    if (unreliable) {
+      html += '<p class="scan-note"><b>Many words could not be matched to an ingredient, so this grade may be wrong.</b> Retake the photo with only the ingredient list in frame, close, flat and in focus, then scan again.</p>';
+    }
+    html += '<p class="scan-note">' + esc(summaryOf(r)) + ' Read ' + r.ingredients.length + ' ingredient' + (r.ingredients.length === 1 ? '' : 's') + '.</p>';
     if (c.dup) {
       html += '<p class="scan-note">This name is already in the database (' + esc(c.dup.b) + ', ' + esc(c.dup.t) + ').</p>';
     }
