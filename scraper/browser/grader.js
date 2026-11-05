@@ -303,7 +303,7 @@
         if (FRAG_RE.test(low) && BLEND_RE.test(low)) { natural.push([ing, [4, 8]]); continue; }
         var fragWord = /\b(fragrance|parfum|perfume|aroma|flavou?r|flavoring)\b(?![\s-]*free)/.test(low) && !BLEND_RE.test(low);
         if (rulingExempt(low) && !fragWord) continue;
-        if (/^(vegetable |organic )?glycerin\b\s*(\(.*\))?$/.test(low)) continue;
+        if (/^(vegetable |organic |plant )?glycerin\b\s*(\(.*\))?$/.test(low)) continue;
         seen.add(low);
         if (low.indexOf('behentrimonium methosulfate') >= 0) continue;
         if (isFattyAlc(low)) continue;

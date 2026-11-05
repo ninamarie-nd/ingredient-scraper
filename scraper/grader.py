@@ -319,7 +319,7 @@ def grade(product_name, product_type, verbatim):
             natural.append((ing, [4,8])); continue
         _frag_word = bool(re.search(r'\b(fragrance|parfum|perfume|aroma|flavou?r|flavoring)\b(?![\s-]*free)', low)) and not re.search(r'\bessential oil blend\b|\baromatherapy blend\b|\bherbal blend\b', low)
         if _ruling_exempt(low) and not _frag_word: continue
-        if re.match(r'^(vegetable |organic )?glycerin\b\s*(\(.*\))?$', low): continue  # User decision: glycerin is left alone (not flagged, not unknown)
+        if re.match(r'^(vegetable |organic |plant )?glycerin\b\s*(\(.*\))?$', low): continue  # User decision: glycerin is left alone (not flagged, not unknown)
         seen.add(low)
         if 'behentrimonium methosulfate' in low: continue
         if is_fatty_alc(low): continue
