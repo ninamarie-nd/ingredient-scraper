@@ -1,0 +1,24 @@
+<div class="modal-back" id="scan-modal" hidden>
+  <div class="modal scan-modal" role="dialog" aria-modal="true" aria-labelledby="scan-title">
+    <h2 id="scan-title">Scan a product label</h2>
+    <p class="modal-sub">Take a photo of the ingredient list, or choose one you already have. The text is read on your device, and the photo is not uploaded anywhere.</p>
+    <label>Photo of the ingredient list<input type="file" id="scan-file" accept="image/*" capture="environment"></label>
+    <img id="scan-preview" class="scan-preview" alt="Photo of the ingredient list" hidden>
+    <div class="scan-row"><button type="button" class="ask-btn" id="scan-read" disabled>Read the label</button></div>
+    <p class="modal-status" id="scan-read-status" role="status"></p>
+    <label>Product name<input id="scan-name" maxlength="200" autocomplete="off"></label>
+    <label>Brand (optional)<input id="scan-brand" maxlength="120" autocomplete="off"></label>
+    <label>Product type<select id="scan-type"></select></label>
+    <label>Ingredient list (check it against the photo and fix any misread words)<textarea id="scan-text" rows="7" maxlength="8000" placeholder="Read the label, or paste the ingredient list here"></textarea></label>
+    <p class="modal-status" id="scan-status" role="status"></p>
+    <div class="scan-result" id="scan-result" hidden></div>
+    <div class="modal-actions">
+      <button type="button" class="link" id="scan-close">Close</button>
+      <button type="button" class="ask-btn" id="scan-grade">Grade this product</button>
+    </div>
+    <div class="modal-actions scan-after" id="scan-after" hidden>
+      <button type="button" class="link" id="scan-export">Export my scans (.json)</button>
+      <button type="button" class="ask-btn" id="scan-save">Save to my scans</button>
+    </div>
+  </div>
+</div>
