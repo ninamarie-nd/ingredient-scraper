@@ -20,7 +20,7 @@
   var resultEl = $('scan-result'), tierEl = $('scan-tier'), detailsEl = $('scan-details'), textEl = $('scan-text');
   var nameEl = $('scan-name'), brandEl = $('scan-brand'), typeEl = $('scan-type'), saveBtn = $('scan-save'), saveStatus = $('scan-save-status');
 
-  var previewUrl = null, current = null, typeTouched = false, tessPromise = null, busy = false;
+  var previewUrl = null, current = null, typeTouched = false, tessPromise = null, busy = false, lastFixes = [];
 
   function esc(s) {
     return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) {
@@ -39,6 +39,98 @@
     if (stop) rest = rest.slice(0, stop.index);
     rest = rest.trim().replace(/[,\s]+$/, '');
     return rest.indexOf(',') >= 0 ? rest : s;
+  }
+
+  // ----- fix OCR misreads by matching each ingredient to the reference names -----
+  var KNOWN = null;
+  function knownNames() {
+    if (KNOWN) return KNOWN;
+    KNOWN = [];
+    var seen = {};
+    function add(k) { var n = String(k).toLowerCase().replace(/\s+/g, ' ').trim(); if (n && !seen[n]) { seen[n] = 1; KNOWN.push(n); } }
+    var ref = JSON.parse(document.getElementById('scanner-ref').textContent);
+    Object.keys(ref.ref || {}).forEach(add);
+    Object.keys(ref.aliases || {}).forEach(add);
+    return KNOWN;
+  }
+  function editDistance(a, b) {
+    var prev = [], cur, i, j, cost;
+    for (j = 0; j <= b.length; j++) prev[j] = j;
+    for (i = 1; i <= a.length; i++) {
+      cur = [i];
+      for (j = 1; j <= b.length; j++) {
+        cost = a.charAt(i - 1) === b.charAt(j - 1) ? 0 : 1;
+        cur[j] = Math.min(prev[j] + 1, cur[j - 1] + 1, prev[j - 1] + cost);
+      }
+      prev = cur;
+    }
+    return prev[b.length];
+  }
+  // Best reference name for one OCR'd ingredient, or null when nothing is close enough.
+  function bestName(raw, inner) {
+    var lower = raw.toLowerCase().replace(/\s+/g, ' ').trim();
+    if (!lower || lower.length < 4) return null;
+    var names = knownNames(), best = null, bestSim = 0, i;
+    for (i = 0; i < names.length; i++) {
+      var n = names[i];
+      if (n === lower) return n; // exact match: nothing to fix, but it still counts as a known name
+      if (Math.abs(n.length - lower.length) > (Math.max(n.length, lower.length) > 20 ? 9 : 6)) continue;
+      var d = editDistance(lower, n), sim = 1 - d / Math.max(lower.length, n.length);
+      if (sim > bestSim) { bestSim = sim; best = n; }
+    }
+    // Require a high match; short names must be nearly exact.
+    if (lower.length < 12) return bestSim >= 0.9 ? best : null;
+    if (bestSim >= 0.82) return best;
+    // A whole ingredient with garbled OCR can keep its start: accept a looser match only then.
+    // Pieces found inside a merged line must match closely, so a stray word cannot rename them.
+    if (inner) return null;
+    return bestSim >= 0.65 && best && best.slice(0, 3) === lower.slice(0, 3) ? best : null;
+  }
+  // Split one OCR'd piece into reference names. Handles two ingredients that lost their comma.
+  // Returns null when nothing in the piece matches a reference name.
+  function splitFix(clean) {
+    var words = clean.split(/\s+/), pieces = [], buf = [], i = 0, any = false;
+    while (i < words.length) {
+      var found = null, len, f;
+      for (len = Math.min(4, words.length - i); len >= 1 && !found; len--) {
+        f = bestName(words.slice(i, i + len).join(' '), true);
+        if (f) found = { name: f, len: len };
+      }
+      if (found) {
+        if (buf.length) { pieces.push({ text: buf.join(' '), orig: buf.join(' ') }); buf = []; }
+        pieces.push({ text: found.name, orig: words.slice(i, i + found.len).join(' ') });
+        i += found.len;
+        any = true;
+      } else {
+        buf.push(words[i]);
+        i++;
+      }
+    }
+    if (buf.length) pieces.push({ text: buf.join(' '), orig: buf.join(' ') });
+    return any ? pieces : null;
+  }
+  function titleCase(s) { return s.replace(/\b\w/g, function (c) { return c.toUpperCase(); }); }
+  function fixIngredients(text) {
+    var fixes = [];
+    var out = [];
+    // OCR can leave the label heading stuck to the front, e.g. "hgredients/Ingredientes: Water, ..."
+    text = String(text).replace(/^[^,:]{0,40}:\s*/, '');
+    String(text).split(',').forEach(function (p) {
+      var orig = p.trim();
+      var clean = orig.replace(/^[^A-Za-z(]+/, '').replace(/[^A-Za-z)]+$/, '');
+      if (!clean) { out.push(orig); return; }
+      var whole = bestName(clean);
+      var pieces = whole ? [{ text: whole, orig: clean }] : splitFix(clean);
+      if (!pieces) { out.push(orig); return; }
+      pieces.forEach(function (pc) {
+        var known = knownNames().indexOf(pc.text.toLowerCase()) >= 0;
+        if (!known) { out.push(pc.text); return; }
+        var shown = titleCase(pc.text);
+        if (pc.orig.toLowerCase() !== pc.text.toLowerCase()) fixes.push([pc.orig, shown]);
+        out.push(shown);
+      });
+    });
+    return { text: out.join(', '), fixes: fixes };
   }
 
   function setStatus(msg) { statusEl.textContent = msg || ''; }
@@ -106,6 +198,7 @@
     nameEl.value = '';
     brandEl.value = '';
     typeTouched = false;
+    lastFixes = [];
     typeEl.value = DEFAULT_TYPE;
     setSaveStatus('');
     saveBtn.disabled = false;
@@ -285,7 +378,9 @@
         setStatus("We couldn't read an ingredient list from this photo. Try again with the list close, flat and in focus.");
         return;
       }
-      textEl.value = text;
+      var fixed = fixIngredients(text);
+      lastFixes = fixed.fixes;
+      textEl.value = fixed.text;
       setStatus('');
       gradeFromBox(true);
     }).catch(function () {
@@ -345,6 +440,10 @@
       }).join('') + '</ul>';
     }
     if (r.esc.length) html += '<p class="scan-note">Escalations: ' + esc(r.esc.join(', ')) + '.</p>';
+    if (lastFixes && lastFixes.length) {
+      html += '<p class="scan-note">We corrected ' + lastFixes.length + ' word' + (lastFixes.length === 1 ? '' : 's') + ' from the photo to the closest ingredient name. Check these: ' +
+        lastFixes.slice(0, 8).map(function (f) { return esc(f[0]) + ' \u2192 ' + esc(f[1]); }).join('; ') + '.</p>';
+    }
     html += '<p class="scan-note">If a word in the list looks wrong, fix it in the box below and tap Regrade.</p>';
     detailsEl.innerHTML = html;
     resultEl.hidden = false;
