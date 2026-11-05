@@ -1,24 +1,31 @@
 <div class="modal-back" id="scan-modal" hidden>
   <div class="modal scan-modal" role="dialog" aria-modal="true" aria-labelledby="scan-title">
     <h2 id="scan-title">Scan a product label</h2>
-    <p class="modal-sub">Take a photo of the ingredient list, or choose one you already have. The text is read on your device, and the photo is not uploaded anywhere.</p>
-    <label>Photo of the ingredient list<input type="file" id="scan-file" accept="image/*" capture="environment"></label>
+    <p class="modal-sub">Take a photo of the ingredient list and we will grade the product. The photo is read on your device and is not uploaded.</p>
+    <label class="scan-pick">Take or choose a photo<input type="file" id="scan-file" accept="image/*" capture="environment"></label>
     <img id="scan-preview" class="scan-preview" alt="Photo of the ingredient list" hidden>
-    <div class="scan-row"><button type="button" class="ask-btn" id="scan-read" disabled>Read the label</button></div>
-    <p class="modal-status" id="scan-read-status" role="status"></p>
-    <label>Product name<input id="scan-name" maxlength="200" autocomplete="off"></label>
-    <label>Brand (optional)<input id="scan-brand" maxlength="120" autocomplete="off"></label>
-    <label>Product type<select id="scan-type"></select></label>
-    <label>Ingredient list (check it against the photo and fix any misread words)<textarea id="scan-text" rows="7" maxlength="8000" placeholder="Read the label, or paste the ingredient list here"></textarea></label>
     <p class="modal-status" id="scan-status" role="status"></p>
-    <div class="scan-result" id="scan-result" hidden></div>
-    <div class="modal-actions">
-      <button type="button" class="link" id="scan-close">Close</button>
-      <button type="button" class="ask-btn" id="scan-grade">Grade this product</button>
+
+    <div class="scan-result" id="scan-result" hidden>
+      <div id="scan-tier"></div>
+      <div id="scan-details"></div>
+      <label>Ingredients we read (fix any wrong words, then regrade)<textarea id="scan-text" rows="5" maxlength="8000"></textarea></label>
+      <div class="modal-actions"><button type="button" class="link" id="scan-regrade">Regrade</button></div>
+
+      <div class="scan-save">
+        <h3>Save this product (optional)</h3>
+        <label>Product name<input id="scan-name" maxlength="200" autocomplete="off"></label>
+        <label>Brand (optional)<input id="scan-brand" maxlength="120" autocomplete="off"></label>
+        <label>Product type<select id="scan-type"></select></label>
+        <p class="modal-status" id="scan-save-status" role="status"></p>
+        <div class="modal-actions">
+          <button type="button" class="link" id="scan-export">Export my scans (.json)</button>
+          <button type="button" class="ask-btn" id="scan-save">Save to my scans</button>
+        </div>
+      </div>
+      <div class="modal-actions"><button type="button" class="ask-btn" id="scan-another">Scan another</button></div>
     </div>
-    <div class="modal-actions scan-after" id="scan-after" hidden>
-      <button type="button" class="link" id="scan-export">Export my scans (.json)</button>
-      <button type="button" class="ask-btn" id="scan-save">Save to my scans</button>
-    </div>
+
+    <div class="modal-actions"><button type="button" class="link" id="scan-close">Close</button></div>
   </div>
 </div>

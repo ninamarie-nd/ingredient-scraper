@@ -1,10 +1,12 @@
-/* Label scanner: photo -> text (in the browser) -> grade -> save on this device.
+/* Label scanner: photo -> text (in the browser) -> grade straight away.
+   Name, brand and type are only asked for when the user saves the product.
    Depends on makeGrader (grader.js) and the reference data in #scanner-ref. */
 (function () {
   'use strict';
 
   var TESS_URL = 'https://cdn.jsdelivr.net/npm/tesseract.js@5.1.1/dist/tesseract.min.js';
   var SCANS_KEY = 'pss_my_scans_v1';
+  var DEFAULT_TYPE = 'leave-on skincare';
   var CAT_NAME = { 1: 'Carcinogen', 2: 'Endocrine Disruption', 3: 'Heavy Metals', 4: 'Allergies/Irritation',
                    5: 'Microbiome-Busting', 6: 'Microplastics', 7: 'Acutely Toxic', 8: 'Respiratory Irritant', 104: 'Allergies/Irritation' };
   var TIER_WRAP = { 'Puberty Safe': 't-safe', 'Use Caution': 't-caution', 'Avoid (Mild)': 't-mild', 'Avoid (Moderate)': 't-moderate', 'Avoid (High)': 't-hps' };
@@ -13,12 +15,11 @@
   var G = window.makeGrader(JSON.parse(document.getElementById('scanner-ref').textContent));
 
   var $ = function (id) { return document.getElementById(id); };
-  var modal = $('scan-modal'), fileEl = $('scan-file'), preview = $('scan-preview'), readBtn = $('scan-read');
-  var readStatus = $('scan-read-status'), nameEl = $('scan-name'), brandEl = $('scan-brand'), typeEl = $('scan-type');
-  var textEl = $('scan-text'), statusEl = $('scan-status'), resultEl = $('scan-result'), afterEl = $('scan-after');
-  var gradeBtn = $('scan-grade'), saveBtn = $('scan-save');
+  var modal = $('scan-modal'), fileEl = $('scan-file'), preview = $('scan-preview'), statusEl = $('scan-status');
+  var resultEl = $('scan-result'), tierEl = $('scan-tier'), detailsEl = $('scan-details'), textEl = $('scan-text');
+  var nameEl = $('scan-name'), brandEl = $('scan-brand'), typeEl = $('scan-type'), saveBtn = $('scan-save'), saveStatus = $('scan-save-status');
 
-  var selectedFile = null, previewUrl = null, current = null, typeTouched = false, tessPromise = null;
+  var previewUrl = null, current = null, typeTouched = false, tessPromise = null, busy = false;
 
   function esc(s) {
     return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) {
@@ -30,7 +31,7 @@
 
   // OCR returns the whole page. Keep the text after the "Ingredients" label, up to the next section heading.
   function extractIngredients(s) {
-    var m = /\bingredients?\b\s*[:\-\u2013]?\s*/i.exec(s);
+    var m = /\bingredients?\b\s*[:\-–]?\s*/i.exec(s);
     if (!m) return s;
     var rest = s.slice(m.index + m[0].length);
     var stop = /\b(description|directions|how to use|scent profile|warnings?|caution|net wt|made in|distributed by|questions|reviews?|about this|key benefits)\b/i.exec(rest);
@@ -40,7 +41,7 @@
   }
 
   function setStatus(msg) { statusEl.textContent = msg || ''; }
-  function setReadStatus(msg) { readStatus.textContent = msg || ''; }
+  function setSaveStatus(msg) { saveStatus.textContent = msg || ''; }
 
   function loadScans() {
     try {
@@ -59,6 +60,7 @@
       o.value = t; o.textContent = t;
       typeEl.appendChild(o);
     });
+    typeEl.value = DEFAULT_TYPE;
   })();
 
   function ensureType(value) {
@@ -83,28 +85,32 @@
     fileEl.focus();
   }
   function close() { modal.hidden = true; }
+  function reset() {
+    current = null;
+    resultEl.hidden = true;
+    tierEl.innerHTML = '';
+    detailsEl.innerHTML = '';
+    textEl.value = '';
+    nameEl.value = '';
+    brandEl.value = '';
+    typeTouched = false;
+    typeEl.value = DEFAULT_TYPE;
+    setSaveStatus('');
+    saveBtn.disabled = false;
+    saveBtn.textContent = 'Save to my scans';
+    fileEl.value = '';
+    if (previewUrl) { URL.revokeObjectURL(previewUrl); previewUrl = null; }
+    preview.removeAttribute('src');
+    preview.hidden = true;
+    setStatus('');
+  }
   $('scan-open').addEventListener('click', open);
   $('scan-close').addEventListener('click', close);
+  $('scan-another').addEventListener('click', function () { reset(); fileEl.click(); });
   modal.addEventListener('click', function (e) { if (e.target === modal) close(); });
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !modal.hidden) close(); });
 
-  // ----- photo -----
-  fileEl.addEventListener('change', function () {
-    var f = fileEl.files && fileEl.files[0];
-    selectedFile = f || null;
-    if (previewUrl) { URL.revokeObjectURL(previewUrl); previewUrl = null; }
-    if (f) {
-      previewUrl = URL.createObjectURL(f);
-      preview.src = previewUrl;
-      preview.hidden = false;
-    } else {
-      preview.removeAttribute('src');
-      preview.hidden = true;
-    }
-    readBtn.disabled = !selectedFile;
-    setReadStatus(selectedFile ? 'Tap "Read the label" to read the text from this photo.' : '');
-  });
-
+  // ----- photo -> text -> grade -----
   // Light clean-up before OCR: grayscale and stretch the contrast. Falls back to the original photo.
   function prepare(file) {
     return new Promise(function (resolve) {
@@ -154,17 +160,13 @@
     return tessPromise;
   }
 
-  readBtn.addEventListener('click', function () {
-    if (!selectedFile) return;
-    readBtn.disabled = true;
-    setReadStatus('Loading the text reader. The first time takes a little longer.');
-    loadTesseract().then(function (T) {
-      return prepare(selectedFile).then(function (blob) {
-        setReadStatus('Reading the photo...');
+  function readPhoto(file) {
+    return loadTesseract().then(function (T) {
+      return prepare(file).then(function (blob) {
         return T.createWorker('eng', 1, {
           logger: function (m) {
             if (m && m.status === 'recognizing text' && typeof m.progress === 'number') {
-              setReadStatus('Reading the photo... ' + Math.round(m.progress * 100) + '%');
+              setStatus('Reading the label... ' + Math.round(m.progress * 100) + '%');
             }
           }
         }).then(function (worker) {
@@ -174,15 +176,32 @@
         });
       });
     }).then(function (res) {
-      var text = tidy(extractIngredients(tidy(res && res.data && res.data.text)));
-      if (text) textEl.value = text;
-      setReadStatus(text
-        ? 'Done. Check the text against the photo, fix any misread words, then grade it.'
-        : 'No text found. Try a closer, straighter photo, or paste the list below.');
+      return extractIngredients(tidy(res && res.data && res.data.text));
+    });
+  }
+
+  fileEl.addEventListener('change', function () {
+    var f = fileEl.files && fileEl.files[0];
+    if (!f || busy) return;
+    if (previewUrl) URL.revokeObjectURL(previewUrl);
+    previewUrl = URL.createObjectURL(f);
+    preview.src = previewUrl;
+    preview.hidden = false;
+    resultEl.hidden = true;
+    busy = true;
+    setStatus('Reading the label...');
+    readPhoto(f).then(function (text) {
+      busy = false;
+      if (!text || text.split(',').length < 2) {
+        setStatus("We couldn't read an ingredient list from this photo. Try again with the list close, flat and in focus.");
+        return;
+      }
+      textEl.value = text;
+      setStatus('');
+      gradeFromBox(true);
     }).catch(function () {
-      setReadStatus('The text reader could not load. Check your connection, or paste the ingredient list below.');
-    }).then(function () {
-      readBtn.disabled = !selectedFile;
+      busy = false;
+      setStatus('The text reader could not load. Check your internet connection and try the photo again.');
     });
   });
 
@@ -204,10 +223,11 @@
 
   function renderResult(c) {
     var r = c.r;
-    var html = '<div class="' + (TIER_WRAP[r.tier] || '') + '"><span class="tier-pill">' + esc(r.tier) + '</span></div>';
-    html += '<p class="scan-note">' + esc(summaryOf(r)) + ' Read ' + r.ingredients.length + ' ingredient' + (r.ingredients.length === 1 ? '' : 's') + '.</p>';
+    tierEl.className = TIER_WRAP[r.tier] || '';
+    tierEl.innerHTML = '<span class="tier-pill">' + esc(r.tier) + '</span>';
+    var html = '<p class="scan-note">' + esc(summaryOf(r)) + ' Read ' + r.ingredients.length + ' ingredient' + (r.ingredients.length === 1 ? '' : 's') + '.</p>';
     if (c.dup) {
-      html += '<p class="scan-note">This product name is already in the database (' + esc(c.dup.b) + ', ' + esc(c.dup.t) + '). Your result is shown above.</p>';
+      html += '<p class="scan-note">This name is already in the database (' + esc(c.dup.b) + ', ' + esc(c.dup.t) + ').</p>';
     }
     if (r.flagged.length) {
       html += '<h3>Flagged</h3><ul>' + r.flagged.map(function (f) {
@@ -225,35 +245,38 @@
       }).join('') + '</ul>';
     }
     if (r.esc.length) html += '<p class="scan-note">Escalations: ' + esc(r.esc.join(', ')) + '.</p>';
-    html += '<details><summary>Ingredients read (' + r.ingredients.length + ')</summary><ol>' +
-      r.ingredients.map(function (i) { return '<li>' + esc(i) + '</li>'; }).join('') + '</ol></details>';
-    resultEl.innerHTML = html;
+    html += '<p class="scan-note">If a word in the list looks wrong, fix it in the box below and tap Regrade.</p>';
+    detailsEl.innerHTML = html;
     resultEl.hidden = false;
-    afterEl.hidden = false;
   }
 
-  gradeBtn.addEventListener('click', function () {
+  // Grades the ingredient box. Used after a photo is read and again after any correction.
+  function gradeFromBox(scrollIntoView) {
     var raw = textEl.value.trim();
-    if (!raw) { setStatus('Read the label, or paste the ingredient list, before grading.'); return; }
+    if (!raw) { setStatus('The ingredient list is empty. Fix it, then tap Regrade.'); return; }
     var name = nameEl.value.trim() || 'Scanned product';
-    var brand = brandEl.value.trim();
-    var type = typeEl.value || G.inferProductType(name, null);
+    var type = typeEl.value || DEFAULT_TYPE;
     var text = tidy(raw);
     var r = G.grade(name, type, text);
     var key = name.toLowerCase();
     var dup = null;
-    productData.products.some(function (p) {
-      if (String(p.n || '').toLowerCase() === key) { dup = p; return true; }
-      return false;
-    });
-    current = { name: name, brand: brand, type: type, raw: raw, r: r, dup: dup, saved: false };
-    setStatus(r.ingredients.length < 2
-      ? 'Only ' + r.ingredients.length + ' ingredient found. Check that the whole list is in the box.'
-      : '');
+    if (nameEl.value.trim()) {
+      productData.products.some(function (p) {
+        if (String(p.n || '').toLowerCase() === key) { dup = p; return true; }
+        return false;
+      });
+    }
+    current = { name: name, brand: brandEl.value.trim(), type: type, raw: raw, r: r, dup: dup, saved: false };
     saveBtn.disabled = false;
     saveBtn.textContent = 'Save to my scans';
+    setSaveStatus('');
     renderResult(current);
-  });
+    if (scrollIntoView) resultEl.scrollIntoView({ block: 'start' });
+    if (r.ingredients.length < 2) setStatus('Only ' + r.ingredients.length + ' ingredient found. Check the list, then tap Regrade.');
+    else setStatus('');
+  }
+
+  $('scan-regrade').addEventListener('click', function () { gradeFromBox(false); });
 
   // ----- save / export -----
   function buildRecord(c) {
@@ -282,7 +305,10 @@
   }
 
   saveBtn.addEventListener('click', function () {
-    if (!current || current.saved) return;
+    if (!current) return;
+    if (current.saved) return;
+    // Save what the user sees now: regrade with the name, brand, type and text as they are.
+    gradeFromBox(false);
     var rec = buildRecord(current);
     var list = loadScans().filter(function (s) { return !(s.n === rec.n && s.b === rec.b && s.ing === rec.ing); });
     list.push(rec);
@@ -292,14 +318,14 @@
     current.saved = true;
     saveBtn.disabled = true;
     saveBtn.textContent = 'Saved';
-    setStatus(stored
-      ? 'Saved on this device. It now shows up in search. Use "Export my scans" to send the list for the main database.'
+    setSaveStatus(stored
+      ? 'Saved on this device. It now shows up in search.'
       : 'Shown in search for this visit only. This browser would not keep it, so export it now if you want to keep it.');
   });
 
   $('scan-export').addEventListener('click', function () {
     var list = loadScans();
-    if (!list.length) { setStatus('No saved scans yet. Grade a product and save it first.'); return; }
+    if (!list.length) { setSaveStatus('No saved scans yet. Save a product first.'); return; }
     var payload = { exported_at: new Date().toISOString(), count: list.length, products: list };
     var blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' });
     var a = document.createElement('a');
