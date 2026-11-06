@@ -314,6 +314,10 @@ def grade(product_name, product_type, verbatim, disclosed_fragrance=False):
     for _pos, ing in enumerate(ingredients, start=1):
         low = norm(ing)
         if not low or low in seen: continue
+        # Silver is not yet classified in the reference: always treat as unknown (manual review).
+        if 'silver' in low:
+            unknown.append(ing)
+            continue
         if low in ('ext','ext.'): continue  # user ruling: not an ingredient
         if re.fullmatch(r'[\d\W_]*', low): continue  # bare numbers and symbols are not ingredients
         if re.match(r'^(aqua|water|eau)\)?(\s*[/(]\s*(aqua|water|eau)\s*\)?)*$', low): continue  # User decision: water is exempt

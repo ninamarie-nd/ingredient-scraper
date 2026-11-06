@@ -300,6 +300,8 @@
         var ing = ingredients[i];
         var low = norm(ing);
         if (!low || seen.has(low)) continue;
+        // Silver is not yet classified in the reference: always treat as unknown (manual review).
+        if (/silver/i.test(low)) { unknown.push(ing); continue; }
         if (low === 'ext' || low === 'ext.') continue;
         if (/^[^\p{L}\p{M}]*$/u.test(low)) continue;
         if (/^(aqua|water|eau)\)?(\s*[\/(]\s*(aqua|water|eau)\s*\)?)*$/.test(low)) continue;
