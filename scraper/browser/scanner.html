@@ -32,18 +32,7 @@
       <label>Ingredients we read (fix any wrong words, then regrade)<textarea id="scan-text" rows="5" maxlength="8000"></textarea></label>
       <div class="modal-actions"><button type="button" class="link" id="scan-regrade">Regrade</button></div>
 
-      <div class="scan-save">
-        <h3>Save this product (optional)</h3>
-        <label>Product name<input id="scan-name" maxlength="200" autocomplete="off"></label>
-        <label>Brand (optional)<input id="scan-brand" maxlength="120" autocomplete="off"></label>
-        <label>Product type<select id="scan-type"></select></label>
-        <p class="modal-status" id="scan-save-status" role="status"></p>
-        <div class="modal-actions">
-          <button type="button" class="link" id="scan-export">Export my scans (.json)</button>
-          <button type="button" class="ask-btn" id="scan-save">Save to my scans</button>
-        </div>
-      </div>
-      <div class="modal-actions"><button type="button" class="ask-btn" id="scan-another">Scan another</button></div>
+      <label class="scan-type-pick">Product type<select id="scan-type"></select></label>
     </div>
 
     <div class="modal-actions"><button type="button" class="link" id="scan-close">Close</button></div>

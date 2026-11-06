@@ -1,11 +1,10 @@
 /* Label scanner: photo -> text (in the browser) -> grade straight away.
-   Name, brand and type are only asked for when the user saves the product.
+   Only the product type is asked for, because it changes the grade.
    Depends on makeGrader (grader.js) and the reference data in #scanner-ref. */
 (function () {
   'use strict';
 
   var TESS_URL = 'https://cdn.jsdelivr.net/npm/tesseract.js@5.1.1/dist/tesseract.min.js';
-  var SCANS_KEY = 'pss_my_scans_v1';
   var DEFAULT_TYPE = 'leave-on skincare';
   var CAT_NAME = { 1: 'Carcinogen', 2: 'Endocrine Disruption', 3: 'Heavy Metals', 4: 'Allergies/Irritation',
                    5: 'Microbiome-Busting', 6: 'Microplastics', 7: 'Acutely Toxic', 8: 'Respiratory Irritant', 104: 'Allergies/Irritation' };
@@ -18,7 +17,7 @@
   var modal = $('scan-modal'), fileEl = $('scan-file'), camEl = $('scan-camera'), preview = $('scan-preview'), statusEl = $('scan-status');
   var cropBox = $('scan-crop'), cropCanvas = $('scan-crop-canvas'), cropSrc = null, cropFile = null, cropUrl = null;
   var resultEl = $('scan-result'), tierEl = $('scan-tier'), detailsEl = $('scan-details'), textEl = $('scan-text');
-  var nameEl = $('scan-name'), brandEl = $('scan-brand'), typeEl = $('scan-type'), saveBtn = $('scan-save'), saveStatus = $('scan-save-status');
+  var typeEl = $('scan-type');
 
   var previewUrl = null, current = null, typeTouched = false, tessPromise = null, busy = false, lastFixes = [];
 
@@ -134,14 +133,7 @@
   }
 
   function setStatus(msg) { statusEl.textContent = msg || ''; }
-  function setSaveStatus(msg) { saveStatus.textContent = msg || ''; }
 
-  function loadScans() {
-    try {
-      var a = JSON.parse(localStorage.getItem(SCANS_KEY) || '[]');
-      return Array.isArray(a) ? a : [];
-    } catch (e) { return []; }
-  }
 
   // ----- type dropdown -----
   (function fillTypes() {
@@ -166,9 +158,6 @@
     typeEl.value = value;
   }
 
-  nameEl.addEventListener('input', function () {
-    if (!typeTouched && nameEl.value.trim()) ensureType(G.inferProductType(nameEl.value.trim(), null));
-  });
   typeEl.addEventListener('change', function () {
     typeTouched = true;
     // Product type changes the grade (leave-on vs rinse-off), so re-grade if a result is showing.
@@ -195,14 +184,9 @@
     tierEl.innerHTML = '';
     detailsEl.innerHTML = '';
     textEl.value = '';
-    nameEl.value = '';
-    brandEl.value = '';
     typeTouched = false;
     lastFixes = [];
     typeEl.value = DEFAULT_TYPE;
-    setSaveStatus('');
-    saveBtn.disabled = false;
-    saveBtn.textContent = 'Save to my scans';
     fileEl.value = '';
     camEl.value = '';
     showSources();
@@ -213,7 +197,6 @@
   }
   $('scan-open').addEventListener('click', open);
   $('scan-close').addEventListener('click', close);
-  $('scan-another').addEventListener('click', function () { reset(); });
   $('scan-take').addEventListener('click', function () { camEl.click(); });
   $('scan-library').addEventListener('click', function () { fileEl.click(); });
   modal.addEventListener('click', function (e) { if (e.target === modal) close(); });
@@ -306,8 +289,6 @@
     cropFile = f;
     setStatus('');
     resultEl.hidden = true;
-    preview.hidden = true;
-    $('scan-sources').hidden = true;
     cropBox.hidden = false;
     ['top', 'bottom', 'left', 'right'].forEach(function (k) { $('crop-' + k).value = 0; });
     var img = new Image();
@@ -412,7 +393,6 @@
   function startRead(f) {
     if (busy) return;
     cropBox.hidden = true;
-    $('scan-sources').hidden = true;
     if (previewUrl) URL.revokeObjectURL(previewUrl);
     previewUrl = URL.createObjectURL(f);
     preview.src = previewUrl;
@@ -497,22 +477,11 @@
   function gradeFromBox(scrollIntoView) {
     var raw = textEl.value.trim();
     if (!raw) { setStatus('The ingredient list is empty. Fix it, then tap Regrade.'); return; }
-    var name = nameEl.value.trim() || 'Scanned product';
+    var name = 'Scanned product';
     var type = typeEl.value || DEFAULT_TYPE;
     var text = tidy(raw);
     var r = G.grade(name, type, text);
-    var key = name.toLowerCase();
-    var dup = null;
-    if (nameEl.value.trim()) {
-      productData.products.some(function (p) {
-        if (String(p.n || '').toLowerCase() === key) { dup = p; return true; }
-        return false;
-      });
-    }
-    current = { name: name, brand: brandEl.value.trim(), type: type, raw: raw, r: r, dup: dup, saved: false };
-    saveBtn.disabled = false;
-    saveBtn.textContent = 'Save to my scans';
-    setSaveStatus('');
+    current = { name: name, type: type, raw: raw, r: r, dup: null };
     renderResult(current);
     if (scrollIntoView) resultEl.scrollIntoView({ block: 'start' });
     if (r.ingredients.length < 2) setStatus('Only ' + r.ingredients.length + ' ingredient found. Check the list, then tap Regrade.');
@@ -521,61 +490,4 @@
 
   $('scan-regrade').addEventListener('click', function () { gradeFromBox(false); });
 
-  // ----- save / export -----
-  function buildRecord(c) {
-    var r = c.r;
-    var summary = summaryOf(r);
-    return {
-      n: c.name,
-      b: c.brand || 'Scanned by user',
-      bs: 'scanned',
-      cat: 'Scanned label',
-      pt: c.type,
-      t: r.tier,
-      f: r.flagCount,
-      fl: r.flagged.map(function (f) { return f[0].replace(/ \[inferred: .*\]$/, ''); }),
-      esc: r.esc.join(', '),
-      u: '',
-      note: summary,
-      ing: c.raw,
-      sum: summary,
-      pts: [c.type],
-      tags: [],
-      ez: r.tier === 'Puberty Safe' && !r.flagged.some(function (f) { return f[1].indexOf(4) >= 0 || f[1].indexOf(104) >= 0; }) && !r.natural.length,
-      source: 'scan',
-      scanned_at: new Date().toISOString()
-    };
-  }
-
-  saveBtn.addEventListener('click', function () {
-    if (!current) return;
-    if (current.saved) return;
-    // Save what the user sees now: regrade with the name, brand, type and text as they are.
-    gradeFromBox(false);
-    var rec = buildRecord(current);
-    var list = loadScans().filter(function (s) { return !(s.n === rec.n && s.b === rec.b && s.ing === rec.ing); });
-    list.push(rec);
-    var stored = true;
-    try { localStorage.setItem(SCANS_KEY, JSON.stringify(list)); } catch (e) { stored = false; }
-    document.dispatchEvent(new CustomEvent('pss-scan-saved', { detail: rec }));
-    current.saved = true;
-    saveBtn.disabled = true;
-    saveBtn.textContent = 'Saved';
-    setSaveStatus(stored
-      ? 'Saved on this device. It now shows up in search.'
-      : 'Shown in search for this visit only. This browser would not keep it, so export it now if you want to keep it.');
-  });
-
-  $('scan-export').addEventListener('click', function () {
-    var list = loadScans();
-    if (!list.length) { setSaveStatus('No saved scans yet. Save a product first.'); return; }
-    var payload = { exported_at: new Date().toISOString(), count: list.length, products: list };
-    var blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' });
-    var a = document.createElement('a');
-    a.href = URL.createObjectURL(blob);
-    a.download = 'scanned_products_' + new Date().toISOString().slice(0, 10) + '.json';
-    document.body.appendChild(a);
-    a.click();
-    setTimeout(function () { URL.revokeObjectURL(a.href); a.remove(); }, 1000);
-  });
 })();
