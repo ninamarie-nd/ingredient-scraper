@@ -295,6 +295,10 @@ def _ruling_exempt(low):
     if re.match(r'^[a-z]+ [a-z]+ \(', low) and re.search(r'\b(oil|butter|extract|leaf|flower|root|seed|fruit|juice|peel|kernel|bark|powder)\b', low): return True
     return False
 
+FLUORIDE_RE = re.compile(r'fluorid|monofluorophosphate', re.I)
+def _is_oral_care(product_type):
+    return bool(re.search(r'toothpaste|oral|mouthwash|tooth', (product_type or '').lower()))
+
 def grade(product_name, product_type, verbatim, disclosed_fragrance=False):
     """disclosed_fragrance: user ruling for Attitude labels. When the fragrance line is starred and the
     scents are starred too, the fragrance line itself is not graded (the scents are)."""
@@ -319,6 +323,8 @@ def grade(product_name, product_type, verbatim, disclosed_fragrance=False):
             unknown.append(ing)
             continue
         if low in ('ext','ext.'): continue  # user ruling: not an ingredient
+        if _is_oral_care(product_type) and FLUORIDE_RE.search(ing):
+            flagged.append((ing, [9])); min_tiers.append('Avoid (High)'); seen.add(low); continue  # user ruling 2026-11-07: fluoride in oral care is Avoid (High)
         if re.fullmatch(r'[\d\W_]*', low): continue  # bare numbers and symbols are not ingredients
         if re.match(r'^(aqua|water|eau)\)?(\s*[/(]\s*(aqua|water|eau)\s*\)?)*$', low): continue  # User decision: water is exempt
         # Rule 7 (GRADING_MASTER): names containing fragrance/parfum/perfume/aroma/flavor are full flags.
@@ -589,7 +595,7 @@ def build_outputs(brand_slug, brand_name, brand_url, ingredients, out_dir, scrap
     def pct(n):
         return f"{(n*100)/graded_count:.0f}%" if graded_count else "0%"
 
-    cat_name = {1:'Carcinogen',2:'Endocrine Disruption',3:'Heavy Metals',4:'Allergies/Irritation',5:'Microbiome-Busting',6:'Microplastics',7:'Acutely Toxic',8:'Respiratory Irritant'}
+    cat_name = {1:'Carcinogen',2:'Endocrine Disruption',3:'Heavy Metals',4:'Allergies/Irritation',5:'Microbiome-Busting',6:'Microplastics',7:'Acutely Toxic',8:'Respiratory Irritant',9:'Fluoride (oral care)'}
 
     graded_rows = [r for r in product_rows if r['tier'] is not None]
     graded_rows_sorted = sorted(graded_rows, key=lambda r: -r['flag_count'])

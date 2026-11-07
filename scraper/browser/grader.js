@@ -201,6 +201,8 @@
       return out;
     }
 
+    var FLUORIDE_RE = /fluorid|monofluorophosphate/i;
+    function isOralCare(productType) { return /toothpaste|oral|mouthwash|tooth/i.test(String(productType || '')); }
     function isLeaveOn(productType) {
       var pt = String(productType || '').toLowerCase();
       var rinse = ['shampoo', 'wash', 'conditioner', 'bar soap', 'hand soap', 'bath', 'shaving', 'scrub', 'exfoliant', 'cleansing', 'toothpaste', 'mouthwash'];
@@ -303,6 +305,7 @@
         // Silver is not yet classified in the reference: always treat as unknown (manual review).
         if (/silver/i.test(low)) { unknown.push(ing); continue; }
         if (low === 'ext' || low === 'ext.') continue;
+        if (isOralCare(productType) && FLUORIDE_RE.test(ing)) { flagged.push([ing, [9]]); minTiers.push('Avoid (High)'); seen.add(low); continue; }
         if (/^[^\p{L}\p{M}]*$/u.test(low)) continue;
         if (/^(aqua|water|eau)\)?(\s*[\/(]\s*(aqua|water|eau)\s*\)?)*$/.test(low)) continue;
 

@@ -7,7 +7,7 @@
   var TESS_URL = 'https://cdn.jsdelivr.net/npm/tesseract.js@5.1.1/dist/tesseract.min.js';
   var DEFAULT_TYPE = 'leave-on skincare';
   var CAT_NAME = { 1: 'Carcinogen', 2: 'Endocrine Disruption', 3: 'Heavy Metals', 4: 'Allergies/Irritation',
-                   5: 'Microbiome-Busting', 6: 'Microplastics', 7: 'Acutely Toxic', 8: 'Respiratory Irritant', 104: 'Allergies/Irritation' };
+                   5: 'Microbiome-Busting', 6: 'Microplastics', 7: 'Acutely Toxic', 8: 'Respiratory Irritant', 104: 'Allergies/Irritation' , 9: 'Fluoride (oral care)'};
   var TIER_WRAP = { 'Puberty Safe': 't-safe', 'Use Caution': 't-caution', 'Avoid (Mild)': 't-mild', 'Avoid (Moderate)': 't-moderate', 'Avoid (High)': 't-hps' };
 
   var productData = JSON.parse(document.getElementById('product-data').textContent);
