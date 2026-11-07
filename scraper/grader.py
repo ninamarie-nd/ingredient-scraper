@@ -486,7 +486,7 @@ def grade(product_name, product_type, verbatim, disclosed_fragrance=False):
     #   (b) >=3 distinct ingredients carry a cat-2 (endocrine) flag.
     # Fragrance alone is not enough — it is already a Moderate-tier trigger on its own.
     HIGH_ENDOCRINE_HINTS = [
-        'paraben','phthalate','triclosan','triclocarban',
+        'paraben','phthalate','triclosan','triclocarban','pyrithione','polyquaternium-9',
         'oxybenzone','benzophenone-3','bp-3','bp3',
         'octinoxate','ethylhexyl methoxycinnamate','octyl methoxycinnamate',
         'octocrylene','homosalate','resorcinol','bha ',' bha,',' bha.',
@@ -507,6 +507,13 @@ def grade(product_name, product_type, verbatim, disclosed_fragrance=False):
     has_cat1 = any(1 in c for _,c in flagged)
     if has_pfas or n_cats >= 8 or has_carc_lo or (has_heavy and (has_cat1 or has_cat2)):
         tier = 'Avoid (High)'
+    # User ruling 2026-11-07: in a rinse-off product, 3+ carcinogen (category 1) ingredients is Avoid (Moderate); 6+ is Avoid (High).
+    _n_carc = sum(1 for _, c in flagged if 1 in c)
+    _carc_rinse = (not _is_leave_on(product_type)) and _n_carc >= 3
+    if _carc_rinse and _n_carc >= 6:
+        tier = 'Avoid (High)'
+    elif _carc_rinse and ['Puberty Safe','Use Caution','Avoid (Mild)','Avoid (Moderate)','Avoid (High)'].index(tier) < 3:
+        tier = 'Avoid (Moderate)'
     # Multi-marker endocrine disruption on its own is enough to escalate to HPS
     if has_endocrine and (len(cat2_hits) >= 3 or len(high_endo_hits) >= 2):
         tier = 'Avoid (High)'
@@ -518,6 +525,7 @@ def grade(product_name, product_type, verbatim, disclosed_fragrance=False):
     if has_pfas: esc.append('PFAS')
     if has_heavy: esc.append('heavy metals')
     if has_form: esc.append('formaldehyde-releaser')
+    if _carc_rinse: esc.append('carcinogens in rinse-off')
     if has_carc_lo: esc.append('carcinogen in leave-on')
     if has_endocrine: esc.append('endocrine disruption')
     # Unknown ingredients lower a Puberty Safe product to Use Caution. For any other

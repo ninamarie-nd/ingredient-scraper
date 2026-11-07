@@ -45,8 +45,8 @@ Dashboard names: **Puberty Safe / Use Caution / Avoid (Mild) / Avoid (Moderate) 
 | Puberty Safe | No flagged ingredients. Irritation-only flags (category 4 alone) do not lower the tier. |
 | Use Caution | 1 or 2 categories, and no paraben, fragrance, heavy metal, or formaldehyde releaser. Also: any Puberty Safe product with an unmapped ingredient drops to Use Caution. |
 | Avoid (Mild) | 3 or more categories, OR any single ingredient with 3 or more categories, OR any paraben. |
-| Avoid (Moderate) | Heavy metal (category 3), formaldehyde releaser, fragrance, OR 5 or more categories. |
-| Avoid (High) | PFAS-treated ingredient, OR 8 or more categories, OR carcinogen (category 1) in a leave-on product, OR heavy metal together with a category 1 or 2 flag, OR endocrine disruption (3 or more category-2 ingredients, or 2 or more high-priority endocrine disruptors by name). |
+| Avoid (Moderate) | Heavy metal (category 3), formaldehyde releaser, fragrance, OR 5 or more categories, OR 3 to 5 carcinogens (category 1) in a rinse-off product. |
+| Avoid (High) | PFAS-treated ingredient, OR 8 or more categories, OR carcinogen (category 1) in a leave-on product, OR 6 or more carcinogens (category 1) in a rinse-off product, OR heavy metal together with a category 1 or 2 flag, OR endocrine disruption (3 or more category-2 ingredients, or 2 or more high-priority endocrine disruptors by name). |
 | Minimum tiers | Any ingredient with a `min` tier in the reference sets at least that tier. Dyes are Avoid (High) (section 5f). |
 
 Unknown ingredients: for any grade other than Puberty Safe, they don't change the tier. They are listed in the summary as "also N unknown ingredient(s)."
@@ -97,7 +97,7 @@ Unknown ingredients: for any grade other than Puberty Safe, they don't change th
 Linalool, limonene, citral, citronellal, geraniol, eugenol, isoeugenol, coumarin, farnesol, hydroxycitronellal, benzyl alcohol from an essential oil, bisabolol. Soft only when the source essential oil is also listed. Standalone, they are full fragrance flags.
 
 ### 5e. Surfactant and betaine allergy flags (user ruling 2026-11-02)
-Allergy (category 4) flags on surfactants and betaines count toward the tier. This is an exception to the general rule that category 4 does not count. Applies to the 30 surfactant and betaine names flagged in the Perplexity screen, marked `cnt4` in the reference. Other category 4 flags do not count.
+Allergy (category 4) flags on surfactants and betaines count toward the tier. This is an exception to the general rule that category 4 does not count. Applies to the 31 surfactant and betaine names flagged in the Perplexity screen (including Lauramidopropyl Betaine, added 2026-11-07), marked `cnt4` in the reference. Other category 4 flags do not count.
 
 ### 5f. Colorants (user rulings 2026-11-01 and 2026-11-02)
 - Any dye (FD&C, D&C, named dyes like Red 33, and CI codes in the dye ranges) is Avoid (High).
@@ -177,3 +177,6 @@ These are the finalized nine ingredient families. Do not rank them.
 | 2026-11-02 | Genistein: category 2 (endocrine). Microplastic candidates: category 6. Pigments (chromium, bismuth, ultramarine, iron titanium oxide): category 3. |
 | 2026-11-02 | Surfactant and betaine allergy flags count toward the tier (section 5e). |
 | 2026-11-02 | Royal jelly stays low tox. Spirulina stays Puberty Safe. |
+| 2026-11-07 | Rinse-off products: 3 to 5 carcinogen (category 1) flags is Avoid (Moderate); 6 or more is Avoid (High). Leave-on carcinogen rule unchanged. |
+| 2026-11-07 | Pyrithione zinc and Polyquaternium-9 are high-priority endocrine disruptors (named in the endocrine escalation). |
+| 2026-11-07 | Lauramidopropyl Betaine counts its allergy flag toward the tier (cnt4). |

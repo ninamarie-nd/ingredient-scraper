@@ -103,7 +103,7 @@
     ];
 
     var HIGH_ENDOCRINE_HINTS = [
-      'paraben', 'phthalate', 'triclosan', 'triclocarban',
+      'paraben', 'phthalate', 'triclosan', 'triclocarban', 'pyrithione', 'polyquaternium-9',
       'oxybenzone', 'benzophenone-3', 'bp-3', 'bp3',
       'octinoxate', 'ethylhexyl methoxycinnamate', 'octyl methoxycinnamate',
       'octocrylene', 'homosalate', 'resorcinol', 'bha ', ' bha,', ' bha.',
@@ -430,6 +430,11 @@
       var hasCat1 = counted.some(function (f) { return f[1].indexOf(1) >= 0; });
 
       if (hasPfas || nCats >= 8 || hasCarcLo || (hasHeavy && (hasCat1 || hasCat2))) tier = 'Avoid (High)';
+      // User ruling 2026-11-07: in a rinse-off product, 3+ carcinogen (category 1) ingredients is Avoid (Moderate); 6+ is Avoid (High).
+      var nCarc = counted.filter(function (f) { return f[1].indexOf(1) >= 0; }).length;
+      var carcRinse = !isLeaveOn(productType) && nCarc >= 3;
+      if (carcRinse && nCarc >= 6) tier = 'Avoid (High)';
+      else if (carcRinse && ORDER.indexOf(tier) < ORDER.indexOf('Avoid (Moderate)')) tier = 'Avoid (Moderate)';
       if (hasEndocrine && (cat2Hits.length >= 3 || highEndoHits.length >= 2)) tier = 'Avoid (High)';
 
       minTiers.forEach(function (mt) {
@@ -440,6 +445,7 @@
       if (hasPfas) esc.push('PFAS');
       if (hasHeavy) esc.push('heavy metals');
       if (hasForm) esc.push('formaldehyde-releaser');
+      if (carcRinse) esc.push('carcinogens in rinse-off');
       if (hasCarcLo) esc.push('carcinogen in leave-on');
       if (hasEndocrine) esc.push('endocrine disruption');
 
