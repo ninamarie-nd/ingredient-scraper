@@ -36,13 +36,22 @@
 
   // OCR returns the whole page. Keep the text after the "Ingredients" label, up to the next section heading.
   function extractIngredients(s) {
-    var m = /\bingredients?\b\s*[:\-–]?\s*/i.exec(s);
+    var m = /\bin\w{0,2}gr?\w{0,3}ents?\b\s*[:;\-–]?\s*/i.exec(s);
     if (!m) return s;
     var rest = s.slice(m.index + m[0].length);
     var stop = /\b(description|directions|how to use|scent profile|warnings?|caution|net wt|made in|distributed by|questions|reviews?|about this|key benefits)\b/i.exec(rest);
     if (stop) rest = rest.slice(0, stop.index);
     rest = rest.replace(/^[,\s]+/, '').trim().replace(/[,\s]+$/, '');
     return rest.indexOf(',') >= 0 ? rest : s;
+  }
+
+  // Number of pieces that match a reference name. Real ingredient lists match several; junk matches none.
+  function knownCount(text) {
+    if (!text) return 0;
+    var fixed = fixIngredients(text).text;
+    return fixed.split(',').filter(function (p) {
+      return knownNames().indexOf(p.trim().toLowerCase()) >= 0;
+    }).length;
   }
 
   // ----- fix OCR misreads by matching each ingredient to the reference names -----
@@ -261,8 +270,15 @@
 
   // Try the on-device reader first; fall back to Tesseract if it can't load or read.
   function readPhoto(file) {
-    return readWithOnnx(file).catch(function () { return readWithTesseract(file); })
-      .then(function (text) { return extractIngredients(tidy(text)); });
+    return readWithOnnx(file).then(function (t) { return extractIngredients(tidy(t)); }, function () { return null; })
+      .then(function (a) {
+        if (a && knownCount(a) >= 3) return a;
+        return readWithTesseract(file).then(function (t) {
+          var b = extractIngredients(tidy(t));
+          if (!a) return b;
+          return knownCount(b) > knownCount(a) ? b : a;
+        }, function () { return a; });
+      });
   }
 
   function readWithTesseract(file) {
@@ -640,7 +656,8 @@
     setStatus('Reading the label...');
     readPhoto(f).then(function (text) {
       busy = false;
-      if (!text || text.split(',').length < 2) {
+      // A real ingredient list matches several reference names. Junk like "See, bee" matches none.
+      if (!text || knownCount(text) < 3) {
         // Never a dead end: show the box so the shopper can type or paste the list and regrade.
         lastFixes = [];
         textEl.value = text || '';
