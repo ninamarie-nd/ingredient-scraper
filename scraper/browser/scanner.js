@@ -323,6 +323,17 @@
     return ocrPromise;
   }
 
+  // Original colors, shrunk only if very large. (The Tesseract path still uses prepare().)
+  function colorCanvasFromFile(file) {
+    return createImageBitmap(file).then(function (bmp) {
+      var s = Math.min(1, 2000 / Math.max(bmp.width, bmp.height));
+      var c = document.createElement('canvas');
+      c.width = Math.round(bmp.width * s); c.height = Math.round(bmp.height * s);
+      c.getContext('2d').drawImage(bmp, 0, 0, c.width, c.height);
+      return c;
+    });
+  }
+
   function canvasFromBlob(blob) {
     return createImageBitmap(blob).then(function (bmp) {
       var c = document.createElement('canvas');
@@ -415,7 +426,9 @@
   }
 
   function cropRect(src, rc) {
-    var w = Math.max(2, Math.round(rc.w)), h = Math.max(2, Math.round(rc.h));
+    // A little extra room on each end keeps edge characters (like a final "0") from being clipped.
+    var pad = 0.3 * rc.h;
+    var w = Math.max(2, Math.round(rc.w + 2 * pad)), h = Math.max(2, Math.round(rc.h));
     var c = document.createElement('canvas');
     c.width = w; c.height = h;
     var cx = c.getContext('2d');
@@ -458,7 +471,7 @@
   // Full pipeline: detect lines, group pieces on the same line, read each line, return text with one line per row.
   function readWithOnnx(file) {
     return loadOcr().then(function (ocr) {
-      return prepare(file).then(canvasFromBlob).then(function (src) {
+      return colorCanvasFromFile(file).then(function (src) {
         var sharp = sharpenCanvas(src);
         return detectLines(ocr, sharp).then(function (rects) {
           return groupRows(rects).reduce(function (chain, row) {
