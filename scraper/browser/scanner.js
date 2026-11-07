@@ -27,7 +27,12 @@
     });
   }
 
-  function tidy(s) { return String(s || '').replace(/\s*\n\s*/g, ' ').replace(/ {2,}/g, ' ').trim(); }
+  // Labels often print one ingredient per line with no commas. Treat line breaks as separators in that case.
+  function tidy(s) {
+    var raw = String(s || '');
+    if (raw.indexOf(',') < 0) raw = raw.replace(/\s*\n\s*/g, ', ');
+    return raw.replace(/\s*\n\s*/g, ' ').replace(/ {2,}/g, ' ').replace(/,\s*,/g, ',').trim();
+  }
 
   // OCR returns the whole page. Keep the text after the "Ingredients" label, up to the next section heading.
   function extractIngredients(s) {
@@ -36,7 +41,7 @@
     var rest = s.slice(m.index + m[0].length);
     var stop = /\b(description|directions|how to use|scent profile|warnings?|caution|net wt|made in|distributed by|questions|reviews?|about this|key benefits)\b/i.exec(rest);
     if (stop) rest = rest.slice(0, stop.index);
-    rest = rest.trim().replace(/[,\s]+$/, '');
+    rest = rest.replace(/^[,\s]+/, '').trim().replace(/[,\s]+$/, '');
     return rest.indexOf(',') >= 0 ? rest : s;
   }
 
