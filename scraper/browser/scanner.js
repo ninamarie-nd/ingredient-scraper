@@ -269,17 +269,31 @@
   }
 
   // Try the on-device reader first; fall back to Tesseract if it can't load or read.
+  // readLog records what each reader did, for the ?debug=1 readout (no effect on normal use).
+  var readLog = {};
   function readPhoto(file) {
-    return readWithOnnx(file).then(function (t) { return extractIngredients(tidy(t)); }, function () { return null; })
-      .then(function (a) {
-        if (a && knownCount(a) >= 3) return a;
-        return readWithTesseract(file).then(function (t) {
-          var b = extractIngredients(tidy(t));
-          if (!a) return b;
-          return knownCount(b) > knownCount(a) ? b : a;
-        }, function () { return a; });
+    readLog = {};
+    return readWithOnnx(file).then(function (t) {
+      readLog.onnxChars = (t || '').length;
+      readLog.onnxKnown = knownCount(extractIngredients(tidy(t)));
+      return extractIngredients(tidy(t));
+    }, function (e) {
+      readLog.onnxError = String((e && e.message) || e).slice(0, 160);
+      return null;
+    }).then(function (a) {
+      if (a && knownCount(a) >= 3) return a;
+      return readWithTesseract(file).then(function (t) {
+        var b = extractIngredients(tidy(t));
+        readLog.tessKnown = knownCount(b);
+        if (!a) return b;
+        return knownCount(b) > knownCount(a) ? b : a;
+      }, function (e) {
+        readLog.tessError = String((e && e.message) || e).slice(0, 160);
+        return a;
       });
+    });
   }
+  var DEBUG_READ = /[?&]debug=1/.test(location.search);
 
   function readWithTesseract(file) {
     return loadTesseract().then(function (T) {
@@ -340,13 +354,23 @@
   }
 
   // Original colors, shrunk only if very large. (The Tesseract path still uses prepare().)
+  // Uses an <img> element (works on every phone browser), not createImageBitmap (not always available).
   function colorCanvasFromFile(file) {
-    return createImageBitmap(file).then(function (bmp) {
-      var s = Math.min(1, 2000 / Math.max(bmp.width, bmp.height));
-      var c = document.createElement('canvas');
-      c.width = Math.round(bmp.width * s); c.height = Math.round(bmp.height * s);
-      c.getContext('2d').drawImage(bmp, 0, 0, c.width, c.height);
-      return c;
+    return new Promise(function (resolve, reject) {
+      var img = new Image();
+      var url = URL.createObjectURL(file);
+      img.onload = function () {
+        try {
+          var s = Math.min(1, 2000 / Math.max(img.naturalWidth, img.naturalHeight));
+          var c = document.createElement('canvas');
+          c.width = Math.round(img.naturalWidth * s); c.height = Math.round(img.naturalHeight * s);
+          c.getContext('2d').drawImage(img, 0, 0, c.width, c.height);
+          URL.revokeObjectURL(url);
+          resolve(c);
+        } catch (e) { URL.revokeObjectURL(url); reject(e); }
+      };
+      img.onerror = function () { URL.revokeObjectURL(url); reject(new Error('photo load failed')); };
+      img.src = url;
     });
   }
 
@@ -665,6 +689,7 @@
         textEl.value = text || '';
         resultEl.hidden = false;
         setStatus("We couldn't read the full list from this photo. Type or paste the ingredients in the box below and tap Regrade, or retake the photo close, flat and in focus.");
+        if (DEBUG_READ) setStatus(statusEl.textContent + '\n[debug] ' + JSON.stringify(readLog));
         return;
       }
       var fixed = fixIngredients(text);
