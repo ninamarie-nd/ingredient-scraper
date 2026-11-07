@@ -408,7 +408,11 @@
     readPhoto(f).then(function (text) {
       busy = false;
       if (!text || text.split(',').length < 2) {
-        setStatus("We couldn't read an ingredient list from this photo. Try again with the list close, flat and in focus.");
+        // Never a dead end: show the box so the shopper can type or paste the list and regrade.
+        lastFixes = [];
+        textEl.value = text || '';
+        resultEl.hidden = false;
+        setStatus("We couldn't read the full list from this photo. Type or paste the ingredients in the box below and tap Regrade, or retake the photo close, flat and in focus.");
         return;
       }
       var fixed = fixIngredients(text);
