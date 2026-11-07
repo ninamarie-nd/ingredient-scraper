@@ -67,7 +67,7 @@
       [/^polyethylene$/i, [6], 'polyethylene'],
       [/^alcohol\s*denat/i, [4], 'alcohol denat'],
       [/^alcohol$/i, [4], 'alcohol'],
-      [/^aluminum|^aluminium/i, [3], 'aluminum'],
+      [/alumin/i, [3], 'aluminum'],
       [/^iron oxides?\b/i, [1, 2, 3], 'iron oxides CI#'],
       [/^ci 77/i, [1, 2, 3], 'colorant CI#'],
       [/^isododecane/i, [1, 2], 'isododecane'],
@@ -265,7 +265,7 @@
       if (/\b(water|aqua|eau)\b/.test(low)) return true;
       if (/\bwax\b|\bcera\b|\bvitamin\b/.test(low)) return true;
       if (/cobalamin|ascorbic|ascorbyl|niacin|niacinamide|riboflavin|thiamine|pyridoxine|folic|pantothenic|biotin|calciferol|cholecalciferol|\bb[1-9]\b|\bb1[0-2]\b/.test(low)) return true;
-      if (/\b(sodium|potassium|magnesium|calcium|zinc|aluminum)\s?(chloride|carbonate|phosphate|sulfate|silicate|hydroxide|citrate)\b/.test(low)) return true;
+      if (/\b(sodium|potassium|magnesium|calcium|zinc)\s?(chloride|carbonate|phosphate|sulfate|silicate|hydroxide|citrate)\b/.test(low)) return true;
       if (/\b(hydrated silica|silica|kaolin|bentonite|clay|sea salt|dead sea salt)\b/.test(low)) return true;
       if (/\bextract\b/.test(low)) return true;
       if (/\bamino acids?\b|\barginine\b|\bcarnitine\b|\bcarnosine\b|\bkeratin amino\b/.test(low)) return true;

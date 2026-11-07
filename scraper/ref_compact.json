@@ -6099,11 +6099,7 @@
    "l": true,
    "n": "User ruling 2026-11-01: obvious mineral, low tox."
   },
-  "magnesium aluminum silicate": {
-   "c": [],
-   "l": true,
-   "n": "User ruling 2026-11-01: obvious mineral, low tox."
-  },
+  "magnesium aluminum silicate": {"c": [3], "l": false, "n": "User ruling 2026-11-07: all aluminum-containing ingredients are flagged, no exception. Heavy metals category 3."},
   "sodium magnesium silicate": {
    "c": [],
    "l": true,

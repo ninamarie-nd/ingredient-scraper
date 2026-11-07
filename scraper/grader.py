@@ -83,7 +83,7 @@ PATTERN_WATCH = [
     (re.compile(r'^polyethylene$', re.I), [6], 'polyethylene'),
     (re.compile(r'^alcohol\s*denat', re.I), [4], 'alcohol denat'),
     (re.compile(r'^alcohol$', re.I), [4], 'alcohol'),
-    (re.compile(r'^aluminum|^aluminium', re.I), [3], 'aluminum'),
+    (re.compile(r'alumin', re.I), [3], 'aluminum'),  # user ruling 2026-11-07: all aluminum-containing ingredients, no exception
     (re.compile(r'^iron oxides?\b', re.I), [1,2,3], 'iron oxides CI#'),
     (re.compile(r'^ci 77', re.I), [1,2,3], 'colorant CI#'),
     (re.compile(r'^isododecane', re.I), [1,2], 'isododecane'),
@@ -286,7 +286,7 @@ def _ruling_exempt(low):
     if re.search(r'\b(water|aqua|eau)\b', low): return True
     if re.search(r'\bwax\b|\bcera\b|\bvitamin\b', low): return True
     if re.search(r'cobalamin|ascorbic|ascorbyl|niacin|niacinamide|riboflavin|thiamine|pyridoxine|folic|pantothenic|biotin|calciferol|cholecalciferol|\bb[1-9]\b|\bb1[0-2]\b', low): return True  # nutrients: map as vitamins (user ruling 2026-11-01)
-    if re.search(r'\b(sodium|potassium|magnesium|calcium|zinc|aluminum)\s?(chloride|carbonate|phosphate|sulfate|silicate|hydroxide|citrate)\b', low): return True  # mineral salts (user ruling 2026-11-01)
+    if re.search(r'\b(sodium|potassium|magnesium|calcium|zinc)\s?(chloride|carbonate|phosphate|sulfate|silicate|hydroxide|citrate)\b', low): return True  # mineral salts (user ruling 2026-11-01)
     if re.search(r'\b(hydrated silica|silica|kaolin|bentonite|clay|sea salt|dead sea salt)\b', low): return True  # minerals and clays (user ruling 2026-11-01)
     if re.search(r'\bextract\b', low): return True
     if re.search(r'\bamino acids?\b|\barginine\b|\bcarnitine\b|\bcarnosine\b|\bkeratin amino\b', low): return True  # amino acids (user ruling 2026-11-01)
