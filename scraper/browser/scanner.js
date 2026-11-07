@@ -723,6 +723,35 @@
       }).join('') + '</ul>';
     }
     if (r.esc.length) html += '<p class="scan-note">Escalations: ' + esc(r.esc.join(', ')) + '.</p>';
+    // Card copy: why it matters for puberty and what to look for instead (shared with the library cards).
+    if (window.PSCard) {
+      var cpKeys = [];
+      var rinseType = /shampoo|wash|conditioner|cleanser|scrub|soap|toothpaste|mouthwash|bath|shaving|exfoliant/i.test(c.type || '');
+      r.flagged.forEach(function (f) {
+        f[1].forEach(function (cn) {
+          if (cn === 2) cpKeys.push('endocrine');
+          else if (cn === 4) cpKeys.push('irritation');
+          else if (cn === 3) cpKeys.push('heavy');
+          else if (cn === 1 && !rinseType) cpKeys.push('carc');
+        });
+      });
+      r.esc.forEach(function (e) {
+        var low = String(e).toLowerCase();
+        if (/pfas/.test(low)) cpKeys.push('pfas');
+        if (/heavy/.test(low)) cpKeys.push('heavy');
+        if (/endocrine/.test(low)) cpKeys.push('endocrine');
+        if (/carcinogen in leave-on/.test(low) && !rinseType) cpKeys.push('carc');
+      });
+      var cpSec = window.PSCard.sections({
+        pt: c.type,
+        tier: r.tier,
+        names: r.flagged.map(function (f) { return f[0].replace(/ \[inferred: .*\]$/, ''); }),
+        keys: cpKeys,
+        ing: (r.ingredients || []).join(', ')
+      });
+      if (cpSec.why) html += '<h3>Why this matters for kids in puberty</h3><p class="scan-note">' + esc(cpSec.why) + '</p>';
+      if (cpSec.swap) html += '<h3>What to look for instead</h3><p class="scan-note">' + esc(cpSec.swap) + '</p>';
+    }
     if (lastFixes && lastFixes.length) {
       html += '<p class="scan-note">We corrected ' + lastFixes.length + ' word' + (lastFixes.length === 1 ? '' : 's') + ' from the photo to the closest ingredient name. Check these: ' +
         lastFixes.slice(0, 8).map(function (f) { return esc(f[0]) + ' \u2192 ' + esc(f[1]); }).join('; ') + '.</p>';

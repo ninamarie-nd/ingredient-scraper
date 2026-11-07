@@ -1035,6 +1035,89 @@ footer.foot{display:none !important}
     </form>
   </div>
 </div>
+<script id="card-copy">
+/* Card copy: "Why this matters for kids in puberty", Nasty 9 lines, and "What to look for instead".
+   Shared by the library cards and the photo/paste results. Wording approved 2026-11-07. */
+(function () {
+  var WHY = {
+    endocrine: "Flagged for endocrine disruption, which means it's associated with interfering with hormone signaling. Puberty is when the body is building its hormone system, so limiting extra exposure during these years is worth the effort.",
+    irritation: "Flagged for irritation and sensitization. Skin changes quickly during puberty, and sensitive skin can react more easily to ingredients like this.",
+    pfas: "Flagged as a PFAS, the group of \"forever chemicals.\" They persist in the body and are associated with hormone effects, so they're one to avoid when there's a choice.",
+    heavy: "Flagged for heavy metal content. Heavy metals compete with the minerals kids actually need for healthy hormone development, like zinc, iron, and copper. Want to look at your child's minerals? Start with Mineral Check: https://www.doctorninamarie.com/mineral-check",
+    fluoride: "Flagged for fluoride in an oral-care product. Oral care is one of the places where you can choose to limit extra exposure during the years your child's body is developing.",
+    carc: "Flagged as a possible carcinogen. Leave-on products stay on the skin longer than rinse-off ones, so the concern is higher here.",
+    inhal: "Fine particles and aerosols can be breathed in. Lungs are still developing through the teen years, so sprays and powders get extra caution.",
+    intimate: "Intimate-area products get a stricter bar. The skin there is thin and sensitive, and fragrance adds no benefit."
+  };
+  var NASTY = [
+    [/fragrance|parfum/i, "Part of the Nasty 9. Fragrance can hide many chemicals under one word on the label."],
+    [/phenoxyethanol/i, "Part of the Nasty 9, a common preservative."],
+    [/quaternium|quaternary|quat\b|polyquaternium|behentrimonium|cetrimonium|quat/i, "Part of the Nasty 9, a quaternary ammonium compound often used as a conditioner."],
+    [/\bPEG-|\bPPG-|polyethylene glycol|polypropylene glycol/i, "Part of the Nasty 9, a group of ethoxylated ingredients."],
+    [/sodium laureth sulfate|sodium lauryl sulfate|\bSLES\b|\bSLS\b/i, "Part of the Nasty 9, a harsh cleansing agent."],
+    [/homosalate|octinoxate|octocrylene|ethylhexyl methoxycinnamate/i, "Part of the Nasty 9, chemical sunscreen filters."],
+    [/paraben|phthalate/i, "Part of the Nasty 9, preservatives and plasticizers we flag for hormone concerns."],
+    [/alumin/i, "Part of the Nasty 9. Aluminum compounds show up in antiperspirants and in some other products too."],
+    [/dmdm hydantoin|quaternium-15|diazolidinyl|imidazolidinyl|formaldehyde/i, "Part of the Nasty 9. These slowly release formaldehyde to preserve the product."]
+  ];
+  var SWAP = {
+    leave: "Fragrance-free, with a short ingredient list you can read.",
+    rinse: "Fragrance-free and gentle, with a short list. Skip \"antibacterial\" claims.",
+    wash: "Fragrance-free, with fewer added preservatives and a shorter list.",
+    lip: "A plain balm with few ingredients. Skip flavored and scented versions.",
+    deodorant: "Fragrance-free and aluminum-free, with a short list. Check that fragrance isn't listed.",
+    sunscreen: "Fragrance-free, mineral-based (zinc oxide), with a short list.",
+    makeup: "Fragrance-free, with a short list. Pay the most attention to products used near the eyes and lips.",
+    hair: "Fragrance-free and simple. Sprays and powders are the first to skip.",
+    toothpaste: "Fluoride-free toothpaste with a short ingredient list and no added fragrance.",
+    laundry: "Fragrance-free detergent with a short list. Skip scented dryer sheets and boosters.",
+    period: "Unscented, with no added dyes or fragrance.",
+    intimateWipe: "Fragrance-free and dye-free, with a very short list. Plant extracts or \"natural\" claims don't make fragrance less of a concern.",
+    mist: "Skip it where you can. If you use one, choose fragrance-free and check the label for fragrance.",
+    other: "The fragrance-free version of the same product, with the shortest list you can find."
+  };
+  function swapKey(pt) {
+    var t = String(pt || '').toLowerCase();
+    if (/toothpaste|oral|mouthwash|tooth/.test(t)) return 'toothpaste';
+    if (/lip/.test(t)) return 'lip';
+    if (/deodorant|antiperspirant/.test(t)) return 'deodorant';
+    if (/sunscreen|spf/.test(t)) return 'sunscreen';
+    if (/mascara|makeup|eyeliner|eyeshadow|foundation|concealer|blush|bronzer/.test(t)) return 'makeup';
+    if (/wipe/.test(t) && /intimate|feminine/.test(t)) return 'intimateWipe';
+    if (/period|pad|tampon|liner/.test(t)) return 'period';
+    if (/laundry|detergent|cleaning|cleaner/.test(t)) return 'laundry';
+    if (/mist|spray|powder|aerosol|body spray/.test(t)) return 'mist';
+    if (/hair|styl|dry shampoo|mousse|gel/.test(t)) return 'hair';
+    if (/shampoo|conditioner|body wash|wash|2-in-1/.test(t)) return 'wash';
+    if (/cleanser|face wash|scrub|exfoliant/.test(t)) return 'rinse';
+    if (/lotion|cream|serum|oil|moisturizer|butter|balm|mask|leave-in|leave-on/.test(t)) return 'leave';
+    return 'other';
+  }
+  /* input: { pt, tier, names: [flagged ingredient names], keys: [concern keys], ing: verbatim text }
+     keys come from the caller: endocrine, irritation, pfas, heavy, carc, inhal */
+  function sections(input) {
+    var names = input.names || [], keys = (input.keys || []).slice(), ing = String(input.ing || '');
+    var pt = String(input.pt || '');
+    var flagged = names.length > 0 || keys.length > 0;
+    var haystack = (names.join(' ') + ' ' + ing).toLowerCase();
+    if (/fluorid|monofluorophosphate/.test(haystack) && /toothpaste|oral|mouthwash|tooth/i.test(pt)) keys.push('fluoride');
+    if (/perfluor|pfas/.test(haystack)) keys.push('pfas');
+    if (/alumin/.test(haystack)) keys.push('heavy');
+    if (flagged && /spray|powder|aerosol|mist/i.test(pt)) keys.push('inhal');
+    if (flagged && /intimate|feminine|period|pad|tampon|liner/i.test(pt)) keys.push('intimate');
+    var order = ['endocrine', 'irritation', 'pfas', 'heavy', 'fluoride', 'carc', 'inhal', 'intimate'];
+    var why = [];
+    order.forEach(function (k) { if (keys.indexOf(k) >= 0 && WHY[k]) why.push(WHY[k]); });
+    NASTY.forEach(function (row) {
+      if (row[0].test(haystack)) why.push(row[1]);
+    });
+    var whyText = why.join(' ');
+    var swap = input.tier === 'Puberty Safe' ? '' : SWAP[swapKey(pt)];
+    return { why: whyText, swap: swap || '' };
+  }
+  window.PSCard = { sections: sections, swapKey: swapKey };
+})();
+</script>
 <script>
 (function(){
   var DATA = JSON.parse(document.getElementById('product-data').textContent);
@@ -1059,6 +1142,26 @@ footer.foot{display:none !important}
 
   // Fallback for ingredients missing from ingredient-defs: use the reference table (with its aliases).
   var REF_CAT_NAME = {1:'Carcinogen / developmental concern',2:'Hormone (endocrine) disruptor',3:'Heavy metal',4:'Skin irritant / sensitizer',5:'Microbiome / skin barrier',6:'Environmental persistence',7:'Acute toxicity',8:'Respiratory irritant'};
+  // Concern keys for the card copy, from ingredient categories and escalations.
+  function cardKeys(p){
+    var keys = [], esc = String(p.esc || '').toLowerCase(), pt = String(p.pt || '').toLowerCase();
+    var rinse = /shampoo|conditioner|wash|cleanser|scrub|soap|toothpaste|mouthwash|bath|shaving|exfoliant/.test(pt);
+    (p.fl || []).forEach(function(name){
+      var d = normDef(name); var cs = (d && d.c) || [];
+      cs.forEach(function(lbl){
+        if(/endocrine/i.test(lbl)) keys.push('endocrine');
+        else if(/irritant|allergen/i.test(lbl)) keys.push('irritation');
+        else if(/persistent/i.test(lbl)) keys.push('pfas');
+        else if(/heavy metal/i.test(lbl)) keys.push('heavy');
+        else if(/carcinogen/i.test(lbl) && !rinse) keys.push('carc');
+      });
+    });
+    if(/endocrine/.test(esc)) keys.push('endocrine');
+    if(/pfas/.test(esc)) keys.push('pfas');
+    if(/heavy/.test(esc)) keys.push('heavy');
+    if(/carcinogen in leave-on/.test(esc) && !rinse) keys.push('carc');
+    return keys;
+  }
   function normDef(name){
     var k = String(name||'').toLowerCase().replace(/[\*\u2020\u2021]+$/,'').trim();
     if(DEFS[k]) return DEFS[k];
@@ -1357,6 +1460,10 @@ footer.foot{display:none !important}
       // as chips in the Flagged section above).
       var summaryText = cautionNote ? p.note : buildSummary(p);
       var summaryLine = summaryText ? '<dt>Summary</dt><dd>' + esc(summaryText) + '</dd>' : '';
+      // Card copy: why it matters for puberty (by concern) and what to look for instead (by product type).
+      var cpSec = (window.PSCard && !notGradable) ? window.PSCard.sections({ pt: p.pt, tier: p.t, names: p.fl || [], keys: cardKeys(p), ing: p.ing || '' }) : { why: '', swap: '' };
+      var whyLine = cpSec.why ? '<dt>Why this matters for kids in puberty</dt><dd>' + esc(cpSec.why) + '</dd>' : '';
+      var swapLine = cpSec.swap ? '<dt>What to look for instead</dt><dd>' + esc(cpSec.swap) + '</dd>' : '';
       var researchLine = p.rn ? '<dt>Research note</dt><dd>' + esc(p.rn) + '</dd>' : '';
       var typeLine = p.pt ? '<dt>Type</dt><dd>' + esc(p.pt) + '</dd>' : '';
       var sourceLine = p.u ? '<dt>Source</dt><dd class="src"><a href="' + esc(p.u) + '" target="_blank" rel="noopener">View on brand site &rarr;</a></dd>' : '';
@@ -1374,6 +1481,8 @@ footer.foot{display:none !important}
             ingredientsLine +
             flaggedLine +
             summaryLine +
+            whyLine +
+            swapLine +
             researchLine +
             typeLine +
             sourceLine +
@@ -3273,6 +3382,35 @@ footer.foot{display:none !important}
       }).join('') + '</ul>';
     }
     if (r.esc.length) html += '<p class="scan-note">Escalations: ' + esc(r.esc.join(', ')) + '.</p>';
+    // Card copy: why it matters for puberty and what to look for instead (shared with the library cards).
+    if (window.PSCard) {
+      var cpKeys = [];
+      var rinseType = /shampoo|wash|conditioner|cleanser|scrub|soap|toothpaste|mouthwash|bath|shaving|exfoliant/i.test(c.type || '');
+      r.flagged.forEach(function (f) {
+        f[1].forEach(function (cn) {
+          if (cn === 2) cpKeys.push('endocrine');
+          else if (cn === 4) cpKeys.push('irritation');
+          else if (cn === 3) cpKeys.push('heavy');
+          else if (cn === 1 && !rinseType) cpKeys.push('carc');
+        });
+      });
+      r.esc.forEach(function (e) {
+        var low = String(e).toLowerCase();
+        if (/pfas/.test(low)) cpKeys.push('pfas');
+        if (/heavy/.test(low)) cpKeys.push('heavy');
+        if (/endocrine/.test(low)) cpKeys.push('endocrine');
+        if (/carcinogen in leave-on/.test(low) && !rinseType) cpKeys.push('carc');
+      });
+      var cpSec = window.PSCard.sections({
+        pt: c.type,
+        tier: r.tier,
+        names: r.flagged.map(function (f) { return f[0].replace(/ \[inferred: .*\]$/, ''); }),
+        keys: cpKeys,
+        ing: (r.ingredients || []).join(', ')
+      });
+      if (cpSec.why) html += '<h3>Why this matters for kids in puberty</h3><p class="scan-note">' + esc(cpSec.why) + '</p>';
+      if (cpSec.swap) html += '<h3>What to look for instead</h3><p class="scan-note">' + esc(cpSec.swap) + '</p>';
+    }
     if (lastFixes && lastFixes.length) {
       html += '<p class="scan-note">We corrected ' + lastFixes.length + ' word' + (lastFixes.length === 1 ? '' : 's') + ' from the photo to the closest ingredient name. Check these: ' +
         lastFixes.slice(0, 8).map(function (f) { return esc(f[0]) + ' \u2192 ' + esc(f[1]); }).join('; ') + '.</p>';
