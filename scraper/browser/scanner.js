@@ -660,6 +660,8 @@
       if (!text || knownCount(text) < 3) {
         // Never a dead end: show the box so the shopper can type or paste the list and regrade.
         lastFixes = [];
+        // Clear the previous product's grade so an old result never sits under a failed read.
+        current = null; tierEl.innerHTML = ''; detailsEl.innerHTML = '';
         textEl.value = text || '';
         resultEl.hidden = false;
         setStatus("We couldn't read the full list from this photo. Type or paste the ingredients in the box below and tap Regrade, or retake the photo close, flat and in focus.");
