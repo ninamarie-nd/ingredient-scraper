@@ -2950,8 +2950,51 @@ footer.foot{display:none !important}
   // Try the on-device reader first; fall back to Tesseract if it can't load or read.
   // readLog records what each reader did, for the ?debug=1 readout (no effect on normal use).
   var readLog = {};
+  // Cloud Vision reader (Google Cloud Function). Empty = off: the on-device
+  // reader below is used. Set this to the deployed function URL only after
+  // the privacy wording has been approved, because photos leave the phone.
+  var VISION_ENDPOINT = '';
+
+  function readWithVision(file) {
+    return prepare(file).then(function (blob) {
+      return new Promise(function (resolve, reject) {
+        var fr = new FileReader();
+        fr.onload = function () { resolve(String(fr.result)); };
+        fr.onerror = function () { reject(fr.error); };
+        fr.readAsDataURL(blob);
+      });
+    }).then(function (dataUrl) {
+      return fetch(VISION_ENDPOINT, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ image: dataUrl })
+      });
+    }).then(function (r) {
+      if (!r.ok) throw new Error('vision ' + r.status);
+      return r.json();
+    }).then(function (j) {
+      return j && j.text ? j.text : '';
+    });
+  }
+
   function readPhoto(file) {
     readLog = {};
+    if (VISION_ENDPOINT) {
+      return readWithVision(file).then(function (t) {
+        readLog.visionChars = (t || '').length;
+        var a = extractIngredients(tidy(t));
+        readLog.visionKnown = knownCount(a);
+        if (knownCount(a) >= 3) return a;
+        return readPhotoOnDevice(file);
+      }, function (e) {
+        readLog.visionError = String((e && e.message) || e).slice(0, 160);
+        return readPhotoOnDevice(file);
+      });
+    }
+    return readPhotoOnDevice(file);
+  }
+
+  function readPhotoOnDevice(file) {
     return readWithOnnx(file).then(function (t) {
       readLog.onnxChars = (t || '').length;
       readLog.onnxKnown = knownCount(extractIngredients(tidy(t)));
