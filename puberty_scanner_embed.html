@@ -1217,6 +1217,9 @@ footer.foot{display:none !important}
     }
     var flagCount = (p.fl || []).length;
     if(flagCount === 0 && !p.esc){
+      if(p.t === 'Use Caution'){
+        return 'No flagged ingredients. This product is rated Use Caution because one or more ingredients on its list aren\'t in our reference yet, or their exact identity isn\'t verified, so we can\'t clear them. This is a gap in our data, not a known concern.';
+      }
       return 'No flagged ingredients \u2014 all ingredients in this product are in the Puberty-Safe reference as low-concern.';
     }
     // Aggregate categories across every flagged ingredient. Preserve
@@ -3371,7 +3374,7 @@ footer.foot{display:none !important}
   // ----- grade -----
   function summaryOf(r) {
     var names = r.flagged.map(function (f) { return f[0].replace(/ \[inferred: .*\]$/, ''); });
-    if (!r.flagCount) return 'No flagged ingredients.';
+    if (!r.flagCount) return r.tier === 'Use Caution' ? 'No flagged ingredients. This product is rated Use Caution because one or more ingredients on its list aren\'t in our reference yet, or their exact identity isn\'t verified, so we can\'t clear them. This is a gap in our data, not a known concern.' : 'No flagged ingredients.';
     return r.flagCount + ' flagged ingredient' + (r.flagCount === 1 ? '' : 's') + (names.length ? ' incl. ' + names[0] : '') + '.';
   }
 

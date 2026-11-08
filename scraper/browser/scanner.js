@@ -706,7 +706,7 @@
   // ----- grade -----
   function summaryOf(r) {
     var names = r.flagged.map(function (f) { return f[0].replace(/ \[inferred: .*\]$/, ''); });
-    if (!r.flagCount) return 'No flagged ingredients.';
+    if (!r.flagCount) return r.tier === 'Use Caution' ? 'No flagged ingredients. This product is rated Use Caution because one or more ingredients on its list aren\'t in our reference yet, or their exact identity isn\'t verified, so we can\'t clear them. This is a gap in our data, not a known concern.' : 'No flagged ingredients.';
     return r.flagCount + ' flagged ingredient' + (r.flagCount === 1 ? '' : 's') + (names.length ? ' incl. ' + names[0] : '') + '.';
   }
 
