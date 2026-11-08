@@ -15,6 +15,14 @@ gcloud secrets add-iam-policy-binding "$SECRET" \
   --member="serviceAccount:${PN}-compute@developer.gserviceaccount.com" \
   --role=roles/secretmanager.secretAccessor --project="$PROJECT" >/dev/null
 
+# Cloud Build needs permission to build the function (the build failed without it).
+for SA in "${PN}-compute@developer.gserviceaccount.com" "${PN}@cloudbuild.gserviceaccount.com"; do
+  gcloud projects add-iam-policy-binding "$PROJECT" --member="serviceAccount:${SA}" \
+    --role=roles/cloudbuild.builds.builder --condition=None >/dev/null
+  gcloud projects add-iam-policy-binding "$PROJECT" --member="serviceAccount:${SA}" \
+    --role=roles/artifactregistry.writer --condition=None >/dev/null
+done
+
 gcloud functions deploy read_label --gen2 --runtime=python312 --region="$REGION" \
   --source=. --entry-point=read_label --trigger-http --allow-unauthenticated \
   --set-secrets="VISION_API_KEY=${SECRET}:latest" --max-instances=5 --memory=512MB --quiet
