@@ -271,10 +271,11 @@
   // Try the on-device reader first; fall back to Tesseract if it can't load or read.
   // readLog records what each reader did, for the ?debug=1 readout (no effect on normal use).
   var readLog = {};
-  // Cloud Vision reader (Google Cloud Function). Empty = off: the on-device
-  // reader below is used. Set this to the deployed function URL only after
-  // the privacy wording has been approved, because photos leave the phone.
-  var VISION_ENDPOINT = '';
+  // Cloud Vision reader (Google Cloud Run function, read-label). Photos are
+  // sent here and read by Google Cloud Vision; the privacy text in the scanner
+  // intro describes this. If Vision fails or finds too few known ingredients,
+  // the on-device reader below is used.
+  var VISION_ENDPOINT = 'https://read-label-5qhdwstvqq-uc.a.run.app';
 
   function readWithVision(file) {
     return prepare(file).then(function (blob) {

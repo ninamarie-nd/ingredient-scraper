@@ -1816,7 +1816,7 @@ footer.foot{display:none !important}
 <div class="modal-back" id="scan-modal" hidden>
   <div class="modal scan-modal" role="dialog" aria-modal="true" aria-labelledby="scan-title">
     <h2 id="scan-title">Scan a product label</h2>
-    <p class="modal-sub">Take a photo of the ingredient list and we will grade the product. The photo is read on your device and is not uploaded.</p>
+    <p class="modal-sub">Take a photo of the ingredient list and we will grade the product. Photos and privacy: the photo is sent to Google Cloud, which reads the text. Google processes the photo in memory, does not store it, and does not use it to train its models. Our site does not keep your photo. Google keeps basic request details, such as the time and size of the request, to run the service and prevent abuse.</p>
     <div class="scan-sources" id="scan-sources">
       <button type="button" class="ask-btn" id="scan-take">Take a photo</button>
       <button type="button" class="ask-btn scan-alt" id="scan-library">Choose from library</button>
@@ -2950,10 +2950,11 @@ footer.foot{display:none !important}
   // Try the on-device reader first; fall back to Tesseract if it can't load or read.
   // readLog records what each reader did, for the ?debug=1 readout (no effect on normal use).
   var readLog = {};
-  // Cloud Vision reader (Google Cloud Function). Empty = off: the on-device
-  // reader below is used. Set this to the deployed function URL only after
-  // the privacy wording has been approved, because photos leave the phone.
-  var VISION_ENDPOINT = '';
+  // Cloud Vision reader (Google Cloud Run function, read-label). Photos are
+  // sent here and read by Google Cloud Vision; the privacy text in the scanner
+  // intro describes this. If Vision fails or finds too few known ingredients,
+  // the on-device reader below is used.
+  var VISION_ENDPOINT = 'https://read-label-5qhdwstvqq-uc.a.run.app';
 
   function readWithVision(file) {
     return prepare(file).then(function (blob) {
