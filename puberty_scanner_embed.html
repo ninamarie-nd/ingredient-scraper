@@ -1315,7 +1315,7 @@ footer.foot{display:none !important}
 
   var curlSel = document.getElementById('curl');
   curlSel.addEventListener('change', function(){
-    state.curl = curlSel.value; state.limit = 60; render(); persist();
+    state.curl = curlSel.value; state.limit = 120; render(); persist();
   });
 
   // Tier counts (for stats row). Not Gradable and any unrecognized tier
@@ -1342,7 +1342,7 @@ footer.foot{display:none !important}
     ez:false,
     sort:'tier',
     tiers:{'Puberty Safe':true,'Use Caution':true,'Avoid (Mild)':true,'Avoid (Moderate)':true,'Avoid (High)':true},
-    limit:60
+    limit:120
   };
 
   // Restore from localStorage (per-viewer convenience)
@@ -1611,13 +1611,13 @@ footer.foot{display:none !important}
   var qTimer;
   qInput.addEventListener('input', function(){
     state.q = qInput.value.trim();
-    state.limit = 60;
+    state.limit = 120;
     clearTimeout(qTimer);
     qTimer = setTimeout(function(){ render(); persist(); }, 120);
   });
-  brandSel.addEventListener('change', function(){ state.brand = brandSel.value; state.limit=60; render(); persist(); });
-  typeSel.addEventListener('change', function(){ state.type = typeSel.value; state.limit=60; render(); persist(); });
-  document.getElementById('price').addEventListener('change', function(e){ state.price = e.target.value; state.limit=60; render(); persist(); });
+  brandSel.addEventListener('change', function(){ state.brand = brandSel.value; state.limit=120; render(); persist(); });
+  typeSel.addEventListener('change', function(){ state.type = typeSel.value; state.limit=120; render(); persist(); });
+  document.getElementById('price').addEventListener('change', function(e){ state.price = e.target.value; state.limit=120; render(); persist(); });
   document.getElementById('sort').addEventListener('change', function(e){ state.sort = e.target.value; render(); persist(); });
 
   document.querySelectorAll('.tier-stat').forEach(function(btn){
@@ -1625,7 +1625,7 @@ footer.foot{display:none !important}
       var t = btn.dataset.tier;
       state.tiers[t] = !state.tiers[t];
       btn.setAttribute('aria-pressed', state.tiers[t] ? 'true' : 'false');
-      state.limit = 60;
+      state.limit = 120;
       render(); persist();
     });
   });
@@ -1633,15 +1633,15 @@ footer.foot{display:none !important}
   document.getElementById('ez').addEventListener('click', function(e){
     state.ez = !state.ez;
     e.currentTarget.setAttribute('aria-pressed', state.ez ? 'true' : 'false');
-    state.limit = 60; render(); persist();
+    state.limit = 120; render(); persist();
   });
 
   document.getElementById('more').addEventListener('click', function(){
-    state.limit += 60; render();
+    state.limit += 120; render();
   });
 
   document.getElementById('clear').addEventListener('click', function(){
-    state.q=''; state.brand=''; state.type=''; state.price=''; state.curl=''; state.ez=false; state.limit=60;
+    state.q=''; state.brand=''; state.type=''; state.price=''; state.curl=''; state.ez=false; state.limit=120;
     document.getElementById('price').value='';
     document.getElementById('ez').setAttribute('aria-pressed','false');
     document.getElementById('curl').value='';
