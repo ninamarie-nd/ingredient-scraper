@@ -13805,7 +13805,14 @@
   },
  "es fiber": {"c": [6], "l": false, "min": "Avoid (High)", "n": "Polyethylene-based bicomponent binder fiber in topsheet/acquisition layers; microplastic (cat 6). Avoid (High) per user ruling 2026-11-10, matching the polyester fiber ruling."},
  "waterproof backing": {"c": [6], "l": false, "min": "Avoid (Mild)", "n": "Polyethylene or polypropylene film backsheet; microplastic (cat 6). Avoid (Mild) per user ruling 2026-11-10; Avoid (High) if PFAS-treated (user to confirm)."},
- "camphor": {"c": [], "l": true, "n": "User ruling 2026-11-10: treated as low-tox. Fragrance ingredient per INCI sources; no hazard classification found."}
+ "camphor": {"c": [], "l": true, "n": "User ruling 2026-11-10: treated as low-tox. Fragrance ingredient per INCI sources; no hazard classification found."},
+ "coated paper": {"c": [], "l": false, "min": "Avoid (High)", "n": "Ingredient not identified: avoid high (user ruling 2026-11-10)"},
+ "coated paper (wing paper)": {"c": [], "l": false, "min": "Avoid (High)", "n": "Ingredient not identified: avoid high (user ruling 2026-11-10)"},
+ "non-woven felt fabric": {"c": [], "l": false, "min": "Avoid (High)", "n": "Non-woven felt: avoid high when synthetic (PP, PE or polyester blend) (user ruling 2026-11-10); name the fiber to re-grade."},
+ "non-woven felt fabric (absorbent core)": {"c": [], "l": false, "min": "Avoid (High)", "n": "Non-woven felt: avoid high when synthetic (PP, PE or polyester blend) (user ruling 2026-11-10); name the fiber to re-grade."},
+ "natural absorbent materials": {"c": [], "l": false, "min": "Avoid (High)", "n": "Unnamed absorbent material treated as unknown: avoid high (user ruling 2026-11-10)."},
+ "corn-based pla and pbat": {"c": [], "l": false, "min": "Avoid (High)", "n": "Corn-based PLA/PBAT polyester polymer: avoid high (user ruling 2026-11-10; same as polyester)."},
+ "corn-derived polymers (pla and pbat)": {"c": [], "l": false, "min": "Avoid (High)", "n": "Corn-derived PLA/PBAT polyester polymer: avoid high (user ruling 2026-11-10; same as polyester)."}
  },
  "aliases": {
   "fragrance": "fragrance/parfum",
