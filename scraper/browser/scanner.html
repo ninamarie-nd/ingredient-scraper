@@ -5,6 +5,14 @@
     <div class="scan-sources" id="scan-sources">
       <button type="button" class="ask-btn" id="scan-take">Take a photo</button>
       <button type="button" class="ask-btn scan-alt" id="scan-library">Choose from library</button>
+      <button type="button" class="ask-btn scan-alt" id="scan-paste">Paste ingredients instead</button>
+    </div>
+    <div class="scan-single" id="scan-single">
+      <label for="scan-one">Or check one ingredient</label>
+      <div class="scan-single-row">
+        <input type="search" id="scan-one" placeholder="e.g. phenoxyethanol" maxlength="120" autocomplete="off">
+        <button type="button" class="ask-btn" id="scan-one-go">Check</button>
+      </div>
     </div>
     <input type="file" id="scan-camera" class="scan-hidden-input" accept="image/*" capture="environment" tabindex="-1" aria-hidden="true">
     <input type="file" id="scan-file" class="scan-hidden-input" accept="image/*" tabindex="-1" aria-hidden="true">

@@ -23,3 +23,9 @@
 .scan-crop-sliders{display:grid;grid-template-columns:1fr 1fr;gap:6px 14px;margin:10px 0 4px}
 .scan-crop-sliders label{font-size:13px;display:block}
 .scan-crop-sliders input[type="range"]{width:100%}
+
+.scan-single{margin:0 0 14px}
+.scan-single label{display:block;font-size:13px;margin-bottom:6px}
+.scan-single-row{display:flex;gap:8px}
+.scan-single-row input{flex:1;min-width:0;padding:10px;border:1px solid var(--border);border-radius:8px;background:var(--bg);color:var(--fg);font-size:14px}
+.scan-single-row .ask-btn{flex:0 0 auto;width:auto}

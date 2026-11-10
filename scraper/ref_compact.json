@@ -13812,7 +13812,9 @@
  "non-woven felt fabric (absorbent core)": {"c": [], "l": false, "min": "Avoid (High)", "n": "Non-woven felt: avoid high when synthetic (PP, PE or polyester blend) (user ruling 2026-11-10); name the fiber to re-grade."},
  "natural absorbent materials": {"c": [], "l": false, "min": "Avoid (High)", "n": "Unnamed absorbent material treated as unknown: avoid high (user ruling 2026-11-10)."},
  "corn-based pla and pbat": {"c": [], "l": false, "min": "Avoid (High)", "n": "Corn-based PLA/PBAT polyester polymer: avoid high (user ruling 2026-11-10; same as polyester)."},
- "corn-derived polymers (pla and pbat)": {"c": [], "l": false, "min": "Avoid (High)", "n": "Corn-derived PLA/PBAT polyester polymer: avoid high (user ruling 2026-11-10; same as polyester)."}
+ "corn-derived polymers (pla and pbat)": {"c": [], "l": false, "min": "Avoid (High)", "n": "Corn-derived PLA/PBAT polyester polymer: avoid high (user ruling 2026-11-10; same as polyester)."},
+ "black cumin seed": {"c": [], "l": true, "n": "Botanical: low-tox (user ruling 2026-11-10)."},
+ "black cumin seed oil": {"c": [], "l": true, "n": "Botanical oil: low-tox (user ruling 2026-11-10)."}
  },
  "aliases": {
   "fragrance": "fragrance/parfum",

@@ -180,6 +180,7 @@
 
   // ----- open / close -----
   function open() {
+    reset();
     modal.hidden = false;
     setStatus('');
     showSources();
@@ -204,6 +205,9 @@
     fileEl.value = '';
     camEl.value = '';
     showSources();
+    $('scan-single').hidden = false;
+    $('scan-one').value = '';
+    $('scan-regrade').textContent = 'Regrade';
     if (previewUrl) { URL.revokeObjectURL(previewUrl); previewUrl = null; }
     preview.removeAttribute('src');
     preview.hidden = true;
@@ -778,6 +782,16 @@
     if (c.dup) {
       html += '<p class="scan-note">This name is already in the database (' + esc(c.dup.b) + ', ' + esc(c.dup.t) + ').</p>';
     }
+    if (r.fragNames && r.fragNames.length) {
+      html += '<p class="scan-note">Fragrance is used in this product (' + esc(r.fragNames.slice(0, 4).join(', ')) + ').</p>';
+    }
+    if (r.floors && r.floors.length) {
+      var seenF = {};
+      r.floors.forEach(function (f) {
+        if (seenF[f[0]]) return; seenF[f[0]] = 1;
+        html += '<p class="scan-note">Grade rule: ' + esc(f[0]) + ' sets a minimum of ' + esc(f[1]) + ' whatever else is on the list.</p>';
+      });
+    }
     if (r.flagged.length) {
       html += '<h3>Flagged</h3><ul>' + r.flagged.map(function (f) {
         return '<li>' + esc(f[0].replace(/ \[inferred: .*\]$/, '')) + (catText(f[1]) ? ' <span class="scan-note">(' + esc(catText(f[1])) + ')</span>' : '') + '</li>';
@@ -848,5 +862,36 @@
   }
 
   $('scan-regrade').addEventListener('click', function () { gradeFromBox(false); });
+
+  // ----- paste the list, or check one ingredient (no photo needed) -----
+  function showPasteBox() {
+    $('scan-sources').hidden = true;
+    $('scan-single').hidden = true;
+    cropBox.hidden = true;
+    preview.hidden = true;
+    resultEl.hidden = false;
+    $('scan-regrade').textContent = 'Grade these ingredients';
+    setStatus('Paste the ingredient list from the label or website into the box, then tap Grade these ingredients.');
+    textEl.focus();
+  }
+  $('scan-paste').addEventListener('click', function () {
+    textEl.value = '';
+    tierEl.innerHTML = ''; detailsEl.innerHTML = '';
+    current = null;
+    showPasteBox();
+  });
+
+  function checkOne() {
+    var name = $('scan-one').value.trim();
+    if (!name) { setStatus('Type an ingredient name first.'); return; }
+    textEl.value = name;
+    $('scan-regrade').textContent = 'Regrade';
+    gradeFromBox(true);
+    $('scan-sources').hidden = true;
+    $('scan-single').hidden = true;
+    setStatus('');
+  }
+  $('scan-one-go').addEventListener('click', checkOne);
+  $('scan-one').addEventListener('keydown', function (e) { if (e.key === 'Enter') { e.preventDefault(); checkOne(); } });
 
 })();
