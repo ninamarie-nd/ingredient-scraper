@@ -13802,7 +13802,10 @@
       "c": [],
       "l": true,
       "n": "Low-tox: fluff pulp (user ruling 2026-11-10)"
-  }
+  },
+ "es fiber": {"c": [6], "l": false, "min": "Avoid (High)", "n": "Polyethylene-based bicomponent binder fiber in topsheet/acquisition layers; microplastic (cat 6). Avoid (High) per user ruling 2026-11-10, matching the polyester fiber ruling."},
+ "waterproof backing": {"c": [6], "l": false, "min": "Avoid (Mild)", "n": "Polyethylene or polypropylene film backsheet; microplastic (cat 6). Avoid (Mild) per user ruling 2026-11-10; Avoid (High) if PFAS-treated (user to confirm)."},
+ "camphor": {"c": [], "l": true, "n": "User ruling 2026-11-10: treated as low-tox. Fragrance ingredient per INCI sources; no hazard classification found."}
  },
  "aliases": {
   "fragrance": "fragrance/parfum",

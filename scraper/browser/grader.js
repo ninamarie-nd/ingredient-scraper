@@ -298,6 +298,7 @@
       var escalations = new Set();
       var seen = new Set();
       var minTiers = [];
+      var floors = [];
 
       for (var di = 0; di < ingredients.length; di++) {
         if (DYE_RE.test(ingredients[di])) { minTiers.push('Avoid (High)'); break; }
@@ -347,7 +348,7 @@
         }
         if (has(REF, key)) {
           var d = REF[key];
-          if (d.min) minTiers.push(d.min);
+          if (d.min) { minTiers.push(d.min); floors.push([ing, d.min]); }
           if (d.l) continue;
           var cond = d.cond || '';
           if (cond === 'inhalation_risk' && !isInhalationRisk(productName, productType)) continue;
@@ -459,9 +460,16 @@
 
       if (tier === 'Puberty Safe' && unknown.some(function (u) { return !isExemptUnknown(u); })) tier = 'Use Caution';
 
+      // Fragrance is used if any listed ingredient is a fragrance/parfum (not "-free") or camphor (a fragrance ingredient).
+      var fragNames = ingredients.filter(function (i) {
+        return /\b(fragrance|parfum|perfume|aroma|flavou?r|flavoring)\b(?![\s-]*free)/i.test(i) || /^camphor$/i.test(i.replace(/[\s\.\*]+$/, '').trim());
+      });
+
       return {
         tier: tier,
         flagCount: flagCount,
+        floors: floors,           // [ingredient, minimum tier][] from reference min rules
+        fragNames: fragNames,     // ingredients that mean fragrance is used
         flagged: flaggedAll,      // [name, cats][]
         natural: natural,         // [name, cats][]
         unknown: unknown,         // names[]
