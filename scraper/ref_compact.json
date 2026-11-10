@@ -5782,10 +5782,10 @@
    "cond": "inhalation_risk"
   },
   "super absorbent polymer": {
-   "c": [],
-   "l": false,
-   "n": "Use Caution: exact polymer identity unverified; often sodium polyacrylate but not confirmed (user decision 2026-11-01)",
-   "min": "Use Caution"
+      "c": [],
+      "l": false,
+      "n": "Ingredient not identified: avoid (user decision 2026-11-10)",
+      "min": "Avoid (Moderate)"
   },
   "optiphen": {
    "c": [
@@ -13627,14 +13627,14 @@
   "cotton": {
       "c": [],
       "l": false,
-      "n": "Non-organic cotton: avoid (user decision 2026-11-10)",
-      "min": "Avoid (Mild)"
+      "n": "Non-organic cotton: avoid high (user decision 2026-11-10)",
+      "min": "Avoid (High)"
   },
   "cotton sewing thread": {
       "c": [],
       "l": false,
-      "n": "Non-organic cotton thread: avoid (user decision 2026-11-10)",
-      "min": "Avoid (Mild)"
+      "n": "Non-organic cotton thread: avoid high (user decision 2026-11-10)",
+      "min": "Avoid (High)"
   },
   "hemp fiber": {
       "c": [],
@@ -13645,6 +13645,143 @@
       "c": [],
       "l": true,
       "n": "Low-tox: hemp (user ruling 2026-11-10)"
+  },
+  "adhesive": {
+      "c": [],
+      "l": false,
+      "n": "Ingredient not identified (user ruling 2026-11-10)",
+      "min": "Avoid (Moderate)"
+  },
+  "adhesive (holds pad together & keeps pad on underwear)": {
+      "c": [],
+      "l": false,
+      "n": "Ingredient not identified (user ruling 2026-11-10)",
+      "min": "Avoid (Moderate)"
+  },
+  "bpa-free plastic": {
+      "c": [
+          6
+      ],
+      "l": false,
+      "n": "Plastic, same class as polyethylene (user ruling 2026-11-10)"
+  },
+  "certified sustainable wood pulp core": {
+      "c": [],
+      "l": true,
+      "n": "Low-tox: wood or fluff pulp, chlorine-free (user ruling 2026-11-10)"
+  },
+  "chlorine free fluff pulp": {
+      "c": [],
+      "l": true,
+      "n": "Low-tox: wood or fluff pulp, chlorine-free (user ruling 2026-11-10)"
+  },
+  "chlorine-free fluff pulp": {
+      "c": [],
+      "l": true,
+      "n": "Low-tox: wood or fluff pulp, chlorine-free (user ruling 2026-11-10)"
+  },
+  "elastic": {
+      "c": [],
+      "l": false,
+      "n": "Ingredient not identified (user ruling 2026-11-10)",
+      "min": "Avoid (High)"
+  },
+  "elastic lace trim": {
+      "c": [],
+      "l": false,
+      "n": "Ingredient not identified (user ruling 2026-11-10)",
+      "min": "Avoid (High)"
+  },
+  "hot melt adhesive": {
+      "c": [],
+      "l": false,
+      "n": "Ingredient not identified (user ruling 2026-11-10)",
+      "min": "Avoid (Moderate)"
+  },
+  "hot melt adhesive (keeps pad on underwear)": {
+      "c": [],
+      "l": false,
+      "n": "Ingredient not identified (user ruling 2026-11-10)",
+      "min": "Avoid (Moderate)"
+  },
+  "natural absorbent materials": {
+      "c": [],
+      "l": false,
+      "n": "Ingredient not identified (user ruling 2026-11-10)",
+      "min": "Avoid (Moderate)"
+  },
+  "natural absorbent materials (full materials not fully itemized on product page)": {
+      "c": [],
+      "l": false,
+      "n": "Ingredient not identified (user ruling 2026-11-10)",
+      "min": "Avoid (Moderate)"
+  },
+  "non-toxic adhesive": {
+      "c": [],
+      "l": false,
+      "n": "Ingredient not identified (user ruling 2026-11-10)",
+      "min": "Avoid (Moderate)"
+  },
+  "non-toxic adhesives": {
+      "c": [],
+      "l": false,
+      "n": "Ingredient not identified (user ruling 2026-11-10)",
+      "min": "Avoid (Moderate)"
+  },
+  "non-toxic biodegradable adhesive": {
+      "c": [],
+      "l": false,
+      "n": "Ingredient not identified (user ruling 2026-11-10)",
+      "min": "Avoid (Moderate)"
+  },
+  "non-toxic hot melt adhesives": {
+      "c": [],
+      "l": false,
+      "n": "Ingredient not identified (user ruling 2026-11-10)",
+      "min": "Avoid (Moderate)"
+  },
+  "nylon": {
+      "c": [],
+      "l": false,
+      "n": "Ingredient not identified (user ruling 2026-11-10)",
+      "min": "Avoid (High)"
+  },
+  "plastic applicator": {
+      "c": [
+          6
+      ],
+      "l": false,
+      "n": "Plastic, same class as polyethylene (user ruling 2026-11-10)"
+  },
+  "polyester": {
+      "c": [],
+      "l": false,
+      "n": "Ingredient not identified (user ruling 2026-11-10)",
+      "min": "Avoid (High)"
+  },
+  "polyester (thread that sews tampons together)": {
+      "c": [],
+      "l": false,
+      "n": "Ingredient not identified (user ruling 2026-11-10)",
+      "min": "Avoid (High)"
+  },
+  "spandex": {
+      "c": [],
+      "l": false,
+      "n": "Ingredient not identified (user ruling 2026-11-10)",
+      "min": "Avoid (High)"
+  },
+  "super absorbent polymers": {
+      "c": [],
+      "l": false,
+      "n": "Ingredient not identified (user ruling 2026-11-10)",
+      "min": "Avoid (Moderate)"
+  },
+  "super absorbent polymers (sap)": {
+      "c": [],
+      "l": false,
+      "n": "Ingredient not identified (user ruling 2026-11-10)",
+      "min": "Avoid (Moderate)"
   }
  },
  "aliases": {

@@ -179,17 +179,17 @@ def split_ingredients(text):
         # Certification and claim words printed in the ingredient area (e.g. CERTIFIED ORGANIC, FAIR TRADE).
         if re.fullmatch(r'(?:(?:usda |certified |cosmos |ecocert |eco[- ]?cert |made with |contains )*'
                         r'(?:organic|natural|vegan|halal|kosher|fair[- ]?trade|fair for life|non[- ]?gmo(?: project)?(?: verified)?|gmo[- ]free|'
-                        r'b[- ]?corp(?:oration)?|leaping bunny|cruelty[- ]free|gluten[- ]free|bpa[- ]free(?: plastic)?|'
+                        r'b[- ]?corp(?:oration)?|leaping bunny|cruelty[- ]free|gluten[- ]free|'
                         r'rainforest alliance|marine stewardship(?: council)?|carbon neutral|climate neutral|sustainably sourced|ethically sourced)'
                         r'(?: certified| verified| sourced| ingredients?)*)\)?', low): continue
         if re.fullmatch(r'(not an? .*|plant[- ]based.*|made (with|in) .*|certified (?:cotton|organic)|.*\bsummary\b.*)\)?', low): continue
         # Fragments left by an unmatched parenthesis ("non-gmo)") carry no ingredient name.
         if low.endswith(')') and '(' not in low: continue
         # Packaging and benefit copy printed next to the ingredient list.
-        if re.search(r'\b(wrappers?|applicators?|packaging|recyclable|compostable|pouch|bottle|pump)\b', low): continue
+        if re.search(r'\b(wrappers?|applicators?|packaging|recyclable|compostable|pouch|bottle|pump)\b', low) and 'plastic' not in low: continue
         if re.search(r'chlorine-free|natural component|†', low): continue
         # Claims and product descriptions, not ingredients (user ruling 2026-11-10).
-        if re.search(r'^chlorine[- ]free\b|^ph[- ]balanced$|^softer$|^heating patches$|^period stickers$|^non[- ]toxic\b|^no oil-based\b|^sustainably[- ]sourced\b', low): continue
+        if re.search(r'^chlorine[- ]free$|^ph[- ]balanced$|^softer$|^heating patches$|^period stickers$|^non[- ]toxic\b(?!.*adhesive)|^no oil-based\b|^sustainably[- ]sourced\b', low): continue
         if re.search(r'^extra-long\b|^more flexible version\b|^bundle of\b|^sample pack\b|^\d+\s+(pads?|ultra|liners?|regular|tampons?|cups?)\b', low): continue
         if ' – ' in p or ' helps ' in low or 'botanical that' in low or 'stronger-looking' in low: continue
         if re.fullmatch(r'inwater', low): continue

@@ -122,7 +122,7 @@
 
     var CERT_RE = new RegExp('^(?:(?:usda |certified |cosmos |ecocert |eco[- ]?cert |made with |contains )*' +
       '(?:organic|natural|vegan|halal|kosher|fair[- ]?trade|fair for life|non[- ]?gmo(?: project)?(?: verified)?|gmo[- ]free|' +
-      'b[- ]?corp(?:oration)?|leaping bunny|cruelty[- ]free|gluten[- ]free|bpa[- ]free(?: plastic)?|' +
+      'b[- ]?corp(?:oration)?|leaping bunny|cruelty[- ]free|gluten[- ]free|' +
       'rainforest alliance|marine stewardship(?: council)?|carbon neutral|climate neutral|sustainably sourced|ethically sourced)' +
       '(?: certified| verified| sourced| ingredients?)*)\\)?$');
     var CLAIM_RE = /^(not an? .*|plant[- ]based.*|made (with|in) .*|certified (?:cotton|organic)|.*\bsummary\b.*)\)?$/;
@@ -192,10 +192,10 @@
         if (CERT_RE.test(low)) return;
         if (CLAIM_RE.test(low)) return;
         // Claims and product descriptions, not ingredients (user ruling 2026-11-10).
-        if (/^chlorine[- ]free\b|^ph[- ]balanced$|^softer$|^heating patches$|^period stickers$|^non[- ]toxic\b|^no oil-based\b|^sustainably[- ]sourced\b/.test(low)) return;
+        if (/^chlorine[- ]free$|^ph[- ]balanced$|^softer$|^heating patches$|^period stickers$|^non[- ]toxic\b(?!.*adhesive)|^no oil-based\b|^sustainably[- ]sourced\b/.test(low)) return;
         if (/^extra-long\b|^more flexible version\b|^bundle of\b|^sample pack\b|^\d+\s+(pads?|ultra|liners?|regular|tampons?|cups?)\b/.test(low)) return;
         if (low.endsWith(')') && low.indexOf('(') < 0) return;
-        if (/\b(wrappers?|applicators?|packaging|recyclable|compostable|pouch|bottle|pump)\b/.test(low)) return;
+        if (/\b(wrappers?|applicators?|packaging|recyclable|compostable|pouch|bottle|pump)\b/.test(low) && low.indexOf('plastic') < 0) return;
         if (/chlorine-free|natural component|†/.test(low)) return;
         if (p.indexOf(' – ') >= 0 || low.indexOf(' helps ') >= 0 || low.indexOf('botanical that') >= 0 || low.indexOf('stronger-looking') >= 0) return;
         if (low === 'inwater') return;
