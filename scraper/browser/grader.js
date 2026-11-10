@@ -170,8 +170,10 @@
       t = t.replace(/(\d),(?=\d)/g, '$1' + SENT);
       t = t.replace(/\([^()]*\)/g, function (m) { return m.replace(/,/g, SENT); });
       t = t.replace(/\[[^\]]*\]?/g, '');
-      var parts = t.split(/[,;]|\.\s+/);
-      parts = parts.map(function (p) { return p.split(SENT).join(','); });
+      // Keep ' and ' / ' with ' inside parentheses together; split phrases like 'pulp and polymer' outside them (user ruling 2026-11-10).
+      t = t.replace(/\([^()]*\)/g, function (m) { return m.replace(/\s+(and|with)\s+/gi, ' \u0002$1\u0002 '); });
+      var parts = t.split(/[,;]|\.\s+/).reduce(function (a, p) { return a.concat(p.replace(/^\s*(made|formulated|enriched|infused|fortified|contains|features?)\s+with\s+/i, '').split(/\s+(?:and|with)\s+/i)); }, []);
+      parts = parts.map(function (p) { return p.split(SENT).join(',').replace(/\u0002/g, ''); });
       var out = [];
       parts.forEach(function (raw) {
         var p = stripChars(raw, ' .;,:');

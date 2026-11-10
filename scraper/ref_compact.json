@@ -5784,8 +5784,8 @@
   "super absorbent polymer": {
       "c": [],
       "l": false,
-      "n": "Ingredient not identified: avoid (user decision 2026-11-10)",
-      "min": "Avoid (Moderate)"
+      "n": "Ingredient not identified: avoid high (user decision 2026-11-10)",
+      "min": "Avoid (High)"
   },
   "optiphen": {
    "c": [
@@ -13649,21 +13649,22 @@
   "adhesive": {
       "c": [],
       "l": false,
-      "n": "Ingredient not identified (user ruling 2026-11-10)",
-      "min": "Avoid (Moderate)"
+      "n": "Ingredient not identified: avoid high (user decision 2026-11-10)",
+      "min": "Avoid (High)"
   },
   "adhesive (holds pad together & keeps pad on underwear)": {
       "c": [],
       "l": false,
-      "n": "Ingredient not identified (user ruling 2026-11-10)",
-      "min": "Avoid (Moderate)"
+      "n": "Ingredient not identified: avoid high (user decision 2026-11-10)",
+      "min": "Avoid (High)"
   },
   "bpa-free plastic": {
       "c": [
           6
       ],
       "l": false,
-      "n": "Plastic, same class as polyethylene (user ruling 2026-11-10)"
+      "n": "Plastic applicator: polyethylene, additives untested (Greenpeace 2019); avoid mild (user decision 2026-11-10)",
+      "min": "Avoid (Mild)"
   },
   "certified sustainable wood pulp core": {
       "c": [],
@@ -13673,12 +13674,12 @@
   "chlorine free fluff pulp": {
       "c": [],
       "l": true,
-      "n": "Low-tox: wood or fluff pulp, chlorine-free (user ruling 2026-11-10)"
+      "n": "Low-tox: fluff pulp, chlorine-free (user ruling 2026-11-10)"
   },
   "chlorine-free fluff pulp": {
       "c": [],
       "l": true,
-      "n": "Low-tox: wood or fluff pulp, chlorine-free (user ruling 2026-11-10)"
+      "n": "Low-tox: fluff pulp, chlorine-free (user ruling 2026-11-10)"
   },
   "elastic": {
       "c": [],
@@ -13695,50 +13696,38 @@
   "hot melt adhesive": {
       "c": [],
       "l": false,
-      "n": "Ingredient not identified (user ruling 2026-11-10)",
-      "min": "Avoid (Moderate)"
+      "n": "Ingredient not identified: avoid high (user decision 2026-11-10)",
+      "min": "Avoid (High)"
   },
   "hot melt adhesive (keeps pad on underwear)": {
       "c": [],
       "l": false,
-      "n": "Ingredient not identified (user ruling 2026-11-10)",
-      "min": "Avoid (Moderate)"
-  },
-  "natural absorbent materials": {
-      "c": [],
-      "l": false,
-      "n": "Ingredient not identified (user ruling 2026-11-10)",
-      "min": "Avoid (Moderate)"
-  },
-  "natural absorbent materials (full materials not fully itemized on product page)": {
-      "c": [],
-      "l": false,
-      "n": "Ingredient not identified (user ruling 2026-11-10)",
-      "min": "Avoid (Moderate)"
+      "n": "Ingredient not identified: avoid high (user decision 2026-11-10)",
+      "min": "Avoid (High)"
   },
   "non-toxic adhesive": {
       "c": [],
       "l": false,
-      "n": "Ingredient not identified (user ruling 2026-11-10)",
-      "min": "Avoid (Moderate)"
+      "n": "Ingredient not identified: avoid high (user decision 2026-11-10)",
+      "min": "Avoid (High)"
   },
   "non-toxic adhesives": {
       "c": [],
       "l": false,
-      "n": "Ingredient not identified (user ruling 2026-11-10)",
-      "min": "Avoid (Moderate)"
+      "n": "Ingredient not identified: avoid high (user decision 2026-11-10)",
+      "min": "Avoid (High)"
   },
   "non-toxic biodegradable adhesive": {
       "c": [],
       "l": false,
-      "n": "Ingredient not identified (user ruling 2026-11-10)",
-      "min": "Avoid (Moderate)"
+      "n": "Ingredient not identified: avoid high (user decision 2026-11-10)",
+      "min": "Avoid (High)"
   },
   "non-toxic hot melt adhesives": {
       "c": [],
       "l": false,
-      "n": "Ingredient not identified (user ruling 2026-11-10)",
-      "min": "Avoid (Moderate)"
+      "n": "Ingredient not identified: avoid high (user decision 2026-11-10)",
+      "min": "Avoid (High)"
   },
   "nylon": {
       "c": [],
@@ -13751,7 +13740,8 @@
           6
       ],
       "l": false,
-      "n": "Plastic, same class as polyethylene (user ruling 2026-11-10)"
+      "n": "Plastic applicator: polyethylene, additives untested (Greenpeace 2019); avoid mild (user decision 2026-11-10)",
+      "min": "Avoid (Mild)"
   },
   "polyester": {
       "c": [],
@@ -13774,14 +13764,44 @@
   "super absorbent polymers": {
       "c": [],
       "l": false,
-      "n": "Ingredient not identified (user ruling 2026-11-10)",
-      "min": "Avoid (Moderate)"
+      "n": "Ingredient not identified: avoid high (user decision 2026-11-10)",
+      "min": "Avoid (High)"
   },
   "super absorbent polymers (sap)": {
       "c": [],
       "l": false,
-      "n": "Ingredient not identified (user ruling 2026-11-10)",
-      "min": "Avoid (Moderate)"
+      "n": "Ingredient not identified: avoid high (user decision 2026-11-10)",
+      "min": "Avoid (High)"
+  },
+  "elemental chlorine-free natural wood pulp": {
+      "c": [],
+      "l": true,
+      "n": "Low-tox: wood pulp, chlorine-free (user ruling 2026-11-10)"
+  },
+  "chlorine-free wood pulp": {
+      "c": [],
+      "l": true,
+      "n": "Low-tox: wood pulp, chlorine-free (user ruling 2026-11-10)"
+  },
+  "chlorine-free natural wood pulp": {
+      "c": [],
+      "l": true,
+      "n": "Low-tox: wood pulp, chlorine-free (user ruling 2026-11-10)"
+  },
+  "natural wood pulp": {
+      "c": [],
+      "l": true,
+      "n": "Low-tox: wood pulp (user ruling 2026-11-10)"
+  },
+  "wood pulp": {
+      "c": [],
+      "l": true,
+      "n": "Low-tox: wood pulp (user ruling 2026-11-10)"
+  },
+  "fluff pulp": {
+      "c": [],
+      "l": true,
+      "n": "Low-tox: fluff pulp (user ruling 2026-11-10)"
   }
  },
  "aliases": {

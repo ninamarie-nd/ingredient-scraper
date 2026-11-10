@@ -157,7 +157,13 @@ def split_ingredients(text):
     t = re.sub(r'\([^()]*\)', lambda m: m.group(0).replace(',', SENTINEL), t)
     # Drop bracketed site notes such as "[brand site shows marketing-only summary]".
     t = re.sub(r'\[[^\]]*\]?', '', t)
-    parts = re.split(r'[,;]|\.\s+', t)
+    # Keep ' and ' / ' with ' inside parentheses together; split phrases like 'pulp and polymer' outside them (user ruling 2026-11-10).
+    t = re.sub(r'\([^()]*\)', lambda m: re.sub(r'\s+(and|with)\s+', lambda k: ' \x02' + k.group(1) + '\x02 ', m.group(0), flags=re.I), t)
+    parts = []
+    for piece in re.split(r'[,;]|\.\s+', t):
+        piece = re.sub(r'^\s*(made|formulated|enriched|infused|fortified|contains|features?)\s+with\s+', '', piece, flags=re.I)
+        parts.extend(re.split(r'\s+(?:and|with)\s+', piece, flags=re.I))
+    parts = [p.replace('\x02', '') for p in parts]
     parts = [p.replace(SENTINEL, ',') for p in parts]
     out = []
     for p in parts:
