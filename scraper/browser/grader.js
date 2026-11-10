@@ -191,6 +191,9 @@
         if (low.indexOf('may contain') >= 0) return;
         if (CERT_RE.test(low)) return;
         if (CLAIM_RE.test(low)) return;
+        // Claims and product descriptions, not ingredients (user ruling 2026-11-10).
+        if (/^chlorine[- ]free\b|^ph[- ]balanced$|^softer$|^heating patches$|^period stickers$|^non[- ]toxic\b|^no oil-based\b|^sustainably[- ]sourced\b/.test(low)) return;
+        if (/^extra-long\b|^more flexible version\b|^bundle of\b|^sample pack\b|^\d+\s+(pads?|ultra|liners?|regular|tampons?|cups?)\b/.test(low)) return;
         if (low.endsWith(')') && low.indexOf('(') < 0) return;
         if (/\b(wrappers?|applicators?|packaging|recyclable|compostable|pouch|bottle|pump)\b/.test(low)) return;
         if (/chlorine-free|natural component|†/.test(low)) return;
@@ -198,6 +201,7 @@
         if (low === 'inwater') return;
         out.push(p);
       });
+      if (!out.length && String(text || '').trim()) out.push('ingredient list not published');
       return out;
     }
 
@@ -316,6 +320,8 @@
         seen.add(low);
         if (disclosedFragrance && /^(fragrance|parfum)(\s*\((fragrance|parfum)\))?$/.test(low)) continue;
         if (low.indexOf('behentrimonium methosulfate') >= 0) continue;
+        // Any organic cotton is treated as low-tox (user ruling 2026-11-10).
+        if (/\borganic cotton\b/.test(low)) continue;
         if (isFattyAlc(low)) continue;
         var nf = isNaturalFrag(low, vl);
         if (nf) { natural.push([ing, [4, 8]]); continue; }

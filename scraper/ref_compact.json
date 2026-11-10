@@ -13623,6 +13623,28 @@
         ],
         "l": false,
         "n": "Watch for: PEG- # 1,4-dioxane, ethylene oxide (PEG family; user ruling 2026-11-09)"
+  },
+  "cotton": {
+      "c": [],
+      "l": false,
+      "n": "Non-organic cotton: avoid (user decision 2026-11-10)",
+      "min": "Avoid (Mild)"
+  },
+  "cotton sewing thread": {
+      "c": [],
+      "l": false,
+      "n": "Non-organic cotton thread: avoid (user decision 2026-11-10)",
+      "min": "Avoid (Mild)"
+  },
+  "hemp fiber": {
+      "c": [],
+      "l": true,
+      "n": "Low-tox: hemp fiber (user ruling 2026-11-10)"
+  },
+  "hemp": {
+      "c": [],
+      "l": true,
+      "n": "Low-tox: hemp (user ruling 2026-11-10)"
   }
  },
  "aliases": {

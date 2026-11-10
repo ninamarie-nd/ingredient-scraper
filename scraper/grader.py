@@ -188,9 +188,14 @@ def split_ingredients(text):
         # Packaging and benefit copy printed next to the ingredient list.
         if re.search(r'\b(wrappers?|applicators?|packaging|recyclable|compostable|pouch|bottle|pump)\b', low): continue
         if re.search(r'chlorine-free|natural component|†', low): continue
+        # Claims and product descriptions, not ingredients (user ruling 2026-11-10).
+        if re.search(r'^chlorine[- ]free\b|^ph[- ]balanced$|^softer$|^heating patches$|^period stickers$|^non[- ]toxic\b|^no oil-based\b|^sustainably[- ]sourced\b', low): continue
+        if re.search(r'^extra-long\b|^more flexible version\b|^bundle of\b|^sample pack\b|^\d+\s+(pads?|ultra|liners?|regular|tampons?|cups?)\b', low): continue
         if ' – ' in p or ' helps ' in low or 'botanical that' in low or 'stronger-looking' in low: continue
         if re.fullmatch(r'inwater', low): continue
         out.append(p)
+    if not out and str(text or '').strip():
+        out.append('ingredient list not published')
     return out
 
 def _is_leave_on(product_type):
@@ -340,6 +345,8 @@ def grade(product_name, product_type, verbatim, disclosed_fragrance=False):
         if disclosed_fragrance and re.match(r'^(fragrance|parfum)(\s*\((fragrance|parfum)\))?$', low): continue
         if 'behentrimonium methosulfate' in low: continue
         if is_fatty_alc(low): continue
+        # Any organic cotton is treated as low-tox (user ruling 2026-11-10).
+        if re.search(r'\borganic cotton\b', low): continue
         nf = is_natural_frag(low, verbatim_lower)
         if nf:
             natural.append((ing, [4,8]))
