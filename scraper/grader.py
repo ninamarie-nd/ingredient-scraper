@@ -169,6 +169,15 @@ def split_ingredients(text):
     for p in parts:
         p = p.strip(' .;,:')
         p = p.strip('*† ').strip()
+        # Marketing lead-ins are not ingredients: 'Blended with', 'Made with', 'naturally derived' (user ruling 2026-11-10).
+        for _ in range(3):
+            p = re.sub(r'^\s*(made|blended|formulated|infused|enriched|fortified|crafted|powered)(\s+with)?\s+', '', p, flags=re.I)
+        p = re.sub(r'^\s*naturally[- ]derived\s+', '', p, flags=re.I).strip()
+        lp0 = p.lower()
+        if re.fullmatch(r'(blended|made|formulated|infused|enriched|fortified|crafted|with|and)', lp0): continue
+        lp_core = re.sub(r'\([^)]*\)', ' ', lp0)  # ignore descriptive text in parentheses
+        if re.search(r'\brecipe\b', lp_core) and not re.search(r'\bextract\b|\boil\b|\bbutter\b', lp_core): continue
+        if re.search(r'\b(helps?|protects?|balances?|refresh(es)?|nourish(es)?|hairline|everyday|while|maintains?|gently|skincare-inspired|natural moisture|stressors|buildup|removing)\b', lp_core): continue
         if re.fullmatch(r'(no )?(parabens?|sunscreens?)\W*', p.lower()): continue  # not ingredients
         if re.search(r'natural component of|\*?certified organic\s*$', p.lower()): continue  # footnote text, not an ingredient
         p = re.sub(r'\s*\(\d{1,2}\)\s*$', '', p)  # footnote markers: "alcohol (1)"

@@ -178,7 +178,17 @@
       parts.forEach(function (raw) {
         var p = stripChars(raw, ' .;,:');
         p = stripChars(p, '*† ').trim();
+        // Marketing lead-ins are not ingredients: 'Blended with', 'Made with', 'naturally derived' (user ruling 2026-11-10).
+        for (var li = 0; li < 3; li++) {
+          p = p.replace(/^\s*(made|blended|formulated|infused|enriched|fortified|crafted|powered)(\s+with)?\s+/i, '');
+        }
+        p = p.replace(/^\s*naturally[- ]derived\s+/i, '').trim();
         var lp = p.toLowerCase();
+        if (/^(blended|made|formulated|infused|enriched|fortified|crafted|with|and)$/.test(lp)) return;
+        var lpCore = lp.replace(/\([^)]*\)/g, ' ');  // ignore descriptive text in parentheses
+        // Marketing copy: a recipe name or product description is not an ingredient.
+        if (/\brecipe\b/.test(lpCore) && !/\bextract\b|\boil\b|\bbutter\b/.test(lpCore)) return;
+        if (/\b(helps?|protects?|balances?|refresh(es)?|nourish(es)?|hairline|everyday|while|maintains?|gently|skincare-inspired|natural moisture|stressors|buildup|removing)\b/.test(lpCore)) return;
         if (/^(no )?(parabens?|sunscreens?)\W*$/.test(lp)) return;
         if (/natural component of|\*?certified organic\s*$/.test(lp)) return;
         p = p.replace(/\s*\(\d{1,2}\)\s*$/, '');
