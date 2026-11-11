@@ -1,0 +1,181 @@
+The attached Excel workbook and CSV contain **38 ingredient rows**, with separate fields for identity, CAS, cosmetic function, chemical class/feedstock, each requested classification system, endocrine evidence, irritation/sensitization, PFAS, fragrance status, and source links. No overall safety grades are assigned.
+
+Important limitation: this is an evidence audit, not a certified negative screen against every regulatory list. “No data found” means I did not locate usable ingredient-specific evidence or verify a classification in this audit—not that no evidence exists anywhere, that the ingredient is unlisted, or that it tested negative.
+
+Two findings materially update the earlier discussion:
+
+- Diacetone Alcohol: ECHA’s RAC recommended Repr. 1B, H360D in 2025; a June 2026 UK HSE technical report agrees. That recommendation must be distinguished from an enacted EU harmonized classification and its effective date. [1092] [echa.europa](https://echa.europa.eu/documents/10162/2842450/clh_opinion_4-hydroxy-4-methylpentan-2-one+diacetone+alcohol_46211_en.pdf/d9756633-0fab-a1a0-b298-09fe9841d932?version=1.0&t=1765286450161&download=true)
+- Tetramethyl Acetyloctahydronaphthalenes: there is direct high-dose animal evidence suggesting endocrine activity—not merely structural similarity to other fragrances. The Australian assessment describes altered mouse estrous cycles but says adverse endocrine disruption was not conclusively demonstrated. [industrialchemicals.gov](https://www.industrialchemicals.gov.au/sites/default/files/Isomers%20of%20octahydro%20tetramethyl%20naphthalenyl%20ethanone%20(OTNE)_Human%20health%20tier%20II%20assessment.pdf)
+
+## How the requested fields are handled
+
+### Classification and endocrine evidence are separate
+
+The workbook separates:
+
+1. IARC classification.
+2. NTP Report on Carcinogens listing.
+3. NTP experimental findings.
+4. California Proposition 65 listing.
+5. Enacted EU harmonized CMR classification.
+6. Proposals, RAC opinions, supplier classifications, and other toxicology findings.
+
+A reproductive-toxicity finding is not automatically evidence of an endocrine mechanism. Similarly, an NTP animal study is not automatically an NTP Report on Carcinogens listing.
+
+### Feedstock cannot usually be determined from INCI
+
+“Synthetic” does not establish “petroleum-derived.” Where a material can be manufactured by different routes, the grade-specific feedstock is recorded as “no data found.” Cellulose-derived ingredients, licorice-derived glycyrrhizate, rosin, and diatomaceous earth have identifiable biological or geological starting materials, but that does not establish the provenance of every reagent or commercial grade. [1117] [cir-safety](https://www.cir-safety.org/sites/default/files/nitroc062013FR.pdf)
+
+### PFAS result
+
+For the defined identities below, the structural screen is No: none contains an identified OECD PFAS moiety. OECD’s definition requires at least one fully fluorinated methyl or methylene carbon, subject to its stated qualifications. Silicon, sulfur, phosphate, “fluorescein,” and “polymer” do not themselves establish PFAS identity. [oecd](https://www.oecd.org/content/dam/oecd/en/publications/reports/2021/07/reconciling-terminology-of-the-universe-of-per-and-polyfluoroalkyl-substances_a7fbcba8/e458e796-en.pdf)
+
+This is not an analytical PFAS-free determination. Commercial surface treatments, impurities, and inadequately characterized polymer grades remain unknown.
+
+## 1. Identity, CAS, function, and chemical class
+
+The following table covers all requested identities. Detailed hazard fields follow, and the workbook combines them into one row per ingredient.
+
+| Ingredient / standardized identity | CAS number and naming qualification | Function; class; polymer/feedstock information |
+|---|---|---|
+| Nitrocellulose | 9004-70-0. Cellulose nitrate is a synonym. [1149] | Film former; cellulose nitrate ester polymer. Bio-based cellulose backbone; exact commercial cellulose/reagent provenance: no data found.  [cir-safety](https://www.cir-safety.org/sites/default/files/nitroc062013FR.pdf) |
+| Trimethylpentanediyl Dibenzoate | 68052-23-3. Not Trimethyl Pentanyl Diisobutyrate/TXIB.  [canada](https://www.canada.ca/en/health-canada/services/chemical-substances/chemicals-management-plan-3-substances/benzoates-group.html) | Plasticizer; nonpolymeric diol dibenzoate ester. Exact fossil/bio-based feedstock: no data found.  [dtsc.ca](https://dtsc.ca.gov/wp-content/uploads/sites/31/2025/05/Triphenyl-Phosphate-in-Nail-Products-Profile_Final-Draft_Final-Accessible.pdf) |
+| Etocrylene | 5232-99-5; ethyl 2-cyano-3,3-diphenylacrylate. Not Octocrylene.  [pubchem.ncbi.nlm.nih](https://pubchem.ncbi.nlm.nih.gov/compound/243274) | UV absorber protecting the product; nonpolymeric cyanoacrylate ester. Exact feedstock: no data found.  [cosmileeurope](https://cosmileeurope.eu/inci/detail/5508/etocrylene/) |
+| n-Butyl Alcohol | 71-36-3; butan-1-ol. Not tert-butanol. [1040] | Solvent; primary aliphatic alcohol, not a polymer. Grade-specific feedstock: no data found. [1019] |
+| Polyvinyl Butyral | 63148-65-2.  [ec.europa](https://ec.europa.eu/growth/tools-databases/cosing/details/79331) | Binding/film-forming/viscosity-control resin; synthetic polyvinyl acetal polymer. Exact feedstock: no data found.  [ec.europa](https://ec.europa.eu/growth/tools-databases/cosing/details/79331) |
+| Ethyl Trimethylbenzoyl Phenylphosphinate | 84434-11-7; TPO-L. Not Trimethylbenzoyl Diphenylphosphine Oxide/TPO. [1155] | Photoinitiator/light stabilizer; nonpolymeric acylphosphinate. Exact feedstock: no data found. CIR is reviewing it separately within a grouped assessment.  [cir-safety](https://www.cir-safety.org/sites/default/files/RAWG_Priorities%20Update.pdf) |
+| Hexanal | 66-25-1; caproaldehyde/hexaldehyde.  [assets.thermofisher](https://assets.thermofisher.com/DirectWebViewer/private/document.aspx?prd=ALFAAA16265~~PDF~~MTR~~CGV4~~EN~~2025-09-13%2009:09:55~~Hexanal~~) | C6 aldehyde; fragrance and nail-hardening uses reported. Exact official cosmetic-function field was not retrieved. Commercial feedstock: no data found.  [ec.europa](https://ec.europa.eu/growth/tools-databases/cosing/details/76399) |
+| Cellulose Acetate Butyrate | 9004-36-8. Do not substitute Cellulose Acetate, 9004-35-7. [1132] | Film former; mixed cellulose ester polymer. Bio-based cellulose backbone; exact grade provenance: no data found. [1146] |
+| Diamond Powder | 7782-40-3.  [ec.europa](https://ec.europa.eu/growth/tools-databases/cosing/reference/functions/list/ABRASIVE) | Abrasive; crystalline carbon allotrope, not Carbon Black and not an organic polymer. Natural versus synthetic grade: no data found.  [ec.europa](https://ec.europa.eu/growth/tools-databases/cosing/reference/functions/list/ABRASIVE) |
+| Adipic Acid/Fumaric Acid/Tricyclodecane Dimethanol Copolymer | 58891-19-3 in CosIng’s function listing. [1023] | Nail-conditioning polyester resin; polymer of the named diacids/diol. Exact feedstock: no data found. [1022] |
+| Diacetone Alcohol | 123-42-2; 4-hydroxy-4-methylpentan-2-one.  [eur-lex.europa](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32018R0669&from=EN) | Solvent; nonpolymeric beta-hydroxy ketone. Grade-specific feedstock: no data found.  [hpvchemicals.oecd](https://hpvchemicals.oecd.org/UI/handler.axd?id=5b452a36-b0df-4c3b-b8a5-4e8dac676133) |
+| Acetone | 67-64-1; 2-Propanone and dimethyl ketone are synonyms. [1048] | Solvent/remover; nonpolymeric ketone. Commercial fossil/bio-based provenance: no data found. |
+| Isophorone Diamine/Isophthalic Acid/Tromethamine Copolymer | CosIng leaves CAS blank; supplier dossier assigns 1109229-52-8.  [ec.europa](https://ec.europa.eu/growth/tools-databases/cosing/details/86932) | Condensation copolymer of the named components. Exact official function field and feedstock: no data found. |
+| Norbornanediamine/Resorcinol Diglycidyl Ether Crosspolymer | 2176443-64-2 found in secondary sources; primary CAS confirmation: no data found. [1029] | Synthetic crosslinked film former; epoxy/amine-derived polymer. Exact feedstock: no data found. [1024] |
+| Tetramethyl Acetyloctahydronaphthalenes | 54464-57-2, 54464-59-4, 68155-66-8, 68155-67-9. OTNE isomer mixture; “Iso E Super” terminology can obscure isomer composition.  [industrialchemicals.gov](https://www.industrialchemicals.gov.au/sites/default/files/Isomers%20of%20octahydro%20tetramethyl%20naphthalenyl%20ethanone%20(OTNE)_Human%20health%20tier%20II%20assessment.pdf) | Synthetic fragrance; nonpolymeric polycyclic ketones. Exact feedstock: no data found.  [cosmileeurope](https://cosmileeurope.eu/inci/detail/16037/tetramethyl-acetyloctahydronaphthalenes/) |
+| Solum Diatomeae / Diatomaceous Earth | 61790-53-2 for uncalcined material; processed grades need separate identification. [1117] | Filler/absorbent/abrasive; biogenic mineral silica from diatom skeletons. Not a synthetic organic polymer or petroleum-organic ingredient. [1117][1125] |
+| Dipotassium Glycyrrhizate | 68797-35-3. Dipotassium Glycyrrhizinate is a synonym; CIR uses “Glycyrrhizate.” [1169] | Skin-conditioning salt of glycyrrhizic acid; nonpolymeric triterpenoid glycoside. Acid can be isolated from licorice; exact grade provenance/hydration requires confirmation.  [pubmed.ncbi.nlm.nih](https://pubmed.ncbi.nlm.nih.gov/17613133/)[1165] |
+| Heptane | 142-82-5 for n-heptane; not an unspecified mixed-heptanes solvent. [1037] | Solvent; nonpolymeric C7 alkane. Actual supplier feedstock: no data found. |
+| Sucrose Benzoate | 12738-64-6.  [cir-safety](https://www.cir-safety.org/sites/default/files/saccharide_esters.pdf) | Plasticizer; sucrose/benzoic-acid ester mixture, not a polymer. Sugar-derived component; benzoic-acid/grade provenance: no data found.  [cir-safety](https://www.cir-safety.org/sites/default/files/saccharide_esters.pdf) |
+| SD Alcohol 40-B / Alcohol Denat. | Ethanol 64-17-5; tert-Butyl Alcohol 75-65-0; Denatonium Benzoate 3734-33-6. Generic Alcohol Denat. does not establish formula 40-B.  [ecfr](https://www.ecfr.gov/current/title-27/chapter-I/subchapter-A/part-21/subpart-D/section-21.76) | Denatured-ethanol solvent mixture, not a polymer. Fermentation versus synthetic ethanol feedstock: no data found for the particular grade. |
+| Propyl Acetate | 109-60-4; n-propyl acetate. Not Isopropyl Acetate, 108-21-4. [1036][1047] | Solvent; nonpolymeric acetate ester. Exact feedstock: no data found. |
+| Methylthiopropylamido Acetyl Methionine | 1258540-06-5; CosIng-confirmed substituted amino acid.  [ec.europa](https://ec.europa.eu/growth/tools-databases/cosing/details/89056) | Organosulfur amino-acid amide derivative, not a polymer. Exact official function field and feedstock: no data found. |
+| Hydroxyethyl Acrylate/IPDI/PPG-15 Glyceryl Ether Copolymer | CosIng CAS: no data found.  [ec.europa](https://ec.europa.eu/growth/tools-databases/cosing/details/87031) | Binding agent; urethane/acrylate/polyether copolymer. Exact feedstock: no data found.  [ec.europa](https://ec.europa.eu/growth/tools-databases/cosing/reference/functions/list/BINDING) |
+| HEA/IPDI Isocyanurate Trimer/PG Crosspolymer | CAS: no data found. | Synthetic film-forming crosspolymer; function found in secondary CosIng mirror, direct authoritative entry not retrieved. Exact feedstock: no data found. [1030] |
+| Lauraldehyde | 112-54-9; dodecanal/lauric aldehyde. “Laurealdehyde” is a variant/misspelling.  [productingredients](https://www.productingredients.com/ingredient/info/lauraldehyde) | Fragrance; nonpolymeric C12 aldehyde. Both synthetic and natural grades documented; actual grade origin: no data found.  [sigmaaldrich](https://www.sigmaaldrich.com/US/en/product/aldrich/w261505) |
+| Zinc Acetylmethionate | 102868-96-2, FDA GSRS identity.  [precision.fda](https://precision.fda.gov/ginas/app/ui/substances/e31e918a-9baa-42df-a59f-a0d70c567b62) | Zinc N-acetylmethionine salt/complex; nonpolymeric. Skin-conditioning function located secondarily; actual feedstock: no data found.  [incibeauty](https://incibeauty.com/en/ingredients/21536-zinc-acetylmethionate) |
+| Glyceryl Linolenate | 18465-99-1 and 56554-41-7 in CIR listings. Not Glyceryl Linoleate.  [cir-safety](https://www.cir-safety.org/sites/default/files/monoglyceryl%20monoesters.pdf) | Emollient/conditioning monoester of glycerol and linolenic acid; not a polymer. Exact fatty-acid/glycerol provenance: no data found.  [cir-safety](https://www.cir-safety.org/sites/default/files/RR_Glyceryl_Monoesters.pdf) |
+| Glycidoxypropyl Trimethoxysilane | 2530-83-8; epoxy-functional trimethoxysilane.  [pubchem.ncbi.nlm.nih](https://pubchem.ncbi.nlm.nih.gov/compound/Glycidoxypropyltrimethoxysilane) | Reactive coupling/surface-modifying molecule; not itself a polymer. Exact official cosmetic function/feedstock: no data found. |
+| Methacryloyl Propyltrimethoxysilane | 2530-85-0; chemical synonym 3-methacryloxypropyltrimethoxysilane.  [gelest](https://www.gelest.com/wp-content/uploads/product_msds/SIM6487.4-msds.pdf) | Reactive methacrylate silane; not itself a polymer. Exact official cosmetic function/feedstock: no data found. |
+| Methyltriethoxysilane | 2031-67-6, CosIng-confirmed. Not Methyltrimethoxysilane. [1071] | Reactive alkyl trialkoxysilane, not itself a polymer. Exact cosmetic function/feedstock: no data found. |
+| Mercaptopropyltrimethoxysilane | 4420-74-0; 3-mercaptopropyltrimethoxysilane.  [echemportal](https://www.echemportal.org/echemportal/substance-search?query_term=4420-74-0) | Reactive thiol-functional trialkoxysilane, not itself a polymer. Exact official cosmetic function/feedstock: no data found. |
+| Propylene Carbonate | 108-32-7.  [cir-safety](https://www.cir-safety.org/sites/default/files/Propylene%20Carbonate_0.pdf) | Solvent/viscosity-decreasing agent; cyclic carbonate ester, not a polymer. Exact feedstock: no data found.  [cir-safety](https://www.cir-safety.org/sites/default/files/Propylene%20Carbonate_0.pdf) |
+| Colophonium | 8050-09-7; Rosin/Colophony.  [echa.europa](https://echa.europa.eu/substance-information/-/substanceinfo/100.029.518) | Resin/tackifier; complex resin-acid mixture, not automatically a polymer. Wood/pine-derived; exact gum/wood/tall-oil grade: no data found.  [echa.europa](https://echa.europa.eu/substance-information/-/substanceinfo/100.029.518) |
+| Ferric Ammonium Ferrocyanide / CI 77510 | 25869-00-5. Distinguish from Ferric Ferrocyanide, another iron-blue identity associated with CI 77510. [1133][1142] | Manufactured inorganic blue coordination pigment; not an organic cosmetic polymer.  [ecfr](https://www.ecfr.gov/current/title-21/chapter-I/subchapter-A/part-73/subpart-C) |
+| Red 34 / CI 15880 | 6417-83-0; D&C Red 34, calcium form, Pigment Red 63:1. [1164] | Synthetic azo pigment; not a polymer. Exact upstream feedstock: no data found. |
+| Yellow 8 / CI 45350 | 518-47-8, disodium fluorescein. Yellow 7 is free fluorescein, 2321-07-5.  [ecfr](https://www.ecfr.gov/current/title-21/chapter-I/subchapter-A/part-74)[1110] | Synthetic xanthene dye; not a polymer. Exact upstream feedstock: no data found. |
+| Red 17 / CI 26100 | 85-86-9; D&C Red 17 = Sudan III/Solvent Red 23.  [ec.europa](https://ec.europa.eu/health/ph_risk/committees/04_sccp/docs/sccp_o_013.pdf) | Synthetic disazo dye; not a polymer. Exact upstream feedstock: no data found. |
+| Yellow 5 Lake / CI 19140 | Aluminum lake commonly CAS 12225-21-7 and CI 19140:1; parent tartrazine CAS 1934-21-0. Lake identity requires substrate confirmation. [1174] [ecfr](https://www.ecfr.gov/current/title-21/chapter-I/subchapter-A/part-74) | Azo dye on permitted inorganic substrate, commonly alumina; not a polymer. Exact organic feedstock: no data found. |
+
+## 2. Carcinogen, CMR, endocrine, and irritation findings
+
+For ingredients not specifically identified below, the corresponding requested hazard field is “no data found” in the workbook. That includes many of the specialty polymers and amino-acid derivatives; I did not assign monomer hazards or family-wide endocrine activity to them.
+
+| Ingredient | Carcinogen / CMR information | Endocrine evidence and strength | Sensitization / irritation |
+|---|---|---|---|
+| Nitrocellulose | Ingredient-specific IARC/NTP RoC/Prop 65/EU CMR classification: no data found. | No data found. | CIR reviews predominantly negative modern human patch tests alongside older reaction reports; results depend on test material/formulation.  [cir-safety](https://www.cir-safety.org/sites/default/files/nitroc062013FR.pdf) |
+| Trimethylpentanediyl Dibenzoate | Specific requested classifications: no data found. Canada’s screening assessment is not an IARC or endocrine classification.  [canada](https://www.canada.ca/en/environment-climate-change/services/evaluating-existing-substances/final-screening-assessment-benzoates.html) | No data found. | Exact ingredient-specific patch-test conclusion: no data found. |
+| Etocrylene | Harmonized CMR classification: no data found. | No data found for Etocrylene; Octocrylene findings were not transferred. | Conflicting notifications: most aggregated PubChem reports do not meet GHS hazard criteria; some report skin/eye irritation. These are notifications, not a harmonized classification.  [pubchem.ncbi.nlm.nih](https://pubchem.ncbi.nlm.nih.gov/compound/243274) |
+| n-Butyl Alcohol | Specific requested classifications: no data found. | No data found. | Rabbit ocular irritation and occupational skin/airway irritation; a photopatch test of enamel containing 3% was negative. Different endpoints—not contradictory conclusions. [1019] |
+| Ethyl Trimethylbenzoyl Phenylphosphinate | Ingredient-specific requested cancer/CMR classification: no data found. TPO’s classification was not assigned to TPO-L. | No data found establishing endocrine activity. | Supplier component classification Skin Sens. 1B, H317. October 2026 CIR assessment is tentative, not final regulatory approval. [1155] [cir-safety](https://www.cir-safety.org/sites/default/files/PostMeetingAnnouncement_102026.pdf) |
+| Hexanal | Specific requested classifications: no data found. | No usable study result found. An ECHA search result mentions thyroid endpoints, but I could not establish the outcome; no positive/negative conclusion assigned.  [chem.echa.europa](https://chem.echa.europa.eu/100.000.567/dossier-view/5e2687cc-a3b0-410a-b038-782737bd6eb4/290c34b0-b52c-483d-8ad9-79483d863da9_cfc8c11a-e9e0-49ea-b8f5-b4fe415dbba5) | Exact authoritative patch-test result: no data found. An SDS’s “no known endocrine disruptors” wording is not a negative endocrine study.  [assets.thermofisher](https://assets.thermofisher.com/DirectWebViewer/private/document.aspx?prd=ALFAAA16265~~PDF~~MTR~~CGV4~~EN~~2025-09-13%2009:09:55~~Hexanal~~) |
+| Diacetone Alcohol | Retrieved enacted entry: Eye Irrit. 2, H319. RAC 2025 recommends Repr. 1B, H360D; HSE 2026 agrees. Enactment/effective date of an EU reproductive classification was not verified here.  [eur-lex.europa](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32018R0669&from=EN)[1092] | Developmental toxicity is documented, but a demonstrated endocrine mechanism was not found. | Supplier reports negative guinea-pig maximization test; eye irritation remains separately relevant. Supplier Repr. 2/H361 differs from RAC’s stronger recommendation. [1094] |
+| Acetone | Specific requested classifications: no data found. | No ingredient-specific endocrine conclusion established. | NIOSH identifies eye/nose/throat irritation and dermatitis; high exposures can cause CNS depression. [1048] |
+| Tetramethyl Acetyloctahydronaphthalenes | Requested cancer classifications: no data found; Australian assessment reported no carcinogenicity data.  [industrialchemicals.gov](https://www.industrialchemicals.gov.au/sites/default/files/Isomers%20of%20octahydro%20tetramethyl%20naphthalenyl%20ethanone%20(OTNE)_Human%20health%20tier%20II%20assessment.pdf) | Limited/suggestive in vivo evidence: high-dose dermal mouse studies showed longer estrous cycles; rats lacked cycle changes. Regulator states possible endocrine activity but adverse effects not conclusively established.  [industrialchemicals.gov](https://www.industrialchemicals.gov.au/sites/default/files/Isomers%20of%20octahydro%20tetramethyl%20naphthalenyl%20ethanone%20(OTNE)_Human%20health%20tier%20II%20assessment.pdf) | Positive mouse LLNA, EC3 6.07%; diagnostic patient series approximately 0.2–1.7% positive. Seven HRIPTs involving 354 volunteers were negative.  [industrialchemicals.gov](https://www.industrialchemicals.gov.au/sites/default/files/Isomers%20of%20octahydro%20tetramethyl%20naphthalenyl%20ethanone%20(OTNE)_Human%20health%20tier%20II%20assessment.pdf) |
+| Solum Diatomeae | Amorphous silica: IARC Group 3. Inhaled crystalline quartz/cristobalite from occupational sources: Group 1. Prop 65 specifically lists airborne crystalline silica of respirable size. [1117][1082] | No data found. | Airborne dust irritation concern; calcination increases crystalline silica. Grade and respirable fraction must be distinguished from bound material in polish. [1125][1117] |
+| Dipotassium Glycyrrhizate | Specific requested classifications: no data found. | Related-substance evidence: glycyrrhizic/glycyrrhetinic acid affects cortisol–mineralocorticoid physiology in oral human/animal research. Exact-salt topical nail-use endocrine outcomes: no data found. Do not substitute whole-licorice estrogenicity for this purified salt.  [vkm](https://vkm.no/download/18.948158f1633d1b9fb95930/1525764185285/Hazard%20assessment%20of%20glycyrrhizic%20acid%20from%20liquorice.pdf) | CIR group review reports no irritation/sensitization under assessed uses; dipotassium salt at 5% was negative for phototoxicity/photosensitization.  [pubmed.ncbi.nlm.nih](https://pubmed.ncbi.nlm.nih.gov/17613133/) |
+| Heptane | Specific requested classifications: no data found. | No data found. | NIOSH identifies dermatitis; aspiration can cause chemical pneumonitis. These are not endocrine findings. [1037] |
+| SD Alcohol 40-B | Beverage-specific alcohol classifications must not become blanket topical-ethanol classifications. Prop 65 wording is “alcoholic beverages” for cancer and “ethyl alcohol in alcoholic beverages” for reproductive harm.  [p65warnings.ca](https://www.p65warnings.ca.gov/products/alcoholic-beverages) | Component evidence: published tert-butanol mouse drinking-water work reports thyroid-hormone effects. Exact SDA 40-B topical mixture study: no data found. [1077] | Exact mixture patch data: no data found. Denaturants require separate consideration. |
+| Propyl Acetate | Specific requested classifications: no data found. | No data found. | NIOSH/CIR describe eye/airway irritation and dermatitis; high-vapor narcotic effects. [1036][1009] |
+| Glycidoxypropyl Trimethoxysilane | Some notifications report Muta. 2/H341. A harmonized Annex VI CMR entry was not established; do not relabel notification percentages as an enacted classification.  [pubchem.ncbi.nlm.nih](https://pubchem.ncbi.nlm.nih.gov/compound/Glycidoxypropyltrimethoxysilane) | No data found. | Eye Dam. 1 appears in notifications; cosmetic human patch-test data: no data found.  [pubchem.ncbi.nlm.nih](https://pubchem.ncbi.nlm.nih.gov/compound/Glycidoxypropyltrimethoxysilane) |
+| Methacryloyl Propyltrimethoxysilane | Requested cancer/CMR classifications: no data found. | No data found. | Supplier component SDS reports Skin Sens. 1B/H317; this is not an SCCS opinion.  [relianceorthodontics](https://www.relianceorthodontics.com/Reliance%20-%20SDS/Porcelain%20Conditioner%20SDS.pdf) |
+| Methyltriethoxysilane | Specific requested classifications: no data found. | No data found. | Peer-reviewed review reports a negative OECD TG 406 sensitization study for this substance. Do not transfer results from methyltrimethoxysilane.  [journals.sagepub](https://journals.sagepub.com/doi/10.1177/07482337241301523) |
+| Mercaptopropyltrimethoxysilane | Specific requested classifications: no data found. | No data found. | Supplier Skin Sens. 1 classification; exact cosmetic patch-test evidence: no data found.  [sigmaaldrich](https://www.sigmaaldrich.com/GR/en/product/aldrich/175617) |
+| Propylene Carbonate | Specific requested classifications: no data found. | No data found. | CIR’s revised assessment expressly qualifies its conclusion by nonirritating formulation; irritation is concentration/formulation-dependent.  [cir-safety](https://www.cir-safety.org/sites/default/files/Propylene%20Carbonate_0.pdf) |
+| Colophonium | Specific requested cancer/CMR classifications: no data found. | No data found. | EU Skin Sens. 1/H317 referenced in CLH materials. Rosin is a separate contact allergen, not merely a fragrance-labeling issue.  [echa.europa](https://echa.europa.eu/documents/10162/2070c856-410e-d6cf-58a4-6cc3816b006b) |
+| CI 26100 / Red 17 | Sudan III: IARC Group 3. SCCP nevertheless identified concern over azo cleavage to carcinogenic 4-aminoazobenzene and could not assess consumer risk from the submitted data. [1118] [ec.europa](https://ec.europa.eu/health/ph_risk/committees/04_sccp/docs/sccp_o_013.pdf) | No data found. | Exact sensitization conclusion: no data found in the retrieved opinion. |
+| Yellow 5 Lake | Specific requested cancer/CMR classification: no data found. Do not classify the colorant as carcinogenic solely because impurity specifications control carcinogenic aromatic amines.  [ecfr](https://www.ecfr.gov/current/title-21/chapter-I/subchapter-A/part-74) | No lake-specific endocrine conclusion found. | FDA recognizes tartrazine allergic-type reactions in susceptible people for specified drug routes. This is not a measured nail-contact-allergy rate.  [ecfr](https://www.ecfr.gov/current/title-21/chapter-I/subchapter-A/part-74) |
+
+### SD Alcohol 40-B: NTP findings belong to a component
+
+TTB formula 40-B requires, per 100 gallons of ethanol, one-sixteenth avoirdupois ounce of denatonium benzoate and one-eighth gallon of tert-butanol. [ecfr](https://www.ecfr.gov/current/title-27/chapter-I/subchapter-A/part-21/subpart-D/section-21.76)
+
+NTP TR-436 found some evidence of carcinogenic activity for tert-butanol in male rats and female mice, no evidence in female rats, and equivocal evidence in male mice in two-year drinking-water studies. Those findings are not an SDA 40-B cosmetic-mixture study or an NTP Report on Carcinogens listing. [1049]
+
+### Specialty ingredients with unresolved hazard fields
+
+For these ingredients, ingredient-specific requested cancer/CMR, endocrine, and sensitization conclusions were not established in this audit:
+
+- Polyvinyl Butyral.
+- Cellulose Acetate Butyrate.
+- Diamond Powder.
+- Adipic Acid/Fumaric Acid/Tricyclodecane Dimethanol Copolymer.
+- Isophorone Diamine/Isophthalic Acid/Tromethamine Copolymer.
+- Norbornanediamine/Resorcinol Diglycidyl Ether Crosspolymer.
+- Sucrose Benzoate.
+- Methylthiopropylamido Acetyl Methionine.
+- Hydroxyethyl Acrylate/IPDI/PPG-15 Glyceryl Ether Copolymer.
+- HEA/IPDI Isocyanurate Trimer/PG Crosspolymer.
+- Lauraldehyde.
+- Zinc Acetylmethionate.
+- Glyceryl Linolenate.
+- Ferric Ammonium Ferrocyanide.
+- Red 34.
+- Yellow 8.
+
+Their identities or group reviews are not substitutes for exact-ingredient endocrine testing. In particular, reacted polymers were not assigned the classifications of free HEA, IPDI, resorcinol, or epoxy starting materials.
+
+## 3. Fragrance allergens, IFRA, and essential-oil occurrence
+
+| Ingredient | Fragrance / allergen / IFRA finding | Natural occurrence in essential oils |
+|---|---|---|
+| Tetramethyl Acetyloctahydronaphthalenes | Fragrance. Not one of the original EU26; added by Regulation 2023/1545, Annex III entry 344. Individual labeling above 0.001% in leave-on or 0.01% in rinse-off products. Australian regulator reports an IFRA restriction; current exact IFRA amendment limits were not independently retrieved.  [eur-lex.europa](https://eur-lex.europa.eu/eli/reg/2023/1545/oj) | No data found; retrieved sources describe a synthetic fragrance. |
+| Lauraldehyde | Fragrance; IFRA name Lauric Aldehyde. Not original EU26. A supplier’s “follows IFRA guidelines” statement is not proof of a specific current IFRA Standard.  [productingredients](https://www.productingredients.com/ingredient/info/lauraldehyde) | Grapefruit-oil occurrence documented by chemical supplier; primary analytical publication not retrieved. Evidence tier: secondary.  [sigmaaldrich](https://www.sigmaaldrich.com/US/en/product/aldrich/w261505) |
+| Hexanal | Fragrance use reported; original-EU26 or current IFRA-standard finding not established here. | No data found meeting the requested source standard. |
+| Alcohol Denat. | Can be used as a perfume solvent; not equivalent to an odorant allergen. TTB explicitly authorizes 40-B in perfume applications.  [ecfr](https://www.ecfr.gov/current/title-27/chapter-I/subchapter-A/part-21/subpart-D/section-21.76) | Exact essential-oil occurrence: no data found. |
+| Colophonium | Separate contact allergen; not an original-EU26 fragrance allergen. Current ingredient-specific IFRA Standard: no data found.  [echa.europa](https://echa.europa.eu/documents/10162/2070c856-410e-d6cf-58a4-6cc3816b006b) | Pine/wood resin origin is established, but resin is not equivalent to distilled essential oil. Exact EO occurrence: no data found.  [echa.europa](https://echa.europa.eu/substance-information/-/substanceinfo/100.029.518) |
+| Other requested ingredients | Ingredient-specific fragrance/IFRA evidence: no data found unless otherwise recorded in the workbook. A solvent, pigment, or excipient in perfume is not necessarily an odorant. | No data found. |
+
+The OTNE labeling requirement is an expanded-list requirement, not proof that it was historically part of the original 26. The 2023 regulation includes transition provisions, which should remain date-specific in your database. [eur-lex.europa](https://eur-lex.europa.eu/eli/reg/2023/1545/oj)
+
+## 4. Requested pigment identities and EU/U.S. status
+
+“Permitted” below means permitted subject to the named identity, purity, use, and certification conditions—not unrestricted use.
+
+| Colorant | Identity confirmed | U.S. cosmetic status | EU cosmetic status |
+|---|---|---|---|
+| Ferric Ammonium Ferrocyanide | CI 77510; CAS 25869-00-5. Distinguish from Ferric Ferrocyanide. [1133] | 21 CFR 73.2298: externally applied cosmetics, including eye-area cosmetics; exempt from batch certification, but specifications still apply.  [ecfr](https://www.ecfr.gov/current/title-21/chapter-I/subchapter-A/part-73/subpart-C) | CI 77510 is in Annex IV’s iron-blue framework; applicable identity/purity conditions remain relevant. [1110] |
+| Red 34 | CI 15880; calcium azo pigment, CAS 6417-83-0. [1164] | 21 CFR 74.2334: externally applied cosmetics; batch certification required. This does not authorize lip or eye-area use.  [ecfr](https://www.ecfr.gov/current/title-21/chapter-I/subchapter-A/part-74) | Annex IV entry 29; applicable non-mucosal-use conditions. [1110] |
+| Yellow 8 | CI 45350; disodium fluorescein, CAS 518-47-8. Not Yellow 5.  [ecfr](https://www.ecfr.gov/current/title-21/chapter-I/subchapter-A/part-74) | 21 CFR 74.2708: externally applied cosmetics; certification required.  [ecfr](https://www.ecfr.gov/current/title-21/chapter-I/subchapter-A/part-74) | Annex IV entry 74, maximum 6%. The separate prohibition for use as a hair-dye substance is not a nail-polish prohibition. [1107][1106] |
+| Red 17 | CI 26100; Sudan III/Solvent Red 23, CAS 85-86-9.  [ec.europa](https://ec.europa.eu/health/ph_risk/committees/04_sccp/docs/sccp_o_013.pdf) | 21 CFR 74.2317: externally applied cosmetics; certification required.  [ecfr](https://www.ecfr.gov/current/title-21/chapter-I/subchapter-A/part-74) | Annex IV entry 40; not eye products or products applied to mucous membranes; specific impurity limits apply. [1110] |
+| Yellow 5 Lake | CI 19140 on labels; aluminum lake also designated CI 19140:1. Parent dye and lake are not the same CAS identity. [1174] [ecfr](https://www.ecfr.gov/current/title-21/chapter-I/subchapter-A/part-74) | 21 CFR 74.2705 permits Yellow 5 and its aluminum lake under specified conditions, including eye cosmetics; lake preparation under 82.51 and certification requirements apply.  [ecfr](https://www.ecfr.gov/current/title-21/chapter-I/subchapter-A/part-74) | Annex IV entry 82, together with the Annex’s salts/lakes provisions. Exact substrate identity remains necessary. [1110] |
+
+The EU consolidated text retrieved for this portion is dated September 1, 2025. I have not certified that every subsequent 2026 amendment leaves each condition unchanged; that limitation is retained in the workbook.
+
+### Red 17: legal listing and unresolved scientific concern coexist
+
+The 2005 SCCP opinion states that CI 26100 can release 4-aminoazobenzene through azo cleavage and concludes that the submitted data did not allow assessment of consumer risk. Its reference to “carcinogen category 2” concerns the cleavage product under the historical pre-CLP system—not current CLP Carc. 2 assigned to Sudan III. [ec.europa](https://ec.europa.eu/health/ph_risk/committees/04_sccp/docs/sccp_o_013.pdf)
+
+That finding must remain separate from Sudan III’s IARC Group 3 classification. Group 3 means not classifiable, not demonstrated noncarcinogenicity. [1118][1126]
+
+## 5. Conflicts and unresolved identities retained in the workbook
+
+- Isophorone copolymer: CosIng CAS blank versus supplier CAS 1109229-52-8. Both retained with source qualification. [ec.europa](https://ec.europa.eu/growth/tools-databases/cosing/details/86932)
+- Norbornanediamine crosspolymer: CAS found only secondarily; not presented as primary-regulator confirmation. [1029]
+- Diacetone Alcohol: supplier Repr. 2 versus RAC/HSE Repr. 1B recommendation; enacted status not conflated with either. [1094][1092]
+- Etocrylene: inconsistent notified irritation classifications. [pubchem.ncbi.nlm.nih](https://pubchem.ncbi.nlm.nih.gov/compound/243274)
+- OTNE: negative volunteer HRIPTs coexist with positive diagnostic patch tests and LLNA findings. [industrialchemicals.gov](https://www.industrialchemicals.gov.au/sites/default/files/Isomers%20of%20octahydro%20tetramethyl%20naphthalenyl%20ethanone%20(OTNE)_Human%20health%20tier%20II%20assessment.pdf)
+- Dipotassium Glycyrrhizate: exact salt, aglycone, whole licorice, hydration state, and oral versus dermal evidence are kept distinct. [1165] [pubmed.ncbi.nlm.nih](https://pubmed.ncbi.nlm.nih.gov/17613133/)
+- Yellow 5 Lake: parent dye CAS is not used as the sole identity of the lake. [1174] [ecfr](https://www.ecfr.gov/current/title-21/chapter-I/subchapter-A/part-74)
+
+The workbook’s Ingredient_matrix provides one row per requested ingredient; Colorants, Conflicts, Methods_and_limits, and Source_links provide the supporting detail and clickable source URLs.
