@@ -232,6 +232,9 @@ def is_inhalation_risk(name, product_type):
     pt = (product_type or '').lower()
     if 'powder' in pt or 'spray' in pt or 'aerosol' in pt or 'mist' in pt:
         return True
+    # User ruling 2026-11-11: nail polish stays in the inhalation-risk group for titanium dioxide.
+    if 'nail' in pt:
+        return True
     if any(w in n for w in [' spray', ' mist', ' aerosol', 'dry shampoo',
                               'loose powder', 'setting powder', 'bronzer powder',
                               'blush powder', 'foundation powder', 'baby powder',

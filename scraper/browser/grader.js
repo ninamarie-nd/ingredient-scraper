@@ -229,6 +229,8 @@
       var n = String(name || '').toLowerCase();
       var pt = String(productType || '').toLowerCase();
       if (pt.indexOf('powder') >= 0 || pt.indexOf('spray') >= 0 || pt.indexOf('aerosol') >= 0 || pt.indexOf('mist') >= 0) return true;
+      // User ruling 2026-11-11: nail polish stays in the inhalation-risk group for titanium dioxide.
+      if (pt.indexOf('nail') >= 0) return true;
       var words = [' spray', ' mist', ' aerosol', 'dry shampoo', 'loose powder', 'setting powder', 'bronzer powder',
         'blush powder', 'foundation powder', 'baby powder', 'talcum powder', 'body powder', 'face powder'];
       return words.some(function (w) { return n.indexOf(w) >= 0; });
