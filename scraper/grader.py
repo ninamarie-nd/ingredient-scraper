@@ -335,8 +335,8 @@ def grade(product_name, product_type, verbatim, disclosed_fragrance=False):
     for _ing in ingredients:
         _l = _ing.lower()
         if re.search(r'\bwater\b|\baqua\b|\beau\b', _l) and not re.search(r'\b(lavender)\b', _l): pass  # water words recognized by _ruling_exempt
-        if DYE_RE.search(_ing) and 'remover' not in str(product_type or '').lower():  # user ruling 2026-11-11: no dye floor for removers
-            min_tiers.append('Avoid (High)')
+        if DYE_RE.search(_ing):  # user ruling 2026-11-11: rinse-off removers get Avoid (Moderate) for dyes
+            min_tiers.append('Avoid (Moderate)' if 'remover' in str(product_type or '').lower() else 'Avoid (High)')
             break
     for _pos, ing in enumerate(ingredients, start=1):
         low = norm(ing)
@@ -394,9 +394,9 @@ def grade(product_name, product_type, verbatim, disclosed_fragrance=False):
             elif _inner and _inner.group(1).strip() in REF: key = _inner.group(1).strip()
         if key in REF:
             d = REF[key]
-            # User ruling 2026-11-11: the dye floor (Avoid (High)) does not apply to removers (nail polish remover, cuticle remover).
-            dye_floor_exempt = 'dye colorant' in str(d.get('n', '')).lower() and 'remover' in str(product_type or '').lower()
-            if d.get('min') and not dye_floor_exempt: min_tiers.append(d['min'])
+            # User ruling 2026-11-11: rinse-off removers get Avoid (Moderate) for dye floors, not Avoid (High).
+            dye_floor_rinse = 'dye colorant' in str(d.get('n', '')).lower() and 'remover' in str(product_type or '').lower()
+            if d.get('min'): min_tiers.append('Avoid (Moderate)' if dye_floor_rinse else d['min'])
             if d.get('l'):
                 continue
             # Conditional flags: honored only when the product type matches

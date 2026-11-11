@@ -313,8 +313,8 @@
       var floors = [];
 
       for (var di = 0; di < ingredients.length; di++) {
-        // User ruling 2026-11-11: the dye floor does not apply to removers.
-        if (DYE_RE.test(ingredients[di]) && !/remover/i.test(String(productType || ''))) { minTiers.push('Avoid (High)'); break; }
+        // User ruling 2026-11-11: rinse-off removers get Avoid (Moderate) for dyes, not Avoid (High).
+        if (DYE_RE.test(ingredients[di])) { minTiers.push(/remover/i.test(String(productType || '')) ? 'Avoid (Moderate)' : 'Avoid (High)'); break; }
       }
 
       for (var i = 0; i < ingredients.length; i++) {
@@ -361,9 +361,9 @@
         }
         if (has(REF, key)) {
           var d = REF[key];
-          // User ruling 2026-11-11: the dye floor (Avoid (High)) does not apply to removers (nail polish remover, cuticle remover).
-          var dyeFloorExempt = /dye colorant/i.test(String(d.n || '')) && /remover/i.test(String(productType || ''));
-          if (d.min && !dyeFloorExempt) { minTiers.push(d.min); floors.push([ing, d.min]); }
+          // User ruling 2026-11-11: dye floor is Avoid (Moderate), not Avoid (High), for rinse-off removers (nail polish remover, cuticle remover).
+          var dyeFloorRinse = /dye colorant/i.test(String(d.n || '')) && /remover/i.test(String(productType || ''));
+          if (d.min) { var dyeMin = dyeFloorRinse ? 'Avoid (Moderate)' : d.min; minTiers.push(dyeMin); floors.push([ing, dyeMin]); }
           if (d.l) continue;
           var cond = d.cond || '';
           if (cond === 'inhalation_risk' && !isInhalationRisk(productName, productType)) continue;
