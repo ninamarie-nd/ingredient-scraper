@@ -1,0 +1,83 @@
+[
+ {
+  "rid": "B3-007",
+  "b": "Sally Hansen",
+  "n": "Extra Strength Nail Polish Remover",
+  "pt": "Nail Polish Remover",
+  "u": "https://inkeedecoder.com/products/sally-hansen-extra-strength-nail-polish-remover",
+  "note": "PROVISIONAL: historical secondary declaration; current U.S. formula unverified; Source published 2021; do not treat as verified current. A 2019 EWG variant lists Butylphenyl Methylpropional [web:711], not silently merged.",
+  "ing": "Acetone, Aqua/Water/Eau, Parfum/Fragrance, Benzophenone-3, Benzyl Benzoate, Panthenol, Limonene, Tocopheryl Acetate, Hexyl Cinnamal, Linalool, Benzyl Salicylate, Alpha-Isomethyl Ionone, Geraniol, Hydrolyzed Wheat Protein, Sodium Benzoate, D&C Yellow No. 11 (CI 47000)"
+ },
+ {
+  "rid": "B3-008",
+  "b": "Revlon",
+  "n": "Super Lustrous Nail Enamel (Revlon Red 680)",
+  "pt": "Nail Polish",
+  "u": "https://www.walmart.com/ip/Revlon-Super-Lustrous-Chip-Resistant-Nail-Polish-Revlon-Red-0-5-fl-oz-Bottle/894982",
+  "note": "RETAILER: package confirmation needed; Official product identity independently confirmed [web:587]. Retailer calls ethyl acetate an active ingredient; that field is not adopted. Broad pigment list is not proof all pigments occur in shade 680.",
+  "ing": "Ethyl Acetate, Butyl Acetate, Nitrocellulose, Tribenzoin, Isopropyl Alcohol, Propyl Acetate, Acetyl Tributyl Citrate, Silica, Stearalkonium Bentonite, Acetone, Citric Acid, Dimethicone, Malic Acid, PPG-2 Dimethicone, Silk Powder, Tetrabutyl Phenyl Hydroxybenzoate, Tin Oxide, Triacetin, Aluminum Powder (CI 77000), Black 2 (CI 77266) [Nano], Ferric Ammonium Ferrocyanide (CI 77510), Iron Oxides (CI 77491), Mica, Red 6 Lake (CI 15850), Red 7 Lake (CI 15850), Titanium Dioxide (CI 77891), Yellow 5 Lake (CI 19140)"
+ },
+ {
+  "rid": "B3-009",
+  "b": "Revlon",
+  "n": "Quick Dry Base Coat",
+  "pt": "Base Coat",
+  "u": "https://www.ewg.org/skindeep/products/5031943-Revlon_Quick_Dry_Base_Coat/",
+  "note": "PROVISIONAL: secondary declaration; current formula unverified; Official U.S. page fetched but no complete ingredient declaration retrieved [web:586]. No EWG safety score adopted.",
+  "ing": "Ethyl Acetate, Butyl Acetate, Acrylates Copolymer, Isopropyl Alcohol, Dipropylene Glycol Dibenzoate, Methoxyisopropanol, Nitrocellulose, Stearalkonium Bentonite, Tocopheryl Acetate, Hippophae Rhamnoides Oil, Ribes Nigrum (Black Currant) Seed Oil, Vaccinium Vitis-Idaea Seed Oil, Panthenol, Ascorbyl Palmitate, PPG-2 Dimethicone, Citric Acid, Phosphoric Acid, Malic Acid, Acetyl Tributyl Citrate, Triacetin, Benzophenone-1, Titanium Dioxide (CI 77891), Violet 2 (CI 60725)"
+ },
+ {
+  "rid": "B3-010",
+  "b": "Revlon",
+  "n": "Essential Cuticle Oil",
+  "pt": "Cuticle Treatment",
+  "u": "https://skinsort.com/products/revlon/essential-cuticle-oil",
+  "note": "PROVISIONAL: secondary declaration; current formula unverified; Official U.S. product page confirms identity but did not expose complete INCI [web:588].",
+  "ing": "Prunus Amygdalus Dulcis Oil, Simmondsia Chinensis Seed Oil, Oryza Sativa Bran Oil, Parfum, Tocopheryl Acetate"
+ },
+ {
+  "rid": "B3-019",
+  "b": "Zoya",
+  "n": "Remove+",
+  "pt": "Nail Polish Remover",
+  "u": "https://www.ulta.com/p/remove-nail-polish-remover-xlsImpprod13741057?sku=2238630",
+  "note": "RETAILER: package confirmation needed; 2-Propanone retained as published; synonymous acetone not substituted in source field.",
+  "ing": "2-Propanone, Water (Aqua), Glycerine, Fragrance, D&C Violet #2"
+ },
+ {
+  "rid": "B3-020",
+  "b": "Zoya",
+  "n": "Anchor Base Coat",
+  "pt": "Base Coat",
+  "u": "https://www.beautycarechoices.com/zoya/anchor-base-coat",
+  "note": "RETAILER: current formula unverified; Source misspelling Trimthyl preserved. Do not infer applicability to current brand-wide free-from marketing.",
+  "ing": "Butyl Acetate, Ethyl Acetate, SD Alcohol-40B (Alcohol Denat.), Heptane, Propyl Acetate, Isopropyl Alcohol, Nitrocellulose, Tosylamide/Epoxy Resin, Triphenyl Phosphate, Trimthyl Pentanyl Diisobutyrate, Polyvinyl Butyral, Benzophenone-1, Calcium Pantothenate, D&C Violet 2"
+ },
+ {
+  "rid": "B3-028",
+  "b": "Nails.INC",
+  "n": "Copacabana Beach — Caught in the Nude",
+  "pt": "Nail Polish",
+  "u": "https://www.sallybeauty.com/nails/nail-color/shop-by-color/copacabana-beach-nail-polish/SBS-006717.html",
+  "note": "RETAILER: package confirmation needed",
+  "ing": "Butyl Acetate, Ethyl Acetate, Nitrocellulose, Adipic Acid/Neopentyl Glycol/Trimellitic Anhydride Copolymer, Acetyl Tributyl Citrate, Isopropyl Alcohol, Acrylates Copolymer, N-Butyl Alcohol, Phosphoric Acid, Benzophenone-1, Benzoguanamine, Diacetone Alcohol, Aqua (Water), Zinc Acetylmethionate, Glycolic Acid, Hexanal, Lauraldehyde, Malic Acid, Lactic Acid, Silica, Sodium Benzoate, Stearalkonium Bentonite, Tocopherol, Ci 73360 (Red 30), Ci 77491 (Iron Oxides), Ci 77492 (Iron Oxides), Ci 77742 (Manganese Violet), Ci 77266 (Carbon Black [Nano]), Ci 77891 (Titanium Dioxide), Ci 77499 (Iron Oxides), Ci 19140 (Yellow 5 Lake)"
+ },
+ {
+  "rid": "B3-041",
+  "b": "Deborah Lippmann",
+  "n": "The Stripper — bottled remover",
+  "pt": "Nail Polish Remover",
+  "u": "https://www.amazon.com/clp/B005VB2YN4",
+  "note": "RETAILER: current formula unverified; Colorant retained inside main declaration to preserve source order. Secondary database corroborates identities [web:635]. Geranial retained; not replaced with Geraniol.",
+  "ing": "ACETONE, WATER/AQUA/EAU, GLYCERIN, LAVANDULA ANGUSTIFOLIA (LAVENDER) OIL, ALOE BARBADENSIS (ALOE VERA) LEAF EXTRACT, EXT. VIOLET 2 (CI 60730), GERANIAL, LIMONENE, LINALOOL"
+ },
+ {
+  "rid": "B3-042",
+  "b": "Deborah Lippmann",
+  "n": "The Stripper To Go — finger mitts",
+  "pt": "Nail Polish Remover",
+  "u": "https://www.nordstrom.com/s/deborah-lippmann-the-stripper-to-go-nail-lacquer-remover-finger-mitts/2922605?irgwc=1",
+  "note": "RETAILER: non-INCI/possibly abbreviated declaration; Retailer uses common names and lists no water. Kept separate from bottled remover; do not infer equivalent formulation or complete INCI. Wipe/mitt substrate unverified.",
+  "ing": "Acetone, Aloe Vera Extract, Glycerin, Lavender Essential Oil, D&C External Violet #2"
+ }
+]
