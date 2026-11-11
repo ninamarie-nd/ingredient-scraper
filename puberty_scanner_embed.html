@@ -1167,8 +1167,25 @@ footer.foot{display:none !important}
     if(/carcinogen in leave-on/.test(esc) && !rinse) keys.push('carc');
     return keys;
   }
+  var _refData = null;
+  function getRefData(){
+    // Cache only a successful read: this can run before the scanner-ref element has been parsed.
+    if(!_refData){
+      try{ _refData = JSON.parse(document.getElementById('scanner-ref').textContent); }
+      catch(e){ return { ref: {}, aliases: {} }; }
+    }
+    return _refData;
+  }
   function normDef(name){
     var k = String(name||'').toLowerCase().replace(/[\*\u2020\u2021]+$/,'').trim();
+    // Reference categories take priority: they are what the grade uses.
+    var rd = getRefData();
+    var refMap = rd.ref || {}, aliasMap = rd.aliases || {};
+    var refKey = refMap[k] ? k : (aliasMap[k] && refMap[aliasMap[k]] ? aliasMap[k] : null);
+    if(refKey){
+      var rr = refMap[refKey];
+      return { c: (rr.c || []).map(function(n){ return REF_CAT_NAME[n]; }).filter(Boolean), b: rr.n || '' };
+    }
     if(DEFS[k]) return DEFS[k];
     try{
       var refData = JSON.parse(document.getElementById('scanner-ref').textContent);
@@ -1199,6 +1216,7 @@ footer.foot{display:none !important}
     'hormone (endocrine) disruptor':      'can interfere with the hormone signaling that drives puberty',
     'heavy metal':                        'contains traces of toxic heavy metals',
     'skin irritant / sensitizer':         'may irritate skin or trigger reactions',
+    'microbiome / barrier':               'can disrupt the skin barrier or microbiome (does not change the grade on its own)',
     'allergen':                           'known to cause allergic reactions',
     'environmental persistence':          "doesn't break down and builds up in the body or environment",
     'neurotoxic':                         'may affect brain or nervous-system development',
