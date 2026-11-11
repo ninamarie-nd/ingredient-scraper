@@ -13815,15 +13815,15 @@
  "corn-derived polymers (pla and pbat)": {"c": [], "l": false, "min": "Avoid (High)", "n": "Corn-derived PLA/PBAT polyester polymer: avoid high (user ruling 2026-11-10; same as polyester)."},
  "black cumin seed": {"c": [], "l": true, "n": "Botanical: low-tox (user ruling 2026-11-10)."},
  "black cumin seed oil": {"c": [], "l": true, "n": "Botanical oil: low-tox (user ruling 2026-11-10)."},
- "benzophenone-1": {"c": [2], "l": false, "n": "SCCS 2025 final opinion: not safe at proposed 2% use (genotoxicity potential); estrogenic in vitro and in vivo, weak antiandrogenic, possible thyroid activity. Endocrine-priority."},
- "triphenyl phosphate": {"c": [2], "l": false, "n": "SCCS could not establish safety at 5% (genotoxicity not excluded). Added to EU Cosmetics Annex II in 2026 (Reg. 2026/909): transition to 2027/2028 - verify dates in regulation text."},
- "styrene": {"c": [1], "l": false, "n": "Free styrene monomer (residual). IARC Group 2A, probably carcinogenic. Distinct from styrene/acrylates copolymer."},
+ "benzophenone-1": {"c": [2], "l": false, "min": "Avoid (High)", "n": "SCCS 2025 final opinion: not safe at proposed 2% use (genotoxicity potential); estrogenic in vitro and in vivo, weak antiandrogenic, possible thyroid activity. Endocrine-priority. User ruling 2026-11-11: avoid high."},
+ "triphenyl phosphate": {"c": [2], "l": false, "min": "Avoid (High)", "n": "SCCS could not establish safety at 5% (genotoxicity not excluded). Added to EU Cosmetics Annex II in 2026 (Reg. 2026/909): transition to 2027/2028, verify dates in regulation text. User ruling 2026-11-11: avoid high."},
+ "styrene": {"c": [1], "l": false, "min": "Avoid (High)", "n": "Free styrene monomer (residual). IARC Group 2A, probably carcinogenic. Distinct from styrene/acrylates copolymer. User ruling 2026-11-11: avoid high."},
  "di-hema trimethylhexyl dicarbamate": {"c": [4], "l": false, "n": "SCCS: weak-to-moderate sensitizer; favorable only for nail-plate-only professional use. Sensitization flag, not endocrine."},
- "polyoxymethylene melamine": {"c": [1, 2, 4, 5], "l": false, "n": "Formaldehyde releaser (Washington restriction from 2027 when intentionally added). EU CosIng/Annex status unverified."},
+ "polyoxymethylene melamine": {"c": [1, 2, 4, 5], "l": false, "min": "Avoid (High)", "n": "Formaldehyde releaser (Washington restriction from 2027 when intentionally added). EU CosIng/Annex status unverified. User ruling 2026-11-11: avoid high."},
  "carbon black": {"c": [], "l": false, "min": "Avoid (Moderate)", "n": "IARC Group 2B; Prop 65 lists airborne, unbound respirable particles. Ruling 2026-11-11: avoid (moderate); not high because research on unbound particles from polish use is unclear."},
- "acetyl tributyl citrate": {"c": [2], "l": false, "min": "Avoid (Mild)", "n": "Reproductive note: mouse study - fewer primordial/primary/secondary follicles at 10 mg/kg/day oral x15 days; no change in cyclicity or litters. CIR: safe as used. Ruling 2026-11-11: avoid."},
- "trimethyl pentanyl diisobutyrate": {"c": [2], "l": false, "min": "Avoid (Mild)", "n": "Ester plasticizer; GreenScreen: moderate reproductive, developmental and endocrine concerns. Ruling 2026-11-11: avoid."},
- "ethyl tosylamide": {"c": [4], "l": false, "n": "Exact endocrine/developmental data not located. EU status unresolved (Commission minutes disagree whether Annex II entry 307 covers it); do not treat as EU-banned. Brand '8-free' claims exclude it - claim note only."}
+ "acetyl tributyl citrate": {"c": [2], "l": false, "min": "Avoid (Moderate)", "n": "Reproductive note: mouse study, fewer primordial/primary/secondary follicles at 10 mg/kg/day oral x15 days; no change in cyclicity or litters. CIR: safe as used. User ruling 2026-11-11: avoid (moderate)."},
+ "trimethyl pentanyl diisobutyrate": {"c": [2], "l": false, "min": "Avoid (Moderate)", "n": "Ester plasticizer; GreenScreen: moderate reproductive, developmental and endocrine concerns. User ruling 2026-11-11: avoid (moderate)."},
+ "ethyl tosylamide": {"c": [4], "l": false, "min": "Avoid (High)", "n": "User ruling 2026-11-11: treat as banned (avoid high). Exact endocrine/developmental data not located; EU status unresolved (Commission minutes disagree whether Annex II entry 307 covers it). Brand '8-free' claims exclude it - claim note only."}
  },
  "aliases": {
   "fragrance": "fragrance/parfum",
