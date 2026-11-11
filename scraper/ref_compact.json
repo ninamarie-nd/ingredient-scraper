@@ -13823,7 +13823,8 @@
  "carbon black": {"c": [], "l": false, "min": "Avoid (Moderate)", "n": "IARC Group 2B; Prop 65 lists airborne, unbound respirable particles. Ruling 2026-11-11: avoid (moderate); not high because research on unbound particles from polish use is unclear."},
  "acetyl tributyl citrate": {"c": [2], "l": false, "min": "Avoid (Moderate)", "n": "Reproductive note: mouse study, fewer primordial/primary/secondary follicles at 10 mg/kg/day oral x15 days; no change in cyclicity or litters. CIR: safe as used. User ruling 2026-11-11: avoid (moderate)."},
  "trimethyl pentanyl diisobutyrate": {"c": [2], "l": false, "min": "Avoid (Moderate)", "n": "Ester plasticizer; GreenScreen: moderate reproductive, developmental and endocrine concerns. User ruling 2026-11-11: avoid (moderate)."},
- "ethyl tosylamide": {"c": [4], "l": false, "min": "Avoid (High)", "n": "User ruling 2026-11-11: treat as banned (avoid high). Exact endocrine/developmental data not located; EU status unresolved (Commission minutes disagree whether Annex II entry 307 covers it). Brand '8-free' claims exclude it - claim note only."}
+ "ethyl tosylamide": {"c": [4], "l": false, "min": "Avoid (High)", "n": "User ruling 2026-11-11: treat as banned (avoid high). Exact endocrine/developmental data not located; EU status unresolved (Commission minutes disagree whether Annex II entry 307 covers it). Brand '8-free' claims exclude it - claim note only."} ,
+ "adipic acid/neopentyl glycol/trimellitic anhydride copolymer": {"c": [4], "l": false, "n": "Branched polyester film former. Category 4 (sensitization): published contact-allergy case reports for related trimellitic copolymers. CIR current summary supports nail use at assessed levels; residual monomers depend on supplier. No category 1/2 evidence located. User decision 2026-11-11."}
  },
  "aliases": {
   "fragrance": "fragrance/parfum",
