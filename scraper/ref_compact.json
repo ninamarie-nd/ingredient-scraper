@@ -14221,6 +14221,13 @@
       "c": [],
       "l": false,
       "n": "Researched 2026-11-11 (identity/hazard audit): no hazard data found. Not a negative classification."
+    },
+    "diacetone alcohol": {
+      "c": [
+        7
+      ],
+      "l": false,
+      "n": "Reproductive toxicity, not endocrine: RAC 2025 recommends Repr. 1B (H360D); June 2026 HSE report agrees; EU enactment not verified. Enacted entry is Eye Irrit. 2 only. No endocrine mechanism found. User ruling 2026-11-11: category 7."
     }
   },
   "aliases": {
