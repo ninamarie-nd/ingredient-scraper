@@ -175,7 +175,7 @@
   typeEl.addEventListener('change', function () {
     typeTouched = true;
     // Product type changes the grade (leave-on vs rinse-off), so re-grade if a result is showing.
-    if (current) gradeFromBox(false);
+    if (current) regradeWithFeedback();
   });
 
   // ----- open / close -----
@@ -861,7 +861,36 @@
     else setStatus('');
   }
 
-  $('scan-regrade').addEventListener('click', function () { gradeFromBox(false); });
+  // Regrade with visible feedback: the button shows "Regrading...", the result scrolls back into view,
+  // and the status line says whether the grade changed or stayed the same.
+  function regradeWithFeedback() {
+    var btn = $('scan-regrade');
+    if (!textEl.value.trim()) { gradeFromBox(true); return; }
+    var idle = btn.textContent;
+    var before = current && current.r ? current.r.tier : null;
+    var type = typeEl.value || DEFAULT_TYPE;
+    btn.disabled = true;
+    btn.textContent = 'Regrading…';
+    setStatus('Regrading as ' + type + '…');
+    setTimeout(function () {
+      try {
+        gradeFromBox(true);
+        if (current && current.r && current.r.ingredients.length >= 2) {
+          var now = current.r.tier;
+          var change = before === null ? '' : (before === now ? ' Grade unchanged.' : ' Grade changed from ' + before + '.');
+          setStatus((before === null ? 'Graded as ' : 'Regraded as ') + type + ': ' + now + '.' + change);
+          resultEl.classList.remove('scan-flash');
+          void resultEl.offsetWidth;
+          resultEl.classList.add('scan-flash');
+        }
+      } finally {
+        btn.disabled = false;
+        btn.textContent = idle;
+      }
+    }, 150);
+  }
+
+  $('scan-regrade').addEventListener('click', regradeWithFeedback);
 
   // ----- paste the list, or check one ingredient (no photo needed) -----
   function showPasteBox() {

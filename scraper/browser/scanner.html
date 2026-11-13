@@ -2,6 +2,7 @@
   <div class="modal scan-modal" role="dialog" aria-modal="true" aria-labelledby="scan-title">
     <h2 id="scan-title">Scan a product label</h2>
     <p class="modal-sub">Take a photo of the ingredient list and we will grade the product. Photos and privacy: the photo is sent to Google Cloud, which reads the text. Google processes the photo in memory, does not store it, and does not use it to train its models. Our site does not keep your photo. Google keeps basic request details, such as the time and size of the request, to run the service and prevent abuse.</p>
+    <label class="scan-type-pick">Product type (pick before you scan or regrade)<select id="scan-type"></select></label>
     <div class="scan-sources" id="scan-sources">
       <button type="button" class="ask-btn" id="scan-take">Take a photo</button>
       <button type="button" class="ask-btn scan-alt" id="scan-library">Choose from library</button>
@@ -39,8 +40,6 @@
       <div id="scan-details"></div>
       <label>Ingredients we read (fix any wrong words, then regrade)<textarea id="scan-text" rows="5" maxlength="8000"></textarea></label>
       <div class="modal-actions"><button type="button" class="link" id="scan-regrade">Regrade</button></div>
-
-      <label class="scan-type-pick">Product type<select id="scan-type"></select></label>
     </div>
 
     <div class="modal-actions"><button type="button" class="link" id="scan-close">Close</button></div>
