@@ -849,6 +849,7 @@
   // Grades the ingredient box. Used after a photo is read and again after any correction.
   function gradeFromBox(scrollIntoView) {
     var raw = textEl.value.trim();
+    $('scan-regrade-note').hidden = true;
     if (!raw) { setStatus('The ingredient list is empty. Fix it, then tap Regrade.'); return; }
     var name = 'Scanned product';
     var type = typeEl.value || DEFAULT_TYPE;
@@ -879,6 +880,13 @@
           var now = current.r.tier;
           var change = before === null ? '' : (before === now ? ' Grade unchanged.' : ' Grade changed from ' + before + '.');
           setStatus((before === null ? 'Graded as ' : 'Regraded as ') + type + ': ' + now + '.' + change);
+          var note = $('scan-regrade-note');
+          if (before !== null) {
+            note.textContent = before === now
+              ? 'No change in grade: still ' + now + ' after regrading as ' + type + '.'
+              : 'Grade changed: ' + before + ' to ' + now + ' after regrading as ' + type + '.';
+            note.hidden = false;
+          }
           resultEl.classList.remove('scan-flash');
           void resultEl.offsetWidth;
           resultEl.classList.add('scan-flash');

@@ -5,6 +5,7 @@
 .scan-preview{display:block;width:100%;max-height:260px;object-fit:contain;margin:0 0 12px;border-radius:8px;border:1px solid var(--border);background:#fff}
 .scan-type-pick{display:block;margin:8px 0 12px;font-size:13px}
 .scan-type-pick select{display:block;width:100%;margin-top:6px;padding:10px;border:1px solid var(--border);border-radius:8px;background:var(--bg);color:var(--fg);font-size:14px}
+.scan-regrade-note{margin:0 0 10px;padding:8px 10px;border-radius:8px;border:1px solid var(--border);font-size:13px;font-weight:600}
 #scan-regrade:disabled{opacity:.5;cursor:wait}
 .scan-result.scan-flash{animation:scanFlash .9s ease}
 @keyframes scanFlash{from{box-shadow:0 0 0 3px var(--border)}to{box-shadow:0 0 0 0 transparent}}
