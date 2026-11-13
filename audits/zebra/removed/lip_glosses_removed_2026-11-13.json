@@ -1,0 +1,157 @@
+[
+  {
+    "n": "The Lip Gloss - America Red",
+    "b": "Zebra",
+    "bs": "zebra",
+    "cat": "General",
+    "pt": "Lip Product",
+    "t": "Use Caution",
+    "f": 1,
+    "fl": [
+      "DIPOTASSIUM GLYCYRRHIZATE"
+    ],
+    "esc": "",
+    "u": "https://yayzebra.com/products/the-lip-gloss-america-red",
+    "note": "No flagged ingredients.",
+    "ing": "CASTOR OIL*, BIS-DIGLYCERYL POLYACYLADIPATE-2, BEESWAX, SUNFLOWER OIL, GLYCERYL CAPRYLATE, SHEA BUTTER, GLYCERIN, CAPRYLHYDROXAMIC ACID, OLIVE OIL*, SWEET ALMOND OIL*, DIPOTASSIUM GLYCYRRHIZATE, ALKANNA TINCTORIA EXTRACT, CAPSICUM ANNUUM EXTRACT",
+    "sum": "No flagged ingredients.",
+    "pts": [
+      "Lip Product"
+    ],
+    "tags": [],
+    "ez": false,
+    "pr": 24,
+    "pb": "$20–25",
+    "pd": "2026-11-08"
+  },
+  {
+    "n": "The Lip Gloss - Berry Glaze",
+    "b": "Zebra",
+    "bs": "zebra",
+    "cat": "General",
+    "pt": "Lip Product",
+    "t": "Avoid (High)",
+    "f": 2,
+    "fl": [
+      "DIPOTASSIUM GLYCYRRHIZATE",
+      "MANGANESE VIOLET"
+    ],
+    "esc": "heavy metals",
+    "u": "https://yayzebra.com/products/the-lip-gloss-berry-glaze",
+    "note": "1 flagged ingredient(s) incl. MANGANESE VIOLET.",
+    "ing": "CASTOR OIL*, BIS-DIGLYCERYL POLYACYLADIPATE-2, BEESWAX, SUNFLOWER OIL, GLYCERYL CAPRYLATE, SHEA BUTTER, GLYCERIN, CAPRYLHYDROXAMIC ACID, OLIVE OIL*, SWEET ALMOND OIL*, DIPOTASSIUM GLYCYRRHIZATE, ALKANNA TINCTORIA EXTRACT, MANGANESE VIOLET",
+    "sum": "1 flagged ingredient(s) incl. MANGANESE VIOLET.",
+    "pts": [
+      "Lip Product"
+    ],
+    "tags": [],
+    "ez": false,
+    "pr": 24,
+    "pb": "$20–25",
+    "pd": "2026-11-08"
+  },
+  {
+    "n": "The Lip Gloss - Gingersnap",
+    "b": "Zebra",
+    "bs": "zebra",
+    "cat": "General",
+    "pt": "Lip Product",
+    "t": "Avoid (High)",
+    "f": 2,
+    "fl": [
+      "DIPOTASSIUM GLYCYRRHIZATE",
+      "MANGANESE VIOLET"
+    ],
+    "esc": "heavy metals",
+    "u": "https://yayzebra.com/products/the-lip-gloss-gingersnap",
+    "note": "1 flagged ingredient(s) incl. MANGANESE VIOLET.",
+    "ing": "CASTOR OIL*, BIS-DIGLYCERYL POLYACYLADIPATE-2, BEESWAX, SUNFLOWER OIL, GLYCERYL CAPRYLATE, SHEA BUTTER, MAGNESIUM CARBONATE, GLYCERIN, OLIVE OIL*, SWEET ALMOND OIL*, CAPRYLHYDROXAMIC ACID, DIPOTASSIUM GLYCYRRHIZATE, ALKANNA TINCTORIA EXTRACT, MANGANESE VIOLET, IRON OXIDES",
+    "sum": "1 flagged ingredient(s) incl. MANGANESE VIOLET.",
+    "pts": [
+      "Lip Product"
+    ],
+    "tags": [],
+    "ez": false,
+    "pr": 24,
+    "pb": "$20–25",
+    "pd": "2026-11-08"
+  },
+  {
+    "n": "The Lip Gloss - Iced Latte",
+    "b": "Zebra",
+    "bs": "zebra",
+    "cat": "General",
+    "pt": "Lip Product",
+    "t": "Avoid (High)",
+    "f": 2,
+    "fl": [
+      "DIPOTASSIUM GLYCYRRHIZATE",
+      "MANGANESE VIOLET"
+    ],
+    "esc": "heavy metals",
+    "u": "https://yayzebra.com/products/the-lip-gloss-iced-latte",
+    "note": "1 flagged ingredient(s) incl. MANGANESE VIOLET.",
+    "ing": "CASTOR OIL, BIS-DIGLYCERYL POLYACYLADIPATE-2, BEESWAX, GLYCERYL CAPRYLATE, SHEA BUTTER, MICA, GLYCERIN, SWEET ALMOND OIL, OLIVE OIL, CAPRYLHYDROXAMIC ACID, DIPOTASSIUM GLYCYRRHIZATE, MANGANESE VIOLET, IRON OXIDES",
+    "sum": "1 flagged ingredient(s) incl. MANGANESE VIOLET.",
+    "pts": [
+      "Lip Product"
+    ],
+    "tags": [],
+    "ez": false,
+    "pr": 24,
+    "pb": "$20–25",
+    "pd": "2026-11-08"
+  },
+  {
+    "n": "The Lip Gloss - XOXO",
+    "b": "Zebra",
+    "bs": "zebra",
+    "cat": "General",
+    "pt": "Lip Product",
+    "t": "Avoid (High)",
+    "f": 2,
+    "fl": [
+      "DIPOTASSIUM GLYCYRRHIZATE",
+      "MANGANESE VIOLET"
+    ],
+    "esc": "heavy metals",
+    "u": "https://yayzebra.com/products/the-lip-gloss-xoxo",
+    "note": "1 flagged ingredient(s) incl. MANGANESE VIOLET.",
+    "ing": "CASTOR OIL*, BIS-DIGLYCERYL POLYACYLADIPATE-2, BEESWAX, SUNFLOWER OIL, GLYCERYL CAPRYLATE, SHEA BUTTER, MICA, GLYCERIN, OLIVE OIL*, SWEET ALMOND OIL*, CAPRYLHYDROXAMIC ACID, DIPOTASSIUM GLYCYRRHIZATE, ALKANNA TINCTORIA EXTRACT, MANGANESE VIOLET",
+    "sum": "1 flagged ingredient(s) incl. MANGANESE VIOLET.",
+    "pts": [
+      "Lip Product"
+    ],
+    "tags": [],
+    "ez": false,
+    "pr": 24,
+    "pb": "$20–25",
+    "pd": "2026-11-08"
+  },
+  {
+    "n": "The Lip Gloss - Cowgirl",
+    "b": "Zebra",
+    "bs": "zebra",
+    "cat": "General",
+    "pt": "Lip Product",
+    "t": "Avoid (High)",
+    "f": 2,
+    "fl": [
+      "SYNTHETIC FLUORPHLOGOPITE",
+      "DIPOTASSIUM GLYCYRRHIZATE"
+    ],
+    "esc": "PFAS, carcinogen in leave-on",
+    "u": "https://yayzebra.com/products/the-lip-gloss-cowgirl",
+    "note": "1 flagged ingredient(s) incl. SYNTHETIC FLUORPHLOGOPITE.",
+    "ing": "CASTOR OIL*, BIS-DIGLYCERYL POLYACYLADIPATE-2, BEESWAX, GLYCERYL CAPRYLATE, SHEA BUTTER, MAGNESIUM CARBONATE, MICA, GLYCERIN, SWEET ALMOND OIL*, OLIVE OIL*, CAPRYLHYDROXAMIC ACID, SYNTHETIC FLUORPHLOGOPITE, DIPOTASSIUM GLYCYRRHIZATE, SILICA, IRON OXIDES",
+    "sum": "1 flagged ingredient(s) incl. SYNTHETIC FLUORPHLOGOPITE.",
+    "pts": [
+      "Lip Product"
+    ],
+    "tags": [],
+    "ez": false,
+    "pr": 24,
+    "pb": "$20–25",
+    "pd": "2026-11-08"
+  }
+]
