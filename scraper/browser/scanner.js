@@ -778,6 +778,7 @@
     if (unreliable) {
       html += '<p class="scan-note"><b>Provisional.</b> Some words could not be read. This grade is based on the words that were read. The words we could not match are listed below. Fix them in the box, or retake the photo closer, then tap Regrade.</p>';
     }
+    if (r.brandNote) html += '<p class="scan-note">' + esc(r.brandNote) + '</p>';
     html += '<p class="scan-note">' + esc(summaryOf(r)) + ' Read ' + r.ingredients.length + ' ingredient' + (r.ingredients.length === 1 ? '' : 's') + '.</p>';
     if (c.dup) {
       html += '<p class="scan-note">This name is already in the database (' + esc(c.dup.b) + ', ' + esc(c.dup.t) + ').</p>';
@@ -846,6 +847,22 @@
     resultEl.hidden = false;
   }
 
+  // If the list matches a dashboard product exactly (same ingredients, same order), return its brand
+  // so brand-specific rules apply. Otherwise return undefined and the generic rules apply.
+  var listIndex = null;
+  function brandForList(text) {
+    if (!listIndex) {
+      listIndex = {};
+      productData.products.forEach(function (p) {
+        if (!p.ing || !p.b) return;
+        var key = G.splitIngredients(p.ing).map(G.norm).join('|');
+        if (key && !(key in listIndex)) listIndex[key] = p.b;
+      });
+    }
+    var want = G.splitIngredients(text).map(G.norm).join('|');
+    return want && listIndex[want] ? listIndex[want] : undefined;
+  }
+
   // Grades the ingredient box. Used after a photo is read and again after any correction.
   function gradeFromBox(scrollIntoView) {
     var raw = textEl.value.trim();
@@ -854,7 +871,7 @@
     var name = 'Scanned product';
     var type = typeEl.value || DEFAULT_TYPE;
     var text = tidy(raw);
-    var r = G.grade(name, type, text);
+    var r = G.grade(name, type, text, undefined, brandForList(text));
     current = { name: name, type: type, raw: raw, r: r, dup: null };
     renderResult(current);
     if (scrollIntoView) resultEl.scrollIntoView({ block: 'start' });

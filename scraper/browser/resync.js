@@ -20,6 +20,7 @@ const list = (a, n) => a.length > n ? a.slice(0, n).join(', ') + ' and ' + (a.le
 
 function explain(p, r) {
   const out = [];
+  if (r.brandNote) out.push(r.brandNote);
   const frag = uniq(r.fragNames || []);
   if (frag.length) out.push('Fragrance is used in this product (' + list(frag, 4) + ').');
   if (p.cat === 'Period Care') {
@@ -36,7 +37,7 @@ function explain(p, r) {
 let t = 0, nt = 0; const ch = [];
 for (const p of data.products) {
   if (!p.ing) continue;
-  const r = G.grade(p.n, p.pt, p.ing);
+  const r = G.grade(p.n, p.pt, p.ing, undefined, p.b);
   const fl = (r.flagged || []).map(x => x[0]);
   const esc = (r.esc || []).join(', ');
   const miss = (r.unknown || []).indexOf(MISSING) >= 0;

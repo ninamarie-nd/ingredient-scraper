@@ -339,5 +339,8 @@
 "juice",
 "wax",
 "absolute"
-]
+],
+"BRAND_OVERRIDES": {
+"Schmidt's Naturals": {"only_flag": "natural fragrance", "tier": "Use Caution", "note": "Schmidt's says it lists its fragrance blends on smartlabel.org. We could not find those blend details when we searched, so the fragrance components are unknown. Naturally occurring fragrance components count as a soft flag, not a full one, and the essential oils in the blend are rated low-tox under our existing rulings."}
+}
 }

@@ -20,7 +20,7 @@ const examples = [];
 for (const p of data.products) {
   if (!p.ing) continue;
   total++;
-  const r = G.grade(p.n, p.pt, p.ing);
+  const r = G.grade(p.n, p.pt, p.ing, undefined, p.b);
   const escStr = r.esc.join(', ');
   const tierOk = r.tier === p.t;
   const flagOk = String(r.flagCount) === String(p.f);

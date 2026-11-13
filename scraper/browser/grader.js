@@ -302,7 +302,7 @@
     var FRAG_RE = /\b(fragrance|parfum|perfume|aroma|flavou?r|flavoring)\b/;
 
     // ---------- main ----------
-    function grade(productName, productType, verbatim, disclosedFragrance) {
+    function grade(productName, productType, verbatim, disclosedFragrance, brand) {
       var ingredients = splitIngredients(verbatim);
       var inhalProduct = isInhalationRisk(productName, productType);
       var vl = String(verbatim).toLowerCase();
@@ -480,8 +480,17 @@
         return /\b(fragrance|parfum|perfume|aroma|flavou?r|flavoring)\b(?![\s-]*free)/i.test(i) || /^camphor$/i.test(i.replace(/[\s\.\*]+$/, '').trim());
       });
 
+      // Brand rule from constants.json BRAND_OVERRIDES: applies only when every flag is the named ingredient.
+      var brandNote = null;
+      var ov = brand && C.BRAND_OVERRIDES && C.BRAND_OVERRIDES[brand];
+      if (ov && flaggedAll.length && flaggedAll.every(function (f) { return f[0].toLowerCase().indexOf(ov.only_flag) >= 0; })) {
+        tier = ov.tier;
+        brandNote = ov.note;
+      }
+
       return {
         tier: tier,
+        brandNote: brandNote,
         flagCount: flagCount,
         floors: floors,           // [ingredient, minimum tier][] from reference min rules
         fragNames: fragNames,     // ingredients that mean fragrance is used
