@@ -116,7 +116,7 @@
 
     var DYE_RE = new RegExp(
       '\\bfd&c\\b|\\bd&c\\b|\\b(red|yellow|blue|green|violet|orange|black)\\s?\\d{1,2}\\b' +
-      '|\\bci\\s?(?!75130\\b)(?:1[0-9]{4}|[4-6][0-9]{4}|7[0-4][0-9]{3}|75[0-9]{3})\\b', 'i');
+      '|\\bc\\.?i\\.?\\s?(?!75130\\b)(?:1[0-9]{4}|[4-6][0-9]{4}|7[0-4][0-9]{3}|75[0-9]{3})\\b', 'i');
 
     var ORDER = ['Puberty Safe', 'Use Caution', 'Avoid (Mild)', 'Avoid (Moderate)', 'Avoid (High)'];
 
